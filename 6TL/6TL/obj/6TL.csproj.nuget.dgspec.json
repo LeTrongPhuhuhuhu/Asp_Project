@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Asp Project\\6TL\\6TL\\6TL.csproj": {}
+    "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\6TL.csproj": {}
   },
   "projects": {
-    "E:\\Asp Project\\6TL\\6TL\\6TL.csproj": {
+    "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\6TL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Asp Project\\6TL\\6TL\\6TL.csproj",
+        "projectUniqueName": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\6TL.csproj",
         "projectName": "6TL",
-        "projectPath": "E:\\Asp Project\\6TL\\6TL\\6TL.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "E:\\Asp Project\\6TL\\6TL\\obj\\",
+        "projectPath": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\6TL.csproj",
+        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+        "outputPath": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -64,7 +64,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

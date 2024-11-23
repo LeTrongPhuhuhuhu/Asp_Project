@@ -17,8 +17,12 @@ namespace _6TL.Controllers
 		{
 			return View();
 		}
+        public IActionResult Cart()
+        {
+            return View();
+        }
 
-		public IActionResult Privacy()
+        public IActionResult Privacy()
 		{
 			return View();
 		}
