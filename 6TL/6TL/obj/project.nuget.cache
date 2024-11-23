@@ -1,8 +1,18 @@
+<<<<<<< HEAD
 {
   "version": 2,
-  "dgSpecHash": "oT/RNLnCuaU=",
+  "dgSpecHash": "7et0v7not+c=",
   "success": true,
-  "projectFilePath": "E:\\Asp Project\\6TL\\6TL\\6TL.csproj",
+  "projectFilePath": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\6TL.csproj",
   "expectedPackageFiles": [],
   "logs": []
+=======
+{
+  "version": 2,
+  "dgSpecHash": "cJNG4/ByFwk=",
+  "success": true,
+  "projectFilePath": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\6TL.csproj",
+  "expectedPackageFiles": [],
+  "logs": []
+>>>>>>> eaaa9ab686dcdfb54c5bfc0a8a30995e2d852963
 }
