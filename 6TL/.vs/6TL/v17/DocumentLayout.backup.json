@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "D:\\Asp Project\\Asp_Project\\6TL\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\asp project\\asp_project\\6tl\\6tl\\views\\home\\cart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\views\\home\\cart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\asp project\\asp_project\\6tl\\6tl\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
@@ -46,7 +42,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "HomeController.cs",
               "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "6TL\\Controllers\\HomeController.cs",
@@ -54,12 +50,11 @@
               "RelativeToolTip": "6TL\\Controllers\\HomeController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T11:22:12.99Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-23T11:22:12.99Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "6TL\\Views\\Home\\Index.cshtml",
@@ -67,12 +62,11 @@
               "RelativeToolTip": "6TL\\Views\\Home\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-23T11:22:04.388Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-23T11:22:04.388Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "site.js",
               "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\js\\site.js",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\js\\site.js",
@@ -80,38 +74,24 @@
               "RelativeToolTip": "6TL\\wwwroot\\js\\site.js",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-11-23T11:21:38.471Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-23T11:21:38.471Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Cart.cshtml",
-              "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\Views\\Home\\Cart.cshtml",
-              "RelativeDocumentMoniker": "6TL\\Views\\Home\\Cart.cshtml",
-              "ToolTip": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\Views\\Home\\Cart.cshtml",
-              "RelativeToolTip": "6TL\\Views\\Home\\Cart.cshtml",
-              "ViewState": "AgIAACAAAAAAAAAAAAAcwDsAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-23T11:18:22.09Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "Style.css",
               "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\Style.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\Style.css",
               "ToolTip": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\Style.css",
               "RelativeToolTip": "6TL\\wwwroot\\css\\Style.css",
-              "ViewState": "AgIAAFgBAAAAAAAAAAAQwH0BAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAHEAAAAAAAAAAAAAAPgAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2024-11-21T15:03:33.621Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "6TL\\Views\\Shared\\_Layout.cshtml",
@@ -119,8 +99,7 @@
               "RelativeToolTip": "6TL\\Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-21T15:14:26.596Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-21T15:14:26.596Z"
             }
           ]
         }
