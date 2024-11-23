@@ -12,7 +12,7 @@ namespace _6TL.Controllers
 		{
 			_logger = logger;
 		}
-
+		public IActionResult SanPham() { return View(); }
 		public IActionResult Index()
 		{
 			return View();
