@@ -3,44 +3,86 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - _6TL</title>
+    <title>@ViewData["Title"] - 6TL</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/_6TL.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">_6TL</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
+    <header class="navbar">
+        <!-- Logo -->
+        <div class="navbar-logo">
+            <img src="logo.png" alt="6TL Logo">
+        </div>
+
+        <!-- Menu -->
+        <div class="navbar-menu">
+            <ul>
+                <li><a href="#">Giới thiệu</a></li>
+                <li><a href="#">Nội thất</a></li>
+                <li><a href="#">Trang trí</a></li>
+                <li><a href="#">Cửa hàng</a></li>
+            </ul>
+            <!-- Thanh tìm kiếm -->
+            <div class="search-bar">
+                <input type="text" placeholder="Tìm kiếm...">
             </div>
-        </nav>
+            <i class="icon fa fa-shopping-cart"></i> <!-- Icon giỏ hàng -->
+        </div>
+
+        <!-- Nút Đăng ký và Đăng nhập -->
+        <div class="auth-buttons">
+            <a href="#" class="auth-button">Đăng nhập</a>
+        </div>
     </header>
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="footer text-muted">
         <div class="container">
-            &copy; 2024 - _6TL - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>6TL</h5>
+                    <p>Cửa hàng nội thất số 1 Việt Nam</p>
+                    <p><strong>Hỗ trợ khách hàng:</strong> 1900 6750</p>
+                    <p>Địa chỉ: 72 Huỳnh Thúc Kháng, Ward 15, District 1, Ho Chi Minh City</p>
+                    <p>Email: 0306221380@caothang.edu.vn</p>
+                    <div class="social-icons">
+                        <i class="fab fa-facebook-square"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-youtube"></i>
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h5>Hướng dẫn mua hàng</h5>
+                    <ul>
+                        <li><a href="#">Trang chủ</a></li>
+                        <li><a href="#">Giới thiệu</a></li>
+                        <li><a href="#">Danh mục</a></li>
+                        <li><a href="#">Tin tức</a></li>
+                        <li><a href="#">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Hỗ trợ khách hàng</h5>
+                    <ul>
+                        <li><a href="#">Trang chủ</a></li>
+                        <li><a href="#">Giới thiệu</a></li>
+                        <li><a href="#">Danh mục</a></li>
+                        <li><a href="#">Tin tức</a></li>
+                        <li><a href="#">Liên hệ</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

@@ -5,6 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>_6TL</RootNamespace>
+    <IsPublishable>True</IsPublishable>
   </PropertyGroup>
 
 </Project>
