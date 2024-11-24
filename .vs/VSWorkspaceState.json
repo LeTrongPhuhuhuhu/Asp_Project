@@ -1,6 +1,12 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\.github",
+    "\\6TL",
+    "\\6TL\\6TL",
+    "\\6TL\\6TL\\Views",
+    "\\6TL\\6TL\\Views\\Home"
   ],
+  "SelectedNode": "\\6TL\\6TL\\Views\\Home\\Index.cshtml",
   "PreviewInSolutionExplorer": false
 }

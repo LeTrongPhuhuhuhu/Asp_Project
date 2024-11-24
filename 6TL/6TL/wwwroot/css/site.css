@@ -1,22 +1,252 @@
-html {
-  font-size: 14px;
-}
-
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
-}
-
+﻿/* General styles */
 body {
-  margin-bottom: 60px;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
 }
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+/* Navbar styles */
+.navbar {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+    .navbar-brand img {
+        width: 70px;
+    }
+
+.navbar-nav .nav-link {
+    color: #ddd;
+    font-size: 1rem;
+    margin-right: 10px;
+    transition: color 0.3s ease;
+}
+
+    .navbar-nav .nav-link:hover {
+        color: #fff;
+    }
+
+.navbar .form-control {
+    border-radius: 20px;
+}
+
+.navbar .btn-outline-light {
+    border-radius: 20px;
+}
+
+/* Modal styles */
+.modal-content {
+    border-radius: 10px;
+}
+
+.modal-header {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.modal-title {
+    font-weight: bold;
+}
+
+.modal-body input {
+    border-radius: 5px;
+}
+/* Carousel customization */
+.carousel-item img {
+    height: 400px;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+    .carousel-caption h5 {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #fff;
+    }
+
+    .carousel-caption p {
+        font-size: 1.2rem;
+        color: #ddd;
+    }
+
+
+
+    .banner h2 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #fff;
+        margin: 0;
+    }
+
+/* Card styles */
+.card {
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .card img {
+        border-radius: 10px;
+    }
+
+    .card h3 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .card p {
+        font-size: 0.9rem;
+        color: #666;
+    }
+
+    .card .btn-primary {
+        border-radius: 20px;
+        font-size: 0.9rem;
+    }
+
+/* Section styles */
+section {
+    margin-bottom: 30px;
+}
+
+    section h2 {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    section p {
+        font-size: 1rem;
+        color: #555;
+    }
+
+.bg-light {
+    background-color: #f7f7f7 !important;
+}
+
+/* Product styles */
+.col-md-3 img {
+    border-radius: 10px;
+}
+
+.col-md-3 p {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333;
+}
+
+.list-box {
+    margin-top: 50px;
+}
+
+    .list-box .box-item {
+        cursor: pointer;
+        transition: .3s;
+        margin-bottom: 30px;
+        position: relative;
+    }
+
+        .list-box .box-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .list-box .box-item .img-box img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .list-box .box-item .content-box {
+            background-color: #58595b;
+            padding: 10px;
+        }
+
+            .list-box .box-item .content-box h4 a {
+                font-size: 22px;
+                color: #fff;
+                text-align: center;
+                display: block;
+            }
+
+                .list-box .box-item .content-box h4 a:hover {
+                    text-decoration: none;
+                }
+
+#mainCarousel {
+    max-height: 639px; /* Ensure carousel height */
+}
+
+    #mainCarousel .carousel-item img {
+        object-fit: cover; /* Maintain aspect ratio and fill the container */
+        height: 639px; /* Set height to match your desired size */
+    }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 317px);
+    gap: 15px; /* Khoảng cách giữa các phần tử */
+    justify-content: center; /* Căn giữa lưới */
+}
+
+.grid-item img {
+    width: 317px;
+    height: 399px;
+    object-fit: cover; /* Đảm bảo ảnh hiển thị đẹp */
+    border-radius: 8px; /* Tùy chọn bo góc */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.py-5 {
+    padding: 3rem 0;
+}
+
+/* Footer styles */
+footer {
+    background-color: #222;
+    padding: 20px 0;
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+    footer p {
+        margin: 0;
+    }

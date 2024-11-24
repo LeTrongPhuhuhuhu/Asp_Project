@@ -1,8 +1,316 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trang Chủ</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<!-- Slider Section -->
+<div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+                aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="https://via.placeholder.com/1920x639" class="d-block w-100" alt="Slide 1">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Chào mừng đến với Website</h5>
+                <p>Khám phá những phong cách nội thất hiện đại nhất.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="https://via.placeholder.com/1920x639/aaa/fff" class="d-block w-100" alt="Slide 2">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Sản phẩm nổi bật</h5>
+                <p>Chất lượng hàng đầu và thiết kế ấn tượng.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="https://via.placeholder.com/1920x639/555/ddd" class="d-block w-100" alt="Slide 3">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Ưu đãi đặc biệt</h5>
+                    <p>Giảm giá lên đến 50% cho đơn hàng đầu tiên.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="https://via.placeholder.com/1920x639/555/ddd" class="d-block w-100" alt="Slide 4">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Tin tức</h5>
+                <p>Giảm giá lên đến 50% cho đơn hàng đầu tiên.</p>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
 </div>
+
+<!-- Introduction Section -->
+<section class="py-5 text-center">
+    <div class="container">
+        <h2 class="mb-4">KHÔNG CHỈ LÀ NỘI THẤT, ĐÓ LÀ PHONG CÁCH SỐNG</h2>
+        <div class="grid-container">
+            <div class="grid-item">
+                <a href="#">
+                    <img src="https://via.placeholder.com/300" alt="Image">
+                </a>
+            </div>
+            <div class="grid-item">
+                <a href="#">
+                    <img src="https://via.placeholder.com/300" alt="Image">
+                </a>
+            </div>
+            <div class="grid-item">
+                <a href="#">
+                    <img src="https://via.placeholder.com/300" alt="Image">
+                </a>
+            </div>
+            <div class="grid-item">
+                <a href="#">
+                    <img src="https://via.placeholder.com/300" alt="Image">
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section đầu tiên -->
+<section class="py-5 bg-light">
+    <div class="container text-center">
+        <!-- Sử dụng d-flex để căn chỉnh hình ảnh và văn bản theo chiều ngang -->
+        <div class="d-flex justify-content-between align-items-center mb-5">
+            <!-- Khung chứa 2 hình ảnh -->
+            <div class="position-relative" style="width: 376px; height: 377px;">
+                <!-- Hình ảnh đầu tiên -->
+                <img src="https://via.placeholder.com/376x377" width="376" height="377" alt="Logo công ty"
+                     class="me-3 position-absolute top-0 start-0">
+                <!-- Hình ảnh thứ hai, được xoay nhẹ để đè lên hình ảnh đầu tiên -->
+                <img src="https://via.placeholder.com/376x377" width="376" height="377" alt="Logo công ty"
+                     class="me-3 top-50 start-50" style="transform: translate(50%, 50%);">
+            </div>
+            <!-- Đoạn văn bản -->
+            <div style="max-width: 500px; text-align: left;">
+                <h2 class="mb-4">Chạm đến sự thanh lịch trong từng chi tiết</h2>
+                <p style="font-size: 20px;">
+                    Điểm nhấn tinh tế cho không gian sống, với thiết kế sang trọng và chất liệu cao cấp, mang đến
+                    cho bạn giây phút thư thái giữa nhịp sống bận rộn.
+                </p>
+                <button class="btn btn-secondary">Xem ngay ></button>
+            </div>
+        </div>
+    </div>
+</section>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<!-- Section giới thiệu công ty -->
+<section class="py-5 bg-light">
+    <div class="container text-center">
+        <!-- Sử dụng d-flex để căn chỉnh hình ảnh và văn bản theo chiều ngang -->
+        <div class="d-flex justify-content-center align-items-center mb-5">
+            <!-- Hình ảnh với chiều rộng cố định -->
+            <img src="https://via.placeholder.com/653x657" width="653" height="657" alt="Logo công ty" class="me-3">
+            <!-- Đoạn văn bản -->
+            <div>
+                <h2 class="mb-4">Giới Thiệu Về Công Ty</h2>
+                <p class="mb-0" style="max-width: 561px; font-size: 25px;">
+                    <strong>Tại 6TL Furniture</strong> , chúng tôi tin rằng nội thất không chỉ là những món đồ vật,
+                    mà là yếu tố quan trọng tạo nên không gian sống và phong cách của bạn. Mỗi sản phẩm tại 6TL
+                    Furniture đều được thiết kế với tâm huyết, kết hợp giữa thẩm mỹ hiện đại và sự tiện dụng, mang
+                    đến trải nghiệm hoàn hảo cho mọi ngôi nhà.
+                    Chúng tôi tự hào về chất lượng sản phẩm với chất liệu bền bỉ, đường nét tinh tế và phong cách đa
+                    dạng, phù hợp với từng nhu cầu và gu thẩm mỹ riêng. Từ phòng khách ấm cúng, phòng ăn sang trọng
+                    đến phòng ngủ thư thái, 6TL Furniture cam kết đồng hành cùng bạn trong việc biến ngôi nhà thành
+                    tổ ấm, nơi bạn tìm thấy sự bình yên và phong cách sống riêng biệt.
+                </p>
+                <button class="btn btn-secondary">Xem ngay ></button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Featured Products Section -->
+<section class="py-5 bg-light">
+    <div class="container text-center">
+        <h2 class="mb-4">Sản Phẩm Nổi Bật</h2>
+
+        <!-- Carousel container -->
+        <div id="featuredProductsCarousel" class="carousel slide" data-bs-ride="carousel">
+            <!-- Carousel inner (list of products) -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="box-item">
+                                <a href="#">
+                                    <div class="img-box">
+                                        <img src="https://via.placeholder.com/150" class="d-block w-100">
+                                    </div>
+                                    <div class="content-box">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="box-item">
+                                <a href="#">
+                                    <div class="img-box">
+                                        <img src="https://via.placeholder.com/150" class="d-block w-100">
+                                    </div>
+                                    <div class="content-box">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="box-item">
+                                <a href="#">
+                                    <div class="img-box">
+                                        <img src="https://via.placeholder.com/150" class="d-block w-100">
+                                    </div>
+                                    <div class="content-box">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="box-item">
+                                <a href="#">
+                                    <div class="img-box">
+                                        <img src="https://via.placeholder.com/150" class="d-block w-100">
+                                    </div>
+                                    <div class="content-box">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="box-item">
+                                <a href="#">
+                                    <div class="img-box">
+                                        <img src="https://via.placeholder.com/150" class="d-block w-100">
+                                    </div>
+                                    <div class="content-box">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="box-item">
+                                <a href="#">
+                                    <div class="img-box">
+                                        <img src="https://via.placeholder.com/150" class="d-block w-100">
+                                    </div>
+                                    <div class="content-box">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="box-item">
+                                <a href="#">
+                                    <div class="img-box">
+                                        <img src="https://via.placeholder.com/150" class="d-block w-100">
+                                    </div>
+                                    <div class="content-box">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="box-item">
+                                <a href="#">
+                                    <div class="img-box">
+                                        <img src="https://via.placeholder.com/150" class="d-block w-100">
+                                    </div>
+                                    <div class="content-box">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more carousel items as needed -->
+            </div>
+
+            <!-- Controls for carousel -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#featuredProductsCarousel"
+                    data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#featuredProductsCarousel"
+                    data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</section>
+<section class="py-5 bg-light">
+    <div class="container text-center">
+        <!-- Sử dụng d-flex để căn chỉnh hình ảnh và văn bản theo chiều ngang -->
+        <div class="d-flex justify-content-center align-items-center mb-5">
+            <!-- Hình ảnh với chiều rộng cố định -->
+            <!-- Đoạn văn bản -->
+            <div>
+                <h2 class="mb-4">6TL Furniture - Kiến tạo không gian, nâng tầm cuộc sống</h2>
+                <p class="mb-0" style="max-width: 561px; font-size: 25px;">
+                    <strong>Mỗi sản phẩm của 6TL Furniture không chỉ là nội thất, mà là mảnh ghép hoàn hảo để biến không gian của bạn thành nơi đáng sống và đầy cảm hứng.
+                </p>
+                <button class="btn btn-secondary">Xem ngay ></button>
+            </div>
+            <img src="https://via.placeholder.com/653x657" width="653" height="657" alt="Logo công ty" class="me-3">
+        </div>
+    </div>
+</section>
+
+<!-- News Section -->
+<section class="py-5">
+    <div class="container text-center">
+        <h2 class="mb-4">Tin Tức</h2>
+        <div class="grid-container">
+            <div class="grid-item">
+                <a href="#">
+                    <img src="https://via.placeholder.com/300" alt="Image">
+                </a>
+            </div>
+            <div class="grid-item">
+                <a href="#">
+                    <img src="https://via.placeholder.com/300" alt="Image">
+                </a>
+            </div>
+            <div class="grid-item">
+                <a href="#">
+                    <img src="https://via.placeholder.com/300" alt="Image">
+                </a>
+            </div>
+            <div class="grid-item">
+                <a href="#">
+                    <img src="https://via.placeholder.com/300" alt="Image">
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
