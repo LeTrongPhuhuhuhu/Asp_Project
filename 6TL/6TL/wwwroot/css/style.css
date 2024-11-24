@@ -17,7 +17,8 @@ html {
 
 body {
     margin: 0;
-    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
     background-color: #f4f4f8;
     font-size: 16px;
     font-weight: 400;
@@ -247,3 +248,63 @@ footer {
             font-size: 14px;
             color: #ccc;
         }
+   /*Danh sach san pham*/
+.container {
+    width:100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* Khoảng cách giữa sidebar và content */
+}
+
+.sidebar {
+    left:-50px;
+    width: 25vw;
+    background-color: #f4f4f4;
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+    position: sticky; /* Đặt sidebar cố định khi cuộn */
+    top: 0; /* Sidebar sẽ giữ vị trí tại top của màn hình khi cuộn */
+    height: 100vh; /* Chiều cao của sidebar là 100% chiều cao viewport */
+    overflow-y: auto; /* Cho phép cuộn khi nội dung quá dài */
+    border-right: 2px solid #ccc; /* Thêm đường viền bên phải để phân chia rõ ràng */
+}
+
+.content {
+    width: 75vw;
+ 
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product-item {
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+    width: calc(33.333% - 20px);
+    box-sizing: border-box;
+}
+
+/* Banner full width */
+.banner {
+    width: 100vw;
+    height: 455px;
+    overflow: hidden;
+ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    object-position: center;
+}

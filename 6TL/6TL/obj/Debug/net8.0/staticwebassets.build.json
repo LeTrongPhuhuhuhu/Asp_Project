@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "nAnqX+3wmpqcOIScvdwh+Npzcne4lYXVEjX/lyUIaGc=",
+  "Hash": "CfkKdEBYKvhNTRw5fyDScVE+tgody8oYBPa7m1F/8kU=",
   "Source": "6TL",
   "BasePath": "_content/6TL",
   "Mode": "Default",
@@ -55,12 +55,12 @@
       "OriginalItemSpec": "E:\\Asp Project\\Asp_Project\\6TL\\6TL\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\6TL.bundle.scp.css"
     },
     {
-      "Identity": "E:\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\site.css",
+      "Identity": "E:\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\style.css",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "E:\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\",
       "BasePath": "_content/6TL",
-      "RelativePath": "css/site.css",
+      "RelativePath": "css/style.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -71,7 +71,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\site.css"
+      "OriginalItemSpec": "wwwroot\\css\\style.css"
     },
     {
       "Identity": "E:\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\favicon.ico",
@@ -91,6 +91,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "E:\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\banner-ban-cafe.jpg",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+      "BasePath": "_content/6TL",
+      "RelativePath": "img/banner-ban-cafe.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\banner-ban-cafe.jpg"
     },
     {
       "Identity": "E:\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\js\\site.js",

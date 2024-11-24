@@ -5,12 +5,16 @@
       "PackagePath": "staticwebassets\\6TL.bundle.scp.css"
     },
     {
-      "Id": "E:\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\site.css",
-      "PackagePath": "staticwebassets\\css\\site.css"
+      "Id": "E:\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
     },
     {
       "Id": "E:\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "E:\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\banner-ban-cafe.jpg",
+      "PackagePath": "staticwebassets\\img\\banner-ban-cafe.jpg"
     },
     {
       "Id": "E:\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\js\\site.js",
