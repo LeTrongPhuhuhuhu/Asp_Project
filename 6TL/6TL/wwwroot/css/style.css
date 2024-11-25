@@ -1,4 +1,10 @@
 ﻿/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 /* Copy các quy tắc từ site.css */
 html {
     font-size: 14px;
@@ -40,8 +46,8 @@ body {
 
 /* Logo */
 .navbar-logo img {
-    max-height: 50px;
-    width: auto;
+    height: 60px;
+    width: 230px;
 }
 
 /* Menu */
@@ -180,6 +186,7 @@ p {
         margin-left: 10px;
         cursor: pointer;
     }
+
 /* Footer */
 footer {
     background-color: #222222;
@@ -248,23 +255,26 @@ footer {
             font-size: 14px;
             color: #ccc;
         }
-   /*Danh sach san pham*/
+
 .container {
-    width:100vw;
+    max-width: 100%; /* Đảm bảo chiều rộng tối đa giống banner */
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* Căn giữa nội dung */
+    align-items: flex-start;
+    padding: 0 30px; /* Căn lề trái và phải để tạo khoảng cách */
     gap: 30px; /* Khoảng cách giữa sidebar và content */
+    margin: 0 auto; /* Căn giữa container */
 }
 
 .sidebar {
-    left:-50px;
-    width: 25vw;
+    left: 0;
+    right: 0;
+    width: 20vw;
     background-color: #f4f4f4;
-    padding: 15px;
-    justify-content: center;
+    padding: 5px;
+    text-align: center;
     align-items: center;
-    text-align:center;
+    justify-content: center;
     position: sticky; /* Đặt sidebar cố định khi cuộn */
     top: 0; /* Sidebar sẽ giữ vị trí tại top của màn hình khi cuộn */
     height: 100vh; /* Chiều cao của sidebar là 100% chiều cao viewport */
@@ -274,12 +284,14 @@ footer {
 
 .content {
     width: 75vw;
- 
+    padding: 20px;
+    text-align: center;
 }
 
 .product-list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .product-item {
@@ -292,41 +304,20 @@ footer {
 
 /* Banner full width */
 .banner {
-    width: 100vw;
+    width: 100%; /* Đảm bảo chiều rộng tối đa */
     height: 455px;
     overflow: hidden;
- 
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Căn giữa nội dung trong banner */
     align-items: center;
+    margin: 0 auto; /* Căn giữa banner */
 }
 
 .banner-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
     object-position: center;
-}
-/*Trang Sản phẩm yêu thích*/
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-}
-
-header {
-    background-color: #f9f9f9;
-    color: #fff;
-    padding: 15px;
-    text-align: center;
-}
-
-h1 {
-    text-align: center;
-    margin: 20px 0;
-    color: #000;
 }
 
 .product-grid {
