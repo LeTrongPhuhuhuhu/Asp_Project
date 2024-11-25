@@ -1,66 +1,63 @@
 ﻿@{
     ViewData["Title"] = "ViewProfile";
-
 }
-
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<link href="~/css/style.css" rel="stylesheet" />
+    <link href="~/css/style.css" rel="stylesheet" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thông Tin Cá Nhân</title>
 </head>
 <body>
     <div class="viewProfile">
-    <h2>Thông Tin Cá Nhân</h2>
+        <h2>Thông Tin Cá Nhân</h2>
 
-    <div class="formContainer">
-        <div class="formGroup">
-            <label for="fullName">Họ tên:</label>
-            <input type="text" id="fullName" placeholder="Nhập họ tên">
-        </div>
-        <div class="formGroup">
-            <label for="phoneNumber">Số điện thoại:</label>
-            <input type="text" id="phoneNumber" placeholder="Nhập số điện thoại">
-        </div>
-        <div class="formGroup">
-            <label for="address">Địa Chỉ:</label>
-            <input type="text" id="address" placeholder="Nhập địa chỉ">
-        </div>
-        <div class="formGroup">
-            <label for="emailAddress">Email:</label>
-            <input type="email" id="emailAddress" placeholder="Nhập email">
-        </div>
-        <div class="formGroup">
-            <label>Giới Tính:</label>
-            <div class="genderOptions" style="margin-left:40px">
-                <label><input type="radio" name="gender" value="Nam"> Nam</label>
-                <label><input type="radio" name="gender" value="Nữ"> Nữ</label>
-                <label><input type="radio" name="gender" value="Khác"> Khác</label>
+        <div class="formContainer">
+            <div class="formGroup">
+                <label for="fullName">Họ tên:</label>
+                <input type="text" id="fullName" placeholder="Nhập họ tên">
+            </div>
+            <div class="formGroup">
+                <label for="phoneNumber">Số điện thoại:</label>
+                <input type="text" id="phoneNumber" placeholder="Nhập số điện thoại">
+            </div>
+            <div class="formGroup">
+                <label for="address">Địa Chỉ:</label>
+                <input type="text" id="address" placeholder="Nhập địa chỉ">
+            </div>
+            <div class="formGroup">
+                <label for="emailAddress">Email:</label>
+                <input type="email" id="emailAddress" placeholder="Nhập email">
+            </div>
+            <div class="formGroup">
+                <label>Giới Tính:</label>
+                <div class="genderOptions">
+                    <label><input type="radio" name="gender" value="Nam"> Nam</label>
+                    <label><input type="radio" name="gender" value="Nữ"> Nữ</label>
+                    <label><input type="radio" name="gender" value="Khác"> Khác</label>
+                </div>
+            </div>
+            <div class="formGroup">
+                <label for="dateOfBirth">Ngày Sinh:</label>
+                <input type="date" id="dateOfBirth">
+            </div>
+            <div class="buttonContainer">
+                <button>Save</button>
             </div>
         </div>
-        <div class="formGroup">
-            <label for="dateOfBirth">Ngày Sinh:</label>
-            <input type="date" id="dateOfBirth">
-        </div>
-        <div class="buttonContainer">
-            <button>Save</button>
-        </div>
-    </div>
 
-    <div class="links">
-        <div class="linkItem">
-            <a href="#">Lịch Sử Đơn Hàng</a>
-            <span>&gt;</span>
+        <div class="links">
+            <div class="linkItem">
+                <a href="#">Lịch Sử Đơn Hàng</a>
+                <span>&gt;</span>
+            </div>
+            <div class="linkItem">
+                <a href="#">Danh Sách Yêu Thích</a>
+                <span>&gt;</span>
+            </div>
         </div>
-        <div class="linkItem">
-            <a href="#">Danh Sách Yêu Thích</a>
-            <span>&gt;</span>
-        </div>
-    </div>
     </div>
 </body>
 </html>
-
