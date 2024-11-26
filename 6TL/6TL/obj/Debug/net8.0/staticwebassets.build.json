@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "af/M/GkQtWF208eLt9YOffAaISQSeaAetGwwdtNqrRM=",
+  "Hash": "SF99t7raB2IUR02iHcIzJoJCzRxK4FBjAf9vjEqqa40=",
   "Source": "6TL",
   "BasePath": "_content/6TL",
   "Mode": "Default",
@@ -148,6 +148,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\Black and White Professional Minimalistic Real Estate Logo.png"
+    },
+    {
+      "Identity": "E:\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\placeholder.jpg",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+      "BasePath": "_content/6TL",
+      "RelativePath": "img/placeholder.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\placeholder.jpg"
     },
     {
       "Identity": "E:\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\snapedit_1732430907358.png",

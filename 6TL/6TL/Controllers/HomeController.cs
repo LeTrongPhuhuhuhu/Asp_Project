@@ -15,6 +15,7 @@ namespace _6TL.Controllers
 		public IActionResult SanPham() { return View(); }
 
 		public IActionResult SanPhamYeuThich() { return View(); }
+		public IActionResult ChiTietSanPham() { return View(); }
 		public IActionResult Index()
 		{
 			return View();
