@@ -28,7 +28,10 @@ namespace _6TL.Controllers
         {
             return View();
         }
-        public IActionResult ViewProfile()
+		public IActionResult ChiTietSanPham() { return View(); }
+
+		public IActionResult TrangThanhToan() { return View(); }
+		public IActionResult ViewProfile()
         {
             return View();
         }

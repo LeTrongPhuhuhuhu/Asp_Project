@@ -1,0 +1,97 @@
+﻿<div class="checkout-container_ttt">
+    <!-- Phần thông tin giao hàng -->
+    <div class="shipping-info_ttt">
+        <h2>Thông Tin Giao Hàng</h2>
+        <form>
+            <div class="input-group_ttt">
+                <input type="text" id="first-name_ttt" placeholder="Tên" required>
+                <input type="text" id="last-name_ttt" placeholder="Họ" required>
+            </div>
+            <input type="text" id="address_ttt" placeholder="Địa chỉ giao hàng" required>
+            <div class="input-group_ttt">
+                <input type="email" id="email_ttt" placeholder="Email" required>
+                <input type="tel" id="phone_ttt" placeholder="Số điện thoại" required>
+            </div>
+            <select id="city_ttt" required>
+                <option value="" disabled selected>Chọn thành phố</option>
+                <option value="hanoi">Hà Nội</option>
+                <option value="hochiminh">TP Hồ Chí Minh</option>
+                <option value="danang">Đà Nẵng</option>
+            </select>
+
+            <div class="shipping-method_ttt">
+                <h3>Phương Thức Vận Chuyển</h3>
+                <div class="shipping-placeholder_ttt">
+                    Hiển thị thông tin vận chuyển sau khi chọn sản phẩm.
+                </div>
+            </div>
+
+            <!-- Phần phương thức thanh toán -->
+            <div class="payment-method_ttt">
+                <h3>Phương thức thanh toán</h3>
+                <input type="radio" id="cod" name="payment_method" value="cod">
+                <label for="cod">
+                    <span class="icon">💳</span> Thanh toán khi nhận hàng (COD)
+                </label>
+
+                <input type="radio" id="momo" name="payment_method" value="momo">
+                <label for="momo">
+                    <span class="icon">📱</span> Thanh toán MoMo
+                </label>
+
+                <input type="radio" id="bank_transfer" name="payment_method" value="bank_transfer">
+                <label for="bank_transfer">
+                    <span class="icon">🏦</span> Thanh toán qua ngân hàng
+                </label>
+            </div>
+
+            <button type="submit" class="checkout-button_ttt">Hoàn tất thanh toán</button>
+            <button type="button" class="cancel-payment-button_ttt" onclick="cancelPayment()">Hủy Thanh Toán</button>
+        </form>
+    </div>
+
+    <!-- Phần giỏ hàng -->
+    <div class="cart-summary_ttt">
+        <h2>Tóm Tắt Giỏ Hàng</h2>
+        <div class="cart-items_ttt">
+            <div class="cart-item_ttt">
+                <div class="product-image_ttt">
+                    <!-- Hình ảnh sản phẩm -->
+                </div>
+                <div class="product-info_ttt">
+                    <p>Tên Sản Phẩm 1</p>
+                    <span>Số Lượng: 2</span>
+                    <strong>Giá: 200,000₫</strong>
+                </div>
+            </div>
+            <div class="cart-item_ttt">
+                <div class="product-image_ttt">
+                    <!-- Hình ảnh sản phẩm -->
+                </div>
+                <div class="product-info_ttt">
+                    <p>Tên Sản Phẩm 2</p>
+                    <span>Số Lượng: 1</span>
+                    <strong>Giá: 150,000₫</strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="discount-code_ttt">
+            <input type="text" id="discount-code_ttt" placeholder="Mã giảm giá">
+            <button type="button" id="apply-discount_ttt">Áp dụng</button>
+        </div>
+
+        <div class="order-summary_ttt">
+            <p>Tổng phụ: <span>350,000₫</span></p>
+            <p>Phí vận chuyển: <span>50,000₫</span></p>
+            <p class="total_ttt">Tổng cộng: <span>400,000₫</span></p>
+        </div>
+    </div>
+</div>
+
+<script>
+    function cancelPayment() {
+        alert("Thanh toán đã bị hủy!");
+        document.querySelector('form').reset();
+    }
+</script>

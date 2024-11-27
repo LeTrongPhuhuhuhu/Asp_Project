@@ -91,3 +91,34 @@ D:\DoAnAsp\Asp_Project\6TL\6TL\obj\Debug\net8.0\refint\6TL.dll
 D:\DoAnAsp\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.pdb
 D:\DoAnAsp\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.genruntimeconfig.cache
 D:\DoAnAsp\Asp_Project\6TL\6TL\obj\Debug\net8.0\ref\6TL.dll
+E:\Asp Project\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\appsettings.Development.json
+E:\Asp Project\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\appsettings.json
+E:\Asp Project\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.staticwebassets.runtime.json
+E:\Asp Project\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.exe
+E:\Asp Project\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.deps.json
+E:\Asp Project\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.runtimeconfig.json
+E:\Asp Project\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.dll
+E:\Asp Project\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.pdb
+E:\Asp Project\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.GeneratedMSBuildEditorConfig.editorconfig
+E:\Asp Project\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.AssemblyInfoInputs.cache
+E:\Asp Project\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.AssemblyInfo.cs
+E:\Asp Project\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.csproj.CoreCompileInputs.cache
+E:\Asp Project\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.MvcApplicationPartsAssemblyInfo.cache
+E:\Asp Project\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.RazorAssemblyInfo.cache
+E:\Asp Project\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.RazorAssemblyInfo.cs
+E:\Asp Project\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.sourcelink.json
+E:\Asp Project\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets.build.json
+E:\Asp Project\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets.development.json
+E:\Asp Project\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets\msbuild.6TL.Microsoft.AspNetCore.StaticWebAssets.props
+E:\Asp Project\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets\msbuild.build.6TL.props
+E:\Asp Project\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.6TL.props
+E:\Asp Project\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.6TL.props
+E:\Asp Project\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets.pack.json
+E:\Asp Project\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+E:\Asp Project\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\scopedcss\bundle\6TL.styles.css
+E:\Asp Project\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\scopedcss\projectbundle\6TL.bundle.scp.css
+E:\Asp Project\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.dll
+E:\Asp Project\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\refint\6TL.dll
+E:\Asp Project\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.pdb
+E:\Asp Project\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.genruntimeconfig.cache
+E:\Asp Project\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\ref\6TL.dll
