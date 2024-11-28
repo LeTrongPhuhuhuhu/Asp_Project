@@ -23,11 +23,12 @@
 
 /* Hiển thị dấu mũi tên bình thường */
 .click .carousel-control-prev-icon,
-.click .carousel-control-next-icon {
+.click .carousel-control-next {
     display: inline-block; /* Bảo đảm mũi tên hiển thị */
     background-color: transparent; /* Không có màu nền */
     filter: none; /* Loại bỏ mọi hiệu ứng có thể áp dụng */
 }
+
 
 /* Xóa màu khi hover */
 .click:hover {
@@ -42,26 +43,6 @@
     box-shadow: none !important;
     outline: none !important;
 }
-
-
-
-/* Header (banner) styles */
-.banner {
-    background: url('https://via.placeholder.com/1920x500') no-repeat center center/cover;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-}
-
-    .banner h2 {
-        font-size: 2.5rem;
-        font-weight: bold;
-        color: #fff;
-        margin: 0;
-    }
 
 /* Card styles */
 .card {
@@ -172,7 +153,7 @@ section {
     #mainCarousel .carousel-item img {
         object-fit: cover; /* Maintain aspect ratio and fill the container */
         height: 639px; /* Set height to match your desired size */
-        width: 1920px;
+        width:1920px;
     }
 
 .grid-container {
@@ -200,4 +181,10 @@ section {
 
 .py-5 {
     padding: 3rem 0;
+}
+
+.position-relative img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
 }
