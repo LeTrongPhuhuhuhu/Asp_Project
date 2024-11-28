@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "e0QV3l2as4r6Gz4KFYQm/+h0bBR3RifvMcPb7rfZ0ZE=",
+  "Hash": "R1A69H6NIz5Ggt6qK2UsL7KDufTcFJpfkGD6gZSwk1c=",
   "Source": "6TL",
   "BasePath": "_content/6TL",
   "Mode": "Default",
@@ -53,6 +53,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\6TL.bundle.scp.css"
+    },
+    {
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\DangKy.css",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+      "BasePath": "_content/6TL",
+      "RelativePath": "css/DangKy.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\DangKy.css"
     },
     {
       "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\DangNhap.css",

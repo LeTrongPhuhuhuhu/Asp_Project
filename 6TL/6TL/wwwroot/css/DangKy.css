@@ -1,0 +1,89 @@
+﻿
+.banner-register {
+    text-align: center;
+    padding: 20px;
+    background: #f4f4f4;
+}
+
+    .banner-register img {
+        max-width: 100%;
+        height: auto;
+    }
+
+.form-section {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.register-form {
+    width: 1000px;
+    background: #e0e0e0;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+    .form-row input, .form-row select {
+        width: 48%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+.gender label {
+    margin-right: 10px;
+}
+
+.terms {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Khoảng cách giữa checkbox và label */
+}
+
+.form-row input[type="checkbox"] {
+    width: auto; /* Để checkbox không bị ép kích thước */
+    padding: 0; /* Loại bỏ padding không cần thiết */
+    margin-right: 5px; /* Thêm khoảng cách giữa checkbox và label */
+    border: none; /* Loại bỏ viền không cần thiết */
+    border-radius: 0; /* Giữ checkbox dạng mặc định hình vuông */
+    transform: scale(1.2); /* Phóng to một chút nếu muốn */
+    cursor: pointer; /* Đổi con trỏ để tăng UX */
+}
+
+    .terms label {
+        font-size: 14px;
+        color: #333;
+    }
+
+.terms-link {
+    color: blue;
+    text-decoration: underline;
+    margin-left: 3px; /* Khoảng cách nhỏ trước liên kết */
+    cursor: pointer;
+}
+
+    .terms-link:hover {
+        color: darkblue;
+    }
+
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    background: gray;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.social-media a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: black;
+}
