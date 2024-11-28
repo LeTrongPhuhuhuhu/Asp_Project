@@ -18,6 +18,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/ổ D/TK WEB ASPNET CORE/Đồ án ASP/Asp_Project/6TL/6TL/Views/Home/DangKy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEYW5nS3kuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ổ D/TK WEB ASPNET CORE/Đồ án ASP/Asp_Project/6TL/6TL/Views/Home/DangNhap.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEYW5nTmhhcC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/ổ D/TK WEB ASPNET CORE/Đồ án ASP/Asp_Project/6TL/6TL/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
