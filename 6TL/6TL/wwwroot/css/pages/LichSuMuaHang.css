@@ -1,5 +1,5 @@
-﻿/* Reset lại các thuộc tính cơ bản */
-/*.oderHistory * {
+﻿ Reset lại các thuộc tính cơ bản 
+.oderHistory * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -139,4 +139,4 @@
     padding: 10px;
     background-color: #f2f2f2;
     border-radius: 4px;
-}*/
+}
