@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Đăng Nhập</h2>
+            <form>
+                <div class="social-login">
+                    <button type="button" class="google-login">Google</button>
+                    <button type="button" class="facebook-login">Facebook</button>
+                </div>
+                <p>Hoặc đăng nhập với</p>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Email">
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Password">
+                </div>
+                <div class="options">
+                    <label>
+                        <input type="checkbox"> Nhớ Mật Khẩu
+                    </label>
+                    <a href="#">Quên mật khẩu?</a>
+                </div>
+                <button type="submit" class="login-btn">Đăng Nhập</button>
+                <a type="button" class="register-btn text-decoration-none" asp-controller="Home" asp-action="DangKy">Đăng Ký</a>
+            </form>
+        </div>
+        <div class="logo">
+        <img src="~/img/Black and White Professional Minimalistic Real Estate Logo.png">
+        </div>
+    </div>
+<link href="~/../../../../../đồ án asp/asp_project/6tl/6tl/wwwroot/css/pages/dangnhap.css" rel="stylesheet" />
