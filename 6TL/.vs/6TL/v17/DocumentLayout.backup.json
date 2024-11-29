@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\\u1ED5 d\\tk web aspnet core\\\u0111\u1ED3 \u00E1n asp\\asp_project\\6tl\\6tl\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\\u1ED5 d\\tk web aspnet core\\\u0111\u1ED3 \u00E1n asp\\asp_project\\6tl\\6tl\\views\\home\\dangnhap.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\views\\home\\dangnhap.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\\u1ED5 d\\tk web aspnet core\\\u0111\u1ED3 \u00E1n asp\\asp_project\\6tl\\6tl\\wwwroot\\css\\pages\\dangnhap.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\wwwroot\\css\\pages\\dangnhap.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\\u1ED5 d\\tk web aspnet core\\\u0111\u1ED3 \u00E1n asp\\asp_project\\6tl\\6tl\\views\\home\\dangky.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\views\\home\\dangky.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\\u1ED5 d\\tk web aspnet core\\\u0111\u1ED3 \u00E1n asp\\asp_project\\6tl\\6tl\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\\u1ED5 d\\tk web aspnet core\\\u0111\u1ED3 \u00E1n asp\\asp_project\\6tl\\6tl\\wwwroot\\css\\pages\\dangnhap.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\wwwroot\\css\\pages\\dangnhap.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\\u1ED5 d\\tk web aspnet core\\\u0111\u1ED3 \u00E1n asp\\asp_project\\6tl\\6tl\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -57,7 +57,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -89,20 +89,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "DangNhap.cshtml",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Views\\Home\\DangNhap.cshtml",
               "RelativeDocumentMoniker": "6TL\\Views\\Home\\DangNhap.cshtml",
               "ToolTip": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Views\\Home\\DangNhap.cshtml",
               "RelativeToolTip": "6TL\\Views\\Home\\DangNhap.cshtml",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAACIAAABuAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACIAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-28T16:44:29.917Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "DangKy.cshtml",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Views\\Home\\DangKy.cshtml",
               "RelativeDocumentMoniker": "6TL\\Views\\Home\\DangKy.cshtml",
@@ -135,12 +135,11 @@
               "RelativeToolTip": "6TL\\Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-23T18:23:45.946Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-23T18:23:45.946Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "DangNhap.css",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\DangNhap.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\pages\\DangNhap.css",
@@ -148,12 +147,11 @@
               "RelativeToolTip": "6TL\\wwwroot\\css\\pages\\DangNhap.css",
               "ViewState": "AgIAACcAAAAAAAAAAAAAADwAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-11-28T16:46:21.415Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-28T16:46:21.415Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "6TL\\Views\\Home\\Index.cshtml",
@@ -174,8 +172,7 @@
               "RelativeToolTip": "6TL\\wwwroot\\css\\pages\\TrangChu.css",
               "ViewState": "AgIAAD8AAAAAAAAAAAAAABoAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-11-25T16:57:44.752Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T16:57:44.752Z"
             },
             {
               "$type": "Document",
@@ -187,8 +184,7 @@
               "RelativeToolTip": "6TL\\wwwroot\\css\\style.css",
               "ViewState": "AgIAAEIAAAAAAAAAAAAAAAgBAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-11-23T18:27:13.483Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-23T18:27:13.483Z"
             },
             {
               "$type": "Document",
@@ -212,8 +208,7 @@
               "RelativeToolTip": "6TL\\wwwroot\\css\\pages\\DangKy.css",
               "ViewState": "AgIAABIAAAAAAAAAAAAAADsAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-11-28T17:16:39.292Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-28T17:16:39.292Z"
             },
             {
               "$type": "Document",
