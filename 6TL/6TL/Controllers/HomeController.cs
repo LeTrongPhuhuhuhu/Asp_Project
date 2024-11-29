@@ -28,6 +28,10 @@ namespace _6TL.Controllers
         {
             return View();
         }
+		public IActionResult GioiThieu()
+		{
+			return View();
+		}
 		public IActionResult ChiTietSanPham() { return View(); }
 
 		public IActionResult TrangThanhToan() { return View(); }
