@@ -5,16 +5,16 @@
       "PackagePath": "staticwebassets\\6TL.bundle.scp.css"
     },
     {
-      "Id": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\DangKy.css",
-      "PackagePath": "staticwebassets\\css\\DangKy.css"
+      "Id": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\DangKy.css",
+      "PackagePath": "staticwebassets\\css\\pages\\DangKy.css"
     },
     {
-      "Id": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\DangNhap.css",
-      "PackagePath": "staticwebassets\\css\\DangNhap.css"
+      "Id": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\DangNhap.css",
+      "PackagePath": "staticwebassets\\css\\pages\\DangNhap.css"
     },
     {
-      "Id": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\TrangChu.css",
-      "PackagePath": "staticwebassets\\css\\TrangChu.css"
+      "Id": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\TrangChu.css",
+      "PackagePath": "staticwebassets\\css\\pages\\TrangChu.css"
     },
     {
       "Id": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\style.css",
