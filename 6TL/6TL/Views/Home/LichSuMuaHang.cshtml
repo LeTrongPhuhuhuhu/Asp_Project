@@ -1,51 +1,85 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-	<link href="~/css/style.css" rel="stylesheet" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order Table</title>
-</head>
-<body>
-    <div class="oderHistory">
-    <div class="container">
-        <table>
-            <thead>
-                <tr>
-                    <th>Mã đơn hàng</th>
-                    <th>Trạng thái</th>
-                    <th>Giao hàng</th>
-                    <th>Thanh toán</th>
-                    <th>Giá trị</th>
-                    <th>Địa chỉ</th>
-                    <th>Ngày đặt hàng</th>
-                    <th>Ngày giao hàng</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                        <td>001</td>
-                        <td>Đang xử lý</td>
-                        <td>Vận chuyển</td>
-                        <td>Chưa thanh toán</td>
-                        <td>500,000 VND</td>
-                        <td>Hà Nội</td>
-                        <td>01/01/2024</td>
-                        <td>05/01/2024</td>
-                </tr>
-                <tr>
-                        <td>001</td>
-                        <td>Đang xử lý</td>
-                        <td>Vận chuyển</td>
-                        <td>Chưa thanh toán</td>
-                        <td>500,000 VND</td>
-                        <td>Hà Nội</td>
-                        <td>01/01/2024</td>
-                        <td>05/01/2024</td>
-                </tr>
-            </tbody>
-        </table>
+﻿@{
+    ViewData["Title"] = "Lịch sử mua hàng";
+}
+
+<h2>Lịch sử mua hàng</h2>
+
+<!-- Thanh tìm kiếm -->
+<div class="search-container">
+    <input type="text" id="searchOrder" placeholder="Tìm kiếm theo mã đơn hàng hoặc trạng thái..." />
+</div>
+
+<!-- Bảng lịch sử mua hàng -->
+<table class="order-history">
+    <thead>
+        <tr>
+            <th>Mã đơn hàng</th>
+            <th>Trạng thái</th>
+            <th>Giao hàng</th>
+            <th>Thanh toán</th>
+            <th>Giá trị</th>
+            <th>Địa chỉ</th>
+            <th>Ngày đặt hàng</th>
+            <th>Ngày giao hàng</th>
+            <th>Hành động</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>001</td>
+            <td><span class="status processing">Đang xử lý</span></td>
+            <td>Vận chuyển</td>
+            <td>Chưa thanh toán</td>
+            <td>500,000 VND</td>
+            <td>Hà Nội</td>
+            <td>01/01/2024</td>
+            <td>05/01/2024</td>
+            <td class="actions">
+                <button class="view-btn"><i class="fas fa-eye"></i> Xem chi tiết</button>
+            </td>
+
+        </tr>
+        <tr>
+            <td>002</td>
+            <td><span class="status completed">Đã giao</span></td>
+            <td>Đã giao hàng</td>
+            <td>Đã thanh toán</td>
+            <td>1,200,000 VND</td>
+            <td>TP Hồ Chí Minh</td>
+            <td>02/01/2024</td>
+            <td>06/01/2024</td>
+            <td>
+                <button class="btn detail">Xem chi tiết</button>
+            </td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="4" style="text-align: right; font-weight: bold;">Tổng giá trị:</td>
+            <td colspan="4" id="totalAmount" style="font-weight: bold;">1,700,000 VND</td>
+        </tr>
+    </tfoot>
+</table>
+
+<!-- Phân trang -->
+<div class="pagination">
+    <button class="prev">Trang trước</button>
+    <span>Trang 1/10</span>
+    <button class="next">Trang sau</button>
+</div>
+
+<!-- Modal xem chi tiết -->
+<div id="orderModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Chi tiết đơn hàng</h2>
+        <p>Mã đơn hàng: 001</p>
+        <ul>
+            <li>Sản phẩm 1: Sofa - Số lượng: 1</li>
+            <li>Sản phẩm 2: Bàn - Số lượng: 2</li>
+        </ul>
+        <p>Tổng giá trị: 500,000 VND</p>
     </div>
-    </div>
-</body>
-</html>
+</div>
+<link href="~/css/pages/lichsumuahang.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">

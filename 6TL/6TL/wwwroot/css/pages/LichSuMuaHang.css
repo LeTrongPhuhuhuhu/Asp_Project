@@ -1,0 +1,142 @@
+﻿ Reset lại các thuộc tính cơ bản 
+.oderHistory * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.oderHistory body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    height: 100%;
+    padding: 20px;
+}
+
+.oderHistory .container {
+    width: 100%;
+    max-width: 1200px; 
+    overflow-x: auto;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+
+.oderHistory table {
+    text-align: center;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.oderHistory th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.oderHistory th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.oderHistory tr:hover {
+    background-color: #f1f1f1;
+}
+
+.oderHistory td {
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+
+.oderHistory table th, table td {
+    text-align: center;
+    width: 12.5%;
+}
+
+
+.oderHistory .status-processing {
+    background-color: #f3e46d; 
+    font-weight: bold;
+    color: #333;
+}
+
+.oderHistory .status-delivered {
+    background-color: #4caf50; 
+    color: white;
+    font-weight: bold;
+}
+
+.oderHistory .status-canceled {
+    background-color: #f44336; 
+    color: white;
+    font-weight: bold;
+}
+
+.oderHistory .action-btn {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; 
+}
+
+    .oderHistory .action-btn i {
+        font-size: 16px; 
+    }
+
+    .oderHistory .action-btn:hover {
+        background-color: #0056b3;
+    }
+
+    .oderHistory .action-btn:active {
+        background-color: #004085;
+    }
+
+.oderHistory .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+    .oderHistory .pagination a {
+        padding: 8px 16px;
+        margin: 0 4px;
+        background-color: #f2f2f2;
+        color: #007bff;
+        text-decoration: none;
+        border-radius: 4px;
+    }
+
+        .oderHistory .pagination a:hover {
+            background-color: #007bff;
+            color: white;
+        }
+
+    .oderHistory .pagination .active {
+        background-color: #007bff;
+        color: white;
+        font-weight: bold;
+    }
+
+.oderHistory .total-price {
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 20px;
+    text-align: right;
+    padding: 10px;
+    background-color: #f2f2f2;
+    border-radius: 4px;
+}
