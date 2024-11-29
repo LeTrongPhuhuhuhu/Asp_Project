@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\\u0110\u1ED3 \u00C1n Web\\Asp Project\\Asp_Project\\6TL\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\\u0111\u1ED3 \u00E1n web\\asp project\\asp_project\\6tl\\6tl\\views\\home\\tintuc.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\views\\home\\tintuc.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\\u0111\u1ED3 \u00E1n web\\asp project\\asp_project\\6tl\\6tl\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\\u0111\u1ED3 \u00E1n web\\asp project\\asp_project\\6tl\\6tl\\views\\home\\tintuc.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\views\\home\\tintuc.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\\u0111\u1ED3 \u00E1n web\\asp project\\asp_project\\6tl\\6tl\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -46,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 13,
           "Children": [
             {
               "$type": "Bookmark",
@@ -94,8 +94,7 @@
               "RelativeToolTip": "6TL\\Views\\Home\\ViewProfile.cshtml",
               "ViewState": "AgIAABMAAAAAAAAAAAAmwD8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-26T17:06:33.829Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T17:06:33.829Z"
             },
             {
               "$type": "Document",
@@ -107,18 +106,17 @@
               "RelativeToolTip": "6TL\\Views\\Home\\LichSuMuaHang.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-26T17:06:31.504Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T17:06:31.504Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "TinTuc.cshtml",
               "DocumentMoniker": "D:\\\u0110\u1ED3 \u00C1n Web\\Asp Project\\Asp_Project\\6TL\\6TL\\Views\\Home\\TinTuc.cshtml",
               "RelativeDocumentMoniker": "6TL\\Views\\Home\\TinTuc.cshtml",
               "ToolTip": "D:\\\u0110\u1ED3 \u00C1n Web\\Asp Project\\Asp_Project\\6TL\\6TL\\Views\\Home\\TinTuc.cshtml",
               "RelativeToolTip": "6TL\\Views\\Home\\TinTuc.cshtml",
-              "ViewState": "AgIAABkAAAAAAAAAAAAmwCYAAAA8AAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAAEEAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-26T17:06:25.514Z",
               "EditorCaption": ""
@@ -133,18 +131,17 @@
               "RelativeToolTip": "6TL\\Views\\Home\\SanPham.cshtml",
               "ViewState": "AgIAAB0AAAAAAAAAAAAYwFEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-24T04:20:34.917Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-24T04:20:34.917Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "style.css",
               "DocumentMoniker": "D:\\\u0110\u1ED3 \u00C1n Web\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\style.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\style.css",
               "ToolTip": "D:\\\u0110\u1ED3 \u00C1n Web\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\style.css",
               "RelativeToolTip": "6TL\\wwwroot\\css\\style.css",
-              "ViewState": "AgIAAGACAAAAAAAAAAD4v3QCAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAF8CAAAAAAAAAAArwGYCAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2024-11-23T18:27:13.483Z",
               "EditorCaption": ""
@@ -159,8 +156,7 @@
               "RelativeToolTip": "6TL\\Views\\Home\\SanPhamYeuThich.cshtml",
               "ViewState": "AgIAAAQAAAAAAAAAAAAQwDAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-24T06:42:44.428Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-24T06:42:44.428Z"
             },
             {
               "$type": "Document",
@@ -172,8 +168,7 @@
               "RelativeToolTip": "6TL\\Controllers\\HomeController.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAAQwCQAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T18:23:50.676Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-23T18:23:50.676Z"
             },
             {
               "$type": "Document",
@@ -185,8 +180,7 @@
               "RelativeToolTip": "6TL\\Views\\Home\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-21T13:22:53.835Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-21T13:22:53.835Z"
             },
             {
               "$type": "Document",
