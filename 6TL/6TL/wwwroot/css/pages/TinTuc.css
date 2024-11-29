@@ -1,6 +1,4 @@
-﻿
-/*Trang tin tức*/
-body {
+﻿body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -53,22 +51,26 @@ header {
     font-size: 60px;
 }
 
-.news-grid {
+.news-grid-tt {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+    flex-wrap: wrap; /* Đảm bảo các thẻ tự động xuống hàng */
+    gap: 20px; /* Tạo khoảng cách giữa các thẻ */
+    justify-content: center; /* Căn giữa các hàng */
     padding: 20px;
+    max-width: 1500px; /* Giới hạn chiều rộng container */
+    margin: 0 auto; /* Căn giữa container */
 }
 
-.news-card {
+.news-card-tt {
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 15px;
     text-align: center;
-    width: 475px;
-    height: 600px;
+    width: calc(33.33% - 20px); /* Tự động tính toán chiều rộng dựa trên khoảng cách */
+    max-width: 350px; /* Giới hạn chiều rộng tối đa */
+    height: auto; /* Chiều cao tự động dựa trên nội dung */
+    box-sizing: border-box; /* Đảm bảo padding không làm vượt quá chiều rộng */
 }
 
 .image-placeholder {
@@ -77,8 +79,6 @@ header {
     background: #ccc;
     border-radius: 5px;
     margin-bottom: 10px;
-    width: 450px;
-    height: 280px;
 }
 
 .date {
