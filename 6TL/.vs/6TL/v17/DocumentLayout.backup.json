@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "D:\\\u0110\u1ED3 \u00C1n Web\\Asp Project\\Asp_Project\\6TL\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\\u0111\u1ED3 \u00E1n web\\asp project\\asp_project\\6tl\\6tl\\wwwroot\\css\\pages\\tintuc.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\wwwroot\\css\\pages\\tintuc.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\\u0111\u1ED3 \u00E1n web\\asp project\\asp_project\\6tl\\6tl\\views\\home\\tintuc.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\views\\home\\tintuc.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\\u0111\u1ED3 \u00E1n web\\asp project\\asp_project\\6tl\\6tl\\views\\home\\trangthanhtoan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\views\\home\\trangthanhtoan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\\u0111\u1ED3 \u00E1n web\\asp project\\asp_project\\6tl\\6tl\\wwwroot\\css\\pages\\tintuc.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\wwwroot\\css\\pages\\tintuc.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\\u0111\u1ED3 \u00E1n web\\asp project\\asp_project\\6tl\\6tl\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
@@ -78,7 +78,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 14,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -118,13 +118,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "TinTuc.css",
               "DocumentMoniker": "D:\\\u0110\u1ED3 \u00C1n Web\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\TinTuc.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\pages\\TinTuc.css",
               "ToolTip": "D:\\\u0110\u1ED3 \u00C1n Web\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\TinTuc.css",
               "RelativeToolTip": "6TL\\wwwroot\\css\\pages\\TinTuc.css",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAAwFgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAFgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2024-11-29T13:35:24.168Z",
               "EditorCaption": ""
@@ -151,8 +151,7 @@
               "RelativeToolTip": "6TL\\Views\\Home\\SanPham.cshtml",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAABsAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-24T04:20:34.917Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-24T04:20:34.917Z"
             },
             {
               "$type": "Document",
@@ -164,8 +163,7 @@
               "RelativeToolTip": "6TL\\wwwroot\\css\\style.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-11-23T18:27:13.483Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-23T18:27:13.483Z"
             },
             {
               "$type": "Document",
@@ -181,16 +179,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "TinTuc.cshtml",
               "DocumentMoniker": "D:\\\u0110\u1ED3 \u00C1n Web\\Asp Project\\Asp_Project\\6TL\\6TL\\Views\\Home\\TinTuc.cshtml",
               "RelativeDocumentMoniker": "6TL\\Views\\Home\\TinTuc.cshtml",
               "ToolTip": "D:\\\u0110\u1ED3 \u00C1n Web\\Asp Project\\Asp_Project\\6TL\\6TL\\Views\\Home\\TinTuc.cshtml",
               "RelativeToolTip": "6TL\\Views\\Home\\TinTuc.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACcAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-26T17:06:25.514Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T17:06:25.514Z"
             },
             {
               "$type": "Document",
@@ -206,7 +203,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "TrangThanhToan.cshtml",
               "DocumentMoniker": "D:\\\u0110\u1ED3 \u00C1n Web\\Asp Project\\Asp_Project\\6TL\\6TL\\Views\\Home\\TrangThanhToan.cshtml",
               "RelativeDocumentMoniker": "6TL\\Views\\Home\\TrangThanhToan.cshtml",
@@ -214,8 +211,7 @@
               "RelativeToolTip": "6TL\\Views\\Home\\TrangThanhToan.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-27T09:40:04.496Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-27T09:40:04.496Z"
             },
             {
               "$type": "Document",
