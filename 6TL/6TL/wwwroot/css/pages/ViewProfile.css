@@ -1,0 +1,139 @@
+﻿/*VIeProfile*/
+.viewProfile main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 80px);
+    padding: 20px;
+}
+
+.viewProfile html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    .viewProfile html {
+        font-size: 16px;
+    }
+}
+
+.viewProfile .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+.viewProfile html {
+    position: relative;
+    min-height: 100%;
+}
+
+.viewProfile body {
+    margin-bottom: 60px;
+}
+.viewProfile * {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.viewProfile h2 {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+    .viewProfile h2:before,
+    .viewProfile h2:after {
+        content: " ";
+        flex-grow: 1;
+        height: 1px;
+        background: #ccc;
+        margin: 0 10px;
+    }
+
+.viewProfile .formContainer {
+    width: 1000px;
+    height: 700px;
+    max-width: 1200px;
+    padding: 32px;
+    border-radius: 8px;
+    background-color: #faf0f0;
+    margin: 20px auto;
+}
+
+.formGroup {
+    margin-left: 12%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+    .formGroup label {
+        text-align: left;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    .formGroup input[type="text"],
+    .formGroup input[type="email"],
+    .formGroup input[type="date"] {
+        width: 100%;
+        max-width: 700px;
+        padding: 12px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        margin-top: 5px;
+        margin-left: 50px;
+    }
+
+.viewProfile .genderOptions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 5px;
+}
+
+.viewProfile .buttonContainer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.viewProfile button {
+    margin-right: 10%;
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.viewProfile .links {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.linkItem {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    font-weight: 500;
+    border-bottom: 1px solid #ddd;
+}
+
+    .linkItem a {
+        text-decoration: none;
+        color: #000;
+        transition: color 0.3s;
+    }
+
+        .linkItem a:hover {
+            color: #007bff;
+        }
