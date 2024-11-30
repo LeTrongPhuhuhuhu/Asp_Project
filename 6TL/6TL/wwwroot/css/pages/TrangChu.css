@@ -1,0 +1,190 @@
+﻿/* Carousel customization */
+.carousel-item img {
+    height: 400px;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+    .carousel-caption h5 {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #fff;
+    }
+
+    .carousel-caption p {
+        font-size: 1.2rem;
+        color: #ddd;
+    }
+
+/* Hiển thị dấu mũi tên bình thường */
+.click .carousel-control-prev-icon,
+.click .carousel-control-next {
+    display: inline-block; /* Bảo đảm mũi tên hiển thị */
+    background-color: transparent; /* Không có màu nền */
+    filter: none; /* Loại bỏ mọi hiệu ứng có thể áp dụng */
+}
+
+
+/* Xóa màu khi hover */
+.click:hover {
+    background-color: transparent !important; /* Không thay đổi màu nền */
+    color: inherit !important; /* Giữ màu văn bản nguyên bản */
+}
+
+/* Đảm bảo không bị ảnh hưởng bởi CSS khác */
+.click {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* Card styles */
+.card {
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .card img {
+        border-radius: 10px;
+    }
+
+    .card h3 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .card p {
+        font-size: 0.9rem;
+        color: #666;
+    }
+
+    .card .btn-primary {
+        border-radius: 20px;
+        font-size: 0.9rem;
+    }
+
+/* Section styles */
+section {
+    margin-bottom: 30px;
+}
+
+    section h2 {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    section p {
+        font-size: 1rem;
+        color: #555;
+    }
+
+.bg-light {
+    background-color: #f7f7f7 !important;
+}
+
+/* Product styles */
+.col-md-3 img {
+    border-radius: 10px;
+}
+
+.col-md-3 p {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333;
+}
+
+.list-box {
+    margin-top: 50px;
+}
+
+    .list-box .box-item {
+        cursor: pointer;
+        transition: .3s;
+        margin-bottom: 30px;
+        position: relative;
+    }
+
+        .list-box .box-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .list-box .box-item .img-box img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .list-box .box-item .content-box {
+            background-color: #58595b;
+            padding: 10px;
+        }
+
+            .list-box .box-item .content-box h4 a {
+                font-size: 22px;
+                color: #fff;
+                text-align: center;
+                display: block;
+            }
+
+                .list-box .box-item .content-box h4 a:hover {
+                    text-decoration: none;
+                }
+
+#mainCarousel {
+    max-height: 639px; /* Ensure carousel height */
+}
+
+    #mainCarousel .carousel-item img {
+        object-fit: cover; /* Maintain aspect ratio and fill the container */
+        height: 639px; /* Set height to match your desired size */
+        width: 1920px;
+    }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 317px);
+    gap: 15px; /* Khoảng cách giữa các phần tử */
+    justify-content: center; /* Căn giữa lưới */
+}
+
+.grid-item img {
+    width: 317px;
+    height: 399px;
+    object-fit: cover; /* Đảm bảo ảnh hiển thị đẹp */
+    border-radius: 8px; /* Tùy chọn bo góc */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.py-5 {
+    padding: 3rem 0;
+}
+
+.position-relative img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
