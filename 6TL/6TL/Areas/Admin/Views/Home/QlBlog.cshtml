@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Quản lý Blog";
+    var blogs = new List<dynamic>
+    {
+        new { Id = 1, Title = "Khuyến mãi cuối năm", Category = "Khuyến mãi và sự kiện" },
+        new { Id = 2, Title = "Cách trang trí phòng khách", Category = "Mẹo trang trí" }
+    };
+}
+
+<h2>Quản lý Blog</h2>
+
+<div class="d-flex justify-content-between mb-3">
+    <span>Tổng số lượng blog: @blogs.Count</span>
+    <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#addBlogModal">
+        Thêm Blog
+    </button>   
+</div>
+
+<table class="table table-bordered table-sm">
+    <thead>
+        <tr>
+            <th>Mã BLOG</th>
+            <th>Tiêu đề</th>
+            <th>Danh mục</th>
+            <th>Chức năng</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var blog in blogs)
+        {
+            <tr>
+                <td>@blog.Id</td>
+                <td>@blog.Title</td>
+                <td>@blog.Category</td>
+                <td>
+                    <button class="btn btn-link btn-sm">Sửa</button>
+                    <button class="btn btn-link btn-sm text-danger">Xóa</button>
+                    <button class="btn btn-link btn-sm">Xem</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
