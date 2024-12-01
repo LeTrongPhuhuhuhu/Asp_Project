@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý sản phẩm</title>
+    <link rel="stylesheet" href="product-management.css">
+    <link href="~/css/admin/quanlysanpham.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="product-management_sp">
+        <h2>Quản lý sản phẩm 6TL De Decor</h2>
+        <div class="search-bar_sp">
+            <input type="text" placeholder="Tìm kiếm...">
+            <select>
+                <option value="all">Chọn danh mục</option>
+                <option value="category1">Danh mục 1</option>
+                <option value="category2">Danh mục 2</option>
+            </select>
+            <a href="/Admin/Home/ThemSanPham">   <button class="add-new-btn_sp">Thêm mới</button></a>
+
+        </div>
+
+        <table class="product-table_sp">
+            <thead>
+                <tr>
+                    <th>Mã SP</th>
+                    <th>Hình ảnh</th>
+                    <th>Tên SP</th>
+                    <th>Giá bán</th>
+                    <th>Loại</th>
+                    <th>SL</th>
+                    <th>Mô tả</th>
+                    <th>Màu sắc</th>
+                    <th>Chất liệu</th>
+                    <th>Trạng thái</th>
+                    <th>Chức năng</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>#12313</td>
+                    <td><img src="placeholder.jpg" alt="Hình ảnh SP"></td>
+                    <td>SP ABC</td>
+                    <td>150.000</td>
+                    <td>DMSP ABC...</td>
+                    <td>150</td>
+                    <td>ABCD...</td>
+                    <td>
+                        <div class="color-options_sp">
+                            <span class="color_sp red_sp"></span>
+                            <span class="color_sp blue_sp"></span>
+                            <span class="color_sp green_sp"></span>
+                        </div>
+                    </td>
+                    <td>Gỗ/Kim loại</td>
+                    <td>Còn hàng</td>
+                    <td>
+                        <button class="edit-btn_sp">Sửa</button>
+                        <button class="delete-btn_sp">Xóa</button>
+                    </td>
+                </tr>
+                <!-- Thêm các dòng khác tương tự -->
+            </tbody>
+        </table>
+
+        <div class="pagination_sp">
+            <button class="page-btn_sp">1</button>
+            <button class="page-btn_sp">2</button>
+        </div>
+    </div>
+</body>
+</html>
