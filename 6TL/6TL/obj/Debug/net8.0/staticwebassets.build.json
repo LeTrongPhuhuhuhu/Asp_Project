@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "geILuYkbO1BobYBoRo6ACt+U0+V98nYTNow6oSumktw=",
+  "Hash": "Y+5gfZug1whxfPVRuxKCmFJm9+S8z14aK0DoPqugGdM=",
   "Source": "6TL",
   "BasePath": "_content/6TL",
   "Mode": "Default",
@@ -72,6 +72,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\admin.css"
+    },
+    {
+      "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\QlBlog.css",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+      "BasePath": "_content/6TL",
+      "RelativePath": "css/admin/QlBlog.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\admin\\QlBlog.css"
     },
     {
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\ChiTietSanPham.css",

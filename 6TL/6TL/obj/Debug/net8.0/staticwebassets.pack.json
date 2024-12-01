@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\css\\admin.css"
     },
     {
+      "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\QlBlog.css",
+      "PackagePath": "staticwebassets\\css\\admin\\QlBlog.css"
+    },
+    {
       "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\ChiTietSanPham.css",
       "PackagePath": "staticwebassets\\css\\pages\\ChiTietSanPham.css"
     },
