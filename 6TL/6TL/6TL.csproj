@@ -9,7 +9,6 @@
 
   <ItemGroup>
     <Folder Include="Areas\Admin\Models\" />
-    <Folder Include="wwwroot\css\admin\" />
   </ItemGroup>
 
 </Project>

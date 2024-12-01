@@ -1,0 +1,80 @@
+﻿/* Tiêu đề chính */
+h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #343a40;
+}
+
+/* Nút thêm Blog */
+button[data-bs-toggle="modal"] {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+    button[data-bs-toggle="modal"]:hover {
+        background-color: #0056b3;
+    }
+
+/* Bảng */
+.table {
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+    .table th {
+        text-align: center;
+        background-color: #f8f9fa;
+        font-weight: bold;
+    }
+
+    .table td {
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    /* Nút chức năng */
+    .table .btn-link {
+        font-size: 0.85rem;
+        color: #007bff;
+        text-decoration: none;
+    }
+
+        .table .btn-link:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+
+        .table .btn-link.text-danger:hover {
+            color: #dc3545;
+        }
+
+/* Modal */
+.modal-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #343a40;
+}
+
+.modal-body .form-label {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.modal-body input,
+.modal-body select {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+/* Nút trong Modal */
+.modal-footer .btn {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+}
