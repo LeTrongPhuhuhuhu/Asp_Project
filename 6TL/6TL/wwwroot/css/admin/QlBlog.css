@@ -40,7 +40,7 @@ button[data-bs-toggle="modal"] {
     /* Nút chức năng */
     .table .btn-link {
         font-size: 0.85rem;
-        color: #007bff;
+        
         text-decoration: none;
     }
 
@@ -52,6 +52,15 @@ button[data-bs-toggle="modal"] {
         .table .btn-link.text-danger:hover {
             color: #dc3545;
         }
+.btn-danger-custom {
+    color: white; /* Màu chữ trắng */
+    background-color: red; /* Màu nền đỏ */
+    border: none; /* Không viền */
+}
+
+    .btn-danger-custom:hover {
+        background-color: darkred; /* Màu nền đỏ đậm khi hover */
+    }
 
 /* Modal */
 .modal-dialog {
