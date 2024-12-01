@@ -1,5 +1,15 @@
 ﻿@{
     ViewData["Title"] = "Lịch sử mua hàng";
+
+    // Dữ liệu giả về lịch sử đơn hàng
+    var orders = new List<dynamic>
+    {
+        new { OrderId = "001", Status = "Đang xử lý", Shipping = "Vận chuyển", Payment = "Chưa thanh toán", Amount = 500000, Address = "Hà Nội", OrderDate = "01/01/2024", DeliveryDate = "05/01/2024" },
+        new { OrderId = "002", Status = "Đã giao", Shipping = "Đã giao hàng", Payment = "Đã thanh toán", Amount = 1200000, Address = "TP Hồ Chí Minh", OrderDate = "02/01/2024", DeliveryDate = "06/01/2024" }
+    };
+
+    // Tính tổng giá trị đơn hàng
+    var totalAmount = orders.Sum(o => o.Amount);
 }
 
 <h2>Lịch sử mua hàng</h2>
@@ -25,38 +35,27 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>001</td>
-            <td><span class="status processing">Đang xử lý</span></td>
-            <td>Vận chuyển</td>
-            <td>Chưa thanh toán</td>
-            <td>500,000 VND</td>
-            <td>Hà Nội</td>
-            <td>01/01/2024</td>
-            <td>05/01/2024</td>
-            <td class="actions">
-                <button class="view-btn"><i class="fas fa-eye"></i> Xem chi tiết</button>
-            </td>
-
-        </tr>
-        <tr>
-            <td>002</td>
-            <td><span class="status completed">Đã giao</span></td>
-            <td>Đã giao hàng</td>
-            <td>Đã thanh toán</td>
-            <td>1,200,000 VND</td>
-            <td>TP Hồ Chí Minh</td>
-            <td>02/01/2024</td>
-            <td>06/01/2024</td>
-            <td>
-                <button class="btn detail">Xem chi tiết</button>
-            </td>
-        </tr>
+        @foreach (var order in orders)
+        {
+            <tr>
+                <td>@order.OrderId</td>
+                <td><span class="status @(order.Status == "Đã giao" ? "completed" : "processing")">@order.Status</span></td>
+                <td>@order.Shipping</td>
+                <td>@order.Payment</td>
+                <td>@order.Amount.ToString("N0") VND</td>
+                <td>@order.Address</td>
+                <td>@order.OrderDate</td>
+                <td>@order.DeliveryDate</td>
+                <td class="actions">
+                    <button class="view-btn" onclick="showOrderDetail('@order.OrderId')"><i class="fas fa-eye"></i> Xem chi tiết</button>
+                </td>
+            </tr>
+        }
     </tbody>
     <tfoot>
         <tr>
             <td colspan="4" style="text-align: right; font-weight: bold;">Tổng giá trị:</td>
-            <td colspan="4" id="totalAmount" style="font-weight: bold;">1,700,000 VND</td>
+            <td colspan="4" id="totalAmount" style="font-weight: bold;">@totalAmount.ToString("N0") VND</td>
         </tr>
     </tfoot>
 </table>
@@ -71,15 +70,39 @@
 <!-- Modal xem chi tiết -->
 <div id="orderModal" class="modal">
     <div class="modal-content">
-        <span class="close">&times;</span>
+        <span class="close" onclick="closeModal()">&times;</span>
         <h2>Chi tiết đơn hàng</h2>
-        <p>Mã đơn hàng: 001</p>
-        <ul>
-            <li>Sản phẩm 1: Sofa - Số lượng: 1</li>
-            <li>Sản phẩm 2: Bàn - Số lượng: 2</li>
-        </ul>
-        <p>Tổng giá trị: 500,000 VND</p>
+        <div id="orderDetailContent">
+            <!-- Chi tiết đơn hàng sẽ được hiển thị ở đây -->
+        </div>
     </div>
 </div>
+
+<script>
+    // Mở Modal xem chi tiết đơn hàng
+    function showOrderDetail(orderId) {
+        // Dữ liệu giả chi tiết đơn hàng
+        var orderDetails = {
+            "001": ["Sofa - Số lượng: 1", "Bàn - Số lượng: 2"],
+            "002": ["Giường - Số lượng: 1", "Tủ - Số lượng: 1"]
+        };
+
+        // Hiển thị chi tiết đơn hàng vào modal
+        var orderDetailContent = document.getElementById("orderDetailContent");
+        var details = orderDetails[orderId] ? orderDetails[orderId].join("<br>") : "Không có chi tiết.";
+        orderDetailContent.innerHTML = `
+            <p>Mã đơn hàng: ${orderId}</p>
+            <ul>${details}</ul>
+            <p>Tổng giá trị: ${(orderId === "001" ? "500,000" : "1,200,000")} VND</p>
+        `;
+
+        // Hiển thị Modal
+        document.getElementById("orderModal").style.display = "block";
+    }
+
+    // Đóng Modal
+    function closeModal() {
+        document.getElementById("orderModal").style.display = "none";
+    }
+</script>
 <link href="~/css/pages/lichsumuahang.css" rel="stylesheet" />
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
