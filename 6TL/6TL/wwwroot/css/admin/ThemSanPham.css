@@ -1,0 +1,230 @@
+﻿/* Container chính */
+.container_tsp {
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1100px;
+}
+
+h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 25px;
+    font-weight: 600;
+    text-align: center;
+}
+
+    h2 a {
+        color: #333; /* Màu sắc mặc định của liên kết */
+        text-decoration: none; /* Loại bỏ gạch chân */
+        transition: color 0.3s ease; /* Hiệu ứng chuyển màu khi hover */
+    }
+
+        h2 a:hover {
+            color: #1a4f94; /* Màu sắc khi hover */
+            text-decoration: underline; /* Thêm gạch chân khi hover */
+        }
+
+/* Thêm một chút căn chỉnh */
+.back-to-product-management {
+    font-weight: 600;
+}
+
+.add-product-link {
+    font-weight: 600;
+}
+
+/* Hàng trong form */
+.form-row_tsp {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+    .form-row_tsp input,
+    .form-row_tsp select,
+    textarea {
+        flex: 1;
+        padding: 12px 15px;
+        border: 1px solid #dcdcdc;
+        border-radius: 8px;
+        font-size: 16px;
+        background-color: #fafafa;
+        transition: 0.2s ease;
+    }
+
+        .form-row_tsp input:focus,
+        .form-row_tsp select:focus,
+        textarea:focus {
+            border-color: #2e6ac6;
+            box-shadow: 0 0 8px rgba(46, 106, 198, 0.2);
+            outline: none;
+        }
+
+/* Nút chính */
+.add-color-btn_tsp,
+.cancel-btn_tsp {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.add-color-btn_tsp {
+    background-color: #2e6ac6;
+    color: white;
+}
+
+    .add-color-btn_tsp:hover {
+        background-color: #255fa1;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+.cancel-btn_tsp {
+    background-color: #d9534f;
+    color: white;
+}
+
+    .cancel-btn_tsp:hover {
+        background-color: #c9302c;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+/* Button nhóm */
+.button-group_tsp {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+/* Khu vực upload */
+.upload-area_tsp {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.upload-label_tsp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 3px dashed #007bff;
+    border-radius: 12px;
+    padding: 40px;
+    background-color: #f0f8ff;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    height: 200px;
+    position: relative;
+}
+
+    .upload-label_tsp:hover {
+        background-color: #d0e9ff;
+        border-color: #0056b3;
+    }
+
+.upload-icon_tsp {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+    opacity: 0.8;
+}
+
+.upload-label_tsp p {
+    color: #007bff;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.upload-input_tsp {
+    display: none;
+}
+
+.preview-image_tsp {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .form-row_tsp {
+        flex-direction: column;
+    }
+
+    /* Nút Thêm (Thêm sản phẩm) */
+    .add-color-btn_tsp {
+        padding: 12px 18px;
+        background-color: #28a745; /* Màu xanh lá */
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+        .add-color-btn_tsp:hover {
+            background-color: #218838; /* Màu xanh lá đậm khi hover */
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .add-color-btn_tsp:active {
+            transform: translateY(0);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+        }
+
+    /* Nút Hủy */
+    .cancel-btn_tsp {
+        padding: 12px 18px;
+        background-color: #dc3545; /* Màu đỏ */
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+        .cancel-btn_tsp:hover {
+            background-color: #c82333; /* Màu đỏ đậm khi hover */
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .cancel-btn_tsp:active {
+            transform: translateY(0);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+        }
+
+    /* Đảm bảo nút nằm ngang và căn giữa */
+    .button-group_tsp {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+    }
+
+}

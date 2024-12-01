@@ -1,0 +1,97 @@
+﻿<head>
+    <link href="~/css/admin/themsanpham.css" rel="stylesheet" />
+</head>
+<div class="container_tsp">
+    <h2>
+        <a href="/Admin/Home/QuanLySanPham" class="back-to-product-management">Quản lý sản phẩm 6TL De Decor</a> &gt;
+        <a href="/Admin/Home/ThemSanPham" class="add-product-link">Thêm sản phẩm</a>
+    </h2>
+
+    <form class="add-product-form_tsp">
+        <div class="form-row_tsp">
+            <input type="text" placeholder="Mã SP..." id="ma-sp_tsp">
+            <input type="text" placeholder="Tên sản phẩm" id="ten-sp_tsp">
+            <input type="text" placeholder="Giá bán" id="gia-ban_tsp">
+            <input type="text" placeholder="Số lượng" id="so-luong_tsp">
+        </div>
+        <div class="form-row_tsp">
+            <select id="danh-muc_tsp">
+                <option>Danh mục</option>
+                <option>Danh mục 1</option>
+                <option>Danh mục 2</option>
+            </select>
+            <select id="trang-thai_tsp">
+                <option>Chọn trạng thái</option>
+                <option>Còn hàng</option>
+                <option>Hết hàng</option>
+            </select>
+            <input type="text" placeholder="Nhà cung cấp" id="nha-cung-cap_tsp">
+            <input type="text" placeholder="Giá vốn" id="gia-von_tsp">
+        </div>
+        <div class="form-row_tsp">
+            <select id="chon-mau_tsp" onchange="updateColorPreview()">
+                <option value="" disabled selected>Chọn màu</option>
+                <option value="red" style="background-color: red; color: white;">Đỏ</option>
+                <option value="blue" style="background-color: blue; color: white;">Xanh Dương</option>
+                <option value="green" style="background-color: green; color: white;">Xanh Lá</option>
+            </select>
+            <input type="color" id="them-mau_tsp" title="Chọn màu mới">
+            <button type="button" class="add-color-btn_tsp" onclick="addColor()">+</button>
+            <input type="text" placeholder="Chất liệu" id="chat-lieu_tsp">
+        </div>
+        <div class="form-row_tsp">
+            <label for="description_tsp">Mô tả</label>
+            <textarea id="description_tsp" rows="5" placeholder="Này sử dụng ckeditor"></textarea>
+        </div>
+        <div class="upload-area_tsp">
+            <label class="upload-label_tsp">
+                <input type="file" id="file-upload_tsp" class="upload-input_tsp" accept="image/*" onchange="previewImage(event)">
+                <div class="upload-content_tsp">
+                    <img src="upload-icon.png" alt="Upload Icon" class="upload-icon_tsp" />
+                    <p>Kéo thả hoặc chọn hình ảnh</p>
+                </div>
+                <img id="preview-image_tsp" class="preview-image_tsp" style="display: none;" alt="Image Preview">
+            </label>
+        </div>
+
+        <div class="button-group_tsp">
+            <button type="button" class="add-color-btn_tsp">Thêm</button>
+            <button type="button" class="cancel-btn_tsp">Hủy</button>
+        </div>
+
+    </form>
+</div>
+<script>
+           function previewImage(event) {
+        const file = event.target.files[0];
+        const preview = document.getElementById('preview-image_tsp');
+
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                preview.src = e.target.result;
+                preview.style.display = 'block';
+            };
+            reader.readAsDataURL(file);
+        } else {
+            preview.style.display = 'none';
+        }
+    }
+
+    function addColor() {
+        const selectElement = document.getElementById('chon-mau_tsp');
+        const inputElement = document.getElementById('them-mau_tsp');
+        const newColor = inputElement.value.trim();
+        if (newColor !== '') {
+            const newOption = document.createElement('option');
+            newOption.value = newColor;
+            newOption.textContent = newColor;
+            newOption.style.backgroundColor = newColor;
+            selectElement.appendChild(newOption);
+            selectElement.value = newColor;
+            inputElement.value = '';
+        } else {
+            alert('Vui lòng nhập màu hợp lệ.');
+        }
+    }
+</script>
