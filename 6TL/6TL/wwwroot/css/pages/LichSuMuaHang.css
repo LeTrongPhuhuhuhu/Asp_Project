@@ -46,6 +46,7 @@
 }
 
 .close {
+    text-align:end;
     color: #aaa;
     float: right;
     font-size: 28px;
@@ -72,4 +73,21 @@
 
     .pagination span {
         margin: 0 10px;
+    }
+#cancelOrderButton {
+    height:40px;
+    margin-left: 47%;
+    width: 7%;
+    background-color: red;
+    color: white;
+    border: none;
+    font-size: 14px; /* Giảm kích thước chữ */
+    margin-top: 15px;
+    cursor: pointer;
+    border-radius: 3px; /* Bo tròn nhẹ các góc */
+}
+
+    #cancelOrderButton:hover {
+        background-color: darkred; /* Màu đậm hơn khi hover */
+        opacity: 0.9; /* Hiệu ứng mờ nhẹ */
     }

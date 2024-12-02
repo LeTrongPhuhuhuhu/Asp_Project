@@ -75,6 +75,9 @@
         <div id="orderDetailContent">
             <!-- Chi tiết đơn hàng sẽ được hiển thị ở đây -->
         </div>
+        <!-- Nút hủy đơn hàng -->
+        <button id="cancelOrderButton" onclick="cancelOrder()">Hủy</button>
+
     </div>
 </div>
 
@@ -91,10 +94,14 @@
         var orderDetailContent = document.getElementById("orderDetailContent");
         var details = orderDetails[orderId] ? orderDetails[orderId].join("<br>") : "Không có chi tiết.";
         orderDetailContent.innerHTML = `
-            <p>Mã đơn hàng: ${orderId}</p>
-            <ul>${details}</ul>
-            <p>Tổng giá trị: ${(orderId === "001" ? "500,000" : "1,200,000")} VND</p>
-        `;
+                <p>Mã đơn hàng: ${orderId}</p>
+                <ul>${details}</ul>
+                <p>Tổng giá trị: ${(orderId === "001" ? "500,000" : "1,200,000")} VND</p>
+            `;
+
+        // Gắn orderId vào button hủy
+        var cancelOrderButton = document.getElementById("cancelOrderButton");
+        cancelOrderButton.setAttribute("data-order-id", orderId);
 
         // Hiển thị Modal
         document.getElementById("orderModal").style.display = "block";
@@ -103,6 +110,18 @@
     // Đóng Modal
     function closeModal() {
         document.getElementById("orderModal").style.display = "none";
+    }
+
+    // Hủy đơn hàng
+    function cancelOrder() {
+        var cancelOrderButton = document.getElementById("cancelOrderButton");
+        var orderId = cancelOrderButton.getAttribute("data-order-id");
+
+        // Xử lý logic hủy đơn hàng ở đây
+        alert(`Đơn hàng ${orderId} đã được hủy!`);
+
+        // Đóng modal sau khi hủy
+        closeModal();
     }
 </script>
 <link href="~/css/pages/lichsumuahang.css" rel="stylesheet" />
