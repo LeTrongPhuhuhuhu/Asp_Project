@@ -1,4 +1,5 @@
 ﻿<link href="~/css/pages/chitietsanpham.css" rel="stylesheet" />
+
 <div class="product-detail_ct">
     <nav class="breadcrumb_ct">
         <a href="#">Mục trên menu</a> / <a href="#">Loại sản phẩm</a>
@@ -27,7 +28,12 @@
             <div class="actions_ct">
                 <button class="buy-now_ct">Mua ngay</button>
                 <button class="add-to-cart_ct">Thêm vào giỏ hàng</button>
-                <button class="wishlist_ct">❤️</button>
+                <button class="wishlist_ct">
+                    <svg class="heart-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30">
+                        <path fill="gray" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                    </svg>
+                </button>
+
             </div>
             <p class="delivery-info_ct">
                 🚚 Miễn phí giao hàng với đơn trên 100 Nghìn<br />
@@ -56,25 +62,44 @@
         <h2>SẢN PHẨM LIÊN QUAN</h2>
         <div class="product-list_ct">
             <div class="product-item_ct">
-                <img src="placeholder.png" alt="Sản phẩm liên quan" />
+				<img src="~/img/placeholder.jpg" />
                 <p class="product-name_ct">Tên sản phẩm</p>
                 <p class="product-price_ct">323.231.000 VNĐ</p>
             </div>
             <div class="product-item_ct">
-                <img src="placeholder.png" alt="Sản phẩm liên quan" />
+                <img src="~/img/placeholder.jpg" />
                 <p class="product-name_ct">Tên sản phẩm</p>
                 <p class="product-price_ct">323.231.000 VNĐ</p>
             </div>
             <div class="product-item_ct">
-                <img src="placeholder.png" alt="Sản phẩm liên quan" />
+                <img src="~/img/placeholder.jpg" />
                 <p class="product-name_ct">Tên sản phẩm</p>
                 <p class="product-price_ct">323.231.000 VNĐ</p>
             </div>
             <div class="product-item_ct">
-                <img src="placeholder.png" alt="Sản phẩm liên quan" />
+                <img src="~/img/placeholder.jpg" />
                 <p class="product-name_ct">Tên sản phẩm</p>
                 <p class="product-price_ct">323.231.000 VNĐ</p>
             </div>
         </div>
     </section>
 </div>
+<script>
+        document.querySelector('.wishlist_ct').addEventListener('click', function () {
+        const heartIcon = this.querySelector('.heart-icon');
+
+        // Thêm class "active" để đổi màu
+        this.classList.toggle('active');
+
+        // Tạo hiệu ứng nhỏ bật trái tim
+        const heartAnimation = document.createElement('div');
+        heartAnimation.classList.add('heart-animation');
+        this.appendChild(heartAnimation);
+
+        // Xóa hiệu ứng sau khi kết thúc animation
+        heartAnimation.addEventListener('animationend', () => {
+            heartAnimation.remove();
+        });
+    });
+
+</script>

@@ -9,6 +9,7 @@ wwwroot\css\pages\DangNhap.css
 wwwroot\css\pages\GioiThieu.css
 wwwroot\css\pages\LichSuMuaHang.css
 wwwroot\css\pages\SanPham.css
+wwwroot\css\pages\SanPhamYeuThich.css
 wwwroot\css\pages\TinTuc.css
 wwwroot\css\pages\TrangChu.css
 wwwroot\css\pages\TrangThanhToan.css
@@ -20,6 +21,7 @@ wwwroot\img\Black and White Professional Minimalistic Real Estate Logo - Copy.pn
 wwwroot\img\Black and White Professional Minimalistic Real Estate Logo.png
 wwwroot\img\placeholder.jpg
 wwwroot\img\snapedit_1732430907358.png
+wwwroot\img\tintuc.jpg
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map

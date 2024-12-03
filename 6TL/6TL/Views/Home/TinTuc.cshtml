@@ -4,59 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tin Tức</title>
-	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="style.css">
 	<link href="~/css/pages/tintuc.css" rel="stylesheet" />
 </head>
 <body>
-    <header>
-        <h1>TIN TỨC</h1>
-    </header>
-    <nav>
-        <ul class="menu">
+    <!-- Banner Section -->
+    <section class="banner">
+        <img src="~/img/tintuc.jpg" alt="Banner Tin Tức" class="banner-image">
+        <div class="banner-overlay">
+            <h1 class="banner-title">TIN TỨC</h1>
+        </div>
+    </section>
+
+    <!-- Menu Chủ Đề -->
+    <nav class="news-menu">
+        <ul>
             <li><a href="#">Khuyến Mãi</a></li>
             <li><a href="#">Tin Thị Trường</a></li>
             <li><a href="#">Sự Kiện</a></li>
         </ul>
-    </nav>  
+    </nav>
+
     <main>
-        <h2 class="section-title">Sự Kiện</h2>
-        <div class="news-grid-tt">
-            <div class="news-card-tt">
-                <div class="image-placeholder"></div>
-                <p class="date">DD-MM-YYYY</p>
-                <p class="description">Mô tả sự kiện, tin tức</p>
-                <a href="#" class="read-more">Đọc Thêm ></a>
+        <section class="container">
+            <!-- Nội dung tin tức -->
+            <div class="news-grid">
+                <div class="news-item">
+                    <img src="~/img/news1.jpg" alt="Tin tức 1">
+                    <div class="news-content">
+                        <h3>Tiêu đề tin tức 1</h3>
+                        <p>Mô tả ngắn gọn của tin tức đầu tiên.</p>
+                        <a href="#" class="read-more">Đọc Thêm <span>→</span></a>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <img src="~/img/news2.jpg" alt="Tin tức 2">
+                    <div class="news-content">
+                        <h3>Tiêu đề tin tức 2</h3>
+                        <p>Mô tả ngắn gọn của tin tức thứ hai.</p>
+                        <a href="#" class="read-more">Đọc Thêm <span>→</span></a>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <img src="~/img/news3.jpg" alt="Tin tức 3">
+                    <div class="news-content">
+                        <h3>Tiêu đề tin tức 3</h3>
+                        <p>Mô tả ngắn gọn của tin tức thứ ba.</p>
+                        <a href="#" class="read-more">Đọc Thêm <span>→</span></a>
+                    </div>
+                </div>
+                <!-- Thêm tin tức khác nếu cần -->
             </div>
-            <div class="news-card-tt">
-                <div class="image-placeholder"></div>
-                <p class="date">DD-MM-YYYY</p>
-                <p class="description">Mô tả sự kiện, tin tức</p>
-                <a href="#" class="read-more">Đọc Thêm ></a>
-            </div>
-            <div class="news-card-tt">
-                <div class="image-placeholder"></div>
-                <p class="date">DD-MM-YYYY</p>
-                <p class="description">Mô tả sự kiện, tin tức</p>
-                <a href="#" class="read-more">Đọc Thêm ></a>
-            </div>
-            <div class="news-card-tt">
-                <div class="image-placeholder"></div>
-                <p class="date">DD-MM-YYYY</p>
-                <p class="description">Mô tả sự kiện, tin tức</p>
-                <a href="#" class="read-more">Đọc Thêm ></a>
-            </div>
-            <div class="news-card-tt">
-                <div class="image-placeholder"></div>
-                <p class="date">DD-MM-YYYY</p>
-                <p class="description">Mô tả sự kiện, tin tức</p>
-                <a href="#" class="read-more">Đọc Thêm ></a>
-            </div>
-            <div class="news-card-tt">
-                <div class="image-placeholder"></div>
-                <p class="date">DD-MM-YYYY</p>
-                <p class="description">Mô tả sự kiện, tin tức</p>
-                <a href="#" class="read-more">Đọc Thêm ></a>
-            </div>
+        </section>
     </main>
 </body>
 </html>

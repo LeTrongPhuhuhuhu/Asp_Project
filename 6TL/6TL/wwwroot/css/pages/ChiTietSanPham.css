@@ -16,13 +16,13 @@
 }
 
     .breadcrumb_ct a {
-        color: #3498db;
+        color: #838383;
         text-decoration: none;
         transition: color 0.3s;
     }
 
         .breadcrumb_ct a:hover {
-            color: #2980b9;
+            color: #6f6f6f;
         }
 
 /* Product Title and Code */
@@ -55,8 +55,6 @@
     .product-image_ct img {
         max-width: 100%;
         height: auto;
-        border-radius: 6px;
-        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
     }
 
 .image-navigation_ct {
@@ -67,9 +65,9 @@
 }
 
     .image-navigation_ct button {
-        background-color: #3498db;
+        background-color: #606161;
         border: none;
-        color: #fff;
+        color: #000000;
         padding: 5px 10px;
         cursor: pointer;
         border-radius: 5px;
@@ -77,7 +75,7 @@
     }
 
         .image-navigation_ct button:hover {
-            background-color: #2980b9;
+            background-color: #4d4d4d;
         }
 
 /* Product Info */
@@ -99,6 +97,9 @@
         margin-bottom: 5px;
     }
 
+    .product-info_ct p {
+        text-align: left;
+    }
 
 .highlight_ct {
     font-weight: bold;
@@ -115,7 +116,7 @@
 
 .price_ct {
     font-size: 24px;
-    color: #27ae60;
+    color: #d24211;
     font-weight: bold;
     margin: 20px 0;
 }
@@ -137,18 +138,22 @@
     }
 
 .buy-now_ct {
-    background-color: #e74c3c;
+    background-color: #d36457;
     color: #fff;
 }
 
 .add-to-cart_ct {
-    background-color: #3498db;
+    background-color: #88b943;
     color: #fff;
 }
 
-.wishlist_ct {
-    background-color: #f0f0f0;
-    color: #e74c3c;
+.wishlist_ct .heart-icon path {
+    transition: fill 0.3s, transform 0.3s;
+}
+
+.wishlist_ct.active .heart-icon path {
+    fill: red; /* Đổi màu trái tim khi nhấn */
+    transform: scale(1.1);
 }
 
 .actions_ct button:hover {
@@ -241,7 +246,7 @@
 
 /* Submit Button */
 .submit-comment_ct {
-    background-color: #27ae60;
+    background-color: #666c69;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -256,7 +261,7 @@
 }
 
     .submit-comment_ct:hover {
-        background-color: #229954;
+        background-color: #86978d;
         transform: scale(1.05);
     }
 
@@ -341,6 +346,6 @@
 
 .product-price_ct {
     font-size: 18px;
-    color: #27ae60;
+    color: #d24211;
     font-weight: bold;
 }
