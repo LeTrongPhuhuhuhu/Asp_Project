@@ -246,8 +246,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>c9iqgt7tlv</Fingerprint>
-      <Integrity>8DKpmZR7bj9U3sfyUmsNhEcvAy/EQhT9Tm52RK36vsM=</Integrity>
+      <Fingerprint>goamioujwe</Fingerprint>
+      <Integrity>cM54l97kM5vwQSEalL+mM0kLf+hAM4ePmtHiJ1ZdW5g=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\pages\TinTuc.css'))</OriginalItemSpec>
