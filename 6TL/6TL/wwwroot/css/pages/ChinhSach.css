@@ -1,0 +1,196 @@
+﻿sửa lại dựa trên đoạn code của tôi và đưa tôi đoạn code tổng nha
+/* Reset CSS */
+body, h1, h2, h3, p, ul, li, input, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+    padding: 0;
+}
+/* Header Section */
+.policy-header {
+    position: relative;
+    width: 100vw; /* Chiều rộng bằng toàn bộ viewport */
+    height: 100vh; /* Chiều cao bằng toàn bộ viewport */
+    overflow: hidden;
+}
+
+    .policy-header img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw; /* Đảm bảo ảnh chiếm toàn bộ chiều rộng màn hình */
+        height: 100vh; /* Đảm bảo ảnh tràn toàn bộ chiều cao màn hình */
+        object-fit: cover; /* Giữ tỉ lệ ảnh và cắt bớt phần thừa */
+        object-position: center; /* Căn giữa ảnh */
+    }
+
+    .policy-header .header-text {
+        position: absolute;
+        bottom: 20px; /* Chữ nằm gần góc dưới */
+        left: 20px; /* Chữ nằm gần góc trái */
+        color: white;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 1.2rem;
+    }
+
+    .policy-header h1 {
+        font-size: 2rem; /* Giảm kích thước chữ nếu cần */
+        font-weight: bold;
+    }
+
+/* Company Info */
+.company-info {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 800px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+    .company-info h2 {
+        color: #000; /* Đổi màu đen */
+        margin-bottom: 15px;
+    }
+
+    .company-info .info-box {
+        text-align: left;
+        border-top: 1px solid #ddd;
+        padding-top: 15px;
+        color: #555;
+    }
+
+/* Policies Section */
+.policies-container {
+    display: flex; /* Sử dụng flex để căn giữa các phần tử */
+    justify-content: center; /* Căn giữa các phần tử chính sách */
+    align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+    gap: 10px; /* Giảm khoảng cách giữa các phần tử */
+    margin: 30px 0;
+    flex-wrap: wrap; /* Cho phép các phần tử xuống dòng khi không đủ không gian */
+}
+
+.policy-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 180px;
+    transform: scale(1); /* Ban đầu bình thường */
+    opacity: 0; /* Ẩn các phần tử */
+    transition: transform 0.3s ease, opacity 0.5s ease, box-shadow 0.3s ease; /* Thêm hiệu ứng box-shadow */
+}
+
+    .policy-item.visible {
+        opacity: 1; /* Làm phần tử hiện lên */
+        transform: scale(1.1); /* Phóng to phần tử */
+    }
+
+    /* Khi hover, phần tử sẽ phóng lớn một chút */
+    .policy-item:hover {
+        transform: scale(1.05); /* Phóng to một chút */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Tăng bóng đổ khi hover */
+    }
+
+    .policy-item img {
+        max-width: 100%; /* Đảm bảo ảnh chiếm toàn bộ chiều rộng của khối chứa */
+        height: auto; /* Giữ tỉ lệ ảnh */
+        border-radius: 5px; /* Bo góc ảnh */
+        margin-bottom: 10px; /* Khoảng cách dưới ảnh */
+    }
+
+    .policy-item p {
+        font-weight: bold;
+        color: #333;
+    }
+
+/* Subscription Section */
+.subscription-section {
+    background-color: #ffffff; /* Bỏ nền xanh */
+    color: #333;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 30px auto;
+    max-width: 800px;
+}
+
+    .subscription-section h3 {
+        font-size: 1.2rem; /* Thu nhỏ tiêu đề */
+        margin-bottom: 15px;
+    }
+
+    .subscription-section form {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    .subscription-section input[type="email"] {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: 250px;
+        max-width: 100%;
+    }
+
+    .subscription-section button {
+        padding: 10px 20px;
+        background-color: #000; /* Đổi thành màu đen */
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background-color 0.3s;
+    }
+
+        .subscription-section button:hover {
+            background-color: #333; /* Thay đổi màu khi hover */
+        }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .policies-container {
+        flex-direction: column; /* Chuyển thành cột dọc khi màn hình nhỏ */
+        align-items: center; /* Căn giữa tất cả các phần tử */
+    }
+}
+
+@media (max-width: 480px) {
+    .policies-container {
+        flex-direction: column; /* Cột dọc trên màn hình nhỏ hơn */
+        align-items: center;
+    }
+}
+
+/* Hiệu ứng khi cuộn trang (fade-in + slide-in) */
+@keyframes slideIn {
+    0% {
+        transform: translateY(30px); /* Bắt đầu từ dưới */
+        opacity: 0; /* Ẩn phần tử */
+    }
+
+    100% {
+        transform: translateY(0); /* Đưa về vị trí ban đầu */
+        opacity: 1; /* Làm phần tử hiện lên */
+    }
+}
+
+.policy-item {
+    animation: slideIn 0.8s ease-out forwards; /* Hiệu ứng trượt lên và làm hiện phần tử */
+}

@@ -1,64 +1,71 @@
-﻿<link href="~/css/admin.css" rel="stylesheet" />
+﻿@{
+    Layout = "_Layout"; // Thêm Layout vào trang
+}
 
-    <div class="dashboard-container">
-        <!-- Summary Boxes -->
-        <div class="summary-boxes">
-            <div class="summary-box total-sales">
-                <h3>$1k</h3>
-                <p>Total Sales</p>
-                <span>+8% from yesterday</span>
-            </div>
-            <div class="summary-box total-order">
-                <h3>300</h3>
-                <p>Total Order</p>
-                <span>+5% from yesterday</span>
-            </div>
-            <div class="summary-box product-sold">
-                <h3>5</h3>
-                <p>Product Sold</p>
-                <span>+1.2% from yesterday</span>
-            </div>
-            <div class="summary-box new-customers">
-                <h3>8</h3>
-                <p>New Customers</p>
-                <span>+0.5% from yesterday</span>
-            </div>
-        </div>
-
-        <!-- Charts Section -->
-        <div class="charts-container">
-            <div class="chart-box total-revenue">
-                <h4>Total Revenue</h4>
-                <div class="chart"></div> <!-- Biểu đồ doanh thu sẽ được thêm vào đây -->
-            </div>
-
-            <div class="chart-box customer-satisfaction">
-                <h4>Customer Satisfaction</h4>
-                <div class="chart"></div> <!-- Biểu đồ sự hài lòng khách hàng -->
-            </div>
-        </div>
-
-        <!-- Charts Section 2 -->
-        <div class="charts-container">
-            <div class="chart-box target-vs-reality">
-                <h4>Target vs Reality</h4>
-                <div class="chart"></div> <!-- Biểu đồ mục tiêu vs thực tế -->
-            </div>
-
-            <div class="chart-box volume-vs-service">
-                <h4>Volume vs Service Level</h4>
-                <div class="chart"></div> <!-- Biểu đồ mức độ dịch vụ -->
-            </div>
-        </div>
-
-        <!-- Top Products Section -->
-        <div class="top-products">
-            <h4>Top Products</h4>
-            <ul>
-                <li>Home Decor Range <span>45%</span></li>
-                <li>Disney Princess Pink Bag <span>29%</span></li>
-                <li>Bathroom Essentials <span>18%</span></li>
-                <li>Apple Smartwatches <span>25%</span></li>
-            </ul>
-        </div>
+<link href="~/css/admin/dashboard.css" rel="stylesheet" />
+<div class="dashboard-container">
+    <!-- Hộp đầu tiên: Tổng doanh thu -->
+    <div class="box total-revenue">
+        <h4>Total Revenue ($)</h4>
+        <h2>$24,165</h2>
+        <p>24 Hours</p>
     </div>
+
+    <!-- Hộp: Biểu đồ tròn -->
+    <div class="box category-breakup">
+        <h4>Category Wise Breakup</h4>
+        <div class="chart donut-chart"></div>
+    </div>
+
+    <!-- Hộp: Biểu đồ cột -->
+    <div class="box sku-sales">
+        <h4>SKU Sales by Month</h4>
+        <div class="chart bar-chart"></div>
+    </div>
+
+    <!-- Hộp: Social Media -->
+    <div class="box social-media">
+        <h4>Social Media</h4>
+        <p>Facebook: 5.68K | Twitter: 3.84K</p>
+    </div>
+
+    <!-- Hộp: Top Orders by Country -->
+    <div class="box top-orders">
+        <h4>Top Orders by Country</h4>
+        <ul>
+            <li>USA: 14,785</li>
+            <li>UK: 10,486</li>
+            <!-- Thêm các quốc gia khác -->
+        </ul>
+    </div>
+
+    <!-- Hộp: Tổng số người dùng -->
+    <div class="box total-users">
+        <h4>Total Users</h4>
+        <h2>432,168</h2>
+        <p>24 Hours</p>
+    </div>
+
+    <!-- Hộp: Tin tức -->
+    <div class="box news">
+        <h4>Latest E-commerce News</h4>
+        <p>New Payment Gateway Integration</p>
+    </div>
+
+    <!-- Hộp: Biểu đồ đường -->
+    <div class="box line-chart">
+        <h4>Revenue Growth</h4>
+        <div class="chart line-chart-graph"></div>
+    </div>
+
+    <!-- Hộp: Orders by Status -->
+    <div class="box orders-status">
+        <h4>Orders by Status</h4>
+        <ul>
+            <li>Awaiting</li>
+            <li>Confirmed</li>
+            <!-- Thêm trạng thái -->
+        </ul>
+    </div>
+</div>
+

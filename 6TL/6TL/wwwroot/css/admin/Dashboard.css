@@ -1,0 +1,48 @@
+﻿/* Cấu trúc chính */
+.dashboard-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 0px;
+    background-color: #f9f9f9;
+}
+
+/* Các hộp cơ bản */
+.box {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+    .box h4 {
+        font-size: 16px;
+        color: #555555;
+        margin-bottom: 10px;
+    }
+
+    .box h2 {
+        font-size: 24px;
+        color: #333333;
+    }
+
+.chart {
+    width: 100%;
+    height: 150px;
+    background: #eaeaea;
+    border-radius: 8px;
+}
+
+/* Danh sách Orders */
+.orders-status ul {
+    list-style: none;
+    padding: 0;
+}
+
+    .orders-status ul li {
+        font-size: 14px;
+        margin: 5px 0;
+    }
