@@ -1,0 +1,86 @@
+﻿@{
+    Layout = "_Layout";
+}
+<link href="~/css/admin/quanlydanhmuc.css" rel="stylesheet" />
+
+<!-- Quản lý danh mục -->
+<div class="container">
+    <header>
+        <h1>Quản lý Danh mục Sản phẩm</h1>
+    </header>
+
+    <!-- Tìm kiếm danh mục -->
+    <section class="search-category">
+        <h2>Tìm kiếm Danh mục</h2>
+        <form action="#" method="GET">
+            <input type="text" name="searchQuery" placeholder="Nhập tên danh mục cần tìm" required>
+            <button type="submit">Tìm kiếm</button>
+        </form>
+    </section>
+
+    <!-- Thêm danh mục -->
+    <section class="add-category">
+        <h2>Thêm Danh mục Mới</h2>
+        <form action="#" method="POST">
+            <input type="text" name="categoryName" placeholder="Tên danh mục" required>
+            <select name="parentCategory">
+                <option value="">-- Chọn danh mục cha (nếu có) --</option>
+                <option value="1">Bàn</option>
+                <option value="2">Ghế</option>
+            </select>
+            <button type="submit">Thêm Danh mục</button>
+        </form>
+    </section>
+
+    <!-- Danh sách các danh mục -->
+    <section class="category-list">
+        <h2>Danh sách Danh mục</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Tên Danh mục</th>
+                    <th>Danh mục Cha</th>
+                    <th>Hành động</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Bàn</td>
+                    <td>--</td>
+                    <td>
+                        <button class="edit-btn">Sửa</button>
+                        <button class="delete-btn" onclick="confirmDelete('Bàn')">Xóa</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Ghế</td>
+                    <td>--</td>
+                    <td>
+                        <button class="edit-btn">Sửa</button>
+                        <button class="delete-btn" onclick="confirmDelete('Ghế')">Xóa</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Giường</td>
+                    <td>Bàn</td>
+                    <td>
+                        <button class="edit-btn">Sửa</button>
+                        <button class="delete-btn" onclick="confirmDelete('Giường')">Xóa</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</div>
+
+<script>
+    function confirmDelete(categoryName) {
+        if (confirm(`Bạn có chắc chắn muốn xóa danh mục "${categoryName}"?`)) {
+            // Xử lý logic xóa
+        }
+    }
+</script>

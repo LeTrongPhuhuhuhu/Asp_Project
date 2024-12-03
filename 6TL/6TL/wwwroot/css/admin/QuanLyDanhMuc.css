@@ -1,0 +1,150 @@
+﻿/* Kiểu chung */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* Phông chữ sang trọng */
+    background-color: #eef2f5; /* Màu nền nhạt hơn */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Container chính */
+.container {
+    width: 100%; /* Tăng chiều rộng lên 95% */
+    max-width: 1400px; /* Tăng kích thước tối đa */
+    margin: 20px auto; /* Giảm khoảng cách trên dưới */
+    background-color: #ffffff;
+    padding: 25px; /* Tăng padding bên trong */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Tiêu đề */
+header h1 {
+    font-size: 28px;
+    color: #000; /* Màu đen cho tiêu đề */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Phần tìm kiếm */
+.search-category {
+    display: flex;
+    align-items: center; /* Căn giữa theo trục dọc */
+    gap: 10px; /* Khoảng cách nhỏ hơn giữa các phần */
+    margin-bottom: 20px;
+}
+
+    .search-category input {
+        flex: 1;
+        padding: 12px;
+        font-size: 16px;
+        border: 1px solid #ddd;
+        border-radius: 25px; /* Bo tròn hơn */
+        outline: none;
+        transition: border-color 0.3s;
+    }
+
+        .search-category input:focus {
+            border-color: #007BFF; /* Đổi màu viền khi focus */
+        }
+
+    .search-category button {
+        padding: 12px 20px;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 25px; /* Bo tròn như thanh tìm kiếm */
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s;
+    }
+
+        .search-category button:hover {
+            background-color: #0056b3;
+        }
+
+/* Phần thêm danh mục */
+.add-category {
+    margin-bottom: 30px;
+}
+
+    .add-category form {
+        display: flex;
+        gap: 10px;
+    }
+
+    .add-category input,
+    .add-category select {
+        flex: 1;
+        padding: 12px;
+        font-size: 16px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+    .add-category button {
+        padding: 12px 20px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+        .add-category button:hover {
+            background-color: #218838;
+        }
+
+/* Danh sách danh mục */
+.category-list table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.category-list th,
+.category-list td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.category-list th {
+    background-color: #f4f4f4;
+    color: #333;
+    font-weight: bold;
+}
+
+.category-list td button {
+    padding: 6px 12px;
+    margin-right: 5px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.edit-btn {
+    background-color: #ffc107;
+    color: white;
+}
+
+    .edit-btn:hover {
+        background-color: #e0a800;
+    }
+
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+    .delete-btn:hover {
+        background-color: #c82333;
+    }
