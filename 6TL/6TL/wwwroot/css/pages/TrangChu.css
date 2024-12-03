@@ -188,3 +188,7 @@ section {
     max-height: 100%;
     object-fit: cover;
 }
+.pb-3{
+    margin:0;
+    padding:0;
+}
