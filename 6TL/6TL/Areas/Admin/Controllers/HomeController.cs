@@ -32,6 +32,9 @@ namespace _6TL.Areas.Admin.Controllers
 		{
 			return View();
 		}
-
-	}
+        public IActionResult QLDonHang()
+        {
+            return View();
+        }
+    }
 }

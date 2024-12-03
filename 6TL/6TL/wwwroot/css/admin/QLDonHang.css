@@ -1,0 +1,102 @@
+﻿/* Reset và thiết lập cơ bản */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    padding: 20px;
+    color: #333;
+}*/
+
+h1 {
+    color: #333;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.search-bar-qldh {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-right: 63vw  ;  
+}
+
+    .search-bar-qldh input,
+    .search-bar-qldhselect {
+        padding: 8px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        transition: box-shadow 0.3s ease-in-out, transform 0.2s ease-in-out;
+    }
+
+        .search-bar-qldh input:focus,
+        .search-bar-qldh select:focus {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
+        }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+    background-color: #007BFF;
+    color: white;
+}
+
+    thead th {
+        padding: 12px 15px;
+        text-align: left;
+        font-size: 16px;
+    }
+
+tbody tr {
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.2s;
+}
+
+    tbody tr:hover {
+        background-color: #f1f1f1;
+    }
+
+tbody td {
+    padding: 12px 15px;
+    font-size: 14px;
+}
+
+.action-buttons a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    margin-right: 5px;
+    font-size: 14px;
+}
+
+.btn-cancel {
+    background-color: #dc3545;
+}
+
+    .btn-cancel:hover {
+        background-color: #c82333;
+    }
+
+.btn-details {
+    background-color: #28a745;
+}
+
+    .btn-details:hover {
+        background-color: #218838;
+    }
