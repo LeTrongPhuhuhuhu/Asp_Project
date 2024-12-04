@@ -1,0 +1,129 @@
+﻿/* Tiêu đề */
+h1, .modal-title {
+    margin-top:20px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Bố cục toàn trang */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Căn chỉnh form */
+form label {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+form input,
+form select,
+form textarea {
+    font-size: 1rem;
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    width: 100%;
+    
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+    form input:focus,
+    form select:focus,
+    form textarea:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+        outline: none;
+    }
+
+/* Textarea chỉnh chiều cao */
+textarea {
+    resize: vertical;
+    min-height: 150px;
+    max-height: 300px;
+}
+
+/* Nút */
+button {
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+    button.btn-primary {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+    }
+
+        button.btn-primary:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+    button.btn-secondary {
+        background-color: #6c757d;
+        color: #fff;
+        border: none;
+    }
+
+        button.btn-secondary:hover {
+            background-color: #5a6268;
+            transform: scale(1.05);
+        }
+
+/* File Upload */
+input[type="file"] {
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+.blogContent
+{
+    height:200px;
+}
+/* Sidebar (nếu cần chỉnh) */
+.sidebar {
+    background-color: #212529;
+    color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+    .sidebar a {
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 15px;
+        display: block;
+        margin-bottom: 5px;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+    }
+
+        .sidebar a:hover {
+            background-color: #343a40;
+        }
+
+/* Tìm kiếm */
+.search-bar input {
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 15px;
+    border: 1px solid #ced4da;
+}
