@@ -1,12 +1,11 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
+<link rel="stylesheet" href="/css/pages/TrangChu.css">
 <!-- Slider Section -->
 <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
-        <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active" aria-current="true"
-                aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active" aria-current="true"aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
         <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
         <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
@@ -305,3 +304,39 @@
         </div>
     </div>
 </section>
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    @{
+    ViewData["Title"] = "Login";
+}
+<div class="login-container">
+    <div class="login-box">
+        <h2>Đăng Nhập</h2>
+        <form>
+            <div class="social-login">
+                <button type="button" class="google-login">Google</button>
+                <button type="button" class="facebook-login">Facebook</button>
+            </div>
+            <p>Hoặc đăng nhập với</p>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Email">
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Password">
+            </div>
+            <div class="options">
+                <label>
+                    <input type="checkbox"> Nhớ Mật Khẩu
+                </label>
+                <a href="#">Quên mật khẩu?</a>
+            </div>
+            <button type="submit" class="login-btn">Đăng Nhập</button>
+            <a type="button" class="register-btn text-decoration-none" asp-controller="Home" asp-action="DangKy">Đăng Ký</a>
+        </form>
+    </div>
+    <div class="logo">
+        <img src="~/img/Black and White Professional Minimalistic Real Estate Logo.png">
+    </div>
+</div>
+</div>
