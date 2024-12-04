@@ -1,0 +1,159 @@
+﻿/* Container chính */
+.main-container_dmsp {
+    width: 100vw;
+}
+
+/* Mô tả */
+.description_dmsp {
+    margin-top: 40px;
+}
+
+    .description_dmsp p:first-child {
+        font-size: 2.5rem; /* Tăng kích thước chữ cho tiêu đề */
+        font-weight: 100; /* Đậm chữ */
+        text-align: center; /* Căn giữa tiêu đề */
+        color: #333; /* Màu chữ */
+        margin-bottom: 1rem;
+    }
+
+    .description_dmsp p:not(:first-child) {
+        font-size: 1rem; /* Giảm kích thước chữ cho nội dung */
+        line-height: 1.6; /* Tăng khoảng cách giữa các dòng */
+        text-align: justify; /* Căn đều nội dung */
+        margin: 0 auto; /* Căn giữa theo chiều ngang */
+        max-width: 800px; /* Giới hạn chiều rộng nội dung */
+        color: #666; /* Màu chữ nhạt hơn */
+    }
+
+/* Phần banner */
+.banner_dmsp {
+    position: relative;
+    display: flex;
+    width: 100vw;
+    height: 100%; /* Có thể giữ nguyên hoặc điều chỉnh theo nhu cầu */
+}
+
+.banner-image_dmsp img {
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Phần overlay và tiêu đề của banner */
+.banner-title_dmsp {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #f8f9fa;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    z-index: 2;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+    .banner-title_dmsp h1 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin: 0;
+        color: white;
+    }
+
+/* Danh mục sản phẩm */
+.product-categories_dmsp {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cột đều nhau */
+    grid-template-rows: repeat(4, 1fr); /* 4 hàng đều nhau */
+    gap: 15px; /* Khoảng cách giữa các item */
+    padding: 50px;
+}
+
+/* Các item danh mục */
+.category-item_dmsp {
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    position: relative; /* Để căn giữa tiêu đề trong ảnh */
+    overflow: hidden; /* Đảm bảo hình ảnh không tràn ra ngoài */
+    width: 100%; /* Đảm bảo chiếm toàn bộ chiều rộng */
+    height: 100%; /* Đảm bảo chiếm toàn bộ chiều cao */
+    transition: transform 0.3s ease; /* Thêm hiệu ứng cho hover */
+}
+
+   
+
+    /* Hình ảnh danh mục */
+    .category-item_dmsp img {
+        width: 100%; /* Chiếm toàn bộ chiều rộng */
+        height: 100%; /* Chiếm toàn bộ chiều cao */
+        object-fit: cover; /* Cắt ảnh sao cho phù hợp với không gian */
+    }
+
+/* Tiêu đề danh mục */
+.category-title_dmsp {
+    position: absolute; /* Đặt tiêu đề lên trên hình ảnh */
+    top: 50%; /* Căn tiêu đề từ trên xuống giữa */
+    left: 50%; /* Căn tiêu đề từ trái sang phải */
+    transform: translate(-50%, -50%); /* Căn chính giữa theo cả hai chiều */
+    font-size: 24px; /* Tăng kích thước chữ */
+    color: white; /* Màu chữ */
+    padding: 10px;
+    border-radius: 5px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Tạo hiệu ứng bóng cho chữ */
+    z-index: 1; /* Đảm bảo tiêu đề luôn hiển thị trên hình ảnh */
+    background-color: transparent; /* Không có nền mặc định */
+    transition: background-color 0.3s ease; /* Thêm hiệu ứng chuyển đổi khi thay đổi nền */
+}
+
+/* Hiển thị nền đen mờ khi hover vào .category-item_dmsp */
+.category-item_dmsp:hover .category-title_dmsp {
+    background-color: rgba(0, 0, 0, 0.5); /* Nền màu đen mờ khi hover */
+}
+
+/* Điều chỉnh kích thước cho các item */
+.category-item_dmsp:nth-child(1) {
+    grid-column: span 1;
+}
+
+.category-item_dmsp:nth-child(2) {
+    grid-column: span 2; /* Cột 2 chiếm 1 cột */
+}
+
+.category-item_dmsp:nth-child(3) {
+    grid-column: span 2; /* Cột 3 chiếm 1 cột */
+}
+
+.category-item_dmsp:nth-child(4) {
+    grid-column: span 1;
+}
+
+.category-item_dmsp:nth-child(5) {
+    grid-column: span 4; /* Chiếm 2 cột và căn giữa */
+    justify-self: center; /* Căn giữa trong grid */
+    align-self: center; /* Căn giữa theo chiều dọc */
+    height: 350px;
+    width: 770px;
+}
+
+.category-item_dmsp:nth-child(6) {
+    grid-column: span 2;
+}
+
+.category-item_dmsp:nth-child(7) {
+    grid-column: span 1;
+}
+
+/* Hình ảnh danh mục */
+.category-image_dmsp {
+    width: 100%; /* Chiếm toàn bộ chiều rộng của item */
+    height: 100%; /* Chiếm toàn bộ chiều cao của item */
+    background-color: #aaa;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    object-fit: cover; /* Đảm bảo ảnh không bị méo và sẽ được cắt sao cho phù hợp */
+}
