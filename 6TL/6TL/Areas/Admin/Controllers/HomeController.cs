@@ -10,7 +10,11 @@ namespace _6TL.Areas.Admin.Controllers
 		{
 			return View();
 		}
-        public IActionResult QlBlog()
+        public IActionResult ThemBlog()
+        {
+            return View();
+        }
+        public IActionResult QuanLyBlog()
         {
             return View();
         }
