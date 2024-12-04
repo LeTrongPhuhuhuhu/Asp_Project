@@ -1,4 +1,7 @@
-﻿/* Tiêu đề chính */
+﻿* {
+    font-family: 'Montserrat', sans-serif;
+}
+/* Tiêu đề chính */
 h2 {
     font-size: 1.5rem;
     font-weight: bold;

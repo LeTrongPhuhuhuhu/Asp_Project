@@ -6,15 +6,15 @@
     <title>@ViewData["Title"] - 6TL</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-	<link rel="stylesheet" href="~/css/style.css">
-	<link href="~/css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/style.css">
+    <link href="~/css/style.css" rel="stylesheet" />
     <link rel="stylesheet" href="~/css/pages/TrangChu.css">
     <link rel="stylesheet" href="~/css/pages/DangNhap.css">
     <link rel="stylesheet" href="/css/pages/DangKy.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="navbar">
@@ -29,7 +29,7 @@
                 <li><a asp-controller="Home" asp-action="GioiThieu">Giới thiệu</a></li>
                 <li><a asp-controller="Home" asp-action="DanhMucSanPham">Sản Phẩm</a></li>
                 <li><a asp-controller="Home" asp-action="TinTuc">Tin Tức</a></li>
-                <li><a href="#">Chính Sách</a></li>
+                <li><a asp-controller="Home" asp-action="ChinhSach">Chính Sách</a></li>
             </ul>
             <!-- Thanh tìm kiếm -->
             <div class="search-bar">

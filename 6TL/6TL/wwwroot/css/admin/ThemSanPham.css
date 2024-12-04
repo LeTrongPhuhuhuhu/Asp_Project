@@ -1,4 +1,7 @@
-﻿/* Container chính */
+﻿* {
+    font-family: 'Montserrat', sans-serif;
+}
+/* Container chính */
 .container_tsp {
     background: #fff;
     padding: 30px 40px;

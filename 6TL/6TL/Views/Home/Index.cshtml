@@ -1,6 +1,7 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <!-- Slider Section -->
 <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -49,43 +50,52 @@
         <h2 class="mb-4">KHÔNG CHỈ LÀ NỘI THẤT, ĐÓ LÀ PHONG CÁCH SỐNG</h2>
         <div class="grid-container">
             <div class="grid-item">
-                <a href="#">
-                    <img src="https://aconcept-vn.com/pictures/catalog/banner/1-2-500x750-500x750-500x750-500x750-500x750-500x750-500x750-500x750-500x750.jpg" alt="Image">
+                <a href="#" class="image-overlay">
+                    <img src="https://aconcept-vn.com/pictures/catalog/banner/1-2-500x750-500x750-500x750-500x750-500x750-500x750-500x750-500x750-500x750.jpg" alt="Phòng Khách">
+                    <div class="hover-bg"></div> <!-- Lớp nền đen mờ -->
+                    <p>PHÒNG KHÁCH</p>
                 </a>
             </div>
             <div class="grid-item">
-                <a href="#">
-                    <img src="https://aconcept-vn.com/pictures/catalog/banner/4-3-500x750-500x750-500x750-500x750-500x750-500x750.jpg" alt="Image">
+                <a href="#" class="image-overlay">
+                    <img src="https://aconcept-vn.com/pictures/catalog/banner/4-3-500x750-500x750-500x750-500x750-500x750-500x750.jpg" alt="Phòng Bếp">
+                    <div class="hover-bg"></div>
+                    <p>PHÒNG BẾP</p>
                 </a>
             </div>
             <div class="grid-item">
-                <a href="#">
-                    <img src="https://aconcept-vn.com/pictures/catalog/banner/3-3-500x750-500x750-500x750-500x750-500x750.jpg" alt="Image">
+                <a href="#" class="image-overlay">
+                    <img src="https://aconcept-vn.com/pictures/catalog/banner/3-3-500x750-500x750-500x750-500x750-500x750.jpg" alt="Phòng Ngủ">
+                    <div class="hover-bg"></div>
+                    <p>PHÒNG NGỦ</p>
                 </a>
             </div>
             <div class="grid-item">
-                <a href="#">
-                    <img src="https://aconcept-vn.com/pictures/catalog/banner/banner-sp-trang-tri-1-500x750-500x750-500x750-500x750-500x750-500x750.jpg" alt="Image">
+                <a href="#" class="image-overlay">
+                    <img src="https://aconcept-vn.com/pictures/catalog/banner/banner-sp-trang-tri-1-500x750-500x750-500x750-500x750-500x750-500x750.jpg" alt="Trang Trí">
+                    <div class="hover-bg"></div>
+                    <p>TRANG TRÍ</p>
                 </a>
             </div>
         </div>
+
     </div>
 </section>
 
 <!-- Section đầu tiên -->
-<section class="py-5 bg-light">
+<section class="py-5 ">
     <div class="container">
         <div class="row align-items-center">
             <!-- Phần hình ảnh -->
             <div class="col-md-6 text-center">
                 <div class="position-relative" style="width: 376px; height: 377px;">
                     <!-- Hình ảnh đầu tiên -->
-                    <img src="https://via.placeholder.com/376x377"
+                    <img src="~/img/noithat1tc.jpg"
                          alt="Hình 1"
                          class="position-absolute top-0 start-0"
                          style="width: 100%; height: auto;">
                     <!-- Hình ảnh thứ hai -->
-                    <img src="https://via.placeholder.com/376x377"
+                    <img src="~/img/noithat2tc.jpg"
                          alt="Hình 2"
                          class="position-absolute start-50"
                          style="transform: translate(-2%, 50%); width: 100%; height: auto;">
@@ -93,11 +103,12 @@
             </div>
             <!-- Phần văn bản -->
             <div class="col-md-6" style="padding-left: 50px;">
-                <h2 class="mb-4">Chạm đến sự thanh lịch trong từng chi tiết</h2>
-                <p style="font-size: 20px;">
+                <h2 class="mb-4" style="text-align:left;">Chạm đến sự thanh lịch trong từng chi tiết</h2>
+                <p style="font-size: 20px; text-align:left;">
                     Điểm nhấn tinh tế cho không gian sống, với thiết kế sang trọng và chất liệu cao cấp, mang đến cho bạn giây phút thư thái giữa nhịp sống bận rộn.
                 </p>
-                <button class="btn btn-secondary">Xem ngay ></button>
+                <button class="custom-btn">Xem ngay ></button>
+
             </div>
         </div>
     </div>
@@ -108,18 +119,21 @@
 <br>
 <br>
 <br>
+<br>
+<br>
+<br>
 
 <!-- Section giới thiệu công ty -->
-<section class="py-5 bg-light">
+<section class="py-5 ">
     <div class="container text-center">
         <!-- Sử dụng d-flex để căn chỉnh hình ảnh và văn bản theo chiều ngang -->
         <div class="d-flex justify-content-center align-items-center mb-5">
             <!-- Hình ảnh với chiều rộng cố định -->
-            <img src="https://via.placeholder.com/653x657" width="653" height="657" alt="Logo công ty" class="me-3">
+            <img src="~/img/noithat5tc.jpg" width="550" height="657" alt="Logo công ty" class="me-3">
             <!-- Đoạn văn bản -->
             <div>
                 <h2 class="mb-4">Giới Thiệu Về Công Ty</h2>
-                <p class="mb-0" style="max-width: 561px; font-size: 25px;">
+                <p class="mb-0" style="max-width: 561px; font-size: 20px; text-align:left; margin-left:25px">
                     <strong>Tại 6TL Furniture</strong> , chúng tôi tin rằng nội thất không chỉ là những món đồ vật,
                     mà là yếu tố quan trọng tạo nên không gian sống và phong cách của bạn. Mỗi sản phẩm tại 6TL
                     Furniture đều được thiết kế với tâm huyết, kết hợp giữa thẩm mỹ hiện đại và sự tiện dụng, mang
@@ -129,137 +143,161 @@
                     đến phòng ngủ thư thái, 6TL Furniture cam kết đồng hành cùng bạn trong việc biến ngôi nhà thành
                     tổ ấm, nơi bạn tìm thấy sự bình yên và phong cách sống riêng biệt.
                 </p>
-                <button class="btn btn-secondary">Xem ngay ></button>
+                <button class="custom-btn">Xem ngay ></button>
+
             </div>
         </div>
     </div>
 </section>
 
 
+<section class="py-5">
+    <div class="container text-center">
+        <div class="text-center">
+            <h2 class="mb-2">Sản Phẩm Nổi Bật</h2>
 
-<!-- Featured Products Section -->
-<section class="py-5 bg-light">
-    <div class="container text-center d-block">
-        <h2 class="mb-4">Sản Phẩm Nổi Bật</h2>
+        </div>
+        <div class="text-end">
+            <a href="/Home/SanPham" class="btn-more text-decoration-none">Xem thêm &raquo;</a>
+        </div>
 
         <!-- Carousel container -->
-        <div id="featuredProductsCarousel" class="carousel slide" data-bs-ride="carousel">
-            <!-- Carousel inner (list of products) -->
+        <div id="featuredProductsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+            <!-- Carousel inner -->
             <div class="carousel-inner">
+                <!-- Carousel item 1 -->
                 <div class="carousel-item active">
                     <div class="row">
                         <div class="col-md-3">
-                            <div class="box-item">
-                                <a href="#">
-                                    <div class="img-box">
-                                        <img src="https://via.placeholder.com/150" class="d-block w-100">
-                                    </div>
-                                    <div class="content-box">
-                                    </div>
-                                </a>
+                            <div class="product-item_sp">
+                                <div class="favorite_sp">
+                                    <i class="heart-icon_sp">&hearts;</i>
+                                </div>
+                                <img src="~/img/placeholder.jpg" alt="Bàn Cafe" class="img-fluid">
+                                <h3>Bàn Cafe</h3>
+                                <span>1,200,000 VND</span>
+                                <div class="rating_sp">
+                                    <span>★★★★☆</span>
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-3">
-                            <div class="box-item">
-                                <a href="#">
-                                    <div class="img-box">
-                                        <img src="https://via.placeholder.com/150" class="d-block w-100">
-                                    </div>
-                                    <div class="content-box">
-                                    </div>
-                                </a>
+                            <div class="product-item_sp">
+                                <div class="favorite_sp">
+                                    <i class="heart-icon_sp">&hearts;</i>
+                                </div>
+                                <img src="~/img/placeholder.jpg" alt="Sofa Cao Cấp" class="img-fluid">
+                                <h3>Sofa Cao Cấp</h3>
+                                <span>4,500,000 VND</span>
+                                <div class="rating_sp">
+                                    <span>★★★★★</span>
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-3">
-                            <div class="box-item">
-                                <a href="#">
-                                    <div class="img-box">
-                                        <img src="https://via.placeholder.com/150" class="d-block w-100">
-                                    </div>
-                                    <div class="content-box">
-                                    </div>
-                                </a>
+                            <div class="product-item_sp">
+                                <div class="favorite_sp">
+                                    <i class="heart-icon_sp">&hearts;</i>
+                                </div>
+                                <img src="~/img/placeholder.jpg" alt="Tủ Gỗ" class="img-fluid">
+                                <h3>Tủ Gỗ</h3>
+                                <span>3,200,000 VND</span>
+                                <div class="rating_sp">
+                                    <span>★★★☆☆</span>
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-3">
-                            <div class="box-item">
-                                <a href="#">
-                                    <div class="img-box">
-                                        <img src="https://via.placeholder.com/150" class="d-block w-100">
-                                    </div>
-                                    <div class="content-box">
-                                    </div>
-                                </a>
+                            <div class="product-item_sp">
+                                <div class="favorite_sp">
+                                    <i class="heart-icon_sp">&hearts;</i>
+                                </div>
+                                <img src="~/img/placeholder.jpg" alt="Kệ Tivi" class="img-fluid">
+                                <h3>Kệ Tivi</h3>
+                                <span>2,800,000 VND</span>
+                                <div class="rating_sp">
+                                    <span>★★★★☆</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- Carousel item 2 -->
                 <div class="carousel-item">
                     <div class="row">
                         <div class="col-md-3">
-                            <div class="box-item">
-                                <a href="#">
-                                    <div class="img-box">
-                                        <img src="https://via.placeholder.com/150" class="d-block w-100">
-                                    </div>
-                                    <div class="content-box">
-                                    </div>
-                                </a>
+                            <div class="product-item_sp">
+                                <div class="favorite_sp">
+                                    <i class="heart-icon_sp">&hearts;</i>
+                                </div>
+                                <img src="~/img/placeholder.jpg" alt="Bàn Làm Việc" class="img-fluid">
+                                <h3>Bàn Làm Việc</h3>
+                                <span>1,500,000 VND</span>
+                                <div class="rating_sp">
+                                    <span>★★★★☆</span>
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-3">
-                            <div class="box-item">
-                                <a href="#">
-                                    <div class="img-box">
-                                        <img src="https://via.placeholder.com/150" class="d-block w-100">
-                                    </div>
-                                    <div class="content-box">
-                                    </div>
-                                </a>
+                            <div class="product-item_sp">
+                                <div class="favorite_sp">
+                                    <i class="heart-icon_sp">&hearts;</i>
+                                </div>
+                                <img src="~/img/placeholder.jpg" alt="Bàn Làm Việc" class="img-fluid">
+                                <h3>Bàn Làm Việc</h3>
+                                <span>1,500,000 VND</span>
+                                <div class="rating_sp">
+                                    <span>★★★★☆</span>
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-3">
-                            <div class="box-item">
-                                <a href="#">
-                                    <div class="img-box">
-                                        <img src="https://via.placeholder.com/150" class="d-block w-100">
-                                    </div>
-                                    <div class="content-box">
-                                    </div>
-                                </a>
+                            <div class="product-item_sp">
+                                <div class="favorite_sp">
+                                    <i class="heart-icon_sp">&hearts;</i>
+                                </div>
+                                <img src="~/img/placeholder.jpg" alt="Bàn Làm Việc" class="img-fluid">
+                                <h3>Bàn Làm Việc</h3>
+                                <span>1,500,000 VND</span>
+                                <div class="rating_sp">
+                                    <span>★★★★☆</span>
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-3">
-                            <div class="box-item">
-                                <a href="#">
-                                    <div class="img-box">
-                                        <img src="https://via.placeholder.com/150" class="d-block w-100">
-                                    </div>
-                                    <div class="content-box">
-                                    </div>
-                                </a>
+                            <div class="product-item_sp">
+                                <div class="favorite_sp">
+                                    <i class="heart-icon_sp">&hearts;</i>
+                                </div>
+                                <img src="~/img/placeholder.jpg" alt="Bàn Làm Việc" class="img-fluid">
+                                <h3>Bàn Làm Việc</h3>
+                                <span>1,500,000 VND</span>
+                                <div class="rating_sp">
+                                    <span>★★★★☆</span>
+                                </div>
                             </div>
                         </div>
+                        <!-- Thêm sản phẩm khác -->
                     </div>
                 </div>
-                <!-- Add more carousel items as needed -->
             </div>
 
-            <!-- Controls for carousel -->
-            <button class="carousel-control-prev click  " type="button" data-bs-target="#featuredProductsCarousel"
-                    data-bs-slide="prev">
+            <!-- Carousel controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#featuredProductsCarousel" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next click" type="button" data-bs-target="#featuredProductsCarousel"
-                    data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#featuredProductsCarousel" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
     </div>
 </section>
-<section class="py-5 bg-light">
+
+
+<section class="py-5 ">
     <div class="container text-center">
         <!-- Sử dụng d-flex để căn chỉnh hình ảnh và văn bản theo chiều ngang -->
         <div class="d-flex justify-content-center align-items-center mb-5">
@@ -267,41 +305,47 @@
             <!-- Đoạn văn bản -->
             <div>
                 <h2 class="mb-4">6TL Furniture - Kiến tạo không gian, nâng tầm cuộc sống</h2>
-                <p class="mb-0" style="max-width: 561px; font-size: 25px;">
-                    <strong>Mỗi sản phẩm của 6TL Furniture không chỉ là nội thất, mà là mảnh ghép hoàn hảo để biến không gian của bạn thành nơi đáng sống và đầy cảm hứng.</strong>
+                <p class="mb-0" style="max-width: 561px; font-size: 20px;text-align:left;">
+                    Mỗi sản phẩm của 6TL Furniture không chỉ là nội thất, mà là mảnh ghép hoàn hảo để biến không gian của bạn thành nơi đáng sống và đầy cảm hứng.
                 </p>
-                <button class="btn btn-secondary">Xem ngay ></button>
+                <button class="custom-btn">Xem ngay ></button>
+
             </div>
-            <img src="https://via.placeholder.com/653x657" width="653" height="657" alt="Logo công ty" class="me-3">
+            <img src="~/img/noithat6tc.jpg" width="653" height="657" alt="Logo công ty" class="me-3">
         </div>
     </div>
 </section>
 
-<!-- News Section -->
-<section class="py-5">
-    <div class="container text-center d-block">
-        <h2 class="mb-4">Tin Tức</h2>
-        <div class="grid-container">
-            <div class="grid-item">
-                <a href="#">
-                    <img src="https://via.placeholder.com/300" alt="Image">
-                </a>
-            </div>
-            <div class="grid-item">
-                <a href="#">
-                    <img src="https://via.placeholder.com/300" alt="Image">
-                </a>
-            </div>
-            <div class="grid-item">
-                <a href="#">
-                    <img src="https://via.placeholder.com/300" alt="Image">
-                </a>
-            </div>
-            <div class="grid-item">
-                <a href="#">
-                    <img src="https://via.placeholder.com/300" alt="Image">
-                </a>
+<section class="container_tt">
+    <h2 class="mb-4 text-center">Tin Tức</h2>
+    <div class="news-grid_tt">
+        <div class="news-item_tt">
+            <img src="~/img/tintuc1.jpg" alt="Tin tức 1">
+            <div class="news-content_tt">
+                <h3>Tiêu đề tin tức 1</h3>
+                <p>Mô tả ngắn gọn của tin tức đầu tiên.</p>
+                <a href="#" class="read-more_tt">Đọc Thêm <span>→</span></a>
             </div>
         </div>
+        <div class="news-item_tt">
+            <img src="~/img/tintuc2.jpg" alt="Tin tức 2">
+            <div class="news-content_tt">
+                <h3>Tiêu đề tin tức 2</h3>
+                <p>Mô tả ngắn gọn của tin tức thứ hai.</p>
+                <a href="#" class="read-more_tt">Đọc Thêm <span>→</span></a>
+            </div>
+        </div>
+        <div class="news-item_tt">
+            <img src="~/img/tintuc3.jpg" alt="Tin tức 3">
+            <div class="news-content_tt">
+                <h3>Tiêu đề tin tức 3</h3>
+                <p>Mô tả ngắn gọn của tin tức thứ ba.</p>
+                <a href="#" class="read-more_tt">Đọc Thêm <span>→</span></a>
+            </div>
+        </div>
+
+        <!-- Thêm tin tức khác nếu cần -->
     </div>
 </section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

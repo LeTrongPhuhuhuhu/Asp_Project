@@ -1,4 +1,6 @@
-﻿
+﻿* {
+    font-family: 'Montserrat', sans-serif;
+}
 /* ========== Container Chính ========== */
 .product-management_sp {
     padding: 20px;
