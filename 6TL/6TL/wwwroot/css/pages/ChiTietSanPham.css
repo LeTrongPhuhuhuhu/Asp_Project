@@ -1,4 +1,7 @@
-﻿/* Chi tiết sản phẩm */
+﻿* {
+    font-family: 'Montserrat', sans-serif;
+}
+/* Chi tiết sản phẩm */
 .product-detail_ct {
     max-width: 1900px;
     margin: 20px auto;

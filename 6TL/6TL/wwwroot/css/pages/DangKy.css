@@ -1,89 +1,155 @@
-﻿
+﻿* {
+    font-family: 'Montserrat', sans-serif;
+}
+/* Reset một số phần tử mặc định */
+
+
+input, select, button, label {
+    font-family: inherit;
+}
+
+/* Banner Section */
 .banner-register {
-    text-align: center;
-    padding: 20px;
-    background: #f4f4f4;
+    position: relative;
+    display: flex;
+    width: 100vw;
+    height: 455px; /* Chiều cao giống với yêu cầu */
 }
 
-    .banner-register img {
-        max-width: 100%;
-        height: auto;
-    }
+.banner-image {
+    width: 100vw;
+    height: 100%;
+    object-fit: cover; /* Đảm bảo hình ảnh bao phủ toàn bộ banner */
+}
 
+.banner-overlay {
+    position: absolute;
+    bottom: 20px; /* Khoảng cách từ đáy */
+    left: 20px; /* Khoảng cách từ bên trái */
+    color: #f8f9fa; /* Màu chữ trắng */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Đổ bóng chữ để nổi bật trên nền */
+}
+
+.banner-title {
+    font-size: 60px; /* Kích thước chữ lớn */
+    font-weight: bold; /* Đậm chữ */
+    margin: 0; /* Xóa khoảng cách mặc định */
+}
+
+/* Form Section */
 .form-section {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-}
-
-.register-form {
+    margin: 30px auto;
+    padding: 40px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     width: 1000px;
-    background: #e0e0e0;
-    padding: 20px;
-    border-radius: 5px;
 }
 
-.form-row {
+.register-form .form-row {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
 }
 
-    .form-row input, .form-row select {
-        width: 48%;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+    .form-group label {
+        font-weight: bold;
+        margin-bottom: 8px;
+        color: #444;
+        text-align: left;
     }
 
-.gender label {
-    margin-right: 10px;
+    .form-group input,
+    .form-group select {
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 1rem;
+        transition: border-color 0.3s ease;
+    }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            border-color: #6a11cb;
+            outline: none;
+        }
+
+.gender {
+    display: flex;
+    flex-direction: column;
 }
 
+.gender-options {
+    display: flex;
+    gap: 20px;
+    margin-top: 8px;
+}
+
+    .gender-options label {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+.required {
+    color: red;
+    font-weight: bold;
+}
+
+/* Terms Section */
 .terms {
     display: flex;
     align-items: center;
-    gap: 5px; /* Khoảng cách giữa checkbox và label */
+    font-size: 0.9rem;
 }
 
-.form-row input[type="checkbox"] {
-    width: auto; /* Để checkbox không bị ép kích thước */
-    padding: 0; /* Loại bỏ padding không cần thiết */
-    margin-right: 5px; /* Thêm khoảng cách giữa checkbox và label */
-    border: none; /* Loại bỏ viền không cần thiết */
-    border-radius: 0; /* Giữ checkbox dạng mặc định hình vuông */
-    transform: scale(1.2); /* Phóng to một chút nếu muốn */
-    cursor: pointer; /* Đổi con trỏ để tăng UX */
-}
-
-.terms label {
-    font-size: 14px;
-    color: #333;
-}
+    .terms input[type="checkbox"] {
+        margin-right: 10px;
+    }
 
 .terms-link {
-    color: blue;
-    text-decoration: underline;
-    margin-left: 3px; /* Khoảng cách nhỏ trước liên kết */
-    cursor: pointer;
+    color: #6a11cb;
+    text-decoration: none;
+    font-weight: bold;
 }
 
     .terms-link:hover {
-        color: darkblue;
+        text-decoration: underline;
     }
 
+/* Submit Button */
 .submit-btn {
     width: 100%;
-    padding: 10px;
-    background: gray;
+    padding: 12px;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
     cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
 }
 
-.social-media a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: black;
+    .submit-btn:hover {
+        background: linear-gradient(to right, #2575fc, #6a11cb);
+        transform: translateY(-3px);
+    }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+    }
+
+    .banner-register h1 {
+        font-size: 2rem;
+    }
 }

@@ -1,4 +1,7 @@
-﻿/* Container chính */
+﻿* {
+    font-family: 'Montserrat', sans-serif;
+}
+/* Container chính */
 .main-container_dmsp {
     width: 100vw;
 }
@@ -30,7 +33,7 @@
     position: relative;
     display: flex;
     width: 100vw;
-    height: 100%; /* Có thể giữ nguyên hoặc điều chỉnh theo nhu cầu */
+    height: 455px; /* Có thể giữ nguyên hoặc điều chỉnh theo nhu cầu */
 }
 
 .banner-image_dmsp img {
@@ -52,7 +55,7 @@
 }
 
     .banner-title_dmsp h1 {
-        font-size: 2.5rem;
+        font-size: 60px;
         font-weight: bold;
         margin: 0;
         color: white;
@@ -69,7 +72,6 @@
 
 /* Các item danh mục */
 .category-item_dmsp {
-   
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -85,7 +87,7 @@
     transition: transform 0.3s ease; /* Thêm hiệu ứng cho hover */
 }
 
-   
+
 
     /* Hình ảnh danh mục */
     .category-item_dmsp img {

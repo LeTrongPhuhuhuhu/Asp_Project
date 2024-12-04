@@ -1,4 +1,7 @@
-﻿/* Banner Section */
+﻿* {
+    font-family: 'Montserrat', sans-serif;
+}
+/* Banner Section */
 .banner_gt {
     position: relative;
     display: flex;
@@ -21,7 +24,7 @@
 }
 
 .banner-title_gt {
-    font-size: 2.5rem;
+    font-size: 60px;
     font-weight: bold;
     margin: 0;
 }

@@ -3,6 +3,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* Copy các quy tắc từ site.css */
@@ -78,7 +79,6 @@ body {
         }
 
             .navbar-menu ul li a:hover {
-                background-color: #f0f0f0;
                 color: #000;
             }
 
@@ -255,5 +255,3 @@ footer {
             font-size: 14px;
             color: #ccc;
         }
-
-

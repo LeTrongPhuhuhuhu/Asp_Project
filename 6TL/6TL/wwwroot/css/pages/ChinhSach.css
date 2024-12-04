@@ -1,4 +1,6 @@
-﻿sửa lại dựa trên đoạn code của tôi và đưa tôi đoạn code tổng nha
+﻿* {
+    font-family: 'Montserrat', sans-serif;
+}
 /* Reset CSS */
 body, h1, h2, h3, p, ul, li, input, button {
     margin: 0;

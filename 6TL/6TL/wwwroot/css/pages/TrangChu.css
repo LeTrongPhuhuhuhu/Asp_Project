@@ -1,4 +1,7 @@
-﻿/* Carousel customization */
+﻿* {
+    font-family: 'Montserrat', sans-serif;
+}
+/* Carousel customization */
 .carousel-item img {
     height: 400px;
     object-fit: cover;
@@ -158,17 +161,84 @@ section {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(4, 317px);
-    gap: 15px; /* Khoảng cách giữa các phần tử */
-    justify-content: center; /* Căn giữa lưới */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    justify-content: center;
+}
+
+.grid-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-overlay {
+    display: block;
+    position: relative;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    justify-content: center;
+}
+
+.grid-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-overlay {
+    display: block;
+    position: relative;
 }
 
 .grid-item img {
-    width: 317px;
-    height: 399px;
-    object-fit: cover; /* Đảm bảo ảnh hiển thị đẹp */
-    border-radius: 8px; /* Tùy chọn bo góc */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
 }
+
+.grid-item p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    font-weight: bold;
+    font-size: 1.5rem; /* Kích thước chữ lớn hơn */
+    color: white;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7); /* Đổ bóng cho chữ */
+    white-space: nowrap; /* Đảm bảo chữ không xuống dòng */
+    z-index: 2; /* Chữ nằm trên nền */
+    transition: all 0.3s ease;
+}
+
+.grid-item .hover-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Độ mờ màu đen */
+    opacity: 0; /* Ẩn mặc định */
+    transition: opacity 0.3s ease; /* Hiệu ứng mờ dần */
+    z-index: 1; /* Nền nằm dưới chữ */
+}
+
+.grid-item:hover img {
+    transform: scale(1.1); /* Zoom hình khi hover */
+}
+
+.grid-item:hover .hover-bg {
+    opacity: 1; /* Hiện nền đen mờ */
+}
+
+.grid-item:hover p {
+    color: white; /* Giữ chữ nổi bật */
+}
+
 
 .container {
     max-width: 1200px;
@@ -188,7 +258,178 @@ section {
     max-height: 100%;
     object-fit: cover;
 }
-.pb-3{
-    margin:0;
-    padding:0;
+
+.pb-3 {
+    margin: 0;
+    padding: 0;
 }
+
+.custom-btn {
+    background-color: white; /* Nền trắng */
+    color: black; /* Chữ đen */
+    border: 2px solid black; /* Viền đen dày 2px */
+    padding: 10px 20px; /* Tăng kích thước padding */
+    font-size: 16px; /* Kích thước chữ */
+    font-weight: bold; /* Đậm chữ */
+    cursor: pointer; /* Con trỏ chuột chỉ tay khi hover */
+    border-radius: 5px; /* Góc bo tròn (tuỳ chỉnh nếu cần) */
+    transition: background-color 0.3s, color 0.3s; /* Hiệu ứng hover */
+}
+
+    .custom-btn:hover {
+        background-color: black; /* Nền đen khi hover */
+        color: white; /* Chữ trắng khi hover */
+    }
+
+.product-item_sp {
+    border: 1px solid #f9f9f9;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center; /* Căn giữa nội dung trong thẻ */
+}
+
+    .product-item_sp:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .product-item_sp img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+
+    .product-item_sp .favorite_sp {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 50%;
+        padding: 5px;
+        cursor: pointer;
+    }
+
+        .product-item_sp .favorite_sp .heart-icon_sp {
+            color: #d9534f;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .product-item_sp .favorite_sp:hover .heart-icon_sp {
+            color: #ff0000;
+        }
+
+    .product-item_sp h3 {
+        font-size: 16px;
+        margin-top: 15px;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .product-item_sp span {
+        font-size: 14px;
+        color: #555;
+    }
+
+    .product-item_sp .rating_sp span {
+        color: #ffcc00; /* Màu vàng cho sao */
+        font-size: 14px;
+        margin-top: 5px;
+        display: inline-block;
+    }
+/* Căn nút "Xem thêm" */
+.text-end .btn-more {
+    font-size: 14px;
+    color: #7b7b7b;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block;
+    transition: color 0.3s ease;
+    margin-bottom: 5px
+}
+
+    .text-end .btn-more:hover {
+        color: #333;
+    }
+
+/* Đảm bảo căn phải */
+.text-end {
+    text-align: right;
+}
+/* News Grid */
+.news-grid_tt {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.news-item_tt {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+    .news-item_tt:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .news-item_tt img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+.news-content_tt {
+    padding: 15px;
+    text-align: left;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+    .news-content_tt h3 {
+        font-size: 1.2rem;
+        margin: 10px 0;
+        color: #333;
+    }
+
+    .news-content_tt p {
+        font-size: 1rem;
+        color: #555;
+        margin-bottom: 15px;
+    }
+
+.read-more_tt {
+    display: inline-flex;
+    align-items: center;
+    color: black;
+    padding: 8px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+    .read-more_tt span {
+        margin-left: 8px;
+    }
+
+    .read-more_tt:hover {
+        background: #808080;
+        transform: scale(1.05);
+        color: white;
+    }

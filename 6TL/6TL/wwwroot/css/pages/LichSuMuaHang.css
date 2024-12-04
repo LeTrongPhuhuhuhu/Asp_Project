@@ -1,4 +1,6 @@
-﻿
+﻿* {
+    font-family: 'Montserrat', sans-serif;
+}
     .order-history {
         width: 100%;
         border-collapse: collapse;
