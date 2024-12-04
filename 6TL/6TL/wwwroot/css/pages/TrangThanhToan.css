@@ -1,4 +1,7 @@
-﻿/* Trang thanh toán */
+﻿* {
+    font-family: 'Montserrat', sans-serif;
+}
+/* Trang thanh toán */
 /* Định dạng cho toàn bộ phần thanh toán */
 .checkout-container_ttt {
     display: flex;

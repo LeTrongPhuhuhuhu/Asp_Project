@@ -1,4 +1,6 @@
-﻿/* Tiêu đề */
+﻿* {
+    font-family: 'Montserrat', sans-serif;
+}/* Tiêu đề */
 h1, .modal-title {
     margin-top:20px;
     font-size: 2rem;
