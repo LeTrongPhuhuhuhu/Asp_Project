@@ -186,6 +186,47 @@ p {
         margin-left: 10px;
         cursor: pointer;
     }
+.custom-form {
+    padding: 20px; /* Tăng khoảng cách bên trong form */
+    font-size: 1.2rem; /* Tăng kích thước chữ */
+}
+
+    .custom-form .input-group input {
+        padding: 10px; /* Tăng kích thước input */
+        font-size: 1rem; /* Tăng kích thước chữ trong input */
+    }
+
+    .custom-form .login-btn {
+        padding: 12px 20px; /* Tăng kích thước nút đăng nhập */
+        font-size: 1.2rem; /* Tăng kích thước chữ trong nút */
+    }
+
+    .custom-form .social-login button {
+        padding: 10px 20px;
+        font-size: 1rem;
+        margin: 5px;
+    }
+.google-login, .facebook-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Khoảng cách giữa icon và chữ */
+    padding: 10px 20px;
+    font-size: 1rem;
+}
+
+.google-login {
+    background-color: #db4437; /* Màu Google */
+    color: white;
+    border: none;
+}
+
+.facebook-login {
+    background-color: #4267B2; /* Màu Facebook */
+    color: white;
+    border: none;
+}
+
 
 /* Footer */
 footer {

@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="~/css/pages/DangNhap.css">
     <link rel="stylesheet" href="/css/pages/DangKy.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -39,10 +40,50 @@
         </div>
 
         <!-- Nút Đăng ký và Đăng nhập -->
-        <div class="auth-buttons">
-            <a class="auth-button" asp-controller="Home" asp-action="DangNhap">Đăng nhập</a>
-        </div>
+        <button type="button" class="auth-button" data-bs-toggle="modal" data-bs-target="#loginModal">
+            Đăng Nhập
+        </button>
     </header>
+    <!-- Modal -->
+    <div class="modal fade" id="loginModal" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content text-center">
+                <h2 class="modal-title" id="loginModalLabel">Đăng Nhập</h2>
+                <div class="d-flex">
+                    <form method="post" class="custom-form">
+                        <div class="social-login">
+                            <button type="button" class="btn btn-lg btn-danger google-login">
+                                <i class="fab fa-google"></i> Google
+                            </button>
+                            <button type="button" class="btn btn-lg btn-primary facebook-login">
+                                <i class="fab fa-facebook-f"></i> Facebook
+                            </button>
+                        </div>
+                        <p>Hoặc đăng nhập với</p>
+                        <div class="input-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="Email">
+                        </div>
+                        <div class="input-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" placeholder="Password">
+                        </div>
+                        <div class="options">
+                            <label>
+                                <input type="checkbox"> Nhớ Mật Khẩu
+                            </label>
+                            <a href="#">Quên mật khẩu?</a>
+                        </div>
+                        <button type="submit" class="login-btn">Đăng Nhập</button>
+                        <a asp-controller="Home" asp-action="DangKy" class="text-decoration-none">Đăng Ký</a>
+                    </form>
+                    <div class="logo">
+                        <img src="~/img/Black and White Professional Minimalistic Real Estate Logo.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="container">
         <main role="main" class="pb-3">
