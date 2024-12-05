@@ -14,10 +14,6 @@ namespace _6TL.Areas.Admin.Controllers
         {
             return View();
         }
-        public IActionResult QuanLyBlog()
-        {
-            return View();
-        }
 		public IActionResult QuanLySanPham()
 		{
 			return View();
