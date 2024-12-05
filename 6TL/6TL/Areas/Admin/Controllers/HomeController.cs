@@ -48,5 +48,13 @@ namespace _6TL.Areas.Admin.Controllers
         {
             return View();
         }
+        public IActionResult QuanLyAdmin()
+        {
+            return View();
+        }
+        public IActionResult QuanLyUser()
+        {
+            return View();
+        }
     }
 }
