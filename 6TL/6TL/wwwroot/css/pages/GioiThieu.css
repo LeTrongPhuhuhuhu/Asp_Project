@@ -91,3 +91,50 @@
         color: #555;
         line-height: 1.6;
     }
+/* Danh sách Blog */
+.blog-list_gt {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.blog-item_gt {
+    width:240px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+    .blog-item_gt:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    }
+
+.blog-image_gt {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.blog-title_gt {
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #444;
+}
+
+    .blog-title_gt:hover {
+        color: #007BFF;
+    }

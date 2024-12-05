@@ -141,6 +141,22 @@
       "PackagePath": "staticwebassets\\img\\bannersignin.jpg"
     },
     {
+      "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\blog1.jpg",
+      "PackagePath": "staticwebassets\\img\\blog1.jpg"
+    },
+    {
+      "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\blog2.jpg",
+      "PackagePath": "staticwebassets\\img\\blog2.jpg"
+    },
+    {
+      "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\blog3.jpg",
+      "PackagePath": "staticwebassets\\img\\blog3.jpg"
+    },
+    {
+      "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\blog4.jpg",
+      "PackagePath": "staticwebassets\\img\\blog4.jpg"
+    },
+    {
       "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\dmsp.jpg",
       "PackagePath": "staticwebassets\\img\\dmsp.jpg"
     },
