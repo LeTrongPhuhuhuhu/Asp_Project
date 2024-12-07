@@ -1,147 +1,160 @@
-﻿<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quản lý tài khoản</title>
-    <link href="~/css/admin/QuanLyAdmin.css" rel="stylesheet" />
-</head>
-<body>
-    <main>
-        <div class="content">
-            <h1>Quản lý tài khoản</h1>
-            <div class="controls">
-                <div>
-                    <input type="text" placeholder="Tìm kiếm...">
-                    <select>
-                        <option>Vai Trò</option>
-                    </select>
-                    <select>
-                        <option>Trạng thái</option>
-                    </select>
-                </div>
-                <!DOCTYPE html>
-                <html lang="en">
-                <head>
-                    <meta charset="UTF-8">
-                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                    <title>Popup Đăng nhập</title>
-                    <link rel="stylesheet" href="styles.css"> <!-- Link đến file CSS -->
-                </head>
-                <body>
-                    <button id="openModalButton">Thêm Admin</button>
+﻿
+<link href="~/css/admin/QuanLyAdmin.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-                    <!-- Modal Structure -->
-                    <div class="modal-overlay" id="modalOverlay">
-                        <div class="modal">
-                            <button class="close-btn" id="closeModalButton">&times;</button>
-                            <h2>Thêm mới tài khoản</h2>
-                            <form id="addAccountForm">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="email" placeholder="Nhập email" required>
-                                    
-                                <label for="password">Mật khẩu</label>
-                                <input type="password" id="password" name="password" placeholder="Nhập mật khẩu" required>
+<div class="content">
+    <h1>Quản lý tài khoản Admin</h1>
+    <div class="controls">
+        <div>
+            <input type="text" placeholder="Tìm kiếm...">
+            <select>
+                <option>Hoạt động</option>
+                <option>Không hoạt động</option>
+            </select>
+        </div>
 
-                                <label for="role">Vai trò</label>
-                                <select id="role" name="role">
-                                    <option value="user">User</option>
-                                    <option value="admin">Admin</option>
-                                </select>
-
-                                <button type="submit">Thêm tài khoản</button>
-                            </form>
-                        </div>
-                    </div>
-
-                    <script>
-                        // Open and close modal functionality
-                        const openModalButton = document.getElementById('openModalButton');
-                        const modalOverlay = document.getElementById('modalOverlay');
-                        const closeModalButton = document.getElementById('closeModalButton');
-
-                        // Open modal
-                        openModalButton.addEventListener('click', () => {
-                            modalOverlay.style.display = 'flex';
-                        });
-
-                        // Close modal
-                        closeModalButton.addEventListener('click', () => {
-                            modalOverlay.style.display = 'none';
-                        });
-
-                        // Close modal when clicking outside the modal
-                        modalOverlay.addEventListener('click', (e) => {
-                            if (e.target === modalOverlay) {
-                                modalOverlay.style.display = 'none';
-                            }
-                        });
-
-                        // Form submission (placeholder for actual functionality)
-                        const addAccountForm = document.getElementById('addAccountForm');
-                        addAccountForm.addEventListener('submit', (e) => {
-                            e.preventDefault();
-                            const email = document.getElementById('email').value;
-                            const password = document.getElementById('password').value;
-                            const role = document.getElementById('role').value;z                    
-
-                            console.log('Thêm tài khoản mới:', { email, password, role });
-                            alert('Tài khoản mới đã được thêm thành công!');
-                            modalOverlay.style.display = 'none';xyuyu
-                        });
-                    </script>
-                </body>
-            </html>
-
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Email</th>
+                <th>Số điện thoại</th>
+                <th>Vai trò</th>
+                <th>Trạng thái</th>
+                <th>Hành động</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2</td>
+                <td>thuongyahoo365@gmail.com1</td>
+                <td>0123456789</td>
+                <td>Admin</td>
+                <td>Không hoạt động</td>
+                <td>
+                    <button class="btn btn-warning"><i class="fa-solid fa-wrench"></i></button>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>thuongyahoo365@gmail.com</td>
+                <td>0123456789</td>
+                <td>Admin</td>
+                <td>Không hoạt động</td>
+                <td><button class="btn btn-warning"><i class="fa-solid fa-wrench"></i></button></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>thuongyahoo365@gmail.com</td>
+                <td>0123456789</td>
+                <td>Admin</td>
+                <td>Không hoạt động</td>
+                <td><button class="btn btn-warning"><i class="fa-solid fa-wrench"></i></button></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>thuongyahoo365@gmail.com</td>
+                <td>0123456789</td>
+                <td>Admin</td>
+                <td>Không hoạt động</td>
+                <td><button class="btn btn-warning"><i class="fa-solid fa-wrench"></i></button></td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="footer">
+        Tất cả (4) | Admin (4)
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editModalLabel">Chỉnh sửa tài khoản</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <table>
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Email</th>
-                        <th>Mật khẩu</th>
-                        <th>Vai trò</th>
-                        <th>Trạng thái</th>
-                        <th>Hành động</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>2</td>
-                        <td>thuongyahoo365@gmail.com</td>
-                        <td>31/08/2003</td>
-                        <td>Admin</td>
-                        <td>Không hoạt động</td>
-                        <td><button class="edit-button">Edit</button></td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>thuongyahoo365@gmail.com</td>
-                        <td>31/08/2003</td>
-                        <td>Admin</td>
-                        <td>Không hoạt động</td>
-                        <td><button class="edit-button">Edit</button></td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>thuongyahoo365@gmail.com</td>
-                        <td>31/08/2003</td>
-                        <td>Admin</td>
-                        <td>Không hoạt động</td>
-                        <td><button class="edit-button">Edit</button></td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>thuongyahoo365@gmail.com</td>
-                        <td>31/08/2003</td>
-                        <td>Admin</td>
-                        <td>Không hoạt động</td>
-                        <td><button class="edit-button">Edit</button></td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="footer">
-                Tất cả (6) | Khách hàng (2) | Admin (4)
+            <div class="modal-body">
+                <form id="editForm">
+                    <div class="mb-3">
+                        <label for="editEmail" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="editEmail" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="editPhone" class="form-label">Số điện thoại</label>
+                        <input type="text" class="form-control" id="editPhone" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="editRole" class="form-label">Vai trò</label>
+                        <select class="form-select" id="editRole">
+                            <option value="Admin">Admin</option>
+                            <option value="User">User</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="editStatus" class="form-label">Trạng thái</label>
+                        <select class="form-select" id="editStatus">
+                            <option value="Hoạt động">Hoạt động</option>
+                            <option value="Không hoạt động">Không hoạt động</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                <button type="button" class="btn btn-primary" id="saveChanges">Lưu thay đổi</button>
             </div>
         </div>
-    </main>
-</body>
+    </div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const editButtons = document.querySelectorAll('.btn-warning');
+        const modal = new bootstrap.Modal(document.getElementById('editModal'));
+        const emailField = document.getElementById('editEmail');
+        const phoneField = document.getElementById('editPhone');
+        const roleField = document.getElementById('editRole');
+        const statusField = document.getElementById('editStatus');
 
+        editButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                // Lấy dữ liệu từ hàng tương ứng
+                const row = this.closest('tr');
+                const email = row.children[1].innerText;
+                const phone = row.children[2].innerText;
+                const role = row.children[3].innerText;
+                const status = row.children[4].innerText;
+
+                // Đổ dữ liệu vào modal
+                emailField.value = email;
+                phoneField.value = phone;
+                roleField.value = role;
+                statusField.value = status;
+
+                // Hiển thị modal
+                modal.show();
+            });
+        });
+
+        document.getElementById('saveChanges').addEventListener('click', function () {
+            // Lưu dữ liệu đã chỉnh sửa
+            const updatedEmail = emailField.value;
+            const updatedPhone = phoneField.value;
+            const updatedRole = roleField.value;
+            const updatedStatus = statusField.value;
+
+            // Xử lý cập nhật dữ liệu tại đây
+            console.log('Updated Data:', {
+                email: updatedEmail,
+                phone: updatedPhone,
+                role: updatedRole,
+                status: updatedStatus
+            });
+
+            // Đóng modal
+            modal.hide();
+        });
+    });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>

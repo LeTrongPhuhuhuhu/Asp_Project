@@ -14,15 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("6TL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b86bc549007ce688ddc8c4a75f054f0e0535934b")]
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b76c8aa545c9fbc1fd4f48d7ca69d5ca0f9e17e7")]
->>>>>>> 16ca0f0fdd6c46d050056c1422e34718706516fe
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+16ca0f0fdd6c46d050056c1422e34718706516fe")]
->>>>>>> Stashed changes
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+78107339648d9bf4f4d0e1ad7dbb5b1050776183")]
 [assembly: System.Reflection.AssemblyProductAttribute("6TL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("6TL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

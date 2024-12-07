@@ -1,20 +1,8 @@
 {
   "version": 2,
-<<<<<<< Updated upstream
-<<<<<<< HEAD
   "dgSpecHash": "cJNG4/ByFwk=",
   "success": true,
   "projectFilePath": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\6TL.csproj",
-=======
-  "dgSpecHash": "+QzAruW1OaI=",
-  "success": true,
-  "projectFilePath": "D:\\Đồ Án Web\\Asp_Project\\6TL\\6TL\\6TL.csproj",
->>>>>>> 16ca0f0fdd6c46d050056c1422e34718706516fe
-=======
-  "dgSpecHash": "cJNG4/ByFwk=",
-  "success": true,
-  "projectFilePath": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\6TL.csproj",
->>>>>>> Stashed changes
   "expectedPackageFiles": [],
   "logs": []
 }

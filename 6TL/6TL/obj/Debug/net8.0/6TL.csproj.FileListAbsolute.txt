@@ -219,37 +219,6 @@ D:\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\refint\6TL.dll
 D:\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.pdb
 D:\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.genruntimeconfig.cache
 D:\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\ref\6TL.dll
-D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\bin\Debug\net8.0\appsettings.Development.json
-D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\bin\Debug\net8.0\appsettings.json
-D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.staticwebassets.runtime.json
-D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.exe
-D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.deps.json
-D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.runtimeconfig.json
-D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.dll
-D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.pdb
-D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.GeneratedMSBuildEditorConfig.editorconfig
-D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.AssemblyInfoInputs.cache
-D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.AssemblyInfo.cs
-D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.csproj.CoreCompileInputs.cache
-D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.MvcApplicationPartsAssemblyInfo.cache
-D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.RazorAssemblyInfo.cache
-D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.RazorAssemblyInfo.cs
-D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.sourcelink.json
-D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets.build.json
-D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets.development.json
-D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets\msbuild.6TL.Microsoft.AspNetCore.StaticWebAssets.props
-D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets\msbuild.build.6TL.props
-D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.6TL.props
-D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.6TL.props
-D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets.pack.json
-D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
-D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\scopedcss\bundle\6TL.styles.css
-D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\scopedcss\projectbundle\6TL.bundle.scp.css
-D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.dll
-D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\refint\6TL.dll
-D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.pdb
-D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.genruntimeconfig.cache
-D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\ref\6TL.dll
 D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\appsettings.Development.json
 D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\appsettings.json
 D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.staticwebassets.runtime.json
@@ -312,3 +281,34 @@ D:\Đồ Án Web\Asp_Project\6TL\6TL\obj\Debug\net8.0\refint\6TL.dll
 D:\Đồ Án Web\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.pdb
 D:\Đồ Án Web\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.genruntimeconfig.cache
 D:\Đồ Án Web\Asp_Project\6TL\6TL\obj\Debug\net8.0\ref\6TL.dll
+D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\bin\Debug\net8.0\appsettings.Development.json
+D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\bin\Debug\net8.0\appsettings.json
+D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.staticwebassets.runtime.json
+D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.exe
+D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.deps.json
+D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.runtimeconfig.json
+D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.dll
+D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.pdb
+D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.GeneratedMSBuildEditorConfig.editorconfig
+D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.AssemblyInfoInputs.cache
+D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.AssemblyInfo.cs
+D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.csproj.CoreCompileInputs.cache
+D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.MvcApplicationPartsAssemblyInfo.cache
+D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.RazorAssemblyInfo.cache
+D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.RazorAssemblyInfo.cs
+D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.sourcelink.json
+D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets.build.json
+D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets.development.json
+D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets\msbuild.6TL.Microsoft.AspNetCore.StaticWebAssets.props
+D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets\msbuild.build.6TL.props
+D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.6TL.props
+D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.6TL.props
+D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets.pack.json
+D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\scopedcss\bundle\6TL.styles.css
+D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\scopedcss\projectbundle\6TL.bundle.scp.css
+D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.dll
+D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\refint\6TL.dll
+D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.pdb
+D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.genruntimeconfig.cache
+D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\ref\6TL.dll
