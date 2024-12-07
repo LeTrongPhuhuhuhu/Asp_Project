@@ -22,10 +22,6 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DoAnAsp/Asp_Project/6TL/6TL/Areas/Admin/Views/Home/QuanLyBlog.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxRdWFuTHlCbG9nLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/DoAnAsp/Asp_Project/6TL/6TL/Areas/Admin/Views/Home/QuanLyChiTietSanPham.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxRdWFuTHlDaGlUaWV0U2FuUGhhbS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -46,10 +42,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxTdWFTYW5QaGFtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DoAnAsp/Asp_Project/6TL/6TL/Areas/Admin/Views/Home/ThemBlog.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxUaGVtQmxvZy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/DoAnAsp/Asp_Project/6TL/6TL/Areas/Admin/Views/Home/ThemSanPham.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxUaGVtU2FuUGhhbS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -64,6 +56,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/DoAnAsp/Asp_Project/6TL/6TL/Areas/Admin/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnAsp/Asp_Project/6TL/6TL/Views/Home/Blog.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxCbG9nLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/DoAnAsp/Asp_Project/6TL/6TL/Views/Home/ChinhSach.cshtml]
@@ -108,10 +104,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/DoAnAsp/Asp_Project/6TL/6TL/Views/Home/TinTuc.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUaW5UdWMuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/DoAnAsp/Asp_Project/6TL/6TL/Views/Home/TrangBlog.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUcmFuZ0Jsb2cuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/DoAnAsp/Asp_Project/6TL/6TL/Views/Home/TrangThanhToan.cshtml]
