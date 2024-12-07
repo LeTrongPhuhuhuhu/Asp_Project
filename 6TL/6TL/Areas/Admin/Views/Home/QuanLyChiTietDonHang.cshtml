@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/css/admin/QuanLyChiTietDonHang.css" rel="stylesheet" />
+    <title>Chi Tiết Đơn Hàng</title>
+</head>
+<body>
+    <div class="container-qlctdh">
+        <div class="header-qlctdh">
+            <h1>Chi Tiết Đơn Hàng</h1>
+        </div>
+
+        <!-- Thông tin người nhận -->
+        <div class="section-qlctdh">
+            <div class="section-title-qlctdh">Thông Tin Người Nhận</div>
+            <ul class="info-list-qlctdh">
+                <li><strong>Tên khách hàng:</strong> Nguyễn Văn A</li>
+                <li><strong>Địa chỉ:</strong> 123 Đường ABC, Quận 1, TP.HCM</li>
+                <li><strong>Số điện thoại:</strong> 0123456789</li>
+                <li><strong>Email:</strong> nguyenvana@gmail.com</li>
+            </ul>
+        </div>
+
+        <!-- Chi tiết sản phẩm -->
+        <div class="section-qlctdh">
+            <div class="section-title-qlctdh">Chi Tiết Sản Phẩm</div>
+            <table class="table-qlctdh">
+                <thead>
+                    <tr>
+                        <th>Mã sản phẩm</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Số lượng</th>
+                        <th>Giá bán</th>
+                        <th>Thành tiền</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#123</td>
+                        <td>Ghế Sofa</td>
+                        <td>1</td>
+                        <td>1.500.000</td>
+                        <td>1.500.000</td>
+                    </tr>
+                    <tr>
+                        <td>#124</td>
+                        <td>Bàn Làm Việc</td>
+                        <td>1</td>
+                        <td>2.250.000</td>
+                        <td>2.250.000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Tổng quan đơn hàng -->
+        <div class="section-qlctdh">
+            <div class="section-title-qlctdh">Tổng Quan Đơn Hàng</div>
+            <ul class="info-list-qlctdh">
+                <li><strong>Mã đơn hàng:</strong> <span class="highlight-qlctdh">#ORD20241109</span></li>
+                <li><strong>Ngày đặt hàng:</strong> 09/11/2024</li>
+                <li><strong>Trạng thái:</strong> <span class="highlight-qlctdh">Đã giao</span></li>
+            </ul>
+        </div>
+
+        <!-- Tổng tiền và nút quay lại -->
+        <div class="summary-qlctdh">
+            <div><strong>Phí ship:</strong> 50.000 VND</div>
+            <div class="total-qlctdh"><strong>Tổng cộng:</strong> 3.800.000 VND</div>
+        </div>
+
+        <a href="https://localhost:7041/admin/Home/quanlyDonhang" class="button-back-qlctdh">Quay lại danh sách đơn hàng</a>
+    </div>
+</body>
+</html>

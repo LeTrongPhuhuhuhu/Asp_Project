@@ -44,7 +44,7 @@ namespace _6TL.Areas.Admin.Controllers
         {
             return View();
         }
-        public IActionResult QuanLyChiTietSanPham()
+        public IActionResult QuanLyChiTietDonHang()
         {
             return View();
         }

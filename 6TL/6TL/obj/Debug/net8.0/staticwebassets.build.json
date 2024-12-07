@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "urw2xhUtSJ5F4GBfYMW4kNhPW2GaPUCzeGN1UQoTxnE=",
+  "Hash": "0IPOTxeD9eLSd59OSCNwDy/JLES0ukmVfUlP59pHbxs=",
   "Source": "6TL",
   "BasePath": "_content/6TL",
   "Mode": "Default",
@@ -112,12 +112,12 @@
       "OriginalItemSpec": "wwwroot\\css\\admin\\QuanLyBlog.css"
     },
     {
-      "Identity": "D:\\Đồ Án Web\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\QuanLyChiTietSanPham.css",
+      "Identity": "D:\\Đồ Án Web\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\QuanLyChiTietDonHang.css",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Đồ Án Web\\Asp_Project\\6TL\\6TL\\wwwroot\\",
       "BasePath": "_content/6TL",
-      "RelativePath": "css/admin/QuanLyChiTietSanPham.css",
+      "RelativePath": "css/admin/QuanLyChiTietDonHang.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -128,7 +128,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\admin\\QuanLyChiTietSanPham.css"
+      "OriginalItemSpec": "wwwroot\\css\\admin\\QuanLyChiTietDonHang.css"
     },
     {
       "Identity": "D:\\Đồ Án Web\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\QuanLyDanhMuc.css",
