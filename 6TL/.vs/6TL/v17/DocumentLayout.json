@@ -231,8 +231,7 @@
               "ViewState": "AgIAAK8AAAAAAAAAAAAQwNgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-12-04T14:05:21.934Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -278,7 +277,7 @@
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\admin\\QuanLyChiTietDonHang.css",
               "ToolTip": "D:\\File Backup\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\QuanLyChiTietDonHang.css",
               "RelativeToolTip": "6TL\\wwwroot\\css\\admin\\QuanLyChiTietDonHang.css",
-              "ViewState": "AgIAAFIAAAAAAAAAAAAowH0AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAqwH0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2024-12-06T17:15:23.303Z",
               "EditorCaption": ""
@@ -293,8 +292,7 @@
               "RelativeToolTip": "6TL\\wwwroot\\css\\admin\\QuanLyDonHang.css",
               "ViewState": "AgIAAIUAAAAAAAAAAAAowLAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-12-07T06:19:27.511Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-07T06:19:27.511Z"
             },
             {
               "$type": "Document",
@@ -306,8 +304,7 @@
               "RelativeToolTip": "6TL\\Areas\\Admin\\Views\\Home\\QuanLyChiTietDonHang.cshtml",
               "ViewState": "AgIAACQAAAAAAAAAAAAQwE0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-04T14:17:57.242Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-04T14:17:57.242Z"
             },
             {
               "$type": "Document",
