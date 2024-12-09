@@ -9,139 +9,139 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = _6TL
 build_property.RootNamespace = _6TL
-build_property.ProjectDir = D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\
+build_property.ProjectDir = D:\Đồ Án Web\Asp_Project\6TL\6TL\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL
+build_property.MSBuildProjectDirectory = D:\Đồ Án Web\Asp_Project\6TL\6TL
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/ổ D/TK WEB ASPNET CORE/Đồ án ASP/Asp_Project/6TL/6TL/Areas/Admin/Views/Home/Index.cshtml]
+[D:/Đồ Án Web/Asp_Project/6TL/6TL/Areas/Admin/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ổ D/TK WEB ASPNET CORE/Đồ án ASP/Asp_Project/6TL/6TL/Areas/Admin/Views/Home/QuanLyAdmin.cshtml]
+[D:/Đồ Án Web/Asp_Project/6TL/6TL/Areas/Admin/Views/Home/QuanLyAdmin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxRdWFuTHlBZG1pbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ổ D/TK WEB ASPNET CORE/Đồ án ASP/Asp_Project/6TL/6TL/Areas/Admin/Views/Home/QuanLyBlog.cshtml]
+[D:/Đồ Án Web/Asp_Project/6TL/6TL/Areas/Admin/Views/Home/QuanLyBlog.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxRdWFuTHlCbG9nLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ổ D/TK WEB ASPNET CORE/Đồ án ASP/Asp_Project/6TL/6TL/Areas/Admin/Views/Home/QuanLyChiTietSanPham.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxRdWFuTHlDaGlUaWV0U2FuUGhhbS5jc2h0bWw=
+[D:/Đồ Án Web/Asp_Project/6TL/6TL/Areas/Admin/Views/Home/QuanLyChiTietDonHang.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxRdWFuTHlDaGlUaWV0RG9uSGFuZy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ổ D/TK WEB ASPNET CORE/Đồ án ASP/Asp_Project/6TL/6TL/Areas/Admin/Views/Home/QuanLyDanhMuc.cshtml]
+[D:/Đồ Án Web/Asp_Project/6TL/6TL/Areas/Admin/Views/Home/QuanLyDanhMuc.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxRdWFuTHlEYW5oTXVjLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ổ D/TK WEB ASPNET CORE/Đồ án ASP/Asp_Project/6TL/6TL/Areas/Admin/Views/Home/QuanLyDonHang.cshtml]
+[D:/Đồ Án Web/Asp_Project/6TL/6TL/Areas/Admin/Views/Home/QuanLyDonHang.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxRdWFuTHlEb25IYW5nLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ổ D/TK WEB ASPNET CORE/Đồ án ASP/Asp_Project/6TL/6TL/Areas/Admin/Views/Home/QuanLySanPham.cshtml]
+[D:/Đồ Án Web/Asp_Project/6TL/6TL/Areas/Admin/Views/Home/QuanLySanPham.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxRdWFuTHlTYW5QaGFtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ổ D/TK WEB ASPNET CORE/Đồ án ASP/Asp_Project/6TL/6TL/Areas/Admin/Views/Home/QuanLyUser.cshtml]
+[D:/Đồ Án Web/Asp_Project/6TL/6TL/Areas/Admin/Views/Home/QuanLyUser.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxRdWFuTHlVc2VyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ổ D/TK WEB ASPNET CORE/Đồ án ASP/Asp_Project/6TL/6TL/Areas/Admin/Views/Home/SuaSanPham.cshtml]
+[D:/Đồ Án Web/Asp_Project/6TL/6TL/Areas/Admin/Views/Home/SuaSanPham.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxTdWFTYW5QaGFtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ổ D/TK WEB ASPNET CORE/Đồ án ASP/Asp_Project/6TL/6TL/Areas/Admin/Views/Home/ThemBlog.cshtml]
+[D:/Đồ Án Web/Asp_Project/6TL/6TL/Areas/Admin/Views/Home/ThemBlog.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxUaGVtQmxvZy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ổ D/TK WEB ASPNET CORE/Đồ án ASP/Asp_Project/6TL/6TL/Areas/Admin/Views/Home/ThemSanPham.cshtml]
+[D:/Đồ Án Web/Asp_Project/6TL/6TL/Areas/Admin/Views/Home/ThemSanPham.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxUaGVtU2FuUGhhbS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ổ D/TK WEB ASPNET CORE/Đồ án ASP/Asp_Project/6TL/6TL/Areas/Admin/Views/Shared/_Layout.cshtml]
+[D:/Đồ Án Web/Asp_Project/6TL/6TL/Areas/Admin/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ổ D/TK WEB ASPNET CORE/Đồ án ASP/Asp_Project/6TL/6TL/Areas/Admin/Views/_ViewImports.cshtml]
+[D:/Đồ Án Web/Asp_Project/6TL/6TL/Areas/Admin/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ổ D/TK WEB ASPNET CORE/Đồ án ASP/Asp_Project/6TL/6TL/Areas/Admin/Views/_ViewStart.cshtml]
+[D:/Đồ Án Web/Asp_Project/6TL/6TL/Areas/Admin/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ổ D/TK WEB ASPNET CORE/Đồ án ASP/Asp_Project/6TL/6TL/Views/Home/ChinhSach.cshtml]
+[D:/Đồ Án Web/Asp_Project/6TL/6TL/Views/Home/ChinhSach.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDaGluaFNhY2guY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ổ D/TK WEB ASPNET CORE/Đồ án ASP/Asp_Project/6TL/6TL/Views/Home/ChiTietSanPham.cshtml]
+[D:/Đồ Án Web/Asp_Project/6TL/6TL/Views/Home/ChiTietSanPham.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDaGlUaWV0U2FuUGhhbS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ổ D/TK WEB ASPNET CORE/Đồ án ASP/Asp_Project/6TL/6TL/Views/Home/DangKy.cshtml]
+[D:/Đồ Án Web/Asp_Project/6TL/6TL/Views/Home/DangKy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEYW5nS3kuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ổ D/TK WEB ASPNET CORE/Đồ án ASP/Asp_Project/6TL/6TL/Views/Home/DangNhap.cshtml]
+[D:/Đồ Án Web/Asp_Project/6TL/6TL/Views/Home/DangNhap.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEYW5nTmhhcC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ổ D/TK WEB ASPNET CORE/Đồ án ASP/Asp_Project/6TL/6TL/Views/Home/DanhMucSanPham.cshtml]
+[D:/Đồ Án Web/Asp_Project/6TL/6TL/Views/Home/DanhMucSanPham.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEYW5oTXVjU2FuUGhhbS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ổ D/TK WEB ASPNET CORE/Đồ án ASP/Asp_Project/6TL/6TL/Views/Home/GioiThieu.cshtml]
+[D:/Đồ Án Web/Asp_Project/6TL/6TL/Views/Home/GioiThieu.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxHaW9pVGhpZXUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ổ D/TK WEB ASPNET CORE/Đồ án ASP/Asp_Project/6TL/6TL/Views/Home/Index.cshtml]
+[D:/Đồ Án Web/Asp_Project/6TL/6TL/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ổ D/TK WEB ASPNET CORE/Đồ án ASP/Asp_Project/6TL/6TL/Views/Home/LichSuMuaHang.cshtml]
+[D:/Đồ Án Web/Asp_Project/6TL/6TL/Views/Home/LichSuMuaHang.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMaWNoU3VNdWFIYW5nLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ổ D/TK WEB ASPNET CORE/Đồ án ASP/Asp_Project/6TL/6TL/Views/Home/SanPham.cshtml]
+[D:/Đồ Án Web/Asp_Project/6TL/6TL/Views/Home/SanPham.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTYW5QaGFtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ổ D/TK WEB ASPNET CORE/Đồ án ASP/Asp_Project/6TL/6TL/Views/Home/SanPhamYeuThich.cshtml]
+[D:/Đồ Án Web/Asp_Project/6TL/6TL/Views/Home/SanPhamYeuThich.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTYW5QaGFtWWV1VGhpY2guY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ổ D/TK WEB ASPNET CORE/Đồ án ASP/Asp_Project/6TL/6TL/Views/Home/TinTuc.cshtml]
+[D:/Đồ Án Web/Asp_Project/6TL/6TL/Views/Home/TinTuc.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUaW5UdWMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ổ D/TK WEB ASPNET CORE/Đồ án ASP/Asp_Project/6TL/6TL/Views/Home/TrangThanhToan.cshtml]
+[D:/Đồ Án Web/Asp_Project/6TL/6TL/Views/Home/TrangThanhToan.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUcmFuZ1RoYW5oVG9hbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ổ D/TK WEB ASPNET CORE/Đồ án ASP/Asp_Project/6TL/6TL/Views/Home/ViewProfile.cshtml]
+[D:/Đồ Án Web/Asp_Project/6TL/6TL/Views/Home/ViewProfile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxWaWV3UHJvZmlsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ổ D/TK WEB ASPNET CORE/Đồ án ASP/Asp_Project/6TL/6TL/Views/Shared/Error.cshtml]
+[D:/Đồ Án Web/Asp_Project/6TL/6TL/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ổ D/TK WEB ASPNET CORE/Đồ án ASP/Asp_Project/6TL/6TL/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/Đồ Án Web/Asp_Project/6TL/6TL/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ổ D/TK WEB ASPNET CORE/Đồ án ASP/Asp_Project/6TL/6TL/Views/_ViewImports.cshtml]
+[D:/Đồ Án Web/Asp_Project/6TL/6TL/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ổ D/TK WEB ASPNET CORE/Đồ án ASP/Asp_Project/6TL/6TL/Views/_ViewStart.cshtml]
+[D:/Đồ Án Web/Asp_Project/6TL/6TL/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ổ D/TK WEB ASPNET CORE/Đồ án ASP/Asp_Project/6TL/6TL/Views/Shared/_Layout.cshtml]
+[D:/Đồ Án Web/Asp_Project/6TL/6TL/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-404zffvn0n
