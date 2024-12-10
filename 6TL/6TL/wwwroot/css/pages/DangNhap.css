@@ -1,120 +1,207 @@
 ﻿* {
     font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+body {
+    background-color: #f4f6f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
 .login-container {
     display: flex;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
     overflow: hidden;
-    width: 800px;
+    width: 900px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .login-box {
-    padding: 30px;
+    padding: 40px 30px;
     width: 50%;
 }
 
 h2 {
-    margin-bottom: 20px;
-    color: #333;
+    margin-bottom: 25px;
+    color: #333333;
     text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
 }
 
 .social-login {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 15px;
+    margin-bottom: 25px;
 }
 
 .google-login, .facebook-login {
-    padding: 10px 20px;
+    padding: 12px 25px;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
 }
 
 .google-login {
     background-color: #4285f4;
-    color: #fff;
+    color: #ffffff;
+    box-shadow: 0 4px 8px rgba(66, 133, 244, 0.3);
 }
+
+    .google-login:hover {
+        background-color: #357ae8;
+        box-shadow: 0 6px 12px rgba(66, 133, 244, 0.5);
+    }
 
 .facebook-login {
     background-color: #3b5998;
-    color: #fff;
+    color: #ffffff;
+    box-shadow: 0 4px 8px rgba(59, 89, 152, 0.3);
 }
+
+    .facebook-login:hover {
+        background-color: #344e86;
+        box-shadow: 0 6px 12px rgba(59, 89, 152, 0.5);
+    }
 
 p {
     text-align: center;
     margin: 20px 0;
-    color: #555;
+    color: #777777;
+    font-size: 14px;
 }
 
 .input-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
     .input-group label {
         display: block;
-        margin-bottom: 5px;
+        margin-bottom: 6px;
         font-size: 14px;
-        color: #333;
+        color: #555555;
+        font-weight: 500;
     }
 
     .input-group input {
         width: 100%;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
+        padding: 12px;
+        border: 1px solid #dddddd;
+        border-radius: 8px;
         font-size: 14px;
+        transition: all 0.3s ease;
     }
+
+        .input-group input:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+            outline: none;
+        }
 
 .options {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     font-size: 14px;
+    color: #555555;
 }
 
     .options a {
         color: #007bff;
         text-decoration: none;
+        transition: color 0.3s ease;
     }
 
         .options a:hover {
+            color: #0056b3;
             text-decoration: underline;
         }
 
 .login-btn, .register-btn {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     font-size: 16px;
+    font-weight: 600;
     cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
 }
 
 .login-btn {
     background-color: #28a745;
-    color: #fff;
-    margin-bottom: 10px;
+    color: #ffffff;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(40, 167, 69, 0.3);
 }
+
+    .login-btn:hover {
+        background-color: #218838;
+        box-shadow: 0 6px 12px rgba(40, 167, 69, 0.5);
+    }
 
 .register-btn {
     background-color: #6c757d;
-    color: #fff;
+    color: #ffffff;
+    box-shadow: 0 4px 8px rgba(108, 117, 125, 0.3);
 }
+
+    .register-btn:hover {
+        background-color: #5a6268;
+        box-shadow: 0 6px 12px rgba(108, 117, 125, 0.5);
+    }
 
 .logo {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 50%;
-    background-color: #f8f9fa;
+    background: linear-gradient(135deg, #007bff, #6610f2);
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
 }
 
     .logo img {
-        max-width: 100%;
+        max-width: 80%;
         height: auto;
+        border-radius: 8px;
+        animation: float 2s infinite ease-in-out;
     }
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}

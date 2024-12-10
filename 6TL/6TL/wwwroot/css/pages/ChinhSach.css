@@ -1,52 +1,36 @@
 ﻿* {
     font-family: 'Montserrat', sans-serif;
 }
-/* Reset CSS */
-body, h1, h2, h3, p, ul, li, input, button {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-/* Body styles */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f9f9f9;
-    padding: 0;
-}
+
+
 /* Header Section */
 .policy-header {
     position: relative;
-    width: 100vw; /* Chiều rộng bằng toàn bộ viewport */
-    height: 100vh; /* Chiều cao bằng toàn bộ viewport */
-    overflow: hidden;
+    display: flex;
+    width: 100vw;
+    height: 455px;
 }
 
     .policy-header img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100vw; /* Đảm bảo ảnh chiếm toàn bộ chiều rộng màn hình */
-        height: 100vh; /* Đảm bảo ảnh tràn toàn bộ chiều cao màn hình */
-        object-fit: cover; /* Giữ tỉ lệ ảnh và cắt bớt phần thừa */
-        object-position: center; /* Căn giữa ảnh */
+        width: 100vw;
+        height: 100%;
+        object-fit: cover;
     }
 
     .policy-header .header-text {
         position: absolute;
-        bottom: 20px; /* Chữ nằm gần góc dưới */
-        left: 20px; /* Chữ nằm gần góc trái */
-        color: white;
-        background-color: rgba(0, 0, 0, 0.5);
-        padding: 10px 20px;
-        border-radius: 5px;
-        font-size: 1.2rem;
+        bottom: 20px;
+        left: 20px;
+        color: #f8f9fa;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        font-size: 60px;
+        font-weight: bold;
+        margin: 0;
     }
 
     .policy-header h1 {
-        font-size: 2rem; /* Giảm kích thước chữ nếu cần */
+        font-size: 60px; /* Giảm kích thước chữ nếu cần */
         font-weight: bold;
     }
 
@@ -58,7 +42,7 @@ body {
     padding: 20px;
     max-width: 800px;
     margin: 30px auto;
-    text-align: center;
+    text-align: left;
 }
 
     .company-info h2 {
