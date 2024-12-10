@@ -9,6 +9,7 @@ wwwroot\css\admin\SuaSanPham.css
 wwwroot\css\admin\ThemSanPham.css
 wwwroot\css\pages\ChinhSach.css
 wwwroot\css\pages\ChiTietSanPham.css
+wwwroot\css\pages\ChiTietTinTuc.css
 wwwroot\css\pages\DangKy.css
 wwwroot\css\pages\DangNhap.css
 wwwroot\css\pages\DanhMucSanPham.css

@@ -45,6 +45,10 @@
       "PackagePath": "staticwebassets\\css\\pages\\ChiTietSanPham.css"
     },
     {
+      "Id": "E:\\Asp_Project\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\ChiTietTinTuc.css",
+      "PackagePath": "staticwebassets\\css\\pages\\ChiTietTinTuc.css"
+    },
+    {
       "Id": "E:\\Asp_Project\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\ChinhSach.css",
       "PackagePath": "staticwebassets\\css\\pages\\ChinhSach.css"
     },
