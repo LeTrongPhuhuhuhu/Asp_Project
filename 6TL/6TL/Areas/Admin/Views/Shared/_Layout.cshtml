@@ -3,180 +3,103 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - 6TL</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/css/style.css">
-    <link href="~/css/style.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>@ViewData["Title"] - Admin Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link href="~/css/admin.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
-    <header class="navbar">
-        <!-- Logo -->
-        <div class="navbar-logo">
-            <a asp-controller="Home" asp-action="Index"><img src="~/img/black and white professional minimalistic real estate logo - copy.png" /></a>
-        </div>
-
-        <!-- Menu -->
-        <div class="navbar-menu">
-            <ul>
-                <li><a asp-controller="Home" asp-action="GioiThieu">Giới thiệu</a></li>
-                <li><a asp-controller="Home" asp-action="DanhMucSanPham">Sản Phẩm</a></li>
-                <li><a asp-controller="Home" asp-action="TinTuc">Tin Tức</a></li>
-                <li><a asp-controller="Home" asp-action="ChinhSach">Chính Sách</a></li>
-                <li><a asp-controller="Home" asp-action="LienHe">Liên Hệ</a></li>
-            </ul>
-            <!-- Thanh tìm kiếm -->
-            <div class="search-bar">
-                <input type="text" placeholder="Tìm kiếm...">
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>6TL De Decor</h2>
             </div>
-            <i class="icon fa fa-shopping-cart"></i> <!-- Icon giỏ hàng -->
-        </div>
+            <ul class="menu">
+                <li>
+                    <a href="@Url.Action("Index", "Home")" class="active">
+                        <i class="fas fa-tachometer-alt"></i> Dashboard
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)">
+                        <i class="fas fa-shopping-cart"></i> Orders
+                        <i class="fas fa-chevron-down arrow"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">All Orders</a></li>
+                        <li><a href="#">Pending Orders</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)">
+                        <i class="fas fa-box-open"></i> Products
+                        <i class="fas fa-chevron-down arrow"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">All Products</a></li>
+                        <li><a href="#">Add Product</a></li>
+                    </ul>
+                </li>
+                <li><a href="@Url.Action("Reports", "Admin")"><i class="fas fa-chart-bar"></i> Sales Report</a></li>
+                <li><a href="@Url.Action("Messages", "Admin")"><i class="fas fa-envelope"></i> Messages</a></li>
+                <li><a href="@Url.Action("Settings", "Admin")"><i class="fas fa-cog"></i> Settings</a></li>
+                <li><a href="@Url.Action("Logout", "Account")"><i class="fas fa-sign-out-alt"></i> Sign Out</a></li>
+            </ul>
+        </aside>
 
-        <!-- Nút Đăng ký và Đăng nhập -->
-        <button type="button" class="auth-button" data-bs-toggle="modal" data-bs-target="#loginModal">
-            Đăng Nhập
-        </button>
-    </header>
-    <!-- Modal -->
-    <div class="modal fade" id="loginModal" aria-labelledby="loginModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <!-- Đảm bảo popup nằm giữa -->
-            <div class="modal-content text-center">
-                <!-- Nút đóng popup -->
-                <button type="button" class="modal-close-btn" data-bs-dismiss="modal" aria-label="Close">&times;</button>
-                <h2 class="modal-title" id="loginModalLabel">Đăng Nhập</h2>
-                <div class="d-flex">
-                    <form method="post" class="custom-form">
-                        <div class="social-login">
-                            <button type="button" class="btn btn-lg google-login ">
-                                <i class="fab fa-google"></i> Google
-                            </button>
-                            <button type="button" class="btn btn-lg facebook-login">
-                                <i class="fab fa-facebook-f"></i> Facebook
-                            </button>
-                        </div>
-                        <p>Hoặc đăng nhập với</p>
-                        <div class="input-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" placeholder="Email">
-                        </div>
-                        <div class="input-group">
-                            <label for="password">Password</label>
-                            <input type="password" id="password" placeholder="Password">
-                        </div>
-                        <div class="options">
-                            <label>
-                                <input type="checkbox"> Nhớ Mật Khẩu
-                            </label>
-                            <a href="#">Quên mật khẩu?</a>
-                        </div>
-                        <button type="submit" class="login-btn">Đăng Nhập</button>
-                        <a asp-controller="Home" asp-action="DangKy" class="text-decoration-none">Đăng Ký</a>
-                    </form>
-                    <div class="logo">
-                        <img src="~/img/black and white professional minimalistic real estate logo (1).png" />
+        <!-- Main Content -->
+        <main class="main-content">
+            <header>
+                <div class="header-left">
+                    <h1>@ViewData["Title"]</h1>
+                </div>
+                <div class="header-center">
+                    <div class="search-bar-container">
+                        <input type="text" class="search-bar" placeholder="Search..." />
+                        <i class="fas fa-search search-icon"></i> <!-- Icon tìm kiếm -->
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
+                <div class="header-right">
+                    <!-- Nút chuyển ngôn ngữ -->
+                    <div class="language-switch">
+                        <i class="fas fa-globe"></i> <!-- Biểu tượng trái đất -->
+                        <span>English</span>
+                    </div>
 
 
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
+                    <i class="fas fa-bell notification-icon"></i>
+                    <div class="user-info">
+                        <img src="https://cdn-icons-png.flaticon.com/128/1077/1077114.png" alt="User Avatar" class="user-avatar" />
+                        <span class="user-name">Xin Chào Phu!</span>
+                    </div>
+                </div>
+            </header>
+            <section>
+                @RenderBody()
+            </section>
         </main>
     </div>
-    <!-- Icon Chat -->
-    <div id="chat-icon" class="chat-icon">
-        <i class="fa fa-comments"></i>
-    </div>
 
-    <!-- Khung Chat -->
-    <div id="chat-box" class="chat-box hidden">
-        <div class="chat-header">
-            <span>Hỗ trợ khách hàng</span>
-            <i id="close-chat" class="fa fa-times close-icon"></i>
-        </div>
-        <div class="chat-content">
-            <p>Xin chào! Tôi có thể giúp gì cho bạn?</p>
-            <!-- Chat messages sẽ thêm ở đây -->
-        </div>
-        <div class="chat-input">
-            <input type="text" placeholder="Nhập tin nhắn..." id="chat-message" />
-            <button id="send-chat"><i class="fa fa-paper-plane"></i></button>
-        </div>
-    </div>
-
-    <footer class="footer text-muted">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <img src="~/img/logo_with_dark_background.png" />
-                    <p>Cửa hàng nội thất số 1 Việt Nam</p>
-                    <p><strong>Hỗ trợ khách hàng:</strong> 1900 6750</p>
-                    <p>Địa chỉ: 72 Huỳnh Thúc Kháng, Ward 15, District 1, Ho Chi Minh City</p>
-                    <p>Email: 0306221380@caothang.edu.vn</p>
-                    <div class="social-icons">
-                        <i class="fab fa-facebook-square"></i>
-                        <i class="fab fa-twitter"></i>
-                        <i class="fab fa-youtube"></i>
-                        <i class="fab fa-instagram"></i>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <h5>Hướng dẫn mua hàng</h5>
-                    <ul>
-                        <li><a href="#">Trang chủ</a></li>
-                        <li><a href="#">Giới thiệu</a></li>
-                        <li><a href="#">Danh mục</a></li>
-                        <li><a href="#">Tin tức</a></li>
-                        <li><a href="#">Liên hệ</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h5>Hỗ trợ khách hàng</h5>
-                    <ul>
-                        <li><a href="#">Trang chủ</a></li>
-                        <li><a href="#">Giới thiệu</a></li>
-                        <li><a href="#">Danh mục</a></li>
-                        <li><a href="#">Tin tức</a></li>
-                        <li><a href="#">Liên hệ</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
-                document.addEventListener("DOMContentLoaded", function () {
-            const chatIcon = document.getElementById("chat-icon");
-            const chatBox = document.getElementById("chat-box");
-            const closeChat = document.getElementById("close-chat");
-
-            // Hiển thị hoặc ẩn khung chat khi nhấn icon
-            chatIcon.addEventListener("click", () => {
-                chatBox.classList.toggle("hidden");
+        $(document).ready(function () {
+            $(".dropdown > a").click(function () {
+                $(this).next(".dropdown-menu").slideToggle(200);
+                $(this).find(".arrow").toggleClass("rotate");
             });
 
-            // Đóng khung chat
-            closeChat.addEventListener("click", () => {
-                chatBox.classList.add("hidden");
+            // Thêm sự kiện cho nút chuyển ngôn ngữ
+            document.querySelector('.language-switch').addEventListener('click', function () {
+                const langText = this.querySelector('span');
+                if (langText.textContent === 'English') {
+                    langText.textContent = 'Tiếng Việt';
+                } else {
+                    langText.textContent = 'English';
+                }
             });
         });
-
     </script>
-    @await RenderSectionAsync("Scripts", required: false)
+
 </body>
 </html>

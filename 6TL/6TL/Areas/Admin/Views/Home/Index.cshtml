@@ -1,71 +1,242 @@
-﻿@{
-    Layout = "_Layout"; // Thêm Layout vào trang
-}
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Quản lý Cửa hàng Nội thất</title>
+    <link href="~/css/admin/dashboard.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="dashboard">
+        <h1>Chỉ số Kiểm soát Tài chính Quan trọng</h1>
+        <div class="last-updated">Cập nhật lần cuối: 12/7/2022</div>
 
-<link href="~/css/admin/dashboard.css" rel="stylesheet" />
-<div class="dashboard-container">
-    <!-- Hộp đầu tiên: Tổng doanh thu -->
-    <div class="box total-revenue">
-        <h4>Total Revenue ($)</h4>
-        <h2>$24,165</h2>
-        <p>24 Hours</p>
+        <div class="charts-row">
+            <!-- Kế hoạch Doanh thu và Lợi nhuận ròng -->
+            <div class="chart">
+                <h3>Kế hoạch Doanh thu và Lợi nhuận ròng (VND)</h3>
+                <canvas id="turnover-chart"></canvas>
+            </div>
+
+            <!-- Dòng tiền và Tài sản lưu động trong ba năm tới -->
+            <div class="chart">
+                <h3>Dòng tiền và Tài sản lưu động trong ba năm tới (VND)</h3>
+                <canvas id="cashflow-chart"></canvas>
+            </div>
+
+            <!-- Cơ cấu Chi phí -->
+            <div class="chart">
+                <h3>Cơ cấu Chi phí (VND)</h3>
+                <canvas id="cost-structure-chart"></canvas>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <h3>Chỉ số Tài chính</h3>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Năm</th>
+                        <th>Ngưỡng Lợi nhuận (VND)</th>
+                        <th>Nợ/Vốn Cổ phần</th>
+                        <th>Trạng thái</th>
+                        <th>Lưu chuyển</th>
+                        <th>Hành động</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2021</td>
+                        <td>0</td>
+                        <td>-344,300</td>
+                        <td><span class="status-active">↑</span> Đang hoạt động</td>
+                        <td>-1,828,900</td>
+                        <td><button onclick="confirmUpdate(this)">Cập nhật</button></td>
+                    </tr>
+                    <tr>
+                        <td>2022</td>
+                        <td>0</td>
+                        <td>1,600</td>
+                        <td><span class="status-inactive">↓</span> Không hoạt động</td>
+                        <td>0</td>
+                        <td><button onclick="confirmUpdate(this)">Cập nhật</button></td>
+                    </tr>
+                    <!-- Các hàng dữ liệu khác có thể thêm vào đây -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="statistics-row">
+            <div class="statistics-item">
+                <h3>Thống kê Lượt Mua</h3>
+                <canvas id="purchase-stats-chart"></canvas>
+                <p>Số lượt mua: 150</p>
+                <p>Doanh thu từ lượt mua: 2,000,000 VND</p>
+            </div>
+            <div class="statistics-item">
+                <h3>Sản phẩm được Mua Nhiều Nhất</h3>
+                <canvas id="top-products-chart"></canvas>
+                <p>Sản phẩm A: 30 lượt</p>
+                <p>Sản phẩm B: 25 lượt</p>
+                <p>Sản phẩm C: 20 lượt</p>
+            </div>
+            <div class="statistics-item">
+                <h3>Đánh Giá Các Sản Phẩm</h3>
+                <ul id="product-reviews">
+                    <li>Sản phẩm A: 4.5/5 (200 đánh giá)</li>
+                    <li>Sản phẩm B: 4.0/5 (150 đánh giá)</li>
+                    <li>Sản phẩm C: 3.8/5 (180 đánh giá)</li>
+                </ul>
+            </div>
+        </div>
     </div>
 
-    <!-- Hộp: Biểu đồ tròn -->
-    <div class="box category-breakup">
-        <h4>Category Wise Breakup</h4>
-        <div class="chart donut-chart"></div>
-    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var ctxTurnover = document.getElementById('turnover-chart').getContext('2d');
+            var ctxCashflow = document.getElementById('cashflow-chart').getContext('2d');
+            var ctxCostStructure = document.getElementById('cost-structure-chart').getContext('2d');
+            var ctxPurchaseStats = document.getElementById('purchase-stats-chart').getContext('2d');
+            var ctxTopProducts = document.getElementById('top-products-chart').getContext('2d');
 
-    <!-- Hộp: Biểu đồ cột -->
-    <div class="box sku-sales">
-        <h4>SKU Sales by Month</h4>
-        <div class="chart bar-chart"></div>
-    </div>
+            var turnoverChart = new Chart(ctxTurnover, {
+                type: 'bar',
+                data: {
+                    labels: ['2018', '2019', '2020', '2021', '2022'],
+                    datasets: [
+                        {
+                            label: 'Doanh thu',
+                            data: [2000000, 4000000, 10000000, 8000000, 5000000],
+                            backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                        },
+                        {
+                            label: 'EBITDA',
+                            data: [1000000, 3000000, 7000000, 6000000, 4000000],
+                            backgroundColor: 'rgba(75, 192, 192, 0.6)',
+                        },
+                        {
+                            label: 'Lợi nhuận ròng',
+                            data: [500000, 1000000, 4000000, 3000000, 2000000],
+                            backgroundColor: 'rgba(255, 99, 132, 0.6)',
+                        }
+                    ]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
 
-    <!-- Hộp: Social Media -->
-    <div class="box social-media">
-        <h4>Social Media</h4>
-        <p>Facebook: 5.68K | Twitter: 3.84K</p>
-    </div>
+            var cashflowChart = new Chart(ctxCashflow, {
+                type: 'line',
+                data: {
+                    labels: ['Tháng 7 \'22', 'Tháng 1 \'23', 'Tháng 7 \'23', 'Tháng 1 \'24', 'Tháng 7 \'24'],
+                    datasets: [
+                        {
+                            label: 'Yêu cầu Tài sản lưu động',
+                            data: [200000, 300000, 150000, 500000, 200000],
+                            backgroundColor: 'rgba(75, 192, 192, 0.4)',
+                            borderColor: 'rgba(75, 192, 192, 1)',
+                        },
+                        {
+                            label: 'Dự báo Dòng tiền',
+                            data: [100000, 400000, 300000, 700000, 500000],
+                            backgroundColor: 'rgba(153, 102, 255, 0.4)',
+                            borderColor: 'rgba(153, 102, 255, 1)',
+                        }
+                    ]
+                },
+                options: {
+                    scales: {
+                        x: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
 
-    <!-- Hộp: Top Orders by Country -->
-    <div class="box top-orders">
-        <h4>Top Orders by Country</h4>
-        <ul>
-            <li>USA: 14,785</li>
-            <li>UK: 10,486</li>
-            <!-- Thêm các quốc gia khác -->
-        </ul>
-    </div>
+            var costStructureChart = new Chart(ctxCostStructure, {
+                type: 'bar',
+                data: {
+                    labels: ['2018', '2019', '2020', '2021', '2022'],
+                    datasets: [
+                        {
+                            label: 'Chi phí tài chính (VND)',
+                            data: [1000000, 2000000, 1500000, 1000000, 2500000],
+                            backgroundColor: 'rgba(255, 99, 132, 0.6)',
+                        },
+                        {
+                            label: 'Chi phí hàng hóa (VND)',
+                            data: [2000000, 3000000, 3500000, 2500000, 3000000],
+                            backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                        },
+                        {
+                            label: 'Outsourcing (VND)',
+                            data: [1500000, 2500000, 2000000, 3000000, 1500000],
+                            backgroundColor: 'rgba(75, 192, 192, 0.6)',
+                        },
+                        {
+                            label: 'Chi phí khác (VND)',
+                            data: [500000, 1500000, 1000000, 2000000, 1000000],
+                            backgroundColor: 'rgba(153, 102, 255, 0.6)',
+                        }
+                    ]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
 
-    <!-- Hộp: Tổng số người dùng -->
-    <div class="box total-users">
-        <h4>Total Users</h4>
-        <h2>432,168</h2>
-        <p>24 Hours</p>
-    </div>
+            var purchaseStatsChart = new Chart(ctxPurchaseStats, {
+                type: 'bar',
+                data: {
+                    labels: ['Sản phẩm A', 'Sản phẩm B', 'Sản phẩm C'],
+                    datasets: [
+                        {
+                            label: 'Số lượt mua',
+                            data: [30, 25, 20],
+                            backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                        }
+                    ]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
 
-    <!-- Hộp: Tin tức -->
-    <div class="box news">
-        <h4>Latest E-commerce News</h4>
-        <p>New Payment Gateway Integration</p>
-    </div>
-
-    <!-- Hộp: Biểu đồ đường -->
-    <div class="box line-chart">
-        <h4>Revenue Growth</h4>
-        <div class="chart line-chart-graph"></div>
-    </div>
-
-    <!-- Hộp: Orders by Status -->
-    <div class="box orders-status">
-        <h4>Orders by Status</h4>
-        <ul>
-            <li>Awaiting</li>
-            <li>Confirmed</li>
-            <!-- Thêm trạng thái -->
-        </ul>
-    </div>
-</div>
-
+            var topProductsChart = new Chart(ctxTopProducts, {
+                type: 'bar',
+                data: {
+                    labels: ['Sản phẩm A', 'Sản phẩm B', 'Sản phẩm C'],
+                    datasets: [
+                        {
+                            label: 'Lượt mua',
+                            data: [30, 25, 20],
+                            backgroundColor: 'rgba(153, 102, 255, 0.6)',
+                        }
+                    ]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
