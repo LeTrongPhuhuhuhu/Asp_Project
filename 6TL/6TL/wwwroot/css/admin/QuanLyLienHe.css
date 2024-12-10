@@ -1,0 +1,260 @@
+﻿/* Định dạng font chữ */
+* {
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ========== Container Chính ========== */
+.container_qllh {
+    width: 90%; /* Chiều rộng khung */
+    max-width: 1200px; /* Giới hạn chiều rộng */
+    margin: 40px auto; /* Căn giữa và tạo khoảng cách */
+    padding: 30px; /* Khoảng cách bên trong */
+    background-color: #ffffff; /* Nền trắng */
+    border-radius: 15px; /* Bo góc mềm mại */
+    border: 1px solid #ddd; /* Viền nhẹ */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Đổ bóng */
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Khoảng cách giữa các phần tử con */
+}
+
+h1_qllh {
+    font-size: 28px; /* Kích thước chữ */
+    font-weight: bold;
+    color: #777; /* Màu chữ xám */
+    text-align: center; /* Canh giữa tiêu đề */
+    margin-bottom: 20px; /* Khoảng cách dưới */
+    position: relative;
+    border-bottom: 2px solid #ddd; /* Viền dưới màu xám nhẹ */
+}
+
+h1_ql:after {
+    font-size: 28px; /* Kích thước chữ */
+    font-weight: bold;
+    color: #777; /* Màu chữ xám */
+    text-align: center; /* Canh giữa tiêu đề */
+    margin-bottom: 20px; /* Khoảng cách dưới */
+    position: relative;
+    border-bottom: 2px solid #ddd; /* Viền dưới màu xám nhẹ */
+}
+
+/* ========== Thanh Tìm Kiếm ========== */
+.search-bar_qllh {
+    display: flex;
+    justify-content: flex-start; /* Điều chỉnh căn trái */
+    align-items: center;
+    gap: 10px; /* Khoảng cách giữa input và button */
+    margin-bottom: 20px;
+}
+
+    .search-bar_qllh input {
+        padding: 12px;
+        font-size: 16px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        width: 70%;
+    }
+
+    .search-bar_qllh button {
+        padding: 10px 20px;
+        background-color: #3498db;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+        .search-bar_qllh button:hover {
+            background-color: #2980b9;
+        }
+
+/* ========== Bảng Dữ Liệu ========== */
+.contact-table_qllh {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+    .contact-table_qllh th,
+    .contact-table_qllh td {
+        padding: 14px 20px;
+        text-align: center;
+        border: 1px solid #e0e0e0;
+        font-size: 16px;
+    }
+
+    .contact-table_qllh th {
+        background-color: #7f8c8d;
+        color: white;
+        font-weight: 600;
+    }
+
+    .contact-table_qllh tr:hover {
+        background-color: #ecf0f1;
+    }
+
+    .contact-table_qllh td {
+        font-size: 16px;
+    }
+
+/* Nút Xem */
+.view-btn_qllh {
+    padding: 8px 16px;
+    background-color: #28a745; /* Màu xanh lá cây */
+    color: white;
+    border: 2px solid #16a085; /* Viền nút màu xanh lá cây */
+    border-radius: 30px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+    .view-btn_qllh:hover {
+        background-color: #1abc9c;
+    }
+
+/* ========== Popup ========== */
+/* Popup container */
+.popup_qllh {
+    display: flex; /* Sử dụng flexbox để căn giữa */
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Làm nền mờ */
+    z-index: 1000;
+    animation: popup-fade-in 0.3s ease-in-out; /* Thêm hiệu ứng xuất hiện */
+}
+
+/* Popup nội dung */
+.popup-content_qllh {
+    background: white;
+    padding: 30px;
+    border-radius: 12px; /* Bo góc mềm mại */
+    max-width: 600px;
+    width: 90%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Hiệu ứng đổ bóng */
+    position: relative;
+    animation: slide-up 0.4s ease; /* Hiệu ứng trượt lên */
+    border: 2px solid #ddd; /* Thêm viền bên trong */
+}
+
+    /* Tiêu đề popup */
+    .popup-content_qllh h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 24px;
+        color: #2c3e50;
+        font-weight: bold;
+        border-bottom: 1px solid #ddd; /* Viền ngăn cách */
+    }
+
+/* Các mục thông tin */
+.info-item_qllh {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+    .info-item_qllh label {
+        font-weight: bold;
+        margin-right: 10px;
+        color: #34495e;
+    }
+
+    .info-item_qllh span {
+        color: #555;
+        font-size: 16px;
+        border-bottom: 1px solid #ddd; /* Viền ngăn cách */
+    }
+
+/* Phần chi tiết (scrollable) */
+.details_qllh {
+    max-height: 200px;
+    overflow-y: auto;
+    padding: 12px;
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+    .details_qllh::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .details_qllh::-webkit-scrollbar-thumb {
+        background: #ccc;
+        border-radius: 4px;
+    }
+
+        .details_qllh::-webkit-scrollbar-thumb:hover {
+            background: #aaa;
+        }
+
+/* Nút trong popup */
+.popup-buttons_qllh {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Tạo khoảng cách giữa các nút */
+}
+
+    .popup-buttons_qllh button {
+        padding: 12px 20px;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+.complete-btn_qllh {
+    background: #28a745;
+    color: white;
+}
+
+    .complete-btn_qllh:hover {
+        background: #218838;
+    }
+
+.cancel-btn_qllh {
+    background: #dc3545;
+    color: white;
+}
+
+    .cancel-btn_qllh:hover {
+        background: #c82333;
+    }
+
+/* Hiệu ứng xuất hiện popup */
+@keyframes popup-fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-up {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

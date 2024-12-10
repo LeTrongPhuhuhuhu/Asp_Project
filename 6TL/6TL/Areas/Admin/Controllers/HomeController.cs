@@ -56,5 +56,9 @@ namespace _6TL.Areas.Admin.Controllers
         {
             return View();
         }
+        public IActionResult QuanLyLienHe()
+        {
+            return View();
+        }
     }
 }
