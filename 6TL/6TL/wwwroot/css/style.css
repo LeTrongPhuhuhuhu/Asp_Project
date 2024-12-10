@@ -145,7 +145,6 @@ main {
     justify-content: center;
     text-align: center;
     min-height: calc(100vh - 80px);
-    padding: 20px;
 }
 
 h1 {
@@ -186,46 +185,212 @@ p {
         margin-left: 10px;
         cursor: pointer;
     }
+/* Căn chỉnh toàn bộ form */
 .custom-form {
-    padding: 20px; /* Tăng khoảng cách bên trong form */
-    font-size: 1.2rem; /* Tăng kích thước chữ */
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    animation: popupFadeIn 0.5s ease-in-out;
+}
+
+@keyframes popupFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Căn chỉnh input với góc bo mềm mại */
+.custom-form .input-group {
+    margin-bottom: 20px;
 }
 
     .custom-form .input-group input {
-        padding: 10px; /* Tăng kích thước input */
-        font-size: 1rem; /* Tăng kích thước chữ trong input */
-    }
-
-    .custom-form .login-btn {
-        padding: 12px 20px; /* Tăng kích thước nút đăng nhập */
-        font-size: 1.2rem; /* Tăng kích thước chữ trong nút */
-    }
-
-    .custom-form .social-login button {
-        padding: 10px 20px;
+        padding: 12px 15px;
         font-size: 1rem;
-        margin: 5px;
+        border-radius: 12px;
+        border: 1px solid #ddd;
+        width: 100%;
+        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
     }
-.google-login, .facebook-login {
+
+        .custom-form .input-group input:focus {
+            border-color: #6c63ff;
+            box-shadow: 0 0 10px rgba(108, 99, 255, 0.5);
+            outline: none;
+        }
+
+
+/* Nút đóng popup */
+.modal-close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 20px;
+    color: #aaa;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+    .modal-close-btn:hover {
+        color: #ff4b5c;
+    }
+
+/* Định dạng chung cho popup */
+.modal-dialog-centered {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px; /* Khoảng cách giữa icon và chữ */
-    padding: 10px 20px;
+    height: 100vh;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: row; /* Đặt logo và form ngang nhau */
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    background: #ffffff;
+    padding: 20px;
+    max-width: 900px; /* Độ rộng tối đa */
+    gap: 30px; /* Khoảng cách giữa logo và form */
+}
+
+/* Định dạng form */
+.custom-form {
+    width: 100%; /* Form chiếm hết nửa không gian */
+    max-width: 450px;
+    margin: 0 auto;
+    margin-right: 30px
+}
+
+    .custom-form h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 1.8rem;
+        color: #333;
+    }
+
+    .custom-form .input-group {
+        margin-bottom: 15px;
+    }
+
+        .custom-form .input-group input {
+            padding: 12px;
+            font-size: 1rem;
+            border-radius: 12px;
+            border: 1px solid #ddd;
+            width: 100%;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+            .custom-form .input-group input:focus {
+                border-color: #007bff;
+                box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+            }
+
+/* Nút Google và Facebook */
+.social-login {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.google-login, .facebook-login {
+    width: 48%;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid transparent;
     font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 .google-login {
-    background-color: #db4437; /* Màu Google */
+    background-color: #db4437;
     color: white;
-    border: none;
+    box-shadow: 0 2px 5px rgba(219, 68, 55, 0.2);
 }
 
+    .google-login:hover {
+        background-color: #c33d2f;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 10px rgba(219, 68, 55, 0.4);
+    }
+
 .facebook-login {
-    background-color: #4267B2; /* Màu Facebook */
+    background-color: #4267b2;
     color: white;
-    border: none;
+    box-shadow: 0 2px 5px rgba(66, 103, 178, 0.2);
 }
+
+    .facebook-login:hover {
+        background-color: #365899;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 10px rgba(66, 103, 178, 0.4);
+    }
+
+/* Nút Đăng Nhập */
+.login-btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #6c63ff, #4b5dff);
+    color: white;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .login-btn:hover {
+        background-color: #4b5dff;
+        box-shadow: 0 4px 10px rgba(108, 99, 255, 0.4);
+    }
+
+/* Phần logo */
+.logo {
+    width: 100%; /* Chiếm nửa không gian */
+    max-width: 300px; /* Giới hạn chiều rộng */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0; /* Logo không co lại */
+}
+
+    .logo img {
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+        animation: float 2s infinite ease-in-out;
+    }
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
 
 
 /* Footer */
@@ -236,7 +401,14 @@ footer {
     font-size: 14px;
 }
 
+    footer img {
+        height: 60px;
+        width: 230px;
+        margin-bottom: 25px
+    }
+
     footer h5 {
+        color: #fff;
         font-size: 18px;
         font-weight: bold;
     }
@@ -256,7 +428,7 @@ footer {
             }
 
                 footer ul li a:hover {
-                    text-decoration: underline;
+                    color: #ff6400;
                 }
 
     footer .social-icons {
@@ -296,3 +468,100 @@ footer {
             font-size: 14px;
             color: #ccc;
         }
+/* Icon Chat */
+.chat-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #6c63ff;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+    .chat-icon:hover {
+        transform: scale(1.1);
+    }
+
+/* Khung Chat */
+.chat-box {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 350px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Ẩn khung chat mặc định */
+.hidden {
+    display: none;
+}
+
+.chat-header {
+    background: #6c63ff;
+    color: white;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+}
+
+.chat-content {
+    padding: 15px;
+    height: 300px;
+    overflow-y: auto;
+    background-color: #f4f4f8;
+    font-size: 14px;
+    color: #333;
+}
+
+.chat-input {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #ddd;
+    padding: 10px;
+}
+
+    .chat-input input {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 20px;
+        outline: none;
+        font-size: 14px;
+    }
+
+    .chat-input button {
+        background: #6c63ff;
+        border: none;
+        color: white;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 10px;
+        cursor: pointer;
+    }
+
+.close-icon {
+    cursor: pointer;
+    font-size: 18px;
+}

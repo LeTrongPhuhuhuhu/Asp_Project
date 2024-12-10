@@ -156,7 +156,7 @@ section {
     #mainCarousel .carousel-item img {
         object-fit: cover; /* Maintain aspect ratio and fill the container */
         height: 639px; /* Set height to match your desired size */
-        width: 1920px;
+        width: 100vw;
     }
 
 .grid-container {
@@ -433,3 +433,8 @@ section {
         transform: scale(1.05);
         color: white;
     }
+
+.carousel-caption {
+    background: none;
+    padding: 0;
+}
