@@ -1,0 +1,16 @@
+Hiển thị slide show, v
+ Hiển thị sản phẩm nổi bật, v 
+ Hiển thị chương trình khuyến mãi , Quảng cáo, v
+ Tìm kiếm, v
+ Đăng ký,v
+ Đăng nhập, v 
+ Hiển thị lượt đánh giá sản phẩm, v
+ Hiển thị trang giới thiệu, v
+ Trang tin tức, v
+Hiển thị danh mục sản phẩm, v
+Hiển thị danh sách sản phẩm, v
+Hiển thị chi tiết sản phẩm, v
+Truy cập nền tảng xã hội của web,v
+Chat với nhân viên chăm sóc khách hàng, v
+Hiển thị trang chính sách, v
+Hiển thị trang liên hệ. x	

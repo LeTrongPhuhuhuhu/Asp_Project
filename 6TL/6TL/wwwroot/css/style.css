@@ -565,3 +565,69 @@ footer {
     cursor: pointer;
     font-size: 18px;
 }
+/* Tổng thể */
+.benefit {
+    margin-top: 50px; /* Khoảng cách phía trên */
+    background-color: #f9f9f9; /* Nền tổng thể */
+    padding: 30px 0; /* Khoảng cách trên và dưới */
+}
+
+/* Hàng chứa các mục */
+.benefit_row {
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    justify-content: space-between; /* Căn đều các cột */
+}
+
+/* Cột lợi ích */
+.benefit_col {
+    padding: 0 10px; /* Khoảng cách hai bên giữa các cột */
+    flex: 1; /* Đảm bảo các cột có chiều rộng bằng nhau */
+}
+
+/* Mục lợi ích */
+.benefit_item {
+    display: flex;
+    align-items: center;
+    background: #fff; /* Nền màu trắng */
+    border: 1px solid #ddd; /* Viền mờ */
+    border-radius: 8px; /* Góc bo tròn */
+    padding: 20px; /* Khoảng cách bên trong */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hiệu ứng khi hover */
+}
+
+    /* Hiệu ứng hover cho mục */
+    .benefit_item:hover {
+        transform: translateY(-5px); /* Nhấc nhẹ lên khi hover */
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Đổ bóng */
+    }
+
+/* Biểu tượng lợi ích */
+.benefit_icon i {
+    font-size: 35px; /* Kích thước lớn hơn */
+    color: #fe4c50; /* Màu đỏ nổi bật */
+    margin-right: 15px; /* Khoảng cách giữa biểu tượng và nội dung */
+}
+
+/* Nội dung lợi ích */
+.benefit_content {
+    text-align: left; /* Canh trái nội dung */
+}
+
+    /* Tiêu đề trong nội dung */
+    .benefit_content h6 {
+        font-size: 16px; /* Kích thước chữ tiêu đề */
+        font-weight: 600; /* Kiểu chữ đậm */
+        text-transform: uppercase; /* Viết hoa tất cả */
+        margin-bottom: 5px; /* Khoảng cách bên dưới */
+        color: #333; /* Màu chữ đậm */
+    }
+
+    /* Đoạn văn trong nội dung */
+    .benefit_content p {
+        font-size: 14px; /* Kích thước chữ nhỏ */
+        line-height: 20px; /* Khoảng cách giữa các dòng */
+        color: #555; /* Màu chữ xám tối */
+        margin: 0; /* Không có khoảng cách */
+    }

@@ -1,0 +1,142 @@
+﻿/* Reset some basic styling */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+}
+
+/* Body Styles */
+body {
+	background-color: #f9f9f9;
+	color: #333;
+	font-size: 16px;
+	line-height: 1.6;
+	padding: 40px 0;
+}
+
+/* Container Styles */
+.container_cttt {
+	width: 80%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 20px;
+	background-color: #fff;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+	
+}
+
+/* News Header */
+.news-header_cttt {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 2px solid #e5e5e5;
+	padding-bottom: 20px;
+	margin-bottom: 30px;
+}
+
+.news-date_cttt {
+	font-size: 18px;
+	color: #777;
+	text-align: center;
+}
+
+.day_cttt {
+	font-size: 40px;
+	font-weight: bold;
+	color: #333;
+}
+
+.month-year_cttt {
+	font-size: 18px;
+}
+
+.news-title_cttt h1 {
+	font-size: 32px;
+	font-weight: 700;
+	color: #333;
+	line-height: 1.4;
+	max-width: 800px;
+	margin-left: 30px;
+	word-wrap: break-word;
+}
+
+/* News Content */
+.news-content_cttt {
+	font-size: 18px;
+	color: #555;
+	line-height: 1.8;
+	margin-bottom: 40px;
+}
+
+	.news-content_cttt p {
+		margin-bottom: 20px;
+		text-align: justify;
+	}
+
+/* Like and Share Buttons */
+.news-social_cttt {
+	display: flex;
+	gap: 20px;
+	justify-content: flex-start;
+	margin-top: 20px;
+}
+
+.like-btn_cttt, .share-btn_cttt {
+	background-color: #ff5c39;
+	color: white;
+	border: none;
+	padding: 12px 24px;
+	border-radius: 25px;
+	cursor: pointer;
+	font-size: 18px;
+	transition: all 0.3s ease;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+	.like-btn_cttt:hover, .share-btn_cttt:hover {
+		background-color: #e04e2d;
+		transform: scale(1.05);
+	}
+
+	.like-btn_cttt:focus, .share-btn_cttt:focus {
+		outline: none;
+	}
+
+	.like-btn_cttt:active, .share-btn_cttt:active {
+		transform: scale(0.98);
+	}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+	.container_cttt {
+		width: 90%;
+		padding: 20px;
+	}
+
+	.news-title_cttt h1 {
+		font-size: 26px;
+		text-align: center;
+	}
+
+	.news-date_cttt {
+		font-size: 16px;
+	}
+
+	.news-content_cttt {
+		font-size: 16px;
+	}
+
+	.news-social_cttt {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.like-btn_cttt, .share-btn_cttt {
+		width: 100%;
+		margin-bottom: 10px;
+	}
+}
