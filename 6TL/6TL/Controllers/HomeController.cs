@@ -32,7 +32,15 @@ namespace _6TL.Controllers
 		{
 			return View();
 		}
-		public IActionResult ChiTietSanPham() { return View(); }
+		public IActionResult LienHe()
+		{
+			return View();
+		}
+        public IActionResult GioHang()
+        {
+            return View();
+        }
+        public IActionResult ChiTietSanPham() { return View(); }
 
 		public IActionResult TrangThanhToan() { return View(); }
 		public IActionResult ViewProfile()

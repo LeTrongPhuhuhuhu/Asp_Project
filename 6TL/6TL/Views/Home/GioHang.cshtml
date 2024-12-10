@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng</title>
+    <link rel="stylesheet" href="~/css/pages/giohang.css">
+</head>
+<body>
+    <main>
+        <!-- Thanh tiến trình -->
+        <div class="steps">
+            <div class="step active">1. Giỏ hàng</div>
+            <div class="step">2. Thanh toán</div>
+        </div>
+
+        <!-- Nội dung giỏ hàng -->
+        <div class="cart-container">
+            <div class="cart-items">
+                <table class="cart-table">
+                    <thead>
+                        <tr>
+                            <th>Sản phẩm</th>
+                            <th>Giá</th>
+                            <th>Số lượng</th>
+                            <th>Thành tiền</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="cart-item">
+                            <td>
+                                <img src="https://product.hstatic.net/1000256920/product/upload_master.jpg" alt="loggia sofa">
+                                <div>
+                                    <p>Loggia Sofa</p>
+                                    <span>Màu: Đen</span><br>
+                                    <a href="#" class="remove">
+                                        <i class="fa fa-trash"></i>
+                                    </a>
+                                </div>
+                            </td>
+                            <td>900.000 ₫</td>
+                            <td>
+                                <button class="quantity-btn decrease">-</button>
+                                <span class="quantity-number">1</span>
+                                <button class="quantity-btn increase">+</button>
+                            </td>
+                            <td class="total-price">900.000 ₫</td>
+                        </tr>
+                        <tr class="cart-item">
+                            <td>
+                                <img src="https://product.hstatic.net/1000256920/product/upload_master.jpg" alt="loggia sofa">
+                                <div>
+                                    <p>Loggia Sofa</p>
+                                    <span>Màu: Đen</span><br>
+                                    <a href="#" class="remove">
+                                        <i class="fa fa-trash"></i>
+                                    </a>
+                                </div>
+                            </td>
+                            <td>900.000 ₫</td>
+                            <td>
+                                <button class="quantity-btn decrease">-</button>
+                                <span class="quantity-number">1</span>
+                                <button class="quantity-btn increase">+</button>
+                            </td>
+                            <td class="total-price">900.000 ₫</td>
+                        </tr>
+                        <tr class="cart-item">
+                            <td>
+                                <img src="https://product.hstatic.net/1000256920/product/upload_master.jpg" alt="loggia sofa">
+                                <div>
+                                    <p>Loggia Sofa</p>
+                                    <span>Màu: Đen</span><br>
+                                    <a href="#" class="remove">
+                                        <i class="fa fa-trash"></i>
+                                    </a>
+                                </div>
+                            </td>
+                            <td>900.000 ₫</td>
+                            <td>
+                                <button class="quantity-btn decrease">-</button>
+                                <span class="quantity-number">1</span>
+                                <button class="quantity-btn increase">+</button>
+                            </td>
+                            <td class="total-price">900.000 ₫</td>
+                        </tr>
+                        <tr class="cart-item">
+                            <td>
+                                <img src="https://product.hstatic.net/1000256920/product/upload_master.jpg" alt="loggia sofa">
+                                <div>
+                                    <p>Loggia Sofa</p>
+                                    <span>Màu: Đen</span><br>
+                                    <a href="#" class="remove">
+                                        <i class="fa fa-trash"></i>
+                                    </a>
+                                </div>
+                            </td>
+                            <td>900.000 ₫</td>
+                            <td>
+                                <button class="quantity-btn decrease">-</button>
+                                <span class="quantity-number">1</span>
+                                <button class="quantity-btn increase">+</button>
+                            </td>
+                            <td class="total-price">900.000 ₫</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="cart-summary">
+                <div class="totals">
+                    <p>Tạm tính: <span>1.300.000 ₫</span></p>
+                    <p>Tổng cộng: <span>1.300.000 ₫</span></p>
+                    <button class="checkout-btn">Thanh toán</button>
+                    <button class="delete-all-btn">Xóa toàn bộ sản phẩm</button>
+                </div>
+                <div class="security">
+                    <h4>Bảo mật thanh toán</h4>
+                    <p>Giao dịch được mã hóa đảm bảo an toàn hơn.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Trang giỏ hàng trống -->
+        <div class="empty-cart" id="empty-cart">
+            <img src="https://cdn-icons-png.flaticon.com/128/13637/13637462.png" alt="Giỏ hàng trống">
+            <h2>Giỏ hàng của bạn hiện đang trống!</h2>
+            <p>Hãy thêm sản phẩm vào giỏ hàng để tiếp tục mua sắm.</p>
+            <button onclick="window.location.href='/san-pham'">Quay lại mua sắm</button>
+        </div>
+
+        <!-- Phần phân trang (pagination) -->
+        <div class="pagination">
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+        </div>
+    </main>
+
+    <script>
+        // Kiểm tra trạng thái giỏ hàng
+        var cartContainer = document.querySelector(".cart-container");
+        var emptyCartMessage = document.getElementById("empty-cart");
+        var cartTable = document.querySelector('.cart-table');
+        var cartSummary = document.querySelector('.cart-summary');
+
+        // Hàm cập nhật trạng thái giỏ hàng
+        function updateCartStatus() {
+            var cartItems = document.querySelectorAll('.cart-table tbody tr');
+            if (cartItems.length === 0) {
+                cartTable.style.display = 'none'; // Ẩn bảng giỏ hàng
+                cartSummary.style.display = 'none'; // Ẩn phần tóm tắt giỏ hàng
+                emptyCartMessage.style.display = 'block'; // Hiển thị trang giỏ hàng trống
+            } else {
+                cartTable.style.display = 'table'; // Hiển thị bảng giỏ hàng
+                cartSummary.style.display = 'block'; // Hiển thị phần tóm tắt giỏ hàng
+                emptyCartMessage.style.display = 'none'; // Ẩn trang giỏ hàng trống
+            }
+        }
+
+        // Xóa toàn bộ sản phẩm trong giỏ hàng
+        document.querySelector('.delete-all-btn').addEventListener('click', function () {
+            document.querySelector('.cart-table tbody').innerHTML = ''; // Xóa hết sản phẩm
+            updateCartStatus(); // Cập nhật trạng thái giỏ hàng
+        });
+
+        // Cập nhật trạng thái khi lần đầu tải trang
+        updateCartStatus();
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Liên Hệ</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="~/css/admin/quanlylienhe.css" rel="stylesheet" />
+    <style>
+        /* CSS for dropdown filter */
+        .filter-dropdown_qllh {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+            .filter-dropdown_qllh select {
+                padding: 8px;
+                border-radius: 4px;
+                border: 1px solid #ccc;
+                font-size: 16px;
+            }
+
+            .filter-dropdown_qllh input[type="date"] {
+                padding: 8px;
+                border-radius: 4px;
+                border: 1px solid #ccc;
+                font-size: 16px;
+            }
+    </style>
+</head>
+<body>
+    <div class="container_qllh">
+        <h1>Quản Lý Liên Hệ</h1>
+
+        <!-- Thanh tìm kiếm -->
+        <div class="search-bar_qllh">
+            <input type="text" placeholder="Tìm kiếm..." id="search-input_qllh">
+            <button class="search-btn_qllh">Tìm</button>
+        </div>
+
+        <!-- Thanh lọc -->
+        <div class="filter-dropdown_qllh">
+            <select id="filter-status_qllh">
+                <option value="recent">Gần đây</option>
+                <option value="pending">Chưa xử lý</option>
+                <option value="completed">Đã xử lý</option>
+            </select>
+            <input type="date" id="filter-date_qllh">
+        </div>
+
+        <!-- Bảng dữ liệu -->
+        <table class="contact-table_qllh">
+            <thead>
+                <tr>
+                    <th>ID Liên Hệ</th>
+                    <th>Tên</th>
+                    <th>Tiêu Đề</th>
+                    <th>Ngày Tạo</th>
+                    <th>Ngày Cập Nhật</th>
+                    <th>Trạng Thái</th>
+                    <th>Hành Động</th>
+                </tr>
+            </thead>
+            <tbody id="contact-table-body_qllh">
+                <tr>
+                    <td>1</td>
+                    <td>Nguyễn Văn A</td>
+                    <td>Yêu cầu hỗ trợ</td>
+                    <td>12/12/2024</td>
+                    <td>12/12/2024</td>
+                    <td id="status-1">Chưa xử lý</td>
+                    <td><button class="view-btn_qllh" onclick="openPopup_qllh(1, 'Yêu cầu hỗ trợ')">Xem</button></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Nguyễn Thị B</td>
+                    <td>Phản hồi</td>
+                    <td>13/12/2024</td>
+                    <td>13/12/2024</td>
+                    <td id="status-2">Chưa xử lý</td>
+                    <td><button class="view-btn_qllh" onclick="openPopup_qllh(2, 'Phản hồi')">Xem</button></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Trần Văn C</td>
+                    <td>Đặt câu hỏi</td>
+                    <td>14/12/2024</td>
+                    <td>14/12/2024</td>
+                    <td id="status-3">Chưa xử lý</td>
+                    <td><button class="view-btn_qllh" onclick="openPopup_qllh(3, 'Đặt câu hỏi')">Xem</button></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Phạm Thị D</td>
+                    <td>Yêu cầu báo giá</td>
+                    <td>15/12/2024</td>
+                    <td>15/12/2024</td>
+                    <td id="status-4">Chưa xử lý</td>
+                    <td><button class="view-btn_qllh" onclick="openPopup_qllh(4, 'Yêu cầu báo giá')">Xem</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Popup chi tiết liên hệ -->
+    <div class="popup_qllh" id="popup_qllh">
+        <div class="popup-content_qllh">
+            <span class="close-btn_qllh" onclick="closePopup_qllh()">&times;</span>
+            <h2>Chi Tiết Liên Hệ</h2>
+
+            <div class="contact-info_qllh">
+                <div class="info-item_qllh">
+                    <label>ID:</label>
+                    <span id="contact-id_qllh">12345</span>
+                </div>
+                <div class="info-item_qllh">
+                    <label>Tên Liên Hệ:</label>
+                    <span id="contact-name_qllh">Nguyễn Văn A</span>
+                </div>
+                <div class="info-item_qllh">
+                    <label>Tiêu Đề:</label>
+                    <span id="contact-title_qllh">Yêu cầu hỗ trợ</span>
+                </div>
+                <div class="info-item_qllh">
+                    <label>Ngày Tạo:</label>
+                    <span id="contact-created_qllh">01/01/2024</span>
+                </div>
+                <div class="info-item_qllh">
+                    <label>Ngày Cập Nhật:</label>
+                    <span id="contact-updated_qllh">02/01/2024</span>
+                </div>
+            </div>
+
+            <div class="details_qllh">
+                <p>
+                    <strong>Nội Dung:</strong>
+                    <span id="contact-content_qllh">
+                        Đây là nội dung chi tiết của liên hệ. Nội dung này sẽ mô tả đầy đủ thông tin mà khách hàng cung cấp. Nếu nội dung dài, phần này sẽ tự động cuộn để hiển thị.
+                    </span>
+                </p>
+            </div>
+
+            <div id="contact-status_qllh" class="status_qllh pending">
+                Trạng Thái: Chưa xử lý <span class="status-icon" title="Đã xử lý">&#10004;</span>
+            </div>
+
+            <div class="popup-buttons_qllh">
+                <button class="complete-btn_qllh" onclick="confirmCompleteContact_qllh(1)">Hoàn Thành</button>
+                <button class="cancel-btn_qllh" onclick="closePopup_qllh()">Hủy</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mở popup
+        function openPopup_qllh(id, title) {
+            const popup = document.getElementById('popup_qllh');
+
+            // Cập nhật nội dung chi tiết liên hệ
+            document.getElementById('contact-id_qllh').innerText = id;
+            document.getElementById('contact-name_qllh').innerText = 'Nguyễn Văn A'; // Dữ liệu mẫu
+            document.getElementById('contact-title_qllh').innerText = title;
+            document.getElementById('contact-created_qllh').innerText = '12/12/2024';
+            document.getElementById('contact-updated_qllh').innerText = '12/12/2024';
+            document.getElementById('contact-status_qllh').innerText = 'Chưa xử lý';
+            document.getElementById('contact-content_qllh').innerText = 'Nội dung rất dài ... sẽ cuộn!';
+
+            // Hiển thị popup
+            popup.style.display = 'flex';
+        }
+
+        // Đóng popup
+        function closePopup_qllh() {
+            document.getElementById('popup_qllh').style.display = 'none';
+        }
+
+        // Cập nhật trạng thái hoàn thành với xác nhận
+        function confirmCompleteContact_qllh(id) {
+            if (confirm('Bạn có chắc chắn muốn cập nhật trạng thái liên hệ thành "Đã xử lý"?')) {
+                document.getElementById('contact-status_qllh').innerHTML = 'Đã xử lý <span class="status-icon">&#10004;</span>';
+                document.getElementById('contact-status_qllh').className = 'status_qllh complete';
+
+                // Cập nhật trạng thái trong bảng
+                document.getElementById(`status-${id}`).innerText = 'Đã xử lý';
+
+                // Đóng popup
+                closePopup_qllh();
+                alert('Liên hệ đã được xử lý!');
+            }
+        }
+    </script>
+</body>
+</html>
