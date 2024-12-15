@@ -1,4 +1,7 @@
-﻿nav {
+﻿* {
+    font-family: 'Montserrat', sans-serif;
+}
+nav {
     width: 250px;
     background-color: #eee;
     padding: 15px;

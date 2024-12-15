@@ -1,23 +1,31 @@
 ﻿* {
     font-family: 'Montserrat', sans-serif;
 }
+
 /* ========== Container Chính ========== */
 .product-management_sp {
     padding: 20px;
-    
+    background-color: #f4f4f9; /* Màu nền nhẹ nhàng */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
 .product-table_sp th {
-    font-size: 12px; /* Giảm kích thước chữ */
-    padding: 6px 10px; /* Giảm khoảng cách padding */
-    line-height: 1.2; /* Giảm chiều cao dòng */
-    text-align: center; /* Căn giữa nội dung */
+    font-size: 14px; /* Giảm kích thước chữ cho dễ nhìn */
+    padding: 8px 15px; /* Giảm khoảng cách padding */
+    line-height: 1.3;
+    text-align: center;
+    background-color: #f1f1f1;
+    color: #333;
 }
 
 h2 {
     color: #333;
-    font-size: 24px;
+    font-size: 26px;
+    font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
+    margin-bottom: 20px;
 }
 
 /* ========== Thanh Tìm Kiếm ========== */
@@ -26,14 +34,15 @@ h2 {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
+    gap: 10px;
 }
 
     .search-bar_sp input,
     .search-bar_sp select {
-        padding: 8px;
+        padding: 10px;
         font-size: 16px;
         border: 1px solid #ccc;
-        border-radius: 5px;
+        border-radius: 20px; /* Bo tròn nút tìm kiếm và select */
         transition: box-shadow 0.3s ease-in-out, transform 0.2s ease-in-out;
     }
 
@@ -45,18 +54,18 @@ h2 {
 
 /* ========== Nút Thêm Mới ========== */
 .add-new-btn_sp {
-    background-color: #4CAF50;
+    background-color: #6c63ff;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 12px 25px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 20px; /* Bo tròn nút */
     transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
 }
 
     .add-new-btn_sp:hover {
-        background-color: #45a049;
-        box-shadow: 0 4px 15px rgba(0, 128, 0, 0.3);
+        background-color: #5c53d6;
+        box-shadow: 0 4px 15px rgba(108, 99, 255, 0.3);
         transform: translateY(-3px);
     }
 
@@ -81,6 +90,7 @@ h2 {
 
     .product-table_sp th {
         background-color: #f1f1f1;
+        color: #333;
         text-transform: uppercase;
         letter-spacing: 1px;
         position: sticky;
@@ -142,7 +152,7 @@ h2 {
 .delete-btn_sp {
     padding: 10px 16px;
     border: none;
-    border-radius: 5px;
+    border-radius: 20px; /* Bo tròn nút Sửa và Xóa */
     cursor: pointer;
     font-weight: bold;
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
@@ -181,7 +191,7 @@ h2 {
     padding: 8px 16px;
     margin: 0 5px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 20px; /* Bo tròn các nút phân trang */
     cursor: pointer;
     transition: all 0.3s ease;
 }

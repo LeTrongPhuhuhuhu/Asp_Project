@@ -1,0 +1,181 @@
+﻿<link href="~/css/admin/quanlydanhgia.css" rel="stylesheet" />
+<section class="review-management">
+    <div class="product-list">
+        <h2>Sản phẩm</h2>
+        <ul>
+            <li>
+                <div class="product-item">
+                    <img src="https://via.placeholder.com/50" alt="Mì tương đen" />
+                    <div>
+                        <h3>Mì tương đen</h3>
+                        <p>79,000₫</p>
+                        <div class="rating">★★★★★</div>
+                        <p>Đã bán: 0</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="product-item">
+                    <img src="https://via.placeholder.com/50" alt="Bánh trà xanh" />
+                    <div>
+                        <h3>Bánh trà xanh</h3>
+                        <p>55,000₫</p>
+                        <div class="rating">★★★★</div>
+                        <p>Đã bán: 12</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="product-item">
+                    <img src="https://via.placeholder.com/50" alt="Bánh pho mát" />
+                    <div>
+                        <h3>Bánh pho mát</h3>
+                        <p>120,000₫</p>
+                        <div class="rating">★★★★★</div>
+                        <p>Đã bán: 45</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="review-section">
+        <h2>Đánh giá</h2>
+        <div class="rating-filter">
+            <button>5 Sao</button>
+            <button>4 Sao</button>
+            <button>3 Sao</button>
+            <button>2 Sao</button>
+            <button>1 Sao</button>
+        </div>
+        <div class="reviews">
+            <div class="review-item">
+                <div class="review-header">
+                    <img src="https://via.placeholder.com/40" alt="User Avatar" />
+                    <div>
+                        <strong>John Doe</strong>
+                        <p>2024-09-01</p>
+                    </div>
+                </div>
+                <p>Rất ngon! Hương vị tuyệt vời.</p>
+                <div class="reply">
+                    <a href="#">Phản hồi</a>
+                </div>
+            </div>
+            <div class="review-item">
+                <div class="review-header">
+                    <img src="https://via.placeholder.com/40" alt="User Avatar" />
+                    <div>
+                        <strong>Jane Smith</strong>
+                        <p>2024-08-30</p>
+                    </div>
+                </div>
+                <p>Sản phẩm đáng giá, nhưng đóng gói chưa tốt.</p>
+                <div class="reply">
+                    <a href="#">Phản hồi</a>
+                </div>
+            </div>
+            <div class="review-item">
+                <div class="review-header">
+                    <img src="https://via.placeholder.com/40" alt="User Avatar" />
+                    <div>
+                        <strong>Alex Nguyen</strong>
+                        <p>2024-08-25</p>
+                    </div>
+                </div>
+                <p>Khác biệt và ngon miệng, rất hài lòng.</p>
+                <div class="reply">
+                    <a href="#">Phản hồi</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .review-management {
+        display: flex;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .product-list, .review-section {
+        flex: 1;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 15px;
+        background-color: #f9f9f9;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+        .product-item img {
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+    .rating {
+        color: #ffc107;
+        font-size: 14px;
+    }
+
+    .rating-filter {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+
+        .rating-filter button {
+            padding: 5px 10px;
+            background-color: #e0e0e0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+            .rating-filter button:hover {
+                background-color: #ffc107;
+                color: white;
+            }
+
+    .review-item {
+        border-top: 1px solid #ddd;
+        padding-top: 10px;
+        margin-top: 10px;
+    }
+
+    .review-header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+        .review-header img {
+            border-radius: 50%;
+        }
+
+    .reply a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+        .reply a:hover {
+            text-decoration: underline;
+        }
+</style>
+
+<script>
+    document.querySelectorAll('.rating-filter button').forEach(button => {
+        button.addEventListener('click', function () {
+            const rating = this.textContent.split(' ')[0]; // Lấy số sao
+            alert(`Lọc các đánh giá ${rating} sao`);
+            // Logic lọc danh sách đánh giá tại đây
+        });
+    });
+</script>

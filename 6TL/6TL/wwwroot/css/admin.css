@@ -1,280 +1,341 @@
-﻿* {
-    font-family: 'Montserrat', sans-serif;
-}
-/* Global Styles */
-body {
+﻿/* General Reset */
+* {
     margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background-color: #f9f9f9;
-    color: #333333;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5 {
-    font-weight: 600;
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+}
+
+/* Container for the whole dashboard */
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+    font-size: 16px;
 }
 
 /* Sidebar */
-.sidebar {
-    width: 215px;
-    height: 100vh;
-    background-color: #1b1b1b;
+.dashboard-sidebar {
+    width: 250px;
+    background-color: #2c3e50;
+    color: white;
+    padding-top: 20px;
     position: fixed;
-    padding: 20px;
-    color: #ffffff;
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1); /* Thêm bóng ?? cho sidebar */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    transition: width 0.3s ease-in-out;
+    border-radius: 10px 0 0 10px;
 }
 
-.logo {
+.sidebar-logo h2 {
+    font-size: 24px;
     text-align: center;
-    font-size: 22px;
-    margin-bottom: 20px;
-    font-weight: bold;
-    color: #ffffff; /* Thêm màu s?c cho logo */
+    margin-bottom: 30px;
+    font-weight: 600;
+    color: #ecf0f1;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
-.menu {
-    list-style: none;
-    padding: 0;
+.sidebar-menu {
+    list-style-type: none;
+    padding-left: 0;
 }
 
-    .menu li {
-        margin: 10px 0;
-    }
-
-    .menu a {
-        text-decoration: none;
-        color: #dcdde1;
-        font-size: 16px;
-        display: flex;
-        align-items: center;
-        padding: 10px 15px;
-        border-radius: 5px;
-        transition: all 0.3s;
-    }
-
-        .menu a:hover {
-            background-color: #2c2c2c;
-            color: #ffffff;
-        }
-
-        .menu a i {
-            margin-right: 10px;
-        }
-
-/* Main Content */
-.main-content {
-    margin-left: 250px;
-    padding: 20px;
-    background-color: #ffffff;
-    min-height: 100vh;
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
-}
-
-header {
+.sidebar-menu-item {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    background-color: #ffffff;
-    border-bottom: 1px solid #e0e0e0;
+    padding: 15px;
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border-radius: 10px;
 }
 
-    /* Header Title */
-    header h1 {
-        font-size: 20px;
-        font-weight: 600;
-        margin: 0;
-        color: #333333;
+    .sidebar-menu-item:hover {
+        background-color: #34495e;
+        transform: translateX(5px);
     }
 
-/* Search Bar */
-/* Search Bar */
+    .sidebar-menu-item i {
+        margin-right: 15px;
+    }
+
+.sidebar-dropdown {
+    position: relative;
+}
+
+.sidebar-dropdown-menu {
+    display: none;
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+.sidebar-dropdown-item {
+    padding: 10px;
+    color: #ecf0f1;
+    text-decoration: none;
+}
+
+    .sidebar-dropdown-item:hover {
+        background-color: #34495e;
+        transform: translateX(10px);
+    }
+
+.sidebar-arrow {
+    margin-left: auto;
+    transition: transform 0.3s ease;
+}
+
+    .sidebar-arrow.rotate {
+        transform: rotate(180deg);
+    }
+
+/* Main Content */
+.dashboard-main {
+    margin-left: 250px;
+    width: 100%;
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.header-left {
+    font-size: 24px;
+    font-weight: 600;
+    color: #2c3e50;
+    letter-spacing: 1px;
+}
+
+.header-title {
+    font-size: 24px;
+    color: #2c3e50;
+}
+
 .header-center {
-    flex: 1;
+    flex-grow: 1;
     display: flex;
     justify-content: center;
-    max-width: 400px; /* Gi?i h?n ?? r?ng */
 }
 
 .search-bar-container {
-    width: 100%;
     position: relative;
 }
 
 .search-bar {
-    width: 100%;
-    padding: 8px 12px;
-    padding-left: 35px; /* Thêm kho?ng cách cho icon */
+    width: 250px;
+    padding: 12px 20px;
+    border-radius: 30px;
     border: 1px solid #ccc;
-    border-radius: 20px;
-    outline: none;
-    font-size: 14px;
-    transition: border-color 0.3s, box-shadow 0.3s;
+    font-size: 16px;
+    background-color: #ecf0f1;
+    transition: width 0.3s ease-in-out;
 }
 
     .search-bar:focus {
-        border-color: #007bff;
-        box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+        width: 300px;
+        border-color: #3498db;
+        outline: none;
     }
 
-/* Search Icon */
 .search-icon {
     position: absolute;
-    top: 50%;
-    left: 12px; /* ??t icon vào v? trí bên trái c?a thanh tìm ki?m */
-    transform: translateY(-50%);
-    font-size: 16px;
-    color: #aaa;
+    right: 15px;
+    top: 10px;
+    font-size: 18px;
+    color: #999;
 }
 
-/* Thêm hi?u ?ng hover cho thanh tìm ki?m */
-.search-bar:hover {
-    border-color: #007bff;
-}
-
-.search-bar:focus + .search-icon {
-    color: #007bff;
-}
-
-
-/* Header - User and Notification */
 .header-right {
     display: flex;
     align-items: center;
-    gap: 15px;
 }
 
-.notification-icon {
-    font-size: 18px;
-    cursor: pointer;
-    position: relative;
-}
-
-    .notification-icon::after {
-        content: '';
-        position: absolute;
-        top: -2px;
-        right: -2px;
-        width: 8px;
-        height: 8px;
-        background-color: #ff4757;
-        border-radius: 50%;
-    }
-
-.user-info {
-    display: flex;
-    align-items: center;
-}
-
-.user-avatar {
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    border: 2px solid #ddd;
-    object-fit: cover;
-    margin-right: 10px;
-}
-
-.user-name {
-    font-size: 14px;
-    color: #333;
-}
-
-/* Language Switch */
+/* Cải tiến phần chọn ngôn ngữ */
 .language-switch {
     display: flex;
     align-items: center;
-    background-color: #f1f1f1; /* N?n sáng, tinh t? */
-    border: 2px solid #ddd; /* Vi?n nh? */
-    border-radius: 25px; /* Bo tròn vi?n */
-    padding: 8px 20px;
+    margin-right: 20px;
     font-size: 16px;
-    font-weight: 500;
-    color: #333; /* Màu ch? ?en nh? */
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s ease;
+    color: #333;
+    width: 100px;
+    justify-content: center;
+    cursor: pointer; /* Chuyển thành pointer khi hover */
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
+    .language-switch:hover {
+        color: #3498db;
+        transform: scale(1.1); /* Hiệu ứng phóng to khi hover */
+    }
+
     .language-switch i {
-        margin-right: 10px;
-        font-size: 18px;
-        color: #007bff; /* Màu icon */
+        margin-right: 5px;
     }
 
     .language-switch span {
-        font-size: 16px;
-        color: #333; /* Màu ch? */
+        white-space: nowrap;
     }
 
-    /* Hi?u ?ng khi hover */
-    .language-switch:hover {
-        background-color: #e2e2e2; /* Màu n?n khi hover */
-        transform: scale(1.05); /* Phóng to nh? khi hover */
-    }
-
-    /* Hi?u ?ng khi click */
-    .language-switch:active {
-        transform: scale(0.98); /* Thu nh? khi click */
-    }
-
-
-
-/* Dropdown Menu */
-.dropdown-menu {
-    display: none;
-    background-color: #333;
-    padding: 10px 0;
-    border-radius: 5px;
-}
-
-    .dropdown-menu li {
-        padding: 10px 15px;
-    }
-
-        .dropdown-menu li a {
-            color: #dcdde1;
-            font-size: 14px;
-            padding: 8px 12px;
-            text-decoration: none;
-            display: block;
-            transition: background-color 0.3s;
-        }
-
-            .dropdown-menu li a:hover {
-                background-color: #444;
-                color: #ffffff;
-            }
-
-.dropdown > a {
+/* Cải tiến thông báo giống Facebook */
+.notification-icon {
+    font-size: 20px;
+    margin-right: 20px;
+    color: #333;
+    cursor: pointer;
     position: relative;
 }
 
-    .dropdown > a .arrow {
-        margin-left: auto;
-        transition: transform 0.3s;
-    }
-
-    .dropdown > a .rotate {
-        transform: rotate(180deg);
-    }
-
-/* Add some spacing for the top of the page */
-header {
-    margin-bottom: 20px;
+.notification-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    z-index: 1000;
+    padding: 10px 0;
 }
 
-/* Responsive for mobile */
+.notification-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.notification-item {
+    padding: 10px 15px;
+    border-bottom: 1px solid #f1f1f1;
+    color: #333;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    border-radius: 8px;
+}
+
+    .notification-item:hover {
+        background-color: #f4f6f9;
+        cursor: pointer;
+    }
+
+    .notification-item:last-child {
+        border-bottom: none;
+    }
+
+/* Cải tiến UI cho avatar và tên người dùng */
+.user-info {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #333;
+}
+
+.user-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+    .user-avatar:hover {
+        transform: scale(1.1);
+    }
+
+.user-name {
+    font-weight: 600;
+}
+
+/* Logout button */
+.logout-btn {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+    .logout-btn:hover {
+        background-color: #c0392b;
+    }
+
+/* Notification Popup Improvements */
+.notification-menu {
+    display: block; /* Khi cần hiển thị thông báo, chuyển sang block */
+    max-height: 400px;
+    overflow-y: auto;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.notification-item {
+    padding: 12px 18px; /* Cải thiện padding cho thông báo */
+    font-size: 17px; /* Cải thiện kích thước chữ */
+    border-radius: 10px;
+}
+
+    .notification-item:hover {
+        background-color: #eaf2f7;
+    }
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-    .sidebar {
-        width: 200px;
-        padding: 15px;
+    .dashboard-container {
+        flex-direction: column;
     }
 
-    .main-content {
-        margin-left: 200px;
+    .dashboard-sidebar {
+        width: 100%;
+        position: static;
+        height: auto;
+        border-radius: 0;
     }
 
-    .header-center {
-        max-width: 250px;
+    .dashboard-main {
+        margin-left: 0;
+    }
+
+    .header-left, .header-center, .header-right {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .search-bar {
+        width: 100%;
+    }
+
+    .language-switch, .notification-icon, .user-info {
+        margin-bottom: 10px;
     }
 }

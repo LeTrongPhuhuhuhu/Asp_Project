@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Admin Dashboard</title>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <link href="~/css/admin.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
@@ -11,85 +11,106 @@
 <body>
     <div class="dashboard-container">
         <!-- Sidebar -->
-        <aside class="sidebar">
-            <div class="logo">
+        <div class="dashboard-sidebar">
+            <div class="sidebar-logo">
                 <h2>6TL De Decor</h2>
             </div>
-            <ul class="menu">
+            <ul class="sidebar-menu">
                 <li>
-                    <a href="@Url.Action("Index", "Home")" class="active">
-                        <i class="fas fa-tachometer-alt"></i> Dashboard
+                    <a href="@Url.Action("Index", "Home")" class="sidebar-menu-item active">
+                        <i class="fas fa-home"></i> Dashboard
                     </a>
                 </li>
-                <li class="dropdown">
-                    <a href="javascript:void(0)">
-                        <i class="fas fa-shopping-cart"></i> Orders
-                        <i class="fas fa-chevron-down arrow"></i>
+                <li>
+                    <a href="@Url.Action("QuanLyDonHang", "Home")" class="sidebar-menu-item">
+                        <i class="fas fa-file-invoice"></i> Đơn hàng
                     </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">All Orders</a></li>
-                        <li><a href="#">Pending Orders</a></li>
+                </li>
+                <li>
+                    <a href="@Url.Action("QuanLySanPham", "Home")" class="sidebar-menu-item">
+                        <i class="fas fa-warehouse"></i> Kho
+                    </a>
+                </li>
+                <li>
+                    <a href="@Url.Action("QuanLyLienHe", "Home")" class="sidebar-menu-item">
+                        <i class="fas fa-address-book"></i> Liên hệ
+                    </a>
+                </li>
+                <li>
+                    <a href="@Url.Action("QuanLyDanhGia", "Home")" class="sidebar-menu-item">
+                        <i class="fas fa-star"></i> Đánh giá
+                    </a>
+                </li>
+                <li class="sidebar-dropdown">
+                    <a href="javascript:void(0)" class="sidebar-menu-item">
+                        <i class="fas fa-user-circle"></i> Tài khoản
+                        <i class="fas fa-chevron-down sidebar-arrow"></i>
+                    </a>
+                    <ul class="sidebar-dropdown-menu">
+                        <li><a href="#" class="sidebar-dropdown-item"><i class="fas fa-user-shield"></i> Tài khoản admin</a></li>
+                        <li><a href="#" class="sidebar-dropdown-item"><i class="fas fa-user"></i> Khách hàng</a></li>
                     </ul>
                 </li>
-                <li class="dropdown">
-                    <a href="javascript:void(0)">
-                        <i class="fas fa-box-open"></i> Products
-                        <i class="fas fa-chevron-down arrow"></i>
+                <li>
+                    <a href="@Url.Action("QuanLyDanhMuc", "Home")" class="sidebar-menu-item">
+                        <i class="fas fa-tags"></i> Danh mục
                     </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">All Products</a></li>
-                        <li><a href="#">Add Product</a></li>
-                    </ul>
                 </li>
-                <li><a href="@Url.Action("Reports", "Admin")"><i class="fas fa-chart-bar"></i> Sales Report</a></li>
-                <li><a href="@Url.Action("Messages", "Admin")"><i class="fas fa-envelope"></i> Messages</a></li>
-                <li><a href="@Url.Action("Settings", "Admin")"><i class="fas fa-cog"></i> Settings</a></li>
-                <li><a href="@Url.Action("Logout", "Account")"><i class="fas fa-sign-out-alt"></i> Sign Out</a></li>
+                <li>
+                    <a href="#" class="sidebar-menu-item logout">
+                        <i class="fas fa-sign-out-alt"></i> Đăng xuất
+                    </a>
+                </li>
             </ul>
-        </aside>
+        </div>
 
         <!-- Main Content -->
-        <main class="main-content">
-            <header>
+        <div class="dashboard-main">
+            <div class="dashboard-header">
                 <div class="header-left">
-                    <h1>@ViewData["Title"]</h1>
+                    <div class="header-title">@ViewData["Title"]</div>
                 </div>
                 <div class="header-center">
                     <div class="search-bar-container">
                         <input type="text" class="search-bar" placeholder="Search..." />
-                        <i class="fas fa-search search-icon"></i> <!-- Icon tìm kiếm -->
+                        <i class="fas fa-search search-icon"></i>
                     </div>
                 </div>
                 <div class="header-right">
-                    <!-- Nút chuyển ngôn ngữ -->
+                    <!-- Language switch button -->
                     <div class="language-switch">
-                        <i class="fas fa-globe"></i> <!-- Biểu tượng trái đất -->
+                        <i class="fas fa-globe"></i>
                         <span>English</span>
                     </div>
 
+                    <div class="notification-icon" onclick="toggleNotificationMenu()">
+                        <i class="fas fa-bell"></i>
+                    </div>
 
-                    <i class="fas fa-bell notification-icon"></i>
+
+                   
+
                     <div class="user-info">
                         <img src="https://cdn-icons-png.flaticon.com/128/1077/1077114.png" alt="User Avatar" class="user-avatar" />
                         <span class="user-name">Xin Chào Phu!</span>
                     </div>
                 </div>
-            </header>
-            <section>
-                @RenderBody()
-            </section>
-        </main>
+            </div>
+            <div class="dashboard-body">
+                @RenderBody() <!-- Main content injected here -->
+            </div>
+        </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
         $(document).ready(function () {
-            $(".dropdown > a").click(function () {
-                $(this).next(".dropdown-menu").slideToggle(200);
-                $(this).find(".arrow").toggleClass("rotate");
+            $(".sidebar-dropdown > a").click(function () {
+                $(this).next(".sidebar-dropdown-menu").slideToggle(200);
+                $(this).find(".sidebar-arrow").toggleClass("rotate");
             });
 
-            // Thêm sự kiện cho nút chuyển ngôn ngữ
+            // Language switch button
             document.querySelector('.language-switch').addEventListener('click', function () {
                 const langText = this.querySelector('span');
                 if (langText.textContent === 'English') {
@@ -98,8 +119,9 @@
                     langText.textContent = 'English';
                 }
             });
+
+           
         });
     </script>
-
 </body>
 </html>

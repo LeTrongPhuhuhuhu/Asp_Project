@@ -11,7 +11,7 @@ body {
 }
 
 /* Container chính */
-.container {
+.container-dm {
     width: 100%; /* Tăng chiều rộng lên 95% */
     max-width: 1400px; /* Tăng kích thước tối đa */
     margin: 20px auto; /* Giảm khoảng cách trên dưới */
@@ -30,14 +30,14 @@ header h1 {
 }
 
 /* Phần tìm kiếm */
-.search-category {
+.search-category-dm {
     display: flex;
     align-items: center; /* Căn giữa theo trục dọc */
     gap: 10px; /* Khoảng cách nhỏ hơn giữa các phần */
     margin-bottom: 20px;
 }
 
-    .search-category input {
+    .search-category-dm input {
         flex: 1;
         padding: 12px;
         font-size: 16px;
@@ -47,11 +47,11 @@ header h1 {
         transition: border-color 0.3s;
     }
 
-        .search-category input:focus {
+        .search-category-dm input:focus {
             border-color: #007BFF; /* Đổi màu viền khi focus */
         }
 
-    .search-category button {
+    .search-category-dm button {
         padding: 12px 20px;
         background-color: #007BFF;
         color: white;
@@ -62,22 +62,22 @@ header h1 {
         transition: background-color 0.3s;
     }
 
-        .search-category button:hover {
+        .search-category-dm button:hover {
             background-color: #0056b3;
         }
 
 /* Phần thêm danh mục */
-.add-category {
+.add-category-dm {
     margin-bottom: 30px;
 }
 
-    .add-category form {
+    .add-category-dm form {
         display: flex;
         gap: 10px;
     }
 
-    .add-category input,
-    .add-category select {
+    .add-category-dm input,
+    .add-category-dm select {
         flex: 1;
         padding: 12px;
         font-size: 16px;
@@ -85,7 +85,7 @@ header h1 {
         border-radius: 5px;
     }
 
-    .add-category button {
+    .add-category-dm button {
         padding: 12px 20px;
         background-color: #28a745;
         color: white;
@@ -95,32 +95,32 @@ header h1 {
         font-size: 16px;
     }
 
-        .add-category button:hover {
+        .add-category-dm button:hover {
             background-color: #218838;
         }
 
 /* Danh sách danh mục */
-.category-list table {
+.category-list-dm table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
     font-size: 16px;
 }
 
-.category-list th,
-.category-list td {
+.category-list-dm th,
+.category-list-dm td {
     padding: 12px 15px;
     border-bottom: 1px solid #ddd;
     text-align: left;
 }
 
-.category-list th {
+.category-list-dm th {
     background-color: #f4f4f4;
     color: #333;
     font-weight: bold;
 }
 
-.category-list td button {
+.category-list-dm td button {
     padding: 6px 12px;
     margin-right: 5px;
     font-size: 14px;
@@ -129,20 +129,20 @@ header h1 {
     cursor: pointer;
 }
 
-.edit-btn {
+.edit-btn-dm {
     background-color: #ffc107;
     color: white;
 }
 
-    .edit-btn:hover {
+    .edit-btn-dm:hover {
         background-color: #e0a800;
     }
 
-.delete-btn {
+.delete-btn-dm {
     background-color: #dc3545;
     color: white;
 }
 
-    .delete-btn:hover {
+    .delete-btn-dm:hover {
         background-color: #c82333;
     }
