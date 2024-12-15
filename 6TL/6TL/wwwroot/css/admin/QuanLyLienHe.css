@@ -21,26 +21,6 @@
     gap: 20px; /* Khoảng cách giữa các phần tử con */
 }
 
-h1_qllh {
-    font-size: 28px; /* Kích thước chữ */
-    font-weight: bold;
-    color: #777; /* Màu chữ xám */
-    text-align: center; /* Canh giữa tiêu đề */
-    margin-bottom: 20px; /* Khoảng cách dưới */
-    position: relative;
-    border-bottom: 2px solid #ddd; /* Viền dưới màu xám nhẹ */
-}
-
-h1_ql:after {
-    font-size: 28px; /* Kích thước chữ */
-    font-weight: bold;
-    color: #777; /* Màu chữ xám */
-    text-align: center; /* Canh giữa tiêu đề */
-    margin-bottom: 20px; /* Khoảng cách dưới */
-    position: relative;
-    border-bottom: 2px solid #ddd; /* Viền dưới màu xám nhẹ */
-}
-
 /* ========== Thanh Tìm Kiếm ========== */
 .search-bar_qllh {
     display: flex;
@@ -50,21 +30,22 @@ h1_ql:after {
     margin-bottom: 20px;
 }
 
-    .search-bar_qllh input {
+    .search-bar_qllh input,
+    .search-bar_qllh button {
         padding: 12px;
-        font-size: 16px;
         border-radius: 8px;
+        font-size: 16px;
         border: 1px solid #ccc;
+    }
+
+    .search-bar_qllh input {
         width: 70%;
     }
 
     .search-bar_qllh button {
-        padding: 10px 20px;
         background-color: #3498db;
         color: white;
         border: none;
-        border-radius: 8px;
-        font-size: 16px;
         cursor: pointer;
         transition: background-color 0.3s ease, transform 0.2s ease;
     }
@@ -87,6 +68,7 @@ h1_ql:after {
         text-align: center;
         border: 1px solid #e0e0e0;
         font-size: 16px;
+        border-radius: 8px;
     }
 
     .contact-table_qllh th {
@@ -97,10 +79,6 @@ h1_ql:after {
 
     .contact-table_qllh tr:hover {
         background-color: #ecf0f1;
-    }
-
-    .contact-table_qllh td {
-        font-size: 16px;
     }
 
 /* Nút Xem */
@@ -120,7 +98,6 @@ h1_ql:after {
     }
 
 /* ========== Popup ========== */
-/* Popup container */
 .popup_qllh {
     display: flex; /* Sử dụng flexbox để căn giữa */
     justify-content: center;
@@ -135,7 +112,6 @@ h1_ql:after {
     animation: popup-fade-in 0.3s ease-in-out; /* Thêm hiệu ứng xuất hiện */
 }
 
-/* Popup nội dung */
 .popup-content_qllh {
     background: white;
     padding: 30px;

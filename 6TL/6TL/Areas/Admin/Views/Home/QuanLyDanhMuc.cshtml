@@ -1,16 +1,14 @@
-﻿@{
-    Layout = "_Layout";
-}
+﻿
 <link href="~/css/admin/quanlydanhmuc.css" rel="stylesheet" />
 
 <!-- Quản lý danh mục -->
-<div class="container">
+<div class="container-dm">
     <header>
         <h1>Quản lý Danh mục Sản phẩm</h1>
     </header>
 
     <!-- Tìm kiếm danh mục -->
-    <section class="search-category">
+    <section class="search-category-dm">
         <h2>Tìm kiếm Danh mục</h2>
         <form action="#" method="GET">
             <input type="text" name="searchQuery" placeholder="Nhập tên danh mục cần tìm" required>
@@ -19,7 +17,7 @@
     </section>
 
     <!-- Thêm danh mục -->
-    <section class="add-category">
+    <section class="add-category-dm">
         <h2>Thêm Danh mục Mới</h2>
         <form action="#" method="POST">
             <input type="text" name="categoryName" placeholder="Tên danh mục" required>
@@ -33,7 +31,7 @@
     </section>
 
     <!-- Danh sách các danh mục -->
-    <section class="category-list">
+    <section class="category-list-dm">
         <h2>Danh sách Danh mục</h2>
         <table>
             <thead>
@@ -50,8 +48,8 @@
                     <td>Bàn</td>
                     <td>--</td>
                     <td>
-                        <button class="edit-btn">Sửa</button>
-                        <button class="delete-btn" onclick="confirmDelete('Bàn')">Xóa</button>
+                        <button class="edit-btn-dm">Sửa</button>
+                        <button class="delete-btn-dm" onclick="confirmDelete('Bàn')">Xóa</button>
                     </td>
                 </tr>
                 <tr>
@@ -59,8 +57,8 @@
                     <td>Ghế</td>
                     <td>--</td>
                     <td>
-                        <button class="edit-btn">Sửa</button>
-                        <button class="delete-btn" onclick="confirmDelete('Ghế')">Xóa</button>
+                        <button class="edit-btn-dm">Sửa</button>
+                        <button class="delete-btn-dm" onclick="confirmDelete('Ghế')">Xóa</button>
                     </td>
                 </tr>
                 <tr>
@@ -68,8 +66,8 @@
                     <td>Giường</td>
                     <td>Bàn</td>
                     <td>
-                        <button class="edit-btn">Sửa</button>
-                        <button class="delete-btn" onclick="confirmDelete('Giường')">Xóa</button>
+                        <button class="edit-btn-dm">Sửa</button>
+                        <button class="delete-btn-dm" onclick="confirmDelete('Giường')">Xóa</button>
                     </td>
                 </tr>
             </tbody>

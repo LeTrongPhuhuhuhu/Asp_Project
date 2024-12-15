@@ -2,8 +2,10 @@ wwwroot\css\admin.css
 wwwroot\css\admin\Dashboard.css
 wwwroot\css\admin\QuanLyAdmin.css
 wwwroot\css\admin\QuanLyChiTietDonHang.css
+wwwroot\css\admin\QuanLyDanhGia.css
 wwwroot\css\admin\QuanLyDanhMuc.css
 wwwroot\css\admin\QuanLyDonHang.css
+wwwroot\css\admin\QuanLyLienHe.css
 wwwroot\css\admin\QuanLySanPham.css
 wwwroot\css\admin\SuaSanPham.css
 wwwroot\css\admin\ThemSanPham.css
@@ -13,8 +15,10 @@ wwwroot\css\pages\ChiTietTinTuc.css
 wwwroot\css\pages\DangKy.css
 wwwroot\css\pages\DangNhap.css
 wwwroot\css\pages\DanhMucSanPham.css
+wwwroot\css\pages\GioHang.css
 wwwroot\css\pages\GioiThieu.css
 wwwroot\css\pages\LichSuMuaHang.css
+wwwroot\css\pages\LienHe.css
 wwwroot\css\pages\SanPham.css
 wwwroot\css\pages\SanPhamYeuThich.css
 wwwroot\css\pages\TinTuc.css
