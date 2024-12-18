@@ -148,3 +148,108 @@ header h1 {
         box-shadow: 0 4px 10px rgba(244, 67, 54, 0.3);
         transform: translateY(-2px);
     }
+/* Đảm bảo popup phủ toàn màn hình và căn giữa */
+.popup-overlay {
+    display: none; /* Ẩn popup mặc định */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+    .popup-overlay.show {
+        display: flex; /* Hiển thị popup khi thêm class 'show' */
+    }
+
+.popup-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    width: 500px; /* Tăng chiều rộng popup */
+    max-width: 90%;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    animation: slide-down 0.3s ease-out;
+}
+
+/* Hiệu ứng trượt xuống */
+@keyframes slide-down {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Nút trong popup */
+.popup-footer {
+    display: flex;
+    justify-content: center; /* Căn giữa các nút */
+    gap: 15px; /* Khoảng cách giữa các nút */
+    margin-top: 20px;
+}
+
+.popup-content button {
+    padding: 10px 20px;
+    border: none;
+    border-radius:30px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+    /* Nút lưu */
+    .popup-content button.btn-save {
+        background-color: #28a745; /* Màu xanh lá */
+        color: #fff;
+    }
+
+        .popup-content button.btn-save:hover {
+            background-color: #218838;
+            transform: scale(1.05); /* Phóng to nhẹ */
+        }
+
+    /* Nút hủy */
+    .popup-content button.btn-cancel {
+        background-color: #dc3545; /* Màu đỏ */
+        color: #fff;
+    }
+
+        .popup-content button.btn-cancel:hover {
+            background-color: #c82333;
+            transform: scale(1.05);
+        }
+
+/* Input trong popup */
+.popup-content input,
+.popup-content select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box; /* Đảm bảo padding không làm tăng kích thước */
+}
+
+    .popup-content input:focus,
+    .popup-content select:focus {
+        border-color: #007bff; /* Viền màu xanh khi focus */
+        outline: none;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+    }
+
+h4 {
+    text-align: center; /* Căn giữa tiêu đề popup */
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+

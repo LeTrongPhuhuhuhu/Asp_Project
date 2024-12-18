@@ -47,7 +47,7 @@
                     <td>Bàn</td>
                     <td>--</td>
                     <td>
-                        <button class="edit-btn-dm">Sửa</button>
+                        <button class="edit-btn-dm" onclick="openEditPopup('Bàn', '')">Sửa</button>
                         <button class="delete-btn-dm" onclick="deleteCategory('Bàn')">Xóa</button>
                     </td>
                 </tr>
@@ -56,7 +56,7 @@
                     <td>Ghế</td>
                     <td>--</td>
                     <td>
-                        <button class="edit-btn-dm">Sửa</button>
+                        <button class="edit-btn-dm" onclick="openEditPopup('Ghế', '')">Sửa</button>
                         <button class="delete-btn-dm" onclick="deleteCategory('Ghế')">Xóa</button>
                     </td>
                 </tr>
@@ -65,7 +65,7 @@
                     <td>Giường</td>
                     <td>Bàn</td>
                     <td>
-                        <button class="edit-btn-dm">Sửa</button>
+                        <button class="edit-btn-dm" onclick="openEditPopup('Giường', '1')">Sửa</button>
                         <button class="delete-btn-dm" onclick="deleteCategory('Giường')">Xóa</button>
                     </td>
                 </tr>
@@ -74,12 +74,55 @@
     </section>
 </div>
 
-
-
 <script>
+    // Xử lý xóa danh mục
     function deleteCategory(categoryName) {
         openConfirmPopup();
         // Thêm logic xóa ở đây nếu cần thiết
         console.log(`Danh mục "${categoryName}" đã bị xóa.`); // Chỉ để kiểm tra, bạn có thể xóa hoặc thay thế bằng logic thực sự
     }
+ </script>
+
+ <script>
+    function openEditPopup(categoryName, parentCategoryId) {
+        document.getElementById('editCategoryName').value = categoryName;
+        document.getElementById('editParentCategory').value = parentCategoryId;
+        document.getElementById('editPopup').classList.add('show');
+    }
+
+    function closeEditPopup() {
+        document.getElementById('editPopup').classList.remove('show');
+    }
+
+    document.getElementById('editCategoryForm').addEventListener('submit', function (event) {
+        event.preventDefault();
+        const categoryName = document.getElementById('editCategoryName').value;
+        const parentCategoryId = document.getElementById('editParentCategory').value;
+        console.log(`Đã lưu danh mục: ${categoryName}, Mã danh mục cha: ${parentCategoryId}`);
+        closeEditPopup();
+    });
+
 </script>
+
+<!-- Popup Sửa danh mục -->
+
+<div id="editPopup" class="popup-overlay">
+    <div class="popup-content">
+        <h4>Sửa Danh mục</h4>
+        <form id="editCategoryForm">
+            <input type="text" id="editCategoryName" placeholder="Tên danh mục" required>
+            <select id="editParentCategory">
+                <option value="">-- Chọn danh mục cha (nếu có) --</option>
+                <option value="1">Bàn</option>
+                <option value="2">Ghế</option>
+            </select>
+            <!-- Footer chứa nút Lưu và Hủy -->
+            <div class="popup-footer">
+                <button type="submit" class="btn-save">Cập nhật</button>
+                <button type="button" class="btn-cancel" onclick="closeEditPopup()">Hủy</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
