@@ -3,12 +3,10 @@
 	font-family: 'Montserrat', sans-serif;
 }/* Container chính */
 .container_ssp {
-	background: #fff;
-	padding: 30px 40px;
-	border-radius: 12px;
-	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-	width: 100%;
-	max-width: 1100px;
+	padding: 20px;
+	background-color: #f4f4f9; /* Màu nền nhẹ nhàng */
+	border-radius: 10px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 h2 {

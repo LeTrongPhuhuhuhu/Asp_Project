@@ -47,8 +47,8 @@
                         <i class="fas fa-chevron-down sidebar-arrow"></i>
                     </a>
                     <ul class="sidebar-dropdown-menu">
-                        <li><a href="#" class="sidebar-dropdown-item"><i class="fas fa-user-shield"></i> Tài khoản admin</a></li>
-                        <li><a href="#" class="sidebar-dropdown-item"><i class="fas fa-user"></i> Khách hàng</a></li>
+                        <li><a href="@Url.Action("QuanLyAdmin", "Home")" class="sidebar-dropdown-item"><i class="fas fa-user-shield"></i> Tài khoản admin</a></li>
+                        <li><a href="@Url.Action("QuanLyUser", "Home")" class="sidebar-dropdown-item"><i class="fas fa-user"></i> Khách hàng</a></li>
                     </ul>
                 </li>
                 <li>
@@ -98,6 +98,7 @@
             </div>
             <div class="dashboard-body">
                 @RenderBody() <!-- Main content injected here -->
+                @Html.Partial("_successPopup")
             </div>
         </div>
     </div>

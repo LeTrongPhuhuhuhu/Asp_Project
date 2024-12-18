@@ -42,6 +42,7 @@
                     <th>Tổng tiền</th>
                     <th>Trạng thái</th>
                     <th>Thao tác</th>
+                
                 </tr>
             </thead>
             <tbody>
@@ -56,114 +57,48 @@
                     <td>3,750,000 VND</td>
                     <td><span class="status success-qldh">Đã giao</span></td>
                     <td>
-                        <button class="btn-view toggle-detail" onclick="viewDetails('#123')"><i class="fas fa-eye"></i> Chi tiết</button>
+                        <div class="button-container">
+                            <button class="btn-view toggle-detail" onclick="viewDetails('#123')">Xem</button>
+                            <button class="btn-cancel" onclick="cancelOrder('#123')">Hủy</button>
+                        </div>
                     </td>
+
+
                 </tr>
                 <tr class="main-row">
-                    <td>#123</td>
-                    <td>Nguyễn Văn A</td>
-                    <td>09/11/2024</td>
-                    <td>Ghế Sofa</td>
-                    <td>1.500.000</td>
+                    <td>#124</td>
+                    <td>Nguyễn Văn B</td>
+                    <td>10/11/2024</td>
+                    <td>Bàn ăn</td>
+                    <td>2.000.000</td>
                     <td>1</td>
-                    <td>Tiền mặt</td>
-                    <td>3,750,000 VND</td>
+                    <td>Chuyển khoản</td>
+                    <td>2,000,000 VND</td>
                     <td><span class="status failed-qldh">Đã hủy</span></td>
                     <td>
-                        <button class="btn-view toggle-detail" onclick="viewDetails('#123')"><i class="fas fa-eye"></i> Chi tiết</button>
+                        <div class="button-container">
+                            <button class="btn-view toggle-detail" onclick="viewDetails('#123')">Xem</button>
+                            <button class="btn-cancel" onclick="cancelOrder('#123')">Hủy</button>
+                        </div>
                     </td>
-                </tr>
-                <tr class="main-row">
-                    <td>#123</td>
-                    <td>Nguyễn Văn A</td>
-                    <td>09/11/2024</td>
-                    <td>Ghế Sofa</td>
-                    <td>1.500.000</td>
-                    <td>1</td>
-                    <td>Tiền mặt</td>
-                    <td>3,750,000 VND</td>
-                    <td><span class="status success-qldh">Đã giao</span></td>
-                    <td>
-                        <button class="btn-view toggle-detail" onclick="viewDetails('#123')"><i class="fas fa-eye"></i> Chi tiết</button>
 
-                    </td>
+                
                 </tr>
-                <tr class="detail-row">
-                <tr class="main-row">
-                    <td>#123</td>
-                    <td>Nguyễn Văn A</td>
-                    <td>24/11/2024</td>
-                    <td>Ghế Sofa</td>
-                    <td>1.500.000</td>
-                    <td>1</td>
-                    <td>Tiền mặt</td>
-                    <td>3,750,000 VND</td>
-                    <td><span class="status success-qldh">Đã giao</span></td>
-                    <td>
-                        <button class="btn-view toggle-detail" onclick="viewDetails('#123')"><i class="fas fa-eye"></i> Chi tiết</button>
-
-                    </td>
-                </tr>
-                <tr class="main-row">
-                    <td>#123</td>
-                    <td>Nguyễn Văn A</td>
-                    <td>12/11/2024</td>
-                    <td>Ghế Sofa</td>
-                    <td>1.500.000</td>
-                    <td>1</td>
-                    <td>Tiền mặt</td>
-                    <td>3,750,000 VND</td>
-                    <td><span class="status success-qldh">Đã giao</span></td>
-                    <td>
-                        <button class="btn-view toggle-detail" onclick="viewDetails('#123')"><i class="fas fa-eye"></i> Chi tiết</button>
-
-                    </td>
-                </tr>
-                <tr class="main-row">
-                    <td>#123</td>
-                    <td>Nguyễn Văn A</td>
-                    <td>07/11/2024</td>
-                    <td>Ghế Sofa</td>
-                    <td>1.500.000</td>
-                    <td>1</td>
-                    <td>Tiền mặt</td>
-                    <td>3,750,000 VND</td>
-                    <td><span class="status failed-qldh">Đã hủy</span></td>
-                    <td>
-                        <button class="btn-view toggle-detail" onclick="viewDetails('#123')"><i class="fas fa-eye"></i> Chi tiết</button>
-                    </td>
-                </tr>
-                <tr class="main-row">
-                    <td>#123</td>
-                    <td>Nguyễn Văn A</td>
-                    <td>01/11/2024</td>
-                    <td>Ghế Sofa</td>
-                    <td>1.500.000</td>
-                    <td>1</td>
-                    <td>Tiền mặt</td>
-                    <td>3,750,000 VND</td>
-                    <td><span class="status success-qldh">Đã giao</span></td>
-                    <td>
-                        <button class="btn-view toggle-detail" onclick="viewDetails('#123')"><i class="fas fa-eye"></i> Chi tiết</button>
-
-                    </td>
-                </tr>
+                <!-- More rows... -->
             </tbody>
         </table>
     </div>
-    <div class="pagination-qldh">
-        <button class="page-btn-qldh">1</button>
-        <button class="page-btn-qldh">2</button>
-    </div>
+   
 
     <script>
-        //JavaScript để bật/tắt chi tiết đơn hàng
+        // JavaScript để bật/tắt chi tiết đơn hàng
         document.querySelectorAll('.toggle-detail').forEach(button => {
             button.addEventListener('click', () => {
                 const detailRow = button.closest('tr').nextElementSibling;
                 detailRow.style.display = detailRow.style.display === 'table-row' ? 'none' : 'table-row';
             });
         });
+
         document.getElementById('apply-filter-qldh').addEventListener('click', function () {
             const statusFilter = document.getElementById('filter-status').value.toLowerCase();
             const dateFilter = document.getElementById('filter-date').value; // yyyy-mm-dd
@@ -193,10 +128,24 @@
                 }
             });
         });
+
         function viewDetails(orderId) {
             // Điều hướng đến trang chi tiết đơn hàng, truyền mã đơn hàng qua URL
-            window.location.href = `https://localhost:7041/admin/Home/quanlychitietDonhang`;
+            window.location.href = `https://localhost:7041/admin/Home/quanlychitietDonhang?orderId=${orderId}`;
         }
+        // Hàm mở popup xác nhận và thay đổi nội dung
+function openConfirmPopup(message) {
+    const confirmPopup = document.getElementById('confirmPopup');
+    const popupContent = confirmPopup.querySelector('.popup-content h4');
+    popupContent.textContent = message; // Thay đổi nội dung của popup xác nhận
+    confirmPopup.style.display = 'flex'; // Hiển thị popup
+}
+
+        function cancelOrder(orderId) {
+
+            openConfirmPopup('Hủy đơn hàng thành công!')
+        }
+
         // Hàm lấy giá trị tham số từ URL
         function getQueryParam(param) {
             const urlParams = new URLSearchParams(window.location.search);
@@ -210,6 +159,15 @@
         if (orderId) {
             document.querySelector('.header').textContent = `CHI TIẾT ĐƠN HÀNG: ${orderId}`;
             // Thực hiện logic hiển thị thông tin chi tiết đơn hàng dựa trên orderId
+        }
+
+        function openPopup() {
+            document.getElementById('successPopup').style.display = 'flex';
+            setTimeout(closePopup, 3000); // Tự động đóng popup sau 3 giây
+        }
+
+        function closePopup() {
+            document.getElementById('successPopup').style.display = 'none';
         }
     </script>
 </body>

@@ -1,0 +1,69 @@
+﻿<style>
+    .pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        margin: 20px 0;
+        padding: 0;
+        list-style: none;
+    }
+
+        .pagination a {
+            text-decoration: none;
+            padding: 10px 15px;
+            border: 1px solid #B79858; /* Sử dụng màu viền chính */
+            border-radius: 5px;
+            font-size: 16px;
+            color: #000; /* Màu chữ đen */
+            background-color: #fff; /* Màu nền trắng */
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+            .pagination a:hover {
+                background-color: #B79858; /* Nền khi hover */
+                color: #fff; /* Màu chữ khi hover */
+                border-color: #B79858; /* Màu viền khi hover */
+            }
+
+            .pagination a.active {
+                background-color: #B79858; /* Nền cho trang đang được chọn */
+                color: #fff; /* Màu chữ */
+                border-color: #B79858; /* Màu viền */
+                font-weight: bold; /* Đậm hơn */
+            }
+
+            .pagination a.prev,
+            .pagination a.next {
+                font-size: 18px;
+                padding: 8px 12px;
+                font-weight: 500; /* Đậm hơn để tạo điểm nhấn */
+            }
+
+            .pagination a.disabled {
+                color: #ccc; /* Màu chữ khi bị vô hiệu hóa */
+                pointer-events: none;
+                background-color: #f9f9f9; /* Màu nền nhạt hơn */
+                border-color: #eee; /* Viền nhạt hơn */
+            }
+
+        /* Thêm hiệu ứng bóng mờ */
+        .pagination a {
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Bóng nhẹ */
+        }
+
+            .pagination a:hover {
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Bóng đậm hơn khi hover */
+            }
+</style>
+
+<div class="pagination">
+    <a href="#" class="prev">« Previous</a>
+    <a href="#" class="page-number active">1</a>
+    <a href="#" class="page-number">2</a>
+    <a href="#" class="page-number">3</a>
+    <a href="#" class="page-number">4</a>
+    <a href="#" class="page-number">5</a>
+    <a href="#" class="next">Next »</a>
+</div>

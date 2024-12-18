@@ -8,17 +8,11 @@
 
 /* ========== Container Chính ========== */
 .container_qllh {
-    width: 90%; /* Chiều rộng khung */
-    max-width: 1200px; /* Giới hạn chiều rộng */
-    margin: 40px auto; /* Căn giữa và tạo khoảng cách */
-    padding: 30px; /* Khoảng cách bên trong */
-    background-color: #ffffff; /* Nền trắng */
-    border-radius: 15px; /* Bo góc mềm mại */
-    border: 1px solid #ddd; /* Viền nhẹ */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Đổ bóng */
-    display: flex;
-    flex-direction: column;
-    gap: 20px; /* Khoảng cách giữa các phần tử con */
+
+ padding: 20px;
+    background-color: #f4f4f9; /* Màu nền nhẹ nhàng */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* ========== Thanh Tìm Kiếm ========== */
@@ -40,12 +34,14 @@
 
     .search-bar_qllh input {
         width: 70%;
+        border-radius: 30px;
     }
 
     .search-bar_qllh button {
         background-color: #3498db;
         color: white;
         border: none;
+        border-radius: 30px;
         cursor: pointer;
         transition: background-color 0.3s ease, transform 0.2s ease;
     }
@@ -84,9 +80,9 @@
 /* Nút Xem */
 .view-btn_qllh {
     padding: 8px 16px;
-    background-color: #28a745; /* Màu xanh lá cây */
+    background-color: #2196f3; /* Màu xanh lá cây */
     color: white;
-    border: 2px solid #16a085; /* Viền nút màu xanh lá cây */
+    border: 2px solid #2196f3; /* Viền nút màu xanh lá cây */
     border-radius: 30px;
     font-size: 14px;
     cursor: pointer;
@@ -94,7 +90,10 @@
 }
 
     .view-btn_qllh:hover {
-        background-color: #1abc9c;
+        background-color: #1976d2;
+        box-shadow: 0 4px 10px rgba(33, 150, 243, 0.3);
+        transform: translateY(-2px);
+        border: 2px solid #1976d2;
     }
 
 /* ========== Popup ========== */
@@ -188,7 +187,7 @@
     .popup-buttons_qllh button {
         padding: 12px 20px;
         border: none;
-        border-radius: 8px;
+        border-radius: 28px;
         font-size: 16px;
         cursor: pointer;
         transition: background-color 0.3s ease, transform 0.2s ease;
@@ -234,3 +233,19 @@
         opacity: 1;
     }
 }
+/* Nút Xóa */
+.delete-btn_qllh {
+    padding: 8px 16px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+    .delete-btn_qllh:hover {
+        background-color: #c0392b;
+        transform: scale(1.05);
+    }

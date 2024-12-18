@@ -1,9 +1,21 @@
 ﻿@{
     ViewData["Title"] = "ViewProfile";
 }
-    <title>Thông Tin Cá Nhân</title>
+<title>Thông Tin Cá Nhân</title>
 
-    <div class="viewProfile">
+<div class="profileContainer">
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="linkItem">
+            <a asp-controller="Home" asp-action="LichSuMuaHang">Lịch Sử Đơn Hàng</a>
+        </div>
+        <div class="linkItem">
+            <a asp-controller="Home" asp-action="SanPhamYeuThich">Danh Sách Yêu Thích</a>
+        </div>
+    </div>
+
+    <!-- Nội dung chính -->
+    <div class="mainContent">
         <h2>Thông Tin Cá Nhân</h2>
 
         <div class="formContainer">
@@ -39,16 +51,7 @@
                 <button>Save</button>
             </div>
         </div>
-
-        <div class="links">
-            <div class="linkItem">
-                <a href="#">Lịch Sử Đơn Hàng</a>
-                <span>&gt;</span>
-            </div>
-            <div class="linkItem">
-                <a href="#">Danh Sách Yêu Thích</a>
-                <span>&gt;</span>
-            </div>
-        </div>
     </div>
+</div>
+
 <link href="~/css/pages/viewprofile.css" rel="stylesheet" />

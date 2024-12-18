@@ -49,6 +49,10 @@
       "PackagePath": "staticwebassets\\css\\admin\\ThemSanPham.css"
     },
     {
+      "Id": "E:\\Asp_Project\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\popup.css",
+      "PackagePath": "staticwebassets\\css\\admin\\popup.css"
+    },
+    {
       "Id": "E:\\Asp_Project\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\ChiTietSanPham.css",
       "PackagePath": "staticwebassets\\css\\pages\\ChiTietSanPham.css"
     },
@@ -227,6 +231,18 @@
     {
       "Id": "E:\\Asp_Project\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\snapedit_1732430907358.png",
       "PackagePath": "staticwebassets\\img\\snapedit_1732430907358.png"
+    },
+    {
+      "Id": "E:\\Asp_Project\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\succes.json",
+      "PackagePath": "staticwebassets\\img\\succes.json"
+    },
+    {
+      "Id": "E:\\Asp_Project\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\successdelete.gif",
+      "PackagePath": "staticwebassets\\img\\successdelete.gif"
+    },
+    {
+      "Id": "E:\\Asp_Project\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\successdelete.webm",
+      "PackagePath": "staticwebassets\\img\\successdelete.webm"
     },
     {
       "Id": "E:\\Asp_Project\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\tintuc.jpg",

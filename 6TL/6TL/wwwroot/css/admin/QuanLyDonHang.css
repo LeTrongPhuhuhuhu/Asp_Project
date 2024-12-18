@@ -1,110 +1,99 @@
-﻿/* ========== Thiết Lập Chung ========== */
-* {
+﻿* {
     font-family: 'Montserrat', sans-serif;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
 
 /* ========== Container Chính ========== */
 .order-management {
-    padding: 30px;
-    background-color: #f4f4f9;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    max-width: 1200px;
-    margin: 30px auto;
+    padding: 20px;
+    background-color: #f4f4f9; /* Light background color */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
     .order-management h1 {
         color: #333;
-        font-size: 28px;
+        font-size: 26px;
         font-weight: bold;
         text-transform: uppercase;
+        letter-spacing: 1px;
         margin-bottom: 20px;
     }
 
-/* ========== Thanh Lọc Dữ Liệu ========== */
+/* ========== Bộ Lọc ========== */
 .filter-container {
     display: flex;
-    gap: 20px;
-    margin-bottom: 30px;
     justify-content: space-between;
     flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
 }
 
-.filter-item {
-    flex: 1;
-    min-width: 220px;
+.filter-item label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+    margin-right: 5px;
 }
 
-    .filter-item label {
-        font-size: 14px;
-        font-weight: bold;
-        margin-bottom: 5px;
-        display: block;
-        color: #555;
-    }
+.filter-item input,
+.filter-item select {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 20px; /* Rounded corners */
+    transition: box-shadow 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
 
-    .filter-item input,
-    .filter-item select {
-        width: 100%;
-        padding: 12px 15px;
-        font-size: 14px;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        transition: all 0.3s ease;
+    .filter-item input:focus,
+    .filter-item select:focus {
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        transform: translateY(-2px);
     }
-
-        .filter-item input:focus,
-        .filter-item select:focus {
-            border-color: #4CAF50;
-            box-shadow: 0 0 8px rgba(0, 128, 0, 0.2);
-        }
 
 #apply-filter-qldh {
-    background-color: #4CAF50;
+    background-color: #6c63ff;
     color: white;
-    padding: 12px 25px;
     border: none;
-    border-radius: 30px;
-    font-size: 14px;
+    padding: 10px 20px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
 }
 
     #apply-filter-qldh:hover {
-        background-color: #45a049;
+        background-color: #5c53d6;
+        box-shadow: 0 4px 15px rgba(108, 99, 255, 0.3);
         transform: translateY(-3px);
-        box-shadow: 0 4px 12px rgba(0, 128, 0, 0.3);
     }
 
-/* ========== Bảng Dữ Liệu Đơn Hàng ========== */
+/* ========== Bảng Đơn Hàng ========== */
 .order-table {
     width: 100%;
     border-collapse: collapse;
     background-color: #fff;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeIn_sp 0.5s ease forwards;
 }
 
     .order-table th,
     .order-table td {
         padding: 12px 15px;
-        text-align: left;
-        font-size: 14px;
-        color: #333;
+        text-align: center;
     }
 
     .order-table th {
         background-color: #f1f1f1;
-        font-weight: bold;
+        color: #333;
         text-transform: uppercase;
         letter-spacing: 1px;
+        position: sticky;
+        top: 0;
+        z-index: 2;
     }
 
     .order-table tbody tr {
@@ -113,91 +102,79 @@
     }
 
         .order-table tbody tr:hover {
-            background-color: #f9f9f9;
+            background-color: #e0f7fa;
             transform: scale(1.02);
         }
 
         .order-table tbody tr:nth-child(even) {
-            background-color: #fafafa;
+            background-color: #f9f9f9;
         }
 
 /* ========== Trạng Thái ========== */
 .status {
-    font-weight: bold;
     padding: 5px 10px;
-    border-radius: 20px;
-    display: inline-block;
-    color: #fff;
-    text-align: center;
-    min-width: 80px;
+    border-radius: 12px;
+    font-weight: bold;
+    color: white;
 }
 
     .status.success-qldh {
-        background-color: #28a745;
+        background-color: #4caf50; /* Green for success */
     }
 
     .status.failed-qldh {
-        background-color: #dc3545;
+        background-color: #f44336; /* Red for failure */
     }
 
-/* ========== Nút Xem Chi Tiết ========== */
-.btn-view {
-    background-color: #007bff;
-    color: white;
-    padding: 8px 16px;
+/* ========== Nút Chi Tiết ========== */
+/* Container for the buttons */
+.button-container {
+    display: flex;
+    gap: 10px; /* Space between the buttons */
+    justify-content: flex-start; /* Align buttons to the left */
+}
+
+/* Styling for individual buttons */
+.btn-view,
+.btn-cancel {
+    padding: 10px 15px;
     border: none;
-    border-radius: 25px;
+    border-radius: 30px;
     cursor: pointer;
-    font-size: 14px;
-    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+/* Button View Style */
+.btn-view {
+    background-color: #2196f3;
+    color: white;
 }
 
     .btn-view:hover {
-        background-color: #0056b3;
-        transform: translateY(-3px);
-        box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+        background-color: #1976d2;
+        box-shadow: 0 4px 10px rgba(33, 150, 243, 0.3);
+        transform: translateY(-2px);
     }
 
-/* ========== Pagination ========== */
-.pagination-qldh {
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
+/* Button Cancel Style */
+.btn-cancel {
+    background-color: #ed1e1e;
+    color: white;
 }
 
-.page-btn-qldh {
-    padding: 10px 20px;
-    margin: 0 5px;
-    border: 1px solid #ddd;
-    border-radius: 30px;
-    background-color: #fff;
-    color: #333;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-    .page-btn-qldh:hover {
-        background-color: #007bff;
-        color: white;
-        transform: translateY(-3px);
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    .btn-cancel:hover {
+        background-color: #d32f2f;
+        box-shadow: 0 4px 10px rgba(237, 30, 30, 0.3);
+        transform: translateY(-2px);
     }
 
-    .page-btn-qldh.active {
-        background-color: #007bff;
-        color: white;
-    }
 
 /* ========== Hiệu Ứng Mờ Dần Khi Tải Bảng ========== */
-@keyframes fadeIn {
+@keyframes fadeIn_sp {
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-.order-table {
-    opacity: 0;
-    transform: translateY(10px);
-    animation: fadeIn 0.5s ease forwards;
-}

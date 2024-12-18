@@ -1,19 +1,20 @@
-﻿
-<link href="~/css/admin/QuanLyAdmin.css" rel="stylesheet" />
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+﻿<link href="~/css/admin/QuanLyAdmin.css" rel="stylesheet" />
 
 <div class="content">
     <h1>Quản lý tài khoản Khách Hàng</h1>
     <div class="controls">
         <div>
-            <input type="text" placeholder="Tìm kiếm...">
-            <select>
+            <button class="btn" id="addNewBtn">Thêm mới</button>
+        </div>
+        <div>
+            <input type="text" placeholder="Tìm kiếm..." class="form-control d-inline-block w-auto">
+            <select class="form-select d-inline-block w-auto">
                 <option>Hoạt động</option>
                 <option>Không hoạt động</option>
             </select>
         </div>
-
     </div>
+
     <table>
         <thead>
             <tr>
@@ -27,104 +28,123 @@
         </thead>
         <tbody>
             <tr>
-                <td>2</td>
-                <td>thuongyahoo365@gmail.com1</td>
+                <td>1</td>
+                <td>customer1@gmail.com</td>
                 <td>0123456789</td>
                 <td>User</td>
-                <td>Không hoạt động</td>
+                <td>Hoạt động</td>
                 <td>
-                    <button class="btn btn-warning"><i class="fa-solid fa-wrench"></i></button>
+                    <button class="edit-button">Sửa</button>
+                    <button onclick="openPopup()" class="delete-button">Xóa</button>
                 </td>
             </tr>
             <tr>
                 <td>2</td>
-                <td>thuongyahoo365@gmail.com</td>
-                <td>0123456789</td>
+                <td>customer2@gmail.com</td>
+                <td>0987654321</td>
                 <td>User</td>
                 <td>Không hoạt động</td>
-                <td><button class="btn btn-warning"><i class="fa-solid fa-wrench"></i></button></td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>thuongyahoo365@gmail.com</td>
-                <td>0123456789</td>
-                <td>User</td>
-                <td>Không hoạt động</td>
-                <td><button class="btn btn-warning"><i class="fa-solid fa-wrench"></i></button></td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>thuongyahoo365@gmail.com</td>
-                <td>0123456789</td>
-                <td>User</td>
-                <td>Không hoạt động</td>
-                <td><button class="btn btn-warning"><i class="fa-solid fa-wrench"></i></button></td>
+                <td>
+                    <button class="edit-button">Sửa</button>
+                    <button onclick="openPopup()" class="delete-button">Xóa</button>
+                </td>
             </tr>
         </tbody>
     </table>
-    <div class="footer">
-        Tất cả (4) | User (4)
+
+    <div class="footer mt-3">
+        Tất cả (2) | User (2)
     </div>
 </div>
-<!-- Modal -->
-<div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="editModalLabel">Chỉnh sửa tài khoản</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+<!-- Modal for Add/Edit -->
+<div class="modal-overlay" id="editModal">
+    <div class="modal">
+        <button class="close-btn" onclick="closeModal()">×</button>
+        <h2>Chỉnh sửa tài khoản</h2>
+        <form id="editForm">
+            <div class="mb-3">
+                <label for="editEmail" class="form-label">Email</label>
+                <input type="email" class="form-control" id="editEmail" required>
             </div>
-            <div class="modal-body">
-                <form id="editForm">
-                    <div class="mb-3">
-                        <label for="editRole" class="form-label">Vai trò</label>
-                        <select class="form-select" id="editRole">
-                            <option value="Admin">Admin</option>
-                            <option value="User">User</option>
-                        </select>
-                    </div>
-                </form>
+            <div class="mb-3">
+                <label for="editPhone" class="form-label">Số điện thoại</label>
+                <input type="text" class="form-control" id="editPhone" required>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
-                <button type="button" class="btn btn-primary" id="saveChanges">Lưu thay đổi</button>
+            <div class="mb-3">
+                <label for="editRole" class="form-label">Vai trò</label>
+                <select class="form-select" id="editRole">
+                    <option value="Admin">Admin</option>
+                    <option value="User">User</option>
+                </select>
             </div>
-        </div>
+            <div class="mb-3">
+                <label for="editStatus" class="form-label">Trạng thái</label>
+                <select class="form-select" id="editStatus">
+                    <option value="Hoạt động">Hoạt động</option>
+                    <option value="Không hoạt động">Không hoạt động</option>
+                </select>
+            </div>
+            <button type="button" class="btn" id="saveChanges">Lưu thay đổi</button>
+        </form>
     </div>
 </div>
+
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-        const editButtons = document.querySelectorAll('.btn-warning');
-        const modal = new bootstrap.Modal(document.getElementById('editModal'));
+        const editButtons = document.querySelectorAll('.edit-button');
+        const modal = document.getElementById('editModal');
+        const emailField = document.getElementById('editEmail');
+        const phoneField = document.getElementById('editPhone');
         const roleField = document.getElementById('editRole');
+        const statusField = document.getElementById('editStatus');
 
         editButtons.forEach(button => {
             button.addEventListener('click', function () {
-                // Lấy dữ liệu từ hàng tương ứng
                 const row = this.closest('tr');
+                const email = row.children[1].innerText;
+                const phone = row.children[2].innerText;
                 const role = row.children[3].innerText;
+                const status = row.children[4].innerText;
 
-                // Đổ dữ liệu vào modal
+                emailField.value = email;
+                phoneField.value = phone;
                 roleField.value = role;
+                statusField.value = status;
 
-                // Hiển thị modal
-                modal.show();
+                modal.style.display = 'flex';
             });
+        });
+
+        document.getElementById('addNewBtn').addEventListener('click', () => {
+            emailField.value = '';
+            phoneField.value = '';
+            roleField.value = 'User';
+            statusField.value = 'Hoạt động';
+
+            modal.style.display = 'flex';
         });
 
         document.getElementById('saveChanges').addEventListener('click', function () {
-            // Lưu dữ liệu đã chỉnh sửa
-            const updatedRole = roleField.value;
-
-            // Xử lý cập nhật dữ liệu tại đây
             console.log('Updated Data:', {
-                role: updatedRole,
+                email: emailField.value,
+                phone: phoneField.value,
+                role: roleField.value,
+                status: statusField.value
             });
-
-            // Đóng modal
-            modal.hide();
+            closeModal();
         });
     });
+
+    function closeModal() {
+        document.getElementById('editModal').style.display = 'none';
+    }
+      function openPopup() {
+        document.getElementById('successPopup').style.display = 'flex';
+        setTimeout(closePopup, 3000); // Tự động đóng popup sau 3 giây
+    }
+
+    function closePopup() {
+        document.getElementById('successPopup').style.display = 'none';
+    }
 </script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>

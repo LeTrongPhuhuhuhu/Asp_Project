@@ -12,13 +12,10 @@ body {
 
 /* Container chính */
 .container-dm {
-    width: 100%; /* Tăng chiều rộng lên 95% */
-    max-width: 1400px; /* Tăng kích thước tối đa */
-    margin: 20px auto; /* Giảm khoảng cách trên dưới */
-    background-color: #ffffff;
-    padding: 25px; /* Tăng padding bên trong */
+    padding: 20px;
+    background-color: #f4f4f9; /* Màu nền nhẹ nhàng */
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Tiêu đề */
@@ -82,15 +79,16 @@ header h1 {
         padding: 12px;
         font-size: 16px;
         border: 1px solid #ddd;
-        border-radius: 5px;
+        border-radius: 30px;
     }
 
     .add-category-dm button {
         padding: 12px 20px;
         background-color: #28a745;
         color: white;
+
         border: none;
-        border-radius: 5px;
+        border-radius: 30px;
         cursor: pointer;
         font-size: 16px;
     }
@@ -121,28 +119,32 @@ header h1 {
 }
 
 .category-list-dm td button {
-    padding: 6px 12px;
-    margin-right: 5px;
-    font-size: 14px;
+    padding: 10px 16px;
     border: none;
-    border-radius: 5px;
+    border-radius: 20px; /* Bo tròn nút Sửa và Xóa */
     cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 .edit-btn-dm {
-    background-color: #ffc107;
+    background-color: #ff9800;
     color: white;
 }
 
     .edit-btn-dm:hover {
-        background-color: #e0a800;
+        background-color: #e68a00;
+        box-shadow: 0 4px 10px rgba(255, 152, 0, 0.3);
+        transform: translateY(-2px);
     }
 
 .delete-btn-dm {
-    background-color: #dc3545;
+    background-color: #f44336;
     color: white;
 }
 
     .delete-btn-dm:hover {
-        background-color: #c82333;
+        background-color: #d32f2f;
+        box-shadow: 0 4px 10px rgba(244, 67, 54, 0.3);
+        transform: translateY(-2px);
     }
