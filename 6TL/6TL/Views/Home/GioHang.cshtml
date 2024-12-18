@@ -129,12 +129,8 @@
             <button onclick="window.location.href='/san-pham'">Quay lại mua sắm</button>
         </div>
 
-        <!-- Phần phân trang (pagination) -->
-        <div class="pagination">
-            <a href="#">1</a>
-            <a href="#">2</a>
-            <a href="#">3</a>
-        </div>
+        @Html.Partial("~/Views/Shared/_Pagination.cshtml")
+
     </main>
 
     <script>

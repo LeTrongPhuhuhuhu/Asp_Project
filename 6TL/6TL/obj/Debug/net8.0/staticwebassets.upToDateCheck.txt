@@ -1,5 +1,6 @@
 wwwroot\css\admin.css
 wwwroot\css\admin\Dashboard.css
+wwwroot\css\admin\popup.css
 wwwroot\css\admin\QuanLyAdmin.css
 wwwroot\css\admin\QuanLyChiTietDonHang.css
 wwwroot\css\admin\QuanLyDanhGia.css
@@ -54,6 +55,9 @@ wwwroot\img\noithat6tc.jpg
 wwwroot\img\placeholder.jpg
 wwwroot\img\salebanner.jpg
 wwwroot\img\snapedit_1732430907358.png
+wwwroot\img\succes.json
+wwwroot\img\successdelete.gif
+wwwroot\img\successdelete.webm
 wwwroot\img\tintuc.jpg
 wwwroot\img\tintuc.png
 wwwroot\img\tintuc1.jpg

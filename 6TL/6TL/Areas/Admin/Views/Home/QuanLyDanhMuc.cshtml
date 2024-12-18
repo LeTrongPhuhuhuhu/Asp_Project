@@ -1,5 +1,4 @@
-﻿
-<link href="~/css/admin/quanlydanhmuc.css" rel="stylesheet" />
+﻿<link href="~/css/admin/quanlydanhmuc.css" rel="stylesheet" />
 
 <!-- Quản lý danh mục -->
 <div class="container-dm">
@@ -49,7 +48,7 @@
                     <td>--</td>
                     <td>
                         <button class="edit-btn-dm">Sửa</button>
-                        <button class="delete-btn-dm" onclick="confirmDelete('Bàn')">Xóa</button>
+                        <button class="delete-btn-dm" onclick="deleteCategory('Bàn')">Xóa</button>
                     </td>
                 </tr>
                 <tr>
@@ -58,7 +57,7 @@
                     <td>--</td>
                     <td>
                         <button class="edit-btn-dm">Sửa</button>
-                        <button class="delete-btn-dm" onclick="confirmDelete('Ghế')">Xóa</button>
+                        <button class="delete-btn-dm" onclick="deleteCategory('Ghế')">Xóa</button>
                     </td>
                 </tr>
                 <tr>
@@ -67,7 +66,7 @@
                     <td>Bàn</td>
                     <td>
                         <button class="edit-btn-dm">Sửa</button>
-                        <button class="delete-btn-dm" onclick="confirmDelete('Giường')">Xóa</button>
+                        <button class="delete-btn-dm" onclick="deleteCategory('Giường')">Xóa</button>
                     </td>
                 </tr>
             </tbody>
@@ -75,10 +74,12 @@
     </section>
 </div>
 
+
+
 <script>
-    function confirmDelete(categoryName) {
-        if (confirm(`Bạn có chắc chắn muốn xóa danh mục "${categoryName}"?`)) {
-            // Xử lý logic xóa
-        }
+    function deleteCategory(categoryName) {
+        openConfirmPopup();
+        // Thêm logic xóa ở đây nếu cần thiết
+        console.log(`Danh mục "${categoryName}" đã bị xóa.`); // Chỉ để kiểm tra, bạn có thể xóa hoặc thay thế bằng logic thực sự
     }
 </script>

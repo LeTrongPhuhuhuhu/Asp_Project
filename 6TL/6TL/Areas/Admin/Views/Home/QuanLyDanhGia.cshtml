@@ -1,13 +1,25 @@
 ﻿<link href="~/css/admin/quanlydanhgia.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
 <section class="review-management">
+    <!-- Product List with Filter -->
     <div class="product-list">
         <h2>Sản phẩm</h2>
-        <ul>
+        <div class="sort-filter">
+            <button class="filter-btn" onclick="sortProducts('desc')">
+                <i class="fas fa-arrow-up"></i> Cao nhất
+            </button>
+            <button class="filter-btn" onclick="sortProducts('asc')">
+                <i class="fas fa-arrow-down"></i> Thấp nhất
+            </button>
+        </div>
+
+        <ul id="productList">
             <li>
                 <div class="product-item">
-                    <img src="https://via.placeholder.com/50" alt="Mì tương đen" />
+                    <img src="https://via.placeholder.com/50" alt="Ghế Sofa barcarat" />
                     <div>
-                        <h3>Mì tương đen</h3>
+                        <h3>Ghế Sofa barcarat</h3>
                         <p>79,000₫</p>
                         <div class="rating">★★★★★</div>
                         <p>Đã bán: 0</p>
@@ -16,9 +28,9 @@
             </li>
             <li>
                 <div class="product-item">
-                    <img src="https://via.placeholder.com/50" alt="Bánh trà xanh" />
+                    <img src="https://via.placeholder.com/50" alt="Thảm xanh thẳm" />
                     <div>
-                        <h3>Bánh trà xanh</h3>
+                        <h3>Thảm xanh thẳm</h3>
                         <p>55,000₫</p>
                         <div class="rating">★★★★</div>
                         <p>Đã bán: 12</p>
@@ -27,9 +39,9 @@
             </li>
             <li>
                 <div class="product-item">
-                    <img src="https://via.placeholder.com/50" alt="Bánh pho mát" />
+                    <img src="https://via.placeholder.com/50" alt="Bàn gỗ mun" />
                     <div>
-                        <h3>Bánh pho mát</h3>
+                        <h3>Bàn gỗ mun</h3>
                         <p>120,000₫</p>
                         <div class="rating">★★★★★</div>
                         <p>Đã bán: 45</p>
@@ -38,6 +50,8 @@
             </li>
         </ul>
     </div>
+
+    <!-- Review Section -->
     <div class="review-section">
         <h2>Đánh giá</h2>
         <div class="rating-filter">
@@ -54,9 +68,10 @@
                     <div>
                         <strong>John Doe</strong>
                         <p>2024-09-01</p>
+                        <span class="user-rating">★★★★★</span>
                     </div>
                 </div>
-                <p>Rất ngon! Hương vị tuyệt vời.</p>
+                <p>Ghế đẹp, chất liệu tuyệt vời.</p>
                 <div class="reply">
                     <a href="#">Phản hồi</a>
                 </div>
@@ -67,22 +82,10 @@
                     <div>
                         <strong>Jane Smith</strong>
                         <p>2024-08-30</p>
+                        <span class="user-rating">★★★★</span>
                     </div>
                 </div>
                 <p>Sản phẩm đáng giá, nhưng đóng gói chưa tốt.</p>
-                <div class="reply">
-                    <a href="#">Phản hồi</a>
-                </div>
-            </div>
-            <div class="review-item">
-                <div class="review-header">
-                    <img src="https://via.placeholder.com/40" alt="User Avatar" />
-                    <div>
-                        <strong>Alex Nguyen</strong>
-                        <p>2024-08-25</p>
-                    </div>
-                </div>
-                <p>Khác biệt và ngon miệng, rất hài lòng.</p>
                 <div class="reply">
                     <a href="#">Phản hồi</a>
                 </div>
@@ -91,91 +94,55 @@
     </div>
 </section>
 
-<style>
-    .review-management {
-        display: flex;
-        gap: 20px;
-        padding: 20px;
-    }
+<div class="chart-section">
+    <canvas id="ratingChart"></canvas>
+</div>
 
-    .product-list, .review-section {
-        flex: 1;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        padding: 15px;
-        background-color: #f9f9f9;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .product-item {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        margin-bottom: 10px;
-    }
-
-        .product-item img {
-            border-radius: 8px;
-            border: 1px solid #ddd;
-        }
-
-    .rating {
-        color: #ffc107;
-        font-size: 14px;
-    }
-
-    .rating-filter {
-        display: flex;
-        gap: 10px;
-        margin-bottom: 15px;
-    }
-
-        .rating-filter button {
-            padding: 5px 10px;
-            background-color: #e0e0e0;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-            .rating-filter button:hover {
-                background-color: #ffc107;
-                color: white;
-            }
-
-    .review-item {
-        border-top: 1px solid #ddd;
-        padding-top: 10px;
-        margin-top: 10px;
-    }
-
-    .review-header {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
-
-        .review-header img {
-            border-radius: 50%;
-        }
-
-    .reply a {
-        color: #007bff;
-        text-decoration: none;
-    }
-
-        .reply a:hover {
-            text-decoration: underline;
-        }
-</style>
-
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
-    document.querySelectorAll('.rating-filter button').forEach(button => {
-        button.addEventListener('click', function () {
-            const rating = this.textContent.split(' ')[0]; // Lấy số sao
-            alert(`Lọc các đánh giá ${rating} sao`);
-            // Logic lọc danh sách đánh giá tại đây
-        });
+  
+      function sortProducts(order) {
+          const productList = document.getElementById("productList");
+          const items = Array.from(productList.children);
+
+          // Sắp xếp dựa vào giá sản phẩm
+          items.sort((a, b) => {
+              const priceA = parseInt(a.querySelector('p').textContent.replace(/[^0-9]/g, ''));
+              const priceB = parseInt(b.querySelector('p').textContent.replace(/[^0-9]/g, ''));
+              return order === 'asc' ? priceA - priceB : priceB - priceA;
+          });
+
+          // Xóa danh sách cũ và thêm danh sách mới
+          productList.innerHTML = '';
+          items.forEach(item => productList.appendChild(item));
+
+          // Thêm trạng thái nút lọc
+          document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+          const activeBtn = order === 'asc' ? document.querySelector('.filter-btn:nth-child(2)') : document.querySelector('.filter-btn:nth-child(1)');
+          activeBtn.classList.add('active');
+      }
+
+
+
+    // Chart
+    const ctx = document.getElementById('ratingChart').getContext('2d');
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['5 Sao', '4 Sao', '3 Sao', '2 Sao', '1 Sao'],
+            datasets: [{
+                label: 'Số lượng đánh giá',
+                data: [10, 7, 5, 3, 1],
+                backgroundColor: ['#4caf50', '#8bc34a', '#ffc107', '#ff9800', '#f44336'],
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: { legend: { display: false } },
+            scales: {
+                x: { title: { display: true, text: 'Mức đánh giá' } },
+                y: { beginAtZero: true, title: { display: true, text: 'Số lượng' } }
+            }
+        }
     });
 </script>

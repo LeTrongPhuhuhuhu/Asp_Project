@@ -1,77 +1,184 @@
-﻿* {
+﻿/* Toàn bộ trang */
+* {
     font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-    .order-history {
-        width: 100%;
-        border-collapse: collapse;
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 20px;
+}
+
+/* Lịch sử mua hàng */
+h2 {
+    text-align: center;
+    color: #B79858;
+    font-size: 30px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+/* Thanh tìm kiếm */
+.search-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+    .search-container input {
+        padding: 10px 15px;
+        font-size: 16px;
+        border-radius: 20px;
+        border: 1px solid #ddd;
+        width: 60%;
+        max-width: 450px;
+        transition: border-color 0.3s ease;
+        background-color: #fff;
     }
 
-        .order-history th, .order-history td {
-            padding: 12px;
-            border: 1px solid #ddd;
-            text-align: left;
+        .search-container input:focus {
+            border-color: #B79858;
+            outline: none;
         }
 
-        .order-history th {
-            background-color: #f4f4f4;
-        }
+/* Bảng lịch sử mua hàng */
+.order-history {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+    .order-history th,
+    .order-history td {
+        padding: 12px;
+        border: 1px solid #ddd;
+        text-align: left;
+        font-size: 14px;
+    }
+* Hiệu ứng hover cho bảng */
+.order-history tbody tr:hover {
+    background-color: #f1f1f1;
+    transition: background-color 0.3s ease;
+}
+
+    .order-history th {
+        background-color: #f8f8f8;
+        color: #B79858;
+        font-weight: bold;
+    }
+
+    .order-history td {
+        background-color: #f9f9f9;
+    }
+
+.status {
+    font-weight: bold;
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 5px;
+}
 
     .status.processing {
         color: orange;
+        background-color: rgba(255, 165, 0, 0.1);
     }
 
     .status.completed {
         color: green;
+        background-color: rgba(0, 128, 0, 0.1);
     }
 
-    /* Modal */
-    .modal {
-        display: none;
-        position: fixed;
-        z-index: 1;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        overflow: auto;
-        background-color: rgb(0, 0, 0);
-        background-color: rgba(0, 0, 0, 0.4);
-        padding-top: 60px;
+/* Nút Xem chi tiết và Đánh giá */
+.actions {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+    .actions button {
+        background-color: #B79858;
+        color: #fff;
+        padding: 8px 12px;
+        font-size: 14px;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 5px;
     }
 
-    .modal-content {
-        background-color: #fefefe;
-        margin: 5% auto;
-        padding: 20px;
-        border: 1px solid #888;
-        width: 80%;
-    }
-
-    .close {
-        color: #aaa;
-        float: right;
-        font-size: 28px;
-        font-weight: bold;
-    }
-
-        .close:hover,
-        .close:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
+        .actions button i {
+            font-size: 14px;
         }
 
-    /* Phân trang */
-    .pagination {
-        text-align: center;
-        margin-top: 20px;
+    .actions .view-btn {
+        background-color: #B79858;
     }
 
-        .pagination button {
-            padding: 10px 20px;
-            margin: 0 5px;
-        }
+    .actions .review-btn {
+        background-color: #ff8c00;
+    }
 
-        .pagination span {
-            margin: 0 10px;
-        }
+    .actions button:hover {
+        background-color: #a47a4f;
+    }
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+/* Modal */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 25px;
+    border: 1px solid #888;
+    width: 60%;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.order-details ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+    .order-details ul li {
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+
+.order-details p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+    }

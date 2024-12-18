@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+	<link href="~/css/admin/popup.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Popup Xác nhận -->
+    <div id="confirmPopup" class="popup-overlay">
+        <div class="popup-content">
+       
+            <h4>Bạn có chắc chắn muốn xóa không?</h4>
+            <button onclick="confirmDelete()">OK</button>
+            <button onclick="closeConfirmPopup()">Hủy</button>
+        </div>
+    </div>
+
+    <!-- Popup Xóa thành công -->
+    <div id="successPopup" class="popup-overlay">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closeSuccessPopup()">×</span>
+          
+            <h4>Đã xóa thành công!</h4>
+            <img src="~/img/successdelete.gif" alt="Success GIF" />
+        </div>
+    </div>
+
+ 
+
+    <script>
+        // Mở popup xác nhận
+        function openConfirmPopup() {
+            document.getElementById('confirmPopup').style.display = 'flex';
+        }
+
+        // Đóng popup xác nhận
+        function closeConfirmPopup() {
+            document.getElementById('confirmPopup').style.display = 'none';
+        }
+
+        // Xác nhận xóa
+        function confirmDelete() {
+            closeConfirmPopup(); // Đóng popup xác nhận
+            setTimeout(() => {
+                openSuccessPopup(); // Mở popup thành công
+            }, 300); // Chờ một chút trước khi hiển thị popup thành công
+        }
+
+        // Mở popup thành công
+        function openSuccessPopup() {
+            const popup = document.getElementById('successPopup');
+            popup.style.display = 'flex';
+            setTimeout(closeSuccessPopup, 1700); // Tự động đóng sau 3 giây
+        }
+
+        // Đóng popup thành công
+        function closeSuccessPopup() {
+            const popup = document.getElementById('successPopup');
+            popup.style.display = 'none';
+        }
+    </script>
+</body>
+</html>

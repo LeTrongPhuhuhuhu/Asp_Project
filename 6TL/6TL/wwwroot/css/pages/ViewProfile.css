@@ -1,141 +1,129 @@
-﻿* {
-    font-family: 'Montserrat', sans-serif;
-}
-.viewProfile main {
+﻿/* Container tổng thể */
+.profileContainer {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: calc(100vh - 80px);
+    min-height: 100vh;
+    width:100vw;
+    background-color: #f9f9f9;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
     padding: 20px;
-}
-
-.viewProfile html {
-    font-size: 14px;
-}
-
-@media (min-width: 768px) {
-    .viewProfile html {
-        font-size: 16px;
-    }
-}
-
-.viewProfile .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-.viewProfile html {
-    position: relative;
-    min-height: 100%;
-}
-
-.viewProfile body {
-    margin-bottom: 60px;
-}
-.viewProfile * {
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-.viewProfile h2 {
-    display: flex;
-    align-items: center;
-    font-weight: 600;
-    font-size: 24px;
-}
-
-    .viewProfile h2:before,
-    .viewProfile h2:after {
-        content: " ";
-        flex-grow: 1;
-        height: 1px;
-        background: #ccc;
-        margin: 0 10px;
-    }
-
-.viewProfile .formContainer {
-    width: 1000px;
-    height: 700px;
-    max-width: 1200px;
-    padding: 32px;
-    border-radius: 8px;
-    background-color: #faf0f0;
-    margin: 20px auto;
-}
-
-.formGroup {
-    margin-left: 12%;
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
+    gap: 15px;
+    border-right: 1px solid #B79858; /* Thêm line ngăn cách bên phải */
+    color: #B79858;
+    box-shadow: none;
+    text-align: left; /* Canh lề trái cho nội dung sidebar */
+}
+
+    .sidebar .linkItem a {
+        text-decoration: none;
+        color: #B79858;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 10px 15px;
+        justify-content: left;
+        align-content: left;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+        text-align: left; /* Canh lề trái cho các liên kết */
+        margin-top:50px;
+    }
+
+        .sidebar .linkItem a:hover {
+            background-color: #745d30;
+            color: #fff;
+        }
+
+/* Main content */
+.mainContent {
+    flex: 1;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    overflow-y: auto;
+    text-align: left; /* Canh lề trái cho nội dung chính */
+}
+
+    .mainContent h2 {
+        margin-bottom: 20px;
+        font-size: 24px;
+        color: #B79858;
+        text-align: left; /* Canh lề trái cho tiêu đề */
+    }
+
+
+/* Form container */
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Các nhóm input */
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
     .formGroup label {
-        text-align: left;
-        margin-bottom: 5px;
-        font-weight: bold;
+        font-size: 16px;
+        font-weight: 600;
+        color: #333;
     }
 
     .formGroup input[type="text"],
     .formGroup input[type="email"],
     .formGroup input[type="date"] {
-        width: 100%;
-        max-width: 700px;
-        padding: 12px;
-        border-radius: 8px;
-        border: 1px solid #ccc;
-        margin-top: 5px;
-        margin-left: 50px;
+        padding: 10px;
+        font-size: 14px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #fff;
+        color: #333;
+        transition: border-color 0.3s ease;
     }
 
-.viewProfile .genderOptions {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-top: 5px;
-}
-
-.viewProfile .buttonContainer {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 20px;
-}
-
-.viewProfile button {
-    margin-right: 10%;
-    padding: 10px 20px;
-    border: none;
-    background-color: #007bff;
-    color: #fff;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-.viewProfile .links {
-    margin-top: 20px;
-    width: 100%;
-    max-width: 400px;
-}
-
-.linkItem {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 0;
-    font-weight: 500;
-    border-bottom: 1px solid #ddd;
-}
-
-    .linkItem a {
-        text-decoration: none;
-        color: #000;
-        transition: color 0.3s;
+    .formGroup input:focus {
+        border-color: #B79858;
+        outline: none;
     }
 
-        .linkItem a:hover {
-            color: #007bff;
+/* Các tùy chọn giới tính */
+.genderOptions label {
+    margin-right: 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+.genderOptions input {
+    margin-right: 5px;
+}
+
+/* Nút Save */
+.buttonContainer {
+    text-align: center;
+}
+
+    .buttonContainer button {
+        background-color: #B79858;
+        color: #fff;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: 600;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        .buttonContainer button:hover {
+            background-color: #a47a4f;
         }
