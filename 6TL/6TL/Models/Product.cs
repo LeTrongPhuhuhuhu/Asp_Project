@@ -37,11 +37,13 @@ public partial class Product
 
     public DateTime? UpdatedAt { get; set; }
 
+    public double? Rating { get; set; }
+
     public virtual Category? Category { get; set; }
 
     public virtual Discount? Discount { get; set; }
 
-    public virtual ICollection<OrderDetail> OrderDetails { get; set; } = new List<OrderDetail>();
+    public virtual ICollection<Review> Reviews { get; set; } = new List<Review>();
 
     public virtual Supplier? Supplier { get; set; }
 
