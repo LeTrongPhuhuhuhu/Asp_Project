@@ -27,7 +27,9 @@ h2 {
     letter-spacing: 1px;
     margin-bottom: 20px;
 }
-
+#ma-sp_tsp {
+    pointer-events: none;
+}
 /* ========== Thanh Tìm Kiếm ========== */
 .search-bar_sp {
     display: flex;
