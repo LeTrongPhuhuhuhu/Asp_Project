@@ -1,5 +1,6 @@
-using _6TL.Models;
+﻿using _6TL.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 
 namespace _6TL.Controllers
@@ -7,12 +8,32 @@ namespace _6TL.Controllers
 	public class HomeController : Controller
 	{
 		private readonly ILogger<HomeController> _logger;
+		private readonly Db6TLContext _context;
 
-		public HomeController(ILogger<HomeController> logger)
+	
+
+		public HomeController(ILogger<HomeController> logger, Db6TLContext context)
 		{
 			_logger = logger;
+			_context = context;
 		}
 		public IActionResult SanPham() { return View(); }
+		// Trang thanh toán với thông tin sản phẩm
+		
+			// Action hiển thị trang thanh toán
+			public ActionResult TrangThanhToan(int productId, string productName, string productImage, decimal productPrice, string productColor, int quantity)
+			{
+				ViewBag.ProductId = productId;
+				ViewBag.ProductName = productName;
+				ViewBag.ProductImage = productImage;
+			ViewBag.ProductPrice = productPrice.ToString("N0") + " VNĐ";
+			ViewBag.ProductColor = productColor;
+				ViewBag.Quantity = "x"+quantity;
+
+				return View();
+			}
+		
+
 
 		public IActionResult SanPhamYeuThich() { return View(); }
 		public IActionResult Index()
@@ -42,7 +63,7 @@ namespace _6TL.Controllers
         }
         public IActionResult ChiTietSanPham() { return View(); }
 
-		public IActionResult TrangThanhToan() { return View(); }
+
 		public IActionResult ViewProfile()
         {
             return View();

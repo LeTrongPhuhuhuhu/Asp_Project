@@ -19,13 +19,11 @@ public partial class Product
 
     public string? Brand { get; set; }
 
-    public int? WarrantyPeriod { get; set; }
-
     public string? ProductDescription { get; set; }
 
     public int? Quantity { get; set; }
 
-    public decimal? Price { get; set; }
+    public decimal Price { get; set; }
 
     public int? DiscountId { get; set; }
 
@@ -39,9 +37,13 @@ public partial class Product
 
     public double? Rating { get; set; }
 
+    public virtual ICollection<Cart> Carts { get; set; } = new List<Cart>();
+
     public virtual Category? Category { get; set; }
 
     public virtual Discount? Discount { get; set; }
+
+    public virtual ICollection<OrderDetail> OrderDetails { get; set; } = new List<OrderDetail>();
 
     public virtual ICollection<Review> Reviews { get; set; } = new List<Review>();
 

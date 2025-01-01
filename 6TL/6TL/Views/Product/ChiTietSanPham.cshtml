@@ -57,10 +57,11 @@
                 </li>
             </ul>
 
-            <!-- Giá sản phẩm -->
             <p class="price_ct">
-                @(Model.Price.HasValue ? Model.Price.Value.ToString("N0", new System.Globalization.CultureInfo("vi-VN")) + " VNĐ" : "Liên hệ")
+                @(Model.Price.ToString("N0", new System.Globalization.CultureInfo("vi-VN")) + " VNĐ")
             </p>
+
+
 
             <!-- Đánh giá trung bình -->
             <div class="product-rating_ct">
@@ -72,11 +73,10 @@
                     }
                 </div>
             </div>
-
+            <!-- Xu ly count trong db nhe-->
             <div class="product-statistic_ct">
-                <p class="rating-summary_ct">124 lượt đánh giá • 312 sản phẩm đã mua</p>
-            </div>
-
+                <p class="rating-summary_ct">124 lượt đánh giá • 312 sản phẩm đã mua</p> 
+            </div><!-- Nhập số lượng -->
             <!-- Nhập số lượng -->
             <div class="quantity-ct">
                 <label for="quantity-input">Số lượng:</label>
@@ -85,12 +85,37 @@
 
             <!-- Hành động -->
             <div class="actions_ct">
-                <button class="buy-now_ct">Mua ngay</button>
-                <button class="add-to-cart_ct">Thêm Giỏ Hàng</button>
+                <!-- Form xử lý nút Mua ngay -->
+                <form action="/Home/TrangThanhToan" method="post" class="actions_ct">
+                    <input type="hidden" name="productId" value="@Model.ProductId">
+                    <input type="hidden" name="productName" value="@Model.ProductName">
+                    <input type="hidden" name="productImage" value="@Model.Image">
+                    <input type="hidden" name="productPrice" value="@Model.Price">
+                    <input type="hidden" name="productColor" value="@Model.Color">
+                    <input type="hidden" id="quantity-input-hidden" name="quantity" value="1">
+                    <button type="submit" class="buy-now_ct">
+                        Mua ngay
+                    </button>
+                </form>
+
+                <!-- Form xử lý nút Thêm Giỏ Hàng -->
+                <!-- Form xử lý nút Thêm Giỏ Hàng -->
+                <form action="/Product/AddToCart" method="post" class="actions_ct" id="add-to-cart-form">
+                    <input type="hidden" name="productId" value="@Model.ProductId">
+                    <input type="hidden" name="productName" value="@Model.ProductName">
+                    <input type="hidden" name="productImage" value="@Model.Image">
+                    <input type="hidden" name="productPrice" value="@Model.Price">
+                    <input type="hidden" name="productColor" value="@Model.Color">
+                    <input type="hidden" id="quantity-input-hidden" name="quantity" value="1">
+                    <button type="button" class="add-to-cart_ct" data-action="add-to-cart">Thêm Giỏ Hàng</button>
+                </form>
+
+
                 <div class="favorite_ct">
                     <i class="fa fa-heart heart-icon_ct"></i>
                 </div>
             </div>
+
 
             <p class="delivery-info_ct">
                 🚚 Miễn phí giao hàng với đơn trên 100 Nghìn<br />
@@ -276,7 +301,7 @@
     </div>
 </section>
 
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <script>
      document.querySelector(".favorite_ct").addEventListener("click", function () {
@@ -320,7 +345,57 @@
         });
     });
 
+
+ //AJAX
+
+
+
+       document.querySelector('.buy-now_ct').addEventListener('click', function() {
+           var productId = this.getAttribute('data-product-id');
+           var productName = this.getAttribute('data-product-name');
+           var productImage = this.getAttribute('data-product-image');
+           var productPrice = this.getAttribute('data-product-price');
+           var productColor = this.getAttribute('data-product-color');
+           var quantity = document.getElementById('quantity-input').value;
+
+           // Gửi dữ liệu đến Action TrangThanhToan
+           window.location.href = `/Home/TrangThanhToan?productId=${productId}&productName=${productName}&productImage=${productImage}&productPrice=${productPrice}&productColor=${productColor}&quantity=${quantity}`;
+       });
+
+       //addtocart
+         
+       document.querySelector('.add-to-cart_ct').addEventListener('click', function() {
+           var form = document.getElementById('add-to-cart-form');
+           var formData = new FormData(form);
+
+           // Thêm log để kiểm tra dữ liệu
+           console.log("Sending AJAX request with data:", formData);
+
+           $.ajax({
+               url: form.action,
+               type: 'POST',
+               data: formData,
+               processData: false,
+               contentType: false,
+               success: function(response) {
+                   console.log("AJAX request succeeded with response:", response);
+                   if (response.success) {
+                       alert('Sản phẩm đã được thêm vào giỏ hàng!');
+                   }
+               },
+               error: function(error) {
+                   console.log("AJAX request failed with error:", error);
+                   alert('Đã xảy ra lỗi khi thêm sản phẩm vào giỏ hàng.');
+               }
+           });
+       });
+
+       // Cập nhật giá trị số lượng khi thay đổi input
+       document.getElementById('quantity-input').addEventListener('input', function() {
+           document.getElementById('quantity-input-hidden').value = this.value;
+       });
 </script>
+
 
 
 
