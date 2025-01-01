@@ -1,51 +1,75 @@
-﻿<head>
+﻿@{
+    Layout = "_Layout";
+}
+
+<head>
     <link href="~/css/admin/themsanpham.css" rel="stylesheet" />
 </head>
+
 <div class="container_tsp">
     <h2>
         <a href="/Admin/Home/QuanLySanPham" class="back-to-product-management">Quản lý sản phẩm 6TL De Decor</a> &gt;
         <a href="/Admin/Home/ThemSanPham" class="add-product-link">Thêm sản phẩm</a>
     </h2>
 
-    <form class="add-product-form_tsp">
-        <div class="form-row_tsp">
-            <input placeholder="Mã SP: " id="ma-sp_tsp" readonly>
-            <input type="text" placeholder="Tên sản phẩm" id="ten-sp_tsp">
-            <input type="text" placeholder="Giá bán" id="gia-ban_tsp" oninput="formatPrice(this)" />
-            <input type="text" placeholder="Số lượng" id="so-luong_tsp">
+    <!-- Hiển thị thông báo thành công nếu có -->
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["SuccessMessage"]
         </div>
-        <div class="form-row_tsp">
-            <select id="danh-muc_tsp">
-                <option>Danh mục</option>
-                <option>Danh mục 1</option>
-                <option>Danh mục 2</option>
-            </select>
-            <select id="nha-cung-cap_tsp">
-                <option>nhacungcap1</option>
-                <option>nhacungcap2</option>
-                <option>nhacungcap3</option>
+    }
 
-            </select>
-            <input type="text" placeholder="Giá vốn" id="gia-von_tsp" oninput="formatPrice(this)">
-        </div>
+    <!-- Form thêm sản phẩm -->
+    <form asp-action="ThemSanPham" asp-controller="Products" method="post" enctype="multipart/form-data" class="add-product-form_tsp">
         <div class="form-row_tsp">
-            <select id="chon-mau_tsp" onchange="updateColorPreview()">
+            <input type="text" id="ma-sp_tsp" placeholder="Mã SP: " readonly>
+            <input type="text" id="ten-sp_tsp" name="ProductName" placeholder="Tên sản phẩm" required>
+            <input type="text" id="gia-ban_tsp" name="Price" placeholder="Giá bán" oninput="formatPrice(this)" required>
+            <input type="text" id="so-luong_tsp" name="Quantity" placeholder="Số lượng" required>
+        </div>
+
+        <div class="form-row_tsp">
+            <select id="danh-muc_tsp" name="CategoryId" required>
+                <option value="">Chọn danh mục</option>
+                @foreach (var category in ViewBag.Categories)
+                {
+                    <option value="@category.CategoryId">@category.CategoryName</option>
+                }
+            </select>
+
+            <select id="nha-cung-cap_tsp" name="SupplierId" required>
+                <option value="">Chọn nhà cung cấp</option>
+                @foreach (var supplier in ViewBag.Suppliers)
+                {
+                    <option value="@supplier.SupplierId">@supplier.SupplierName</option>
+                }
+            </select>
+
+            <input type="text" id="gia-von_tsp" name="CostPrice" placeholder="Giá vốn" oninput="formatPrice(this)" required>
+        </div>
+
+        <div class="form-row_tsp">
+            <select id="chon-mau_tsp" name="Color" onchange="updateColorPreview()" required>
                 <option value="" disabled selected>Chọn màu</option>
                 <option value="red" style="background-color: red; color: white;">Đỏ</option>
                 <option value="blue" style="background-color: blue; color: white;">Xanh Dương</option>
                 <option value="green" style="background-color: green; color: white;">Xanh Lá</option>
             </select>
+
             <input type="color" id="them-mau_tsp" title="Chọn màu mới">
             <button type="button" class="add-color-btn_tsp" onclick="addColor()">+</button>
-            <input type="text" placeholder="Chất liệu" id="chat-lieu_tsp">
+            <input type="text" id="chat-lieu_tsp" name="Material" placeholder="Chất liệu">
         </div>
+
         <div class="form-row_tsp">
             <label for="description_tsp">Mô tả</label>
-            <textarea id="description_tsp" rows="5" placeholder="Này sử dụng ckeditor"></textarea>
+            <textarea id="description_tsp" name="Description" rows="5" placeholder="Mô tả sản phẩm"></textarea>
         </div>
+
         <div class="upload-area_tsp">
             <label class="upload-label_tsp">
-                <input type="file" id="file-upload_tsp" class="upload-input_tsp" accept="image/*" onchange="previewImage(event)">
+                <input type="file" id="file-upload_tsp" name="ImageFile" class="upload-input_tsp" accept="image/*" onchange="previewImage(event)">
                 <div class="upload-content_tsp">
                     <img src="upload-icon.png" alt="Upload Icon" class="upload-icon_tsp" />
                     <p>Kéo thả hoặc chọn hình ảnh</p>
@@ -55,30 +79,27 @@
         </div>
 
         <div class="button-group_tsp">
-            <button type="button" class="add-color-btn_tsp">Thêm</button>
-            <button type="button" class="cancel-btn_tsp">Hủy</button>
+            <button type="submit" class="add-color-btn_tsp">Thêm</button>
+            <button type="reset" class="cancel-btn_tsp">Hủy</button>
         </div>
-
     </form>
 </div>
-<script>
-    function formatPrice(input) {
-        // Lấy giá trị hiện tại và loại bỏ các ký tự không phải số
-        let value = input.value.replace(/\./g, '').replace(/\D/g, '');
 
-        // Định dạng lại giá trị với dấu '.'
+<script>
+    // Định dạng giá trị nhập vào cho trường giá bán và giá vốn
+    function formatPrice(input) {
+        let value = input.value.replace(/\./g, '').replace(/\D/g, '');
         if (value) {
             input.value = value.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
         } else {
-            input.value = ''; // Nếu không có giá trị, để trống
+            input.value = '';
         }
     }
-</script>
-<script>
+
+    // Xem trước hình ảnh tải lên
     function previewImage(event) {
         const file = event.target.files[0];
         const preview = document.getElementById('preview-image_tsp');
-
         if (file) {
             const reader = new FileReader();
             reader.onload = function (e) {
@@ -91,6 +112,7 @@
         }
     }
 
+    // Thêm màu mới vào danh sách màu
     function addColor() {
         const selectElement = document.getElementById('chon-mau_tsp');
         const inputElement = document.getElementById('them-mau_tsp');
