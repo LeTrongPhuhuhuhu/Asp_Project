@@ -32,7 +32,27 @@ namespace _6TL.Controllers
 
 				return View();
 			}
-		
+
+
+		public IActionResult GioHang()
+		{
+			var cartItems = _context.Carts
+				.Include(c => c.Product)  // Bao gồm thông tin sản phẩm
+				.Include(c => c.Customer) // Bao gồm thông tin khách hàng
+				.ToList();
+
+			// Kiểm tra nếu giỏ hàng trống
+			if (!cartItems.Any())
+			{
+				ViewBag.IsCartEmpty = true;
+			}
+			else
+			{
+				ViewBag.IsCartEmpty = false;
+			}
+
+			return View(cartItems);
+		}
 
 
 		public IActionResult SanPhamYeuThich() { return View(); }
@@ -57,10 +77,7 @@ namespace _6TL.Controllers
 		{
 			return View();
 		}
-        public IActionResult GioHang()
-        {
-            return View();
-        }
+   
         public IActionResult ChiTietSanPham() { return View(); }
 
 

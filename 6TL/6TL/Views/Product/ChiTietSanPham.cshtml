@@ -56,9 +56,8 @@
                     }
                 </li>
             </ul>
-
             <p class="price_ct">
-                @(Model.Price.ToString("N0", new System.Globalization.CultureInfo("vi-VN")) + " VNĐ")
+                @string.Format(new System.Globalization.CultureInfo("vi-VN"), "{0:N0} VNĐ", Model.Price)
             </p>
 
 
@@ -75,7 +74,7 @@
             </div>
             <!-- Xu ly count trong db nhe-->
             <div class="product-statistic_ct">
-                <p class="rating-summary_ct">124 lượt đánh giá • 312 sản phẩm đã mua</p> 
+                <p class="rating-summary_ct">124 lượt đánh giá • 312 sản phẩm đã mua</p>
             </div><!-- Nhập số lượng -->
             <!-- Nhập số lượng -->
             <div class="quantity-ct">
@@ -86,7 +85,7 @@
             <!-- Hành động -->
             <div class="actions_ct">
                 <!-- Form xử lý nút Mua ngay -->
-                <form action="/Home/TrangThanhToan" method="post" class="actions_ct">
+                <form action="/Home/TrangThanhToan" method="get" class="actions_ct">
                     <input type="hidden" name="productId" value="@Model.ProductId">
                     <input type="hidden" name="productName" value="@Model.ProductName">
                     <input type="hidden" name="productImage" value="@Model.Image">
@@ -97,10 +96,8 @@
                         Mua ngay
                     </button>
                 </form>
-
                 <!-- Form xử lý nút Thêm Giỏ Hàng -->
-                <!-- Form xử lý nút Thêm Giỏ Hàng -->
-                <form action="/Product/AddToCart" method="post" class="actions_ct" id="add-to-cart-form">
+                <form id="add-to-cart-form" method="post" class="actions_ct">
                     <input type="hidden" name="productId" value="@Model.ProductId">
                     <input type="hidden" name="productName" value="@Model.ProductName">
                     <input type="hidden" name="productImage" value="@Model.Image">
@@ -109,12 +106,13 @@
                     <input type="hidden" id="quantity-input-hidden" name="quantity" value="1">
                     <button type="button" class="add-to-cart_ct" data-action="add-to-cart">Thêm Giỏ Hàng</button>
                 </form>
-
-
                 <div class="favorite_ct">
                     <i class="fa fa-heart heart-icon_ct"></i>
                 </div>
             </div>
+
+
+
 
 
             <p class="delivery-info_ct">
@@ -124,279 +122,39 @@
         </div>
     </div>
 
+    <script>
+        $(document).ready(function() {
+            $(".add-to-cart_ct").click(function() {
+                var productId = "@Model.ProductId";
+                var productName = "@Model.ProductName";
+                var productImage = "@Model.Image";
+                var productPrice = @Model.Price;
+                var productColor = "@Model.Color";
+                var quantity = $("#quantity-input").val();
 
-    <!-- Bình luận -->
-    <div class="comments-section_ct">
-        <h2 class="comments-title_ct">Đánh giá</h2>
-        <div class="divider_ct"></div> <!-- Đường kẻ dưới tiêu đề -->
-        <div class="comments-list_ct">
-            <div class="comment-item_ct">
-                <img src="~/img/user-placeholder.jpg" alt="User Avatar" class="comment-avatar_ct">
-                <div class="comment-content_ct">
-                    <div class="comment-header_ct">
-                        <p class="comment-username_ct">Nguyễn Văn A</p>
-                        <p class="comment-time_ct">01/12/2024 - 14:30</p>
-                    </div>
-                    <p class="comment-text_ct">Sản phẩm rất đẹp, giao hàng nhanh chóng và cẩn thận.</p>
-                </div>
-            </div>
-            <div class="comment-item_ct">
-                <img src="~/img/user-placeholder.jpg" alt="User Avatar" class="comment-avatar_ct">
-                <div class="comment-content_ct">
-                    <div class="comment-header_ct">
-                        <p class="comment-username_ct">Nguyễn Thị B</p>
-                        <p class="comment-time_ct">02/12/2024 - 09:15</p>
-                    </div>
-                    <p class="comment-text_ct">Chất lượng sản phẩm vượt mong đợi!</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    </section>
-
-</div>
-<section class="py-5">
-    <div class="container text-center">
-        <div class="text-center">
-            <h2 class="mb-2">Sản Phẩm Liên Quan</h2>
-        </div>
-        <div class="text-end">
-            <a href="/Home/SanPham" class="btn-more_ct text-decoration-none">Xem thêm &raquo;</a>
-        </div>
-
-        <!-- Carousel container -->
-        <div id="relatedProductsCarousel_ct" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-            <!-- Carousel inner -->
-            <div class="carousel-inner">
-                <!-- Carousel item 1 -->
-                <div class="carousel-item active">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <div class="product-item_ct">
-                                <div class="favorite_ct">
-                                    <i class="heart-icon_ct">&hearts;</i>
-                                </div>
-                                <img src="~/img/placeholder.jpg" alt="Bàn Cafe" class="img-fluid">
-                                <h3>Bàn Cafe</h3>
-                                <span>1,200,000 VND</span>
-                                <div class="rating_ct">
-                                    <span>★★★★☆</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="product-item_ct">
-                                <div class="favorite_ct">
-                                    <i class="heart-icon_ct">&hearts;</i>
-                                </div>
-                                <img src="~/img/placeholder.jpg" alt="Sofa Cao Cấp" class="img-fluid">
-                                <h3>Sofa Cao Cấp</h3>
-                                <span>4,500,000 VND</span>
-                                <div class="rating_ct">
-                                    <span>★★★★★</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="product-item_ct">
-                                <div class="favorite_ct">
-                                    <i class="heart-icon_ct">&hearts;</i>
-                                </div>
-                                <img src="~/img/placeholder.jpg" alt="Tủ Gỗ" class="img-fluid">
-                                <h3>Tủ Gỗ</h3>
-                                <span>3,200,000 VND</span>
-                                <div class="rating_ct">
-                                    <span>★★★☆☆</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="product-item_ct">
-                                <div class="favorite_ct">
-                                    <i class="heart-icon_ct">&hearts;</i>
-                                </div>
-                                <img src="~/img/placeholder.jpg" alt="Kệ Tivi" class="img-fluid">
-                                <h3>Kệ Tivi</h3>
-                                <span>2,800,000 VND</span>
-                                <div class="rating_ct">
-                                    <span>★★★★☆</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Carousel item 2 -->
-                <div class="carousel-item">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <div class="product-item_ct">
-                                <div class="favorite_ct">
-                                    <i class="heart-icon_ct">&hearts;</i>
-                                </div>
-                                <img src="~/img/placeholder.jpg" alt="Bàn Làm Việc" class="img-fluid">
-                                <h3>Bàn Làm Việc</h3>
-                                <span>1,500,000 VND</span>
-                                <div class="rating_ct">
-                                    <span>★★★★☆</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="product-item_ct">
-                                <div class="favorite_ct">
-                                    <i class="heart-icon_ct">&hearts;</i>
-                                </div>
-                                <img src="~/img/placeholder.jpg" alt="Bàn Làm Việc" class="img-fluid">
-                                <h3>Bàn Làm Việc</h3>
-                                <span>1,500,000 VND</span>
-                                <div class="rating_ct">
-                                    <span>★★★★☆</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="product-item_ct">
-                                <div class="favorite_ct">
-                                    <i class="heart-icon_ct">&hearts;</i>
-                                </div>
-                                <img src="~/img/placeholder.jpg" alt="Bàn Làm Việc" class="img-fluid">
-                                <h3>Bàn Làm Việc</h3>
-                                <span>1,500,000 VND</span>
-                                <div class="rating_ct">
-                                    <span>★★★★☆</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="product-item_ct">
-                                <div class="favorite_ct">
-                                    <i class="heart-icon_ct">&hearts;</i>
-                                </div>
-                                <img src="~/img/placeholder.jpg" alt="Bàn Làm Việc" class="img-fluid">
-                                <h3>Bàn Làm Việc</h3>
-                                <span>1,500,000 VND</span>
-                                <div class="rating_ct">
-                                    <span>★★★★☆</span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Thêm sản phẩm khác -->
-                    </div>
-                </div>
-            </div>
-
-            <!-- Carousel controls -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#relatedProductsCarousel_ct" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#relatedProductsCarousel_ct" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-    </div>
-</section>
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-<script>
-     document.querySelector(".favorite_ct").addEventListener("click", function () {
-        this.classList.toggle("active_ct");
-    });
-            document.querySelectorAll('.star_ct').forEach(star => {
-            star.addEventListener('click', function () {
-                const value = this.getAttribute('data-value');
-                document.querySelectorAll('.star_ct').forEach(s => {
-                    s.style.color = s.getAttribute('data-value') <= value ? '#FFD700' : '#ddd';
+                $.ajax({
+                    url: '/Home/AddToCart',
+                    type: 'POST',
+                    data: {
+                        productId: productId,
+                        productName: productName,
+                        productImage: productImage,
+                        productPrice: productPrice,
+                        productColor: productColor,
+                        quantity: quantity
+                    },
+                    success: function(response) {
+                        if (response.success) {
+                            alert('Sản phẩm đã được thêm vào giỏ hàng!');
+                        } else {
+                            alert('Có lỗi xảy ra. Vui lòng thử lại.');
+                        }
+                    },
+                    error: function(error) {
+                        alert('Có lỗi xảy ra. Vui lòng thử lại.');
+                    }
                 });
             });
         });
-
-        // Example: Add comment functionality (Replace with backend call)
-        document.querySelector('.submit-comment_ct').addEventListener('click', () => {
-            const commentText = document.querySelector('.comment-input_ct').value.trim();
-            if (commentText) {
-                const commentList = document.querySelector('.comments-list_ct');
-                const newComment = document.createElement('div');
-                newComment.className = 'comment-item_ct';
-                newComment.innerHTML = `
-                    <img src="~/img/user-placeholder.jpg" alt="User Avatar" class="comment-avatar_ct">
-                    <div class="comment-content_ct">
-                        <p class="comment-username_ct">Người dùng mới</p>
-                        <p class="comment-text_ct">${commentText}</p>
-                        <p class="comment-time_ct">${new Date().toLocaleString()}</p>
-                    </div>
-                `;
-                commentList.prepend(newComment);
-                document.querySelector('.comment-input_ct').value = '';
-            }
-        });
-            document.querySelectorAll('.color-option_ct').forEach(option => {
-        option.addEventListener('click', function () {
-            // Bỏ trạng thái được chọn từ tất cả các màu
-            document.querySelectorAll('.color-option_ct').forEach(o => o.classList.remove('selected_ct'));
-
-            // Đánh dấu trạng thái được chọn cho màu hiện tại
-            this.classList.add('selected_ct');
-        });
-    });
-
-
- //AJAX
-
-
-
-       document.querySelector('.buy-now_ct').addEventListener('click', function() {
-           var productId = this.getAttribute('data-product-id');
-           var productName = this.getAttribute('data-product-name');
-           var productImage = this.getAttribute('data-product-image');
-           var productPrice = this.getAttribute('data-product-price');
-           var productColor = this.getAttribute('data-product-color');
-           var quantity = document.getElementById('quantity-input').value;
-
-           // Gửi dữ liệu đến Action TrangThanhToan
-           window.location.href = `/Home/TrangThanhToan?productId=${productId}&productName=${productName}&productImage=${productImage}&productPrice=${productPrice}&productColor=${productColor}&quantity=${quantity}`;
-       });
-
-       //addtocart
-         
-       document.querySelector('.add-to-cart_ct').addEventListener('click', function() {
-           var form = document.getElementById('add-to-cart-form');
-           var formData = new FormData(form);
-
-           // Thêm log để kiểm tra dữ liệu
-           console.log("Sending AJAX request with data:", formData);
-
-           $.ajax({
-               url: form.action,
-               type: 'POST',
-               data: formData,
-               processData: false,
-               contentType: false,
-               success: function(response) {
-                   console.log("AJAX request succeeded with response:", response);
-                   if (response.success) {
-                       alert('Sản phẩm đã được thêm vào giỏ hàng!');
-                   }
-               },
-               error: function(error) {
-                   console.log("AJAX request failed with error:", error);
-                   alert('Đã xảy ra lỗi khi thêm sản phẩm vào giỏ hàng.');
-               }
-           });
-       });
-
-       // Cập nhật giá trị số lượng khi thay đổi input
-       document.getElementById('quantity-input').addEventListener('input', function() {
-           document.getElementById('quantity-input-hidden').value = this.value;
-       });
-</script>
-
-
-
-
-
+    </script>
+  

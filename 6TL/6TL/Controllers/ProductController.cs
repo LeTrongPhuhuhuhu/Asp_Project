@@ -1,5 +1,6 @@
 ﻿using _6TL.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Linq;
 
 namespace _6TL.Controllers
@@ -25,39 +26,48 @@ namespace _6TL.Controllers
 
 			return View(product);
 		}
-
 		[HttpPost]
-		public IActionResult AddToCart(int productId, string productName, string productImage, decimal productPrice, string productColor, int quantity)
+		public JsonResult AddToCart(int productId, string productName, string productImage, decimal productPrice, string productColor, int quantity)
 		{
-			var existingCartItem = _context.Carts.FirstOrDefault(c => c.ProductId == productId);
+			try
+			{
+				// Lấy thông tin người dùng (Giả sử bạn có một phương thức để lấy userId)
+				var customerId = 1; // Hoặc session, cookie...
 
-			if (existingCartItem != null)
-			{
-				// Nếu sản phẩm đã có trong giỏ hàng, tăng số lượng sản phẩm
-				existingCartItem.Quantity += quantity;
-				existingCartItem.TotalPrice = existingCartItem.Quantity * existingCartItem.Price;
-			}
-			else
-			{
-				// Nếu chưa có, thêm sản phẩm mới vào giỏ hàng
-				var cartItem = new Cart
+				// Kiểm tra giỏ hàng có sản phẩm này chưa
+				var cartItem = _context.Carts.FirstOrDefault(c => c.CustomerId == customerId && c.ProductId == productId);
+
+				if (cartItem != null)
 				{
-					ProductId = productId,
-					ProductName = productName,
-					ProductImage = productImage,
-					Price = productPrice,
-					Quantity = quantity,
-					TotalPrice = productPrice * quantity,
-					CreatedAt = DateTime.Now,
-					UpdatedAt = DateTime.Now
-				};
+					// Nếu sản phẩm đã có trong giỏ hàng, cập nhật số lượng
+					cartItem.Quantity += quantity;
+					_context.SaveChanges();
+				}
+				else
+				{
+					// Nếu chưa có, thêm mới sản phẩm vào giỏ hàng
+					var newItem = new Cart
+					{
+						CustomerId = customerId,
+						ProductId = productId,
+						ProductName = productName,
+						ProductImage = productImage,
+						Price = productPrice,
+						Color = productColor,
+						Quantity = quantity,
+						CreatedAt = DateTime.Now
+					};
+					_context.Carts.Add(newItem);
+					_context.SaveChanges();
+				}
 
-				_context.Carts.Add(cartItem);
+				return Json(new { success = true });
 			}
-
-			_context.SaveChanges();
-
-			return Json(new { success = true, message = "Product added to cart" });
+			catch (Exception ex)
+			{
+				// Xử lý lỗi
+				return Json(new { success = false, message = ex.Message });
+			}
 		}
 
 
