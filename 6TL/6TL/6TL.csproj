@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="wwwroot\img\products\" />
   </ItemGroup>
 
   <ItemGroup>
