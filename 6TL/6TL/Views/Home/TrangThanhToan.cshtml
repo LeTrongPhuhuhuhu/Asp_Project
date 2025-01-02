@@ -56,25 +56,21 @@
         <h2>Tóm Tắt Giỏ Hàng</h2>
         <div class="cart-items_ttt">
             <div class="cart-item_ttt">
-                <div class="product-image_ttt">
-                    <!-- Hình ảnh sản phẩm -->
+                <div class="product-info-toplevel">
+                    <div class="product-image_ttt">
+                        <img src="@ViewBag.ProductImage" alt="@ViewBag.ProductName">
+                    </div>
+                    <div class="product-info_ttt">
+                        <p class="product-name_ttt">@ViewBag.ProductName</p>
+                        <div class="product-color_ttt">Màu sắc: <span class="color-display_ttt" style="background-color: @ViewBag.ProductColor;"></span></div>
+                        <p class="product-quantity_ttt">@ViewBag.Quantity</p>
+                    </div>
                 </div>
-                <div class="product-info_ttt">
-                    <p>Tên Sản Phẩm 1</p>
-                    <span>Số Lượng: 2</span>
-                    <strong>Giá: 200,000₫</strong>
-                </div>
-            </div>
-            <div class="cart-item_ttt">
-                <div class="product-image_ttt">
-                    <!-- Hình ảnh sản phẩm -->
-                </div>
-                <div class="product-info_ttt">
-                    <p>Tên Sản Phẩm 2</p>
-                    <span>Số Lượng: 1</span>
-                    <strong>Giá: 150,000₫</strong>
+                <div class="product-price-toplevel">
+                    <strong class="product-price_ttt">@ViewBag.ProductPrice</strong>
                 </div>
             </div>
+            <!-- Bạn có thể thêm các sản phẩm khác theo cấu trúc tương tự -->
         </div>
 
         <div class="discount-code_ttt">
@@ -83,9 +79,9 @@
         </div>
 
         <div class="order-summary_ttt">
-            <p>Tổng phụ: <span>350,000₫</span></p>
+            <p>Tổng phụ: <span>@ViewBag.ProductPrice VNĐ</span></p>
             <p>Phí vận chuyển: <span>50,000₫</span></p>
-            <p class="total_ttt">Tổng cộng: <span>400,000₫</span></p>
+            <p class="total_ttt">Tổng cộng: <span>@(ViewBag.ProductPrice + 50000) VNĐ</span></p>
         </div>
     </div>
 </div>
@@ -95,4 +91,11 @@
         alert("Thanh toán đã bị hủy!");
         document.querySelector('form').reset();
     }
+
+    document.querySelectorAll('.color-display_ttt').forEach(colorElement => {
+        const colorCode = colorElement.getAttribute('data-color');
+        if (colorCode) {
+            colorElement.style.backgroundColor = colorCode;
+        }
+    });
 </script>
