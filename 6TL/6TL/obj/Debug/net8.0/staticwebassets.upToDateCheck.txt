@@ -52,9 +52,9 @@ wwwroot\img\noithat3tc.jpg
 wwwroot\img\noithat4tc.jpg
 wwwroot\img\noithat5tc.jpg
 wwwroot\img\noithat6tc.jpg
-wwwroot\img\placeholder.jpg
 wwwroot\img\salebanner.jpg
 wwwroot\img\snapedit_1732430907358.png
+wwwroot\img\sofa1.jpg
 wwwroot\img\succes.json
 wwwroot\img\successdelete.gif
 wwwroot\img\successdelete.webm
