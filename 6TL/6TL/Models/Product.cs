@@ -23,7 +23,7 @@ public partial class Product
 
     public int? Quantity { get; set; }
 
-    public decimal Price { get; set; }
+    public decimal? Price { get; set; }
 
     public int? DiscountId { get; set; }
 

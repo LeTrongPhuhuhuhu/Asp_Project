@@ -58,8 +58,9 @@
             </ul>
 
             <p class="price_ct">
-                @(Model.Price.ToString("N0", new System.Globalization.CultureInfo("vi-VN")) + " VNĐ")
+                @(Model.Price?.ToString("N0", new System.Globalization.CultureInfo("vi-VN")) + " VNĐ")
             </p>
+
 
 
 
