@@ -1,0 +1,8 @@
+1 trang lien he, trang quan ly lien he
+1 quan ly thong tin trang web
+1 quan ly don hang+ chi tiet don hang xau vcl
+1 dashboard xau vcl
+popup dang nhap xau vcl 
+trang tin tuc thi phai co them trang chi tiet tin tuc do
+quen mat khau thi nhay den trang reset password
+trang nhập OTP
