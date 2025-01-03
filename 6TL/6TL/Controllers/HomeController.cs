@@ -1,16 +1,20 @@
-using _6TL.Models;
+﻿using _6TL.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Diagnostics;
 
 namespace _6TL.Controllers
 {
 	public class HomeController : Controller
-	{
-		private readonly ILogger<HomeController> _logger;
 
-		public HomeController(ILogger<HomeController> logger)
+	{
+		private readonly Db6TLContext _dbContext;
+
+		// Inject DbContext thông qua constructor
+		public HomeController(Db6TLContext dbContext)
 		{
-			_logger = logger;
+			_dbContext = dbContext;
 		}
 		public IActionResult SanPham() { return View(); }
 
@@ -36,7 +40,26 @@ namespace _6TL.Controllers
 		{
 			return View();
 		}
-        public IActionResult GioHang()
+
+		[HttpPost]
+		public IActionResult LienHe(Contact model)
+		{
+			if (ModelState.IsValid)
+			{
+				model.CreatedDate = DateTime.Now;
+
+				// Lưu dữ liệu vào cơ sở dữ liệu
+				_dbContext.Contacts.Add(model);
+				_dbContext.SaveChanges();
+
+				TempData["SuccessMessage"] = "Thông tin liên hệ đã được gửi thành công!";
+				return RedirectToAction("LienHe");
+			}
+
+			TempData["ErrorMessage"] = "Vui lòng kiểm tra lại thông tin!";
+			return View(model);
+		}
+		public IActionResult GioHang()
         {
             return View();
         }
