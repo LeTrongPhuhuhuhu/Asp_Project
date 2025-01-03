@@ -27,48 +27,60 @@ namespace _6TL.Controllers
 			return View(product);
 		}
 		[HttpPost]
-		public JsonResult AddToCart(int productId, string productName, string productImage, decimal productPrice, string productColor, int quantity)
+		public IActionResult AddToCart(int customerId, int productId, string productName, string? productImage, decimal price, string color, int quantity)
 		{
 			try
 			{
-				// Lấy thông tin người dùng (Giả sử bạn có một phương thức để lấy userId)
-				var customerId = 1; // Hoặc session, cookie...
+				// Kiểm tra xem sản phẩm đã có trong giỏ hàng của khách hàng chưa
+				var existingCartItem = _context.Carts
+					.FirstOrDefault(c => c.CustomerId == customerId && c.ProductId == productId);
 
-				// Kiểm tra giỏ hàng có sản phẩm này chưa
-				var cartItem = _context.Carts.FirstOrDefault(c => c.CustomerId == customerId && c.ProductId == productId);
-
-				if (cartItem != null)
+				if (existingCartItem != null)
 				{
-					// Nếu sản phẩm đã có trong giỏ hàng, cập nhật số lượng
-					cartItem.Quantity += quantity;
-					_context.SaveChanges();
+					// Nếu có, chỉ cần cập nhật số lượng và tính lại tổng giá
+					Console.WriteLine("Sản phẩm đã tồn tại trong giỏ hàng, cập nhật số lượng.");
+					existingCartItem.Quantity += quantity; // Tăng số lượng sản phẩm
+					existingCartItem.TotalPrice = existingCartItem.Price * existingCartItem.Quantity; // Tính lại tổng giá
+					existingCartItem.UpdatedAt = DateTime.Now; // Cập nhật thời gian sửa đổi
 				}
 				else
 				{
-					// Nếu chưa có, thêm mới sản phẩm vào giỏ hàng
-					var newItem = new Cart
+					// Nếu chưa có, tạo mới sản phẩm trong giỏ hàng
+					Console.WriteLine("Sản phẩm chưa tồn tại trong giỏ hàng, thêm sản phẩm mới.");
+					var cartItem = new Cart
 					{
-						CustomerId = customerId,
+						CustomerId = 1,
 						ProductId = productId,
 						ProductName = productName,
 						ProductImage = productImage,
-						Price = productPrice,
-						Color = productColor,
+						Price = price,
 						Quantity = quantity,
-						CreatedAt = DateTime.Now
+						TotalPrice = price * quantity, // Tính tổng giá ngay khi thêm mới
+						Color = color,
+						CreatedAt = DateTime.Now,
+						UpdatedAt = DateTime.Now
 					};
-					_context.Carts.Add(newItem);
-					_context.SaveChanges();
+					_context.Carts.Add(cartItem); // Thêm vào giỏ hàng
 				}
 
-				return Json(new { success = true });
+				// Lưu lại thay đổi trong cơ sở dữ liệu
+				Console.WriteLine("Lưu lại thay đổi trong cơ sở dữ liệu.");
+				_context.SaveChanges();
+
+				// Trả về kết quả JSON thành công
+				Console.WriteLine("Sản phẩm đã được thêm vào giỏ hàng!");
+				return Json(new { success = true, message = "Sản phẩm đã được thêm vào giỏ hàng!" });
 			}
 			catch (Exception ex)
 			{
-				// Xử lý lỗi
-				return Json(new { success = false, message = ex.Message });
+				// Nếu có lỗi, trả về thông báo lỗi
+				Console.WriteLine("Có lỗi xảy ra: " + ex.Message);
+				return Json(new { success = false, message = "Lỗi: " + ex.Message });
 			}
 		}
+
+
+
 
 
 

@@ -96,16 +96,17 @@
                         Mua ngay
                     </button>
                 </form>
-                <!-- Form xử lý nút Thêm Giỏ Hàng -->
-                <form id="add-to-cart-form" method="post" class="actions_ct">
+                <form id="add-to-cart-form" method="post" action="/Product/AddToCart">
                     <input type="hidden" name="productId" value="@Model.ProductId">
                     <input type="hidden" name="productName" value="@Model.ProductName">
                     <input type="hidden" name="productImage" value="@Model.Image">
-                    <input type="hidden" name="productPrice" value="@Model.Price">
-                    <input type="hidden" name="productColor" value="@Model.Color">
-                    <input type="hidden" id="quantity-input-hidden" name="quantity" value="1">
-                    <button type="button" class="add-to-cart_ct" data-action="add-to-cart">Thêm Giỏ Hàng</button>
+                    <input type="hidden" name="price" value="@Model.Price">
+                    <input type="hidden" name="color" value="@Model.Color">
+                    <input type="hidden" name="quantity" value="1">
+                    <button type="submit" class="btn btn-primary">Thêm Giỏ Hàng</button>
                 </form>
+
+
                 <div class="favorite_ct">
                     <i class="fa fa-heart heart-icon_ct"></i>
                 </div>
@@ -123,8 +124,8 @@
     </div>
 
     <script>
-        $(document).ready(function() {
-            $(".add-to-cart_ct").click(function() {
+           $(document).ready(function () {
+            $(".add-to-cart_ct").click(function () {
                 var productId = "@Model.ProductId";
                 var productName = "@Model.ProductName";
                 var productImage = "@Model.Image";
@@ -133,28 +134,30 @@
                 var quantity = $("#quantity-input").val();
 
                 $.ajax({
-                    url: '/Home/AddToCart',
+                    url: '/Product/AddToCart', // Update to match your API route
                     type: 'POST',
-                    data: {
+                    contentType: 'application/json',
+                    data: JSON.stringify({
                         productId: productId,
                         productName: productName,
                         productImage: productImage,
                         productPrice: productPrice,
                         productColor: productColor,
                         quantity: quantity
-                    },
-                    success: function(response) {
+                    }),
+                    success: function (response) {
                         if (response.success) {
-                            alert('Sản phẩm đã được thêm vào giỏ hàng!');
+                            alert(response.message);
                         } else {
-                            alert('Có lỗi xảy ra. Vui lòng thử lại.');
+                            alert(response.message);
                         }
                     },
-                    error: function(error) {
+                    error: function (error) {
                         alert('Có lỗi xảy ra. Vui lòng thử lại.');
                     }
                 });
             });
         });
+
     </script>
   

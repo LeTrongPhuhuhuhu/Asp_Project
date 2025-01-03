@@ -75,8 +75,6 @@ public partial class Db6TLContext : DbContext
 
         modelBuilder.Entity<Cart>(entity =>
         {
-            entity.HasKey(e => e.CartId).HasName("PK__Cart__51BCD7B74686F921");
-
             entity.ToTable("Cart");
 
             entity.Property(e => e.CreatedAt).HasColumnType("datetime");
@@ -87,13 +85,11 @@ public partial class Db6TLContext : DbContext
 
             entity.HasOne(d => d.Customer).WithMany(p => p.Carts)
                 .HasForeignKey(d => d.CustomerId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Cart_Customer");
+                .HasConstraintName("FK_Cart_Customers");
 
             entity.HasOne(d => d.Product).WithMany(p => p.Carts)
                 .HasForeignKey(d => d.ProductId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Cart_Product");
+                .HasConstraintName("FK_Cart_Products");
         });
 
         modelBuilder.Entity<Category>(entity =>
