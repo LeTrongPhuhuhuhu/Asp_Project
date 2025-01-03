@@ -64,7 +64,7 @@
                     }
                 </li>
 
-                <!-- Trạng thái -->
+               @*  <!-- Trạng thái -->
                 <li>
                     Trạng thái:
                     @if (Model.Quantity > 0)
@@ -76,12 +76,21 @@
                     {
                         <span class="status-value_ct" style="color: red;">Hết hàng</span>
                     }
-                </li>
+                </li> *@
             </ul>
             <p class="price_ct">
+<<<<<<< HEAD
+                @(Model.Price?.ToString("N0", new System.Globalization.CultureInfo("vi-VN")) + " VNĐ")
+            </p>
+
+
+
+
+=======
                 @string.Format(new System.Globalization.CultureInfo("vi-VN"), "{0:N0} VNĐ", Model.Price)
             </p>
 
+>>>>>>> main
             <!-- Đánh giá trung bình -->
             <div class="product-rating_ct">
                 <span class="rating-value_ct">@Math.Round(Model.Rating ?? 0, 1) / 5</span>
@@ -97,10 +106,10 @@
                 <p class="rating-summary_ct">124 lượt đánh giá • 312 sản phẩm đã mua</p>
             </div>
 
-            <div class="quantity-ct">
+            @* <div class="quantity-ct">
                 <label for="quantity-input">Số lượng:</label>
                 <input type="number" id="quantity-input" class="quantity-input_ct" value="1" min="1" max="@Model.Quantity">
-            </div>
+            </div> *@
             <div class="actions_ct">
                 <!-- Form xử lý nút Mua ngay -->
                 <form action="/Home/TrangThanhToan" method="get" class="actions_ct">

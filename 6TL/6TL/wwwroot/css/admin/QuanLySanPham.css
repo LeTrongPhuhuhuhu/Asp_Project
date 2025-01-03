@@ -18,7 +18,10 @@
     background-color: #f1f1f1;
     color: #333;
 }
+.add-product-btn_tsp
+{
 
+}
 h2 {
     color: #333;
     font-size: 26px;
@@ -27,7 +30,9 @@ h2 {
     letter-spacing: 1px;
     margin-bottom: 20px;
 }
-
+#ma-sp_tsp {
+    pointer-events: none;
+}
 /* ========== Thanh Tìm Kiếm ========== */
 .search-bar_sp {
     display: flex;
@@ -55,7 +60,7 @@ h2 {
 /* ========== Nút Thêm Mới ========== */
 .add-new-btn_sp {
     background-color: #6c63ff;
-    color: white;
+    color: white; /* Thay đổi màu chữ */
     border: none;
     padding: 12px 25px;
     cursor: pointer;
