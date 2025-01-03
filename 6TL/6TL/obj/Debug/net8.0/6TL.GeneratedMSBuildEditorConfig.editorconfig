@@ -1,11 +1,19 @@
 is_global = true
 build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = _6TL
 build_property.RootNamespace = _6TL
@@ -46,20 +54,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxRdWFuTHlMaWVuSGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DoAnAsp/Asp_Project/6TL/6TL/Areas/Admin/Views/Home/QuanLySanPham.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxRdWFuTHlTYW5QaGFtLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/DoAnAsp/Asp_Project/6TL/6TL/Areas/Admin/Views/Home/QuanLyUser.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxRdWFuTHlVc2VyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DoAnAsp/Asp_Project/6TL/6TL/Areas/Admin/Views/Home/SuaSanPham.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxTdWFTYW5QaGFtLmNzaHRtbA==
+[D:/DoAnAsp/Asp_Project/6TL/6TL/Areas/Admin/Views/Products/QuanLySanPham.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdHNcUXVhbkx5U2FuUGhhbS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DoAnAsp/Asp_Project/6TL/6TL/Areas/Admin/Views/Home/ThemSanPham.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxUaGVtU2FuUGhhbS5jc2h0bWw=
+[D:/DoAnAsp/Asp_Project/6TL/6TL/Areas/Admin/Views/Products/SuaSanPham.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdHNcU3VhU2FuUGhhbS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnAsp/Asp_Project/6TL/6TL/Areas/Admin/Views/Products/ThemSanPham.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdHNcVGhlbVNhblBoYW0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/DoAnAsp/Asp_Project/6TL/6TL/Areas/Admin/Views/Shared/_Layout.cshtml]
@@ -80,10 +88,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/DoAnAsp/Asp_Project/6TL/6TL/Views/Home/ChinhSach.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDaGluaFNhY2guY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/DoAnAsp/Asp_Project/6TL/6TL/Views/Home/ChiTietSanPham.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDaGlUaWV0U2FuUGhhbS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/DoAnAsp/Asp_Project/6TL/6TL/Views/Home/ChiTietTinTuc.cshtml]
@@ -140,6 +144,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/DoAnAsp/Asp_Project/6TL/6TL/Views/Home/ViewProfile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxWaWV3UHJvZmlsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnAsp/Asp_Project/6TL/6TL/Views/Product/ChiTietSanPham.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxDaGlUaWV0U2FuUGhhbS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/DoAnAsp/Asp_Project/6TL/6TL/Views/Shared/Error.cshtml]
