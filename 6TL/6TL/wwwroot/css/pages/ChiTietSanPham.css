@@ -452,9 +452,10 @@ body {
 
 .product-info_ct {
     flex: 1;
-   
+    padding: 10px;
     max-width: 700px;
     box-sizing: border-box;
+    border-left: 1px solid #000; /* Thêm đường viền 1px bên trái */
 }
 .color-option_ct {
     width: 30px;
