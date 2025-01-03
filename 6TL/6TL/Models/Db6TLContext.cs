@@ -81,13 +81,12 @@ public partial class Db6TlContext : DbContext
 
                 .HasConstraintName("FK__Admins__RoleID__6C190EBB");
 
-                .HasConstraintName("FK__Admins__RoleID__693CA210");
 
         });
 
         modelBuilder.Entity<Cart>(entity =>
         {
- feature-ChiTietSanPham
+
             entity.HasKey(e => e.CartId).HasName("PK__Cart__51BCD7B7F4978FC7");
 
             entity.HasKey(e => e.CartId).HasName("PK__Cart__51BCD7B7F3CD1AB2");
@@ -102,10 +101,7 @@ public partial class Db6TlContext : DbContext
             entity.Property(e => e.UpdatedAt).HasColumnType("datetime");
 
 
-            entity.HasOne(d => d.Customer).WithMany(p => p.Carts)
-                .HasForeignKey(d => d.CustomerId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Cart_Customer");
+    
 
 
             entity.HasOne(d => d.Product).WithMany(p => p.Carts)
@@ -214,7 +210,7 @@ public partial class Db6TlContext : DbContext
 
                 .HasConstraintName("FK__Customers__RoleI__70DDC3D8");
 
-                .HasConstraintName("FK__Customers__RoleI__6EF57B66");
+       
 
         });
 
@@ -270,7 +266,7 @@ public partial class Db6TlContext : DbContext
 
                 .HasConstraintName("FK__Orders__Customer__75A278F5");
 
-                .HasConstraintName("FK__Orders__Customer__73BA3083");
+
 
         });
 
