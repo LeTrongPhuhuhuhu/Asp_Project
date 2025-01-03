@@ -56,20 +56,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxRdWFuTHlMaWVuSGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Asp_Project/Asp_Project/6TL/6TL/Areas/Admin/Views/Home/QuanLySanPham.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxRdWFuTHlTYW5QaGFtLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [E:/Asp_Project/Asp_Project/6TL/6TL/Areas/Admin/Views/Home/QuanLyUser.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxRdWFuTHlVc2VyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Asp_Project/Asp_Project/6TL/6TL/Areas/Admin/Views/Home/SuaSanPham.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxTdWFTYW5QaGFtLmNzaHRtbA==
+[E:/Asp_Project/Asp_Project/6TL/6TL/Areas/Admin/Views/Products/QuanLySanPham.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdHNcUXVhbkx5U2FuUGhhbS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Asp_Project/Asp_Project/6TL/6TL/Areas/Admin/Views/Home/ThemSanPham.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxUaGVtU2FuUGhhbS5jc2h0bWw=
+[E:/Asp_Project/Asp_Project/6TL/6TL/Areas/Admin/Views/Products/SuaSanPham.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdHNcU3VhU2FuUGhhbS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Asp_Project/Asp_Project/6TL/6TL/Areas/Admin/Views/Products/ThemSanPham.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdHNcVGhlbVNhblBoYW0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/Asp_Project/Asp_Project/6TL/6TL/Areas/Admin/Views/Shared/_Layout.cshtml]

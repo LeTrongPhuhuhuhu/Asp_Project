@@ -27,5 +27,7 @@ public partial class Cart
 
     public string Color { get; set; } = null!;
 
+    public virtual Customer Customer { get; set; } = null!;
+
     public virtual Product Product { get; set; } = null!;
 }

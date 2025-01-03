@@ -17,7 +17,7 @@
                 <option value="category1">Danh mục 1</option>
                 <option value="category2">Danh mục 2</option>
             </select>
-            <a href="/Admin/Home/ThemSanPham">   <button class="add-new-btn_sp">Thêm mới</button></a>
+            <a href="/Admin/Products/ThemSanPham">   <button class="add-new-btn_sp">Thêm mới</button></a>
 
         </div>
 
@@ -56,7 +56,9 @@
                     <td>Gỗ/Kim loại</td>
                     <td>Còn hàng</td>
                     <td>
-                        <button class="edit-btn_sp">Sửa</button>
+                        <a href="/Admin/Products/ThemSanPham">
+                            <button class="edit-btn_sp">Sửa</button>
+                            </a>
                         <button onclick="openPopup()" class="delete-btn_sp">Xóa</button>
                     </td>
                 </tr>
@@ -72,7 +74,7 @@
 </body>
 </html>
 <script>
-        function openPopup() {
+    function openPopup() {
         document.getElementById('successPopup').style.display = 'flex';
         setTimeout(closePopup, 3000); // Tự động đóng popup sau 3 giây
     }

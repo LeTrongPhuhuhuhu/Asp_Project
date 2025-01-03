@@ -10,4 +10,5 @@ public partial class Color
     public string ColorName { get; set; } = null!;
 
     public string? ColorCode { get; set; }
+
 }
