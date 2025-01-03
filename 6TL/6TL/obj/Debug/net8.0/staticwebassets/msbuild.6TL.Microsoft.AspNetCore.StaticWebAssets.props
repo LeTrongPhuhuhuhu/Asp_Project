@@ -192,8 +192,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>2w4vlitbf8</Fingerprint>
-      <Integrity>foifdBz6HdL6pf3+rg7uc+HG6rLU7h1lnLKOQdAfMUs=</Integrity>
+      <Fingerprint>8np66ri3wv</Fingerprint>
+      <Integrity>rEbc7vk/AHu4XCuzn4OamEj7F+3hcRVDmLzf4zBLNlc=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\admin\QuanLySanPham.css'))</OriginalItemSpec>
@@ -228,8 +228,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>zqdtw31sd7</Fingerprint>
-      <Integrity>Jflfbv4uJH/XNQT0tnVfkq2iXush4ms5jOwWYKlnhss=</Integrity>
+      <Fingerprint>16iuq7bwcl</Fingerprint>
+      <Integrity>h8JXf/hK1HeR81aAjbq8BVcbyzZ1AAzvAH/1R4hKguk=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\admin\ThemSanPham.css'))</OriginalItemSpec>
