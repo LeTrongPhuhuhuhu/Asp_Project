@@ -1,0 +1,119 @@
+@model IEnumerable<Product>
+<!DOCTYPE html>
+
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý sản phẩm</title>
+    <link rel="stylesheet" href="product-management.css">
+    <link href="~/css/admin/quanlysanpham.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="product-management_sp">
+        <h2>Quản lý sản phẩm 6TL De Decor</h2>
+        <div class="search-bar_sp">
+            <input type="text" placeholder="Tìm kiếm...">
+            <select>
+                <option value="all">Chọn danh mục</option>
+                <option value="category1">Danh mục 1</option>
+                <option value="category2">Danh mục 2</option>
+            </select>
+
+            <a href="/Admin/Products/ThemSanPham"><button class="add-new-btn_sp">Thêm mới</button></a>
+
+        </div>
+
+        <table class="product-table_sp">
+            <thead>
+                <tr>
+                    <th>Mã SP</th>
+                    <th>Hình ảnh</th>
+                    <th>Tên SP</th>
+                    <th>Giá bán</th>
+                    <th>Loại</th>
+                    <th>Màu sắc</th>
+                    <th>Chất liệu</th>
+                    <th>Trạng thái</th>
+                    <th>Chức năng</th>
+                </tr>
+            </thead>
+            <tbody>
+               
+                @foreach (var product in Model)
+                {
+                    <tr>
+                        <td>@product.ProductId</td>
+                        <td><img src="@product.Image" alt="Hình ảnh SP"></td>
+                        <td>@product.ProductName</td>
+                        <td>@product.Price?.ToString("N0", new System.Globalization.CultureInfo("vi-VN")) VNĐ</td>
+
+                        <!-- Hiển thị Loại -->
+                        <td>@product.Category?.CategoryName</td>
+
+                        <!-- Hiển thị Màu sắc từ bảng Color -->
+                        <td>
+                            @foreach (var productColor in product.ProductColors)
+                            {
+                                <span>@productColor.Color?.ColorName</span>
+
+                                <br />
+                            }
+                        </td>
+
+                        <!-- Hiển thị Chất liệu -->
+                        <td>@product.Material</td>
+
+                        @* <!-- Hiển thị Trạng thái -->
+                    <td>
+                    @if (product.ProductColors.Sum(pc => pc.Quantity) > 0)
+                    {
+                    <span>Còn hàng</span>
+                    }
+                    else
+                    {
+                    <span>Hết hàng</span>
+                    }
+                    </td> *@
+
+                        <td>
+                            <a href="/Admin/Products/Edit/@product.ProductId">
+                                <button class="edit-btn_sp">Sửa</button>
+                            </a>
+                            <button onclick="openPopup()" class="delete-btn_sp">Xóa</button>
+                        </td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+
+        <div class="pagination_sp">
+            <button class="page-btn_sp">1</button>
+            <button class="page-btn_sp">2</button>
+        </div>
+    </div>
+</body>
+</html>
+
+<body>
+    <!-- Success Popup -->
+    <div id="successPopup" class="popup_sp" style="display: none;">
+        <div class="popup-content_sp">
+            <p>Thao tác xóa thành công!</p>
+        </div>
+    </div>
+</body>
+</html>
+
+
+<script>
+    function openPopup() {
+        document.getElementById('successPopup').style.display = 'flex';
+        setTimeout(closePopup, 3000); // Tự động đóng popup sau 3 giây
+    }
+
+    function closePopup() {
+        document.getElementById('successPopup').style.display = 'none';
+    }
+</script>

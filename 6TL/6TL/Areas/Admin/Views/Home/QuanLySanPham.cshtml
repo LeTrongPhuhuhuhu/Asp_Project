@@ -57,7 +57,7 @@
                     <td>Còn hàng</td>
                     <td>
                         <button class="edit-btn_sp">Sửa</button>
-                        <button onclick="openPopup()" class="delete-btn_sp">Xóa</button>
+                        <button class="delete-btn_sp">Xóa</button>
                     </td>
                 </tr>
                 <!-- Thêm các dòng khác tương tự -->
@@ -71,14 +71,3 @@
     </div>
 </body>
 </html>
-<script>
-        function openPopup() {
-        document.getElementById('successPopup').style.display = 'flex';
-        setTimeout(closePopup, 3000); // Tự động đóng popup sau 3 giây
-    }
-
-    function closePopup() {
-        document.getElementById('successPopup').style.display = 'none';
-    }
-
-</script>
