@@ -15,10 +15,6 @@ public partial class Product
 
     public string? Material { get; set; }
 
-    public string? Color { get; set; }
-
-    public string? Brand { get; set; }
-
     public string? ProductDescription { get; set; }
 
     public int? Quantity { get; set; }

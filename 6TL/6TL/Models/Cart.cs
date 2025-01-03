@@ -7,8 +7,6 @@ public partial class Cart
 {
     public int CartId { get; set; }
 
-    public int CustomerId { get; set; }
-
     public int ProductId { get; set; }
 
     public string ProductName { get; set; } = null!;
@@ -28,8 +26,6 @@ public partial class Cart
     public decimal? TotalAmount { get; set; }
 
     public string Color { get; set; } = null!;
-
-    public virtual Customer Customer { get; set; } = null!;
 
     public virtual Product Product { get; set; } = null!;
 }

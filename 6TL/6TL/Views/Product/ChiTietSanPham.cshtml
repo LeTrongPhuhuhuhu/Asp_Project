@@ -31,16 +31,19 @@
                 <!-- Màu sắc -->
                 <li>
                     Màu sắc:
-                    @if (ViewData["Color"] != null)
+                    @if (ViewData["Colors"] != null)
                     {
-                        <div class="color-option_ct" style="background-color: @ViewData["Color"]; width: 30px; height: 30px; border-radius: 50%;"></div>
+                        var colors = ViewData["Colors"] as List<_6TL.Models.Color>;
+                        @foreach (var color in colors)
+                        {
+                            <div class="color-option_ct" data-color-id="@color.ColorId" style="background-color: @color.ColorName; width: 30px; height: 30px; border-radius: 50%; display: inline-block; cursor: pointer;"></div>
+                        }
                     }
                     else
                     {
                         <span>Không có màu sắc</span>
                     }
                 </li>
-
 
                 <!-- Trạng thái -->
                 <li>
@@ -60,8 +63,6 @@
                 @string.Format(new System.Globalization.CultureInfo("vi-VN"), "{0:N0} VNĐ", Model.Price)
             </p>
 
-
-
             <!-- Đánh giá trung bình -->
             <div class="product-rating_ct">
                 <span class="rating-value_ct">@Math.Round(Model.Rating ?? 0, 1) / 5</span>
@@ -72,11 +73,11 @@
                     }
                 </div>
             </div>
-            <!-- Xu ly count trong db nhe-->
+
             <div class="product-statistic_ct">
                 <p class="rating-summary_ct">124 lượt đánh giá • 312 sản phẩm đã mua</p>
-            </div><!-- Nhập số lượng -->
-            <!-- Nhập số lượng -->
+            </div>
+
             <div class="quantity-ct">
                 <label for="quantity-input">Số lượng:</label>
                 <input type="number" id="quantity-input" class="quantity-input_ct" value="1" min="1" max="@Model.Quantity">
@@ -90,31 +91,24 @@
                     <input type="hidden" name="productName" value="@Model.ProductName">
                     <input type="hidden" name="productImage" value="@Model.Image">
                     <input type="hidden" name="productPrice" value="@Model.Price">
-                    <input type="hidden" name="productColor" value="@Model.Color">
+                    <input type="hidden" id="productColor-buy" name="productColor" value="">
                     <input type="hidden" id="quantity-input-hidden" name="quantity" value="1">
-                    <button type="submit" class="buy-now_ct">
-                        Mua ngay
-                    </button>
+                    <button type="submit" class="buy-now_ct">Mua ngay</button>
                 </form>
                 <form id="add-to-cart-form" method="post" action="/Product/AddToCart">
                     <input type="hidden" name="productId" value="@Model.ProductId">
                     <input type="hidden" name="productName" value="@Model.ProductName">
                     <input type="hidden" name="productImage" value="@Model.Image">
                     <input type="hidden" name="price" value="@Model.Price">
-                    <input type="hidden" name="color" value="@Model.Color">
+                    <input type="hidden" id="productColor-cart" name="color" value="">
                     <input type="hidden" name="quantity" value="1">
                     <button type="submit" class="btn btn-primary">Thêm Giỏ Hàng</button>
                 </form>
-
 
                 <div class="favorite_ct">
                     <i class="fa fa-heart heart-icon_ct"></i>
                 </div>
             </div>
-
-
-
-
 
             <p class="delivery-info_ct">
                 🚚 Miễn phí giao hàng với đơn trên 100 Nghìn<br />
@@ -122,42 +116,54 @@
             </p>
         </div>
     </div>
+</div>
 
-    <script>
-           $(document).ready(function () {
-            $(".add-to-cart_ct").click(function () {
-                var productId = "@Model.ProductId";
-                var productName = "@Model.ProductName";
-                var productImage = "@Model.Image";
-                var productPrice = @Model.Price;
-                var productColor = "@Model.Color";
-                var quantity = $("#quantity-input").val();
+<script>
+    $(document).ready(function () {
+        var selectedColorId = null;
 
-                $.ajax({
-                    url: '/Product/AddToCart', // Update to match your API route
-                    type: 'POST',
-                    contentType: 'application/json',
-                    data: JSON.stringify({
-                        productId: productId,
-                        productName: productName,
-                        productImage: productImage,
-                        productPrice: productPrice,
-                        productColor: productColor,
-                        quantity: quantity
-                    }),
-                    success: function (response) {
-                        if (response.success) {
-                            alert(response.message);
-                        } else {
-                            alert(response.message);
-                        }
-                    },
-                    error: function (error) {
-                        alert('Có lỗi xảy ra. Vui lòng thử lại.');
-                    }
-                });
-            });
+        // Khi người dùng click vào màu sắc
+        $(".color-option_ct").click(function () {
+            selectedColorId = $(this).attr("data-color-id");
+            $("#productColor-buy").val(selectedColorId);
+            $("#productColor-cart").val(selectedColorId);
+
+            // Làm nổi bật màu sắc được chọn
+            $(".color-option_ct").css("border", "none");
+            $(this).css("border", "2px solid black");
         });
 
-    </script>
-  
+        // Nút "Thêm Giỏ Hàng"
+        $(".add-to-cart_ct").click(function () {
+            var productId = "@Model.ProductId";
+            var productName = "@Model.ProductName";
+            var productImage = "@Model.Image";
+            var productPrice = @Model.Price;
+            var quantity = $("#quantity-input").val();
+
+            $.ajax({
+                url: '/Product/AddToCart', // Cập nhật theo API của bạn
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify({
+                    productId: productId,
+                    productName: productName,
+                    productImage: productImage,
+                    productPrice: productPrice,
+                    productColor: selectedColorId,
+                    quantity: quantity
+                }),
+                success: function (response) {
+                    if (response.success) {
+                        alert(response.message);
+                    } else {
+                        alert(response.message);
+                    }
+                },
+                error: function (error) {
+                    alert('Có lỗi xảy ra. Vui lòng thử lại.');
+                }
+            });
+        });
+    });
+</script>

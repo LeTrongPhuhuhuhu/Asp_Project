@@ -13,19 +13,26 @@ namespace _6TL.Controllers
 		{
 			_context = context;
 		}
-
 		public IActionResult ChiTietSanPham(int? id, string slug)
 		{
-			var product = _context.Products.FirstOrDefault(p => (id.HasValue && p.ProductId == id) || (!string.IsNullOrEmpty(slug) && p.Slug == slug));
+			var product = _context.Products
+				.FirstOrDefault(p => (id.HasValue && p.ProductId == id) || (!string.IsNullOrEmpty(slug) && p.Slug == slug));
 
 			if (product == null)
 			{
 				return NotFound();
 			}
-			ViewData["Color"] = product.Color;
+
+			var colors = _context.ProductColors
+				.Where(pc => pc.ProductId == product.ProductId)
+				.Join(_context.Colors, pc => pc.ColorId, c => c.ColorId, (pc, c) => c)
+				.ToList();
+
+			ViewData["Colors"] = colors;
 
 			return View(product);
 		}
+
 		[HttpPost]
 		public IActionResult AddToCart(int customerId, int productId, string productName, string? productImage, decimal price, string color, int quantity)
 		{
@@ -33,7 +40,7 @@ namespace _6TL.Controllers
 			{
 				// Kiểm tra xem sản phẩm đã có trong giỏ hàng của khách hàng chưa
 				var existingCartItem = _context.Carts
-					.FirstOrDefault(c => c.CustomerId == customerId && c.ProductId == productId);
+					.FirstOrDefault(c =>  c.ProductId == productId);
 
 				if (existingCartItem != null)
 				{
@@ -49,7 +56,7 @@ namespace _6TL.Controllers
 					Console.WriteLine("Sản phẩm chưa tồn tại trong giỏ hàng, thêm sản phẩm mới.");
 					var cartItem = new Cart
 					{
-						CustomerId = 1,
+						
 						ProductId = productId,
 						ProductName = productName,
 						ProductImage = productImage,

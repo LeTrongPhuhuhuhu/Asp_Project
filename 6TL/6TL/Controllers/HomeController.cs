@@ -38,7 +38,7 @@ namespace _6TL.Controllers
 		{
 			var cartItems = _context.Carts
 				.Include(c => c.Product)  // Bao gồm thông tin sản phẩm
-				.Include(c => c.Customer) // Bao gồm thông tin khách hàng
+			
 				.ToList();
 
 			// Kiểm tra nếu giỏ hàng trống
