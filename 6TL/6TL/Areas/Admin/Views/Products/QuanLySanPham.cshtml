@@ -64,17 +64,17 @@
                         <!-- Hiển thị Chất liệu -->
                         <td>@product.Material</td>
 
-                        @* <!-- Hiển thị Trạng thái -->
-                    <td>
-                    @if (product.ProductColors.Sum(pc => pc.Quantity) > 0)
-                    {
-                    <span>Còn hàng</span>
-                    }
-                    else
-                    {
-                    <span>Hết hàng</span>
-                    }
-                    </td> *@
+                        <td>
+                            @if (product.ProductColors.Sum(pc => pc.Quantity) > 0)
+                            {
+                                <span>Còn hàng</span>
+                            }
+                            else
+                            {
+                                <span>Hết hàng</span>
+                            }
+                        </td>
+
 
                         <td>
                             <a href="/Admin/Products/Edit/@product.ProductId">
