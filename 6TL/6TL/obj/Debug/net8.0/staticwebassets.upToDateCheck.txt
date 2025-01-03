@@ -2,13 +2,16 @@ wwwroot\css\admin.css
 wwwroot\css\admin\Dashboard.css
 wwwroot\css\admin\popup.css
 wwwroot\css\admin\QuanLyAdmin.css
+wwwroot\css\admin\QuanLyBlog.css
 wwwroot\css\admin\QuanLyChiTietDonHang.css
+wwwroot\css\admin\QuanLyChiTietSanPham.css
 wwwroot\css\admin\QuanLyDanhGia.css
 wwwroot\css\admin\QuanLyDanhMuc.css
 wwwroot\css\admin\QuanLyDonHang.css
 wwwroot\css\admin\QuanLyLienHe.css
 wwwroot\css\admin\QuanLySanPham.css
 wwwroot\css\admin\SuaSanPham.css
+wwwroot\css\admin\ThemBlog.css
 wwwroot\css\admin\ThemSanPham.css
 wwwroot\css\pages\ChinhSach.css
 wwwroot\css\pages\ChiTietSanPham.css
@@ -55,6 +58,7 @@ wwwroot\img\noithat6tc.jpg
 wwwroot\img\placeholder.jpg
 wwwroot\img\salebanner.jpg
 wwwroot\img\snapedit_1732430907358.png
+wwwroot\img\sofa1.jpg
 wwwroot\img\succes.json
 wwwroot\img\successdelete.gif
 wwwroot\img\successdelete.webm
