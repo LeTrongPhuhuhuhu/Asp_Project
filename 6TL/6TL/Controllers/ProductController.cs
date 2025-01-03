@@ -38,14 +38,30 @@ namespace _6TL.Controllers
 		{
 			try
 			{
+				// Đặt giá trị mặc định cho 'color' nếu nó là null
+				color = string.IsNullOrEmpty(color) ? "Màu mặc định" : color;
+
+				// Kiểm tra xem productName có giá trị hay không
+				if (string.IsNullOrEmpty(productName))
+				{
+					return Json(new { success = false, message = "Tên sản phẩm không được để trống." });
+				}
+
+				Console.WriteLine("customerId: " + customerId);
+				Console.WriteLine("productId: " + productId);
+				Console.WriteLine("productName: " + productName); // Log productName để kiểm tra
+				Console.WriteLine("productImage: " + productImage);
+				Console.WriteLine("price: " + price);
+				Console.WriteLine("color: " + color);
+				Console.WriteLine("quantity: " + quantity);
+
 				// Kiểm tra xem sản phẩm đã có trong giỏ hàng của khách hàng chưa
 				var existingCartItem = _context.Carts
-					.FirstOrDefault(c =>  c.ProductId == productId);
+					.FirstOrDefault(c => c.ProductId == productId && c.Color == color);
 
 				if (existingCartItem != null)
 				{
 					// Nếu có, chỉ cần cập nhật số lượng và tính lại tổng giá
-					Console.WriteLine("Sản phẩm đã tồn tại trong giỏ hàng, cập nhật số lượng.");
 					existingCartItem.Quantity += quantity; // Tăng số lượng sản phẩm
 					existingCartItem.TotalPrice = existingCartItem.Price * existingCartItem.Quantity; // Tính lại tổng giá
 					existingCartItem.UpdatedAt = DateTime.Now; // Cập nhật thời gian sửa đổi
@@ -53,10 +69,8 @@ namespace _6TL.Controllers
 				else
 				{
 					// Nếu chưa có, tạo mới sản phẩm trong giỏ hàng
-					Console.WriteLine("Sản phẩm chưa tồn tại trong giỏ hàng, thêm sản phẩm mới.");
 					var cartItem = new Cart
 					{
-						
 						ProductId = productId,
 						ProductName = productName,
 						ProductImage = productImage,
@@ -71,22 +85,18 @@ namespace _6TL.Controllers
 				}
 
 				// Lưu lại thay đổi trong cơ sở dữ liệu
-				Console.WriteLine("Lưu lại thay đổi trong cơ sở dữ liệu.");
 				_context.SaveChanges();
 
 				// Trả về kết quả JSON thành công
-				Console.WriteLine("Sản phẩm đã được thêm vào giỏ hàng!");
 				return Json(new { success = true, message = "Sản phẩm đã được thêm vào giỏ hàng!" });
 			}
 			catch (Exception ex)
 			{
-				// Nếu có lỗi, trả về thông báo lỗi
-				Console.WriteLine("Có lỗi xảy ra: " + ex.Message);
-				return Json(new { success = false, message = "Lỗi: " + ex.Message });
+				// Log chi tiết lỗi để kiểm tra
+				var innerException = ex.InnerException != null ? ex.InnerException.Message : ex.Message;
+				return Json(new { success = false, message = "Lỗi roi: " + innerException });
 			}
 		}
-
-
 
 
 

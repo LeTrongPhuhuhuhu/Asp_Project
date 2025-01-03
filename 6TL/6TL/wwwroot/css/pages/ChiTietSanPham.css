@@ -456,3 +456,18 @@ body {
     max-width: 700px;
     box-sizing: border-box;
 }
+.color-option_ct {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+    .color-option_ct.selected {
+        width: 40px; /* Phóng to */
+        height: 40px; /* Phóng to */
+        border: 2px solid black; /* Viền nổi bật */
+    }

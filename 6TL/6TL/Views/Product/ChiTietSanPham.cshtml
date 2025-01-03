@@ -2,6 +2,24 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="~/css/pages/chitietsanpham.css" rel="stylesheet" />
+<style>
+    .color-option_ct {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: inline-block;
+        cursor: pointer;
+        border: 2px solid transparent;
+        transition: all 0.3s ease;
+    }
+
+        .color-option_ct.selected {
+            width: 40px; /* Phóng to */
+            height: 40px; /* Phóng to */
+            border: 2px solid black; /* Viền nổi bật */
+        }
+</style>
+
 <div class="banner_ct">
     <nav class="breadcrumb_ct">
         <a href="#">Mục trên menu</a> / <a href="#">Loại sản phẩm</a>
@@ -10,7 +28,6 @@
     <p class="product-code_ct">Mã sản phẩm: @Model.ProductId</p>
 </div>
 <div class="product-detail_ct">
-
     <div class="product-container_ct">
         <div class="product-image_ct">
             <img src="@Url.Content($"~/img/{Model.Image}")" alt="@Model.ProductName" class="product-image_ct" />
@@ -27,8 +44,6 @@
                     Chất liệu:
                     <span class="material-btn" style="background-color: #D69A49;">@Model.Material</span>
                 </li>
-
-                <!-- Màu sắc -->
                 <li>
                     Màu sắc:
                     @if (ViewData["Colors"] != null)
@@ -36,7 +51,11 @@
                         var colors = ViewData["Colors"] as List<_6TL.Models.Color>;
                         @foreach (var color in colors)
                         {
-                            <div class="color-option_ct" data-color-id="@color.ColorId" style="background-color: @color.ColorName; width: 30px; height: 30px; border-radius: 50%; display: inline-block; cursor: pointer;"></div>
+                            <div class="color-option_ct"
+                                 data-color-id="@color.ColorId"
+                                 data-color-code="@color.ColorCode"
+                                 style="background-color: @color.ColorCode;">
+                            </div>
                         }
                     }
                     else
@@ -82,8 +101,6 @@
                 <label for="quantity-input">Số lượng:</label>
                 <input type="number" id="quantity-input" class="quantity-input_ct" value="1" min="1" max="@Model.Quantity">
             </div>
-
-            <!-- Hành động -->
             <div class="actions_ct">
                 <!-- Form xử lý nút Mua ngay -->
                 <form action="/Home/TrangThanhToan" method="get" class="actions_ct">
@@ -117,53 +134,91 @@
         </div>
     </div>
 </div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <script>
-    $(document).ready(function () {
-        var selectedColorId = null;
+     $(document).ready(function () {
+        let selectedColorId = null;
+        let selectedColorCode = null;
 
-        // Khi người dùng click vào màu sắc
+        // Khi người dùng click vào màu
         $(".color-option_ct").click(function () {
+            // Lấy mã màu từ `data-color-id` và `data-color-code`
             selectedColorId = $(this).attr("data-color-id");
-            $("#productColor-buy").val(selectedColorId);
-            $("#productColor-cart").val(selectedColorId);
+            selectedColorCode = $(this).attr("data-color-code");
+            console.log("Mã màu được chọn: " + selectedColorId);
+            console.log("Mã màu HEX: " + selectedColorCode);
 
-            // Làm nổi bật màu sắc được chọn
-            $(".color-option_ct").css("border", "none");
-            $(this).css("border", "2px solid black");
+            // Đặt giá trị mã màu vào các input ẩn liên quan
+            $("#productColor-buy").val(selectedColorCode); // Dùng ColorCode
+            $("#productColor-cart").val(selectedColorCode); // Dùng ColorCode
+
+            // Xóa class 'selected' của các màu khác và áp dụng class cho màu được chọn
+            $(".color-option_ct").removeClass("selected");
+            $(this).addClass("selected");
         });
 
-        // Nút "Thêm Giỏ Hàng"
-        $(".add-to-cart_ct").click(function () {
-            var productId = "@Model.ProductId";
-            var productName = "@Model.ProductName";
-            var productImage = "@Model.Image";
-            var productPrice = @Model.Price;
-            var quantity = $("#quantity-input").val();
+        // Kiểm tra trước khi submit form "Mua ngay"
+        $(".actions_ct form").on("submit", function (e) {
+            if (!selectedColorCode) {
+                alert("Vui lòng chọn màu trước khi tiếp tục.");
+                e.preventDefault(); // Ngăn không cho gửi form
+            } else {
+                console.log("Gửi form với mã màu HEX: " + selectedColorCode);
+            }
+        });
+
+        // Xử lý khi người dùng nhấn nút "Thêm Giỏ Hàng"
+        $("#add-to-cart-form").submit(function (e) {
+            e.preventDefault(); // Ngăn chặn gửi form mặc định
+
+            const productId = $(this).find("input[name='productId']").val();
+            const productName = $(this).find("input[name='productName']").val();
+            const productImage = $(this).find("input[name='productImage']").val();
+            const productPrice = $(this).find("input[name='price']").val();
+            const quantity = $(this).find("input[name='quantity']").val();
+            const color = selectedColorCode;
+
+            if (!color) {
+                alert("Vui lòng chọn màu sắc trước khi thêm sản phẩm vào giỏ hàng.");
+                return;
+            }
+
+            // Debug: In ra các giá trị để kiểm tra
+            console.log({
+                productId: productId,
+                productName: productName,
+                productImage: productImage,
+                productPrice: parseFloat(productPrice),
+                colorCode: color, // Gửi mã màu ColorCode
+                quantity: parseInt(quantity)
+            });
 
             $.ajax({
-                url: '/Product/AddToCart', // Cập nhật theo API của bạn
+                url: '/Product/AddToCart',
                 type: 'POST',
                 contentType: 'application/json',
                 data: JSON.stringify({
                     productId: productId,
                     productName: productName,
                     productImage: productImage,
-                    productPrice: productPrice,
-                    productColor: selectedColorId,
-                    quantity: quantity
+                    productPrice: parseFloat(productPrice),
+                    colorCode: color, // Dùng ColorCode
+                    quantity: parseInt(quantity)
                 }),
                 success: function (response) {
                     if (response.success) {
-                        alert(response.message);
+                        alert("Thêm vào giỏ hàng thành công!");
                     } else {
-                        alert(response.message);
+                        alert("Thêm vào giỏ hàng thất bại: " + response.message);
                     }
                 },
-                error: function (error) {
-                    alert('Có lỗi xảy ra. Vui lòng thử lại.');
+                error: function (xhr, status, error) {
+                    alert("Có lỗi xảy ra khi thêm sản phẩm vào giỏ hàng. Vui lòng thử lại.");
+                    console.error("Error:", error);
                 }
             });
         });
     });
+
 </script>
