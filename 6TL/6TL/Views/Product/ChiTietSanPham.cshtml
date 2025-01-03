@@ -194,30 +194,31 @@
                 quantity: parseInt(quantity)
             });
 
-            $.ajax({
-                url: '/Product/AddToCart',
-                type: 'POST',
-                contentType: 'application/json',
-                data: JSON.stringify({
-                    productId: productId,
-                    productName: productName,
-                    productImage: productImage,
-                    productPrice: parseFloat(productPrice),
-                    colorCode: color, // Dùng ColorCode
-                    quantity: parseInt(quantity)
-                }),
-                success: function (response) {
-                    if (response.success) {
-                        alert("Thêm vào giỏ hàng thành công!");
-                    } else {
-                        alert("Thêm vào giỏ hàng thất bại: " + response.message);
-                    }
-                },
-                error: function (xhr, status, error) {
-                    alert("Có lỗi xảy ra khi thêm sản phẩm vào giỏ hàng. Vui lòng thử lại.");
-                    console.error("Error:", error);
-                }
-            });
+               $.ajax({
+        url: '/Product/AddToCart',
+        type: 'POST',
+        contentType: 'application/json',
+        data: JSON.stringify({
+            productId: productId,
+            productName: productName,
+            productImage: productImage,
+            productPrice: parseFloat(productPrice),
+            colorCode: color,
+            quantity: parseInt(quantity)
+        }),
+        success: function (response) {
+            if (response.success) {
+                alert("Thêm vào giỏ hàng thành công!");
+            } else {
+                alert("Thêm vào giỏ hàng thất bại: " + response.message);
+            }
+        },
+        error: function (xhr, status, error) {
+            alert("Có lỗi xảy ra khi thêm sản phẩm vào giỏ hàng. Vui lòng thử lại.");
+            console.error("Error:", error);
+        }
+    });
+
         });
     });
 
