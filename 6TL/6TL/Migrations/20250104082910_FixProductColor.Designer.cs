@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using _6TL.Models;
 
@@ -11,9 +12,11 @@ using _6TL.Models;
 namespace _6TL.Migrations
 {
     [DbContext(typeof(Db6TLContext))]
-    partial class Db6TLContextModelSnapshot : ModelSnapshot
+    [Migration("20250104082910_FixProductColor")]
+    partial class FixProductColor
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "YggYALIkW+dcskHIAug2Nr5XMInzy9+a5W78176cBlg=",
+  "Hash": "BX3x17xmWIWe4jK8PqmRwQbE9/wlimlVsprgEU292rs=",
   "Source": "6TL",
   "BasePath": "_content/6TL",
   "Mode": "Default",
@@ -1119,6 +1119,25 @@
       "OriginalItemSpec": "wwwroot\\img\\ghebar.jpg"
     },
     {
+      "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\ghechill.jpg",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+      "BasePath": "_content/6TL",
+      "RelativePath": "img/ghechill.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\ghechill.jpg"
+    },
+    {
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\gioithieu.jpg",
       "SourceId": "6TL",
       "SourceType": "Discovered",
@@ -1136,6 +1155,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\gioithieu.jpg"
+    },
+    {
+      "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\giuongngu.jpg",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+      "BasePath": "_content/6TL",
+      "RelativePath": "img/giuongngu.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\giuongngu.jpg"
     },
     {
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\inverted_logo.png",
