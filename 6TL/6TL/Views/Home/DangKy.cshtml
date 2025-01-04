@@ -46,6 +46,47 @@
         <div class="form-row">
             <div class="form-group">
                 <label for="email">Email <span class="required">*</span></label>
+                const Register = () => {
+                const dispatch = useDispatch();
+                const navigate = useNavigate();
+
+                let schema = yup.object().shape({
+                firstname: yup.string().required("Firstname is requied"),
+                lastname: yup.string().required("Lastname is requied"),
+                mobile: yup
+                .string()
+                .required("Mobile is requied")
+                .matches(/^[0-9]+/, "Input phone number, please!"),
+                email: yup
+                .string()
+                .required("Email is required")
+                .email("Invalid email format"),
+                password: yup.string().required("Password is required"),
+                });
+                const formik = useFormik({
+                initialValues: {
+                firstname: "",
+                lastname: "",
+                mobile: "",
+                email: "",
+                password: "",
+                images: "user-none.jpg"
+                },
+                validationSchema: schema,
+                onSubmit: (values) => {
+                dispatch(register(values))
+                .unwrap()
+                .then(() => {
+                toast.success("Đăng kí thành công !");
+                setTimeout(() => {
+                navigate("/login");
+                }, 2000);
+                })
+                .catch(() => {
+                toast.error("Email đã được đăng kí !");
+                });
+                },
+                });
                 <input type="email" id="email" placeholder="Nhập email">
             </div>
             <div class="form-group">
