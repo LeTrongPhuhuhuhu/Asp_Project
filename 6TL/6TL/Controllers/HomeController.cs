@@ -1,22 +1,59 @@
 ﻿using _6TL.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using System;
 using System.Diagnostics;
 
 namespace _6TL.Controllers
 {
 	public class HomeController : Controller
-
 	{
-		private readonly Db6TLContext _dbContext;
+		private readonly ILogger<HomeController> _logger;
+		private readonly Db6TLContext _context;
 
-		// Inject DbContext thông qua constructor
-		public HomeController(Db6TLContext dbContext)
+	
+
+		public HomeController(ILogger<HomeController> logger, Db6TLContext context)
 		{
-			_dbContext = dbContext;
+			_logger = logger;
+			_context = context;
 		}
 		public IActionResult SanPham() { return View(); }
+		// Trang thanh toán với thông tin sản phẩm
+		
+			// Action hiển thị trang thanh toán
+			public ActionResult TrangThanhToan(int productId, string productName, string productImage, decimal productPrice, string productColor, int quantity)
+			{
+				ViewBag.ProductId = productId;
+				ViewBag.ProductName = productName;
+				ViewBag.ProductImage = productImage;
+			ViewBag.ProductPrice = productPrice.ToString("N0") + " VNĐ";
+			ViewBag.ProductColor = productColor;
+				ViewBag.Quantity = "x"+quantity;
+
+				return View();
+			}
+
+
+		public IActionResult GioHang()
+		{
+			var cartItems = _context.Carts
+				.Include(c => c.Product)  // Bao gồm thông tin sản phẩm
+			
+				.ToList();
+
+			// Kiểm tra nếu giỏ hàng trống
+			if (!cartItems.Any())
+			{
+				ViewBag.IsCartEmpty = true;
+			}
+			else
+			{
+				ViewBag.IsCartEmpty = false;
+			}
+
+			return View(cartItems);
+		}
+
 
 		public IActionResult SanPhamYeuThich() { return View(); }
 		public IActionResult Index()
@@ -40,32 +77,10 @@ namespace _6TL.Controllers
 		{
 			return View();
 		}
-
-		[HttpPost]
-		public IActionResult LienHe(Contact model)
-		{
-			if (ModelState.IsValid)
-			{
-				model.CreatedDate = DateTime.Now;
-
-				// Lưu dữ liệu vào cơ sở dữ liệu
-				_dbContext.Contacts.Add(model);
-				_dbContext.SaveChanges();
-
-				TempData["SuccessMessage"] = "Thông tin liên hệ đã được gửi thành công!";
-				return RedirectToAction("LienHe");
-			}
-
-			TempData["ErrorMessage"] = "Vui lòng kiểm tra lại thông tin!";
-			return View(model);
-		}
-		public IActionResult GioHang()
-        {
-            return View();
-        }
+   
         public IActionResult ChiTietSanPham() { return View(); }
 
-		public IActionResult TrangThanhToan() { return View(); }
+
 		public IActionResult ViewProfile()
         {
             return View();

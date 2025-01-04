@@ -18,20 +18,7 @@ namespace _6TL.Areas.Admin.Controllers
         {
             return View();
         }
-		public IActionResult QuanLySanPham()
-		{
-			return View();
-		}
-	
-		public IActionResult ThemSanPham()
-		{
-			return View();
-		}
 		
-		public IActionResult SuaSanPham()
-		{
-			return View();
-		}
 		public IActionResult GioiThieu()
 		{
 			return View();

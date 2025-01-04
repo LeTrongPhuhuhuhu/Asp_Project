@@ -1,7 +1,7 @@
 ﻿  @model Contact
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-  
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,7 +28,7 @@
         <p>Nếu bạn muốn đặt thiết kế nội thất theo mẫu có sẵn, vui lòng điền vào biểu mẫu dưới đây và đính kèm liên kết đến mẫu thiết kế bạn yêu thích.</p>
 
         <!-- Contact Form -->
-        <form class="contact-form" asp-action="LienHe" method="post">
+        <form class="contact-form" asp-controller="Contact" asp-action="LienHe" method="post">
             <label for="title">Tiêu Đề (Bắt Buộc)</label>
             <input asp-for="Title" type="text" id="title" name="Title" required>
 
@@ -36,7 +36,7 @@
             <input asp-for="Name" type="text" id="name" name="Name" required>
 
             <label for="last-name">Số Điện Thoại (Bắt Buộc)</label>
-            <input asp-for="Phone"  type="text" id="last-name" name="Phone" required>
+            <input asp-for="Phone" type="text" id="last-name" name="Phone" required>
 
             <label for="email">Email (Bắt Buộc)</label>
             <input asp-for="Email" type="email" id="email" name="Email" required>
