@@ -155,11 +155,13 @@ h2_sp {
     position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
-    .product-item_sp:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    }
+.product-item_sp a{
+    text-decoration:none;
+}
+.product-item_sp:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
 
 /* Favorite Icon */
 .favorite_sp {

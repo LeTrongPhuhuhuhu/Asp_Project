@@ -79,18 +79,17 @@
                 </li> *@
             </ul>
             <p class="price_ct">
-<<<<<<< HEAD
+
                 @(Model.Price?.ToString("N0", new System.Globalization.CultureInfo("vi-VN")) + " VNĐ")
             </p>
 
 
 
 
-=======
+
                 @string.Format(new System.Globalization.CultureInfo("vi-VN"), "{0:N0} VNĐ", Model.Price)
             </p>
 
->>>>>>> main
             <!-- Đánh giá trung bình -->
             <div class="product-rating_ct">
                 <span class="rating-value_ct">@Math.Round(Model.Rating ?? 0, 1) / 5</span>

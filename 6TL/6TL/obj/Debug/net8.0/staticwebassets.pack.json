@@ -229,8 +229,16 @@
       "PackagePath": "staticwebassets\\img\\ghebar.jpg"
     },
     {
+      "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\ghechill.jpg",
+      "PackagePath": "staticwebassets\\img\\ghechill.jpg"
+    },
+    {
       "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\gioithieu.jpg",
       "PackagePath": "staticwebassets\\img\\gioithieu.jpg"
+    },
+    {
+      "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\giuongngu.jpg",
+      "PackagePath": "staticwebassets\\img\\giuongngu.jpg"
     },
     {
       "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\inverted_logo.png",

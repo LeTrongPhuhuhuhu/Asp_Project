@@ -53,6 +53,7 @@
                     @foreach (var product in Model)
                     {
                         <div class="product-item_sp" data-product-id="@product.ProductId">
+                            <a  href="/Product/ChiTietSanPham/@product.ProductId">
                             <div class="favorite_sp">
                                 <i class="heart-icon_sp">&hearts;</i>
                             </div>
@@ -76,7 +77,7 @@
                                     }
                                 }
                             </div>
-
+                            </a>
                         </div>
                     }
                 </div>
