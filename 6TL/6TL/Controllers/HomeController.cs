@@ -17,7 +17,7 @@ namespace _6TL.Controllers
 			_logger = logger;
 			_context = context;
 		}
-		public IActionResult SanPham() { return View(); }
+		
 		// Trang thanh toán với thông tin sản phẩm
 		
 			// Action hiển thị trang thanh toán
