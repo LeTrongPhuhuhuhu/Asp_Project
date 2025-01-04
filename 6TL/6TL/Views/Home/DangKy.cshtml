@@ -87,10 +87,37 @@
                 });
                 },
                 });
+                return (
+                <>
+                <ToastContainer position="top-right"
+                                autoClose={3000}
+                                hideProgressBar={false}
+                                newestOnTop={false}
+                                closeOnClick
+                                rtl={false}
+                                pauseOnFocusLoss
+                                draggable
+                                pauseOnHover
+                                theme="light"
                 <input type="email" id="email" placeholder="Nhập email">
             </div>
             <div class="form-group">
                 <label for="password">Mật Khẩu <span class="required">*</span></label>
+                <div className="input-box">
+                    <input name="password"
+                           onChange={formik.handleChange("password")}
+                           value={formik.values.password}
+                           type="password"
+                           placeholder="Mật khẩu" />
+                    <CiLock />
+                    {formik.touched.password && formik.errors.password ? (
+                    <span className="text-error">{formik.errors.password}</span>
+                    ) : null}
+                </div>
+                <input name="images"
+                       onChange={formik.handleChange("images")}
+                       value={formik.values.images}
+                       type="hidden" />
                 <input type="password" id="password" placeholder="Nhập mật khẩu">
             </div>
         </div>
