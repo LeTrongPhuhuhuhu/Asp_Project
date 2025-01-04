@@ -27,6 +27,17 @@
         <div class="form-row">
             <div class="form-group">
                 <label for="phone">Điện Thoại <span class="required">*</span></label>
+                <div className="input-box">
+                    <input name="mobile"
+                           onChange={formik.handleChange("mobile")}
+                           value={formik.values.mobile}
+                           type="text"
+                           placeholder="Số điện thoại" />
+                    <CiPhone />
+                    {formik.touched.mobile && formik.errors.mobile ? (
+                    <span className="text-error">{formik.errors.mobile}</span>
+                    ) : null}
+                </div>
                 <input type="text" id="phone" placeholder="Nhập số điện thoại">
             </div>
             <div class="form-group">
