@@ -37,25 +37,41 @@ namespace _6TL.Controllers
 		public IActionResult GioHang()
 		{
 			var cartItems = _context.Carts
-				.Include(c => c.Product)  // Bao gồm thông tin sản phẩm
-			
+				.Include(c => c.Product)
 				.ToList();
-
-			// Kiểm tra nếu giỏ hàng trống
-			if (!cartItems.Any())
-			{
-				ViewBag.IsCartEmpty = true;
-			}
-			else
-			{
-				ViewBag.IsCartEmpty = false;
-			}
-
-			return View(cartItems);
+			return View(cartItems ?? new List<Cart>());
 		}
 
+		[HttpDelete]
+		[Route("Home/remove/{id}")]
+		public IActionResult RemoveFromCart(int id)
+		{
+			var cartItem = _context.Carts.FirstOrDefault(item => item.ProductId == id);
+			if (cartItem != null)
+			{
+				_context.Carts.Remove(cartItem);
+				_context.SaveChanges();
+				return Json(new { success = true });
+			}
+			return Json(new { success = false, message = "Sản phẩm không tồn tại trong giỏ hàng." });
+		}
+		// Trong HomeController
+		[HttpDelete]
+		public IActionResult ClearCart()
+		{
+			// Xóa tất cả các sản phẩm trong bảng Cart
+			var cartItems = _context.Carts.ToList();
 
-		
+			if (cartItems.Any())
+			{
+				_context.Carts.RemoveRange(cartItems);
+				_context.SaveChanges();
+				return Json(new { success = true });
+			}
+
+			return Json(new { success = false });
+		}
+
 		public IActionResult Index()
 		{
 			return View();

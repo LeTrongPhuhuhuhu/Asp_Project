@@ -31,10 +31,13 @@ body {
 /* Bảng giỏ hàng */
 .cart-container {
     display: flex;
-    gap: 30px; /* Giảm khoảng cách giữa bảng và phần tóm tắt */
+    gap: 20px;
     padding: 20px;
-    width: 95%; /* Giảm chiều rộng tổng thể một chút để có không gian bên ngoài */
+    width: 100%;
+    max-width: 1500px;
+    min-width: 1500px;
     margin: 0 auto;
+    box-sizing: border-box;
 }
 
 .cart-table {
@@ -86,10 +89,14 @@ body {
     font-size: 18px; /* Giảm kích thước icon */
     cursor: pointer;
 }
-
+.cart-items {
+    flex: 1; /* Chiếm toàn bộ không gian còn lại */
+    min-width: 0; /* Đảm bảo không bị tràn */
+}
 /* Phần tóm tắt */
 .cart-summary {
-    width: 30%; /* Thu hẹp phần tóm tắt */
+   min-width:300px;
+   max-width:300px;
     padding: 20px; /* Giảm padding */
     background-color: #fff;
     border: 1px solid #ddd;
@@ -149,6 +156,7 @@ body {
 .empty-cart {
     text-align: center;
     margin-top: 40px;
+
 }
 
     .empty-cart img {
@@ -203,7 +211,7 @@ body {
         }
 /* Giỏ hàng trống */
 .empty-cart {
-    display: none;
+  /*  display: none;*/
 }
 
 .cart-container.has-products .empty-cart {

@@ -132,13 +132,27 @@ body {
 
 .stars_ct {
     display: flex;
-    gap: 6px;
 }
 
 .star_ct {
-    font-size: 22px;
-    color: #ffc107;
+    width: 20px;
+    height: 20px;
+    background-color: #ccc;
+    margin-right: 5px;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    transition: background-color 0.3s ease;
 }
+
+    /* Ngôi sao đầy đủ */
+    .star_ct.filled {
+        background-color: gold;
+    }
+
+    /* Ngôi sao nửa */
+    .star_ct.half-filled {
+        background: linear-gradient(to right, gold 50%, #ccc 50%);
+    }
+
 
 .rating-summary_ct {
     font-size: 16px;
