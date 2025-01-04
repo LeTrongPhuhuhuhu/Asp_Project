@@ -33,10 +33,9 @@ namespace _6TL.Controllers
 
 			ViewData["Colors"] = colors;
 
-			// Lấy sản phẩm liên quan theo cùng loại (category)
 			var relatedProducts = _context.Products
 				.Where(p => p.CategoryId == product.CategoryId && p.ProductId != product.ProductId)
-				.Take(8) // Lấy tối đa 4 sản phẩm liên quan
+				.Take(8)
 				.ToList();
 
 			ViewData["RelatedProducts"] = relatedProducts;
