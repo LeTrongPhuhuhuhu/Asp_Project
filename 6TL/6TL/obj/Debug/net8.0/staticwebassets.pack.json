@@ -177,6 +177,10 @@
       "PackagePath": "staticwebassets\\img\\add_shopping_cart_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png"
     },
     {
+      "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\banan.jpg",
+      "PackagePath": "staticwebassets\\img\\banan.jpg"
+    },
+    {
       "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\banner-ban-cafe.jpg",
       "PackagePath": "staticwebassets\\img\\banner-ban-cafe.jpg"
     },
@@ -219,6 +223,10 @@
     {
       "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\dmsp.jpg",
       "PackagePath": "staticwebassets\\img\\dmsp.jpg"
+    },
+    {
+      "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\ghebar.jpg",
+      "PackagePath": "staticwebassets\\img\\ghebar.jpg"
     },
     {
       "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\gioithieu.jpg",
@@ -307,6 +315,10 @@
     {
       "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\tintuc4.jpg",
       "PackagePath": "staticwebassets\\img\\tintuc4.jpg"
+    },
+    {
+      "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\tutv.jpg",
+      "PackagePath": "staticwebassets\\img\\tutv.jpg"
     },
     {
       "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\js\\site.js",

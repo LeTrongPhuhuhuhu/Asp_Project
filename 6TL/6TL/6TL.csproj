@@ -43,7 +43,7 @@
     <None Include="Views\Home\LichSuMuaHang.cshtml" />
     <None Include="Views\Home\LienHe.cshtml" />
     <None Include="Views\Product2\SanPham.cshtml" />
-    <None Include="Views\Home\SanPhamYeuThich.cshtml" />
+    <None Include="Views\Product2\SanPhamYeuThich.cshtml" />
     <None Include="Views\Home\TinTuc.cshtml" />
     <None Include="Views\Home\TrangThanhToan.cshtml" />
     <None Include="Views\Home\ViewProfile.cshtml" />

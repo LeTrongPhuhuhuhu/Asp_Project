@@ -1,4 +1,4 @@
-using _6TL.Models;
+﻿using _6TL.Models;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,9 +8,15 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<Db6TLContext>(options =>
 	options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-
+builder.Services.AddDistributedMemoryCache(); // Lưu session trong bộ nhớ
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(20); // Thời gian hết hạn
+    options.Cookie.HttpOnly = true;                // Cookie chỉ đọc
+    options.Cookie.IsEssential = true;             // Cookie cần thiết
+});
 var app = builder.Build();
-
+app.UseSession();
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {

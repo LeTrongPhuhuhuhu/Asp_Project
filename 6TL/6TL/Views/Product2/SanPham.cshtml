@@ -52,7 +52,7 @@
                 <div class="product-list_sp">
                     @foreach (var product in Model)
                     {
-                        <div class="product-item_sp">
+                        <div class="product-item_sp" data-product-id="@product.ProductId">
                             <div class="favorite_sp">
                                 <i class="heart-icon_sp">&hearts;</i>
                             </div>
@@ -86,5 +86,50 @@
             </div>
         </section>
     </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Lấy tất cả các icon trái tim
+            const heartIcons = document.querySelectorAll('.heart-icon_sp');
+
+            heartIcons.forEach((heartIcon) => {
+                heartIcon.addEventListener('click', () => {
+                    // Tìm phần tử sản phẩm tương ứng
+                    const productItem = heartIcon.closest('.product-item_sp');
+                    const productId = productItem.dataset.productId; // Lấy ID sản phẩm từ thuộc tính data
+
+                    // Thay đổi trạng thái "yêu thích"
+                    const isFavorite = heartIcon.classList.toggle('favorited'); // Toggle class 'favorited'
+
+                    // Gửi dữ liệu yêu thích về server bằng AJAX
+                    fetch('/Favorite/ToggleFavorite', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'X-CSRF-TOKEN': document.querySelector('input[name="__RequestVerificationToken"]').value // CSRF token
+                        },
+                        body: JSON.stringify({ productId, isFavorite })
+                    })
+                        .then(response => {
+                            if (!response.ok) throw new Error('Failed to update favorite');
+                            return response.json();
+                        })
+                        .then(data => {
+                            if (data.success) {
+                                console.log(`Sản phẩm ${productId} đã được cập nhật trạng thái yêu thích.`);
+                            } else {
+                                console.error('Lỗi khi cập nhật trạng thái yêu thích:', data.message);
+                            }
+                        })
+                        .catch(error => {
+                            console.error('Lỗi kết nối:', error);
+                            // Phục hồi trạng thái nếu có lỗi
+                            heartIcon.classList.toggle('favorited', !isFavorite);
+                        });
+                });
+            });
+        });
+    </script>
+
 </body>
+
 </html>
