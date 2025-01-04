@@ -55,7 +55,7 @@ namespace _6TL.Controllers
 		}
 
 
-		public IActionResult SanPhamYeuThich() { return View(); }
+		
 		public IActionResult Index()
 		{
 			return View();
