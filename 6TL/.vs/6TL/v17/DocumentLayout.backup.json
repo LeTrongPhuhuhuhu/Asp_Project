@@ -59,8 +59,7 @@
               "ToolTip": "C:\\Program Files\\dotnet\\sdk\\8.0.404\\Sdks\\Microsoft.SourceLink.Common\\build\\Microsoft.SourceLink.Common.targets",
               "ViewState": "AgIAACoAAAAAAAAAAAAowDcAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2025-01-04T01:08:34.968Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-04T01:08:34.968Z"
             },
             {
               "$type": "Document",
@@ -72,8 +71,7 @@
               "RelativeToolTip": "6TL\\Controllers\\ContactController.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAqwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-04T00:57:01.254Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-04T00:57:01.254Z"
             },
             {
               "$type": "Document",
@@ -85,8 +83,7 @@
               "RelativeToolTip": "6TL\\Models\\Db6TLContext.cs",
               "ViewState": "AgIAAHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-04T00:56:24.185Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-04T00:56:24.185Z"
             },
             {
               "$type": "Document",
@@ -98,8 +95,7 @@
               "RelativeToolTip": "6TL\\Areas\\Admin\\Controllers\\HomeController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-04T00:56:24.29Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-04T00:56:24.29Z"
             },
             {
               "$type": "Document",
@@ -111,8 +107,7 @@
               "RelativeToolTip": "6TL\\Models\\Contact.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-04T00:56:24.299Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-04T00:56:24.299Z"
             },
             {
               "$type": "Document",
@@ -134,7 +129,7 @@
               "RelativeDocumentMoniker": "6TL\\Views\\Home\\LienHe.cshtml",
               "ToolTip": "D:\\ASP\\ASP_DoAn_Backup\\Asp_Project\\6TL\\6TL\\Views\\Home\\LienHe.cshtml",
               "RelativeToolTip": "6TL\\Views\\Home\\LienHe.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAA6AAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAB4AAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-01-04T00:56:24.327Z",
               "EditorCaption": ""
@@ -149,8 +144,7 @@
               "RelativeToolTip": "6TL\\Controllers\\ProductController.cs",
               "ViewState": "AgIAAFcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-04T00:57:06.606Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-04T00:57:06.606Z"
             },
             {
               "$type": "Document",
@@ -174,8 +168,7 @@
               "RelativeToolTip": "6TL\\Controllers\\HomeController.cs",
               "ViewState": "AgIAAG8AAAAAAAAAAAAAACYAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-04T00:56:24.319Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-04T00:56:24.319Z"
             }
           ]
         }
