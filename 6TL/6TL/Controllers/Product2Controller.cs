@@ -68,22 +68,7 @@ namespace _6TL.Controllers
 
         public IActionResult SanPhamYeuThich()
         {
-            // Lấy CustomerId từ session
-            var customerId = HttpContext.Session.GetInt32("CustomerId");
-            if (customerId == null)
-            {
-                return RedirectToAction("Login", "Account"); // Chuyển hướng đến trang đăng nhập nếu chưa đăng nhập
-            }
-
-            // Lấy danh sách sản phẩm yêu thích từ session
-            var favorites = HttpContext.Session.GetObjectFromJson<List<int>>("Favorites") ?? new List<int>();
-
-            // Lấy các sản phẩm yêu thích từ cơ sở dữ liệu
-            var favoriteProducts = _context.Products
-                                          .Where(p => favorites.Contains(p.ProductId))
-                                          .ToList();
-
-            return View(favoriteProducts); // Truyền danh sách sản phẩm yêu thích vào view
+            return View(); 
         }
     }
 
