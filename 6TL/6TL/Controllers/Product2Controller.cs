@@ -1,7 +1,8 @@
 ﻿using _6TL.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using System.Text.Json;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace _6TL.Controllers
 {
@@ -14,86 +15,42 @@ namespace _6TL.Controllers
             _context = context;
         }
 
-        public IActionResult Index()
+        [HttpGet]
+        public IActionResult SanPham(List<string> categories, List<string> materials, decimal? minPrice, decimal? maxPrice)
         {
-            return View();
-        }
+            var products = _context.Products.AsQueryable();
 
-        public IActionResult SanPham()
-        {
-            var category = _context.Categories.ToList();
-           
-            var products = _context.Products.ToList(); // Lấy tất cả sản phẩm từ database
-            var materials = _context.Products
-       .Where(p => !string.IsNullOrEmpty(p.Material)) // Bỏ giá trị null hoặc rỗng
-       .Select(p => p.Material)
-       .Distinct()
-       .ToList();
-
-            ViewBag.Categories = category;
-            ViewBag.Materials = materials;
-            return View(products);
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public JsonResult ToggleFavorite(int productId, bool isFavorite)
-        {
-            try
+            // Apply category filter
+            if (categories != null && categories.Any())
             {
-                // Lấy thông tin người dùng từ Session
-                var customerId = HttpContext.Session.GetInt32("CustomerId");
-                if (customerId == null)
-                {
-                    return Json(new { success = false, message = "Người dùng chưa đăng nhập." });
-                }
-
-                // Lấy danh sách sản phẩm yêu thích từ session (nếu có)
-                var favorites = HttpContext.Session.GetObjectFromJson<List<int>>("Favorites") ?? new List<int>();
-
-                if (isFavorite)
-                {
-                    // Thêm sản phẩm vào danh sách yêu thích
-                    if (!favorites.Contains(productId))
-                    {
-                        favorites.Add(productId);
-                    }
-                }
-                else
-                {
-                    // Xóa sản phẩm khỏi danh sách yêu thích
-                    favorites.Remove(productId);
-                }
-
-                // Lưu lại danh sách yêu thích vào session
-                HttpContext.Session.SetObjectAsJson("Favorites", favorites);
-
-                return Json(new { success = true });
+                products = products.Where(p => categories.Contains(p.Category.CategoryName));
             }
-            catch (Exception ex)
+
+            // Apply material filter
+            if (materials != null && materials.Any())
             {
-                return Json(new { success = false, message = ex.Message });
+                products = products.Where(p => materials.Contains(p.Material));
             }
-        }
 
-        public IActionResult SanPhamYeuThich()
-        {
-            return View(); 
-        }
-    }
+            // Apply price range filter
+            if (minPrice.HasValue)
+            {
+                products = products.Where(p => p.Price >= minPrice.Value);
+            }
 
-    // Extension methods để lưu trữ đối tượng vào session dưới dạng JSON
-    public static class SessionExtensions
-    {
-        public static void SetObjectAsJson(this ISession session, string key, object value)
-        {
-            session.SetString(key, JsonSerializer.Serialize(value));
-        }
+            if (maxPrice.HasValue)
+            {
+                products = products.Where(p => p.Price <= maxPrice.Value);
+            }
 
-        public static T GetObjectFromJson<T>(this ISession session, string key)
-        {
-            var value = session.GetString(key);
-            return value == null ? default : JsonSerializer.Deserialize<T>(value);
+            // Passing categories and materials to the view to display the checkboxes
+            ViewBag.Categories = _context.Categories.ToList();
+            ViewBag.Materials = _context.Products
+                .Select(p => p.Material)
+                .Distinct()
+                .ToList();
+
+            return View(products.ToList());
         }
     }
 }
