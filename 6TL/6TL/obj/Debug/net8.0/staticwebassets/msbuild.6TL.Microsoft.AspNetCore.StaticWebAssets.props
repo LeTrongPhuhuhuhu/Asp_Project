@@ -354,8 +354,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>hroe9xp9v9</Fingerprint>
-      <Integrity>I+6jk7w/spDc6zVX//VfF8c3GbRQFbOQOvEJTSU7pCI=</Integrity>
+      <Fingerprint>r26wrz6rza</Fingerprint>
+      <Integrity>w23lWKgMqD0sPRo3XoxQxsGCVJtfvoQj+uV8vCnHgYk=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\pages\ChiTietSanPham.css'))</OriginalItemSpec>

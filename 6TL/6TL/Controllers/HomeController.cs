@@ -51,12 +51,22 @@ namespace _6TL.Controllers
 			{
 				_context.Carts.Remove(cartItem);
 				_context.SaveChanges();
+
+				// Kiểm tra nếu giỏ hàng trống
+				if (!_context.Carts.Any())
+				{
+					// Trả về kết quả thành công với thông báo giỏ hàng trống
+					return Json(new { success = true, emptyCart = true });
+				}
+
 				return Json(new { success = true });
 			}
 			return Json(new { success = false, message = "Sản phẩm không tồn tại trong giỏ hàng." });
 		}
+
+
 		// Trong HomeController
-		[HttpDelete]
+		[HttpPost]
 		public IActionResult ClearCart()
 		{
 			// Xóa tất cả các sản phẩm trong bảng Cart
@@ -66,11 +76,12 @@ namespace _6TL.Controllers
 			{
 				_context.Carts.RemoveRange(cartItems);
 				_context.SaveChanges();
-				return Json(new { success = true });
 			}
 
-			return Json(new { success = false });
+			// Chuyển hướng đến trang giỏ hàng
+			return RedirectToAction("GioHang"); // Giả sử view giỏ hàng của bạn tên là "Cart"
 		}
+
 
 		public IActionResult Index()
 		{
