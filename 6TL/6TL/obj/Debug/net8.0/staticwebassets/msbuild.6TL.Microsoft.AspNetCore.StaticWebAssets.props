@@ -354,8 +354,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>qsu9y1blde</Fingerprint>
-      <Integrity>1gWhHZbGYm/LIIFiE+KHmvYVvx+OKEtImhQD3yObv5o=</Integrity>
+      <Fingerprint>hroe9xp9v9</Fingerprint>
+      <Integrity>I+6jk7w/spDc6zVX//VfF8c3GbRQFbOQOvEJTSU7pCI=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\pages\ChiTietSanPham.css'))</OriginalItemSpec>
@@ -444,8 +444,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>dkrk7y8pi8</Fingerprint>
-      <Integrity>c0jlRkJKnQjudqBJ0MmPu/w2pokAQRzmX1+hNqX5Gzs=</Integrity>
+      <Fingerprint>5a9iceh8va</Fingerprint>
+      <Integrity>fZMO4vd0sOxERQBZOBL2RWkv3BSf7QfgHvHGKDSrprk=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\pages\GioHang.css'))</OriginalItemSpec>

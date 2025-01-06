@@ -205,7 +205,9 @@ body {
         background-color: #fff;
         font-size: 16px;
     }
-
+.hidden {
+    display: none;
+}
         .pagination a:hover {
             background-color: #ddd;
         }

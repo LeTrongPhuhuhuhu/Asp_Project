@@ -103,9 +103,17 @@ namespace _6TL.Controllers
         }
 		public IActionResult TinTuc()
 		{
+			// Lấy tất cả các bài viết tin tức từ database
+			var allNews = _context.Blogs.ToList();
+
+			// Truyền dữ liệu vào ViewBag
+			ViewBag.News = allNews;
+
+			// Trả về view
 			return View();
 		}
-        public IActionResult DangKy()
+
+		public IActionResult DangKy()
         {
             return View();
         }

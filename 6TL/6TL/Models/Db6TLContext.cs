@@ -16,8 +16,9 @@ public partial class Db6TLContext : DbContext
     }
 
     public virtual DbSet<Admin> Admins { get; set; }
+	public virtual DbSet<Blog> Blogs { get; set; }
 
-    public virtual DbSet<Cart> Carts { get; set; }
+	public virtual DbSet<Cart> Carts { get; set; }
 
     public virtual DbSet<Category> Categories { get; set; }
 

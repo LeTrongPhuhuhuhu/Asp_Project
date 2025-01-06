@@ -1,6 +1,4 @@
-﻿
-<head>
-
+﻿<head>
     <link href="~/css/pages/tintuc.css" rel="stylesheet" />
 </head>
 <body>
@@ -21,36 +19,23 @@
         </ul>
     </nav>
 
-
     <section class="container_tt">
         <!-- Nội dung tin tức -->
         <div class="news-grid_tt">
-            <div class="news-item_tt">
-                <img src="~/img/tintuc1.jpg" alt="Tin tức 1">
-                <div class="news-content_tt">
-                    <h3>Tiêu đề tin tức 1</h3>
-                    <p>Mô tả ngắn gọn của tin tức đầu tiên.</p>
-                    <a href="#" class="read-more_tt">Đọc Thêm <span>→</span></a>
+            @foreach (var blog in ViewBag.News as List<_6TL.Models.Blog>)
+            {
+                <div class="news-item_tt">
+                    @if (!string.IsNullOrEmpty(blog.HinhAnh))
+                    {
+                        <img src="~/img/@blog.HinhAnh" alt="@blog.TieuDe">
+                    }
+                    <div class="news-content_tt">
+                        <h3>@blog.TieuDe</h3>
+                        <p>@blog.NoiDung.Substring(0, Math.Min(100, blog.NoiDung.Length))...</p>
+                        <a href="@Url.Action("Detail", "Blog", new { id = blog.BlogId })" class="read-more_tt">Đọc Thêm <span>→</span></a>
+                    </div>
                 </div>
-            </div>
-            <div class="news-item_tt">
-                <img src="~/img/tintuc2.jpg" alt="Tin tức 2">
-                <div class="news-content_tt">
-                    <h3>Tiêu đề tin tức 2</h3>
-                    <p>Mô tả ngắn gọn của tin tức thứ hai.</p>
-                    <a href="#" class="read-more_tt">Đọc Thêm <span>→</span></a>
-                </div>
-            </div>
-            <div class="news-item_tt">
-                <img src="~/img/tintuc3.jpg" alt="Tin tức 3">
-                <div class="news-content_tt">
-                    <h3>Tiêu đề tin tức 3</h3>
-                    <p>Mô tả ngắn gọn của tin tức thứ ba.</p>
-                    <a href="#" class="read-more_tt">Đọc Thêm <span>→</span></a>
-                </div>
-            </div>
-            <!-- Thêm tin tức khác nếu cần -->
+            }
         </div>
     </section>
-
 </body>
