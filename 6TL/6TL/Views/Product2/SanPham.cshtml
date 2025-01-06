@@ -36,9 +36,15 @@
 
                 <h3>Chất liệu</h3>
                 <ul>
-                    <li><span>Gỗ</span></li>
-                    <li><span>Kim loại</span></li>
-                    <li><span>Kính</span></li>
+                    @foreach (var material in ViewBag.Materials)
+                    {
+                        <li>
+                            <label>
+                                <input type="checkbox" name="material" value="@material">
+                                @material
+                            </label>
+                        </li>
+                    }
                 </ul>
 
                 <h3>Giá</h3>
@@ -47,44 +53,56 @@
                     <input type="range" id="price-range_sp" min="0" max="10000000" step="100000" value="5000000">
                     <div class="price-values_sp">
                         <span id="min-price_sp">0 VND</span>
+                        <span id="current-price_sp">5,000,000 VND</span>
                         <span id="max-price_sp">10,000,000 VND</span>
                     </div>
                 </div>
+
+                <!-- Nút Lọc Sản Phẩm -->
+                <button id="filter-button" class="btn-filter">Lọc sản phẩm</button>
             </div>
 
             <!-- Content -->
             <div class="content_sp">
                 <h2>Nội Thất / Bàn</h2>
                 <div class="product-list_sp">
-                    @foreach (var product in Model)
+                    @if (Model.Any())
                     {
-                        <div class="product-item_sp" data-product-id="@product.ProductId">
-                            <a  href="/Product/ChiTietSanPham/@product.ProductId">
-                            <div class="favorite_sp">
-                                <i class="heart-icon_sp">&hearts;</i>
+                        @foreach (var product in Model)
+                        {
+                            <div class="product-item_sp">
+                                <a href="/Product/ChiTietSanPham/@product.ProductId">
+                                    <div class="favorite_sp">
+                                        <i class="heart-icon_sp">&hearts;</i>
+                                    </div>
+                                    <img src="~/img/@product.Image" alt="@product.ProductName" />
+                                    <h3>@product.ProductName</h3>
+                                    <span>@product.Price?.ToString("N0") VND</span>
+                                    <div class="rating_sp">
+                                        @for (int i = 1; i <= 5; i++)
+                                        {
+                                            if (product.Rating >= i)
+                                            {
+                                                <span>★</span>  <!-- Sao đầy -->
+                                            }
+                                            else if (product.Rating >= i - 0.5)
+                                            {
+                                                <span>☆</span>  <!-- Sao rỗng -->
+                                            }
+                                            else
+                                            {
+                                                <span>☆</span> <!-- Sao rỗng -->
+                                            }
+                                        }
+                                    </div>
+                                </a>
                             </div>
-                            <img src="~/img/@product.Image" alt="@product.ProductName" />
-                            <h3>@product.ProductName</h3>
-                            <span>@product.Price?.ToString("N0") VND</span>
-                            <div class="rating_sp">
-                                @for (int i = 1; i <= 5; i++)
-                                {
-                                    if (product.Rating >= i)
-                                    {
-                                        <span>★</span>  <!-- Sao đầy -->
-                                    }
-                                    else if (product.Rating >= i - 0.5)
-                                    {
-                                        <span>☆</span>  <!-- Sao rỗng -->
-                                    }
-                                    else
-                                    {
-                                        <span>☆</span> <!-- Sao rỗng -->
-                                    }
-                                }
-                            </div>
-                            </a>
-                        </div>
+                        }
+
+                    }
+                    else
+                    {
+                        <p>Không có sản phẩm nào phù hợp với tiêu chí lọc.</p>
                     }
                 </div>
 
@@ -95,48 +113,51 @@
     </main>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Lấy tất cả các icon trái tim
-            const heartIcons = document.querySelectorAll('.heart-icon_sp');
+            const priceRange = document.getElementById('price-range_sp');
+            const minPriceLabel = document.getElementById('min-price_sp');
+            const currentPriceLabel = document.getElementById('current-price_sp');
+            const maxPriceLabel = document.getElementById('max-price_sp');
 
-            heartIcons.forEach((heartIcon) => {
-                heartIcon.addEventListener('click', () => {
-                    // Tìm phần tử sản phẩm tương ứng
-                    const productItem = heartIcon.closest('.product-item_sp');
-                    const productId = productItem.dataset.productId; // Lấy ID sản phẩm từ thuộc tính data
+            // Lắng nghe sự kiện thay đổi giá trị thanh trượt
+            priceRange.addEventListener('input', () => {
+                const priceValue = priceRange.value;
+                currentPriceLabel.textContent = FormatCurrency(priceValue) + " VND";
+            });
 
-                    // Thay đổi trạng thái "yêu thích"
-                    const isFavorite = heartIcon.classList.toggle('favorited'); // Toggle class 'favorited'
+            // Đảm bảo cập nhật giá trị hiển thị ngay khi trang được tải
+            const priceValue = priceRange.value;
+            currentPriceLabel.textContent = FormatCurrency(priceValue) + " VND";
 
-                    // Gửi dữ liệu yêu thích về server bằng AJAX
-                    fetch('/Favorite/ToggleFavorite', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json',
-                            'X-CSRF-TOKEN': document.querySelector('input[name="__RequestVerificationToken"]').value // CSRF token
-                        },
-                        body: JSON.stringify({ productId, isFavorite })
-                    })
-                        .then(response => {
-                            if (!response.ok) throw new Error('Failed to update favorite');
-                            return response.json();
-                        })
-                        .then(data => {
-                            if (data.success) {
-                                console.log(`Sản phẩm ${productId} đã được cập nhật trạng thái yêu thích.`);
-                            } else {
-                                console.error('Lỗi khi cập nhật trạng thái yêu thích:', data.message);
-                            }
-                        })
-                        .catch(error => {
-                            console.error('Lỗi kết nối:', error);
-                            // Phục hồi trạng thái nếu có lỗi
-                            heartIcon.classList.toggle('favorited', !isFavorite);
-                        });
-                });
+            // Định dạng giá trị thành VND
+            function FormatCurrency(value) {
+                const number = parseInt(value, 10);
+                return number.toLocaleString(); // Định dạng thành tiền tệ VND
+            }
+
+            // Lọc sản phẩm khi nhấn nút
+            const filterButton = document.getElementById('filter-button');
+
+            filterButton.addEventListener('click', () => {
+                // Lấy danh sách các category và material đã chọn
+                const selectedCategories = Array.from(document.querySelectorAll('input[name="category"]:checked')).map(input => input.value);
+                const selectedMaterials = Array.from(document.querySelectorAll('input[name="material"]:checked')).map(input => input.value);
+                const priceRangeValue = priceRange.value;
+
+                // Xây dựng URL với các tham số query cho lọc
+                const url = new URL(window.location.href);
+                url.searchParams.set('categories', selectedCategories.join(','));
+                url.searchParams.set('materials', selectedMaterials.join(','));
+                url.searchParams.set('minPrice', 0); // Giá trị minPrice = 0
+                url.searchParams.set('maxPrice', priceRangeValue); // Lấy giá trị từ thanh trượt cho maxPrice
+
+                // Điều hướng đến URL mới để lọc
+                window.location.href = url.toString();
             });
         });
     </script>
 
-</body>
 
+
+
+</body>
 </html>
