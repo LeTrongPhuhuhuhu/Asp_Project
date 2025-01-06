@@ -3,16 +3,32 @@
   "WorkspaceRootPath": "D:\\Asp Project\\Asp_Project\\6TL\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\asp project\\asp_project\\6tl\\6tl\\wwwroot\\css\\pages\\danhmucsanpham.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\wwwroot\\css\\pages\\danhmucsanpham.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\asp project\\asp_project\\6tl\\6tl\\views\\home\\danhmucsanpham.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\views\\home\\danhmucsanpham.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\asp project\\asp_project\\6tl\\6tl\\wwwroot\\css\\admin\\quanlydanhmuc.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\wwwroot\\css\\admin\\quanlydanhmuc.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\asp project\\asp_project\\6tl\\6tl\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\asp project\\asp_project\\6tl\\6tl\\wwwroot\\css\\admin.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\wwwroot\\css\\admin.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\asp project\\asp_project\\6tl\\6tl\\areas\\admin\\views\\danhmuc\\quanlydanhmuc.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\areas\\admin\\views\\danhmuc\\quanlydanhmuc.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\asp project\\asp_project\\6tl\\6tl\\areas\\admin\\controllers\\danhmuccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\areas\\admin\\controllers\\danhmuccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\asp project\\asp_project\\6tl\\6tl\\wwwroot\\css\\admin\\quanlydanhmuc.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\wwwroot\\css\\admin\\quanlydanhmuc.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\asp project\\asp_project\\6tl\\6tl\\areas\\admin\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -69,10 +85,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\asp project\\asp_project\\6tl\\6tl\\views\\shared\\_pagination.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\views\\shared\\_pagination.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\asp project\\asp_project\\6tl\\6tl\\views\\home\\danhmucsanpham.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\views\\home\\danhmucsanpham.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\asp project\\asp_project\\6tl\\6tl\\views\\home\\giohang.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -171,10 +183,6 @@
       "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\wwwroot\\css\\admin\\themsanpham.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\asp project\\asp_project\\6tl\\6tl\\wwwroot\\css\\admin.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\wwwroot\\css\\admin.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\asp project\\asp_project\\6tl\\6tl\\wwwroot\\css\\pages\\tintuc.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\wwwroot\\css\\pages\\tintuc.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
@@ -193,10 +201,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\asp project\\asp_project\\6tl\\6tl\\areas\\admin\\views\\home\\themsanpham.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\areas\\admin\\views\\home\\themsanpham.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\asp project\\asp_project\\6tl\\6tl\\wwwroot\\css\\pages\\danhmucsanpham.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\wwwroot\\css\\pages\\danhmucsanpham.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\asp project\\asp_project\\6tl\\6tl\\views\\home\\chitietsanpham.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -221,10 +225,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\asp project\\asp_project\\6tl\\6tl\\wwwroot\\css\\pages\\chitiettintuc.css||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\wwwroot\\css\\pages\\chitiettintuc.css||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\asp project\\asp_project\\6tl\\6tl\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\asp project\\asp_project\\6tl\\6tl\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -313,7 +313,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -349,46 +349,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DanhMucController.cs",
-              "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Controllers\\DanhMucController.cs",
-              "RelativeDocumentMoniker": "6TL\\Areas\\Admin\\Controllers\\DanhMucController.cs",
-              "ToolTip": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Controllers\\DanhMucController.cs",
-              "RelativeToolTip": "6TL\\Areas\\Admin\\Controllers\\DanhMucController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAADIAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-04T06:15:33.786Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "QuanLyDanhMuc.cshtml",
-              "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Views\\DanhMuc\\QuanLyDanhMuc.cshtml",
-              "RelativeDocumentMoniker": "6TL\\Areas\\Admin\\Views\\DanhMuc\\QuanLyDanhMuc.cshtml",
-              "ToolTip": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Views\\DanhMuc\\QuanLyDanhMuc.cshtml",
-              "RelativeToolTip": "6TL\\Areas\\Admin\\Views\\DanhMuc\\QuanLyDanhMuc.cshtml",
-              "ViewState": "AgIAAE8AAAAAAAAAAAAwwFwAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-03T09:08:30.958Z",
+              "Title": "DanhMucSanPham.css",
+              "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\DanhMucSanPham.css",
+              "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\pages\\DanhMucSanPham.css",
+              "ToolTip": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\DanhMucSanPham.css",
+              "RelativeToolTip": "6TL\\wwwroot\\css\\pages\\DanhMucSanPham.css",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAAwFgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-04T09:17:04.556Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Category.cs",
-              "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\Models\\Category.cs",
-              "RelativeDocumentMoniker": "6TL\\Models\\Category.cs",
-              "ToolTip": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\Models\\Category.cs",
-              "RelativeToolTip": "6TL\\Models\\Category.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAA5wBsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-04T06:18:45.101Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "HomeController.cs",
               "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "6TL\\Areas\\Admin\\Controllers\\HomeController.cs",
@@ -396,8 +370,7 @@
               "RelativeToolTip": "6TL\\Areas\\Admin\\Controllers\\HomeController.cs",
               "ViewState": "AgIAAB0AAAAAAAAAAAA9wBgAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T16:11:40.964Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-10T16:11:40.964Z"
             },
             {
               "$type": "Document",
@@ -407,14 +380,87 @@
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\admin\\QuanLyDanhMuc.css",
               "ToolTip": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\QuanLyDanhMuc.css",
               "RelativeToolTip": "6TL\\wwwroot\\css\\admin\\QuanLyDanhMuc.css",
-              "ViewState": "AgIAAL0AAAAAAAAAAAAowOYAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAHUAAAAAAAAAAAAAAM4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2024-12-03T09:09:29.45Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DanhMucSanPham.cshtml",
+              "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\Views\\Home\\DanhMucSanPham.cshtml",
+              "RelativeDocumentMoniker": "6TL\\Views\\Home\\DanhMucSanPham.cshtml",
+              "ToolTip": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\Views\\Home\\DanhMucSanPham.cshtml",
+              "RelativeToolTip": "6TL\\Views\\Home\\DanhMucSanPham.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAADAAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-04T09:17:16.952Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "admin.css",
+              "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin.css",
+              "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\admin.css",
+              "ToolTip": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin.css",
+              "RelativeToolTip": "6TL\\wwwroot\\css\\admin.css",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAAAUAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-11-29T16:43:22.184Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "style.css",
+              "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\style.css",
+              "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\style.css",
+              "ToolTip": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\style.css",
+              "RelativeToolTip": "6TL\\wwwroot\\css\\style.css",
+              "ViewState": "AgIAAFgCAAAAAAAAAAAAAGsCAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-11-23T18:27:13.483Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "QuanLyDanhMuc.cshtml",
+              "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Views\\DanhMuc\\QuanLyDanhMuc.cshtml",
+              "RelativeDocumentMoniker": "6TL\\Areas\\Admin\\Views\\DanhMuc\\QuanLyDanhMuc.cshtml",
+              "ToolTip": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Views\\DanhMuc\\QuanLyDanhMuc.cshtml",
+              "RelativeToolTip": "6TL\\Areas\\Admin\\Views\\DanhMuc\\QuanLyDanhMuc.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-03T09:08:30.958Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DanhMucController.cs",
+              "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Controllers\\DanhMucController.cs",
+              "RelativeDocumentMoniker": "6TL\\Areas\\Admin\\Controllers\\DanhMucController.cs",
+              "ToolTip": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Controllers\\DanhMucController.cs",
+              "RelativeToolTip": "6TL\\Areas\\Admin\\Controllers\\DanhMucController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAADIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-04T06:15:33.786Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Category.cs",
+              "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "6TL\\Models\\Category.cs",
+              "ToolTip": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\Models\\Category.cs",
+              "RelativeToolTip": "6TL\\Models\\Category.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAA5wBsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-04T06:18:45.101Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "ProductsController.cs",
               "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Controllers\\ProductsController.cs",
               "RelativeDocumentMoniker": "6TL\\Areas\\Admin\\Controllers\\ProductsController.cs",
@@ -422,12 +468,11 @@
               "RelativeToolTip": "6TL\\Areas\\Admin\\Controllers\\ProductsController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-04T06:11:56.463Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-04T06:11:56.463Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\appsettings.json",
               "RelativeDocumentMoniker": "6TL\\appsettings.json",
@@ -435,12 +480,11 @@
               "RelativeToolTip": "6TL\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-01-04T06:37:05.973Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-04T06:37:05.973Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "Db6TLContext.cs",
               "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\Models\\Db6TLContext.cs",
               "RelativeDocumentMoniker": "6TL\\Models\\Db6TLContext.cs",
@@ -448,12 +492,11 @@
               "RelativeToolTip": "6TL\\Models\\Db6TLContext.cs",
               "ViewState": "AgIAACoAAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-04T06:11:31.62Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-04T06:11:31.62Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 12,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "6TL\\Areas\\Admin\\Views\\Home\\Index.cshtml",
@@ -461,12 +504,11 @@
               "RelativeToolTip": "6TL\\Areas\\Admin\\Views\\Home\\Index.cshtml",
               "ViewState": "AgIAADMAAAAAAAAAAAAAABYAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-29T16:39:53.928Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-29T16:39:53.928Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 14,
               "Title": "Product2Controller.cs",
               "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\Controllers\\Product2Controller.cs",
               "RelativeDocumentMoniker": "6TL\\Controllers\\Product2Controller.cs",
@@ -474,12 +516,11 @@
               "RelativeToolTip": "6TL\\Controllers\\Product2Controller.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-04T06:11:39.172Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-04T06:11:39.172Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "ProductController.cs",
               "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\Controllers\\ProductController.cs",
               "RelativeDocumentMoniker": "6TL\\Controllers\\ProductController.cs",
@@ -487,12 +528,11 @@
               "RelativeToolTip": "6TL\\Controllers\\ProductController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-04T06:11:42.897Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-04T06:11:42.897Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 21,
               "Title": "GioHang.cshtml",
               "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\Views\\Home\\GioHang.cshtml",
               "RelativeDocumentMoniker": "6TL\\Views\\Home\\GioHang.cshtml",
@@ -500,12 +540,11 @@
               "RelativeToolTip": "6TL\\Views\\Home\\GioHang.cshtml",
               "ViewState": "AgIAAGwAAAAAAAAAAAAAwIQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-10T16:10:29.086Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-10T16:10:29.086Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 20,
               "Title": "_Pagination.cshtml",
               "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\Views\\Shared\\_Pagination.cshtml",
               "RelativeDocumentMoniker": "6TL\\Views\\Shared\\_Pagination.cshtml",
@@ -513,12 +552,11 @@
               "RelativeToolTip": "6TL\\Views\\Shared\\_Pagination.cshtml",
               "ViewState": "AgIAACEAAAAAAAAAAAAkwEUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-18T06:24:16.224Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-18T06:24:16.224Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 17,
               "Title": "ViewProfile.cshtml",
               "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\Views\\Home\\ViewProfile.cshtml",
               "RelativeDocumentMoniker": "6TL\\Views\\Home\\ViewProfile.cshtml",
@@ -526,12 +564,11 @@
               "RelativeToolTip": "6TL\\Views\\Home\\ViewProfile.cshtml",
               "ViewState": "AgIAAAUAAAAAAAAAAAAAwAwAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-26T17:06:33.829Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T17:06:33.829Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 19,
               "Title": "ViewProfile.css",
               "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\ViewProfile.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\pages\\ViewProfile.css",
@@ -539,12 +576,11 @@
               "RelativeToolTip": "6TL\\wwwroot\\css\\pages\\ViewProfile.css",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAABAAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-12-03T02:55:53.22Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-03T02:55:53.22Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
               "Title": "LichSuMuaHang.cshtml",
               "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\Views\\Home\\LichSuMuaHang.cshtml",
               "RelativeDocumentMoniker": "6TL\\Views\\Home\\LichSuMuaHang.cshtml",
@@ -552,12 +588,11 @@
               "RelativeToolTip": "6TL\\Views\\Home\\LichSuMuaHang.cshtml",
               "ViewState": "AgIAAFMAAAAAAAAAAAAkwHcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-26T17:06:31.504Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T17:06:31.504Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 16,
               "Title": "LichSuMuaHang.css",
               "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\LichSuMuaHang.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\pages\\LichSuMuaHang.css",
@@ -565,25 +600,11 @@
               "RelativeToolTip": "6TL\\wwwroot\\css\\pages\\LichSuMuaHang.css",
               "ViewState": "AgIAAH4AAAAAAAAAAAAswKoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-12-03T02:51:42.145Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-03T02:51:42.145Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "DanhMucSanPham.cshtml",
-              "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\Views\\Home\\DanhMucSanPham.cshtml",
-              "RelativeDocumentMoniker": "6TL\\Views\\Home\\DanhMucSanPham.cshtml",
-              "ToolTip": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\Views\\Home\\DanhMucSanPham.cshtml",
-              "RelativeToolTip": "6TL\\Views\\Home\\DanhMucSanPham.cshtml",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAgwDwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-04T09:17:16.952Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 23,
               "Title": "TinTuc.cshtml",
               "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\Views\\Home\\TinTuc.cshtml",
               "RelativeDocumentMoniker": "6TL\\Views\\Home\\TinTuc.cshtml",
@@ -591,12 +612,11 @@
               "RelativeToolTip": "6TL\\Views\\Home\\TinTuc.cshtml",
               "ViewState": "AgIAABgAAAAAAAAAAAAgwDgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-26T17:06:25.514Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T17:06:25.514Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 18,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "6TL\\Views\\Shared\\_Layout.cshtml",
@@ -604,12 +624,11 @@
               "RelativeToolTip": "6TL\\Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAAAcAAAAAAAAAAAASwB8AAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-10T06:42:14.178Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-10T06:42:14.178Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 22,
               "Title": "SanPhamYeuThich.cshtml",
               "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\Views\\Home\\SanPhamYeuThich.cshtml",
               "RelativeDocumentMoniker": "6TL\\Views\\Home\\SanPhamYeuThich.cshtml",
@@ -617,8 +636,7 @@
               "RelativeToolTip": "6TL\\Views\\Home\\SanPhamYeuThich.cshtml",
               "ViewState": "AgIAAMAAAAAAAAAAAAAAANEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-24T06:42:44.428Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-24T06:42:44.428Z"
             },
             {
               "$type": "Document",
@@ -631,7 +649,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 24,
               "Title": "LienHe.cshtml",
               "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\Views\\Home\\LienHe.cshtml",
               "RelativeDocumentMoniker": "6TL\\Views\\Home\\LienHe.cshtml",
@@ -639,12 +657,11 @@
               "RelativeToolTip": "6TL\\Views\\Home\\LienHe.cshtml",
               "ViewState": "AgIAAAUAAAAAAAAAAAAkwC4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-10T16:08:53.515Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-10T16:08:53.515Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 25,
               "Title": "QuanLyDonHang.cshtml",
               "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Views\\Home\\QuanLyDonHang.cshtml",
               "RelativeDocumentMoniker": "6TL\\Areas\\Admin\\Views\\Home\\QuanLyDonHang.cshtml",
@@ -652,12 +669,11 @@
               "RelativeToolTip": "6TL\\Areas\\Admin\\Views\\Home\\QuanLyDonHang.cshtml",
               "ViewState": "AgIAAEUAAAAAAAAAAAAAwFoAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-09T03:38:43.261Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-09T03:38:43.261Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 31,
               "Title": "popup.css",
               "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\popup.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\admin\\popup.css",
@@ -665,12 +681,11 @@
               "RelativeToolTip": "6TL\\wwwroot\\css\\admin\\popup.css",
               "ViewState": "AgIAAF0AAAAAAAAAAAAkwH8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-12-18T02:32:01.305Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-18T02:32:01.305Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 28,
               "Title": "QuanLyDonHang.css",
               "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\QuanLyDonHang.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\admin\\QuanLyDonHang.css",
@@ -678,12 +693,11 @@
               "RelativeToolTip": "6TL\\wwwroot\\css\\admin\\QuanLyDonHang.css",
               "ViewState": "AgIAAHYAAAAAAAAAAAAkwIsAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-12-09T03:39:21.253Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-09T03:39:21.253Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 27,
               "Title": "QuanLyAdmin.cshtml",
               "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Views\\Home\\QuanLyAdmin.cshtml",
               "RelativeDocumentMoniker": "6TL\\Areas\\Admin\\Views\\Home\\QuanLyAdmin.cshtml",
@@ -691,12 +705,11 @@
               "RelativeToolTip": "6TL\\Areas\\Admin\\Views\\Home\\QuanLyAdmin.cshtml",
               "ViewState": "AgIAAJ4AAAAAAAAAAAAAwL0AAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-07T09:02:04.515Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-07T09:02:04.515Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 26,
               "Title": "_successPopup.cshtml",
               "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Views\\Shared\\_successPopup.cshtml",
               "RelativeDocumentMoniker": "6TL\\Areas\\Admin\\Views\\Shared\\_successPopup.cshtml",
@@ -704,12 +717,11 @@
               "RelativeToolTip": "6TL\\Areas\\Admin\\Views\\Shared\\_successPopup.cshtml",
               "ViewState": "AgIAAB0AAAAAAAAAAAAAwEEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-17T16:20:48.871Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-17T16:20:48.871Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 29,
               "Title": "QuanLyLienHe.css",
               "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\QuanLyLienHe.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\admin\\QuanLyLienHe.css",
@@ -717,12 +729,11 @@
               "RelativeToolTip": "6TL\\wwwroot\\css\\admin\\QuanLyLienHe.css",
               "ViewState": "AgIAANgAAAAAAAAAAAAiwOsAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-12-12T12:36:38.573Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-12T12:36:38.573Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 30,
               "Title": "QuanLyLienHe.cshtml",
               "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Views\\Home\\QuanLyLienHe.cshtml",
               "RelativeDocumentMoniker": "6TL\\Areas\\Admin\\Views\\Home\\QuanLyLienHe.cshtml",
@@ -730,12 +741,11 @@
               "RelativeToolTip": "6TL\\Areas\\Admin\\Views\\Home\\QuanLyLienHe.cshtml",
               "ViewState": "AgIAALQAAAAAAAAAAAAAwMgAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-10T16:12:50.522Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-10T16:12:50.522Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 33,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\Program.cs",
               "RelativeDocumentMoniker": "6TL\\Program.cs",
@@ -743,12 +753,11 @@
               "RelativeToolTip": "6TL\\Program.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAADwvyEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T16:53:04.075Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-29T16:53:04.075Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 32,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "6TL\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
@@ -756,12 +765,11 @@
               "RelativeToolTip": "6TL\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAAFwAAAAAAAAAAAAAwG0AAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-10T06:36:49.077Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-10T06:36:49.077Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 35,
               "Title": "SuaSanPham.cshtml",
               "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Views\\Home\\SuaSanPham.cshtml",
               "RelativeDocumentMoniker": "6TL\\Areas\\Admin\\Views\\Home\\SuaSanPham.cshtml",
@@ -769,12 +777,11 @@
               "RelativeToolTip": "6TL\\Areas\\Admin\\Views\\Home\\SuaSanPham.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAGIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-01T13:13:12.174Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-01T13:13:12.174Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 34,
               "Title": "QuanLyUser.cshtml",
               "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Views\\Home\\QuanLyUser.cshtml",
               "RelativeDocumentMoniker": "6TL\\Areas\\Admin\\Views\\Home\\QuanLyUser.cshtml",
@@ -782,12 +789,11 @@
               "RelativeToolTip": "6TL\\Areas\\Admin\\Views\\Home\\QuanLyUser.cshtml",
               "ViewState": "AgIAAHQAAAAAAAAAAAAAwJQAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-07T16:13:00.747Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-07T16:13:00.747Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 36,
               "Title": "QuanLySanPham.cshtml",
               "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Views\\Home\\QuanLySanPham.cshtml",
               "RelativeDocumentMoniker": "6TL\\Areas\\Admin\\Views\\Home\\QuanLySanPham.cshtml",
@@ -795,12 +801,11 @@
               "RelativeToolTip": "6TL\\Areas\\Admin\\Views\\Home\\QuanLySanPham.cshtml",
               "ViewState": "AgIAADEAAAAAAAAAAAAAwDsAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-01T13:12:43.134Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-01T13:12:43.134Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 37,
               "Title": "popup.css",
               "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\popup.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\admin\\popup.css",
@@ -812,7 +817,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 38,
               "Title": "QuanLyAdmin.css",
               "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\QuanLyAdmin.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\admin\\QuanLyAdmin.css",
@@ -820,12 +825,11 @@
               "RelativeToolTip": "6TL\\wwwroot\\css\\admin\\QuanLyAdmin.css",
               "ViewState": "AgIAAEoAAAAAAAAAAAAiwIIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-12-07T10:39:15.21Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-07T10:39:15.21Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 39,
               "Title": "QuanLySanPham.css",
               "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\QuanLySanPham.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\admin\\QuanLySanPham.css",
@@ -833,12 +837,11 @@
               "RelativeToolTip": "6TL\\wwwroot\\css\\admin\\QuanLySanPham.css",
               "ViewState": "AgIAAK0AAAAAAAAAAAAiwNMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-12-04T09:28:58.853Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-04T09:28:58.853Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 40,
               "Title": "QuanLyDanhGia.css",
               "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\QuanLyDanhGia.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\admin\\QuanLyDanhGia.css",
@@ -846,12 +849,11 @@
               "RelativeToolTip": "6TL\\wwwroot\\css\\admin\\QuanLyDanhGia.css",
               "ViewState": "AgIAAOIAAAAAAAAAAAAkwAQBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-12-12T15:25:35.326Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-12T15:25:35.326Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 41,
               "Title": "QuanLyDanhGia.cshtml",
               "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Views\\Home\\QuanLyDanhGia.cshtml",
               "RelativeDocumentMoniker": "6TL\\Areas\\Admin\\Views\\Home\\QuanLyDanhGia.cshtml",
@@ -859,12 +861,11 @@
               "RelativeToolTip": "6TL\\Areas\\Admin\\Views\\Home\\QuanLyDanhGia.cshtml",
               "ViewState": "AgIAAEUAAAAAAAAAAAAAAFIAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-12T15:22:26.751Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-12T15:22:26.751Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 43,
               "Title": "SuaSanPham.css",
               "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\SuaSanPham.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\admin\\SuaSanPham.css",
@@ -872,12 +873,11 @@
               "RelativeToolTip": "6TL\\wwwroot\\css\\admin\\SuaSanPham.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-12-04T09:28:53.345Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-04T09:28:53.345Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 42,
               "Title": "SanPham.css",
               "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\SanPham.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\pages\\SanPham.css",
@@ -885,12 +885,11 @@
               "RelativeToolTip": "6TL\\wwwroot\\css\\pages\\SanPham.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-11-29T13:32:06.839Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-29T13:32:06.839Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 44,
               "Title": "ThemSanPham.css",
               "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\ThemSanPham.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\admin\\ThemSanPham.css",
@@ -898,12 +897,11 @@
               "RelativeToolTip": "6TL\\wwwroot\\css\\admin\\ThemSanPham.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-12-01T13:53:42.41Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-01T13:53:42.41Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 45,
               "Title": "TinTuc.css",
               "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\TinTuc.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\pages\\TinTuc.css",
@@ -911,25 +909,11 @@
               "RelativeToolTip": "6TL\\wwwroot\\css\\pages\\TinTuc.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-11-29T13:35:24.168Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-29T13:35:24.168Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "admin.css",
-              "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin.css",
-              "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\admin.css",
-              "ToolTip": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin.css",
-              "RelativeToolTip": "6TL\\wwwroot\\css\\admin.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-11-29T16:43:22.184Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 46,
               "Title": "Dashboard.css",
               "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\Dashboard.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\admin\\Dashboard.css",
@@ -937,12 +921,11 @@
               "RelativeToolTip": "6TL\\wwwroot\\css\\admin\\Dashboard.css",
               "ViewState": "AgIAAC8AAAAAAAAAAAAkwDgBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-12-03T09:11:51.522Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-03T09:11:51.522Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 47,
               "Title": "QuanLyChiTietDonHang.css",
               "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\QuanLyChiTietDonHang.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\admin\\QuanLyChiTietDonHang.css",
@@ -950,12 +933,11 @@
               "RelativeToolTip": "6TL\\wwwroot\\css\\admin\\QuanLyChiTietDonHang.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-12-09T03:38:17.525Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-09T03:38:17.525Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 48,
               "Title": "QuanLyChiTietDonHang.cshtml",
               "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Views\\Home\\QuanLyChiTietDonHang.cshtml",
               "RelativeDocumentMoniker": "6TL\\Areas\\Admin\\Views\\Home\\QuanLyChiTietDonHang.cshtml",
@@ -963,12 +945,11 @@
               "RelativeToolTip": "6TL\\Areas\\Admin\\Views\\Home\\QuanLyChiTietDonHang.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAE0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-09T03:37:42.818Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-09T03:37:42.818Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 49,
               "Title": "ThemSanPham.cshtml",
               "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Views\\Home\\ThemSanPham.cshtml",
               "RelativeDocumentMoniker": "6TL\\Areas\\Admin\\Views\\Home\\ThemSanPham.cshtml",
@@ -976,25 +957,11 @@
               "RelativeToolTip": "6TL\\Areas\\Admin\\Views\\Home\\ThemSanPham.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAABlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-01T13:12:58.204Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-01T13:12:58.204Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
-              "Title": "DanhMucSanPham.css",
-              "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\DanhMucSanPham.css",
-              "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\pages\\DanhMucSanPham.css",
-              "ToolTip": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\DanhMucSanPham.css",
-              "RelativeToolTip": "6TL\\wwwroot\\css\\pages\\DanhMucSanPham.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-12-04T09:17:04.556Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 50,
               "Title": "ChiTietSanPham.cshtml",
               "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\Views\\Home\\ChiTietSanPham.cshtml",
               "RelativeDocumentMoniker": "6TL\\Views\\Home\\ChiTietSanPham.cshtml",
@@ -1002,12 +969,11 @@
               "RelativeToolTip": "6TL\\Views\\Home\\ChiTietSanPham.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAABbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-27T09:39:40.205Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-27T09:39:40.205Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 52,
               "Title": "ChiTietTinTuc.css",
               "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\ChiTietTinTuc.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\pages\\ChiTietTinTuc.css",
@@ -1015,8 +981,7 @@
               "RelativeToolTip": "6TL\\wwwroot\\css\\pages\\ChiTietTinTuc.css",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-12-10T15:18:57.286Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-10T15:18:57.286Z"
             },
             {
               "$type": "Document",
@@ -1028,12 +993,11 @@
               "RelativeToolTip": "6TL\\Views\\Home\\DangNhap.cshtml",
               "ViewState": "AgIAAAMAAAAAAAAAAAAiwCMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-30T06:10:50.969Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-30T06:10:50.969Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 51,
               "Title": "HomeController.cs",
               "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "6TL\\Controllers\\HomeController.cs",
@@ -1041,8 +1005,7 @@
               "RelativeToolTip": "6TL\\Controllers\\HomeController.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAzwCYAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T18:23:50.676Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-23T18:23:50.676Z"
             },
             {
               "$type": "Document",
@@ -1054,12 +1017,11 @@
               "RelativeToolTip": "6TL\\wwwroot\\css\\pages\\DangNhap.css",
               "ViewState": "AgIAALwAAAAAAAAAAAAYwM8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-11-30T06:14:37.03Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-30T06:14:37.03Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 53,
               "Title": "ChiTietTinTuc.cshtml",
               "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\Views\\Home\\ChiTietTinTuc.cshtml",
               "RelativeDocumentMoniker": "6TL\\Views\\Home\\ChiTietTinTuc.cshtml",
@@ -1067,12 +1029,11 @@
               "RelativeToolTip": "6TL\\Views\\Home\\ChiTietTinTuc.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-10T15:14:39.622Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-10T15:14:39.622Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 55,
               "Title": "ChiTietTinTuc.css",
               "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\ChiTietTinTuc.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\pages\\ChiTietTinTuc.css",
@@ -1084,7 +1045,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 54,
               "Title": "ChinhSach.css",
               "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\ChinhSach.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\pages\\ChinhSach.css",
@@ -1092,8 +1053,7 @@
               "RelativeToolTip": "6TL\\wwwroot\\css\\pages\\ChinhSach.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-12-03T09:16:14.771Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-03T09:16:14.771Z"
             },
             {
               "$type": "Document",
@@ -1105,8 +1065,7 @@
               "RelativeToolTip": "6TL\\Views\\Home\\Index.cshtml",
               "ViewState": "AgIAAD8BAAAAAAAAAAAiwF8BAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-21T13:22:53.835Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-21T13:22:53.835Z"
             },
             {
               "$type": "Document",
@@ -1118,8 +1077,7 @@
               "RelativeToolTip": "6TL\\Views\\Home\\DangKy.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-30T06:09:50.774Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-30T06:09:50.774Z"
             },
             {
               "$type": "Document",
@@ -1131,21 +1089,7 @@
               "RelativeToolTip": "6TL\\wwwroot\\css\\pages\\TrangChu.css",
               "ViewState": "AgIAAJcBAAAAAAAAAAAAALgBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-11-30T06:14:08.416Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 55,
-              "Title": "style.css",
-              "DocumentMoniker": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\style.css",
-              "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\style.css",
-              "ToolTip": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\style.css",
-              "RelativeToolTip": "6TL\\wwwroot\\css\\style.css",
-              "ViewState": "AgIAAFgCAAAAAAAAAAAAAHkCAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-11-23T18:27:13.483Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-30T06:14:08.416Z"
             },
             {
               "$type": "Document",
@@ -1157,8 +1101,7 @@
               "RelativeToolTip": "6TL\\Views\\Home\\ChinhSach.cshtml",
               "ViewState": "AgIAAB8AAAAAAAAAAAAiwEMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-03T09:12:56.717Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-03T09:12:56.717Z"
             },
             {
               "$type": "Document",
@@ -1170,8 +1113,7 @@
               "RelativeToolTip": "6TL\\wwwroot\\css\\pages\\ChiTietSanPham.css",
               "ViewState": "AgIAAMQBAAAAAAAAAAAAAOUBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-11-29T13:31:04.283Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-29T13:31:04.283Z"
             },
             {
               "$type": "Document",
@@ -1183,8 +1125,7 @@
               "RelativeToolTip": "6TL\\Areas\\Admin\\Views\\_ViewImports.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-29T17:00:37.645Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-29T17:00:37.645Z"
             },
             {
               "$type": "Document",
@@ -1227,8 +1168,7 @@
               "RelativeToolTip": "6TL\\wwwroot\\css\\pages\\DangKy.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAJsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-11-30T06:14:54.837Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-30T06:14:54.837Z"
             },
             {
               "$type": "Document",
@@ -1263,8 +1203,7 @@
               "RelativeToolTip": "6TL\\wwwroot\\css\\pages\\GioiThieu.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAF0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-12-04T09:17:29.685Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-04T09:17:29.685Z"
             },
             {
               "$type": "Document",
@@ -1276,8 +1215,7 @@
               "RelativeToolTip": "6TL\\wwwroot\\css\\pages\\SanPhamYeuThich.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-12-04T09:19:37.844Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-04T09:19:37.844Z"
             },
             {
               "$type": "Document",
@@ -1289,8 +1227,7 @@
               "RelativeToolTip": "6TL\\wwwroot\\css\\pages\\TrangThanhToan.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-11-29T13:29:26.402Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-29T13:29:26.402Z"
             },
             {
               "$type": "Document",
@@ -1302,8 +1239,7 @@
               "RelativeToolTip": "6TL\\Views\\Home\\TrangThanhToan.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-27T09:40:04.496Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-27T09:40:04.496Z"
             },
             {
               "$type": "Document",
@@ -1315,8 +1251,7 @@
               "RelativeToolTip": "6TL\\Areas\\Admin\\Views\\_ViewStart.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-29T16:59:58.386Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-29T16:59:58.386Z"
             },
             {
               "$type": "Document",

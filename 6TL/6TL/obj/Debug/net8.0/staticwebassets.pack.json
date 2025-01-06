@@ -257,6 +257,34 @@
       "PackagePath": "staticwebassets\\img\\noithat6tc.jpg"
     },
     {
+      "Id": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\noithatban.jpg",
+      "PackagePath": "staticwebassets\\img\\noithatban.jpg"
+    },
+    {
+      "Id": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\noithatbinhlo.jpg",
+      "PackagePath": "staticwebassets\\img\\noithatbinhlo.jpg"
+    },
+    {
+      "Id": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\noithatden.jpg",
+      "PackagePath": "staticwebassets\\img\\noithatden.jpg"
+    },
+    {
+      "Id": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\noithatghe.jpg",
+      "PackagePath": "staticwebassets\\img\\noithatghe.jpg"
+    },
+    {
+      "Id": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\noithatgiuong.jpg",
+      "PackagePath": "staticwebassets\\img\\noithatgiuong.jpg"
+    },
+    {
+      "Id": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\noithattham.png",
+      "PackagePath": "staticwebassets\\img\\noithattham.png"
+    },
+    {
+      "Id": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\noithattham.webp",
+      "PackagePath": "staticwebassets\\img\\noithattham.webp"
+    },
+    {
       "Id": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\placeholder.jpg",
       "PackagePath": "staticwebassets\\img\\placeholder.jpg"
     },
@@ -307,6 +335,10 @@
     {
       "Id": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\tintuc4.jpg",
       "PackagePath": "staticwebassets\\img\\tintuc4.jpg"
+    },
+    {
+      "Id": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\tunoithat.jpg",
+      "PackagePath": "staticwebassets\\img\\tunoithat.jpg"
     },
     {
       "Id": "D:\\Asp Project\\Asp_Project\\6TL\\6TL\\wwwroot\\js\\site.js",

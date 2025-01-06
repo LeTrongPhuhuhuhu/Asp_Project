@@ -86,15 +86,11 @@
     height: 100%; /* Đảm bảo chiếm toàn bộ chiều cao */
     transition: transform 0.3s ease; /* Thêm hiệu ứng cho hover */
 }
-
-
-
-    /* Hình ảnh danh mục */
     .category-item_dmsp img {
-        width: 100%; /* Chiếm toàn bộ chiều rộng */
-        height: 100%; /* Chiếm toàn bộ chiều cao */
-        object-fit: cover; /* Cắt ảnh sao cho phù hợp với không gian */
-    }
+    max-width: 100%; /* Giới hạn chiều rộng ảnh tối đa bằng chiều rộng của container */
+    max-height: 220px; /* Giới hạn chiều cao ảnh tối đa */
+    object-fit: contain; /* Đảm bảo ảnh được hiển thị đầy đủ mà không bị cắt */
+}
 
 /* Tiêu đề danh mục */
 .category-title_dmsp {
