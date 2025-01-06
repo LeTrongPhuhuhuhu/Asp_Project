@@ -36,9 +36,14 @@
 
                 <h3>Chất liệu</h3>
                 <ul>
-                    <li><span>Gỗ</span></li>
-                    <li><span>Kim loại</span></li>
-                    <li><span>Kính</span></li>
+                    @foreach (var martial in ViewBag.Materials)
+                    {
+                        <li>
+                            <span>
+                                @martial
+                            </span>
+                        </li>
+                    }
                 </ul>
 
                 <h3>Giá</h3>
