@@ -36,6 +36,7 @@ namespace _6TL.Areas.Admin.Controllers
             // Lấy danh sách nhà cung cấp và danh mục từ cơ sở dữ liệu và gán cho ViewBag
             ViewBag.Suppliers = _context.Suppliers.ToList();
             ViewBag.Categories = _context.Categories.ToList();
+            
             return View();
         }
 

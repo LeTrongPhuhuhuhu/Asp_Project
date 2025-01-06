@@ -23,10 +23,16 @@
             <div class="sidebar_sp">
                 <h3>Danh mục</h3>
                 <ul>
-                    <li><span>Danh mục 1</span></li>
-                    <li><span>Danh mục 2</span></li>
-                    <li><span>Danh mục 3</span></li>
+                   @foreach(var category in ViewBag.Categories as List<Category> )
+                    {
+                        <li>
+                            <span>
+                                @category.CategoryName
+                          </span>
+                        </li>
+                    }
                 </ul>
+
 
                 <h3>Chất liệu</h3>
                 <ul>

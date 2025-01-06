@@ -21,7 +21,17 @@ namespace _6TL.Controllers
 
         public IActionResult SanPham()
         {
+            var category = _context.Categories.ToList();
+           
             var products = _context.Products.ToList(); // Lấy tất cả sản phẩm từ database
+            var materials = _context.Products
+       .Where(p => !string.IsNullOrEmpty(p.Material)) // Bỏ giá trị null hoặc rỗng
+       .Select(p => p.Material)
+       .Distinct()
+       .ToList();
+
+            ViewBag.Categories = category;
+            ViewBag.Materials = materials;
             return View(products);
         }
 
