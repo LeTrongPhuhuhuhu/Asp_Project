@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\views\\home\\dangky.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\\u1ED5 d\\tk web aspnet core\\\u0111\u1ED3 \u00E1n asp\\asp_project\\6tl\\6tl\\views\\home\\dangnhap.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\views\\home\\dangnhap.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\\u1ED5 d\\tk web aspnet core\\\u0111\u1ED3 \u00E1n asp\\asp_project\\6tl\\6tl\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -182,10 +186,6 @@
       "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\views\\home\\viewprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\\u1ED5 d\\tk web aspnet core\\\u0111\u1ED3 \u00E1n asp\\asp_project\\6tl\\6tl\\views\\home\\dangnhap.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\views\\home\\dangnhap.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\\u1ED5 d\\tk web aspnet core\\\u0111\u1ED3 \u00E1n asp\\asp_project\\6tl\\6tl\\areas\\admin\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\areas\\admin\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -209,7 +209,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -241,19 +241,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "QuanLyUser.cshtml",
-              "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Views\\Home\\QuanLyUser.cshtml",
-              "RelativeDocumentMoniker": "6TL\\Areas\\Admin\\Views\\Home\\QuanLyUser.cshtml",
-              "ToolTip": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Views\\Home\\QuanLyUser.cshtml",
-              "RelativeToolTip": "6TL\\Areas\\Admin\\Views\\Home\\QuanLyUser.cshtml",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAAAHQAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-07T16:13:00.747Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "DangNhap.css",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\DangNhap.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\pages\\DangNhap.css",
@@ -265,7 +253,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "DangKy.css",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\DangKy.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\pages\\DangKy.css",
@@ -277,7 +265,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "QuanLyBlog.css",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\QuanLyBlog.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\admin\\QuanLyBlog.css",
@@ -295,14 +283,14 @@
               "RelativeDocumentMoniker": "6TL\\Views\\Home\\DangKy.cshtml",
               "ToolTip": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Views\\Home\\DangKy.cshtml",
               "RelativeToolTip": "6TL\\Views\\Home\\DangKy.cshtml",
-              "ViewState": "AgIAAGUAAAAAAAAAAAAIwHcAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAADgAAAAAAAAAAAAAAEMAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-30T06:09:50.774Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "TrangThanhToan.cshtml",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Views\\Home\\TrangThanhToan.cshtml",
               "RelativeDocumentMoniker": "6TL\\Views\\Home\\TrangThanhToan.cshtml",
@@ -314,7 +302,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "6TL\\Views\\Home\\Index.cshtml",
@@ -326,7 +314,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "LichSuMuaHang.cshtml",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Views\\Home\\LichSuMuaHang.cshtml",
               "RelativeDocumentMoniker": "6TL\\Views\\Home\\LichSuMuaHang.cshtml",
@@ -338,7 +326,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 1,
+              "Title": "DangNhap.cshtml",
+              "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Views\\Home\\DangNhap.cshtml",
+              "RelativeDocumentMoniker": "6TL\\Views\\Home\\DangNhap.cshtml",
+              "ToolTip": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Views\\Home\\DangNhap.cshtml",
+              "RelativeToolTip": "6TL\\Views\\Home\\DangNhap.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-30T06:10:50.969Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "QuanLyUser.cshtml",
+              "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Views\\Home\\QuanLyUser.cshtml",
+              "RelativeDocumentMoniker": "6TL\\Areas\\Admin\\Views\\Home\\QuanLyUser.cshtml",
+              "ToolTip": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Views\\Home\\QuanLyUser.cshtml",
+              "RelativeToolTip": "6TL\\Areas\\Admin\\Views\\Home\\QuanLyUser.cshtml",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAAAHQAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-07T16:13:00.747Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "ThemBlog.css",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\ThemBlog.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\admin\\ThemBlog.css",
@@ -350,7 +362,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "SuaSanPham.css",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\SuaSanPham.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\admin\\SuaSanPham.css",
@@ -362,7 +374,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Microsoft.NET.Sdk.StaticWebAssets.targets",
               "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\8.0.403\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets",
               "ToolTip": "C:\\Program Files\\dotnet\\sdk\\8.0.403\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets",
@@ -372,7 +384,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "QuanLyAdmin.cshtml",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Views\\Home\\QuanLyAdmin.cshtml",
               "RelativeDocumentMoniker": "6TL\\Areas\\Admin\\Views\\Home\\QuanLyAdmin.cshtml",
@@ -384,7 +396,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "QuanLyAdmin.css",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\QuanLyAdmin.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\admin\\QuanLyAdmin.css",
@@ -396,7 +408,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "QuanLySanPham.css",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\QuanLySanPham.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\admin\\QuanLySanPham.css",
@@ -408,7 +420,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "6TL.csproj",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\6TL.csproj",
               "RelativeDocumentMoniker": "6TL\\6TL.csproj",
@@ -420,7 +432,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "Dashboard.css",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\Dashboard.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\admin\\Dashboard.css",
@@ -432,7 +444,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "QuanLyDanhMuc.css",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\QuanLyDanhMuc.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\admin\\QuanLyDanhMuc.css",
@@ -444,7 +456,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Program.cs",
               "RelativeDocumentMoniker": "6TL\\Program.cs",
@@ -456,7 +468,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "DanhMucSanPham.css",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\DanhMucSanPham.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\pages\\DanhMucSanPham.css",
@@ -468,7 +480,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "ChiTietSanPham.css",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\ChiTietSanPham.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\pages\\ChiTietSanPham.css",
@@ -480,7 +492,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "ChinhSach.css",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\ChinhSach.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\pages\\ChinhSach.css",
@@ -492,7 +504,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "ThemSanPham.css",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\ThemSanPham.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\admin\\ThemSanPham.css",
@@ -504,7 +516,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "GioiThieu.css",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\GioiThieu.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\pages\\GioiThieu.css",
@@ -516,7 +528,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "LichSuMuaHang.css",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\LichSuMuaHang.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\pages\\LichSuMuaHang.css",
@@ -528,7 +540,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "SanPham.css",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\SanPham.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\pages\\SanPham.css",
@@ -540,7 +552,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "SanPhamYeuThich.css",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\SanPhamYeuThich.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\pages\\SanPhamYeuThich.css",
@@ -552,7 +564,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "TinTuc.css",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\TinTuc.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\pages\\TinTuc.css",
@@ -564,7 +576,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "TrangChu.css",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\TrangChu.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\pages\\TrangChu.css",
@@ -576,7 +588,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "TrangThanhToan.css",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\TrangThanhToan.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\pages\\TrangThanhToan.css",
@@ -588,7 +600,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 30,
               "Title": "ViewProfile.css",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\ViewProfile.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\pages\\ViewProfile.css",
@@ -600,7 +612,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 31,
               "Title": "admin.css",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\admin.css",
@@ -612,7 +624,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 32,
               "Title": "ChiTietSanPham.cshtml",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Views\\Home\\ChiTietSanPham.cshtml",
               "RelativeDocumentMoniker": "6TL\\Views\\Home\\ChiTietSanPham.cshtml",
@@ -624,7 +636,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 33,
               "Title": "style.css",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\style.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\style.css",
@@ -636,7 +648,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 34,
               "Title": "DanhMucSanPham.cshtml",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Views\\Home\\DanhMucSanPham.cshtml",
               "RelativeDocumentMoniker": "6TL\\Views\\Home\\DanhMucSanPham.cshtml",
@@ -648,7 +660,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 35,
               "Title": "TinTuc.cshtml",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Views\\Home\\TinTuc.cshtml",
               "RelativeDocumentMoniker": "6TL\\Views\\Home\\TinTuc.cshtml",
@@ -660,7 +672,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 38,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "6TL\\Areas\\Admin\\Views\\Home\\Index.cshtml",
@@ -672,7 +684,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 36,
               "Title": "HomeController.cs",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "6TL\\Controllers\\HomeController.cs",
@@ -684,7 +696,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 39,
               "Title": "QuanLyDanhMuc.cshtml",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Views\\Home\\QuanLyDanhMuc.cshtml",
               "RelativeDocumentMoniker": "6TL\\Areas\\Admin\\Views\\Home\\QuanLyDanhMuc.cshtml",
@@ -696,7 +708,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 37,
               "Title": "ChinhSach.cshtml",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Views\\Home\\ChinhSach.cshtml",
               "RelativeDocumentMoniker": "6TL\\Views\\Home\\ChinhSach.cshtml",
@@ -708,7 +720,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 40,
               "Title": "HomeController.cs",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "6TL\\Areas\\Admin\\Controllers\\HomeController.cs",
@@ -720,7 +732,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 41,
               "Title": "SanPham.cshtml",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Views\\Home\\SanPham.cshtml",
               "RelativeDocumentMoniker": "6TL\\Views\\Home\\SanPham.cshtml",
@@ -732,7 +744,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 42,
               "Title": "ThemSanPham.cshtml",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Views\\Home\\ThemSanPham.cshtml",
               "RelativeDocumentMoniker": "6TL\\Areas\\Admin\\Views\\Home\\ThemSanPham.cshtml",
@@ -744,7 +756,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 43,
               "Title": "SuaSanPham.cshtml",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Views\\Home\\SuaSanPham.cshtml",
               "RelativeDocumentMoniker": "6TL\\Areas\\Admin\\Views\\Home\\SuaSanPham.cshtml",
@@ -756,7 +768,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 44,
               "Title": "QuanLySanPham.cshtml",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Views\\Home\\QuanLySanPham.cshtml",
               "RelativeDocumentMoniker": "6TL\\Areas\\Admin\\Views\\Home\\QuanLySanPham.cshtml",
@@ -768,7 +780,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 45,
               "Title": "ViewProfile.cshtml",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Views\\Home\\ViewProfile.cshtml",
               "RelativeDocumentMoniker": "6TL\\Views\\Home\\ViewProfile.cshtml",
@@ -777,18 +789,6 @@
               "ViewState": "AgIAABMAAAAAAAAAAAAAADUAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-26T17:06:33.829Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 45,
-              "Title": "DangNhap.cshtml",
-              "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Views\\Home\\DangNhap.cshtml",
-              "RelativeDocumentMoniker": "6TL\\Views\\Home\\DangNhap.cshtml",
-              "ToolTip": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Views\\Home\\DangNhap.cshtml",
-              "RelativeToolTip": "6TL\\Views\\Home\\DangNhap.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-30T06:10:50.969Z"
             },
             {
               "$type": "Document",
