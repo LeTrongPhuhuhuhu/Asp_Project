@@ -51,12 +51,14 @@
                     <label for="price-range_sp">Khoảng giá:</label>
                     <input type="range" id="price-range_sp" min="0" max="10000000" step="100000" value="5000000">
                     <div class="price-values_sp">
-                        <span id="min-price_sp">0 VND</span>
+                       
+                        <span id="current-price_sp">5,000,000 VND</span>
                         <span id="max-price_sp">10,000,000 VND</span>
                     </div>
                 </div>
-            </div>
 
+            
+                </div>
             <!-- Content -->
             <div class="content_sp">
                 <h2>Nội Thất / Bàn</h2>
@@ -138,6 +140,19 @@
                             heartIcon.classList.toggle('favorited', !isFavorite);
                         });
                 });
+            });
+        });
+    </script>
+  @*  JavaScript để cập nhật giá *@
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const priceRange = document.getElementById('price-range_sp');
+            const currentPrice = document.getElementById('current-price_sp');
+
+            // Cập nhật giá trị hiển thị khi kéo thanh trượt
+            priceRange.addEventListener('input', () => {
+                const formattedPrice = parseInt(priceRange.value).toLocaleString('vi-VN') + ' VND';
+                currentPrice.textContent = formattedPrice;
             });
         });
     </script>
