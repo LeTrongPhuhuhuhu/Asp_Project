@@ -87,8 +87,10 @@ namespace _6TL.Controllers
         }
 		public IActionResult TinTuc()
 		{
-			return View();
-		}
+            var blogs = _context.Blogs.ToList(); // Lấy dữ liệu từ bảng Blog
+            return View(blogs); // Truyền dữ liệu sang view
+
+        }
         public IActionResult DangKy()
         {
             return View();
