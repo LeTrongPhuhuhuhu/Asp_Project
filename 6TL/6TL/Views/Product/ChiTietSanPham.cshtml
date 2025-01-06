@@ -258,7 +258,6 @@
     document.addEventListener("DOMContentLoaded", () => {
         // JavaScript function to update stock information
         function updateStock(element) {
-            // Lấy số lượng từ thuộc tính data-quantity
             const quantity = element.getAttribute("data-quantity");
             const status = document.getElementById("stock-status");
             const stockCount = document.getElementById("stock-count");
@@ -277,62 +276,58 @@
 
         // Tự động chọn màu đầu tiên (nếu có)
         const firstColorOption = document.querySelector(".color-option_ct");
-        let stockQuantity = firstColorOption ? firstColorOption.getAttribute("data-quantity") : 0; // Lưu lại số lượng kho
+        let stockQuantity = firstColorOption ? firstColorOption.getAttribute("data-quantity") : 0;
         if (firstColorOption) {
-            firstColorOption.classList.add("selected");  // Thêm class 'selected' vào màu đầu tiên
-            updateStock(firstColorOption);  // Cập nhật thông tin kho cho màu đầu tiên
-
-            // Lưu lại màu đầu tiên để sử dụng khi thêm vào giỏ hàng hoặc mua ngay
+            firstColorOption.classList.add("selected");
+            updateStock(firstColorOption);
             selectedColor = firstColorOption.getAttribute("data-color-code");
         }
 
-        //AJAX
+        // AJAX
         $(document).ready(function () {
-            let selectedColor = firstColorOption ? firstColorOption.getAttribute("data-color-code") : ""; // Gán giá trị màu đầu tiên (nếu có)
-            let selectedQuantity = 1;  // Mặc định số lượng là 1
+            let selectedColor = firstColorOption ? firstColorOption.getAttribute("data-color-code") : "";
+            let selectedQuantity = 1;
 
             // Hàm xử lý chọn màu
             $(".color-option_ct").on("click", function () {
                 $(".color-option_ct").removeClass("selected");
                 $(this).addClass("selected");
                 selectedColor = $(this).data("color-code");
-                stockQuantity = $(this).data("quantity"); // Cập nhật số lượng kho khi chọn màu mới
-                updateStock(this);  // Cập nhật thông tin kho khi chọn màu mới
+                stockQuantity = $(this).data("quantity");
+                updateStock(this);
             });
 
             // Hàm xử lý thay đổi số lượng
             $("#quantity-input").on("input", function () {
-                selectedQuantity = $(this).val();  // Cập nhật số lượng khi người dùng thay đổi
+                selectedQuantity = $(this).val();
             });
 
             // Xử lý form "Thêm vào giỏ hàng" với AJAX
             $("#add-to-cart-form").on("submit", function (e) {
-                e.preventDefault(); // Ngừng gửi form theo cách thông thường
+                e.preventDefault();
 
                 if (!selectedColor) {
-                    toastr.error("Vui lòng chọn màu trước khi thêm vào giỏ hàng!");  // Thông báo lỗi
+                    toastr.error("Vui lòng chọn màu trước khi thêm vào giỏ hàng!");
                     return;
                 }
 
                 if (selectedQuantity <= 0 || selectedQuantity > stockQuantity) {
-                    toastr.error("Số lượng không hợp lệ hoặc vượt quá số lượng có trong kho!");  // Thông báo lỗi
+                    toastr.error("Số lượng không hợp lệ hoặc vượt quá số lượng có trong kho!");
                     return;
                 }
 
-                // Cập nhật màu sắc và số lượng vào form
                 $(this).find("input[name='productColor']").val(selectedColor);
-                $(this).find("input[name='quantity']").val(selectedQuantity);  // Cập nhật số lượng
+                $(this).find("input[name='quantity']").val(selectedQuantity);
 
-                // Gửi AJAX để thêm sản phẩm vào giỏ hàng
                 $.ajax({
                     url: '/Product/AddToCart',
                     type: 'POST',
-                    data: $(this).serialize(), // Lấy dữ liệu từ form
+                    data: $(this).serialize(),
                     success: function (response) {
                         if (response.success) {
-                            toastr.success(response.message); // Thông báo thành công
+                            toastr.success(response.message);
                         } else {
-                            toastr.error(response.message); // Thông báo lỗi
+                            toastr.error(response.message);
                         }
                     },
                     error: function () {
@@ -341,41 +336,27 @@
                 });
             });
 
-            // Xử lý form "Mua ngay" với AJAX
+            // Xử lý form "Mua ngay"
             $(".buy-now_ct").on("click", function (e) {
+                e.preventDefault();
                 const form = $(this).closest("form");
+
                 if (!selectedColor) {
-                    e.preventDefault();
-                    toastr.error("Vui lòng chọn màu trước khi mua!");  // Thông báo lỗi
+                    toastr.error("Vui lòng chọn màu trước khi mua!");
                     return;
                 }
 
                 if (selectedQuantity <= 0 || selectedQuantity > stockQuantity) {
-                    e.preventDefault();
-                    toastr.error("Số lượng không hợp lệ hoặc vượt quá số lượng có trong kho!");  // Thông báo lỗi
+                    toastr.error("Số lượng không hợp lệ hoặc vượt quá số lượng có trong kho!");
                     return;
                 }
 
                 form.find("input[name='productColor']").val(selectedColor);
-                form.find("input[name='quantity']").val(selectedQuantity);  // Cập nhật số lượng
+                form.find("input[name='quantity']").val(selectedQuantity);
 
-                $.ajax({
-                    url: '/Product/AddToCart',
-                    type: 'POST',
-                    data: form.serialize(),
-                    success: function (response) {
-                        if (response.success) {
-                            window.location.href = "/Home/TrangThanhToan"; // Redirect đến trang thanh toán
-                        } else {
-                            toastr.error(response.message); // Thông báo lỗi
-                        }
-                    },
-                    error: function () {
-                        toastr.error("Đã có lỗi xảy ra khi mua sản phẩm.");
-                    }
-                });
+                const urlParams = new URLSearchParams(form.serialize());
+                window.location.href = `/Home/TrangThanhToan?${urlParams.toString()}`;
             });
-
         });
     });
 </script>

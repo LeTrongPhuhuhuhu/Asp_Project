@@ -1,0 +1,21 @@
+﻿.cart-container {
+    position: relative;
+    display: inline-block;
+}
+
+    .cart-container i {
+        font-size: 20px; /* Giảm kích thước icon thêm một chút */
+        color: black; /* Đổi màu icon thành màu đen */
+    }
+
+#cart-count {
+    position: absolute;
+    top: -10px; /* Điều chỉnh theo ý muốn */
+    right: -10px; /* Điều chỉnh theo ý muốn */
+    background-color: red;
+    color: white;
+    border-radius: 50%; /* Làm cho background tròn */
+    padding: 4px 8px; /* Điều chỉnh padding để làm cho nền tròn trịa hơn */
+    font-size: 12px; /* Điều chỉnh kích thước font nếu cần */
+    display: none;
+}

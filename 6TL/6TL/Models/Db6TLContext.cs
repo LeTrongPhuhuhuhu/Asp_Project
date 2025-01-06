@@ -57,7 +57,7 @@ public partial class Db6TLContext : DbContext
     {
         modelBuilder.Entity<Admin>(entity =>
         {
-            entity.HasKey(e => e.AdminId).HasName("PK__Admins__719FE4E83AE5DAA6");
+            entity.HasKey(e => e.AdminId).HasName("PK__Admins__719FE4E8A2FD21D6");
 
             entity.Property(e => e.AdminId).HasColumnName("AdminID");
             entity.Property(e => e.AdminName).HasMaxLength(100);
@@ -76,12 +76,12 @@ public partial class Db6TLContext : DbContext
 
             entity.HasOne(d => d.Role).WithMany(p => p.Admins)
                 .HasForeignKey(d => d.RoleId)
-                .HasConstraintName("FK__Admins__RoleID__6EF57B66");
+                .HasConstraintName("FK__Admins__RoleID__6FE99F9F");
         });
 
         modelBuilder.Entity<Blog>(entity =>
         {
-            entity.HasKey(e => e.BlogId).HasName("PK__Blog__54379E507BCA2779");
+            entity.HasKey(e => e.BlogId).HasName("PK__Blog__54379E50330BE368");
 
             entity.ToTable("Blog");
 
@@ -95,7 +95,7 @@ public partial class Db6TLContext : DbContext
 
         modelBuilder.Entity<Cart>(entity =>
         {
-            entity.HasKey(e => e.CartId).HasName("PK__Cart__51BCD7B76FBBAE74");
+            entity.HasKey(e => e.CartId).HasName("PK__Cart__51BCD7B79A0A724D");
 
             entity.ToTable("Cart");
 
@@ -113,13 +113,13 @@ public partial class Db6TLContext : DbContext
 
         modelBuilder.Entity<Category>(entity =>
         {
-            entity.HasKey(e => e.CategoryId).HasName("PK__Categori__19093A2B0043ECB0");
+            entity.HasKey(e => e.CategoryId).HasName("PK__Categori__19093A2B31C3B7E8");
 
-            entity.HasIndex(e => e.Slug, "UQ__Categori__BC7B5FB647EDE5A6").IsUnique();
+            entity.HasIndex(e => e.Slug, "UQ__Categori__BC7B5FB61937AADB").IsUnique();
 
-            entity.HasIndex(e => e.Slug, "UQ__Categori__BC7B5FB68B975432").IsUnique();
+            entity.HasIndex(e => e.Slug, "UQ__Categori__BC7B5FB64DCCC86B").IsUnique();
 
-            entity.HasIndex(e => e.Slug, "UQ__Categori__BC7B5FB6FC3A8155").IsUnique();
+            entity.HasIndex(e => e.Slug, "UQ__Categori__BC7B5FB6D60367BF").IsUnique();
 
             entity.Property(e => e.CategoryId).HasColumnName("CategoryID");
             entity.Property(e => e.CategoryName).HasMaxLength(100);
@@ -139,7 +139,7 @@ public partial class Db6TLContext : DbContext
 
         modelBuilder.Entity<Color>(entity =>
         {
-            entity.HasKey(e => e.ColorId).HasName("PK__Colors__8DA7674D034211BC");
+            entity.HasKey(e => e.ColorId).HasName("PK__Colors__8DA7674D97FA79B2");
 
             entity.Property(e => e.ColorCode).HasMaxLength(50);
             entity.Property(e => e.ColorName).HasMaxLength(100);
@@ -147,7 +147,7 @@ public partial class Db6TLContext : DbContext
 
         modelBuilder.Entity<Contact>(entity =>
         {
-            entity.HasKey(e => e.ContactId).HasName("PK__Contacts__5C66259BF6AC6461");
+            entity.HasKey(e => e.ContactId).HasName("PK__Contacts__5C66259B2FB00CB0");
 
             entity.Property(e => e.CreatedDate)
                 .HasDefaultValueSql("(getdate())")
@@ -163,7 +163,7 @@ public partial class Db6TLContext : DbContext
 
         modelBuilder.Entity<Customer>(entity =>
         {
-            entity.HasKey(e => e.CustomerId).HasName("PK__Customer__A4AE64B8652B9094");
+            entity.HasKey(e => e.CustomerId).HasName("PK__Customer__A4AE64B8455BD5F5");
 
             entity.Property(e => e.CustomerId).HasColumnName("CustomerID");
             entity.Property(e => e.Address).HasMaxLength(200);
@@ -186,12 +186,12 @@ public partial class Db6TLContext : DbContext
 
             entity.HasOne(d => d.Role).WithMany(p => p.Customers)
                 .HasForeignKey(d => d.RoleId)
-                .HasConstraintName("FK__Customers__RoleI__73BA3083");
+                .HasConstraintName("FK__Customers__RoleI__74AE54BC");
         });
 
         modelBuilder.Entity<Discount>(entity =>
         {
-            entity.HasKey(e => e.DiscountId).HasName("PK__Discount__E43F6DF658A80255");
+            entity.HasKey(e => e.DiscountId).HasName("PK__Discount__E43F6DF6379FA3E9");
 
             entity.Property(e => e.DiscountId).HasColumnName("DiscountID");
             entity.Property(e => e.CreatedDate)
@@ -211,7 +211,7 @@ public partial class Db6TLContext : DbContext
 
         modelBuilder.Entity<Order>(entity =>
         {
-            entity.HasKey(e => e.OrderId).HasName("PK__Orders__C3905BAF45AAA4A8");
+            entity.HasKey(e => e.OrderId).HasName("PK__Orders__C3905BAF32D334E6");
 
             entity.Property(e => e.OrderId).HasColumnName("OrderID");
             entity.Property(e => e.CreatedAt)
@@ -230,12 +230,12 @@ public partial class Db6TLContext : DbContext
 
             entity.HasOne(d => d.Customer).WithMany(p => p.Orders)
                 .HasForeignKey(d => d.CustomerId)
-                .HasConstraintName("FK__Orders__Customer__787EE5A0");
+                .HasConstraintName("FK__Orders__Customer__797309D9");
         });
 
         modelBuilder.Entity<OrderDetail>(entity =>
         {
-            entity.HasKey(e => new { e.OrderId, e.ProductId }).HasName("PK__OrderDet__08D097C126F26703");
+            entity.HasKey(e => new { e.OrderId, e.ProductId }).HasName("PK__OrderDet__08D097C1E15EC919");
 
             entity.ToTable("OrderDetail");
 
@@ -249,23 +249,23 @@ public partial class Db6TLContext : DbContext
 
             entity.HasOne(d => d.Order).WithMany(p => p.OrderDetails)
                 .HasForeignKey(d => d.OrderId)
-                .HasConstraintName("FK__OrderDeta__Order__76969D2E");
+                .HasConstraintName("FK__OrderDeta__Order__778AC167");
 
             entity.HasOne(d => d.Product).WithMany(p => p.OrderDetails)
                 .HasForeignKey(d => d.ProductId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__OrderDeta__Produ__778AC167");
+                .HasConstraintName("FK__OrderDeta__Produ__787EE5A0");
         });
 
         modelBuilder.Entity<Product>(entity =>
         {
-            entity.HasKey(e => e.ProductId).HasName("PK__Products__B40CC6ED7367D536");
+            entity.HasKey(e => e.ProductId).HasName("PK__Products__B40CC6ED3C50E56F");
 
-            entity.HasIndex(e => e.Slug, "UQ__Products__BC7B5FB610B15F14").IsUnique();
+            entity.HasIndex(e => e.Slug, "UQ__Products__BC7B5FB6284CB191").IsUnique();
 
-            entity.HasIndex(e => e.Slug, "UQ__Products__BC7B5FB673E6F0EA").IsUnique();
+            entity.HasIndex(e => e.Slug, "UQ__Products__BC7B5FB679A7BD75").IsUnique();
 
-            entity.HasIndex(e => e.Slug, "UQ__Products__BC7B5FB6ACF59050").IsUnique();
+            entity.HasIndex(e => e.Slug, "UQ__Products__BC7B5FB6A0981D00").IsUnique();
 
             entity.Property(e => e.ProductId).HasColumnName("ProductID");
             entity.Property(e => e.CategoryId).HasColumnName("CategoryID");
@@ -286,51 +286,39 @@ public partial class Db6TLContext : DbContext
 
             entity.HasOne(d => d.Category).WithMany(p => p.Products)
                 .HasForeignKey(d => d.CategoryId)
-                .HasConstraintName("FK__Products__Catego__7D439ABD");
+                .HasConstraintName("FK__Products__Catego__00200768");
 
             entity.HasOne(d => d.Discount).WithMany(p => p.Products)
                 .HasForeignKey(d => d.DiscountId)
-                .HasConstraintName("FK__Products__Discou__00200768");
+                .HasConstraintName("FK__Products__Discou__01142BA1");
 
             entity.HasOne(d => d.Supplier).WithMany(p => p.Products)
                 .HasForeignKey(d => d.SupplierId)
-                .HasConstraintName("FK__Products__Suppli__02FC7413");
+                .HasConstraintName("FK__Products__Suppli__03F0984C");
         });
 
         modelBuilder.Entity<ProductColor>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("ProductColor");
+            entity.HasKey(e => new { e.ProductId, e.ColorId });
+
+            entity.ToTable("ProductColor");
 
             entity.Property(e => e.ProductId).HasColumnName("ProductID");
 
-            entity.HasOne(d => d.Color).WithMany()
+            entity.HasOne(d => d.Color).WithMany(p => p.ProductColors)
                 .HasForeignKey(d => d.ColorId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_ProductColor_Color");
 
-            entity.HasOne(d => d.Product).WithMany()
+            entity.HasOne(d => d.Product).WithMany(p => p.ProductColors)
                 .HasForeignKey(d => d.ProductId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("ProductID");
         });
-		base.OnModelCreating(modelBuilder);
 
-		modelBuilder.Entity<ProductColor>()
-			.HasKey(pc => new { pc.ProductId, pc.ColorId });
-
-		modelBuilder.Entity<ProductColor>()
-			.HasOne(pc => pc.Product)
-			.WithMany(p => p.ProductColors)
-			.HasForeignKey(pc => pc.ProductId);
-
-		modelBuilder.Entity<ProductColor>()
-			.HasOne(pc => pc.Color)
-			.WithMany(c => c.ProductColors)
-			.HasForeignKey(pc => pc.ColorId);
-
-		modelBuilder.Entity<Review>(entity =>
+        modelBuilder.Entity<Review>(entity =>
         {
-            entity.HasKey(e => e.ReviewId).HasName("PK__Reviews__74BC79AE7F6FE9F4");
+            entity.HasKey(e => e.ReviewId).HasName("PK__Reviews__74BC79AEE08A573F");
 
             entity.Property(e => e.ReviewId).HasColumnName("ReviewID");
             entity.Property(e => e.CreatedAt).HasColumnType("datetime");
@@ -350,7 +338,7 @@ public partial class Db6TLContext : DbContext
 
         modelBuilder.Entity<Role>(entity =>
         {
-            entity.HasKey(e => e.RoleId).HasName("PK__Roles__8AFACE3A22113C0D");
+            entity.HasKey(e => e.RoleId).HasName("PK__Roles__8AFACE3ACC2CCA58");
 
             entity.Property(e => e.RoleId).HasColumnName("RoleID");
             entity.Property(e => e.RoleName).HasMaxLength(50);
@@ -358,7 +346,7 @@ public partial class Db6TLContext : DbContext
 
         modelBuilder.Entity<Supplier>(entity =>
         {
-            entity.HasKey(e => e.SupplierId).HasName("PK__Supplier__4BE66694BD65E36B");
+            entity.HasKey(e => e.SupplierId).HasName("PK__Supplier__4BE6669418D4B23A");
 
             entity.Property(e => e.SupplierId).HasColumnName("SupplierID");
             entity.Property(e => e.Address).HasMaxLength(200);
@@ -410,7 +398,7 @@ public partial class Db6TLContext : DbContext
 
         modelBuilder.Entity<Wishlist>(entity =>
         {
-            entity.HasKey(e => e.WishlistId).HasName("PK__Wishlist__233189CB29127EB1");
+            entity.HasKey(e => e.WishlistId).HasName("PK__Wishlist__233189CBEBB04240");
 
             entity.ToTable("Wishlist");
 
@@ -429,11 +417,11 @@ public partial class Db6TLContext : DbContext
 
             entity.HasOne(d => d.Customer).WithMany(p => p.Wishlists)
                 .HasForeignKey(d => d.CustomerId)
-                .HasConstraintName("FK__Wishlist__Custom__07C12930");
+                .HasConstraintName("FK__Wishlist__Custom__08B54D69");
 
             entity.HasOne(d => d.Product).WithMany(p => p.Wishlists)
                 .HasForeignKey(d => d.ProductId)
-                .HasConstraintName("FK__Wishlist__Produc__0A9D95DB");
+                .HasConstraintName("FK__Wishlist__Produc__0B91BA14");
         });
 
         OnModelCreatingPartial(modelBuilder);

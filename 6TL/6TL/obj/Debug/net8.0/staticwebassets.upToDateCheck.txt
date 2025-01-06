@@ -15,6 +15,7 @@ wwwroot\css\admin\SuaSanPham.css
 wwwroot\css\admin\ThemBlog.css
 wwwroot\css\admin\ThemSanPham.css
 wwwroot\css\pages\Blog.css
+wwwroot\css\pages\cart.css
 wwwroot\css\pages\ChinhSach.css
 wwwroot\css\pages\ChiTietSanPham.css
 wwwroot\css\pages\ChiTietTinTuc.css

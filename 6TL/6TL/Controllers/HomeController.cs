@@ -81,7 +81,12 @@ namespace _6TL.Controllers
 			// Chuyển hướng đến trang giỏ hàng
 			return RedirectToAction("GioHang"); // Giả sử view giỏ hàng của bạn tên là "Cart"
 		}
-
+		public int GetTotalCartQuantity() {
+			return _context.Carts.Sum(c => c.Quantity); }
+		public IActionResult GetCartQuantity() { 
+			int totalQuantity = GetTotalCartQuantity();
+			return Json(new { totalQuantity });
+		}
 
 		public IActionResult Index()
 		{

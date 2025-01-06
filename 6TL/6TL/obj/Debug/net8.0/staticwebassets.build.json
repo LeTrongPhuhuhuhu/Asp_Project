@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "+qF+xo6oJHrvhF81OYAbdcS5glRA5hmysCGlxeA3C10=",
+  "Hash": "cHgtWEfxejqaF+nIYGNvnQHMPs1hty5PbgNgUSWELMU=",
   "Source": "6TL",
   "BasePath": "_content/6TL",
   "Mode": "Default",
@@ -416,6 +416,27 @@
       "OriginalItemSpec": "wwwroot\\css\\pages\\Blog.css"
     },
     {
+      "Identity": "E:\\Asp_Project\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\cart.css",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Asp_Project\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+      "BasePath": "_content/6TL",
+      "RelativePath": "css/pages/cart#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ff6ccel0fk",
+      "Integrity": "i3+smKssdf9u8Cnyxh9FgtFijNnNmsJ3wvzFXHb2gKs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\pages\\cart.css"
+    },
+    {
       "Identity": "E:\\Asp_Project\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\ChinhSach.css",
       "SourceId": "6TL",
       "SourceType": "Discovered",
@@ -451,8 +472,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "r26wrz6rza",
-      "Integrity": "w23lWKgMqD0sPRo3XoxQxsGCVJtfvoQj+uV8vCnHgYk=",
+      "Fingerprint": "y3p1kxwuh7",
+      "Integrity": "opK0vobj/cfVaapFCKb5yAmGZ8zaH9eactyYwMKsT7U=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\pages\\ChiTietSanPham.css"
@@ -556,8 +577,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "5a9iceh8va",
-      "Integrity": "fZMO4vd0sOxERQBZOBL2RWkv3BSf7QfgHvHGKDSrprk=",
+      "Fingerprint": "ypbifpyluh",
+      "Integrity": "1t5E/9lN7UoUv6M0YMsNaOBpgpH1nLWFzWEDih3N8Eg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\pages\\GioHang.css"
@@ -4538,6 +4559,88 @@
       ]
     },
     {
+      "Route": "css/pages/cart.css",
+      "AssetFile": "E:\\Asp_Project\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\cart.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "699"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"i3+smKssdf9u8Cnyxh9FgtFijNnNmsJ3wvzFXHb2gKs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 06 Jan 2025 16:09:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-i3+smKssdf9u8Cnyxh9FgtFijNnNmsJ3wvzFXHb2gKs="
+        }
+      ]
+    },
+    {
+      "Route": "css/pages/cart.ff6ccel0fk.css",
+      "AssetFile": "E:\\Asp_Project\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\cart.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "699"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"i3+smKssdf9u8Cnyxh9FgtFijNnNmsJ3wvzFXHb2gKs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 06 Jan 2025 16:09:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ff6ccel0fk"
+        },
+        {
+          "Name": "label",
+          "Value": "css/pages/cart.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-i3+smKssdf9u8Cnyxh9FgtFijNnNmsJ3wvzFXHb2gKs="
+        }
+      ]
+    },
+    {
       "Route": "css/pages/ChinhSach.css",
       "AssetFile": "E:\\Asp_Project\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\ChinhSach.css",
       "Selectors": [],
@@ -4630,7 +4733,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "10129"
+          "Value": "9992"
         },
         {
           "Name": "Content-Type",
@@ -4638,11 +4741,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"w23lWKgMqD0sPRo3XoxQxsGCVJtfvoQj+uV8vCnHgYk=\""
+          "Value": "\"opK0vobj/cfVaapFCKb5yAmGZ8zaH9eactyYwMKsT7U=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 06 Jan 2025 09:53:11 GMT"
+          "Value": "Mon, 06 Jan 2025 09:53:36 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4652,12 +4755,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-w23lWKgMqD0sPRo3XoxQxsGCVJtfvoQj+uV8vCnHgYk="
+          "Value": "sha256-opK0vobj/cfVaapFCKb5yAmGZ8zaH9eactyYwMKsT7U="
         }
       ]
     },
     {
-      "Route": "css/pages/ChiTietSanPham.r26wrz6rza.css",
+      "Route": "css/pages/ChiTietSanPham.y3p1kxwuh7.css",
       "AssetFile": "E:\\Asp_Project\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\ChiTietSanPham.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -4667,7 +4770,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "10129"
+          "Value": "9992"
         },
         {
           "Name": "Content-Type",
@@ -4675,11 +4778,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"w23lWKgMqD0sPRo3XoxQxsGCVJtfvoQj+uV8vCnHgYk=\""
+          "Value": "\"opK0vobj/cfVaapFCKb5yAmGZ8zaH9eactyYwMKsT7U=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 06 Jan 2025 09:53:11 GMT"
+          "Value": "Mon, 06 Jan 2025 09:53:36 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4689,7 +4792,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "r26wrz6rza"
+          "Value": "y3p1kxwuh7"
         },
         {
           "Name": "label",
@@ -4697,7 +4800,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-w23lWKgMqD0sPRo3XoxQxsGCVJtfvoQj+uV8vCnHgYk="
+          "Value": "sha256-opK0vobj/cfVaapFCKb5yAmGZ8zaH9eactyYwMKsT7U="
         }
       ]
     },
@@ -5030,51 +5133,6 @@
       ]
     },
     {
-      "Route": "css/pages/GioHang.5a9iceh8va.css",
-      "AssetFile": "E:\\Asp_Project\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\GioHang.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "5119"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"fZMO4vd0sOxERQBZOBL2RWkv3BSf7QfgHvHGKDSrprk=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 05 Jan 2025 08:08:11 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "5a9iceh8va"
-        },
-        {
-          "Name": "label",
-          "Value": "css/pages/GioHang.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-fZMO4vd0sOxERQBZOBL2RWkv3BSf7QfgHvHGKDSrprk="
-        }
-      ]
-    },
-    {
       "Route": "css/pages/GioHang.css",
       "AssetFile": "E:\\Asp_Project\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\GioHang.css",
       "Selectors": [],
@@ -5085,7 +5143,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5119"
+          "Value": "5087"
         },
         {
           "Name": "Content-Type",
@@ -5093,11 +5151,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"fZMO4vd0sOxERQBZOBL2RWkv3BSf7QfgHvHGKDSrprk=\""
+          "Value": "\"1t5E/9lN7UoUv6M0YMsNaOBpgpH1nLWFzWEDih3N8Eg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 05 Jan 2025 08:08:11 GMT"
+          "Value": "Mon, 06 Jan 2025 14:49:03 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5107,7 +5165,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-fZMO4vd0sOxERQBZOBL2RWkv3BSf7QfgHvHGKDSrprk="
+          "Value": "sha256-1t5E/9lN7UoUv6M0YMsNaOBpgpH1nLWFzWEDih3N8Eg="
+        }
+      ]
+    },
+    {
+      "Route": "css/pages/GioHang.ypbifpyluh.css",
+      "AssetFile": "E:\\Asp_Project\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\GioHang.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5087"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1t5E/9lN7UoUv6M0YMsNaOBpgpH1nLWFzWEDih3N8Eg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 06 Jan 2025 14:49:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ypbifpyluh"
+        },
+        {
+          "Name": "label",
+          "Value": "css/pages/GioHang.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-1t5E/9lN7UoUv6M0YMsNaOBpgpH1nLWFzWEDih3N8Eg="
         }
       ]
     },
@@ -5872,7 +5975,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 08:37:26 GMT"
+          "Value": "Mon, 06 Jan 2025 16:02:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5909,7 +6012,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 08:37:26 GMT"
+          "Value": "Mon, 06 Jan 2025 16:02:20 GMT"
         },
         {
           "Name": "Cache-Control",

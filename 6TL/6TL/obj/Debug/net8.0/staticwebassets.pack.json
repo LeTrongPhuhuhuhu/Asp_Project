@@ -137,6 +137,10 @@
       "PackagePath": "staticwebassets\\css\\pages\\ViewProfile.css"
     },
     {
+      "Id": "E:\\Asp_Project\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\cart.css",
+      "PackagePath": "staticwebassets\\css\\pages\\cart.css"
+    },
+    {
       "Id": "E:\\Asp_Project\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\style.css",
       "PackagePath": "staticwebassets\\css\\style.css"
     },

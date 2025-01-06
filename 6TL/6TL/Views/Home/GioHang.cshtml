@@ -115,6 +115,7 @@
                     const totalPrice = pricePerItem * quantity;
                     totalPriceElem.textContent = totalPrice.toLocaleString() + ' ₫';
                     updateSubtotal();
+                    updateQuantityOnServer(row.getAttribute('data-id'), quantity); // Update the quantity on the server
                 };
 
                 decreaseBtn.addEventListener('click', () => {
@@ -132,47 +133,71 @@
                 });
             });
 
-            // Xử lý xóa sản phẩm với Toastr
-            document.querySelectorAll('.remove').forEach(removeBtn => {
-                removeBtn.addEventListener('click', function (e) {
-                    e.preventDefault();
+            const updateQuantityOnServer = (productId, quantity) => {
+                fetch(`/Home/UpdateCartQuantity/${productId}`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ quantity: quantity }),
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (!data.success) {
+                        alert(data.message);
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+            };
+
+            // Xóa sản phẩm theo id
+            document.querySelectorAll('.remove').forEach(button => {
+                button.addEventListener('click', function(event) {
+                    event.preventDefault();
                     const productId = this.getAttribute('data-id');
 
-                    if (confirm('Bạn có chắc muốn xóa sản phẩm này khỏi giỏ hàng?')) {
+                    if (confirm("Bạn có chắc chắn muốn xóa sản phẩm này?")) {
                         fetch(`/Home/remove/${productId}`, {
-                            method: 'DELETE',
-                            headers: {
-                                'Content-Type': 'application/json',
-                            },
-                        })
-                        .then(response => response.json())
+                            method: 'DELETE'
+                        }).then(response => response.json())
                         .then(data => {
                             if (data.success) {
-                                toastr.success('Sản phẩm đã được xóa khỏi giỏ hàng.');
-                                this.closest('.cart-item').remove();
-                                updateSubtotal();
-                                // Kiểm tra xem giỏ hàng có trống không
-                                if (document.querySelectorAll('.cart-item').length === 0) {
-                                    // Chuyển sang giao diện giỏ hàng trống
-                                    document.querySelector('.cart-container').innerHTML = `
-                                        <div class="empty-cart">
-                                            <img src="https://cdn-icons-png.flaticon.com/128/13637/13637462.png" alt="Giỏ hàng trống">
-                                            <h2>Giỏ hàng của bạn hiện đang trống!</h2>
-                                            <p>Hãy thêm sản phẩm vào giỏ hàng để tiếp tục mua sắm.</p>
-                                            <button onclick="window.location.href='@Url.Action("SanPham", "Product2")'">Quay lại mua sắm</button>
-                                        </div>`;
-                                }
+                                document.querySelector(`.cart-item[data-id="${productId}"]`).remove();
+                                updateCartSummary(data.emptyCart);
                             } else {
-                                toastr.error('Có lỗi xảy ra, vui lòng thử lại.');
+                                alert(data.message);
                             }
-                        })
-                        .catch(error => console.error('Error:', error));
+                        });
                     }
                 });
             });
 
+            // Cập nhật tạm tính và tổng cộng
+            const updateCartSummary = (emptyCart) => {
+                if (emptyCart) {
+                    document.querySelector('.cart-container').innerHTML = `
+                        <div class="empty-cart" style="display: flex; flex-direction: column; align-items: center;">
+                            <img src="https://cdn-icons-png.flaticon.com/128/13637/13637462.png" alt="Giỏ hàng trống">
+                            <h2>Giỏ hàng của bạn hiện đang trống!</h2>
+                            <p>Hãy thêm sản phẩm vào giỏ hàng để tiếp tục mua sắm.</p>
+                            <button onclick="window.location.href='@Url.Action("SanPham", "Product2")'">Quay lại mua sắm</button>
+                        </div>
+                    `;
+                    document.querySelector('.cart-container').style.textAlign = 'center'; // Căn giữa nội dung
+                } else {
+                    let subtotal = 0;
+                    document.querySelectorAll('.cart-item').forEach(item => {
+                        subtotal += parseFloat(item.getAttribute('data-price')) * parseInt(item.querySelector('.quantity-number').innerText);
+                    });
+                    document.getElementById('subtotal').innerText = `${subtotal.toLocaleString()} ₫`;
+                    document.getElementById('total').innerText = `${subtotal.toLocaleString()} ₫`;
+                }
+            };
+
             // Xóa toàn bộ sản phẩm trong giỏ hàng
             document.querySelector('.delete-all-btn').addEventListener('click', function () {
+
+
                 if (confirm('Bạn có chắc chắn muốn xóa tất cả sản phẩm trong giỏ hàng?')) {
                     fetch('/Home/clearCart', {
                         method: 'DELETE',
@@ -183,16 +208,16 @@
                     .then(response => response.json())
                     .then(data => {
                         if (data.success) {
-                            // Cập nhật lại giao diện giỏ hàng
                             document.querySelector('.cart-table tbody').innerHTML = ''; // Xóa hết sản phẩm
                             document.querySelector('.cart-summary').style.display = 'none'; // Ẩn phần tóm tắt giỏ hàng
                             document.querySelector('.cart-container').innerHTML = `
-                                <div class="empty-cart">
+                                <div class="empty-cart" style="display: flex; flex-direction: column; align-items: center;">
                                     <img src="https://cdn-icons-png.flaticon.com/128/13637/13637462.png" alt="Giỏ hàng trống">
                                     <h2>Giỏ hàng của bạn hiện đang trống!</h2>
                                     <p>Hãy thêm sản phẩm vào giỏ hàng để tiếp tục mua sắm.</p>
                                     <button onclick="window.location.href='@Url.Action("SanPham", "Product2")'">Quay lại mua sắm</button>
                                 </div>`;
+                            document.querySelector('.cart-container').style.textAlign = 'center'; // Căn giữa nội dung
                         } else {
                             toastr.error('Có lỗi xảy ra khi xóa giỏ hàng. Vui lòng thử lại!');
                         }
@@ -202,6 +227,10 @@
             });
         });
     </script>
+
+
+
+
 
 </body>
 </html>
