@@ -1,0 +1,25 @@
+﻿.cart-containerd_la {
+    position: relative; /* Đặt vị trí tương đối để chứa phần tử con */
+}
+
+    .cart-containerd_la i {
+        font-size: 22px; /* Tăng kích thước của biểu tượng cart */
+        color: black; /* Đặt màu đen cho biểu tượng */
+    }
+
+.cart-quantity_la 
+
+{
+    position: absolute;
+    top: -12px;
+    right: -15px;
+    background-color: #e47f08;
+    color: white;
+    border-radius: 50%;
+    padding: 4px 8px;
+    font-size: 12px;
+    font-weight: normal;
+    text-align: center;
+    line-height: 1.2;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}

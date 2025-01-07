@@ -16,7 +16,6 @@ body {
     width: 100vw;
     height: 165px;
     background-color: #cbcbcb;
-
 }
 
     .banner_ct a {
@@ -132,13 +131,27 @@ body {
 
 .stars_ct {
     display: flex;
-    gap: 6px;
 }
 
 .star_ct {
-    font-size: 22px;
-    color: #ffc107;
+    width: 20px;
+    height: 20px;
+    background-color: #ccc;
+    margin-right: 5px;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    transition: background-color 0.3s ease;
 }
+
+    /* Ngôi sao đầy đủ */
+    .star_ct.filled {
+        background-color: gold;
+    }
+
+    /* Ngôi sao nửa */
+    .star_ct.half-filled {
+        background: linear-gradient(to right, gold 50%, #ccc 50%);
+    }
+
 
 .rating-summary_ct {
     font-size: 16px;
@@ -189,6 +202,7 @@ body {
     color: #fff;
     width: 180px;
 }
+
 .buy-now_ct:hover {
     background-color: #1d1f60; /* Thay đổi màu nền khi hover */
     box-shadow: 0 6px 15px rgba(230, 57, 70, 0.5); /* Thêm bóng đổ đậm hơn khi hover */
@@ -207,7 +221,7 @@ body {
     padding: 12px;
     border-radius: 8px;
     color: #444;
-    max-width:400px
+    max-width: 400px
 }
 
 /* Phần tiêu đề bình luận */
@@ -452,10 +466,10 @@ body {
 
 .product-info_ct {
     flex: 1;
-   
     max-width: 700px;
     box-sizing: border-box;
 }
+
 .color-option_ct {
     width: 30px;
     height: 30px;
