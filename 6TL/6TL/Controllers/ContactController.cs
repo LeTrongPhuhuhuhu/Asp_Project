@@ -31,7 +31,7 @@ namespace _6TL.Controllers
 			{
 				// Cập nhật ngày tạo
 				model.CreatedDate = DateTime.Now;
-
+				model.Status = "Chưa xử lý";
 				// Lưu dữ liệu vào cơ sở dữ liệu
 				_context.Contacts.Add(model);
 				await _context.SaveChangesAsync();
