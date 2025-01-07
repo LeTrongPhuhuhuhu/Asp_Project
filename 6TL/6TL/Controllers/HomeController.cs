@@ -1,4 +1,5 @@
-﻿using _6TL.Models;
+﻿using _6TL.Data;
+using _6TL.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
@@ -87,8 +88,14 @@ namespace _6TL.Controllers
         }
 		public IActionResult TinTuc()
 		{
-            var blogs = _context.Blogs.ToList(); // Lấy dữ liệu từ bảng Blog
-            return View(blogs); // Truyền dữ liệu sang view
+            // Lấy tất cả các bài viết tin tức từ database
+            var allNews = _context.Blogs.ToList();
+
+            // Truyền dữ liệu vào ViewBag
+            ViewBag.News = allNews;
+
+            // Trả về view
+            return View();
 
         }
         public IActionResult DangKy()
@@ -107,10 +114,16 @@ namespace _6TL.Controllers
 		{
 			return View();
 		}
-		public IActionResult ChiTietTinTuc()
+		public IActionResult ChiTietTinTuc(int id)
 		{
-			return View();
-		}
+            var blog = _context.Blogs.FirstOrDefault(b => b.BlogId == id);
+            if (blog == null)
+            {
+                return NotFound();
+            }
+
+            return View(blog);
+        }
 
 		[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
 		public IActionResult Error()
