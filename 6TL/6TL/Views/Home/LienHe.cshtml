@@ -26,7 +26,19 @@
         <h2>Sản Phẩm Có Sẵn...</h2>
         <p>Để kiểm tra tình trạng hàng hóa nội thất, vui lòng truy cập trang <a href="#"> Bộ Sưu Tập Nội Thất </a> của chúng tôi.</p>
         <p>Nếu bạn muốn đặt thiết kế nội thất theo mẫu có sẵn, vui lòng điền vào biểu mẫu dưới đây và đính kèm liên kết đến mẫu thiết kế bạn yêu thích.</p>
+        @if (TempData["SuccessMessage"] != null)
+        {
+            <div class="alert alert-success">
+                @TempData["SuccessMessage"]
+            </div>
+        }
 
+        @if (TempData["ErrorMessage"] != null)
+        {
+            <div class="alert alert-danger">
+                @TempData["ErrorMessage"]
+            </div>
+        }
         <!-- Contact Form -->
         <form class="contact-form" asp-controller="Contact" asp-action="LienHe" method="post">
             <label for="title">Tiêu Đề (Bắt Buộc)</label>
@@ -49,16 +61,4 @@
     </div>
 </body>
 </html>
-@if (TempData["SuccessMessage"] != null)
-{
-    <div class="alert alert-success">
-        @TempData["SuccessMessage"]
-    </div>
-}
 
-@if (TempData["ErrorMessage"] != null)
-{
-    <div class="alert alert-danger">
-        @TempData["ErrorMessage"]
-    </div>
-}
