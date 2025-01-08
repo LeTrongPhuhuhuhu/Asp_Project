@@ -225,6 +225,10 @@
       "PackagePath": "staticwebassets\\img\\blog4.jpg"
     },
     {
+      "Id": "E:\\Asp_Project\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\dining-table.jpg",
+      "PackagePath": "staticwebassets\\img\\dining-table.jpg"
+    },
+    {
       "Id": "E:\\Asp_Project\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\dmsp.jpg",
       "PackagePath": "staticwebassets\\img\\dmsp.jpg"
     },
@@ -287,6 +291,10 @@
     {
       "Id": "E:\\Asp_Project\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\snapedit_1732430907358.png",
       "PackagePath": "staticwebassets\\img\\snapedit_1732430907358.png"
+    },
+    {
+      "Id": "E:\\Asp_Project\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\sofa.jpg",
+      "PackagePath": "staticwebassets\\img\\sofa.jpg"
     },
     {
       "Id": "E:\\Asp_Project\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\sofa1.jpg",

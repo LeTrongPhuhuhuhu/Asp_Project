@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "FG/lmVtpcHJ2La1JNE2WqX/gB25tW7z+KvvbFGUPB4o=",
+  "Hash": "92YnvptvIcH/xC82PKGNwxpYn/7HkcUcbi1x477iflQ=",
   "Source": "6TL",
   "BasePath": "_content/6TL",
   "Mode": "Default",
@@ -1214,6 +1214,27 @@
       "OriginalItemSpec": "wwwroot\\img\\blog4.jpg"
     },
     {
+      "Identity": "E:\\Asp_Project\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\dining-table.jpg",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Asp_Project\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+      "BasePath": "_content/6TL",
+      "RelativePath": "img/dining-table#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ejovayi1nz",
+      "Integrity": "BgBfK53nhBD85pdY6VB4sWXaFdinQHwTVuvXWA+Dig4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\dining-table.jpg"
+    },
+    {
       "Identity": "E:\\Asp_Project\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\dmsp.jpg",
       "SourceId": "6TL",
       "SourceType": "Discovered",
@@ -1548,6 +1569,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\snapedit_1732430907358.png"
+    },
+    {
+      "Identity": "E:\\Asp_Project\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\sofa.jpg",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Asp_Project\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+      "BasePath": "_content/6TL",
+      "RelativePath": "img/sofa#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "40o6q3ejvk",
+      "Integrity": "/FpAakH0wYqo6QrHzRy1pAax1yUt04D9fMpsGbQzKsY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\sofa.jpg"
     },
     {
       "Identity": "E:\\Asp_Project\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\sofa1.jpg",
@@ -4581,7 +4623,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 07 Jan 2025 13:47:19 GMT"
+          "Value": "Tue, 07 Jan 2025 15:57:26 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4618,7 +4660,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 07 Jan 2025 13:47:19 GMT"
+          "Value": "Tue, 07 Jan 2025 15:57:26 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5155,7 +5197,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 07 Jan 2025 13:47:19 GMT"
+          "Value": "Tue, 07 Jan 2025 15:58:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5200,7 +5242,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 07 Jan 2025 13:47:19 GMT"
+          "Value": "Tue, 07 Jan 2025 15:58:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5811,7 +5853,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 07 Jan 2025 06:18:17 GMT"
+          "Value": "Wed, 08 Jan 2025 07:37:32 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5848,7 +5890,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 07 Jan 2025 06:18:17 GMT"
+          "Value": "Wed, 08 Jan 2025 07:37:32 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7675,6 +7717,88 @@
       ]
     },
     {
+      "Route": "img/dining-table.ejovayi1nz.jpg",
+      "AssetFile": "E:\\Asp_Project\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\dining-table.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "39992"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BgBfK53nhBD85pdY6VB4sWXaFdinQHwTVuvXWA+Dig4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 08 Jan 2025 05:08:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ejovayi1nz"
+        },
+        {
+          "Name": "label",
+          "Value": "img/dining-table.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-BgBfK53nhBD85pdY6VB4sWXaFdinQHwTVuvXWA+Dig4="
+        }
+      ]
+    },
+    {
+      "Route": "img/dining-table.jpg",
+      "AssetFile": "E:\\Asp_Project\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\dining-table.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "39992"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BgBfK53nhBD85pdY6VB4sWXaFdinQHwTVuvXWA+Dig4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 08 Jan 2025 05:08:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-BgBfK53nhBD85pdY6VB4sWXaFdinQHwTVuvXWA+Dig4="
+        }
+      ]
+    },
+    {
       "Route": "img/dmsp.9ihwlyi5ol.jpg",
       "AssetFile": "E:\\Asp_Project\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\dmsp.jpg",
       "Selectors": [],
@@ -8983,6 +9107,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-qFPpB85JrR1m3K7hp5LPHyKEKtwm/4AEjCwrCzA0pr0="
+        }
+      ]
+    },
+    {
+      "Route": "img/sofa.40o6q3ejvk.jpg",
+      "AssetFile": "E:\\Asp_Project\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\sofa.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "86956"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/FpAakH0wYqo6QrHzRy1pAax1yUt04D9fMpsGbQzKsY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 08 Jan 2025 05:06:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "40o6q3ejvk"
+        },
+        {
+          "Name": "label",
+          "Value": "img/sofa.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-/FpAakH0wYqo6QrHzRy1pAax1yUt04D9fMpsGbQzKsY="
+        }
+      ]
+    },
+    {
+      "Route": "img/sofa.jpg",
+      "AssetFile": "E:\\Asp_Project\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\sofa.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "86956"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/FpAakH0wYqo6QrHzRy1pAax1yUt04D9fMpsGbQzKsY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 08 Jan 2025 05:06:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-/FpAakH0wYqo6QrHzRy1pAax1yUt04D9fMpsGbQzKsY="
         }
       ]
     },

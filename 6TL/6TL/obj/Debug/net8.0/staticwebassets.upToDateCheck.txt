@@ -53,6 +53,7 @@ wwwroot\img\blog1.jpg
 wwwroot\img\blog2.jpg
 wwwroot\img\blog3.jpg
 wwwroot\img\blog4.jpg
+wwwroot\img\dining-table.jpg
 wwwroot\img\dmsp.jpg
 wwwroot\img\ghebar.jpg
 wwwroot\img\ghechill.jpg
@@ -69,6 +70,7 @@ wwwroot\img\noithat6tc.jpg
 wwwroot\img\placeholder.jpg
 wwwroot\img\salebanner.jpg
 wwwroot\img\snapedit_1732430907358.png
+wwwroot\img\sofa.jpg
 wwwroot\img\sofa1.jpg
 wwwroot\img\succes.json
 wwwroot\img\successdelete.gif

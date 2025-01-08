@@ -18,6 +18,61 @@ namespace _6TL.Controllers
 			_context = context;
 		}
 
+		///Khó nhé
+		[HttpPost]
+		[Route("Home/UpdateCartQuantity/{productId}")]
+		public IActionResult UpdateCartQuantity([FromRoute] int productId, [FromBody] int quantity)
+		{
+			try
+			{
+				if (quantity <= 0)
+				{
+					return Json(new { success = false, message = "Số lượng phải lớn hơn 0." });
+				}
+
+				var cartItem = _context.Carts
+					.FirstOrDefault(c => c.ProductId == productId);
+
+				if (cartItem == null)
+				{
+					return Json(new { success = false, message = "Không tìm thấy sản phẩm trong giỏ hàng." });
+				}
+
+				// Kiểm tra số lượng tồn kho
+				var productStock = _context.ProductColors
+					.Where(pc => pc.ProductId == productId && pc.ColorId ==
+						_context.Colors.FirstOrDefault(c => c.ColorCode == cartItem.Color).ColorId)
+					.Select(pc => pc.Quantity)
+					.FirstOrDefault();
+
+				if (quantity > productStock)
+				{
+					return Json(new { success = false, message = $"Chỉ còn {productStock} sản phẩm trong kho." });
+				}
+
+				// Cập nhật số lượng và tổng tiền
+				cartItem.Quantity = quantity;
+				cartItem.TotalPrice = cartItem.Price * quantity;
+				cartItem.UpdatedAt = DateTime.Now;
+
+				_context.SaveChanges();
+
+				// Tính lại tổng cộng
+				var subtotal = _context.Carts.Sum(c => c.TotalPrice) ?? 0;
+
+				return Json(new
+				{
+					success = true,
+					subtotal = subtotal,
+					itemTotal = cartItem.TotalPrice,
+					message = "Cập nhật số lượng thành công!"
+				});
+			}
+			catch (Exception ex)
+			{
+				return Json(new { success = false, message = "Đã xảy ra lỗi khi cập nhật giỏ hàng." });
+			}
+		}
 		// Trang thanh toán với thông tin sản phẩm
 
 		// Action hiển thị trang thanh toán
