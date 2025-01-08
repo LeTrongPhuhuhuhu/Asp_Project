@@ -26,13 +26,14 @@ app.UseRouting();
 app.UseAuthorization();
 
 app.MapControllerRoute(
+	name: "home",
+	pattern: "{controller=Home}/{action=Index}/{id?}/{slug?}");
+
+app.MapControllerRoute(
 	name: "areas",
 	pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
 );
 
-app.MapControllerRoute(
-	name: "home",
-	pattern: "{controller=Home}/{action=Index}/{id?}/{slug?}");
 
 app.MapControllerRoute(
 	name: "product",
