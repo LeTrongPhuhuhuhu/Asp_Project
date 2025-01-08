@@ -114,7 +114,7 @@ body {
 @media screen and (max-width: 768px) {
 	.container_cttt {
 		width: 90%;
-		padding: 20px;
+		padding: 20px	;
 	}
 
 	.news-title_cttt h1 {
