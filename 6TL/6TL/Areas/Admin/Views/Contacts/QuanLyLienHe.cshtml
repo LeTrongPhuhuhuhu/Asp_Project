@@ -89,9 +89,7 @@
                         <td>@contact.Status</td>
                         <td>
                             <button class="view-btn_qllh" onclick="openPopup_qllh(@contact.ContactId)">Xem</button>
-                            <form method="post" asp-action="Delete" asp-route-id="@contact.ContactId" style="display:inline-block;">
-                                <button type="submit" class="delete-btn_qllh" onclick="return confirm('Bạn có chắc chắn muốn xóa liên hệ này?');">Xóa</button>
-                            </form>
+                            <button class="delete-btn_qllh" onclick="deleteContact_qllh(@contact.ContactId)">Xóa</button>
                         </td>
                     </tr>
                 }
@@ -135,8 +133,11 @@
                 </p>
             </div>
 
-            <div id="contact-status_qllh" class="status_qllh">
-                Trạng Thái: Chưa xử lý
+            <div class="status_qllh">
+                <p>
+                    <strong>Trạng Thái:</strong>
+                    <span id="contact-status_qllh"></span>
+                </p>
             </div>
 
             <div class="popup-buttons_qllh">
@@ -147,29 +148,39 @@
     </div>
     <script>
         function openPopup_qllh(contactId) {
-            // Gửi yêu cầu Ajax tới server để lấy chi tiết liên hệ
+            console.log("Contact ID:", contactId); // Debug để kiểm tra giá trị contactId
+            if (!contactId) {
+                alert("ID liên hệ không hợp lệ!");
+                return;
+            }
+
             $.ajax({
-                url: '/Contact/GetContactDetails', // Action trong Controller để lấy thông tin liên hệ
+                url: '/Admin/Contacts/GetContactDetails',
                 type: 'GET',
-                data: { id: contactId }, // Truyền id của liên hệ vào yêu cầu
+                data: { id: contactId },
                 success: function(response) {
-                    // Điền thông tin vào các phần tử trong popup
-                    document.getElementById('contact-id_qllh').innerText = response.ContactId;
-                    document.getElementById('contact-name_qllh').innerText = response.Name;
-                    document.getElementById('contact-title_qllh').innerText = response.Title;
-                    document.getElementById('contact-created_qllh').innerText = response.CreatedDate;
-                    document.getElementById('contact-updated_qllh').innerText = response.CreatedDate;
-                    document.getElementById('contact-content_qllh').innerText = response.Message;
-                    document.getElementById('contact-status_qllh').innerText = "Trạng Thái: " + response.Status;
+                    console.log("Response từ server:", response);
+
+
+                    // Gán dữ liệu vào các phần tử
+                    document.getElementById('contact-id_qllh').innerText = response.contactId || "Không có ID";
+                    document.getElementById('contact-name_qllh').innerText = response.name || "Không có Tên";
+                    document.getElementById('contact-title_qllh').innerText = response.title || "Không có Tiêu Đề";
+                    document.getElementById('contact-created_qllh').innerText = response.createdDate || "Không có Ngày Tạo";
+                    document.getElementById('contact-updated_qllh').innerText = response.createdDate || "Không có Ngày Cập nhật";
+                    document.getElementById('contact-content_qllh').innerText = response.content || "Không có Nội Dung";
+                    document.getElementById('contact-status_qllh').innerText = response.status || "Không có Trạng Thái";
 
                     // Hiển thị popup
                     document.getElementById('popup_qllh').style.display = 'flex';
                 },
-                error: function() {
-                    alert("Lỗi khi tải dữ liệu!");
+                error: function(xhr, status, error) {
+                    console.error("Lỗi từ AJAX:", error);
+                    alert("Không thể tải dữ liệu. Vui lòng thử lại sau!");
                 }
             });
         }
+
 
         // Hàm đóng popup khi nhấn vào nút "Hủy" hoặc biểu tượng "×"
         function closePopup_qllh() {
@@ -178,10 +189,59 @@
 
         // Hàm xác nhận hoàn thành xử lý liên hệ
         function confirmCompleteContact_qllh() {
-            // Cập nhật trạng thái hoặc thực hiện hành động khác nếu cần
-            document.getElementById('contact-status_qllh').innerText = "Trạng Thái: Đã xử lý";
-            alert("Liên hệ đã được hoàn thành!");
-            closePopup_qllh(); // Đóng popup sau khi hoàn thành
+            var contactId = document.getElementById('contact-id_qllh').innerText; // Lấy Contact ID
+            var status = "Đã xử lý";  // Cập nhật trạng thái thành "Đã xử lý"
+
+            // Gửi yêu cầu AJAX để cập nhật trạng thái lên server
+            $.ajax({
+                url: '/Admin/Contacts/UpdateStatus',  // URL của phương thức trong Controller
+                type: 'POST',
+                data: {
+                    contactId: contactId,  // ID của liên hệ
+                    status: status         // Trạng thái mới
+                },
+                success: function(response) {
+                    console.log(response);
+                    if (response.success) {
+                        // Cập nhật trạng thái trong popup và giao diện
+                        document.getElementById('contact-status_qllh').innerText = status;
+                        alert(response.message);
+                        location.reload();
+                    } else {
+                        alert("Cập nhật trạng thái thất bại. Vui lòng thử lại.");
+                    }
+                    closePopup_qllh(); // Đóng popup sau khi hoàn thành
+                },
+                error: function(xhr, status, error) {
+                    console.error("Lỗi từ AJAX:", error);
+                    alert("Không thể cập nhật trạng thái. Vui lòng thử lại sau!");
+                }
+            });
+        }
+        //xóa liên hệ
+        function deleteContact_qllh(contactId) {
+            if (confirm('Bạn có chắc chắn muốn xóa liên hệ này?')) {
+                // Gửi yêu cầu AJAX để xóa liên hệ
+                $.ajax({
+                    url: '/Admin/Contacts/Delete',  // URL của phương thức trong Controller
+                    type: 'POST',
+                    data: { id: contactId },  // ID của liên hệ cần xóa
+                    success: function(response) {
+                        if (response.success) {
+                            alert(response.message); // Thông báo xóa thành công
+
+                            // Làm mới trang để cập nhật lại danh sách
+                            location.reload(); // Refresh trang
+                        } else {
+                            alert(response.message); // Thông báo lỗi
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        console.error("Lỗi từ AJAX:", error);
+                        alert("Không thể xóa liên hệ. Vui lòng thử lại sau!");
+                    }
+                });
+            }
         }
     </script>
 </body>

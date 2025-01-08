@@ -24,6 +24,7 @@ namespace _6TL.Areas.Admin.Controllers
 		//lấy dữ liệu database để hiện lên 1 contact trên popup
 		public JsonResult GetContactDetails(int id)
 		{
+			Console.WriteLine($"Received ID: {id}");
 			var contact = _context.Contacts
 				.Where(c => c.ContactId == id)
 				.FirstOrDefault();
@@ -48,31 +49,35 @@ namespace _6TL.Areas.Admin.Controllers
 		}
 		// Cập nhật trạng thái liên hệ
 		[HttpPost]
-		public IActionResult UpdateStatus(int id, string status)
+		public IActionResult UpdateStatus(int contactId, string status)
 		{
-			var contact = _context.Contacts.FirstOrDefault(c => c.ContactId == id);
-			if (contact == null)
+			var contact = _context.Contacts.FirstOrDefault(c => c.ContactId == contactId);
+
+			if (contact != null)
 			{
-				return NotFound();
+				contact.Status = status; // Cập nhật trạng thái
+				_context.SaveChanges(); // Lưu thay đổi vào database
+
+				return Json(new { success = true, message = "Trạng thái đã được cập nhật!" });
 			}
-			contact.Status = status;
-			_context.SaveChanges();
-			return RedirectToAction("QuanLyLienHe");
+
+			return Json(new { success = false, message = "Không tìm thấy liên hệ với ID này!" });
 		}
 
 		// Xóa liên hệ
 		[HttpPost]
 		public IActionResult Delete(int id)
 		{
-			var contact = _context.Contacts.FirstOrDefault(c => c.ContactId == id);
+			var contact = _context.Contacts.Find(id);
 			if (contact == null)
 			{
-				return NotFound();
+				return Json(new { success = false, message = "Liên hệ không tồn tại." });
 			}
 
 			_context.Contacts.Remove(contact);
 			_context.SaveChanges();
-			return RedirectToAction("QuanLyLienHe");
+
+			return Json(new { success = true, message = "Xóa liên hệ thành công." });
 		}
 	}
 }
