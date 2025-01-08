@@ -76,17 +76,63 @@ namespace _6TL.Controllers
 		// Trang thanh toán với thông tin sản phẩm
 
 		// Action hiển thị trang thanh toán
-		public ActionResult TrangThanhToan(int productId, string productName, string productImage, decimal productPrice, string productColor, int quantity)
-		{
-			ViewBag.ProductId = productId;
-			ViewBag.ProductName = productName;
-			ViewBag.ProductImage = productImage;
-			ViewBag.ProductPrice = productPrice.ToString("N0") + " VNĐ";
-			ViewBag.ProductColor = productColor;
-			ViewBag.Quantity = "x" + quantity;
 
-			return View();
+
+		public async Task<IActionResult> TrangThanhToan(
+	int? productId = null,
+	string productName = null,
+	string productImage = null,
+	decimal? productPrice = null,
+	string productColor = null,
+	int quantity = 1,
+	bool isBuyNow = false) // Nhận isBuyNow
+		{
+			if (isBuyNow)
+			{
+				// Logic khi nhấn "Mua Ngay"
+				ViewBag.ProductId = productId ?? 0;
+				ViewBag.ProductName = productName ?? "Unknown Product";
+				ViewBag.ProductImage = productImage ?? "default.jpg";
+				ViewBag.ProductPrice = (productPrice.HasValue ? productPrice.Value.ToString("N0") : "0") + " VNĐ";
+				ViewBag.ProductColor = productColor ?? "No Color";
+				ViewBag.Quantity = "x" + quantity;
+
+				return View("TrangThanhToan"); // Trả về giao diện Mua Ngay
+			}
+
+			// Logic cho nút Thanh Toán từ giỏ hàng
+			var cartItems = await _context.Carts.Include(c => c.Product).ToListAsync();
+			if (!cartItems.Any())
+			{
+				return RedirectToAction("GioHang");
+			}
+
+			// Tính toán và trả về View cho Thanh Toán
+			decimal subtotal = cartItems.Sum(item => item.TotalPrice ?? (item.Price * item.Quantity));
+			decimal shippingFee = 50000; // Phí ship cố định
+			decimal total = subtotal + shippingFee;
+
+			ViewBag.CartItems = cartItems;
+			ViewBag.Subtotal = subtotal;
+			ViewBag.ShippingFee = shippingFee;
+			ViewBag.Total = total;
+
+			return View("TrangThanhToan");
 		}
+
+
+
+		//public ActionResult TrangThanhToan(int productId, string productName, string productImage, decimal productPrice, string productColor, int quantity)
+		//{
+		//	ViewBag.ProductId = productId;
+		//	ViewBag.ProductName = productName;
+		//	ViewBag.ProductImage = productImage;
+		//	ViewBag.ProductPrice = productPrice.ToString("N0") + " VNĐ";
+		//	ViewBag.ProductColor = productColor;
+		//	ViewBag.Quantity = "x" + quantity;
+
+		//	return View();
+		//}
 
 
 		public IActionResult GioHang()

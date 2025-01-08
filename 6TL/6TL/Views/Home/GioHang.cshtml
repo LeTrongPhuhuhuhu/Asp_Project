@@ -73,7 +73,9 @@
                     <div class="totals">
                         <p>Tạm tính: <span id="subtotal">@Model.Sum(x => x.TotalPrice)?.ToString("N0") ₫</span></p>
                         <p>Tổng cộng: <span id="total">@Model.Sum(x => x.TotalPrice)?.ToString("N0") ₫</span></p>
-                        <button class="checkout-btn">Thanh toán</button>
+                        <button class="checkout-btn" onclick="window.location.href='@Url.Action("TrangThanhToan", "Home")'">
+                            Thanh toán
+                        </button>
                         <form action="@Url.Action("ClearCart", "Home")" method="post" style="display: inline;">
                             <button type="submit" class="delete-all-btn">Xóa toàn bộ sản phẩm</button>
                         </form>

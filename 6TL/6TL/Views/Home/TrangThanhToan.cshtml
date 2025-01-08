@@ -1,4 +1,5 @@
-﻿<link href="~/css/pages/trangthanhtoan.css" rel="stylesheet" />
+﻿@model List<_6TL.Models.Cart>
+<link href="~/css/pages/trangthanhtoan.css" rel="stylesheet" />
 <div class="checkout-container_ttt">
     <!-- Phần thông tin giao hàng -->
     <div class="shipping-info_ttt">
@@ -55,6 +56,31 @@
     <div class="cart-summary_ttt">
         <h2>Tóm Tắt Giỏ Hàng</h2>
         <div class="cart-items_ttt">
+            @if (ViewBag.CartItems != null)
+            {
+                @foreach (var item in ViewBag.CartItems)
+                {
+                    <div class="cart-item_ttt">
+                        <div class="product-info-toplevel">
+                            <div class="product-image_ttt">
+                                <img src="~/img/@item.ProductImage" alt="@item.ProductName">
+                            </div>
+                            <div class="product-info_ttt">
+                                <p class="product-name_ttt">@item.ProductName</p>
+                                <div class="product-color_ttt">Màu sắc: <span class="color-display_ttt" style="background-color: @item.Color;"></span></div>
+                                <p class="product-quantity_ttt">@($"x{item.Quantity}")</p>
+
+                            </div>
+                        </div>
+                        <div class="product-price-toplevel">
+                            <strong class="product-price_ttt">@item.TotalPrice?.ToString("N0") ₫</strong>
+                        </div>
+                    </div>
+                }
+            
+            }
+            else
+            {
             <div class="cart-item_ttt">
                 <div class="product-info-toplevel">
                     <div class="product-image_ttt">
@@ -70,7 +96,7 @@
                     <strong class="product-price_ttt">@ViewBag.ProductPrice</strong>
                 </div>
             </div>
-            <!-- Bạn có thể thêm các sản phẩm khác theo cấu trúc tương tự -->
+            }
         </div>
 
         <div class="discount-code_ttt">
@@ -79,9 +105,9 @@
         </div>
 
         <div class="order-summary_ttt">
-            <p>Tổng phụ: <span>@ViewBag.ProductPrice VNĐ</span></p>
-            <p>Phí vận chuyển: <span>50,000₫</span></p>
-            <p class="total_ttt">Tổng cộng: <span>@(ViewBag.ProductPrice + 50000) VNĐ</span></p>
+            <p>Tổng phụ: <span>@ViewBag.Subtotal VNĐ</span></p>
+            <p>Phí vận chuyển: <span>@ViewBag.ShippingFee VNĐ</span></p>
+            <p class="total_ttt">Tổng cộng: <span>@ViewBag.Total VNĐ</span></p>
         </div>
     </div>
 </div>
