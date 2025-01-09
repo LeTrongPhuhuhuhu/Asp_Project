@@ -1,4 +1,5 @@
-﻿<head>
+﻿@model IEnumerable<_6TL.Models.Product>
+<head>
     <link href="~/css/admin/themsanpham.css" rel="stylesheet" />
 </head>
 <div class="container_tsp">
@@ -7,13 +8,11 @@
         <a href="/Admin/Home/ThemSanPham" class="add-product-link">Thêm sản phẩm</a>
     </h2>
 
-    <form class="add-product-form_tsp">
+    <form class="add-product-form_tsp" method="post" enctype="multipart/form-data">
         <!-- Thông tin cơ bản của sản phẩm -->
         <div class="form-row_tsp">
-            <input placeholder="Mã SP: " id="ma-sp_tsp" readonly>
-            <input type="text" placeholder="Tên sản phẩm" id="ten-sp_tsp" required>
-            <input type="text" placeholder="Giá bán" id="gia-ban_tsp" oninput="formatPrice(this)" required />
-            <input type="number" placeholder="Số lượng" id="so-luong_tsp" min="0" required>
+            <input type="text" name="ProductName" placeholder="Tên sản phẩm" id="ten-sp_tsp" required>
+            <input type="text" name="Price" placeholder="Giá bán" id="gia-ban_tsp" oninput="formatPrice(this)" required />
         </div>
 
         <!-- Thông tin bổ sung -->
@@ -32,38 +31,37 @@
                     <option value="@supplier.SupplierId">@supplier.SupplierName</option>
                 }
             </select>
-
-            <input type="text" placeholder="Giá vốn" id="gia-von_tsp" oninput="formatPrice(this)" required>
-            <input type="text" placeholder="Chất liệu" id="chat-lieu_tsp" required>
+            <input type="text" name="Material" placeholder="Chất liệu" id="chat-lieu_tsp" required>
         </div>
 
-        <!-- Thêm màu và thông tin khác -->
         <!-- Thêm màu và số lượng -->
         <div id="colors-container_tsp" class="form-row_tsp">
             <div class="color-row">
-                <select name="colors[0][color]" required>
+                <select name="productColors[0].ColorId" required>
                     <option value="" disabled selected>Chọn màu</option>
-                    <option value="red" style="background-color: red; color: white;">Đỏ</option>
-                    <option value="blue" style="background-color: blue; color: white;">Xanh Dương</option>
-                    <option value="green" style="background-color: green; color: white;">Xanh Lá</option>
+                    @foreach (var color in ViewBag.Colors)
+                    {
+                        <option value="@color.ColorId">@color.ColorName</option>
+                    }
                 </select>
-                <input type="number" name="colors[0][quantity]" min="1" placeholder="Số lượng" required />
-                <button type="button" class="remove-color-btn_tsp">Xóa</button>
+                <input type="number" name="productColors[0].Quantity" min="1" placeholder="Số lượng" required />
             </div>
         </div>
+
         <button type="button" id="add-color-btn_tsp" class="add-color-btn_tsp">Thêm màu</button>
+
 
 
         <!-- Mô tả sản phẩm -->
         <div class="form-row_tsp">
             <label for="description_tsp">Mô tả</label>
-            <textarea id="description_tsp" rows="5" placeholder="Nhập mô tả chi tiết..." required></textarea>
+            <textarea id="description_tsp" rows="5" name="ProductDescription" placeholder="Nhập mô tả chi tiết..." required></textarea>
         </div>
 
         <!-- Khu vực tải lên hình ảnh -->
         <div class="upload-area_tsp">
             <label class="upload-label_tsp">
-                <input type="file" id="file-upload_tsp" class="upload-input_tsp" accept="image/*" onchange="previewImage(event)" required>
+                <input type="file" name="ImageFile" id="file-upload_tsp" class="upload-input_tsp" accept="image/*" onchange="previewImage(event)" required>
                 <div class="upload-content_tsp">
                     <img src="upload-icon.png" alt="Upload Icon" class="upload-icon_tsp" />
                     <p>Kéo thả hoặc chọn hình ảnh</p>
@@ -106,22 +104,6 @@
     }
 
     // Thêm màu mới vào danh sách
-    function addColor() {
-        const selectElement = document.querySelector('select[name^="colors"]:last-of-type');
-        const inputElement = document.getElementById('them-mau_tsp');
-        const newColor = inputElement.value.trim();
-
-        if (newColor) {
-            const newOption = document.createElement('option');
-            newOption.value = newColor;
-            newOption.textContent = newColor;
-            newOption.style.backgroundColor = newColor;
-            selectElement.appendChild(newOption);
-            inputElement.value = '';
-        } else {
-            alert('Vui lòng nhập màu hợp lệ.');
-        }
-    }
     document.getElementById('add-color-btn_tsp').addEventListener('click', function () {
         const container = document.getElementById('colors-container_tsp');
         const rowCount = container.children.length;
@@ -129,17 +111,19 @@
         const newRow = document.createElement('div');
         newRow.classList.add('color-row');
         newRow.innerHTML = `
-                <select name="colors[${rowCount}][color]" required>
-                    <option value="" disabled selected>Chọn màu</option>
-                    <option value="red" style="background-color: red; color: white;">Đỏ</option>
-                    <option value="blue" style="background-color: blue; color: white;">Xanh Dương</option>
-                    <option value="green" style="background-color: green; color: white;">Xanh Lá</option>
-                </select>
-                <input type="number" name="colors[${rowCount}][quantity]" min="1" placeholder="Số lượng" required />
-                <button type="button" class="remove-color-btn_tsp">Xóa</button>
-            `;
+            <select name="productColors[${rowCount}].Color.ColorName" required>
+                <option value="" disabled selected>Chọn màu</option>
+    @foreach (var color in ViewBag.Colors)
+    {
+                        <option value="@color.ColorName">@color.ColorName</option>
+    }
+            </select>
+            <input type="number" name="productColors[${rowCount}].Quantity" min="1" placeholder="Số lượng" required />
+            <button type="button" class="remove-color-btn_tsp">Xóa</button>
+        `;
         container.appendChild(newRow);
     });
+
 
     document.getElementById('colors-container_tsp').addEventListener('click', function (e) {
         if (e.target.classList.contains('remove-color-btn_tsp')) {

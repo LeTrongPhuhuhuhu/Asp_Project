@@ -9,7 +9,7 @@ public partial class Product
 
     public string? ProductName { get; set; }
 
-    public string Slug { get; set; } = null!;
+    public string Slug { get; set; } = string.Empty; // Đặt giá trị mặc định
 
     public string? Image { get; set; }
 
