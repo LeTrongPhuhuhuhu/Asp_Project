@@ -89,7 +89,7 @@ namespace _6TL.Controllers
 		public IActionResult TinTuc(int? pageNumber)
 		{
             // Kích thước trang (số lượng bài viết trên mỗi trang)
-            int pageSize = 3;
+            int pageSize = 6;
 
             // Số trang hiện tại, nếu không có thì mặc định là 1
             int page = pageNumber ?? 1;
