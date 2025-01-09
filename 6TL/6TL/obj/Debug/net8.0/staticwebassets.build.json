@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "gVZ2CzLcgUc9TBNEuDDD0VE20rEBRYJKamDcgV+Trfs=",
+  "Hash": "P/Uu30N2B+ZzI3ZvZfkDJayuEoyg6Tb7k5qArJOJ2B0=",
   "Source": "6TL",
   "BasePath": "_content/6TL",
   "Mode": "Default",
@@ -566,6 +566,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\pages\\LienHe.css"
+    },
+    {
+      "Identity": "D:\\Đồ Án Web\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\Pagination.css",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Đồ Án Web\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+      "BasePath": "_content/6TL",
+      "RelativePath": "css/pages/Pagination.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\pages\\Pagination.css"
     },
     {
       "Identity": "D:\\Đồ Án Web\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\SanPham.css",

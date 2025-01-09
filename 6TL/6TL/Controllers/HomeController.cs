@@ -86,10 +86,26 @@ namespace _6TL.Controllers
         {
             return View();
         }
-		public IActionResult TinTuc()
+		public IActionResult TinTuc(int? pageNumber)
 		{
+            // Kích thước trang (số lượng bài viết trên mỗi trang)
+            int pageSize = 3;
+
+            // Số trang hiện tại, nếu không có thì mặc định là 1
+            int page = pageNumber ?? 1;
+
             // Lấy tất cả các bài viết tin tức từ database
             var allNews = _context.Blogs.ToList();
+
+            // Tính toán các bài viết cần hiển thị cho trang hiện tại
+            var pageNews = allNews.Skip((page - 1) * pageSize).Take(pageSize).ToList();
+
+            // Truyền dữ liệu vào ViewBag
+            ViewBag.News = pageNews;
+            ViewBag.CurrentPage = page;
+            ViewBag.TotalPages = (int)Math.Ceiling(allNews.Count / (double)pageSize);
+
+           
 
             // Truyền dữ liệu vào ViewBag
             ViewBag.News = allNews;

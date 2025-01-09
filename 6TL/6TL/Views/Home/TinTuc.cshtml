@@ -1,5 +1,6 @@
 ﻿<head>
     <link href="~/css/pages/tintuc.css" rel="stylesheet" />
+    <link href="~/css/pages/Pagination.css" rel="stylesheet" />
 </head>
 <body>
     <!-- Banner Section -->
@@ -37,6 +38,21 @@
                 </div>
             }
         </div>
+
+        <!-- Phân Trang  -->
+
+        <div class="pagination">
+            <!-- Trang trước (Disabled nếu đang ở trang đầu) -->
+            <a href="@Url.Action("TinTuc", new { pageNumber = ViewBag.CurrentPage - 1 })" class="prev @(ViewBag.CurrentPage == 1 ? "disabled" : "")">« Previous</a>
+
+            <!-- Các số trang -->
+            @for (int i = 1; i <= ViewBag.TotalPages; i++)
+            {
+                <a href="@Url.Action("TinTuc", new { pageNumber = i })" class="page-number @(i == ViewBag.CurrentPage ? "active" : "")">@i</a>
+            }
+
+            <!-- Trang sau (Disabled nếu đang ở trang cuối) -->
+            <a href="@Url.Action("TinTuc", new { pageNumber = ViewBag.CurrentPage + 1 })" class="next @(ViewBag.CurrentPage == ViewBag.TotalPages ? "disabled" : "")">Next »</a>
+        </div>
     </section>
-    @Html.Partial("~/Views/Shared/_Pagination.cshtml")
 </body>

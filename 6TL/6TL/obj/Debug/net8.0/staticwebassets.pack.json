@@ -113,6 +113,10 @@
       "PackagePath": "staticwebassets\\css\\pages\\LienHe.css"
     },
     {
+      "Id": "D:\\Đồ Án Web\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\Pagination.css",
+      "PackagePath": "staticwebassets\\css\\pages\\Pagination.css"
+    },
+    {
       "Id": "D:\\Đồ Án Web\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\SanPham.css",
       "PackagePath": "staticwebassets\\css\\pages\\SanPham.css"
     },
