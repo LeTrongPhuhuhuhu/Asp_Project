@@ -148,12 +148,18 @@ namespace _6TL.Controllers
 		{
 			return View();
 		}
-		public IActionResult ChiTietTinTuc()
-		{
-			return View();
-		}
+        public IActionResult ChiTietTinTuc(int id)
+        {
+            var blog = _context.Blogs.FirstOrDefault(b => b.BlogId == id);
+            if (blog == null)
+            {
+                return NotFound();
+            }
 
-		[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+            return View(blog);
+        }
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
 		public IActionResult Error()
 		{
 			return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });

@@ -1,4 +1,4 @@
-﻿/* Reset some basic styling */
+﻿Reset some basic styling
 * {
 	margin: 0;
 	padding: 0;
@@ -6,7 +6,7 @@
 	font-family: 'Montserrat', sans-serif;
 }
 
-/* Body Styles */
+Body Styles
 body {
 	background-color: #f9f9f9;
 	color: #333;
@@ -15,7 +15,7 @@ body {
 	padding: 40px 0;
 }
 
-/* Container Styles */
+Container Styles
 .container_cttt {
 	width: 80%;
 	max-width: 1200px;
@@ -23,10 +23,9 @@ body {
 	padding: 20px;
 	background-color: #fff;
 	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-
 }
 
-/* News Header */
+News Header
 .news-header_cttt {
 	display: flex;
 	justify-content: space-between;
@@ -62,7 +61,7 @@ body {
 	word-wrap: break-word;
 }
 
-/* News Content */
+News Content
 .news-content_cttt {
 	font-size: 18px;
 	color: #555;
@@ -70,12 +69,12 @@ body {
 	margin-bottom: 40px;
 }
 
-	.news-content_cttt p {
-		margin-bottom: 20px;
-		text-align: justify;
-	}
+.news-content_cttt p {
+	margin-bottom: 20px;
+	text-align: justify;
+}
 
-/* Like and Share Buttons */
+Like and Share Buttons
 .news-social_cttt {
 	display: flex;
 	gap: 20px;
@@ -110,33 +109,48 @@ body {
 		transform: scale(0.98);
 	}
 
-/* Responsive Design */
+Responsive Design
 @media screen and (max-width: 768px) {
-	.container_cttt {
-		width: 90%;
-		padding: 20px;
-	}
+	.container_cttt
 
-	.news-title_cttt h1 {
-		font-size: 26px;
-		text-align: center;
-	}
+{
+	width: 90%;
+	padding: 20px;
+}
 
-	.news-date_cttt {
-		font-size: 16px;
-	}
+.news-title_cttt h1 {
+	font-size: 26px;
+	text-align: center;
+}
 
-	.news-content_cttt {
-		font-size: 16px;
-	}
+.news-date_cttt {
+	font-size: 16px;
+}
 
-	.news-social_cttt {
-		flex-direction: column;
-		align-items: flex-start;
-	}
+.news-content_cttt {
+	font-size: 16px;
+}
 
-	.like-btn_cttt, .share-btn_cttt {
-		width: 100%;
-		margin-bottom: 10px;
-	}
+.news-social_cttt {
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.like-btn_cttt, .share-btn_cttt {
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+}
+
+.news-image_cttt {
+	text-align: center;
+	margin: 20px 0;
+}
+
+.detail-image_cttt {
+	max-width: 100%;
+	height: auto;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
