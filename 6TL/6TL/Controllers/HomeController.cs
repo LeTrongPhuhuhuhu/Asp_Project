@@ -105,8 +105,6 @@ namespace _6TL.Controllers
             ViewBag.CurrentPage = page;
             ViewBag.TotalPages = (int)Math.Ceiling(allNews.Count / (double)pageSize);
 
-           
-
             // Truyền dữ liệu vào ViewBag
             ViewBag.News = allNews;
 
