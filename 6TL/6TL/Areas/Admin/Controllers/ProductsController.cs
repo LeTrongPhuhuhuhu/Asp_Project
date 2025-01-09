@@ -2,6 +2,12 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using static System.Net.Mime.MediaTypeNames;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Diagnostics.Metrics;
+using System.Runtime.ConstrainedExecution;
+using System;
 
 namespace _6TL.Areas.Admin.Controllers
 {
@@ -23,10 +29,11 @@ namespace _6TL.Areas.Admin.Controllers
             ViewBag.Categories = _context.Categories.ToList();
             // Truy vấn dữ liệu và trả về danh sách sản phẩm
             var products = _context.Products
-                .Include(p => p.Category)
-                .Include(p => p.ProductColors)
-                    .ThenInclude(pc => pc.Color)
-                .ToList();
+            .Include(p => p.Category)
+            .Include(p => p.ProductColors)
+            .ThenInclude(pc => pc.Color)
+            .ToList();
+
 
             return View(products);
         }
@@ -39,24 +46,18 @@ namespace _6TL.Areas.Admin.Controllers
         public IActionResult ThemSanPham()
         {
             // Lấy danh sách nhà cung cấp và danh mục từ cơ sở dữ liệu và gán cho ViewBag
+            ViewBag.Colors = _context.Colors.ToList();
             ViewBag.Suppliers = _context.Suppliers.ToList();
             ViewBag.Categories = _context.Categories.ToList();
             return View();
         }
 
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult ThemSanPham(Product product, IFormFile? imageFile, List<ProductColor> Colors)
         {
-            if (!ModelState.IsValid)
-            {
-                ViewBag.Suppliers = _context.Suppliers.Include(s => s.Products).ToList();
-
-                ViewBag.Categories = _context.Categories.Include(s => s.Products).ToList();
-                TempData["ErrorMessage"] = "Vui lòng kiểm tra lại thông tin sản phẩm.";
-                return View(product);
-            }
-
+           
             try
             {
                 // Tạo slug tự động từ tên sản phẩm
@@ -78,6 +79,8 @@ namespace _6TL.Areas.Admin.Controllers
                     {
                         imageFile.CopyTo(fileStream);
                     }
+
+                    product.Image = Path.Combine("images", "products", fileName); // Save image path to product
                 }
 
                 // Thêm sản phẩm
@@ -85,19 +88,64 @@ namespace _6TL.Areas.Admin.Controllers
                 _context.Products.Add(product);
                 _context.SaveChanges();
 
-                // Thêm màu sắc
+                // Thêm màu sắc và số lượng
                 if (Colors != null && Colors.Count > 0)
                 {
-                    foreach (var color in Colors)
+                    foreach (var productColor in Colors)
                     {
-                        color.ProductId = product.ProductId;
-                        _context.ProductColors.Add(color);
+                        // Tìm màu sắc trong bảng Colors
+                        var existingColor = _context.Colors.FirstOrDefault(c => c.ColorName == productColor.Color.ColorName);
+
+                        if (existingColor != null)
+                        {
+                            // Nếu màu sắc đã tồn tại, kiểm tra liên kết trong bảng ProductColor
+                            var existingProductColor = _context.ProductColors
+                                .FirstOrDefault(pc => pc.ProductId == product.ProductId && pc.ColorId == existingColor.ColorId);
+
+                            if (existingProductColor != null)
+                            {
+                                // Nếu liên kết đã tồn tại, cập nhật số lượng
+                                existingProductColor.Quantity += productColor.Quantity;
+                            }
+                            else
+                            {
+                                // Nếu liên kết chưa tồn tại, thêm mới với số lượng
+                                var newProductColor = new ProductColor
+                                {
+                                    ProductId = product.ProductId,
+                                    ColorId = existingColor.ColorId,
+                                    Quantity = productColor.Quantity
+                                };
+                                _context.ProductColors.Add(newProductColor);
+                            }
+                        }
+                        else
+                        {
+                            // Nếu màu sắc chưa tồn tại, tạo mới trong bảng Colors
+                            var newColor = new Color
+                            {
+                                ColorName = productColor.Color.ColorName
+                            };
+                            _context.Colors.Add(newColor);
+                            _context.SaveChanges(); // Lưu để lấy ColorId
+
+                            // Sau khi tạo mới, thêm liên kết vào bảng ProductColor với số lượng
+                            var newProductColor = new ProductColor
+                            {
+                                ProductId = product.ProductId,
+                                ColorId = newColor.ColorId,
+                                Quantity = productColor.Quantity
+                            };
+                            _context.ProductColors.Add(newProductColor);
+                        }
                     }
+
+                    // Lưu tất cả thay đổi vào cơ sở dữ liệu
                     _context.SaveChanges();
                 }
 
                 TempData["SuccessMessage"] = "Thêm sản phẩm thành công!";
-                return RedirectToAction("QuanLySanPham");
+                return RedirectToAction("Index");
             }
             catch (Exception ex)
             {
@@ -107,10 +155,10 @@ namespace _6TL.Areas.Admin.Controllers
                     Console.WriteLine($"Inner exception: {ex.InnerException.Message}");
                 }
 
+                TempData["ErrorMessage"] = "Có lỗi xảy ra, vui lòng thử lại.";
                 return View(product);
             }
         }
-
 
 
 
