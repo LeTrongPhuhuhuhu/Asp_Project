@@ -273,21 +273,21 @@
                         // Duyệt qua danh sách kết quả và thêm vào bảng
                         response.data.forEach(contact => {
                             var row = `
-                                <tr>
-                                    <td>${contact.contactId}</td>
-                                    <td>${contact.name}</td>
-                                    <td>${contact.phone}</td>
-                                    <td>${contact.email}</td>
-                                    <td>${contact.title}</td>
-                                    <td>${contact.createdDate}</td>
-                                    <td>${contact.createdDate || ''}</td>
-                                    <td>${contact.status}</td>
-                                    <td>
-                                        <button class="view-btn_qllh" onclick="openPopup_qllh(${contact.ContactId})">Xem</button>
-                                        <button class="delete-btn_qllh" onclick="deleteContact_qllh(${contact.ContactId})">Xóa</button>
-                                    </td>
-                                </tr>
-                            `;
+                                        <tr>
+                                            <td>${contact.contactId}</td>
+                                            <td>${contact.name}</td>
+                                            <td>${contact.phone}</td>
+                                            <td>${contact.email}</td>
+                                            <td>${contact.title}</td>
+                                            <td>${contact.createdDate}</td>
+                                            <td>${contact.createdDate || ''}</td>
+                                            <td>${contact.status}</td>
+                                            <td>
+                                                <button class="view-btn_qllh" onclick="openPopup_qllh(${contact.contactId})">Xem</button>
+                                                <button class="delete-btn_qllh" onclick="deleteContact_qllh(${contact.contactId})">Xóa</button>
+                                            </td>
+                                        </tr>
+                                    `;
                             tableBody.insertAdjacentHTML('beforeend', row);
                         });
                     } else {
@@ -320,21 +320,21 @@
                         // Duyệt qua danh sách kết quả và thêm vào bảng
                         response.data.forEach(contact => {
                             var row = `
-                                <tr>
-                                    <td>${contact.contactId}</td>
-                                    <td>${contact.name}</td>
-                                    <td>${contact.phone}</td>
-                                    <td>${contact.email}</td>
-                                    <td>${contact.title}</td>
-                                    <td>${contact.createdDate}</td>
-                                    <td>${contact.createdDate || ''}</td>
-                                    <td>${contact.status}</td>
-                                    <td>
-                                        <button class="view-btn_qllh" onclick="openPopup_qllh(${contact.ContactId})">Xem</button>
-                                        <button class="delete-btn_qllh" onclick="deleteContact_qllh(${contact.ContactId})">Xóa</button>
-                                    </td>
-                                </tr>
-                            `;
+                                        <tr>
+                                            <td>${contact.contactId}</td>
+                                            <td>${contact.name}</td>
+                                            <td>${contact.phone}</td>
+                                            <td>${contact.email}</td>
+                                            <td>${contact.title}</td>
+                                            <td>${contact.createdDate}</td>
+                                            <td>${contact.createdDate || ''}</td>
+                                            <td>${contact.status}</td>
+                                            <td>
+                                                 <button class="view-btn_qllh" onclick="openPopup_qllh(${contact.contactId})">Xem</button>
+                                                 <button class="delete-btn_qllh" onclick="deleteContact_qllh(${contact.contactId})">Xóa</button>
+                                            </td>
+                                        </tr>
+                                    `;
                             tableBody.insertAdjacentHTML('beforeend', row);
                         });
                     } else {
