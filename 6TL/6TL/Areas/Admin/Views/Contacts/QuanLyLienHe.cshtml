@@ -70,6 +70,8 @@
                 <tr>
                     <th>ID Liên Hệ</th>
                     <th>Tên</th>
+                    <th>Số Điện Thoại</th>
+                    <th>Email</th>
                     <th>Tiêu Đề</th>
                     <th>Ngày Tạo</th>
                     <th>Ngày Cập Nhật</th>
@@ -83,6 +85,8 @@
                     <tr>
                         <td>@contact.ContactId</td>
                         <td>@contact.Name</td>
+                        <td>@contact.Phone</td>
+                        <td>@contact.Email</td>
                         <td>@contact.Title</td>
                         <td>@contact.CreatedDate.ToString("yyyy-MM-dd")</td>
                         <td>@contact.CreatedDate.ToString("yyyy-MM-dd")</td>
@@ -111,6 +115,14 @@
                 <div class="info-item_qllh">
                     <label>Tên Liên Hệ:</label>
                     <span id="contact-name_qllh"></span>
+                </div>
+                <div class="info-item_qllh">
+                    <label>Số Điện Thoại:</label>
+                    <span id="contact-phone_qllh"></span>
+                </div>
+                <div class="info-item_qllh">
+                    <label>Email:</label>
+                    <span id="contact-email_qllh"></span>
                 </div>
                 <div class="info-item_qllh">
                     <label>Tiêu Đề:</label>
@@ -165,6 +177,8 @@
                     // Gán dữ liệu vào các phần tử
                     document.getElementById('contact-id_qllh').innerText = response.contactId || "Không có ID";
                     document.getElementById('contact-name_qllh').innerText = response.name || "Không có Tên";
+                    document.getElementById('contact-phone_qllh').innerText = response.phone || "Không có SDT";
+                    document.getElementById('contact-email_qllh').innerText = response.email || "Không có Email";
                     document.getElementById('contact-title_qllh').innerText = response.title || "Không có Tiêu Đề";
                     document.getElementById('contact-created_qllh').innerText = response.createdDate || "Không có Ngày Tạo";
                     document.getElementById('contact-updated_qllh').innerText = response.createdDate || "Không có Ngày Cập nhật";
@@ -242,6 +256,96 @@
                     }
                 });
             }
+        }
+        //tìm kiếm
+        document.querySelector('.search-btn_qllh').addEventListener('click', function() {
+            var keyword = document.getElementById('search-input_qllh').value;
+
+            $.ajax({
+                url: '/Admin/Contacts/Search', // URL của phương thức tìm kiếm
+                type: 'GET',
+                data: { keyword: keyword },
+                success: function(response) {
+                    if (response.success) {
+                        var tableBody = document.querySelector('.contact-table_qllh tbody');
+                        tableBody.innerHTML = ''; // Xóa nội dung bảng hiện tại
+
+                        // Duyệt qua danh sách kết quả và thêm vào bảng
+                        response.data.forEach(contact => {
+                            var row = `
+                                <tr>
+                                    <td>${contact.contactId}</td>
+                                    <td>${contact.name}</td>
+                                    <td>${contact.phone}</td>
+                                    <td>${contact.email}</td>
+                                    <td>${contact.title}</td>
+                                    <td>${contact.createdDate}</td>
+                                    <td>${contact.createdDate || ''}</td>
+                                    <td>${contact.status}</td>
+                                    <td>
+                                        <button class="view-btn_qllh" onclick="openPopup_qllh(${contact.ContactId})">Xem</button>
+                                        <button class="delete-btn_qllh" onclick="deleteContact_qllh(${contact.ContactId})">Xóa</button>
+                                    </td>
+                                </tr>
+                            `;
+                            tableBody.insertAdjacentHTML('beforeend', row);
+                        });
+                    } else {
+                        alert('Không tìm thấy liên hệ nào phù hợp.');
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.error('Lỗi từ AJAX:', error);
+                    alert('Không thể tìm kiếm. Vui lòng thử lại sau!');
+                }
+            });
+        });
+        //thanh lọc
+        document.getElementById('filter-status_qllh').addEventListener('change', applyFilters);
+        document.getElementById('filter-date_qllh').addEventListener('change', applyFilters);
+
+        function applyFilters() {
+            var status = document.getElementById('filter-status_qllh').value;
+            var date = document.getElementById('filter-date_qllh').value;
+
+            $.ajax({
+                url: '/Admin/Contacts/Filter',
+                type: 'GET',
+                data: { status: status, date: date },
+                success: function(response) {
+                    if (response.success) {
+                        var tableBody = document.querySelector('.contact-table_qllh tbody');
+                        tableBody.innerHTML = ''; // Xóa nội dung bảng hiện tại
+
+                        // Duyệt qua danh sách kết quả và thêm vào bảng
+                        response.data.forEach(contact => {
+                            var row = `
+                                <tr>
+                                    <td>${contact.contactId}</td>
+                                    <td>${contact.name}</td>
+                                    <td>${contact.phone}</td>
+                                    <td>${contact.email}</td>
+                                    <td>${contact.title}</td>
+                                    <td>${contact.createdDate}</td>
+                                    <td>${contact.createdDate || ''}</td>
+                                    <td>${contact.status}</td>
+                                    <td>
+                                        <button class="view-btn_qllh" onclick="openPopup_qllh(${contact.ContactId})">Xem</button>
+                                        <button class="delete-btn_qllh" onclick="deleteContact_qllh(${contact.ContactId})">Xóa</button>
+                                    </td>
+                                </tr>
+                            `;
+                            tableBody.insertAdjacentHTML('beforeend', row);
+                        });
+                    } else {
+                        alert('Không tìm thấy liên hệ nào phù hợp.');
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.error('Lỗi từ AJAX:', error);
+                    alert('Không thể áp dụng bộ lọc. Vui lòng thử lại sau!');
+                }
+            });
         }
     </script>
 </body>
