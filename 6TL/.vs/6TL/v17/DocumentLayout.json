@@ -1,56 +1,56 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\ASP\\ASP_DoAn_Backup\\Asp_Project\\6TL\\",
+  "WorkspaceRootPath": "D:\\ASP\\ASP_DoAn\\Asp_Project\\6TL\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\asp\\asp_doan_backup\\asp_project\\6tl\\6tl\\models\\contact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\models\\contact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\asp\\asp_doan_backup\\asp_project\\6tl\\6tl\\areas\\admin\\controllers\\contactscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\areas\\admin\\controllers\\contactscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\asp\\asp_doan_backup\\asp_project\\6tl\\6tl\\areas\\admin\\views\\contacts\\quanlylienhe.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\asp\\asp_doan\\asp_project\\6tl\\6tl\\areas\\admin\\views\\contacts\\quanlylienhe.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\areas\\admin\\views\\contacts\\quanlylienhe.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\asp\\asp_doan_backup\\asp_project\\6tl\\6tl\\areas\\admin\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\asp\\asp_doan\\asp_project\\6tl\\6tl\\areas\\admin\\controllers\\contactscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\areas\\admin\\controllers\\contactscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\asp\\asp_doan\\asp_project\\6tl\\6tl\\models\\contact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\models\\contact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\asp\\asp_doan\\asp_project\\6tl\\6tl\\areas\\admin\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\areas\\admin\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\dotnet\\sdk\\8.0.403\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\asp\\asp_doan_backup\\asp_project\\6tl\\6tl\\6tl.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\asp\\asp_doan\\asp_project\\6tl\\6tl\\6tl.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\6tl.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\asp\\asp_doan_backup\\asp_project\\6tl\\6tl\\wwwroot\\css\\pages\\dangky.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\asp\\asp_doan\\asp_project\\6tl\\6tl\\wwwroot\\css\\pages\\dangky.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\wwwroot\\css\\pages\\dangky.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\asp\\asp_doan_backup\\asp_project\\6tl\\6tl\\wwwroot\\css\\pages\\gioithieu.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\asp\\asp_doan\\asp_project\\6tl\\6tl\\wwwroot\\css\\pages\\gioithieu.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\wwwroot\\css\\pages\\gioithieu.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\asp\\asp_doan_backup\\asp_project\\6tl\\6tl\\wwwroot\\css\\pages\\sanphamyeuthich.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\asp\\asp_doan\\asp_project\\6tl\\6tl\\wwwroot\\css\\pages\\sanphamyeuthich.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\wwwroot\\css\\pages\\sanphamyeuthich.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\asp\\asp_doan_backup\\asp_project\\6tl\\6tl\\wwwroot\\css\\pages\\trangthanhtoan.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\asp\\asp_doan\\asp_project\\6tl\\6tl\\wwwroot\\css\\pages\\trangthanhtoan.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\wwwroot\\css\\pages\\trangthanhtoan.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\asp\\asp_doan_backup\\asp_project\\6tl\\6tl\\views\\home\\trangthanhtoan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\asp\\asp_doan\\asp_project\\6tl\\6tl\\views\\home\\trangthanhtoan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\views\\home\\trangthanhtoan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\asp\\asp_doan_backup\\asp_project\\6tl\\6tl\\areas\\admin\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\asp\\asp_doan\\asp_project\\6tl\\6tl\\areas\\admin\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\areas\\admin\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\asp\\asp_doan_backup\\asp_project\\6tl\\6tl\\wwwroot\\css\\pages\\sanpham.css||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\asp\\asp_doan\\asp_project\\6tl\\6tl\\wwwroot\\css\\pages\\sanpham.css||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\wwwroot\\css\\pages\\sanpham.css||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -70,17 +70,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "QuanLyLienHe.cshtml",
-              "DocumentMoniker": "D:\\ASP\\ASP_DoAn_Backup\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Views\\Contacts\\QuanLyLienHe.cshtml",
+              "DocumentMoniker": "D:\\ASP\\ASP_DoAn\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Views\\Contacts\\QuanLyLienHe.cshtml",
               "RelativeDocumentMoniker": "6TL\\Areas\\Admin\\Views\\Contacts\\QuanLyLienHe.cshtml",
-              "ToolTip": "D:\\ASP\\ASP_DoAn_Backup\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Views\\Contacts\\QuanLyLienHe.cshtml",
+              "ToolTip": "D:\\ASP\\ASP_DoAn\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Views\\Contacts\\QuanLyLienHe.cshtml",
               "RelativeToolTip": "6TL\\Areas\\Admin\\Views\\Contacts\\QuanLyLienHe.cshtml",
-              "ViewState": "AgIAAN4AAAAAAAAAAAAAAPcAAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAACMBAAAAAAAAAAAAAPcAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-01-08T06:51:34.683Z",
               "EditorCaption": ""
@@ -89,35 +89,34 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "ContactsController.cs",
-              "DocumentMoniker": "D:\\ASP\\ASP_DoAn_Backup\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Controllers\\ContactsController.cs",
+              "DocumentMoniker": "D:\\ASP\\ASP_DoAn\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Controllers\\ContactsController.cs",
               "RelativeDocumentMoniker": "6TL\\Areas\\Admin\\Controllers\\ContactsController.cs",
-              "ToolTip": "D:\\ASP\\ASP_DoAn_Backup\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Controllers\\ContactsController.cs",
+              "ToolTip": "D:\\ASP\\ASP_DoAn\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Controllers\\ContactsController.cs",
               "RelativeToolTip": "6TL\\Areas\\Admin\\Controllers\\ContactsController.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAYwFIAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAADkAAAAAAAAAAAAYwFIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-08T06:51:16.796Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Contact.cs",
-              "DocumentMoniker": "D:\\ASP\\ASP_DoAn_Backup\\Asp_Project\\6TL\\6TL\\Models\\Contact.cs",
+              "DocumentMoniker": "D:\\ASP\\ASP_DoAn\\Asp_Project\\6TL\\6TL\\Models\\Contact.cs",
               "RelativeDocumentMoniker": "6TL\\Models\\Contact.cs",
-              "ToolTip": "D:\\ASP\\ASP_DoAn_Backup\\Asp_Project\\6TL\\6TL\\Models\\Contact.cs",
+              "ToolTip": "D:\\ASP\\ASP_DoAn\\Asp_Project\\6TL\\6TL\\Models\\Contact.cs",
               "RelativeToolTip": "6TL\\Models\\Contact.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-07T11:59:38.431Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-07T11:59:38.431Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "_ViewImports.cshtml",
-              "DocumentMoniker": "D:\\ASP\\ASP_DoAn_Backup\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Views\\_ViewImports.cshtml",
+              "DocumentMoniker": "D:\\ASP\\ASP_DoAn\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Views\\_ViewImports.cshtml",
               "RelativeDocumentMoniker": "6TL\\Areas\\Admin\\Views\\_ViewImports.cshtml",
-              "ToolTip": "D:\\ASP\\ASP_DoAn_Backup\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Views\\_ViewImports.cshtml",
+              "ToolTip": "D:\\ASP\\ASP_DoAn\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Views\\_ViewImports.cshtml",
               "RelativeToolTip": "6TL\\Areas\\Admin\\Views\\_ViewImports.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -161,9 +160,9 @@
               "$type": "Document",
               "DocumentIndex": 6,
               "Title": "DangKy.css",
-              "DocumentMoniker": "D:\\ASP\\ASP_DoAn_Backup\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\DangKy.css",
+              "DocumentMoniker": "D:\\ASP\\ASP_DoAn\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\DangKy.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\pages\\DangKy.css",
-              "ToolTip": "D:\\ASP\\ASP_DoAn_Backup\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\DangKy.css",
+              "ToolTip": "D:\\ASP\\ASP_DoAn\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\DangKy.css",
               "RelativeToolTip": "6TL\\wwwroot\\css\\pages\\DangKy.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAJsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
@@ -173,9 +172,9 @@
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "6TL.csproj",
-              "DocumentMoniker": "D:\\ASP\\ASP_DoAn_Backup\\Asp_Project\\6TL\\6TL\\6TL.csproj",
+              "DocumentMoniker": "D:\\ASP\\ASP_DoAn\\Asp_Project\\6TL\\6TL\\6TL.csproj",
               "RelativeDocumentMoniker": "6TL\\6TL.csproj",
-              "ToolTip": "D:\\ASP\\ASP_DoAn_Backup\\Asp_Project\\6TL\\6TL\\6TL.csproj",
+              "ToolTip": "D:\\ASP\\ASP_DoAn\\Asp_Project\\6TL\\6TL\\6TL.csproj",
               "RelativeToolTip": "6TL\\6TL.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
@@ -197,9 +196,9 @@
               "$type": "Document",
               "DocumentIndex": 7,
               "Title": "GioiThieu.css",
-              "DocumentMoniker": "D:\\ASP\\ASP_DoAn_Backup\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\GioiThieu.css",
+              "DocumentMoniker": "D:\\ASP\\ASP_DoAn\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\GioiThieu.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\pages\\GioiThieu.css",
-              "ToolTip": "D:\\ASP\\ASP_DoAn_Backup\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\GioiThieu.css",
+              "ToolTip": "D:\\ASP\\ASP_DoAn\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\GioiThieu.css",
               "RelativeToolTip": "6TL\\wwwroot\\css\\pages\\GioiThieu.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAF0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
@@ -209,9 +208,9 @@
               "$type": "Document",
               "DocumentIndex": 8,
               "Title": "SanPhamYeuThich.css",
-              "DocumentMoniker": "D:\\ASP\\ASP_DoAn_Backup\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\SanPhamYeuThich.css",
+              "DocumentMoniker": "D:\\ASP\\ASP_DoAn\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\SanPhamYeuThich.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\pages\\SanPhamYeuThich.css",
-              "ToolTip": "D:\\ASP\\ASP_DoAn_Backup\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\SanPhamYeuThich.css",
+              "ToolTip": "D:\\ASP\\ASP_DoAn\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\SanPhamYeuThich.css",
               "RelativeToolTip": "6TL\\wwwroot\\css\\pages\\SanPhamYeuThich.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
@@ -221,9 +220,9 @@
               "$type": "Document",
               "DocumentIndex": 9,
               "Title": "TrangThanhToan.css",
-              "DocumentMoniker": "D:\\ASP\\ASP_DoAn_Backup\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\TrangThanhToan.css",
+              "DocumentMoniker": "D:\\ASP\\ASP_DoAn\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\TrangThanhToan.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\pages\\TrangThanhToan.css",
-              "ToolTip": "D:\\ASP\\ASP_DoAn_Backup\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\TrangThanhToan.css",
+              "ToolTip": "D:\\ASP\\ASP_DoAn\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\TrangThanhToan.css",
               "RelativeToolTip": "6TL\\wwwroot\\css\\pages\\TrangThanhToan.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
@@ -233,9 +232,9 @@
               "$type": "Document",
               "DocumentIndex": 10,
               "Title": "TrangThanhToan.cshtml",
-              "DocumentMoniker": "D:\\ASP\\ASP_DoAn_Backup\\Asp_Project\\6TL\\6TL\\Views\\Home\\TrangThanhToan.cshtml",
+              "DocumentMoniker": "D:\\ASP\\ASP_DoAn\\Asp_Project\\6TL\\6TL\\Views\\Home\\TrangThanhToan.cshtml",
               "RelativeDocumentMoniker": "6TL\\Views\\Home\\TrangThanhToan.cshtml",
-              "ToolTip": "D:\\ASP\\ASP_DoAn_Backup\\Asp_Project\\6TL\\6TL\\Views\\Home\\TrangThanhToan.cshtml",
+              "ToolTip": "D:\\ASP\\ASP_DoAn\\Asp_Project\\6TL\\6TL\\Views\\Home\\TrangThanhToan.cshtml",
               "RelativeToolTip": "6TL\\Views\\Home\\TrangThanhToan.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -245,9 +244,9 @@
               "$type": "Document",
               "DocumentIndex": 11,
               "Title": "_ViewStart.cshtml",
-              "DocumentMoniker": "D:\\ASP\\ASP_DoAn_Backup\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Views\\_ViewStart.cshtml",
+              "DocumentMoniker": "D:\\ASP\\ASP_DoAn\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Views\\_ViewStart.cshtml",
               "RelativeDocumentMoniker": "6TL\\Areas\\Admin\\Views\\_ViewStart.cshtml",
-              "ToolTip": "D:\\ASP\\ASP_DoAn_Backup\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Views\\_ViewStart.cshtml",
+              "ToolTip": "D:\\ASP\\ASP_DoAn\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Views\\_ViewStart.cshtml",
               "RelativeToolTip": "6TL\\Areas\\Admin\\Views\\_ViewStart.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -257,9 +256,9 @@
               "$type": "Document",
               "DocumentIndex": 12,
               "Title": "SanPham.css",
-              "DocumentMoniker": "D:\\ASP\\ASP_DoAn_Backup\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\SanPham.css",
+              "DocumentMoniker": "D:\\ASP\\ASP_DoAn\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\SanPham.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\pages\\SanPham.css",
-              "ToolTip": "D:\\ASP\\ASP_DoAn_Backup\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\SanPham.css",
+              "ToolTip": "D:\\ASP\\ASP_DoAn\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\SanPham.css",
               "RelativeToolTip": "6TL\\wwwroot\\css\\pages\\SanPham.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAGgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
