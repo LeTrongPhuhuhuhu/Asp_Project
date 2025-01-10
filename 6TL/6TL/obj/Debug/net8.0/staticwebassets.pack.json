@@ -149,6 +149,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\images\\products\\3ed82df2-90d2-4c31-809a-235e53f853a6_ghedabeo.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\3ed82df2-90d2-4c31-809a-235e53f853a6_ghedabeo.jpg"
+    },
+    {
       "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\images\\products\\4ab7c087-8b43-42c2-b833-e6a307e5552b_tailung.jpg",
       "PackagePath": "staticwebassets\\images\\products\\4ab7c087-8b43-42c2-b833-e6a307e5552b_tailung.jpg"
     },
@@ -175,6 +179,10 @@
     {
       "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\images\\products\\f303afb1-c781-45c1-82ed-d7fb8ce16ff3_tailung.jpg",
       "PackagePath": "staticwebassets\\images\\products\\f303afb1-c781-45c1-82ed-d7fb8ce16ff3_tailung.jpg"
+    },
+    {
+      "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\images\\products\\f5db060b-bcef-4e9d-b8bc-d1d404931f76_tubep.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\f5db060b-bcef-4e9d-b8bc-d1d404931f76_tubep.jpg"
     },
     {
       "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\1.jpg",
@@ -267,6 +275,10 @@
     {
       "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\ghechill.jpg",
       "PackagePath": "staticwebassets\\img\\ghechill.jpg"
+    },
+    {
+      "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\ghedabeo.jpg",
+      "PackagePath": "staticwebassets\\img\\ghedabeo.jpg"
     },
     {
       "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\gioithieu.jpg",
@@ -363,6 +375,10 @@
     {
       "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\tintuc4.jpg",
       "PackagePath": "staticwebassets\\img\\tintuc4.jpg"
+    },
+    {
+      "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\tubep.jpg",
+      "PackagePath": "staticwebassets\\img\\tubep.jpg"
     },
     {
       "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\tutv.jpg",
