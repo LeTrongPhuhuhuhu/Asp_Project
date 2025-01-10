@@ -37,9 +37,13 @@ public partial class Customer
 
     public DateTime? UpdatedAt { get; set; }
 
-    public virtual ICollection<Order> Orders { get; set; } = new List<Order>();
+    public bool IsEmailConfirmed { get; set; }
 
-    public virtual ICollection<Review> Reviews { get; set; } = new List<Review>();
+    public string? EmailConfirmationToken { get; set; }
+
+    public string? PasswordResetToken { get; set; }
+
+    public DateTime? PasswordResetExpires { get; set; }
 
     public virtual Role? Role { get; set; }
 

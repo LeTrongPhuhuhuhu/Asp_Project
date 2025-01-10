@@ -1,0 +1,248 @@
+﻿@model IEnumerable<_6TL.Models.Contact>
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Liên Hệ</title>
+    <link rel="stylesheet" href="~/css/admin/quanlylienhe.css">
+    <style>
+        /* CSS cho phần lọc và tìm kiếm */
+        .filter-dropdown_qllh {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+            .filter-dropdown_qllh select, .filter-dropdown_qllh input[type="date"] {
+                padding: 8px;
+                border-radius: 4px;
+                border: 1px solid #ccc;
+                font-size: 16px;
+            }
+
+        /* CSS cho popup chi tiết */
+        .popup_qllh {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            align-items: center;
+            justify-content: center;
+        }
+
+        .popup-content_qllh {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 600px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container_qllh">
+        <h1>Quản Lý Liên Hệ</h1>
+
+        <!-- Thanh tìm kiếm -->
+        <div class="search-bar_qllh">
+            <input type="text" placeholder="Tìm kiếm..." id="search-input_qllh" />
+            <button class="search-btn_qllh">Tìm</button>
+        </div>
+
+        <!-- Thanh lọc -->
+        <div class="filter-dropdown_qllh">
+            <select id="filter-status_qllh">
+                <option value="recent">Gần đây</option>
+                <option value="pending">Chưa xử lý</option>
+                <option value="completed">Đã xử lý</option>
+            </select>
+            <input type="date" id="filter-date_qllh" />
+        </div>
+
+        <!-- Bảng dữ liệu -->
+        <table class="contact-table_qllh">
+            <thead>
+                <tr>
+                    <th>ID Liên Hệ</th>
+                    <th>Tên</th>
+                    <th>Tiêu Đề</th>
+                    <th>Ngày Tạo</th>
+                    <th>Ngày Cập Nhật</th>
+                    <th>Trạng Thái</th>
+                    <th>Hành Động</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var contact in Model)
+                {
+                    <tr>
+                        <td>@contact.ContactId</td>
+                        <td>@contact.Name</td>
+                        <td>@contact.Title</td>
+                        <td>@contact.CreatedDate.ToString("yyyy-MM-dd")</td>
+                        <td>@contact.CreatedDate.ToString("yyyy-MM-dd")</td>
+                        <td>@contact.Status</td>
+                        <td>
+                            <button class="view-btn_qllh" onclick="openPopup_qllh(@contact.ContactId)">Xem</button>
+                            <button class="delete-btn_qllh" onclick="deleteContact_qllh(@contact.ContactId)">Xóa</button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Popup chi tiết liên hệ -->
+    <div class="popup_qllh" id="popup_qllh">
+        <div class="popup-content_qllh">
+            <span class="close-btn_qllh" onclick="closePopup_qllh()">&times;</span>
+            <h2>Chi Tiết Liên Hệ</h2>
+
+            <div class="contact-info_qllh">
+                <div class="info-item_qllh">
+                    <label>ID:</label>
+                    <span id="contact-id_qllh"></span>
+                </div>
+                <div class="info-item_qllh">
+                    <label>Tên Liên Hệ:</label>
+                    <span id="contact-name_qllh"></span>
+                </div>
+                <div class="info-item_qllh">
+                    <label>Tiêu Đề:</label>
+                    <span id="contact-title_qllh"></span>
+                </div>
+                <div class="info-item_qllh">
+                    <label>Ngày Tạo:</label>
+                    <span id="contact-created_qllh"></span>
+                </div>
+                <div class="info-item_qllh">
+                    <label>Ngày Cập Nhật:</label>
+                    <span id="contact-updated_qllh"></span>
+                </div>
+            </div>
+
+            <div class="details_qllh">
+                <p>
+                    <strong>Nội Dung:</strong>
+                    <span id="contact-content_qllh"></span>
+                </p>
+            </div>
+
+            <div class="status_qllh">
+                <p>
+                    <strong>Trạng Thái:</strong>
+                    <span id="contact-status_qllh"></span>
+                </p>
+            </div>
+
+            <div class="popup-buttons_qllh">
+                <button class="complete-btn_qllh" onclick="confirmCompleteContact_qllh()">Hoàn Thành</button>
+                <button class="cancel-btn_qllh" onclick="closePopup_qllh()">Hủy</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        function openPopup_qllh(contactId) {
+            console.log("Contact ID:", contactId); // Debug để kiểm tra giá trị contactId
+            if (!contactId) {
+                alert("ID liên hệ không hợp lệ!");
+                return;
+            }
+
+            $.ajax({
+                url: '/Admin/Contacts/GetContactDetails',
+                type: 'GET',
+                data: { id: contactId },
+                success: function(response) {
+                    console.log("Response từ server:", response);
+
+
+                    // Gán dữ liệu vào các phần tử
+                    document.getElementById('contact-id_qllh').innerText = response.contactId || "Không có ID";
+                    document.getElementById('contact-name_qllh').innerText = response.name || "Không có Tên";
+                    document.getElementById('contact-title_qllh').innerText = response.title || "Không có Tiêu Đề";
+                    document.getElementById('contact-created_qllh').innerText = response.createdDate || "Không có Ngày Tạo";
+                    document.getElementById('contact-updated_qllh').innerText = response.createdDate || "Không có Ngày Cập nhật";
+                    document.getElementById('contact-content_qllh').innerText = response.content || "Không có Nội Dung";
+                    document.getElementById('contact-status_qllh').innerText = response.status || "Không có Trạng Thái";
+
+                    // Hiển thị popup
+                    document.getElementById('popup_qllh').style.display = 'flex';
+                },
+                error: function(xhr, status, error) {
+                    console.error("Lỗi từ AJAX:", error);
+                    alert("Không thể tải dữ liệu. Vui lòng thử lại sau!");
+                }
+            });
+        }
+
+
+        // Hàm đóng popup khi nhấn vào nút "Hủy" hoặc biểu tượng "×"
+        function closePopup_qllh() {
+            document.getElementById('popup_qllh').style.display = 'none';
+        }
+
+        // Hàm xác nhận hoàn thành xử lý liên hệ
+        function confirmCompleteContact_qllh() {
+            var contactId = document.getElementById('contact-id_qllh').innerText; // Lấy Contact ID
+            var status = "Đã xử lý";  // Cập nhật trạng thái thành "Đã xử lý"
+
+            // Gửi yêu cầu AJAX để cập nhật trạng thái lên server
+            $.ajax({
+                url: '/Admin/Contacts/UpdateStatus',  // URL của phương thức trong Controller
+                type: 'POST',
+                data: {
+                    contactId: contactId,  // ID của liên hệ
+                    status: status         // Trạng thái mới
+                },
+                success: function(response) {
+                    console.log(response);
+                    if (response.success) {
+                        // Cập nhật trạng thái trong popup và giao diện
+                        document.getElementById('contact-status_qllh').innerText = status;
+                        alert(response.message);
+                        location.reload();
+                    } else {
+                        alert("Cập nhật trạng thái thất bại. Vui lòng thử lại.");
+                    }
+                    closePopup_qllh(); // Đóng popup sau khi hoàn thành
+                },
+                error: function(xhr, status, error) {
+                    console.error("Lỗi từ AJAX:", error);
+                    alert("Không thể cập nhật trạng thái. Vui lòng thử lại sau!");
+                }
+            });
+        }
+        //xóa liên hệ
+        function deleteContact_qllh(contactId) {
+            if (confirm('Bạn có chắc chắn muốn xóa liên hệ này?')) {
+                // Gửi yêu cầu AJAX để xóa liên hệ
+                $.ajax({
+                    url: '/Admin/Contacts/Delete',  // URL của phương thức trong Controller
+                    type: 'POST',
+                    data: { id: contactId },  // ID của liên hệ cần xóa
+                    success: function(response) {
+                        if (response.success) {
+                            alert(response.message); // Thông báo xóa thành công
+
+                            // Làm mới trang để cập nhật lại danh sách
+                            location.reload(); // Refresh trang
+                        } else {
+                            alert(response.message); // Thông báo lỗi
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        console.error("Lỗi từ AJAX:", error);
+                        alert("Không thể xóa liên hệ. Vui lòng thử lại sau!");
+                    }
+                });
+            }
+        }
+    </script>
+</body>
+</html>

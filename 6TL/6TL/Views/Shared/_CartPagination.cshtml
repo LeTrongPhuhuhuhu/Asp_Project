@@ -1,0 +1,72 @@
+﻿@{
+    int currentPage = ViewBag.CurrentPage;
+    int totalPages = ViewBag.TotalPages;
+}
+
+<style>
+    .pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        margin: 20px 0;
+        padding: 0;
+        list-style: none;
+    }
+
+        .pagination a {
+            text-decoration: none;
+            padding: 10px 15px;
+            border: 1px solid #B79858;
+            border-radius: 5px;
+            font-size: 16px;
+            color: #000;
+            background-color: #fff;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+            .pagination a:hover {
+                background-color: #B79858;
+                color: #fff;
+                border-color: #B79858;
+            }
+
+            .pagination a.active {
+                background-color: #B79858;
+                color: #fff;
+                border-color: #B79858;
+                font-weight: bold;
+            }
+
+            .pagination a.prev,
+            .pagination a.next {
+                font-size: 18px;
+                padding: 8px 12px;
+                font-weight: 500;
+            }
+
+            .pagination a.disabled {
+                color: #ccc;
+                pointer-events: none;
+                background-color: #f9f9f9;
+                border-color: #eee;
+            }
+
+        .pagination a {
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+            .pagination a:hover {
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+</style>
+
+<div class="pagination">
+    <a href="@Url.Action("GioHang", new { page = currentPage - 1 })" class="prev @(currentPage == 1 ? "disabled" : "")">« Previous</a>
+    @for (int i = 1; i <= totalPages; i++)
+    {
+        <a href="@Url.Action("GioHang", new { page = i })" class="page-number @(currentPage == i ? "active" : "")">@i</a>
+    }
+    <a href="@Url.Action("GioHang", new { page = currentPage + 1 })" class="next @(currentPage == totalPages ? "disabled" : "")">Next »</a>
+</div>

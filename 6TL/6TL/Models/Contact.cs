@@ -18,4 +18,6 @@ public partial class Contact
     public string Message { get; set; } = null!;
 
     public DateTime CreatedDate { get; set; }
+
+    public string Status { get; set; } = null!;
 }

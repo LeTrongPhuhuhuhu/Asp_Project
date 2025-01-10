@@ -16,8 +16,10 @@
             <input type="text" placeholder="Tìm kiếm...">
             <select>
                 <option value="all">Chọn danh mục</option>
-                <option value="category1">Danh mục 1</option>
-                <option value="category2">Danh mục 2</option>
+                @foreach(var categories in ViewBag.Categories)
+                {
+                    <option value="@categories.CategoryId">@categories.CategoryName</option>
+                }
             </select>
 
             <a href="/Admin/Products/ThemSanPham"><button class="add-new-btn_sp">Thêm mới</button></a>
