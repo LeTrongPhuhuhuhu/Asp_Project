@@ -9,7 +9,7 @@ public partial class Product
 
     public string? ProductName { get; set; }
 
-    public string Slug { get; set; } = string.Empty; // Đặt giá trị mặc định
+    public string Slug { get; set; } = null!;
 
     public string? Image { get; set; }
 
@@ -23,6 +23,8 @@ public partial class Product
 
     public int? SupplierId { get; set; }
 
+    public string? PaymentMethod { get; set; }
+
     public int? CategoryId { get; set; }
 
     public DateTime? CreatedAt { get; set; }
@@ -30,6 +32,8 @@ public partial class Product
     public DateTime? UpdatedAt { get; set; }
 
     public double? Rating { get; set; }
+
+    public decimal? CapitalAmount { get; set; }
 
     public virtual ICollection<Cart> Carts { get; set; } = new List<Cart>();
 

@@ -17,7 +17,5 @@ public partial class Review
 
     public DateTime CreatedAt { get; set; }
 
-    public virtual Customer Customer { get; set; } = null!;
-
     public virtual Product Product { get; set; } = null!;
 }
