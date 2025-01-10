@@ -165,6 +165,10 @@
       "PackagePath": "staticwebassets\\images\\products\\a4d7624b-3886-421e-979d-71883006139d_download (1).jpg"
     },
     {
+      "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\images\\products\\b46e4c84-789b-407a-aa2f-0ec6255f66eb_tutv.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\b46e4c84-789b-407a-aa2f-0ec6255f66eb_tutv.jpg"
+    },
+    {
       "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\images\\products\\d44fd28d-ff5a-4582-96a1-91219c778df2_tailung.jpg",
       "PackagePath": "staticwebassets\\images\\products\\d44fd28d-ff5a-4582-96a1-91219c778df2_tailung.jpg"
     },
@@ -249,6 +253,10 @@
       "PackagePath": "staticwebassets\\img\\blog4.jpg"
     },
     {
+      "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\dining-table.jpg",
+      "PackagePath": "staticwebassets\\img\\dining-table.jpg"
+    },
+    {
       "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\dmsp.jpg",
       "PackagePath": "staticwebassets\\img\\dmsp.jpg"
     },
@@ -311,6 +319,10 @@
     {
       "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\snapedit_1732430907358.png",
       "PackagePath": "staticwebassets\\img\\snapedit_1732430907358.png"
+    },
+    {
+      "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\sofa.jpg",
+      "PackagePath": "staticwebassets\\img\\sofa.jpg"
     },
     {
       "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\sofa1.jpg",

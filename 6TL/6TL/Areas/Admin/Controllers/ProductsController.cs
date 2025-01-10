@@ -235,6 +235,8 @@ namespace _6TL.Areas.Admin.Controllers
                 .AsNoTracking()
                 .Include(p => p.Category)
                 .Include(p => p.Supplier)
+                .Include(p => p.ProductColors)
+                .ThenInclude(pc => pc.Color)
                 .FirstOrDefault(p => p.ProductId == ProductId);
 
             if (product == null)
@@ -244,6 +246,7 @@ namespace _6TL.Areas.Admin.Controllers
 
             ViewBag.Categories = new SelectList(_context.Categories, "CategoryId", "CategoryName", product.CategoryId);
             ViewBag.Suppliers = new SelectList(_context.Suppliers, "SupplierId", "SupplierName", product.SupplierId);
+            ViewBag.Colors = _context.Colors.ToList();
 
 
             // Trả về view với sản phẩm đã được lấy từ cơ sở dữ liệu
@@ -253,7 +256,7 @@ namespace _6TL.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult SuaSanPham(int id,Product product, IFormFile? imageFile)
+        public IActionResult SuaSanPham(int id,Product product, IFormFile? imageFile, int? ColorId)
         {
             if (id != product.ProductId)
             {
@@ -274,7 +277,23 @@ namespace _6TL.Areas.Admin.Controllers
                 existingProduct.ProductDescription = product.ProductDescription;
                 existingProduct.CategoryId = product.CategoryId;
                 existingProduct.SupplierId = product.SupplierId;
-
+                // Cập nhật màu sắc nếu có
+                if (ColorId.HasValue)
+                {
+                    var existingColor = _context.ProductColors.FirstOrDefault(c => c.ColorId == ColorId.Value);
+                    if (existingColor != null)
+                    {
+                        // Kiểm tra nếu sản phẩm chưa có màu sắc này, thì thêm vào
+                        if (!existingProduct.ProductColors.Any(pc => pc.ColorId == ColorId.Value))
+                        {
+                            existingProduct.ProductColors.Add(new ProductColor
+                            {
+                                ProductId = product.ProductId,
+                                ColorId = ColorId.Value
+                            });
+                        }
+                    }
+                }
                 // Xử lý hình ảnh nếu có upload mới
                 if (imageFile != null && imageFile.Length > 0)
                 {
