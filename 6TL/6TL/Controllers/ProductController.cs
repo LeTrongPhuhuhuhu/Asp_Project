@@ -63,17 +63,23 @@ namespace _6TL.Controllers
 					return Json(new { success = false, message = "Vui lòng chọn màu sắc!" });
 				}
 
+				// Sử dụng customerId = 1 tạm thời
+				int customerId = 1;
+
+				// Kiểm tra sản phẩm đã có trong giỏ hàng của customerId = 1 hay chưa
 				var existingCart = _context.Carts
-					.FirstOrDefault(c => c.ProductId == productId && c.Color == productColor);
+					.FirstOrDefault(c => c.ProductId == productId && c.Color == productColor && c.CustomerId == customerId);
 
 				if (existingCart != null)
 				{
+					// Cập nhật số lượng và tổng giá trị của sản phẩm
 					existingCart.Quantity += quantity;
 					existingCart.TotalPrice = existingCart.Price * existingCart.Quantity;
 					existingCart.UpdatedAt = DateTime.Now;
 				}
 				else
 				{
+					// Thêm sản phẩm mới vào giỏ hàng
 					var newCart = new Cart
 					{
 						ProductId = productId,
@@ -83,16 +89,20 @@ namespace _6TL.Controllers
 						Quantity = quantity,
 						Color = productColor,
 						TotalPrice = price * quantity,
+						CustomerId = customerId, // customerId = 1
 						CreatedAt = DateTime.Now
 					};
 
 					_context.Carts.Add(newCart);
 				}
 
+				// Lưu các thay đổi vào cơ sở dữ liệu
 				_context.SaveChanges();
 
-				// Tính tổng số lượng sản phẩm trong giỏ hàng
-				var totalQuantity = _context.Carts.Sum(c => c.Quantity);
+				// Tính tổng số lượng sản phẩm trong giỏ hàng của customerId = 1
+				var totalQuantity = _context.Carts
+					.Where(c => c.CustomerId == customerId)
+					.Sum(c => c.Quantity);
 
 				return Json(new { success = true, message = "Sản phẩm đã được thêm vào giỏ hàng!", totalQuantity });
 			}

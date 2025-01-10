@@ -127,8 +127,10 @@
                     <input type="hidden" name="productPrice" value="@Model.Price">
                     <input type="hidden" id="productColor-buy" name="productColor" value="">
                     <input type="hidden" id="quantity-input-hidden" name="quantity" value="1">
+                    <input type="hidden" name="isBuyNow" value="true"> <!-- Thêm input ẩn này -->
                     <button type="submit" class="buy-now_ct">Mua ngay</button>
                 </form>
+
 
                 <!-- Form "Thêm vào giỏ hàng" -->
                 <form id="add-to-cart-form" method="post" action="/Product/AddToCart">

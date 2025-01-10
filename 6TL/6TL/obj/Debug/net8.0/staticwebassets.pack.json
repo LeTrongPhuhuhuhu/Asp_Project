@@ -149,6 +149,26 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\ASP\\ASP_DoAn_Backup\\Asp_Project\\6TL\\6TL\\wwwroot\\images\\products\\4ab7c087-8b43-42c2-b833-e6a307e5552b_tailung.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\4ab7c087-8b43-42c2-b833-e6a307e5552b_tailung.jpg"
+    },
+    {
+      "Id": "D:\\ASP\\ASP_DoAn_Backup\\Asp_Project\\6TL\\6TL\\wwwroot\\images\\products\\7971a5bb-b50d-4919-80c0-50af2e91d6cd_tailung.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\7971a5bb-b50d-4919-80c0-50af2e91d6cd_tailung.jpg"
+    },
+    {
+      "Id": "D:\\ASP\\ASP_DoAn_Backup\\Asp_Project\\6TL\\6TL\\wwwroot\\images\\products\\a4d7624b-3886-421e-979d-71883006139d_download (1).jpg",
+      "PackagePath": "staticwebassets\\images\\products\\a4d7624b-3886-421e-979d-71883006139d_download (1).jpg"
+    },
+    {
+      "Id": "D:\\ASP\\ASP_DoAn_Backup\\Asp_Project\\6TL\\6TL\\wwwroot\\images\\products\\d44fd28d-ff5a-4582-96a1-91219c778df2_tailung.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\d44fd28d-ff5a-4582-96a1-91219c778df2_tailung.jpg"
+    },
+    {
+      "Id": "D:\\ASP\\ASP_DoAn_Backup\\Asp_Project\\6TL\\6TL\\wwwroot\\images\\products\\f303afb1-c781-45c1-82ed-d7fb8ce16ff3_tailung.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\f303afb1-c781-45c1-82ed-d7fb8ce16ff3_tailung.jpg"
+    },
+    {
       "Id": "D:\\ASP\\ASP_DoAn_Backup\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\1.jpg",
       "PackagePath": "staticwebassets\\img\\1.jpg"
     },
@@ -225,6 +245,10 @@
       "PackagePath": "staticwebassets\\img\\blog4.jpg"
     },
     {
+      "Id": "D:\\ASP\\ASP_DoAn_Backup\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\dining-table.jpg",
+      "PackagePath": "staticwebassets\\img\\dining-table.jpg"
+    },
+    {
       "Id": "D:\\ASP\\ASP_DoAn_Backup\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\dmsp.jpg",
       "PackagePath": "staticwebassets\\img\\dmsp.jpg"
     },
@@ -287,6 +311,10 @@
     {
       "Id": "D:\\ASP\\ASP_DoAn_Backup\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\snapedit_1732430907358.png",
       "PackagePath": "staticwebassets\\img\\snapedit_1732430907358.png"
+    },
+    {
+      "Id": "D:\\ASP\\ASP_DoAn_Backup\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\sofa.jpg",
+      "PackagePath": "staticwebassets\\img\\sofa.jpg"
     },
     {
       "Id": "D:\\ASP\\ASP_DoAn_Backup\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\sofa1.jpg",
