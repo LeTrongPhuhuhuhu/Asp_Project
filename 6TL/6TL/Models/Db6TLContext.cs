@@ -4,13 +4,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace _6TL.Models;
 
-public partial class Db6tlContext : DbContext
+public partial class Db6TLContext : DbContext
 {
-    public Db6tlContext()
+    public Db6TLContext()
     {
     }
 
-    public Db6tlContext(DbContextOptions<Db6tlContext> options)
+    public Db6TLContext(DbContextOptions<Db6TLContext> options)
         : base(options)
     {
     }
