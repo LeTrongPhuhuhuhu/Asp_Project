@@ -21,9 +21,6 @@ builder.Services.AddCors(options =>
     });
 });
 
-builder.Services.AddDbContext<Db6TLContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -56,6 +53,10 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+// Thêm Authentication và Authorization
+app.UseAuthentication();
+
+app.UseCors();
 
 app.UseAuthorization();
 

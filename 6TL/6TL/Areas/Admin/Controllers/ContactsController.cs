@@ -1,5 +1,4 @@
-﻿using _6TL.Data;
-using _6TL.Models;
+﻿using _6TL.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace _6TL.Areas.Admin.Controllers

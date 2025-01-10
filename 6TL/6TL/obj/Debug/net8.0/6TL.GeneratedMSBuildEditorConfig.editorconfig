@@ -26,6 +26,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/ổ D/TK WEB ASPNET CORE/Đồ án ASP/Asp_Project/6TL/6TL/Areas/Admin/Views/Contacts/QuanLyLienHe.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29udGFjdHNcUXVhbkx5TGllbkhlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/ổ D/TK WEB ASPNET CORE/Đồ án ASP/Asp_Project/6TL/6TL/Areas/Admin/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -204,6 +208,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/ổ D/TK WEB ASPNET CORE/Đồ án ASP/Asp_Project/6TL/6TL/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ổ D/TK WEB ASPNET CORE/Đồ án ASP/Asp_Project/6TL/6TL/Views/Shared/_CartPagination.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9DYXJ0UGFnaW5hdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/ổ D/TK WEB ASPNET CORE/Đồ án ASP/Asp_Project/6TL/6TL/Views/Shared/_Pagination.cshtml]

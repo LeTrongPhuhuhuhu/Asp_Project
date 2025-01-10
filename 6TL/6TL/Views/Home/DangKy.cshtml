@@ -1,4 +1,5 @@
-﻿@{
+﻿@model Customer
+@{
     ViewData["Title"] = "Register";
 }
 <link href="~/css/pages/dangky.css" rel="stylesheet" />
@@ -9,57 +10,96 @@
     </div>
 </section>
 
-
 <section class="form-section">
-    <form class="register-form">
+    <form asp-action="DangKy" method="post" class="register-form">
+        <!-- Hiển thị thông báo lỗi -->
+        @if (!ViewData.ModelState.IsValid && ViewContext.HttpContext.Request.Method == "POST")
+
+
+
+        {
+            <div class="alert alert-danger">
+                Vui lòng kiểm tra lại thông tin và điền đầy đủ các trường bắt buộc!
+            </div>
+        }
         <div class="form-row">
             <div class="form-group">
                 <label for="name">Họ và Tên <span class="required">*</span></label>
-                <input type="text" id="name" placeholder="Nhập họ và tên">
-            </div>
-            <div class="form-group gender">
-                <label>Giới Tính</label>
-                <div class="gender-options">
-                    <label><input type="radio" name="gender"> Nam</label>
-                    <label><input type="radio" name="gender"> Nữ</label>
-                </div>
+                <input type="text" id="name" name="FullName" value="@Model.FullName" placeholder="Nhập họ và tên">
+                @if (ViewContext.HttpContext.Request.Method == "POST")
+
+                {
+                    @Html.ValidationMessageFor(model => model.FullName, "", new { style = "color: red; font-size: 0.9em; margin-top: 5px;" })
+                }
             </div>
         </div>
         <div class="form-row">
             <div class="form-group">
                 <label for="phone">Điện Thoại <span class="required">*</span></label>
-                <input type="text" id="phone" placeholder="Nhập số điện thoại">
+                <input type="text" id="phone" name="PhoneNumber" value="@Model.PhoneNumber" placeholder="Nhập số điện thoại">
+                @if (ViewContext.HttpContext.Request.Method == "POST")
+
+                {
+                    @Html.ValidationMessageFor(model => model.PhoneNumber, "", new { style = "color: red; font-size: 0.9em; margin-top: 5px;" })
+                }
             </div>
-            <div class="form-group">
-                <label for="city">Tỉnh / Thành Phố <span class="required">*</span></label>
-                <select id="city">
-                    <option value="">Chọn tỉnh / thành phố</option>
-                    <!-- Thêm danh sách tỉnh/thành phố tại đây -->
-                </select>
-            </div>
-        </div>
-        <div class="form-row">
-            <div class="form-group">
-                <label for="address">Địa Chỉ</label>
-                <input type="text" id="address" placeholder="Nhập địa chỉ">
-            </div>
-        </div>
-        <div class="form-row">
             <div class="form-group">
                 <label for="email">Email <span class="required">*</span></label>
-                <input type="email" id="email" placeholder="Nhập email">
-            </div>
-            <div class="form-group">
-                <label for="password">Mật Khẩu <span class="required">*</span></label>
-                <input type="password" id="password" placeholder="Nhập mật khẩu">
+                <input type="email" id="email" name="Email" value="@Model.Email" placeholder="Nhập email">
+                @if (ViewContext.HttpContext.Request.Method == "POST")
+
+                {
+                    @Html.ValidationMessageFor(model => model.Email, "", new { style = "color: red; font-size: 0.9em; margin-top: 5px;" })
+                }
             </div>
         </div>
-        <div class="form-row terms">
-            <input type="checkbox" id="termsCheckbox">
-            <label for="termsCheckbox">
-                Tôi đồng ý với <a href="#" class="terms-link">Điều Khoản và Điều Kiện</a>
-            </label>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="address">Địa Chỉ <span class="required">*</span></label>
+                <input type="text" id="address" name="Address" value="@Model.Address" placeholder="Nhập địa chỉ">
+
+                @if (ViewContext.HttpContext.Request.Method == "POST")
+
+                {
+                    @Html.ValidationMessageFor(model => model.Address, "", new { style = "color: red; font-size: 0.9em; margin-top: 5px;" })
+                }
+
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="password">Mật Khẩu <span class="required">*</span></label>
+                <input type="password" id="password" name="Password" value="@Model.Password" placeholder="Nhập mật khẩu">
+                @if (ViewContext.HttpContext.Request.Method == "POST")
+
+                {
+                    @Html.ValidationMessageFor(model => model.Password, "", new { style = "color: red; font-size: 0.9em; margin-top: 5px;" })
+                }
+                @* Thêm nút Hiện Mật Khẩu *@
+                <div>
+                    <input type="checkbox" id="showPassword" /> <label for="showPassword">Hiện Mật Khẩu</label>
+                </div>
+            </div>
         </div>
         <button class="submit-btn">Đăng Ký</button>
     </form>
 </section>
+<script>
+    // Đảm bảo mã JavaScript chỉ chạy sau khi trang đã tải xong
+    document.addEventListener("DOMContentLoaded", function () {
+        var showPasswordCheckbox = document.getElementById("showPassword");
+        var passwordField = document.getElementById("password");
+
+        // Đảm bảo mật khẩu ban đầu được ẩn
+        passwordField.type = "password";
+
+        // Xử lý sự kiện khi checkbox thay đổi
+        showPasswordCheckbox.addEventListener("change", function () {
+            if (showPasswordCheckbox.checked) {
+                passwordField.type = "text";  // Hiển thị mật khẩu
+            } else {
+                passwordField.type = "password";  // Ẩn mật khẩu
+            }
+        });
+    });
+</script>
