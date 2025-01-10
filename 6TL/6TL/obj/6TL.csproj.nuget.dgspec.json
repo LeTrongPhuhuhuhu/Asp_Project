@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\6TL.csproj": {}
   },
   "projects": {
@@ -12,9 +13,27 @@
         "projectPath": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\6TL.csproj",
         "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
         "outputPath": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\obj\\",
+=======
+    "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\6TL.csproj": {}
+  },
+  "projects": {
+    "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\6TL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\6TL.csproj",
+        "projectName": "6TL",
+        "projectPath": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\6TL.csproj",
+        "packagesPath": "C:\\Users\\Hoàng Phúc\\.nuget\\packages\\",
+        "outputPath": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\obj\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
         "projectStyle": "PackageReference",
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\Hoàng Phúc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,11 +59,23 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+<<<<<<< HEAD
             "Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter": {
               "target": "Package",
               "version": "[8.0.11, )"
             },
             "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
+=======
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            },
+            "FunScript.TypeScript.Binding.nodemailer": {
+              "target": "Package",
+              "version": "[1.1.0.37, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
               "target": "Package",
               "version": "[8.0.11, )"
             },
@@ -62,9 +93,15 @@
               "target": "Package",
               "version": "[9.0.0, )"
             },
+<<<<<<< HEAD
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[8.0.7, )"
+=======
+            "System.Net.Mail": {
+              "target": "Package",
+              "version": "[1.0.0-rtm-00002, )"
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
             }
           },
           "imports": [
@@ -86,7 +123,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
         }
       }
     }

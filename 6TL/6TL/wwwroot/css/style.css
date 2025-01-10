@@ -631,3 +631,6 @@ footer {
         color: #555; /* Màu chữ xám tối */
         margin: 0; /* Không có khoảng cách */
     }
+.hidden {
+    display: none;
+}

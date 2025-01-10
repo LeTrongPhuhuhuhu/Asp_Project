@@ -1,6 +1,10 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "Hash": "Uu9AYisZVLeNcnriK20LSby/vMD4BfcAAT2p2TLUvy4=",
+=======
+  "Hash": "8iRRuvPIxyY3iWulNlOjIEdXeTw+Wc0fyeXnc4snFHk=",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
   "Source": "6TL",
   "BasePath": "_content/6TL",
   "Mode": "Default",
@@ -10,13 +14,18 @@
     {
       "Name": "6TL\\wwwroot",
       "Source": "6TL",
+<<<<<<< HEAD
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\PC\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.11\\staticwebassets\\Microsoft.AspNetCore.Components.QuickGrid.bundle.scp.css",
       "SourceId": "Microsoft.AspNetCore.Components.QuickGrid",
       "SourceType": "Package",
@@ -59,6 +68,12 @@
       "SourceId": "6TL",
       "SourceType": "Computed",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\obj\\Debug\\net8.0\\scopedcss\\bundle\\6TL.styles.css",
+      "SourceId": "6TL",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "6TL.styles.css",
       "AssetKind": "All",
@@ -71,6 +86,7 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
+<<<<<<< HEAD
       "OriginalItemSpec": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\obj\\Debug\\net8.0\\scopedcss\\bundle\\6TL.styles.css"
     },
     {
@@ -78,6 +94,15 @@
       "SourceId": "6TL",
       "SourceType": "Computed",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+=======
+      "OriginalItemSpec": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\obj\\Debug\\net8.0\\scopedcss\\bundle\\6TL.styles.css"
+    },
+    {
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\6TL.bundle.scp.css",
+      "SourceId": "6TL",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "6TL.bundle.scp.css",
       "AssetKind": "All",
@@ -90,6 +115,7 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
+<<<<<<< HEAD
       "OriginalItemSpec": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\6TL.bundle.scp.css"
     },
     {
@@ -97,6 +123,15 @@
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "OriginalItemSpec": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\6TL.bundle.scp.css"
+    },
+    {
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin.css",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "css/admin.css",
       "AssetKind": "All",
@@ -112,10 +147,17 @@
       "OriginalItemSpec": "wwwroot\\css\\admin.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\Dashboard.css",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\Dashboard.css",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "css/admin/Dashboard.css",
       "AssetKind": "All",
@@ -131,10 +173,17 @@
       "OriginalItemSpec": "wwwroot\\css\\admin\\Dashboard.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\popup.css",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\popup.css",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "css/admin/popup.css",
       "AssetKind": "All",
@@ -150,10 +199,17 @@
       "OriginalItemSpec": "wwwroot\\css\\admin\\popup.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\QlBlog.css",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\QlBlog.css",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "css/admin/QlBlog.css",
       "AssetKind": "All",
@@ -169,10 +225,17 @@
       "OriginalItemSpec": "wwwroot\\css\\admin\\QlBlog.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\QuanLyAdmin.css",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\QuanLyAdmin.css",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "css/admin/QuanLyAdmin.css",
       "AssetKind": "All",
@@ -188,10 +251,17 @@
       "OriginalItemSpec": "wwwroot\\css\\admin\\QuanLyAdmin.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\QuanLyBlog.css",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\QuanLyBlog.css",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "css/admin/QuanLyBlog.css",
       "AssetKind": "All",
@@ -207,10 +277,17 @@
       "OriginalItemSpec": "wwwroot\\css\\admin\\QuanLyBlog.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\QuanLyChiTietDonHang.css",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\QuanLyChiTietDonHang.css",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "css/admin/QuanLyChiTietDonHang.css",
       "AssetKind": "All",
@@ -226,10 +303,17 @@
       "OriginalItemSpec": "wwwroot\\css\\admin\\QuanLyChiTietDonHang.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\QuanLyChiTietSanPham.css",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\QuanLyChiTietSanPham.css",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "css/admin/QuanLyChiTietSanPham.css",
       "AssetKind": "All",
@@ -245,10 +329,17 @@
       "OriginalItemSpec": "wwwroot\\css\\admin\\QuanLyChiTietSanPham.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\QuanLyDanhGia.css",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\QuanLyDanhGia.css",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "css/admin/QuanLyDanhGia.css",
       "AssetKind": "All",
@@ -264,10 +355,17 @@
       "OriginalItemSpec": "wwwroot\\css\\admin\\QuanLyDanhGia.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\QuanLyDanhMuc.css",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\QuanLyDanhMuc.css",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "css/admin/QuanLyDanhMuc.css",
       "AssetKind": "All",
@@ -283,10 +381,17 @@
       "OriginalItemSpec": "wwwroot\\css\\admin\\QuanLyDanhMuc.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\QuanLyDonHang.css",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\QuanLyDonHang.css",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "css/admin/QuanLyDonHang.css",
       "AssetKind": "All",
@@ -302,10 +407,17 @@
       "OriginalItemSpec": "wwwroot\\css\\admin\\QuanLyDonHang.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\QuanLyLienHe.css",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\QuanLyLienHe.css",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "css/admin/QuanLyLienHe.css",
       "AssetKind": "All",
@@ -321,10 +433,17 @@
       "OriginalItemSpec": "wwwroot\\css\\admin\\QuanLyLienHe.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\QuanLySanPham.css",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\QuanLySanPham.css",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "css/admin/QuanLySanPham.css",
       "AssetKind": "All",
@@ -340,10 +459,17 @@
       "OriginalItemSpec": "wwwroot\\css\\admin\\QuanLySanPham.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\SuaSanPham.css",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\SuaSanPham.css",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "css/admin/SuaSanPham.css",
       "AssetKind": "All",
@@ -359,10 +485,17 @@
       "OriginalItemSpec": "wwwroot\\css\\admin\\SuaSanPham.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\ThemBlog.css",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\ThemBlog.css",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "css/admin/ThemBlog.css",
       "AssetKind": "All",
@@ -378,10 +511,17 @@
       "OriginalItemSpec": "wwwroot\\css\\admin\\ThemBlog.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\ThemSanPham.css",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\ThemSanPham.css",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "css/admin/ThemSanPham.css",
       "AssetKind": "All",
@@ -397,10 +537,17 @@
       "OriginalItemSpec": "wwwroot\\css\\admin\\ThemSanPham.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\Blog.css",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\Blog.css",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "css/pages/Blog.css",
       "AssetKind": "All",
@@ -416,10 +563,17 @@
       "OriginalItemSpec": "wwwroot\\css\\pages\\Blog.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\cart.css",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\cart.css",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "css/pages/cart.css",
       "AssetKind": "All",
@@ -435,10 +589,17 @@
       "OriginalItemSpec": "wwwroot\\css\\pages\\cart.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\ChinhSach.css",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\ChinhSach.css",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "css/pages/ChinhSach.css",
       "AssetKind": "All",
@@ -454,10 +615,17 @@
       "OriginalItemSpec": "wwwroot\\css\\pages\\ChinhSach.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\ChiTietSanPham.css",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\ChiTietSanPham.css",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "css/pages/ChiTietSanPham.css",
       "AssetKind": "All",
@@ -473,10 +641,17 @@
       "OriginalItemSpec": "wwwroot\\css\\pages\\ChiTietSanPham.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\ChiTietTinTuc.css",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\ChiTietTinTuc.css",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "css/pages/ChiTietTinTuc.css",
       "AssetKind": "All",
@@ -492,10 +667,17 @@
       "OriginalItemSpec": "wwwroot\\css\\pages\\ChiTietTinTuc.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\DangKy.css",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\DangKy.css",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "css/pages/DangKy.css",
       "AssetKind": "All",
@@ -511,10 +693,17 @@
       "OriginalItemSpec": "wwwroot\\css\\pages\\DangKy.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\DangNhap.css",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\DangNhap.css",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "css/pages/DangNhap.css",
       "AssetKind": "All",
@@ -530,10 +719,17 @@
       "OriginalItemSpec": "wwwroot\\css\\pages\\DangNhap.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\DanhMucSanPham.css",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\DanhMucSanPham.css",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "css/pages/DanhMucSanPham.css",
       "AssetKind": "All",
@@ -549,10 +745,17 @@
       "OriginalItemSpec": "wwwroot\\css\\pages\\DanhMucSanPham.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\GioHang.css",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\GioHang.css",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "css/pages/GioHang.css",
       "AssetKind": "All",
@@ -568,10 +771,17 @@
       "OriginalItemSpec": "wwwroot\\css\\pages\\GioHang.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\GioiThieu.css",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\GioiThieu.css",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "css/pages/GioiThieu.css",
       "AssetKind": "All",
@@ -587,10 +797,17 @@
       "OriginalItemSpec": "wwwroot\\css\\pages\\GioiThieu.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\LichSuMuaHang.css",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\LichSuMuaHang.css",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "css/pages/LichSuMuaHang.css",
       "AssetKind": "All",
@@ -606,10 +823,17 @@
       "OriginalItemSpec": "wwwroot\\css\\pages\\LichSuMuaHang.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\LienHe.css",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\LienHe.css",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "css/pages/LienHe.css",
       "AssetKind": "All",
@@ -625,10 +849,17 @@
       "OriginalItemSpec": "wwwroot\\css\\pages\\LienHe.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\SanPham.css",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\SanPham.css",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "css/pages/SanPham.css",
       "AssetKind": "All",
@@ -644,10 +875,17 @@
       "OriginalItemSpec": "wwwroot\\css\\pages\\SanPham.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\SanPhamYeuThich.css",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\SanPhamYeuThich.css",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "css/pages/SanPhamYeuThich.css",
       "AssetKind": "All",
@@ -663,10 +901,17 @@
       "OriginalItemSpec": "wwwroot\\css\\pages\\SanPhamYeuThich.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\TinTuc.css",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\TinTuc.css",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "css/pages/TinTuc.css",
       "AssetKind": "All",
@@ -682,10 +927,17 @@
       "OriginalItemSpec": "wwwroot\\css\\pages\\TinTuc.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\TrangChu.css",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\TrangChu.css",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "css/pages/TrangChu.css",
       "AssetKind": "All",
@@ -701,10 +953,17 @@
       "OriginalItemSpec": "wwwroot\\css\\pages\\TrangChu.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\TrangThanhToan.css",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\TrangThanhToan.css",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "css/pages/TrangThanhToan.css",
       "AssetKind": "All",
@@ -720,10 +979,17 @@
       "OriginalItemSpec": "wwwroot\\css\\pages\\TrangThanhToan.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\ViewProfile.css",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\ViewProfile.css",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "css/pages/ViewProfile.css",
       "AssetKind": "All",
@@ -739,10 +1005,17 @@
       "OriginalItemSpec": "wwwroot\\css\\pages\\ViewProfile.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\style.css",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\style.css",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "css/style.css",
       "AssetKind": "All",
@@ -758,10 +1031,17 @@
       "OriginalItemSpec": "wwwroot\\css\\style.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\favicon.ico",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\favicon.ico",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -777,6 +1057,7 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\images\\products\\3ed82df2-90d2-4c31-809a-235e53f853a6_ghedabeo.jpg",
       "SourceId": "6TL",
       "SourceType": "Discovered",
@@ -800,6 +1081,12 @@
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\images\\products\\4ab7c087-8b43-42c2-b833-e6a307e5552b_tailung.jpg",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "images/products/4ab7c087-8b43-42c2-b833-e6a307e5552b_tailung.jpg",
       "AssetKind": "All",
@@ -815,6 +1102,7 @@
       "OriginalItemSpec": "wwwroot\\images\\products\\4ab7c087-8b43-42c2-b833-e6a307e5552b_tailung.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\images\\products\\6cfbc799-3797-43f2-b479-be7358ad8fd9_giaytt.jpg",
       "SourceId": "6TL",
       "SourceType": "Discovered",
@@ -838,6 +1126,12 @@
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\images\\products\\7971a5bb-b50d-4919-80c0-50af2e91d6cd_tailung.jpg",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "images/products/7971a5bb-b50d-4919-80c0-50af2e91d6cd_tailung.jpg",
       "AssetKind": "All",
@@ -853,6 +1147,7 @@
       "OriginalItemSpec": "wwwroot\\images\\products\\7971a5bb-b50d-4919-80c0-50af2e91d6cd_tailung.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\images\\products\\a1370eb4-2465-4d24-8c31-5eb71f9ecf31_z5981790593979_9b889a056242f4a1096497e37ba6bc26.jpg",
       "SourceId": "6TL",
       "SourceType": "Discovered",
@@ -876,6 +1171,12 @@
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\images\\products\\a4d7624b-3886-421e-979d-71883006139d_download (1).jpg",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "images/products/a4d7624b-3886-421e-979d-71883006139d_download (1).jpg",
       "AssetKind": "All",
@@ -891,6 +1192,7 @@
       "OriginalItemSpec": "wwwroot\\images\\products\\a4d7624b-3886-421e-979d-71883006139d_download (1).jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\images\\products\\b46e4c84-789b-407a-aa2f-0ec6255f66eb_tutv.jpg",
       "SourceId": "6TL",
       "SourceType": "Discovered",
@@ -914,6 +1216,12 @@
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\images\\products\\d44fd28d-ff5a-4582-96a1-91219c778df2_tailung.jpg",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "images/products/d44fd28d-ff5a-4582-96a1-91219c778df2_tailung.jpg",
       "AssetKind": "All",
@@ -929,10 +1237,17 @@
       "OriginalItemSpec": "wwwroot\\images\\products\\d44fd28d-ff5a-4582-96a1-91219c778df2_tailung.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\images\\products\\f303afb1-c781-45c1-82ed-d7fb8ce16ff3_tailung.jpg",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\images\\products\\f303afb1-c781-45c1-82ed-d7fb8ce16ff3_tailung.jpg",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "images/products/f303afb1-c781-45c1-82ed-d7fb8ce16ff3_tailung.jpg",
       "AssetKind": "All",
@@ -948,6 +1263,7 @@
       "OriginalItemSpec": "wwwroot\\images\\products\\f303afb1-c781-45c1-82ed-d7fb8ce16ff3_tailung.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\images\\products\\f5db060b-bcef-4e9d-b8bc-d1d404931f76_tubep.jpg",
       "SourceId": "6TL",
       "SourceType": "Discovered",
@@ -971,6 +1287,12 @@
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\1.jpg",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "img/1.jpg",
       "AssetKind": "All",
@@ -986,10 +1308,17 @@
       "OriginalItemSpec": "wwwroot\\img\\1.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\2.jpg",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\2.jpg",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "img/2.jpg",
       "AssetKind": "All",
@@ -1005,10 +1334,17 @@
       "OriginalItemSpec": "wwwroot\\img\\2.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\add_shopping_cart_16dp_FFFFFF_FILL0_wght400_GRAD0_opsz20.png",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\add_shopping_cart_16dp_FFFFFF_FILL0_wght400_GRAD0_opsz20.png",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "img/add_shopping_cart_16dp_FFFFFF_FILL0_wght400_GRAD0_opsz20.png",
       "AssetKind": "All",
@@ -1024,10 +1360,17 @@
       "OriginalItemSpec": "wwwroot\\img\\add_shopping_cart_16dp_FFFFFF_FILL0_wght400_GRAD0_opsz20.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\add_shopping_cart_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\add_shopping_cart_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "img/add_shopping_cart_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png",
       "AssetKind": "All",
@@ -1043,10 +1386,17 @@
       "OriginalItemSpec": "wwwroot\\img\\add_shopping_cart_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\add_shopping_cart_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\add_shopping_cart_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "img/add_shopping_cart_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png",
       "AssetKind": "All",
@@ -1062,10 +1412,17 @@
       "OriginalItemSpec": "wwwroot\\img\\add_shopping_cart_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\banan.jpg",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\banan.jpg",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "img/banan.jpg",
       "AssetKind": "All",
@@ -1081,10 +1438,17 @@
       "OriginalItemSpec": "wwwroot\\img\\banan.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\banner1.jpg",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\banner1.jpg",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "img/banner1.jpg",
       "AssetKind": "All",
@@ -1100,10 +1464,17 @@
       "OriginalItemSpec": "wwwroot\\img\\banner1.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\banner2.jpg",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\banner2.jpg",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "img/banner2.jpg",
       "AssetKind": "All",
@@ -1119,10 +1490,17 @@
       "OriginalItemSpec": "wwwroot\\img\\banner2.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\banner3.jpg",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\banner3.jpg",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "img/banner3.jpg",
       "AssetKind": "All",
@@ -1138,10 +1516,17 @@
       "OriginalItemSpec": "wwwroot\\img\\banner3.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\banner-ban-cafe.jpg",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\banner-ban-cafe.jpg",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "img/banner-ban-cafe.jpg",
       "AssetKind": "All",
@@ -1157,6 +1542,7 @@
       "OriginalItemSpec": "wwwroot\\img\\banner-ban-cafe.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\bannersignin.jpg",
       "SourceId": "6TL",
       "SourceType": "Discovered",
@@ -1180,6 +1566,12 @@
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\bannersigin.jpg",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "img/bannersigin.jpg",
       "AssetKind": "All",
@@ -1195,10 +1587,36 @@
       "OriginalItemSpec": "wwwroot\\img\\bannersigin.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\Black and White Professional Minimalistic Real Estate Logo - Copy.png",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\bannersignin.jpg",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+      "BasePath": "_content/6TL",
+      "RelativePath": "img/bannersignin.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\bannersignin.jpg"
+    },
+    {
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\Black and White Professional Minimalistic Real Estate Logo - Copy.png",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "img/Black and White Professional Minimalistic Real Estate Logo - Copy.png",
       "AssetKind": "All",
@@ -1214,10 +1632,17 @@
       "OriginalItemSpec": "wwwroot\\img\\Black and White Professional Minimalistic Real Estate Logo - Copy.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\Black and White Professional Minimalistic Real Estate Logo (1).png",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\Black and White Professional Minimalistic Real Estate Logo (1).png",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "img/Black and White Professional Minimalistic Real Estate Logo (1).png",
       "AssetKind": "All",
@@ -1233,10 +1658,17 @@
       "OriginalItemSpec": "wwwroot\\img\\Black and White Professional Minimalistic Real Estate Logo (1).png"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\Black and White Professional Minimalistic Real Estate Logo.png",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\Black and White Professional Minimalistic Real Estate Logo.png",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "img/Black and White Professional Minimalistic Real Estate Logo.png",
       "AssetKind": "All",
@@ -1252,10 +1684,17 @@
       "OriginalItemSpec": "wwwroot\\img\\Black and White Professional Minimalistic Real Estate Logo.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\blog1.jpg",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\blog1.jpg",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "img/blog1.jpg",
       "AssetKind": "All",
@@ -1271,10 +1710,17 @@
       "OriginalItemSpec": "wwwroot\\img\\blog1.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\blog2.jpg",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\blog2.jpg",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "img/blog2.jpg",
       "AssetKind": "All",
@@ -1290,10 +1736,17 @@
       "OriginalItemSpec": "wwwroot\\img\\blog2.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\blog3.jpg",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\blog3.jpg",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "img/blog3.jpg",
       "AssetKind": "All",
@@ -1309,10 +1762,17 @@
       "OriginalItemSpec": "wwwroot\\img\\blog3.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\blog4.jpg",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\blog4.jpg",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "img/blog4.jpg",
       "AssetKind": "All",
@@ -1328,10 +1788,17 @@
       "OriginalItemSpec": "wwwroot\\img\\blog4.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\dining-table.jpg",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\dining-table.jpg",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "img/dining-table.jpg",
       "AssetKind": "All",
@@ -1347,10 +1814,17 @@
       "OriginalItemSpec": "wwwroot\\img\\dining-table.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\dmsp.jpg",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\dmsp.jpg",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "img/dmsp.jpg",
       "AssetKind": "All",
@@ -1366,10 +1840,17 @@
       "OriginalItemSpec": "wwwroot\\img\\dmsp.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\ghebar.jpg",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\ghebar.jpg",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "img/ghebar.jpg",
       "AssetKind": "All",
@@ -1385,10 +1866,17 @@
       "OriginalItemSpec": "wwwroot\\img\\ghebar.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\ghechill.jpg",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\ghechill.jpg",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "img/ghechill.jpg",
       "AssetKind": "All",
@@ -1404,6 +1892,7 @@
       "OriginalItemSpec": "wwwroot\\img\\ghechill.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\ghedabeo.jpg",
       "SourceId": "6TL",
       "SourceType": "Discovered",
@@ -1446,6 +1935,12 @@
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\gioithieu.jpg",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "img/gioithieu.jpg",
       "AssetKind": "All",
@@ -1461,10 +1956,17 @@
       "OriginalItemSpec": "wwwroot\\img\\gioithieu.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\giuongngu.jpg",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\giuongngu.jpg",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "img/giuongngu.jpg",
       "AssetKind": "All",
@@ -1480,10 +1982,17 @@
       "OriginalItemSpec": "wwwroot\\img\\giuongngu.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\inverted_logo.png",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\inverted_logo.png",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "img/inverted_logo.png",
       "AssetKind": "All",
@@ -1499,10 +2008,17 @@
       "OriginalItemSpec": "wwwroot\\img\\inverted_logo.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\logo_with_dark_background.png",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\logo_with_dark_background.png",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "img/logo_with_dark_background.png",
       "AssetKind": "All",
@@ -1518,10 +2034,17 @@
       "OriginalItemSpec": "wwwroot\\img\\logo_with_dark_background.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\noithat1tc.jpg",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\noithat1tc.jpg",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "img/noithat1tc.jpg",
       "AssetKind": "All",
@@ -1537,10 +2060,17 @@
       "OriginalItemSpec": "wwwroot\\img\\noithat1tc.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\noithat2tc.jpg",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\noithat2tc.jpg",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "img/noithat2tc.jpg",
       "AssetKind": "All",
@@ -1556,10 +2086,17 @@
       "OriginalItemSpec": "wwwroot\\img\\noithat2tc.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\noithat3tc.jpg",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\noithat3tc.jpg",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "img/noithat3tc.jpg",
       "AssetKind": "All",
@@ -1575,10 +2112,17 @@
       "OriginalItemSpec": "wwwroot\\img\\noithat3tc.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\noithat4tc.jpg",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\noithat4tc.jpg",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "img/noithat4tc.jpg",
       "AssetKind": "All",
@@ -1594,10 +2138,17 @@
       "OriginalItemSpec": "wwwroot\\img\\noithat4tc.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\noithat5tc.jpg",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\noithat5tc.jpg",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "img/noithat5tc.jpg",
       "AssetKind": "All",
@@ -1613,10 +2164,17 @@
       "OriginalItemSpec": "wwwroot\\img\\noithat5tc.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\noithat6tc.jpg",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\noithat6tc.jpg",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "img/noithat6tc.jpg",
       "AssetKind": "All",
@@ -1632,10 +2190,17 @@
       "OriginalItemSpec": "wwwroot\\img\\noithat6tc.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\placeholder.jpg",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\placeholder.jpg",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "img/placeholder.jpg",
       "AssetKind": "All",
@@ -1651,10 +2216,17 @@
       "OriginalItemSpec": "wwwroot\\img\\placeholder.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\salebanner.jpg",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\salebanner.jpg",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "img/salebanner.jpg",
       "AssetKind": "All",
@@ -1670,10 +2242,17 @@
       "OriginalItemSpec": "wwwroot\\img\\salebanner.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\snapedit_1732430907358.png",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\snapedit_1732430907358.png",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "img/snapedit_1732430907358.png",
       "AssetKind": "All",
@@ -1689,10 +2268,17 @@
       "OriginalItemSpec": "wwwroot\\img\\snapedit_1732430907358.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\sofa.jpg",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\sofa.jpg",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "img/sofa.jpg",
       "AssetKind": "All",
@@ -1708,10 +2294,17 @@
       "OriginalItemSpec": "wwwroot\\img\\sofa.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\sofa1.jpg",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\sofa1.jpg",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "img/sofa1.jpg",
       "AssetKind": "All",
@@ -1727,10 +2320,17 @@
       "OriginalItemSpec": "wwwroot\\img\\sofa1.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\succes.json",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\succes.json",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "img/succes.json",
       "AssetKind": "All",
@@ -1746,10 +2346,17 @@
       "OriginalItemSpec": "wwwroot\\img\\succes.json"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\successdelete.gif",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\successdelete.gif",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "img/successdelete.gif",
       "AssetKind": "All",
@@ -1765,10 +2372,17 @@
       "OriginalItemSpec": "wwwroot\\img\\successdelete.gif"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\successdelete.webm",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\successdelete.webm",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "img/successdelete.webm",
       "AssetKind": "All",
@@ -1784,10 +2398,17 @@
       "OriginalItemSpec": "wwwroot\\img\\successdelete.webm"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\tintuc.jpg",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\tintuc.jpg",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "img/tintuc.jpg",
       "AssetKind": "All",
@@ -1803,10 +2424,17 @@
       "OriginalItemSpec": "wwwroot\\img\\tintuc.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\tintuc.png",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\tintuc.png",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "img/tintuc.png",
       "AssetKind": "All",
@@ -1822,10 +2450,17 @@
       "OriginalItemSpec": "wwwroot\\img\\tintuc.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\tintuc1.jpg",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\tintuc1.jpg",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "img/tintuc1.jpg",
       "AssetKind": "All",
@@ -1841,10 +2476,17 @@
       "OriginalItemSpec": "wwwroot\\img\\tintuc1.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\tintuc2.jpg",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\tintuc2.jpg",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "img/tintuc2.jpg",
       "AssetKind": "All",
@@ -1860,10 +2502,17 @@
       "OriginalItemSpec": "wwwroot\\img\\tintuc2.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\tintuc3.jpg",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\tintuc3.jpg",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "img/tintuc3.jpg",
       "AssetKind": "All",
@@ -1879,10 +2528,17 @@
       "OriginalItemSpec": "wwwroot\\img\\tintuc3.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\tintuc4.jpg",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\tintuc4.jpg",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "img/tintuc4.jpg",
       "AssetKind": "All",
@@ -1898,6 +2554,7 @@
       "OriginalItemSpec": "wwwroot\\img\\tintuc4.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\tubep.jpg",
       "SourceId": "6TL",
       "SourceType": "Discovered",
@@ -1921,6 +2578,12 @@
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\tutv.jpg",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "img/tutv.jpg",
       "AssetKind": "All",
@@ -1936,10 +2599,17 @@
       "OriginalItemSpec": "wwwroot\\img\\tutv.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\js\\site.js",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\js\\site.js",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
@@ -1955,10 +2625,17 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css",
       "AssetKind": "All",
@@ -1974,10 +2651,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css.map",
       "AssetKind": "All",
@@ -1993,10 +2677,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css",
       "AssetKind": "All",
@@ -2012,10 +2703,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -2031,10 +2729,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css",
       "AssetKind": "All",
@@ -2050,10 +2755,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css.map",
       "AssetKind": "All",
@@ -2069,10 +2781,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css",
       "AssetKind": "All",
@@ -2088,10 +2807,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
       "AssetKind": "All",
@@ -2107,10 +2833,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css",
       "AssetKind": "All",
@@ -2126,10 +2859,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "AssetKind": "All",
@@ -2145,10 +2885,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "AssetKind": "All",
@@ -2164,10 +2911,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "AssetKind": "All",
@@ -2183,10 +2937,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "AssetKind": "All",
@@ -2202,10 +2963,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
       "AssetKind": "All",
@@ -2221,10 +2989,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "AssetKind": "All",
@@ -2240,10 +3015,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
       "AssetKind": "All",
@@ -2259,10 +3041,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css",
       "AssetKind": "All",
@@ -2278,10 +3067,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "AssetKind": "All",
@@ -2297,10 +3093,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "AssetKind": "All",
@@ -2316,10 +3119,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "AssetKind": "All",
@@ -2335,10 +3145,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "AssetKind": "All",
@@ -2354,10 +3171,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
       "AssetKind": "All",
@@ -2373,10 +3197,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "AssetKind": "All",
@@ -2392,10 +3223,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
       "AssetKind": "All",
@@ -2411,10 +3249,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css",
       "AssetKind": "All",
@@ -2430,10 +3275,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css.map",
       "AssetKind": "All",
@@ -2449,10 +3301,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css",
       "AssetKind": "All",
@@ -2468,10 +3327,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
       "AssetKind": "All",
@@ -2487,10 +3353,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "AssetKind": "All",
@@ -2506,10 +3379,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
       "AssetKind": "All",
@@ -2525,10 +3405,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "AssetKind": "All",
@@ -2544,10 +3431,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
       "AssetKind": "All",
@@ -2563,10 +3457,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js",
       "AssetKind": "All",
@@ -2582,10 +3483,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "AssetKind": "All",
@@ -2601,10 +3509,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "AssetKind": "All",
@@ -2620,10 +3535,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "AssetKind": "All",
@@ -2639,10 +3561,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js",
       "AssetKind": "All",
@@ -2658,10 +3587,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js.map",
       "AssetKind": "All",
@@ -2677,10 +3613,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js",
       "AssetKind": "All",
@@ -2696,10 +3639,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
       "AssetKind": "All",
@@ -2715,10 +3665,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js",
       "AssetKind": "All",
@@ -2734,10 +3691,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js.map",
       "AssetKind": "All",
@@ -2753,10 +3717,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js",
       "AssetKind": "All",
@@ -2772,10 +3743,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js.map",
       "AssetKind": "All",
@@ -2791,10 +3769,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\LICENSE",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "lib/bootstrap/LICENSE",
       "AssetKind": "All",
@@ -2810,10 +3795,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -2829,10 +3821,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -2848,10 +3847,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
@@ -2867,10 +3873,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",
@@ -2886,10 +3899,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
       "AssetKind": "All",
@@ -2905,10 +3925,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
       "AssetKind": "All",
@@ -2924,10 +3951,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
@@ -2943,10 +3977,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
@@ -2962,10 +4003,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "lib/jquery-validation/LICENSE.md",
       "AssetKind": "All",
@@ -2981,10 +4029,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
@@ -3000,10 +4055,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -3019,10 +4081,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+=======
+      "Identity": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+>>>>>>> eec166d0c413d5c88bb725fcd46c848a779ac700
       "BasePath": "_content/6TL",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
       "AssetKind": "All",
