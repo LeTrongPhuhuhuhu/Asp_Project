@@ -55,8 +55,7 @@
               "RelativeToolTip": "6TL\\Areas\\Admin\\Views\\Contacts\\QuanLyLienHe.cshtml",
               "ViewState": "AgIAAOMAAAAAAAAAAAAYwPcAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-07T11:14:28.241Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-07T11:14:28.241Z"
             },
             {
               "$type": "Document",
@@ -68,8 +67,7 @@
               "RelativeToolTip": "6TL\\Areas\\Admin\\Controllers\\ContactsController.cs",
               "ViewState": "AgIAAD0AAAAAAAAAAAAQwFIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-07T10:29:38.462Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-07T10:29:38.462Z"
             },
             {
               "$type": "Document",
@@ -81,8 +79,7 @@
               "RelativeToolTip": "6TL\\Program.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-07T11:02:45.325Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-07T11:02:45.325Z"
             },
             {
               "$type": "Document",
@@ -94,8 +91,7 @@
               "RelativeToolTip": "6TL\\Models\\Contact.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAABEAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-07T10:31:02.55Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-07T10:31:02.55Z"
             }
           ]
         }
