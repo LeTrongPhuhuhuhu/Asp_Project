@@ -18,7 +18,6 @@ namespace _6TL.Controllers
 			_context = context;
 		}
 
-		///Khó nhé
 		[HttpPost]
 		[Route("Home/UpdateCartQuantity/{productId}")]
 		public IActionResult UpdateCartQuantity([FromRoute] int productId, [FromBody] int quantity)
@@ -30,8 +29,11 @@ namespace _6TL.Controllers
 					return Json(new { success = false, message = "Số lượng phải lớn hơn 0." });
 				}
 
+				// Sử dụng customerId = 1 tạm thời
+				int customerId = 1;
+
 				var cartItem = _context.Carts
-					.FirstOrDefault(c => c.ProductId == productId);
+					.FirstOrDefault(c => c.ProductId == productId && c.CustomerId == customerId);
 
 				if (cartItem == null)
 				{
@@ -58,7 +60,9 @@ namespace _6TL.Controllers
 				_context.SaveChanges();
 
 				// Tính lại tổng cộng
-				var subtotal = _context.Carts.Sum(c => c.TotalPrice) ?? 0;
+				var subtotal = _context.Carts
+					.Where(c => c.CustomerId == customerId)
+					.Sum(c => c.TotalPrice) ?? 0;
 
 				return Json(new
 				{
@@ -73,6 +77,7 @@ namespace _6TL.Controllers
 				return Json(new { success = false, message = "Đã xảy ra lỗi khi cập nhật giỏ hàng." });
 			}
 		}
+
 		// Trang thanh toán với thông tin sản phẩm
 
 		// Action hiển thị trang thanh toán
@@ -85,8 +90,15 @@ namespace _6TL.Controllers
 	decimal? productPrice = null,
 	string productColor = null,
 	int quantity = 1,
-	bool isBuyNow = false) // Nhận isBuyNow
+	bool isBuyNow = false)
 		{
+			// Kiểm tra xem người dùng đã đăng nhập chưa
+			int customerId = 1; // Tạm thời là 1, sau này sẽ lấy từ session hoặc token người dùng đã đăng nhập
+			if (customerId == 0)  // Giả sử nếu không có customerId, người dùng chưa đăng nhập
+			{
+				return RedirectToAction("Login", "Account");  // Chuyển hướng đến trang đăng nhập
+			}
+
 			if (isBuyNow)
 			{
 				// Logic khi nhấn "Mua Ngay"
@@ -101,7 +113,11 @@ namespace _6TL.Controllers
 			}
 
 			// Logic cho nút Thanh Toán từ giỏ hàng
-			var cartItems = await _context.Carts.Include(c => c.Product).ToListAsync();
+			var cartItems = await _context.Carts
+				.Where(c => c.CustomerId == customerId)  // Lọc giỏ hàng của khách hàng đã đăng nhập
+				.Include(c => c.Product)
+				.ToListAsync();
+
 			if (!cartItems.Any())
 			{
 				return RedirectToAction("GioHang");
@@ -109,12 +125,12 @@ namespace _6TL.Controllers
 
 			// Tính toán và trả về View cho Thanh Toán
 			decimal subtotal = cartItems.Sum(item => item.TotalPrice ?? (item.Price * item.Quantity));
-			decimal shippingFee = 50000; // Phí ship cố định
-			decimal total = subtotal + shippingFee;
+
+			decimal total = subtotal;
 
 			ViewBag.CartItems = cartItems;
 			ViewBag.Subtotal = subtotal;
-			ViewBag.ShippingFee = shippingFee;
+			
 			ViewBag.Total = total;
 
 			return View("TrangThanhToan");
@@ -135,26 +151,49 @@ namespace _6TL.Controllers
 		//}
 
 
-		public IActionResult GioHang()
+		public IActionResult GioHang(int page = 1, int pageSize = 6)
 		{
+			// Giả sử bạn đã có logic để lấy CustomerId từ session hoặc thông tin đăng nhập
+			int customerId = 1; // Tạm thời là 1, sau này sẽ lấy từ session hoặc token người dùng đã đăng nhập
+
+			// Lấy tổng số sản phẩm trong giỏ hàng của khách hàng
+			var totalItems = _context.Carts.Count(c => c.CustomerId == customerId);
+
+			// Tính tổng số trang
+			var totalPages = (int)Math.Ceiling((double)totalItems / pageSize);
+
+			// Lấy danh sách sản phẩm phân trang của khách hàng
 			var cartItems = _context.Carts
+				.Where(c => c.CustomerId == customerId)
 				.Include(c => c.Product)
+				.Skip((page - 1) * pageSize)
+				.Take(pageSize)
 				.ToList();
-			return View(cartItems ?? new List<Cart>());
+
+			// Truyền dữ liệu cần thiết sang View
+			ViewBag.CurrentPage = page;
+			ViewBag.TotalPages = totalPages;
+
+			return View(cartItems);
 		}
 
 		[HttpDelete]
 		[Route("Home/remove/{id}")]
 		public IActionResult RemoveFromCart(int id)
 		{
-			var cartItem = _context.Carts.FirstOrDefault(item => item.ProductId == id);
+			// Giả sử bạn đã có logic để lấy CustomerId từ session hoặc thông tin đăng nhập
+			int customerId = 1; // Tạm thời là 1, sau này sẽ lấy từ session hoặc token người dùng đã đăng nhập
+
+			var cartItem = _context.Carts
+				.FirstOrDefault(item => item.ProductId == id && item.CustomerId == customerId);
+
 			if (cartItem != null)
 			{
 				_context.Carts.Remove(cartItem);
 				_context.SaveChanges();
 
 				// Kiểm tra nếu giỏ hàng trống
-				if (!_context.Carts.Any())
+				if (!_context.Carts.Any(c => c.CustomerId == customerId))
 				{
 					// Trả về kết quả thành công với thông báo giỏ hàng trống
 					return Json(new { success = true, emptyCart = true });
@@ -162,16 +201,20 @@ namespace _6TL.Controllers
 
 				return Json(new { success = true });
 			}
+
 			return Json(new { success = false, message = "Sản phẩm không tồn tại trong giỏ hàng." });
 		}
 
 
-		// Trong HomeController
+
 		[HttpPost]
 		public IActionResult ClearCart()
 		{
-			// Xóa tất cả các sản phẩm trong bảng Cart
-			var cartItems = _context.Carts.ToList();
+			// Giả sử bạn đã có logic để lấy CustomerId từ session hoặc thông tin đăng nhập
+			int customerId = 1; // Tạm thời là 1, sau này sẽ lấy từ session hoặc token người dùng đã đăng nhập
+
+			// Xóa tất cả các sản phẩm trong giỏ hàng của khách hàng
+			var cartItems = _context.Carts.Where(c => c.CustomerId == customerId).ToList();
 
 			if (cartItems.Any())
 			{
@@ -182,19 +225,34 @@ namespace _6TL.Controllers
 			// Chuyển hướng đến trang giỏ hàng
 			return RedirectToAction("GioHang"); // Giả sử view giỏ hàng của bạn tên là "Cart"
 		}
+
 		[HttpGet]
 		public IActionResult GetCartQuantity()
 		{
-			// Giả sử bạn có bảng Cart với cột Quantity
-			var totalQuantity = _context.Carts.Sum(c => c.Quantity);
+			// Giả sử bạn đã có logic để lấy CustomerId từ session hoặc thông tin đăng nhập
+			int customerId = 1; // Tạm thời là 1, sau này sẽ lấy từ session hoặc token người dùng đã đăng nhập
+
+			// Lấy tổng số lượng sản phẩm trong giỏ hàng của khách hàng
+			var totalQuantity = _context.Carts
+				.Where(c => c.CustomerId == customerId)
+				.Sum(c => c.Quantity);
+
 			return Json(new { totalQuantity });
 		}
-		
+
 
 
 		public IActionResult Index()
 		{
-			return View();
+			using (var context = new Db6TLContext())
+			{
+				// Lọc sản phẩm nổi bật với `Rating >= 4`
+				var featuredProducts = context.Products
+					.Where(p => p.Rating >= 4) // Tiêu chí lọc: Rating >= 4
+					.ToList();
+
+				return View(featuredProducts); // Truyền danh sách sản phẩm nổi bật vào View
+			}
 		}
 
 		public IActionResult Privacy()
