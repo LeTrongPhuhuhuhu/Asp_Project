@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Z5gs1wkjda92CIBv+uuikg/GWprCh0S1FyADA52NfWA=",
+  "Hash": "Uu9AYisZVLeNcnriK20LSby/vMD4BfcAAT2p2TLUvy4=",
   "Source": "6TL",
   "BasePath": "_content/6TL",
   "Mode": "Default",
@@ -815,6 +815,25 @@
       "OriginalItemSpec": "wwwroot\\images\\products\\4ab7c087-8b43-42c2-b833-e6a307e5552b_tailung.jpg"
     },
     {
+      "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\images\\products\\6cfbc799-3797-43f2-b479-be7358ad8fd9_giaytt.jpg",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+      "BasePath": "_content/6TL",
+      "RelativePath": "images/products/6cfbc799-3797-43f2-b479-be7358ad8fd9_giaytt.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\products\\6cfbc799-3797-43f2-b479-be7358ad8fd9_giaytt.jpg"
+    },
+    {
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\images\\products\\7971a5bb-b50d-4919-80c0-50af2e91d6cd_tailung.jpg",
       "SourceId": "6TL",
       "SourceType": "Discovered",
@@ -1402,6 +1421,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\ghedabeo.jpg"
+    },
+    {
+      "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\giaytt.jpg",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+      "BasePath": "_content/6TL",
+      "RelativePath": "img/giaytt.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\giaytt.jpg"
     },
     {
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\gioithieu.jpg",

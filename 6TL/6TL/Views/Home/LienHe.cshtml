@@ -48,7 +48,8 @@
             <input asp-for="Name" type="text" id="name" name="Name" required>
 
             <label for="last-name">Số Điện Thoại (Bắt Buộc)</label>
-            <input asp-for="Phone" type="text" id="last-name" name="Phone" required>
+            <input asp-for="Phone" type="text" id="last-name" name="Phone" required title="Số điện thoại phải có đúng 10 chữ số"
+                   oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10);" />
 
             <label for="email">Email (Bắt Buộc)</label>
             <input asp-for="Email" type="email" id="email" name="Email" required>

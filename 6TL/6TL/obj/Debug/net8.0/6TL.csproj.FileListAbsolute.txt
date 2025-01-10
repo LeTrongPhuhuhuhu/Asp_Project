@@ -1,65 +1,3 @@
-E:\Asp Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\appsettings.Development.json
-E:\Asp Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\appsettings.json
-E:\Asp Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.staticwebassets.runtime.json
-E:\Asp Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.exe
-E:\Asp Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.deps.json
-E:\Asp Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.runtimeconfig.json
-E:\Asp Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.dll
-E:\Asp Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.pdb
-E:\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.GeneratedMSBuildEditorConfig.editorconfig
-E:\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.AssemblyInfoInputs.cache
-E:\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.AssemblyInfo.cs
-E:\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.csproj.CoreCompileInputs.cache
-E:\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.MvcApplicationPartsAssemblyInfo.cache
-E:\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.RazorAssemblyInfo.cache
-E:\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.RazorAssemblyInfo.cs
-E:\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.sourcelink.json
-E:\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets.build.json
-E:\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets.development.json
-E:\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets\msbuild.6TL.Microsoft.AspNetCore.StaticWebAssets.props
-E:\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets\msbuild.build.6TL.props
-E:\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.6TL.props
-E:\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.6TL.props
-E:\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets.pack.json
-E:\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
-E:\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\scopedcss\bundle\6TL.styles.css
-E:\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\scopedcss\projectbundle\6TL.bundle.scp.css
-E:\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.dll
-E:\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\refint\6TL.dll
-E:\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.pdb
-E:\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.genruntimeconfig.cache
-E:\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\ref\6TL.dll
-D:\Đồ Án Web\Asp Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\appsettings.Development.json
-D:\Đồ Án Web\Asp Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\appsettings.json
-D:\Đồ Án Web\Asp Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.staticwebassets.runtime.json
-D:\Đồ Án Web\Asp Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.exe
-D:\Đồ Án Web\Asp Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.deps.json
-D:\Đồ Án Web\Asp Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.runtimeconfig.json
-D:\Đồ Án Web\Asp Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.dll
-D:\Đồ Án Web\Asp Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.pdb
-D:\Đồ Án Web\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.GeneratedMSBuildEditorConfig.editorconfig
-D:\Đồ Án Web\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.AssemblyInfoInputs.cache
-D:\Đồ Án Web\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.AssemblyInfo.cs
-D:\Đồ Án Web\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.csproj.CoreCompileInputs.cache
-D:\Đồ Án Web\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.MvcApplicationPartsAssemblyInfo.cache
-D:\Đồ Án Web\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.RazorAssemblyInfo.cache
-D:\Đồ Án Web\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.RazorAssemblyInfo.cs
-D:\Đồ Án Web\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.sourcelink.json
-D:\Đồ Án Web\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets.build.json
-D:\Đồ Án Web\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets.development.json
-D:\Đồ Án Web\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets\msbuild.6TL.Microsoft.AspNetCore.StaticWebAssets.props
-D:\Đồ Án Web\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets\msbuild.build.6TL.props
-D:\Đồ Án Web\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.6TL.props
-D:\Đồ Án Web\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.6TL.props
-D:\Đồ Án Web\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets.pack.json
-D:\Đồ Án Web\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
-D:\Đồ Án Web\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\scopedcss\bundle\6TL.styles.css
-D:\Đồ Án Web\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\scopedcss\projectbundle\6TL.bundle.scp.css
-D:\Đồ Án Web\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.dll
-D:\Đồ Án Web\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\refint\6TL.dll
-D:\Đồ Án Web\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.pdb
-D:\Đồ Án Web\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.genruntimeconfig.cache
-D:\Đồ Án Web\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\ref\6TL.dll
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\appsettings.Development.json
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\appsettings.json
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.staticwebassets.runtime.json
@@ -68,573 +6,37 @@ D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.deps.json
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.runtimeconfig.json
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.dll
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.pdb
-D:\DoAnAsp\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.GeneratedMSBuildEditorConfig.editorconfig
-D:\DoAnAsp\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.AssemblyInfoInputs.cache
-D:\DoAnAsp\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.AssemblyInfo.cs
-D:\DoAnAsp\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.csproj.CoreCompileInputs.cache
-D:\DoAnAsp\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.MvcApplicationPartsAssemblyInfo.cache
-D:\DoAnAsp\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.RazorAssemblyInfo.cache
-D:\DoAnAsp\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.RazorAssemblyInfo.cs
-D:\DoAnAsp\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.sourcelink.json
-D:\DoAnAsp\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets.build.json
-D:\DoAnAsp\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets.development.json
-D:\DoAnAsp\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets\msbuild.6TL.Microsoft.AspNetCore.StaticWebAssets.props
-D:\DoAnAsp\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets\msbuild.build.6TL.props
-D:\DoAnAsp\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.6TL.props
-D:\DoAnAsp\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.6TL.props
-D:\DoAnAsp\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets.pack.json
-D:\DoAnAsp\Asp_Project\6TL\6TL\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
-D:\DoAnAsp\Asp_Project\6TL\6TL\obj\Debug\net8.0\scopedcss\bundle\6TL.styles.css
-D:\DoAnAsp\Asp_Project\6TL\6TL\obj\Debug\net8.0\scopedcss\projectbundle\6TL.bundle.scp.css
-D:\DoAnAsp\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\obj\Debug\net8.0\refint\6TL.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.pdb
-D:\DoAnAsp\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.genruntimeconfig.cache
-D:\DoAnAsp\Asp_Project\6TL\6TL\obj\Debug\net8.0\ref\6TL.dll
-E:\Asp Project\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\appsettings.Development.json
-E:\Asp Project\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\appsettings.json
-E:\Asp Project\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.staticwebassets.runtime.json
-E:\Asp Project\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.exe
-E:\Asp Project\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.deps.json
-E:\Asp Project\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.runtimeconfig.json
-E:\Asp Project\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.dll
-E:\Asp Project\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.pdb
-E:\Asp Project\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.GeneratedMSBuildEditorConfig.editorconfig
-E:\Asp Project\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.AssemblyInfoInputs.cache
-E:\Asp Project\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.AssemblyInfo.cs
-E:\Asp Project\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.csproj.CoreCompileInputs.cache
-E:\Asp Project\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.MvcApplicationPartsAssemblyInfo.cache
-E:\Asp Project\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.RazorAssemblyInfo.cache
-E:\Asp Project\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.RazorAssemblyInfo.cs
-E:\Asp Project\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.sourcelink.json
-E:\Asp Project\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets.build.json
-E:\Asp Project\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets.development.json
-E:\Asp Project\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets\msbuild.6TL.Microsoft.AspNetCore.StaticWebAssets.props
-E:\Asp Project\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets\msbuild.build.6TL.props
-E:\Asp Project\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.6TL.props
-E:\Asp Project\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.6TL.props
-E:\Asp Project\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets.pack.json
-E:\Asp Project\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
-E:\Asp Project\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\scopedcss\bundle\6TL.styles.css
-E:\Asp Project\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\scopedcss\projectbundle\6TL.bundle.scp.css
-E:\Asp Project\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.dll
-E:\Asp Project\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\refint\6TL.dll
-E:\Asp Project\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.pdb
-E:\Asp Project\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.genruntimeconfig.cache
-E:\Asp Project\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\ref\6TL.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\appsettings.Development.json
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\appsettings.json
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.staticwebassets.runtime.json
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.exe
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.deps.json
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.runtimeconfig.json
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.pdb
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.GeneratedMSBuildEditorConfig.editorconfig
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.AssemblyInfoInputs.cache
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.AssemblyInfo.cs
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.csproj.CoreCompileInputs.cache
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.MvcApplicationPartsAssemblyInfo.cache
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.RazorAssemblyInfo.cache
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.RazorAssemblyInfo.cs
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.sourcelink.json
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets.build.json
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets.development.json
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets\msbuild.6TL.Microsoft.AspNetCore.StaticWebAssets.props
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets\msbuild.build.6TL.props
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.6TL.props
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.6TL.props
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets.pack.json
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\obj\Debug\net8.0\scopedcss\bundle\6TL.styles.css
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\obj\Debug\net8.0\scopedcss\projectbundle\6TL.bundle.scp.css
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\obj\Debug\net8.0\refint\6TL.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.pdb
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.genruntimeconfig.cache
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\obj\Debug\net8.0\ref\6TL.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\appsettings.Development.json
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\appsettings.json
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.staticwebassets.runtime.json
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.staticwebassets.endpoints.json
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.exe
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.deps.json
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.runtimeconfig.json
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.pdb
-E:\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.GeneratedMSBuildEditorConfig.editorconfig
-E:\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.AssemblyInfoInputs.cache
-E:\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.AssemblyInfo.cs
-E:\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.csproj.CoreCompileInputs.cache
-E:\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.MvcApplicationPartsAssemblyInfo.cache
-E:\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.RazorAssemblyInfo.cache
-E:\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.RazorAssemblyInfo.cs
-E:\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.sourcelink.json
-E:\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
-E:\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\scopedcss\bundle\6TL.styles.css
-E:\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\scopedcss\projectbundle\6TL.bundle.scp.css
-E:\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets.build.json
-E:\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets.development.json
-E:\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-E:\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets\msbuild.6TL.Microsoft.AspNetCore.StaticWebAssets.props
-E:\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets\msbuild.6TL.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
-E:\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets\msbuild.build.6TL.props
-E:\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.6TL.props
-E:\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.6TL.props
-E:\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets.pack.json
-E:\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
-E:\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\refint\6TL.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.pdb
-E:\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.genruntimeconfig.cache
-E:\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\ref\6TL.dll
-D:\Asp Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\appsettings.Development.json
-D:\Asp Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\appsettings.json
-D:\Asp Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.staticwebassets.runtime.json
-D:\Asp Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.exe
-D:\Asp Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.deps.json
-D:\Asp Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.runtimeconfig.json
-D:\Asp Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.dll
-D:\Asp Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.pdb
-D:\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.GeneratedMSBuildEditorConfig.editorconfig
-D:\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.AssemblyInfoInputs.cache
-D:\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.AssemblyInfo.cs
-D:\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.csproj.CoreCompileInputs.cache
-D:\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.MvcApplicationPartsAssemblyInfo.cache
-D:\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.RazorAssemblyInfo.cache
-D:\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.RazorAssemblyInfo.cs
-D:\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.sourcelink.json
-D:\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets.build.json
-D:\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets.development.json
-D:\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets\msbuild.6TL.Microsoft.AspNetCore.StaticWebAssets.props
-D:\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets\msbuild.build.6TL.props
-D:\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.6TL.props
-D:\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.6TL.props
-D:\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets.pack.json
-D:\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
-D:\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\scopedcss\bundle\6TL.styles.css
-D:\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\scopedcss\projectbundle\6TL.bundle.scp.css
-D:\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.dll
-D:\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\refint\6TL.dll
-D:\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.pdb
-D:\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.genruntimeconfig.cache
-D:\Asp Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\ref\6TL.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\appsettings.Development.json
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\appsettings.json
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.staticwebassets.runtime.json
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.exe
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.deps.json
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.runtimeconfig.json
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.pdb
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.GeneratedMSBuildEditorConfig.editorconfig
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.AssemblyInfoInputs.cache
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.AssemblyInfo.cs
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.csproj.CoreCompileInputs.cache
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.MvcApplicationPartsAssemblyInfo.cache
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.RazorAssemblyInfo.cache
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.RazorAssemblyInfo.cs
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.sourcelink.json
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets.build.json
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets.development.json
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets\msbuild.6TL.Microsoft.AspNetCore.StaticWebAssets.props
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets\msbuild.build.6TL.props
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.6TL.props
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.6TL.props
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets.pack.json
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\obj\Debug\net8.0\scopedcss\bundle\6TL.styles.css
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\obj\Debug\net8.0\scopedcss\projectbundle\6TL.bundle.scp.css
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\obj\Debug\net8.0\refint\6TL.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.pdb
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.genruntimeconfig.cache
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\obj\Debug\net8.0\ref\6TL.dll
-D:\Đồ Án Web\Asp_Project\6TL\6TL\bin\Debug\net8.0\appsettings.Development.json
-D:\Đồ Án Web\Asp_Project\6TL\6TL\bin\Debug\net8.0\appsettings.json
-D:\Đồ Án Web\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.staticwebassets.runtime.json
-D:\Đồ Án Web\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.exe
-D:\Đồ Án Web\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.deps.json
-D:\Đồ Án Web\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.runtimeconfig.json
-D:\Đồ Án Web\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.dll
-D:\Đồ Án Web\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.pdb
-D:\Đồ Án Web\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.GeneratedMSBuildEditorConfig.editorconfig
-D:\Đồ Án Web\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.AssemblyInfoInputs.cache
-D:\Đồ Án Web\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.AssemblyInfo.cs
-D:\Đồ Án Web\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.csproj.CoreCompileInputs.cache
-D:\Đồ Án Web\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.MvcApplicationPartsAssemblyInfo.cache
-D:\Đồ Án Web\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.RazorAssemblyInfo.cache
-D:\Đồ Án Web\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.RazorAssemblyInfo.cs
-D:\Đồ Án Web\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.sourcelink.json
-D:\Đồ Án Web\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets.build.json
-D:\Đồ Án Web\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets.development.json
-D:\Đồ Án Web\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets\msbuild.6TL.Microsoft.AspNetCore.StaticWebAssets.props
-D:\Đồ Án Web\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets\msbuild.build.6TL.props
-D:\Đồ Án Web\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.6TL.props
-D:\Đồ Án Web\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.6TL.props
-D:\Đồ Án Web\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets.pack.json
-D:\Đồ Án Web\Asp_Project\6TL\6TL\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
-D:\Đồ Án Web\Asp_Project\6TL\6TL\obj\Debug\net8.0\scopedcss\bundle\6TL.styles.css
-D:\Đồ Án Web\Asp_Project\6TL\6TL\obj\Debug\net8.0\scopedcss\projectbundle\6TL.bundle.scp.css
-D:\Đồ Án Web\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.dll
-D:\Đồ Án Web\Asp_Project\6TL\6TL\obj\Debug\net8.0\refint\6TL.dll
-D:\Đồ Án Web\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.pdb
-D:\Đồ Án Web\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.genruntimeconfig.cache
-D:\Đồ Án Web\Asp_Project\6TL\6TL\obj\Debug\net8.0\ref\6TL.dll
-D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\bin\Debug\net8.0\appsettings.Development.json
-D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\bin\Debug\net8.0\appsettings.json
-D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.staticwebassets.runtime.json
-D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.exe
-D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.deps.json
-D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.runtimeconfig.json
-D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.dll
-D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.pdb
-D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.GeneratedMSBuildEditorConfig.editorconfig
-D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.AssemblyInfoInputs.cache
-D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.AssemblyInfo.cs
-D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.csproj.CoreCompileInputs.cache
-D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.MvcApplicationPartsAssemblyInfo.cache
-D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.RazorAssemblyInfo.cache
-D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.RazorAssemblyInfo.cs
-D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.sourcelink.json
-D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets.build.json
-D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets.development.json
-D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets\msbuild.6TL.Microsoft.AspNetCore.StaticWebAssets.props
-D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets\msbuild.build.6TL.props
-D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.6TL.props
-D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.6TL.props
-D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets.pack.json
-D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
-D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\scopedcss\bundle\6TL.styles.css
-D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\scopedcss\projectbundle\6TL.bundle.scp.css
-D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.dll
-D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\refint\6TL.dll
-D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.pdb
-D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.genruntimeconfig.cache
-D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\obj\Debug\net8.0\ref\6TL.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\Azure.Core.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\Azure.Identity.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\Humanizer.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Build.Locator.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Extensions.Caching.Abstractions.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Identity.Client.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\Mono.TextTemplating.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.ClientModel.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.CodeDom.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Composition.AttributedModel.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Composition.Convention.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Composition.Hosting.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Composition.Runtime.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Composition.TypedParts.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Drawing.Common.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Formats.Asn1.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.IO.Pipelines.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Memory.Data.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Runtime.Caching.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Security.Permissions.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Text.Encodings.Web.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Text.Json.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Windows.Extensions.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
-E:\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.csproj.AssemblyReference.cache
-E:\Asp_Project\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.csproj.Up2Date
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\appsettings.Development.json
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\appsettings.json
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.staticwebassets.runtime.json
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.staticwebassets.endpoints.json
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.exe
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.deps.json
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.runtimeconfig.json
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\6TL.pdb
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\Azure.Core.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\Azure.Identity.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\Humanizer.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Build.Locator.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Extensions.Caching.Abstractions.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Identity.Client.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\Mono.TextTemplating.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.ClientModel.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.CodeDom.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Composition.AttributedModel.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Composition.Convention.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Composition.Hosting.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Composition.Runtime.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Composition.TypedParts.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Drawing.Common.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Formats.Asn1.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.IO.Pipelines.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Memory.Data.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Runtime.Caching.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Security.Permissions.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Text.Encodings.Web.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Text.Json.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Windows.Extensions.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
-E:\res\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
-E:\res\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.csproj.AssemblyReference.cache
-E:\res\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.GeneratedMSBuildEditorConfig.editorconfig
-E:\res\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.AssemblyInfoInputs.cache
-E:\res\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.AssemblyInfo.cs
-E:\res\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.csproj.CoreCompileInputs.cache
-E:\res\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.MvcApplicationPartsAssemblyInfo.cache
-E:\res\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.RazorAssemblyInfo.cache
-E:\res\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.RazorAssemblyInfo.cs
-E:\res\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.sourcelink.json
-E:\res\Asp_Project\6TL\6TL\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
-E:\res\Asp_Project\6TL\6TL\obj\Debug\net8.0\scopedcss\bundle\6TL.styles.css
-E:\res\Asp_Project\6TL\6TL\obj\Debug\net8.0\scopedcss\projectbundle\6TL.bundle.scp.css
-E:\res\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets.build.json
-E:\res\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets.development.json
-E:\res\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-E:\res\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets\msbuild.6TL.Microsoft.AspNetCore.StaticWebAssets.props
-E:\res\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets\msbuild.6TL.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
-E:\res\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets\msbuild.build.6TL.props
-E:\res\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.6TL.props
-E:\res\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.6TL.props
-E:\res\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets.pack.json
-E:\res\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
-E:\res\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.csproj.Up2Date
-E:\res\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.dll
-E:\res\Asp_Project\6TL\6TL\obj\Debug\net8.0\refint\6TL.dll
-E:\res\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.pdb
-E:\res\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.genruntimeconfig.cache
-E:\res\Asp_Project\6TL\6TL\obj\Debug\net8.0\ref\6TL.dll
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Azure.Core.dll
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Azure.Identity.dll
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Humanizer.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.AspNetCore.Authorization.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.AspNetCore.Components.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Forms.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.AspNetCore.Components.QuickGrid.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Web.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.AspNetCore.Metadata.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.AspNetCore.Razor.Language.dll
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Build.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Build.Framework.dll
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Build.Locator.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.CodeAnalysis.AnalyzerUtilities.dll
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Features.dll
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.CodeAnalysis.Elfie.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.CodeAnalysis.Features.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.CodeAnalysis.Razor.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.CodeAnalysis.Scripting.dll
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.dll
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.DiaSymReader.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.DotNet.Scaffolding.Shared.dll
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
@@ -658,9 +60,28 @@ D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.JSInterop.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.NET.StringTools.dll
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\dotnet-aspnet-codegenerator-design.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Mono.TextTemplating.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\NuGet.Common.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\NuGet.Configuration.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\NuGet.DependencyResolver.Core.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\NuGet.Frameworks.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\NuGet.LibraryModel.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\NuGet.Packaging.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\NuGet.ProjectModel.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\NuGet.Protocol.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\NuGet.Versioning.dll
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.ClientModel.dll
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.CodeDom.dll
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Composition.AttributedModel.dll
@@ -675,402 +96,13 @@ D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Formats.Asn1.dll
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.IO.Pipelines.dll
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Memory.Data.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Reflection.MetadataLoadContext.dll
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Runtime.Caching.dll
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Security.Permissions.dll
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Text.Encodings.Web.dll
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Text.Json.dll
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Windows.Extensions.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.csproj.AssemblyReference.cache
-D:\DoAnAsp\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.csproj.CopyComplete
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\Azure.Core.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\Azure.Identity.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\Humanizer.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Build.Locator.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Extensions.Caching.Abstractions.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Identity.Client.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\Mono.TextTemplating.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.ClientModel.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.CodeDom.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Composition.AttributedModel.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Composition.Convention.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Composition.Hosting.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Composition.Runtime.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Composition.TypedParts.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Drawing.Common.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Formats.Asn1.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.IO.Pipelines.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Memory.Data.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Runtime.Caching.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Security.Permissions.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Text.Encodings.Web.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Text.Json.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Windows.Extensions.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.csproj.AssemblyReference.cache
-D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.csproj.Up2Date
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\Azure.Core.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\Azure.Identity.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\Humanizer.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Build.Locator.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Extensions.Caching.Abstractions.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Identity.Client.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\Mono.TextTemplating.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.ClientModel.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.CodeDom.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Composition.AttributedModel.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Composition.Convention.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Composition.Hosting.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Composition.Runtime.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Composition.TypedParts.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Drawing.Common.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Formats.Asn1.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.IO.Pipelines.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Memory.Data.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Runtime.Caching.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Security.Permissions.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Text.Encodings.Web.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Text.Json.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Windows.Extensions.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.csproj.AssemblyReference.cache
-D:\ASP\ASP_DoAn\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.csproj.Up2Date
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.AspNetCore.Authorization.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.AspNetCore.Components.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Forms.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.AspNetCore.Components.QuickGrid.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Web.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.AspNetCore.Metadata.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.AspNetCore.Razor.Language.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Build.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Build.Framework.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.CodeAnalysis.AnalyzerUtilities.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Features.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.CodeAnalysis.Elfie.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.CodeAnalysis.Features.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.CodeAnalysis.Razor.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.CodeAnalysis.Scripting.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.DiaSymReader.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.DotNet.Scaffolding.Shared.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.JSInterop.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.NET.StringTools.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\dotnet-aspnet-codegenerator-design.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Newtonsoft.Json.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\NuGet.Common.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\NuGet.Configuration.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\NuGet.DependencyResolver.Core.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\NuGet.Frameworks.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\NuGet.LibraryModel.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\NuGet.Packaging.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\NuGet.ProjectModel.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\NuGet.Protocol.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\NuGet.Versioning.dll
-D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\System.Reflection.MetadataLoadContext.dll
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\af\Humanizer.resources.dll
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\ar\Humanizer.resources.dll
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\az\Humanizer.resources.dll
@@ -1119,6 +151,32 @@ D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\vi\Humanizer.resources.dll
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-CN\Humanizer.resources.dll
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hans\Humanizer.resources.dll
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hant\Humanizer.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
@@ -1132,6 +190,19 @@ D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Features.resources.dll
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Features.resources.dll
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Features.resources.dll
@@ -1158,7 +229,66 @@ D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Script
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Scripting.resources.dll
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Scripting.resources.dll
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\win\lib\net7.0\Microsoft.Win32.SystemEvents.dll
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.csproj.AssemblyReference.cache
+D:\DoAnAsp\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.GeneratedMSBuildEditorConfig.editorconfig
+D:\DoAnAsp\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.AssemblyInfoInputs.cache
+D:\DoAnAsp\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.AssemblyInfo.cs
+D:\DoAnAsp\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.csproj.CoreCompileInputs.cache
+D:\DoAnAsp\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.MvcApplicationPartsAssemblyInfo.cache
+D:\DoAnAsp\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.RazorAssemblyInfo.cache
+D:\DoAnAsp\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.RazorAssemblyInfo.cs
+D:\DoAnAsp\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.sourcelink.json
+D:\DoAnAsp\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets.build.json
+D:\DoAnAsp\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets.development.json
+D:\DoAnAsp\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets\msbuild.6TL.Microsoft.AspNetCore.StaticWebAssets.props
+D:\DoAnAsp\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets\msbuild.build.6TL.props
+D:\DoAnAsp\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.6TL.props
+D:\DoAnAsp\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.6TL.props
+D:\DoAnAsp\Asp_Project\6TL\6TL\obj\Debug\net8.0\staticwebassets.pack.json
+D:\DoAnAsp\Asp_Project\6TL\6TL\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\DoAnAsp\Asp_Project\6TL\6TL\obj\Debug\net8.0\scopedcss\bundle\6TL.styles.css
+D:\DoAnAsp\Asp_Project\6TL\6TL\obj\Debug\net8.0\scopedcss\projectbundle\6TL.bundle.scp.css
+D:\DoAnAsp\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.csproj.CopyComplete
+D:\DoAnAsp\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\obj\Debug\net8.0\refint\6TL.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.pdb
+D:\DoAnAsp\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.genruntimeconfig.cache
+D:\DoAnAsp\Asp_Project\6TL\6TL\obj\Debug\net8.0\ref\6TL.dll

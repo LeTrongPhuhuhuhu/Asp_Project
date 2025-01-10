@@ -157,6 +157,10 @@
       "PackagePath": "staticwebassets\\images\\products\\4ab7c087-8b43-42c2-b833-e6a307e5552b_tailung.jpg"
     },
     {
+      "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\images\\products\\6cfbc799-3797-43f2-b479-be7358ad8fd9_giaytt.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\6cfbc799-3797-43f2-b479-be7358ad8fd9_giaytt.jpg"
+    },
+    {
       "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\images\\products\\7971a5bb-b50d-4919-80c0-50af2e91d6cd_tailung.jpg",
       "PackagePath": "staticwebassets\\images\\products\\7971a5bb-b50d-4919-80c0-50af2e91d6cd_tailung.jpg"
     },
@@ -279,6 +283,10 @@
     {
       "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\ghedabeo.jpg",
       "PackagePath": "staticwebassets\\img\\ghedabeo.jpg"
+    },
+    {
+      "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\giaytt.jpg",
+      "PackagePath": "staticwebassets\\img\\giaytt.jpg"
     },
     {
       "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\gioithieu.jpg",

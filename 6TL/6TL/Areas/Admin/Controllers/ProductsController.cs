@@ -247,6 +247,12 @@ namespace _6TL.Areas.Admin.Controllers
             ViewBag.Categories = new SelectList(_context.Categories, "CategoryId", "CategoryName", product.CategoryId);
             ViewBag.Suppliers = new SelectList(_context.Suppliers, "SupplierId", "SupplierName", product.SupplierId);
             ViewBag.Colors = _context.Colors.ToList();
+            ViewBag.ProductColors = _context.ProductColors
+     .Where(pc => pc.ProductId == ProductId) // Lấy tất cả các màu liên quan đến sản phẩm
+     .Include(pc => pc.Color) // Bao gồm thông tin chi tiết màu sắc
+     .ToList();
+
+
 
 
             // Trả về view với sản phẩm đã được lấy từ cơ sở dữ liệu
@@ -256,12 +262,13 @@ namespace _6TL.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult SuaSanPham(int id,Product product, IFormFile? imageFile, int? ColorId)
+        public IActionResult SuaSanPham(int id, Product product, IFormFile? imageFile, int? ColorId)
         {
             if (id != product.ProductId)
             {
                 return BadRequest("ID mismatch");
             }
+
             try
             {
                 var existingProduct = _context.Products.Find(product.ProductId);
@@ -277,23 +284,32 @@ namespace _6TL.Areas.Admin.Controllers
                 existingProduct.ProductDescription = product.ProductDescription;
                 existingProduct.CategoryId = product.CategoryId;
                 existingProduct.SupplierId = product.SupplierId;
+
                 // Cập nhật màu sắc nếu có
                 if (ColorId.HasValue)
                 {
-                    var existingColor = _context.ProductColors.FirstOrDefault(c => c.ColorId == ColorId.Value);
-                    if (existingColor != null)
+                    var existingColor = _context.ProductColors
+                        .Where(pc => pc.ProductId == product.ProductId)
+                        .ToList();
+
+                    // Remove existing colors that are not selected anymore
+                    var colorsToRemove = existingColor
+                        .Where(pc => pc.ColorId != ColorId.Value)
+                        .ToList();
+
+                    _context.ProductColors.RemoveRange(colorsToRemove);
+
+                    // Add new color if not already added
+                    if (!existingColor.Any(pc => pc.ColorId == ColorId.Value))
                     {
-                        // Kiểm tra nếu sản phẩm chưa có màu sắc này, thì thêm vào
-                        if (!existingProduct.ProductColors.Any(pc => pc.ColorId == ColorId.Value))
+                        existingProduct.ProductColors.Add(new ProductColor
                         {
-                            existingProduct.ProductColors.Add(new ProductColor
-                            {
-                                ProductId = product.ProductId,
-                                ColorId = ColorId.Value
-                            });
-                        }
+                            ProductId = product.ProductId,
+                            ColorId = ColorId.Value
+                        });
                     }
                 }
+
                 // Xử lý hình ảnh nếu có upload mới
                 if (imageFile != null && imageFile.Length > 0)
                 {
@@ -339,9 +355,10 @@ namespace _6TL.Areas.Admin.Controllers
             catch (Exception ex)
             {
                 Console.WriteLine($"Error: {ex.Message}");
-                TempData["ErrorMessage"] = "Có lỗi xảy ra, vui lòng thử lại.";
-                return View(product);
+                TempData["ErrorMessage"] = "Có lỗi xảy ra trong quá trình cập nhật sản phẩm. Vui lòng thử lại sau.";
+                return View(product); // return the same view with the product to show error
             }
         }
+
     }
 }

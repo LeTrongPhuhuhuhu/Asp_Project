@@ -25,16 +25,33 @@
             <input type="text" id="Price" name="Price" value="@Model.Price" required />
         </div>
         <div class="form-row_ssp">
-        <label for="color">Màu sắc</label>
-       <select id="color" name="colorId" class="form-control">
-        @foreach (var color in ViewBag.Colors as List<Color>)
-        {
-        <option value="@color.ColorId">
-            @color.ColorName 
-        </option>
-        }
-        </select>
+            <label for="color">Màu sắc</label>
+            <div class="product-colors">
+                @foreach (var productColor in ViewBag.ProductColors as List<ProductColor>)
+                {
+                    <div class="color-item">
+                        <!-- Dropdown hiển thị toàn bộ màu sắc -->
+                        <select name="colorId" class="form-control" onchange="updateQuantity()">
+                            <option value="@productColor.ColorId" data-quantity="@productColor.Quantity">
+                                @productColor.Color.ColorName
+                            </option>
+                            @foreach (var color in ViewBag.Colors as List<Color>)
+                            {
+                                <option value="@color.ColorId" data-quantity="@productColor.Quantity">
+                                    @color.ColorName
+                                </option>
+                            }
+                        </select>
 
+                        <!-- Input số lượng cho từng màu -->
+                        <input type="number" name="quantities[@productColor.ColorId]"
+                               value="@productColor.Quantity" min="1" class="form-control" />
+                    </div>
+                }
+            </div>
+
+            @* <input type="color" id="them-mau_ssp" title="Thêm màu mới">
+            <button type="button" class="add-color-btn_ssp" onclick="addColor()">+</button> *@
 
         </div>
 
@@ -80,5 +97,18 @@
             <button type="submit" class="save-btn_ssp">Lưu thay đổi</button>
             <a href="/Admin/Home/QuanLySanPham" class="cancel-btn_ssp">Hủy</a>
         </div>
+
     </form>
+
 </div>
+    <script>
+        function updateQuantity(selectElement) {
+            var selectedOption = selectElement.options[selectElement.selectedIndex];
+            var quantity = selectedOption.getAttribute("data-quantity");
+
+            // Tìm input số lượng tương ứng và cập nhật giá trị
+            var quantityInput = selectElement.closest('.color-item').querySelector('input[type="number"]');
+            quantityInput.value = quantity || 0;
+        }
+</script>
+
