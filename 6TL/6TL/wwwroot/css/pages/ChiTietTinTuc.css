@@ -141,15 +141,61 @@ body {
 	}
 }
 
-.news-image_cttt {
-	text-align: center;
-	margin: 20px 0;
+.news-title_cttt {
+	text-align: center; /* Canh giữa nội dung */
+	margin: 20px auto; /* Tạo khoảng cách xung quanh */
+	max-width: 800px; /* Định chiều rộng tối đa để nội dung không quá dài */
+	padding: 15px; /* Khoảng cách nội dung bên trong */
+	border: 1px solid #ddd; /* Đường viền nhẹ */
+	border-radius: 8px; /* Bo góc nhẹ cho phần khung */
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tạo bóng nhẹ */
+	background-color: #f9f9f9; /* Màu nền nhạt */
 }
 
-.detail-image_cttt {
-	max-width: 100%;
-	height: auto;
-	border-radius: 8px;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	/* CSS cho tiêu đề */
+	.news-title_cttt h1 {
+		font-size: 2em; /* Kích thước chữ lớn */
+		color: #333; /* Màu chữ chính */
+		margin-bottom: 15px; /* Tạo khoảng cách giữa tiêu đề và hình ảnh */
+		font-family: 'Arial', sans-serif; /* Phông chữ phổ biến */
+		text-transform: capitalize; /* Viết hoa chữ cái đầu */
+		line-height: 1.4; /* Dãn dòng cho dễ đọc */
+	}
+
+	/* CSS cho hình ảnh */
+	.news-title_cttt img {
+		max-width: 100%; /* Đảm bảo hình ảnh không vượt quá chiều rộng container */
+		height: auto; /* Duy trì tỷ lệ hình ảnh */
+		border-radius: 6px; /* Bo góc hình ảnh */
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Tạo bóng nhẹ cho hình */
+		margin-top: 10px; /* Tạo khoảng cách với tiêu đề */
+	}
+
+/* Container chính */
+.news-date_cttt {
+	margin-left: 55px;
+    display: flex; /* Sử dụng flex để bố trí ngang */
+    align-items: center; /* Căn giữa nội dung theo chiều dọc */
+    background-color: #ffffff; /* Nền trắng */
+    padding: 10px 15px; /* Khoảng cách bên trong */
+    border: 1px solid #e0e0e0; /* Đường viền nhạt */
+    border-radius: 6px; /* Bo góc mềm mại */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bóng nhẹ */
+    max-width: 300px; /* Giới hạn chiều rộng */
+    margin: 20px 0; /* Khoảng cách trên dưới */
+    font-family: 'Arial', sans-serif; /* Font chữ dễ đọc */
 }
 
+/* Ngày tháng năm */
+.news-date_cttt span {
+    font-size: 1.2em; /* Kích thước chữ vừa phải */
+    font-weight: bold; /* Chữ đậm */
+    color: #333333; /* Màu chữ tối */
+}
+
+/* Thêm phân cách giữa ngày, tháng, năm */
+.news-date_cttt span:not(:last-child)::after {
+    content: " | "; /* Ký tự phân cách */
+    color: #999999; /* Màu phân cách xám nhạt */
+    margin: 0 5px; /* Khoảng cách giữa các phần */
+}

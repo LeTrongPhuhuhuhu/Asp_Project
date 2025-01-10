@@ -13,14 +13,14 @@
 
     <div class="container_cttt">
         <!-- Header with title and date -->
+            <div class="news-title_cttt">
+                <h1>@Model.TieuDe</h1>
+                <img src="~/img/@Model.HinhAnh" alt="@Model.TieuDe">
+            </div>
         <div class="news-header_cttt">
             <div class="news-date_cttt">
                 <span class="day_cttt">@Model.CreatedAt?.Day</span>
                 <span class="month-year_cttt">@Model.CreatedAt?.ToString("MM / yyyy")</span>
-            </div>
-            <div class="news-title_cttt">
-                <h1>@Model.TieuDe</h1>
-                <img src="~/img/@Model.HinhAnh" alt="@Model.TieuDe">
             </div>
         </div>
 

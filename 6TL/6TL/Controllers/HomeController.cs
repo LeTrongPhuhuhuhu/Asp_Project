@@ -86,13 +86,13 @@ namespace _6TL.Controllers
         {
             return View();
         }
-		public IActionResult TinTuc(int? pageNumber)
+		public ActionResult TinTuc(int? pageNumber)
 		{
-            // Kích thước trang (số lượng bài viết trên mỗi trang)
-            int pageSize = 6;
+			// Kích thước trang (số lượng bài viết trên mỗi trang)
+			int pageSize = 6;
 
             // Số trang hiện tại, nếu không có thì mặc định là 1
-            int page = pageNumber ?? 1;
+            int page = pageNumber ?? 1 ;
 
             // Lấy tất cả các bài viết tin tức từ database
             var allNews = _context.Blogs.ToList();
