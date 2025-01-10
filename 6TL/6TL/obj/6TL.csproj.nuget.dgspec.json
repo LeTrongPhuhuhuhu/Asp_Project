@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ASP\\ASP_DoAn\\Asp_Project\\6TL\\6TL\\6TL.csproj": {}
+    "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\6TL.csproj": {}
   },
   "projects": {
-    "D:\\ASP\\ASP_DoAn\\Asp_Project\\6TL\\6TL\\6TL.csproj": {
+    "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\6TL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ASP\\ASP_DoAn\\Asp_Project\\6TL\\6TL\\6TL.csproj",
+        "projectUniqueName": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\6TL.csproj",
         "projectName": "6TL",
-        "projectPath": "D:\\ASP\\ASP_DoAn\\Asp_Project\\6TL\\6TL\\6TL.csproj",
-        "packagesPath": "C:\\Users\\viet5\\.nuget\\packages\\",
-        "outputPath": "D:\\ASP\\ASP_DoAn\\Asp_Project\\6TL\\6TL\\obj\\",
+        "projectPath": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\6TL.csproj",
+        "packagesPath": "C:\\Users\\Hoàng Phúc\\.nuget\\packages\\",
+        "outputPath": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\viet5\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Hoàng Phúc\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -50,6 +50,18 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            },
+            "FunScript.TypeScript.Binding.nodemailer": {
+              "target": "Package",
+              "version": "[1.1.0.37, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.11, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[9.0.0, )"
@@ -63,6 +75,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[9.0.0, )"
+            },
+            "System.Net.Mail": {
+              "target": "Package",
+              "version": "[1.0.0-rtm-00002, )"
             }
           },
           "imports": [
@@ -84,7 +100,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
