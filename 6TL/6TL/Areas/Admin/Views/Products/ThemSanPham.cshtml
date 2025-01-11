@@ -13,6 +13,7 @@
         <div class="form-row_tsp">
             <input type="text" name="ProductName" placeholder="Tên sản phẩm" id="ten-sp_tsp" required>
             <input type="text" name="Price" placeholder="Giá bán" id="gia-ban_tsp" oninput="formatPrice(this)" required />
+            <input type="text" name="CapitalAmount" placeholder="Giá vốn" id="gia-von_tsp" oninput="formatPrice(this)" required />
         </div>
 
         <!-- Thông tin bổ sung -->
@@ -43,14 +44,13 @@
                     {
                         <option value="@color.ColorId">@color.ColorName</option>
                     }
+                    @* Hiển thị các màu từ SQL *@
                 </select>
                 <input type="number" name="productColors[0].Quantity" min="1" placeholder="Số lượng" required />
             </div>
         </div>
 
         <button type="button" id="add-color-btn_tsp" class="add-color-btn_tsp">Thêm màu</button>
-
-
 
         <!-- Mô tả sản phẩm -->
         <div class="form-row_tsp">
@@ -77,6 +77,7 @@
         </div>
     </form>
 </div>
+
 
 <!-- JavaScript -->
 <script>
@@ -108,23 +109,34 @@
         const container = document.getElementById('colors-container_tsp');
         const rowCount = container.children.length;
 
+        // Lấy danh sách các màu đã được chọn
+        const selectedColors = Array.from(container.querySelectorAll('select')).map(select => select.value);
+
+        // Lấy dropdown đầu tiên để sao chép danh sách màu
+        const colorDropdown = document.querySelector('select[name^="productColors[0].ColorId"]').cloneNode(true);
+
+        // Loại bỏ các màu đã chọn khỏi dropdown mới
+        Array.from(colorDropdown.options).forEach(option => {
+            if (selectedColors.includes(option.value)) {
+                option.remove();
+            }
+        });
+
+        // Tạo dòng mới cho màu và số lượng
         const newRow = document.createElement('div');
         newRow.classList.add('color-row');
         newRow.innerHTML = `
-            <select name="productColors[${rowCount}].Color.ColorName" required>
-                <option value="" disabled selected>Chọn màu</option>
-    @foreach (var color in ViewBag.Colors)
-    {
-                        <option value="@color.ColorName">@color.ColorName</option>
-    }
-            </select>
-            <input type="number" name="productColors[${rowCount}].Quantity" min="1" placeholder="Số lượng" required />
-            <button type="button" class="remove-color-btn_tsp">Xóa</button>
-        `;
+                <select name="productColors[${rowCount}].ColorId" required>
+                    ${colorDropdown.innerHTML}
+                </select>
+                <input type="number" name="productColors[${rowCount}].Quantity" min="1" placeholder="Số lượng" required />
+                <button type="button" class="remove-color-btn_tsp">Xóa</button>
+            `;
+
         container.appendChild(newRow);
     });
 
-
+    // Xóa màu khi nhấn nút "Xóa"
     document.getElementById('colors-container_tsp').addEventListener('click', function (e) {
         if (e.target.classList.contains('remove-color-btn_tsp')) {
             e.target.parentElement.remove();
