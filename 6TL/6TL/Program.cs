@@ -68,6 +68,9 @@ app.MapControllerRoute(
 	name: "areas",
 	pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
 );
+app.MapControllerRoute(
+    name: "admin-products",
+    pattern: "Admin/Products/{action=QuanLySanPham}/{id?}");
 
 
 app.MapControllerRoute(
