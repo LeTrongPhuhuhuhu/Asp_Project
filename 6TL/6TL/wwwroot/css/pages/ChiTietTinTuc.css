@@ -1,4 +1,4 @@
-﻿/* Reset some basic styling */
+﻿Reset some basic styling
 * {
 	margin: 0;
 	padding: 0;
@@ -6,7 +6,7 @@
 	font-family: 'Montserrat', sans-serif;
 }
 
-/* Body Styles */
+Body Styles
 body {
 	background-color: #f9f9f9;
 	color: #333;
@@ -15,7 +15,7 @@ body {
 	padding: 40px 0;
 }
 
-/* Container Styles */
+Container Styles
 .container_cttt {
 	width: 80%;
 	max-width: 1200px;
@@ -23,10 +23,9 @@ body {
 	padding: 20px;
 	background-color: #fff;
 	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-
 }
 
-/* News Header */
+News Header
 .news-header_cttt {
 	display: flex;
 	justify-content: space-between;
@@ -62,7 +61,7 @@ body {
 	word-wrap: break-word;
 }
 
-/* News Content */
+News Content
 .news-content_cttt {
 	font-size: 18px;
 	color: #555;
@@ -70,12 +69,12 @@ body {
 	margin-bottom: 40px;
 }
 
-	.news-content_cttt p {
-		margin-bottom: 20px;
-		text-align: justify;
-	}
+.news-content_cttt p {
+	margin-bottom: 20px;
+	text-align: justify;
+}
 
-/* Like and Share Buttons */
+Like and Share Buttons
 .news-social_cttt {
 	display: flex;
 	gap: 20px;
@@ -110,33 +109,95 @@ body {
 		transform: scale(0.98);
 	}
 
-/* Responsive Design */
+Responsive Design
 @media screen and (max-width: 768px) {
-	.container_cttt {
-		width: 90%;
-		padding: 20px;
-	}
+	.container_cttt
 
-	.news-title_cttt h1 {
-		font-size: 26px;
-		text-align: center;
-	}
-
-	.news-date_cttt {
-		font-size: 16px;
-	}
-
-	.news-content_cttt {
-		font-size: 16px;
-	}
-
-	.news-social_cttt {
-		flex-direction: column;
-		align-items: flex-start;
-	}
-
-	.like-btn_cttt, .share-btn_cttt {
-		width: 100%;
-		margin-bottom: 10px;
-	}
+{
+	width: 90%;
+	padding: 20px;
 }
+
+.news-title_cttt h1 {
+	font-size: 26px;
+	text-align: center;
+}
+
+.news-date_cttt {
+	font-size: 16px;
+}
+
+.news-content_cttt {
+	font-size: 16px;
+}
+
+.news-social_cttt {
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.like-btn_cttt, .share-btn_cttt {
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+}
+
+.news-title_cttt {
+	text-align: center; /* Canh giữa nội dung */
+	margin: 20px auto; /* Tạo khoảng cách xung quanh */
+	max-width: 800px; /* Định chiều rộng tối đa để nội dung không quá dài */
+	padding: 15px; /* Khoảng cách nội dung bên trong */
+	border: 1px solid #ddd; /* Đường viền nhẹ */
+	border-radius: 8px; /* Bo góc nhẹ cho phần khung */
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tạo bóng nhẹ */
+	background-color: #f9f9f9; /* Màu nền nhạt */
+}
+
+	/* CSS cho tiêu đề */
+	.news-title_cttt h1 {
+		font-size: 2em; /* Kích thước chữ lớn */
+		color: #333; /* Màu chữ chính */
+		margin-bottom: 15px; /* Tạo khoảng cách giữa tiêu đề và hình ảnh */
+		font-family: 'Arial', sans-serif; /* Phông chữ phổ biến */
+		text-transform: capitalize; /* Viết hoa chữ cái đầu */
+		line-height: 1.4; /* Dãn dòng cho dễ đọc */
+	}
+
+	/* CSS cho hình ảnh */
+	.news-title_cttt img {
+		max-width: 100%; /* Đảm bảo hình ảnh không vượt quá chiều rộng container */
+		height: auto; /* Duy trì tỷ lệ hình ảnh */
+		border-radius: 6px; /* Bo góc hình ảnh */
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Tạo bóng nhẹ cho hình */
+		margin-top: 10px; /* Tạo khoảng cách với tiêu đề */
+	}
+
+/* Container chính */
+.news-date_cttt {
+	margin-left: 55px;
+	display: flex; /* Sử dụng flex để bố trí ngang */
+	align-items: center; /* Căn giữa nội dung theo chiều dọc */
+	background-color: #ffffff; /* Nền trắng */
+	padding: 10px 15px; /* Khoảng cách bên trong */
+	border: 1px solid #e0e0e0; /* Đường viền nhạt */
+	border-radius: 6px; /* Bo góc mềm mại */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bóng nhẹ */
+	max-width: 300px; /* Giới hạn chiều rộng */
+	margin: 20px 0; /* Khoảng cách trên dưới */
+	font-family: 'Arial', sans-serif; /* Font chữ dễ đọc */
+}
+
+	/* Ngày tháng năm */
+	.news-date_cttt span {
+		font-size: 1.2em; /* Kích thước chữ vừa phải */
+		font-weight: bold; /* Chữ đậm */
+		color: #333333; /* Màu chữ tối */
+	}
+
+		/* Thêm phân cách giữa ngày, tháng, năm */
+		.news-date_cttt span:not(:last-child)::after {
+			content: " | "; /* Ký tự phân cách */
+			color: #999999; /* Màu phân cách xám nhạt */
+			margin: 0 5px; /* Khoảng cách giữa các phần */
+		}

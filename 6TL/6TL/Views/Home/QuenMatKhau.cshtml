@@ -1,0 +1,35 @@
+﻿@model ForgotPassword
+@{
+    ViewData["Title"] = "ForgotFassword";
+}
+<link href="~/css/pages/dangky.css" rel="stylesheet" />
+<section class="banner-register">
+    <img src="~/img/banner3.jpg" alt="Banner QUÊN MẬT KHẨU" class="banner-image">
+    <div class="banner-overlay">
+        <h1 class="banner-title">QUÊN MẬT KHẨU</h1>
+    </div>
+</section>
+
+<section class="form-section">
+    <form asp-action="QuenMatKhau" method="post" class="register-form">
+        <!-- Hiển thị thông báo lỗi -->
+        @if (!ViewData.ModelState.IsValid && ViewContext.HttpContext.Request.Method == "POST")
+
+        {
+            <div class="alert alert-danger">
+                Vui lòng kiểm tra lại thông tin và điền đầy đủ các trường bắt buộc!
+            </div>
+        }
+        <div class="form-row">
+            <div class="form-group">
+                <label for="email">Email <span class="required">*</span></label>
+                <input type="text" id="email" name="Email" value="@Model.Email" placeholder="Nhập email">
+                @if (ViewContext.HttpContext.Request.Method == "POST")
+                {
+                    @Html.ValidationMessageFor(model => model.Email, "", new { style = "color: red; font-size: 0.9em; margin-top: 5px;" })
+                }
+            </div>
+        </div>
+        <button class="submit-btn">Gửi yêu cầu</button>
+    </form>
+</section>
