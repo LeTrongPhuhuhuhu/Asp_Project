@@ -286,17 +286,31 @@ namespace _6TL.Controllers
 		{
 			return View();
 		}
-		public IActionResult TinTuc()
-		{
-			// Lấy tất cả các bài viết tin tức từ database
-			var allNews = _context.Blogs.ToList();
+        public ActionResult TinTuc(int? pageNumber)
+        {
+            // Kích thước trang (số lượng bài viết trên mỗi trang)
+            int pageSize = 6;
 
-			// Truyền dữ liệu vào ViewBag
-			ViewBag.News = allNews;
+            // Số trang hiện tại, nếu không có thì mặc định là 1
+            int page = pageNumber ?? 1;
 
-			// Trả về view
-			return View();
-		}
+            // Lấy tất cả các bài viết tin tức từ database
+            var allNews = _context.Blogs.ToList();
+
+            // Tính toán các bài viết cần hiển thị cho trang hiện tại
+            var pageNews = allNews.Skip((page - 1) * pageSize).Take(pageSize).ToList();
+
+            // Truyền dữ liệu vào ViewBag
+            ViewBag.News = pageNews;
+            ViewBag.CurrentPage = page;
+            ViewBag.TotalPages = (int)Math.Ceiling(allNews.Count / (double)pageSize);
+
+         /*   // Truyền dữ liệu vào ViewBag
+            ViewBag.News = allNews;*/
+
+            // Trả về view
+            return View();
+        }
         public async Task<IActionResult> DangKy(Customer model)
         {
 			if (!ModelState.IsValid)
@@ -554,12 +568,18 @@ namespace _6TL.Controllers
 		{
 			return View();
 		}
-		public IActionResult ChiTietTinTuc()
-		{
-			return View();
-		}
+        public IActionResult ChiTietTinTuc(int id)
+        {
+            var blog = _context.Blogs.FirstOrDefault(b => b.BlogId == id);
+            if (blog == null)
+            {
+                return NotFound();
+            }
 
-		[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+            return View(blog);
+        }
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
 		public IActionResult Error()
 		{
 			return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });

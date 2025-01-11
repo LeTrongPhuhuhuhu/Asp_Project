@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@model _6TL.Models.Blog
+
+<!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
@@ -11,21 +13,20 @@
 
     <div class="container_cttt">
         <!-- Header with title and date -->
+        <div class="news-title_cttt">
+            <h1>@Model.TieuDe</h1>
+            <img src="~/img/@Model.HinhAnh" alt="@Model.TieuDe">
+        </div>
         <div class="news-header_cttt">
             <div class="news-date_cttt">
-                <span class="day_cttt">10</span>
-                <span class="month-year_cttt">06 / 2024</span>
-            </div>
-            <div class="news-title_cttt">
-                <h1>SIÊU HÈ 2024, SIÊU ƯU ĐÃI - ACONCEPT THANH LÝ TOÀN BỘ SẢN PHẨM</h1>
+                <span class="day_cttt">@Model.CreatedAt?.Day</span>
+                <span class="month-year_cttt">@Model.CreatedAt?.ToString("MM / yyyy")</span>
             </div>
         </div>
 
         <!-- News Content -->
         <div class="news-content_cttt">
-            <p>Chương trình Siêu Hè 2024 mang đến những ưu đãi hấp dẫn cho khách hàng, đặc biệt là các sản phẩm của AConcept với mức giảm giá sâu...</p>
-            <p>Sản phẩm giảm giá trong đợt này bao gồm nhiều mặt hàng nổi bật, bao gồm các bộ sản phẩm mới và các mẫu mã đặc biệt. Cơ hội không thể bỏ qua để bạn sở hữu những món đồ chất lượng với giá ưu đãi nhất.</p>
-            <p>Đừng bỏ lỡ cơ hội có một không hai này. Chương trình sẽ diễn ra từ ngày 10 tháng 06 năm 2024 cho đến hết hàng. Hãy nhanh tay để không bỏ lỡ cơ hội mua sắm tuyệt vời này!</p>
+            <p>@Model.NoiDung</p>
         </div>
 
         <!-- Like and Share -->
