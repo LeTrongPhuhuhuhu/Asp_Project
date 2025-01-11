@@ -263,6 +263,7 @@ namespace _6TL.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+
         public IActionResult SuaSanPham(int id, Product product, IFormFile? imageFile, int? ColorId)
         {
             if (id != product.ProductId)
@@ -293,21 +294,15 @@ namespace _6TL.Areas.Admin.Controllers
                         .Where(pc => pc.ProductId == product.ProductId)
                         .ToList();
 
-                    // Remove existing colors that are not selected anymore
-                    var colorsToRemove = existingColor
-                        .Where(pc => pc.ColorId != ColorId.Value)
-                        .ToList();
-
-                    _context.ProductColors.RemoveRange(colorsToRemove);
-
-                    // Add new color if not already added
+                    // Nếu màu mới chưa có trong sản phẩm, thêm mới
                     if (!existingColor.Any(pc => pc.ColorId == ColorId.Value))
                     {
-                        existingProduct.ProductColors.Add(new ProductColor
+                        var newProductColor = new ProductColor
                         {
                             ProductId = product.ProductId,
                             ColorId = ColorId.Value
-                        });
+                        };
+                        _context.ProductColors.Add(newProductColor);
                     }
                 }
 
@@ -360,6 +355,34 @@ namespace _6TL.Areas.Admin.Controllers
                 return View(product); // return the same view with the product to show error
             }
         }
+
+        [Route("Admin/Products/QuanLySanPham/{productId}")]
+        [HttpPost]
+        public IActionResult XoaSanPham(int productId)
+        {
+            // Lấy sản phẩm theo ProductId
+            var product = _context.Products.Include(p => p.ProductColors)
+                                           .FirstOrDefault(p => p.ProductId == productId);
+
+            if (product != null)
+            {
+                // Xóa các bản ghi liên quan đến ProductColors trước (nếu có)
+                _context.ProductColors.RemoveRange(product.ProductColors);
+
+                // Xóa sản phẩm
+                _context.Products.Remove(product);
+
+                // Lưu thay đổi vào cơ sở dữ liệu
+                _context.SaveChanges();
+                return Json(new { success = true });
+            }
+
+            return Json(new { success = false });
+        }
+
+
+
+
 
     }
 }

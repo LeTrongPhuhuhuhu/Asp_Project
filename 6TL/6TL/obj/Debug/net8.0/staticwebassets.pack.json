@@ -149,8 +149,16 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\images\\products\\023c2b6f-511b-41cb-9018-277bb240645a_2.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\023c2b6f-511b-41cb-9018-277bb240645a_2.jpg"
+    },
+    {
       "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\images\\products\\4ab7c087-8b43-42c2-b833-e6a307e5552b_tailung.jpg",
       "PackagePath": "staticwebassets\\images\\products\\4ab7c087-8b43-42c2-b833-e6a307e5552b_tailung.jpg"
+    },
+    {
+      "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\images\\products\\5e9e5d07-509d-433c-aca8-6bd9d45a8882_1.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\5e9e5d07-509d-433c-aca8-6bd9d45a8882_1.jpg"
     },
     {
       "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\images\\products\\7971a5bb-b50d-4919-80c0-50af2e91d6cd_tailung.jpg",
