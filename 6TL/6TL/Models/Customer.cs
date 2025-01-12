@@ -31,6 +31,10 @@ public partial class Customer
 
     public DateTime? PasswordResetExpires { get; set; }
 
+    public string? Gender { get; set; }
+
+    public DateTime? DateOfBirth { get; set; }
+
     public virtual Role? Role { get; set; }
 
     public virtual ICollection<Wishlist> Wishlists { get; set; } = new List<Wishlist>();
