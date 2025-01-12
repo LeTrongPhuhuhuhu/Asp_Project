@@ -624,12 +624,12 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\products\03bc84ab-31ee-4d0a-8cb3-70a20caf7490_2.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\products\2f33b494-efe0-4787-9dca-6cf1a3bd5114_1.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\products\18e52fdb-8002-4645-845a-de289f60a9ab_1.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>6TL</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/6TL</BasePath>
-      <RelativePath>images/products/2f33b494-efe0-4787-9dca-6cf1a3bd5114_1.jpg</RelativePath>
+      <RelativePath>images/products/18e52fdb-8002-4645-845a-de289f60a9ab_1.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -638,7 +638,7 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\products\2f33b494-efe0-4787-9dca-6cf1a3bd5114_1.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\products\18e52fdb-8002-4645-845a-de289f60a9ab_1.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\products\33b1635d-3752-4887-950e-6b7f181b746f_2.jpg))">
       <SourceType>Package</SourceType>

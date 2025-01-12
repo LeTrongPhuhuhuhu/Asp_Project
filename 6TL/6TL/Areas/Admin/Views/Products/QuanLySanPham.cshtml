@@ -12,19 +12,14 @@
 <body>
     <div class="product-management_sp">
         <h2>Quản lý sản phẩm 6TL De Decor</h2>
-        <div class="search-bar_sp">
-            <input type="text" placeholder="Tìm kiếm...">
-             <select>
-                <option value="all">Chọn danh mục</option>
-                @foreach (var categories in ViewBag.Categories)
-                {
-                    <option value="@categories.CategoryId">@categories.CategoryName</option>
-                }
-            </select> 
+        <!-- Form tìm kiếm -->
+        <form method="get" class="search-bar_sp">
+            <input type="text" name="searchString" placeholder="Tìm kiếm sản phẩm..." value="@Context.Request.Query["searchString"]" />
+            <button type="submit" class="search-btn">Tìm kiếm</button>
 
             <a href="/Admin/Products/ThemSanPham"><button class="add-new-btn_sp">Thêm mới</button></a>
+        </form>
 
-        </div>
 
         <table class="product-table_sp">
             <thead>
