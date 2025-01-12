@@ -88,10 +88,9 @@
                         foreach (var color in colorsWithQuantity)
                         {
                             <div class="color-option_ct"
-                                 data-color-id="@color.ColorId"
-                                 data-color-code="@color.ColorCode"
+                                 
                                  data-quantity="@color.Quantity"
-                                 style="background-color: @color.ColorCode;"
+                                 style="background-color: @color.Color;"
                                  onclick="updateStock(this)">
                             </div>
                         }
@@ -167,7 +166,9 @@
                     <input type="hidden" name="productName" value="@Model.ProductName ">
                     <input type="hidden" name="productImage" value="@Model.Image">
                     <input type="hidden" name="price" value="@Model.Price">
+                    <!-- Cập nhật mã màu của sản phẩm vào trường hidden -->
                     <input type="hidden" id="productColor-cart" name="productColor" value="">
+
                     <input type="hidden" name="quantity" value="1">
                     <button type="submit" class="add-to-cart_ct">Thêm Giỏ Hàng</button>
                 </form>
@@ -277,114 +278,94 @@
     </div>
 </section>
 
-
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     document.addEventListener("DOMContentLoaded", () => {
-        // JavaScript function to update stock information
-        function updateStock(element) {
-            const quantity = element.getAttribute("data-quantity");
+        // Cập nhật trạng thái kho hàng
+        function updateStock(selectedColor) {
+            const stockQuantity = selectedColor.getAttribute("data-quantity");
             const status = document.getElementById("stock-status");
             const stockCount = document.getElementById("stock-count");
 
-            // Cập nhật trạng thái và số lượng
-            if (quantity > 0) {
+            if (stockQuantity > 0) {
                 status.innerText = "Còn hàng";
                 status.style.color = "green";
-                stockCount.innerText = `Số lượng còn: ${quantity}`;
+                stockCount.innerText = `Số lượng còn: ${stockQuantity}`;
             } else {
                 status.innerText = "Hết hàng";
                 status.style.color = "red";
                 stockCount.innerText = "";
             }
+
+            // Cập nhật màu đã chọn
+            const productColor = selectedColor.style.backgroundColor;
+            document.getElementById("productColor-buy").value = productColor;
+            document.getElementById("productColor-cart").value = productColor;
         }
 
-        // Tự động chọn màu đầu tiên (nếu có)
-        const firstColorOption = document.querySelector(".color-option_ct");
-        let stockQuantity = firstColorOption ? firstColorOption.getAttribute("data-quantity") : 0;
-        if (firstColorOption) {
-            firstColorOption.classList.add("selected");
-            updateStock(firstColorOption);
-            selectedColor = firstColorOption.getAttribute("data-color-code");
+        // Khởi tạo màu mặc định
+        const colorOptions = document.querySelectorAll('.color-option_ct');
+        if (colorOptions[0]) {
+            colorOptions[0].classList.add('selected');
+            updateStock(colorOptions[0]);
         }
 
-        // AJAX
-        $(document).ready(function () {
-            let selectedColor = firstColorOption ? firstColorOption.getAttribute("data-color-code") : "";
-            let selectedQuantity = 1;
-
-            // Hàm xử lý chọn màu
-            $(".color-option_ct").on("click", function () {
-                $(".color-option_ct").removeClass("selected");
-                $(this).addClass("selected");
-                selectedColor = $(this).data("color-code");
-                stockQuantity = $(this).data("quantity");
-                updateStock(this);
+        // Xử lý thay đổi số lượng
+        const quantityInput = document.getElementById('quantity-input');
+        const quantityInputHidden = document.getElementById('quantity-input-hidden');
+        if (quantityInput && quantityInputHidden) {
+            quantityInput.addEventListener('input', function() {
+                quantityInputHidden.value = this.value;
+                toastr.info(`Số lượng thay đổi: ${this.value}`);
             });
+        }
 
-            // Hàm xử lý thay đổi số lượng
-            $("#quantity-input").on("input", function () {
-                selectedQuantity = $(this).val();
+        // Xử lý yêu thích sản phẩm
+        const favoriteIcon = document.getElementById('favorite-icon');
+        if (favoriteIcon) {
+            favoriteIcon.addEventListener('click', function() {
+                const heartIcon = this.querySelector('.heart-icon_ct');
+                if (heartIcon) {
+                    heartIcon.classList.toggle('filled');
+                    heartIcon.classList.contains('filled')
+                        ? toastr.success('Đã thêm vào yêu thích')
+                        : toastr.warning('Đã xóa khỏi yêu thích');
+                }
             });
+        }
 
-            // Xử lý form "Thêm vào giỏ hàng" với AJAX
-            $("#add-to-cart-form").on("submit", function (e) {
-                e.preventDefault();
+        // Xử lý thêm vào giỏ hàng
+        $('.add-to-cart-button').on('click', function(event) {
+            event.preventDefault();
 
-                if (!selectedColor) {
-                    toastr.error("Vui lòng chọn màu trước khi thêm vào giỏ hàng!");
-                    return;
-                }
+            const cartData = {
+                productId: $('#product-id').val(),
+                productName: $('#product-name').val(),
+                productImage: $('#product-image').val(),
+                price: parseFloat($('#price').val()),
+                quantity: parseInt($('#quantity').val()),
+                productColor: $('#productColor-cart').val()
+            };
 
-                if (selectedQuantity <= 0 || selectedQuantity > stockQuantity) {
-                    toastr.error("Số lượng không hợp lệ hoặc vượt quá số lượng có trong kho!");
-                    return;
-                }
-
-                $(this).find("input[name='productColor']").val(selectedColor);
-                $(this).find("input[name='quantity']").val(selectedQuantity);
-
-                $.ajax({
-                    url: '/Product/AddToCart',
-                    type: 'POST',
-                    data: $(this).serialize(),
-                    success: function (response) {
-                        if (response.success) {
-                            toastr.success(response.message);
-                        } else {
-                            toastr.error(response.message);
-                        }
-                    },
-                    error: function () {
-                        toastr.error("Đã có lỗi xảy ra khi thêm sản phẩm vào giỏ hàng.");
+            $.ajax({
+                url: '/Home/AddToCart',
+                type: 'POST',
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest'
+                },
+                data: cartData,
+                success: function(response) {
+                    if (response.success) {
+                        toastr.success(response.message);
+                    } else {
+                        toastr.error(response.message);
                     }
-                });
-            });
-
-            // Xử lý form "Mua ngay"
-            $(".buy-now_ct").on("click", function (e) {
-                e.preventDefault();
-                const form = $(this).closest("form");
-
-                if (!selectedColor) {
-                    toastr.error("Vui lòng chọn màu trước khi mua!");
-                    return;
+                },
+                error: function() {
+                    toastr.error("Đã có lỗi xảy ra khi thêm sản phẩm vào giỏ hàng.");
                 }
-
-                if (selectedQuantity <= 0 || selectedQuantity > stockQuantity) {
-                    toastr.error("Số lượng không hợp lệ hoặc vượt quá số lượng có trong kho!");
-                    return;
-                }
-
-                form.find("input[name='productColor']").val(selectedColor);
-                form.find("input[name='quantity']").val(selectedQuantity);
-
-                const urlParams = new URLSearchParams(form.serialize());
-                window.location.href = `/Home/TrangThanhToan?${urlParams.toString()}`;
             });
         });
     });
 </script>
-

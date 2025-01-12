@@ -23,8 +23,6 @@ public partial class Db6TLContext : DbContext
 
     public virtual DbSet<Category> Categories { get; set; }
 
-    public virtual DbSet<Color> Colors { get; set; }
-
     public virtual DbSet<Contact> Contacts { get; set; }
 
     public virtual DbSet<Customer> Customers { get; set; }
@@ -36,8 +34,6 @@ public partial class Db6TLContext : DbContext
     public virtual DbSet<OrderDetail> OrderDetails { get; set; }
 
     public virtual DbSet<Product> Products { get; set; }
-
-    public virtual DbSet<ProductColor> ProductColors { get; set; }
 
     public virtual DbSet<Review> Reviews { get; set; }
 
@@ -137,14 +133,6 @@ public partial class Db6TLContext : DbContext
                 .HasConstraintName("FK_Category_ParentCategory");
         });
 
-        modelBuilder.Entity<Color>(entity =>
-        {
-            entity.HasKey(e => e.ColorId).HasName("PK__Colors__8DA7674D644F651E");
-
-            entity.Property(e => e.ColorCode).HasMaxLength(50);
-            entity.Property(e => e.ColorName).HasMaxLength(100);
-        });
-
         modelBuilder.Entity<Contact>(entity =>
         {
             entity.HasKey(e => e.ContactId).HasName("PK__Contacts__5C66259BC6E4C1E9");
@@ -174,6 +162,7 @@ public partial class Db6TLContext : DbContext
             entity.Property(e => e.Email).HasMaxLength(100);
             entity.Property(e => e.EmailConfirmationToken).HasMaxLength(255);
             entity.Property(e => e.FullName).HasMaxLength(100);
+            entity.Property(e => e.Gender).HasMaxLength(50);
             entity.Property(e => e.Password)
                 .HasMaxLength(255)
                 .IsUnicode(false);
@@ -229,6 +218,7 @@ public partial class Db6TLContext : DbContext
                 .HasDefaultValueSql("(getdate())")
                 .HasColumnType("datetime");
             entity.Property(e => e.OrderStatus).HasMaxLength(50);
+            entity.Property(e => e.PaymentMethod).HasMaxLength(50);
             entity.Property(e => e.PhoneNumber)
                 .HasMaxLength(10)
                 .IsUnicode(false)
@@ -276,13 +266,13 @@ public partial class Db6TLContext : DbContext
             entity.Property(e => e.ProductId).HasColumnName("ProductID");
             entity.Property(e => e.CapitalAmount).HasColumnType("decimal(18, 2)");
             entity.Property(e => e.CategoryId).HasColumnName("CategoryID");
+            entity.Property(e => e.Color).HasMaxLength(50);
             entity.Property(e => e.CreatedAt)
                 .HasDefaultValueSql("(getdate())")
                 .HasColumnType("datetime");
             entity.Property(e => e.DiscountId).HasColumnName("DiscountID");
             entity.Property(e => e.Image).HasMaxLength(100);
             entity.Property(e => e.Material).HasMaxLength(100);
-            entity.Property(e => e.PaymentMethod).HasMaxLength(50);
             entity.Property(e => e.Price).HasColumnType("decimal(10, 2)");
             entity.Property(e => e.ProductDescription).HasMaxLength(1000);
             entity.Property(e => e.ProductName).HasMaxLength(100);
@@ -305,25 +295,6 @@ public partial class Db6TLContext : DbContext
             entity.HasOne(d => d.Supplier).WithMany(p => p.Products)
                 .HasForeignKey(d => d.SupplierId)
                 .HasConstraintName("FK__Products__Suppli__06CD04F7");
-        });
-
-        modelBuilder.Entity<ProductColor>(entity =>
-        {
-            entity.HasKey(e => new { e.ProductId, e.ColorId });
-
-            entity.ToTable("ProductColor");
-
-            entity.Property(e => e.ProductId).HasColumnName("ProductID");
-
-            entity.HasOne(d => d.Color).WithMany(p => p.ProductColors)
-                .HasForeignKey(d => d.ColorId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_ProductColor_Color");
-
-            entity.HasOne(d => d.Product).WithMany(p => p.ProductColors)
-                .HasForeignKey(d => d.ProductId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("ProductID");
         });
 
         modelBuilder.Entity<Review>(entity =>

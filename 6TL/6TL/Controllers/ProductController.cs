@@ -17,41 +17,39 @@ namespace _6TL.Controllers
 
 
 		public IActionResult ChiTietSanPham(int? id, string slug)
-		{
-			var product = _context.Products
-				.FirstOrDefault(p => (id.HasValue && p.ProductId == id) || (!string.IsNullOrEmpty(slug) && p.Slug == slug));
+{
+    var product = _context.Products
+        .FirstOrDefault(p => (id.HasValue && p.ProductId == id) || (!string.IsNullOrEmpty(slug) && p.Slug == slug));
 
-			if (product == null)
-			{
-				return NotFound();
-			}
+    if (product == null)
+    {
+        return NotFound();
+    }
 
-			// Lấy danh sách màu sắc và số lượng liên quan đến sản phẩm
-			var colorsWithQuantity = _context.ProductColors
-				.Where(pc => pc.ProductId == product.ProductId)
-				.Join(_context.Colors,
-					  pc => pc.ColorId,
-					  c => c.ColorId,
-					  (pc, c) => new
-					  {
-						  c.ColorId,
-						  c.ColorCode,
-						  pc.Quantity
-					  })
-				.ToList();
-			ViewBag.ProductRating = product.Rating; // Truyền rating từ bảng Product
+    // Lấy danh sách màu sắc và số lượng liên quan đến sản phẩm từ bảng Products (hoặc một bảng khác nếu cần)
+    var colorsWithQuantity = _context.Products
+        .Where(p => p.ProductId == product.ProductId)
+        .Select(p => new
+        {
+            p.Color,   // Giả sử màu sắc đã được lưu trữ trong cột ColorCode trong bảng Products
+            p.Quantity     // Giả sử số lượng tồn kho đã được lưu trữ trong cột Quantity trong bảng Products
+        })
+        .ToList();
 
-			ViewBag.ColorsWithQuantity = colorsWithQuantity;
+    ViewBag.ProductRating = product.Rating; // Truyền rating từ bảng Product
 
-			var relatedProducts = _context.Products
-				.Where(p => p.CategoryId == product.CategoryId && p.ProductId != product.ProductId)
-				.Take(8)
-				.ToList();
+    ViewBag.ColorsWithQuantity = colorsWithQuantity;
 
-			ViewData["RelatedProducts"] = relatedProducts;
+    var relatedProducts = _context.Products
+        .Where(p => p.CategoryId == product.CategoryId && p.ProductId != product.ProductId)
+        .Take(8)
+        .ToList();
 
-			return View(product);
-		}
+    ViewData["RelatedProducts"] = relatedProducts;
+
+    return View(product);
+}
+
 
 		[HttpPost]
 		public IActionResult AddToCart(int productId, string productName, string productImage, decimal price, int quantity, string productColor)
@@ -99,12 +97,8 @@ namespace _6TL.Controllers
 				// Lưu các thay đổi vào cơ sở dữ liệu
 				_context.SaveChanges();
 
-				// Tính tổng số lượng sản phẩm trong giỏ hàng của customerId = 1
-				var totalQuantity = _context.Carts
-					.Where(c => c.CustomerId == customerId)
-					.Sum(c => c.Quantity);
-
-				return Json(new { success = true, message = "Sản phẩm đã được thêm vào giỏ hàng!", totalQuantity });
+				// Thông báo thành công đơn giản
+				return Json(new { success = true, message = "Sản phẩm đã được thêm vào giỏ hàng!" });
 			}
 			catch (Exception ex)
 			{
@@ -112,6 +106,7 @@ namespace _6TL.Controllers
 				return Json(new { success = false, message = "Đã có lỗi xảy ra khi thêm sản phẩm vào giỏ hàng." });
 			}
 		}
+
 
 
 
