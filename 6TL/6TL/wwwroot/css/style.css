@@ -471,9 +471,9 @@ footer {
 /* Icon Chat */
 .chat-icon {
     position: fixed;
+    background-color: #c8833b;
     bottom: 20px;
     right: 20px;
-    background-color: #c8833bf;
     color: white;
     width: 60px;
     height: 60px;

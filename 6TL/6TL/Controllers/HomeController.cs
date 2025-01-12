@@ -364,14 +364,14 @@ namespace _6TL.Controllers
             var smtpClient = new SmtpClient("smtp.gmail.com")
             {
                 Port = 587,
-                Credentials = new NetworkCredential("0306211392@caothang.edu.vn", "yybh tvcc zypk vjxh"),
+                Credentials = new NetworkCredential("trphu1810@gmail.com", "eijc zicj apol hvum"),
                 EnableSsl = true,
             };
 
             //cài đặt tin nhắn muốn gửi cho gmail người dùng nhập vào
             var mailMessage = new MailMessage
             {
-                From = new MailAddress("0306211392@caothang.edu.vn"),
+                From = new MailAddress("trphu1810@gmail.com"),
                 Subject = "Xác nhận email",
                 Body = $"<h1>Xác nhận email của bạn</h1><p>Vui lòng nhấn vào liên kết sau để xác nhận:</p><a href='{confirmationUrl}'>Xác nhận email</a>",
                 IsBodyHtml = true,

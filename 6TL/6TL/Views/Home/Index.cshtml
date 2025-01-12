@@ -150,7 +150,6 @@
         </div>
     </div>
 </section>
-
 <section class="py-5">
     <div class="container text-center">
         <div class="text-center">
@@ -162,9 +161,9 @@
                 @if (Model != null)
                 {
                     var chunkedProducts = Model.Select((p, index) => new { p, index })
-                        .GroupBy(x => x.index / 4)
-                        .Select(g => g.Select(x => x.p).ToList())
-                        .ToList();
+                    .GroupBy(x => x.index / 4)
+                    .Select(g => g.Select(x => x.p).ToList())
+                    .ToList();
 
                     foreach (var group in chunkedProducts)
                     {
@@ -173,7 +172,7 @@
                                 @foreach (var product in group)
                                 {
                                     <div class="col-md-3">
-                                        <div class="product-item_ct">
+                                        <div class="product-item_ct" onclick="window.location.href='Product/ChiTietSanPham/@product.ProductId'">
                                             <div class="favorite_ct">
                                                 <i class="heart-icon_ct">&hearts;</i>
                                             </div>

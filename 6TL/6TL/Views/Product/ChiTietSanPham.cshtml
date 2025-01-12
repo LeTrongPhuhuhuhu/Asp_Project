@@ -25,6 +25,35 @@
             height: 33px; /* Phóng to */
             border: 2px solid black; /* Viền nổi bật */
         }
+
+
+    .toast {
+        background-color: #1A1A2E !important; /* Xanh đen */
+        color: #FFFFFF !important; /* Chữ trắng */
+        border-radius: 8px; /* Bo góc */
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Hiệu ứng đổ bóng */
+    }
+
+    .toast-success {
+        background-color: #1A1A2E !important;
+        color: #00FF7F !important; /* Màu xanh nhạt cho thông báo thành công */
+    }
+
+    .toast-error {
+        background-color: #1A1A2E !important;
+        color: #FF4C4C !important; /* Màu đỏ cho thông báo lỗi */
+    }
+
+    .toast-warning {
+        background-color: #1A1A2E !important;
+        color: #FFD700 !important; /* Màu vàng cho thông báo cảnh báo */
+    }
+
+    .toast-info {
+        background-color: #1A1A2E !important;
+        color: #00CED1 !important; /* Màu xanh dương nhạt cho thông báo thông tin */
+    }
+
 </style>
 
 <div class="banner_ct">
@@ -194,10 +223,6 @@
         <div class="text-center">
             <h2 class="mb-2">Sản Phẩm Liên Quan</h2>
         </div>
-       @*  <div class="text-end">
-            <a href="/Home/SanPham" class="btn-more_ct text-decoration-none">Xem thêm &raquo;</a>
-        </div> *@
-
         <!-- Carousel container -->
         <div id="relatedProductsCarousel_ct" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
             <div class="carousel-inner">
@@ -216,7 +241,7 @@
                                 @foreach (var product in group)
                                 {
                                     <div class="col-md-3">
-                                        <div class="product-item_ct">
+                                        <div class="product-item_ct" onclick="window.location.href='/Product/ChiTietSanPham/@product.ProductId'">
                                             <div class="favorite_ct">
                                                 <i class="heart-icon_ct">&hearts;</i>
                                             </div>
@@ -249,9 +274,9 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
-
     </div>
 </section>
+
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>

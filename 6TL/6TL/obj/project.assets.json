@@ -6602,19 +6602,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\HOANG AN\\.nuget\\packages\\": {}
+    "C:\\Users\\Admin\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Đồ Án Web\\Asp_Project\\6TL\\6TL\\6TL.csproj",
+      "projectUniqueName": "E:\\Asp_Project\\Asp_Project\\6TL\\6TL\\6TL.csproj",
       "projectName": "6TL",
-      "projectPath": "D:\\Đồ Án Web\\Asp_Project\\6TL\\6TL\\6TL.csproj",
-      "packagesPath": "C:\\Users\\HOANG AN\\.nuget\\packages\\",
-      "outputPath": "D:\\Đồ Án Web\\Asp_Project\\6TL\\6TL\\obj\\",
+      "projectPath": "E:\\Asp_Project\\Asp_Project\\6TL\\6TL\\6TL.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "E:\\Asp_Project\\Asp_Project\\6TL\\6TL\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\HOANG AN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6622,7 +6627,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -6640,7 +6644,8 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      }
+      },
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net8.0": {
@@ -6696,7 +6701,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
   },
@@ -6705,7 +6710,7 @@
       "code": "NU1603",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "System.Net.Mail 1.0.0-rtm-00002 depends on System.Data.Common (>= 4.0.1) but System.Data.Common 4.0.1 was not found. An approximate best match of System.Data.Common 4.1.0 was resolved.",
+      "message": "System.Net.Mail 1.0.0-rtm-00002 depends on System.Data.Common (>= 4.0.1) but System.Data.Common 4.0.1 was not found. System.Data.Common 4.1.0 was resolved instead.",
       "libraryId": "System.Data.Common",
       "targetGraphs": [
         "net8.0"

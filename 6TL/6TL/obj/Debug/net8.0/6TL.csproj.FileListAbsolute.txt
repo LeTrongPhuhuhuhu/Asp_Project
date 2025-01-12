@@ -1323,3 +1323,8 @@ D:\Đồ Án Web\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\browser\lib\net8.
 D:\Đồ Án Web\Asp_Project\6TL\6TL\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 D:\Đồ Án Web\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.csproj.AssemblyReference.cache
 D:\Đồ Án Web\Asp_Project\6TL\6TL\obj\Debug\net8.0\6TL.csproj.Up2Date
+E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\BCrypt.Net-Next.dll
+E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\FunScript.TypeScript.Binding.lib.dll
+E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\FunScript.TypeScript.Binding.nodemailer.dll
+E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\Newtonsoft.Json.dll
