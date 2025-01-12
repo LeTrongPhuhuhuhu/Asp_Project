@@ -260,3 +260,69 @@ h2 {
 
 
 }
+.popup {
+	display: block !important; /* Hiển thị popup luôn */
+	position: fixed;
+	top: 20px; /* Cách mép trên trang 20px */
+	left: 50%; /* Căn giữa theo chiều ngang */
+	transform: translateX(-50%); /* Đưa popup về chính giữa */
+	max-width: 400px; /* Giới hạn chiều rộng */
+	background-color: #28a745; /* Màu xanh thành công */
+	color: white;
+	text-align: center;
+	padding: 10px 20px; /* Tạo khoảng cách bên trong */
+	font-size: 16px;
+	border-radius: 8px; /* Bo tròn góc */
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tạo hiệu ứng đổ bóng */
+	z-index: 1000; /* Đảm bảo nó luôn nằm trên các phần tử khác */
+	display: none; /* Ban đầu ẩn popup */
+}
+
+.success-popup {
+	background-color: #28a745; /* Màu xanh thành công */
+}
+
+.error-popup {
+	background-color: #dc3545; /* Màu đỏ lỗi */
+}
+
+.alert-icon {
+	font-size: 24px;
+	margin-right: 10px;
+}
+
+.popup-text {
+	display: inline-block;
+	max-width: 80%;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+}
+
+/* Hiệu ứng fade-in */
+.popup {
+	opacity: 0;
+	transition: opacity 0.5s ease-in-out;
+}
+
+	.popup.show {
+		opacity: 1;
+	}
+
+	/* Tạo hiệu ứng tự động ẩn sau khi popup xuất hiện */
+	.popup.show {
+		animation: fadeInOut 5s forwards;
+	}
+
+@keyframes fadeInOut {
+	0% {
+		opacity: 1;
+	}
+
+	90% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}

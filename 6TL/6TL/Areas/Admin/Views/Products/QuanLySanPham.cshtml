@@ -14,13 +14,13 @@
         <h2>Quản lý sản phẩm 6TL De Decor</h2>
         <div class="search-bar_sp">
             <input type="text" placeholder="Tìm kiếm...">
-            <select>
+             <select>
                 <option value="all">Chọn danh mục</option>
                 @foreach (var categories in ViewBag.Categories)
                 {
                     <option value="@categories.CategoryId">@categories.CategoryName</option>
                 }
-            </select>
+            </select> 
 
             <a href="/Admin/Products/ThemSanPham"><button class="add-new-btn_sp">Thêm mới</button></a>
 
@@ -50,19 +50,12 @@
                         <td>@product.Price?.ToString("N0", new System.Globalization.CultureInfo("vi-VN")) VNĐ</td>
 
                         <td>@product.Category?.CategoryName</td>
-
-                        <td>
-                            @foreach (var productColor in product.ProductColors)
-                            {
-                                <span>@productColor.Color?.ColorName</span>
-                                <br />
-                            }
-                        </td>
+                        <td>@product.Color</td>
 
                         <td>@product.Material</td>
 
                         <td>
-                            @if (product.ProductColors.Sum(pc => pc.Quantity) > 0)
+                            @if (product.Quantity > 0)
                             {
                                 <span>Còn hàng</span>
                             }
@@ -91,7 +84,7 @@
     </div>
 
     <!-- Success Popup -->
-    <div id="successPopup" class="popup" style="display: none;">
+    <div id="successPopup" class="popup">
         <p>Sản phẩm đã được xóa thành công!</p>
     </div>
 

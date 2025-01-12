@@ -27,21 +27,21 @@ namespace _6TL.Controllers
 			}
 
 			// Lấy danh sách màu sắc và số lượng liên quan đến sản phẩm
-			var colorsWithQuantity = _context.ProductColors
-				.Where(pc => pc.ProductId == product.ProductId)
-				.Join(_context.Colors,
-					  pc => pc.ColorId,
-					  c => c.ColorId,
-					  (pc, c) => new
-					  {
-						  c.ColorId,
-						  c.ColorCode,
-						  pc.Quantity
-					  })
-				.ToList();
+			//var colorsWithQuantity = _context.ProductColors
+			//	.Where(pc => pc.ProductId == product.ProductId)
+			//	.Join(_context.Colors,
+			//		  pc => pc.ColorId,
+			//		  c => c.ColorId,
+			//		  (pc, c) => new
+			//		  {
+			//			  c.ColorId,
+			//			  c.ColorCode,
+			//			  pc.Quantity
+			//		  })
+			//	.ToList();
 			ViewBag.ProductRating = product.Rating; // Truyền rating từ bảng Product
 
-			ViewBag.ColorsWithQuantity = colorsWithQuantity;
+			//ViewBag.ColorsWithQuantity = colorsWithQuantity;
 
 			var relatedProducts = _context.Products
 				.Where(p => p.CategoryId == product.CategoryId && p.ProductId != product.ProductId)

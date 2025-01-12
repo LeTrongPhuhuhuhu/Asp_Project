@@ -23,8 +23,6 @@ public partial class Product
 
     public int? SupplierId { get; set; }
 
-    public string? PaymentMethod { get; set; }
-
     public int? CategoryId { get; set; }
 
     public DateTime? CreatedAt { get; set; }
@@ -35,6 +33,10 @@ public partial class Product
 
     public decimal? CapitalAmount { get; set; }
 
+    public int? Quantity { get; set; }
+
+    public string? Color { get; set; }
+
     public virtual ICollection<Cart> Carts { get; set; } = new List<Cart>();
 
     public virtual Category? Category { get; set; }
@@ -42,8 +44,6 @@ public partial class Product
     public virtual Discount? Discount { get; set; }
 
     public virtual ICollection<OrderDetail> OrderDetails { get; set; } = new List<OrderDetail>();
-
-    public virtual ICollection<ProductColor> ProductColors { get; set; } = new List<ProductColor>();
 
     public virtual ICollection<Review> Reviews { get; set; } = new List<Review>();
 

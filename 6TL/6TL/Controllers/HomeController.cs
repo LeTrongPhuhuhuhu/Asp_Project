@@ -48,16 +48,16 @@ namespace _6TL.Controllers
 				}
 
 				// Kiểm tra số lượng tồn kho
-				var productStock = _context.ProductColors
-					.Where(pc => pc.ProductId == productId && pc.ColorId ==
-						_context.Colors.FirstOrDefault(c => c.ColorCode == cartItem.Color).ColorId)
-					.Select(pc => pc.Quantity)
-					.FirstOrDefault();
+				//var productStock = _context.ProductColors
+				//	.Where(pc => pc.ProductId == productId && pc.ColorId ==
+				//		_context.Colors.FirstOrDefault(c => c.ColorCode == cartItem.Color).ColorId)
+				//	.Select(pc => pc.Quantity)
+				//	.FirstOrDefault();
 
-				if (quantity > productStock)
-				{
-					return Json(new { success = false, message = $"Chỉ còn {productStock} sản phẩm trong kho." });
-				}
+				//if (quantity > productStock)
+				//{
+				//	return Json(new { success = false, message = $"Chỉ còn {productStock} sản phẩm trong kho." });
+				//}
 
 				// Cập nhật số lượng và tổng tiền
 				cartItem.Quantity = quantity;

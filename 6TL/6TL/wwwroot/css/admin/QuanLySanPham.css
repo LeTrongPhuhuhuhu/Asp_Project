@@ -19,6 +19,7 @@
     color: #333;
 }
 .popup {
+    display: none; 
     position: fixed;
     top: 20px; /* Cách mép trên trang 20px */
     left: 50%; /* Căn giữa theo chiều ngang */
