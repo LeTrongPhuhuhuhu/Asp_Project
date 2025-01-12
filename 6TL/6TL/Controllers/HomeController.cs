@@ -282,10 +282,7 @@ namespace _6TL.Controllers
 		public IActionResult ChiTietSanPham() { return View(); }
 
 
-		public IActionResult ViewProfile()
-		{
-			return View();
-		}
+		
         public ActionResult TinTuc(int? pageNumber)
         {
             // Kích thước trang (số lượng bài viết trên mỗi trang)
