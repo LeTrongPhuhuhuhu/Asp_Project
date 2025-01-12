@@ -24,40 +24,21 @@
             <label for="price">Giá bán</label>
             <input type="text" id="Price" name="Price" value="@Model.Price" required />
         </div>
-
+        <!-- Giá vốn  -->
+        <div class="form-row_ssp">
+            <label for="price">Giá vốn</label>
+            <input type="text" id="CapitalAmount" name="CapitalAmount" value="@Model.CapitalAmount" required />
+        </div>
         <!-- Màu sắc -->
         <div class="form-row_ssp">
-            <label for="color">Màu sắc</label>
-            <div class="product-colors">
-                @foreach (var productColor in ViewBag.ProductColors as List<ProductColor>)
-                {
-                    <div class="color-item">
-                        <!-- Dropdown hiển thị màu sắc chỉ từ cơ sở dữ liệu -->
-                        <select name="colorId" class="form-control" onchange="updateQuantity(this)">
-                            <option value="@productColor.ColorId" data-quantity="@productColor.Quantity">
-                                @productColor.Color.ColorName
-                            </option>
-                        </select>
-
-                        <!-- Input số lượng cho từng màu, hiển thị đúng số lượng hiện tại -->
-                        <input type="number" name="quantities[@productColor.ColorId]"
-                               value="@productColor.Quantity" min="1" class="form-control" />
-                        <button type="button" class="remove-color-btn" onclick="removeColor(this)">Xóa màu</button>
-                    </div>
-                }
-            </div>
-
-            @* Chỉ hiển thị các màu sắc từ cơ sở dữ liệu *@
-            <label for="them-mau_ssp">Thêm màu mới</label>
-            <select id="them-mau_ssp" name="NewColorId" onchange="addColor()">
-                <option value="" disabled selected>Chọn màu</option>
-                @foreach (var color in ViewBag.Colors as List<Color>)
-                {
-                    <option value="@color.ColorId" data-color-name="@color.ColorName">@color.ColorName</option>
-                }
-            </select>
+            <label for="color">Màu sắc </label>
+            <input type="text" id="Color" name="Color" value="@Model.Color" required />
         </div>
-
+        <!-- Số lượng -->
+        <div class="form-row_ssp">
+            <label for="quantity">Số lượng </label>
+            <input type="number" id="Quantity" name="Quantity" value="@Model.Quantity" required />
+        </div>
         <!-- Danh mục -->
         <div class="form-row_ssp">
             <label for="category">Danh mục</label>
@@ -98,58 +79,21 @@
             <button type="submit" class="save-btn_ssp">Lưu thay đổi</button>
             <a href="/Admin/Home/QuanLySanPham" class="cancel-btn_ssp">Hủy</a>
         </div>
+        @if (TempData["SuccessMessage"] != null)
+        {
+            <div class="popup success-popup">
+                <span class="popup-text">@TempData["SuccessMessage"]</span>
+            </div>
+        }
 
+        @if (TempData["ErrorMessage"] != null)
+        {
+            <div class="popup error-popup">
+                <span class="popup-text">@TempData["ErrorMessage"]</span>
+            </div>
+        }
     </form>
     <script>
-        // Hàm cập nhật số lượng cho màu đã chọn
-        function updateQuantity(selectElement) {
-            var selectedOption = selectElement.options[selectElement.selectedIndex];
-            var quantity = selectedOption.getAttribute("data-quantity");
-
-            // Tìm input số lượng tương ứng và cập nhật giá trị
-            var quantityInput = selectElement.closest('.color-item').querySelector('input[type="number"]');
-            quantityInput.value = quantity || 0;
-        }
-
-        // Hàm thêm màu mới vào sản phẩm
-        function addColor() {
-            var selectedColorId = document.getElementById("them-mau_ssp").value;
-            if (selectedColorId) {
-                var colorName = document.querySelector("#them-mau_ssp option[value='" + selectedColorId + "']").getAttribute("data-color-name");
-
-                var container = document.querySelector('.product-colors');
-
-                // Kiểm tra xem màu đã được thêm chưa (không thêm màu trùng)
-                var colorExists = false;
-                var colorItems = container.querySelectorAll('.color-item select');
-                colorItems.forEach(function (select) {
-                    if (select.value === selectedColorId) {
-                        colorExists = true;
-                    }
-                });
-
-                // Nếu màu chưa có, thêm nó
-                if (!colorExists) {
-                    var newColorRow = document.createElement('div');
-                    newColorRow.classList.add('color-item');
-                    newColorRow.innerHTML = `
-                                <select name="colorId" class="form-control" onchange="updateQuantity(this)">
-                                    <option value="${selectedColorId}" selected>${colorName}</option>
-                                </select>
-                                <input type="number" name="quantities[${selectedColorId}]" value="1" min="1" class="form-control" />
-                                <button type="button" class="remove-color-btn" onclick="removeColor(this)">Xóa màu</button>
-                            `;
-                    container.appendChild(newColorRow);
-                } else {
-                    alert('Màu này đã được thêm rồi!');
-                }
-            }
-        }
-
-        // Hàm xóa màu
-        function removeColor(button) {
-            var colorItem = button.closest('.color-item');
-            colorItem.remove();
-        }
+        
     </script>
 </div>

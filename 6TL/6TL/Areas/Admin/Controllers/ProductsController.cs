@@ -31,8 +31,6 @@ namespace _6TL.Areas.Admin.Controllers
             // Truy vấn dữ liệu và trả về danh sách sản phẩm
             var products = _context.Products
             .Include(p => p.Category)
-            .Include(p => p.ProductColors)
-            .ThenInclude(pc => pc.Color)
             .ToList();
 
 
@@ -47,7 +45,6 @@ namespace _6TL.Areas.Admin.Controllers
         public IActionResult ThemSanPham()
         {
             // Lấy danh sách nhà cung cấp và danh mục từ cơ sở dữ liệu và gán cho ViewBag
-            ViewBag.Colors = _context.Colors.ToList();
             ViewBag.Suppliers = _context.Suppliers.ToList();
             ViewBag.Categories = _context.Categories.ToList();
             return View();
@@ -56,7 +53,7 @@ namespace _6TL.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult ThemSanPham(Product product, IFormFile? imageFile, List<ProductColor> Colors)
+        public IActionResult ThemSanPham(Product product, IFormFile? imageFile)
         {
 
             try
@@ -88,65 +85,10 @@ namespace _6TL.Areas.Admin.Controllers
                 product.CreatedAt = DateTime.Now;
                 _context.Products.Add(product);
                 _context.SaveChanges();
-
-                // Thêm màu sắc và số lượng
-                if (Colors != null && Colors.Count > 0)
-                {
-                    foreach (var productColor in Colors)
-                    {
-                        // Tìm màu sắc trong bảng Colors
-                        var existingColor = _context.Colors.FirstOrDefault(c => c.ColorName == productColor.Color.ColorName);
-
-                        if (existingColor != null)
-                        {
-                            // Nếu màu sắc đã tồn tại, kiểm tra liên kết trong bảng ProductColor
-                            var existingProductColor = _context.ProductColors
-                                .FirstOrDefault(pc => pc.ProductId == product.ProductId && pc.ColorId == existingColor.ColorId);
-
-                            if (existingProductColor != null)
-                            {
-                                // Nếu liên kết đã tồn tại, cập nhật số lượng
-                                existingProductColor.Quantity += productColor.Quantity;
-                            }
-                            else
-                            {
-                                // Nếu liên kết chưa tồn tại, thêm mới với số lượng
-                                var newProductColor = new ProductColor
-                                {
-                                    ProductId = product.ProductId,
-                                    ColorId = existingColor.ColorId,
-                                    Quantity = productColor.Quantity
-                                };
-                                _context.ProductColors.Add(newProductColor);
-                            }
-                        }
-                        else
-                        {
-                            // Nếu màu sắc chưa tồn tại, tạo mới trong bảng Colors
-                            var newColor = new Color
-                            {
-                                ColorName = productColor.Color.ColorName
-                            };
-                            _context.Colors.Add(newColor);
-                            _context.SaveChanges(); // Lưu để lấy ColorId
-
-                            // Sau khi tạo mới, thêm liên kết vào bảng ProductColor với số lượng
-                            var newProductColor = new ProductColor
-                            {
-                                ProductId = product.ProductId,
-                                ColorId = newColor.ColorId,
-                                Quantity = productColor.Quantity
-                            };
-                            _context.ProductColors.Add(newProductColor);
-                        }
-                    }
-
-                    // Lưu tất cả thay đổi vào cơ sở dữ liệu
-                    _context.SaveChanges();
-                }
-
                 TempData["SuccessMessage"] = "Thêm sản phẩm thành công!";
-                return RedirectToAction("QuanLySanPham", "Products", new { area = "Admin" });
+                ViewBag.Suppliers = _context.Suppliers.ToList();
+                ViewBag.Categories = _context.Categories.ToList();
+                return View();
 
             }
             catch (Exception ex)
@@ -158,7 +100,10 @@ namespace _6TL.Areas.Admin.Controllers
                 }
 
                 TempData["ErrorMessage"] = "Có lỗi xảy ra, vui lòng thử lại.";
-                return View(product);
+                ViewBag.Suppliers = _context.Suppliers.ToList();
+                ViewBag.Categories = _context.Categories.ToList();
+
+                return View();
             }
         }
 
@@ -236,8 +181,6 @@ namespace _6TL.Areas.Admin.Controllers
                 .AsNoTracking()
                 .Include(p => p.Category)
                 .Include(p => p.Supplier)
-                .Include(p => p.ProductColors)
-                .ThenInclude(pc => pc.Color)
                 .FirstOrDefault(p => p.ProductId == ProductId);
 
             if (product == null)
@@ -247,11 +190,6 @@ namespace _6TL.Areas.Admin.Controllers
 
             ViewBag.Categories = new SelectList(_context.Categories, "CategoryId", "CategoryName", product.CategoryId);
             ViewBag.Suppliers = new SelectList(_context.Suppliers, "SupplierId", "SupplierName", product.SupplierId);
-            ViewBag.Colors = _context.Colors.ToList();
-            ViewBag.ProductColors = _context.ProductColors
-             .Where(pc => pc.ProductId == ProductId) // Lấy tất cả các màu liên quan đến sản phẩm
-             .Include(pc => pc.Color) // Bao gồm thông tin chi tiết màu sắc
-             .ToList();
 
 
 
@@ -264,7 +202,7 @@ namespace _6TL.Areas.Admin.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
 
-        public IActionResult SuaSanPham(int id, Product product, IFormFile? imageFile, int? ColorId)
+        public IActionResult SuaSanPham(int id, Product product, IFormFile? imageFile)
         {
             if (id != product.ProductId)
             {
@@ -286,25 +224,10 @@ namespace _6TL.Areas.Admin.Controllers
                 existingProduct.ProductDescription = product.ProductDescription;
                 existingProduct.CategoryId = product.CategoryId;
                 existingProduct.SupplierId = product.SupplierId;
+                existingProduct.Color = product.Color;
+                existingProduct.Quantity = product.Quantity;
+                existingProduct.CapitalAmount = product.CapitalAmount;
 
-                // Cập nhật màu sắc nếu có
-                if (ColorId.HasValue)
-                {
-                    var existingColor = _context.ProductColors
-                        .Where(pc => pc.ProductId == product.ProductId)
-                        .ToList();
-
-                    // Nếu màu mới chưa có trong sản phẩm, thêm mới
-                    if (!existingColor.Any(pc => pc.ColorId == ColorId.Value))
-                    {
-                        var newProductColor = new ProductColor
-                        {
-                            ProductId = product.ProductId,
-                            ColorId = ColorId.Value
-                        };
-                        _context.ProductColors.Add(newProductColor);
-                    }
-                }
 
                 // Xử lý hình ảnh nếu có upload mới
                 if (imageFile != null && imageFile.Length > 0)
@@ -344,15 +267,16 @@ namespace _6TL.Areas.Admin.Controllers
                 // Lưu thay đổi
                 _context.Products.Update(existingProduct);
                 _context.SaveChanges();
-
+                ViewBag.Suppliers = _context.Suppliers.ToList();
+                ViewBag.Categories = _context.Categories.ToList();
                 TempData["SuccessMessage"] = "Cập nhật sản phẩm thành công!";
-                return RedirectToAction("QuanLySanPham");
+                return View("QuanLySanPham");
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"Error: {ex.Message}");
                 TempData["ErrorMessage"] = "Có lỗi xảy ra trong quá trình cập nhật sản phẩm. Vui lòng thử lại sau.";
-                return View(product); // return the same view with the product to show error
+                return View(); 
             }
         }
 
@@ -361,13 +285,12 @@ namespace _6TL.Areas.Admin.Controllers
         public IActionResult XoaSanPham(int productId)
         {
             // Lấy sản phẩm theo ProductId
-            var product = _context.Products.Include(p => p.ProductColors)
-                                           .FirstOrDefault(p => p.ProductId == productId);
+            var product = _context.Products.FirstOrDefault(p => p.ProductId == productId);
+
 
             if (product != null)
             {
-                // Xóa các bản ghi liên quan đến ProductColors trước (nếu có)
-                _context.ProductColors.RemoveRange(product.ProductColors);
+                
 
                 // Xóa sản phẩm
                 _context.Products.Remove(product);
