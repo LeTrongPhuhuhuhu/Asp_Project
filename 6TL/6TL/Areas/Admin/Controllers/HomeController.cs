@@ -1,25 +1,63 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using _6TL.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace _6TL.Areas.Admin.Controllers
 {
     [Area("Admin")]
     public class HomeController : Controller
-	{
-		
-		public IActionResult Index()
-		{
-			return View();
-		}
-        public IActionResult ThemBlog()
-        {
-            return View();
+    {
+        private readonly Db6TLContext _context;
+        public HomeController(Db6TLContext context) {
+            _context = context;
         }
-        public IActionResult QuanLyBlog()
+
+        // Action Index - Hiển thị thông tin website
+        [HttpGet]
+        [Route("Admin/Home/Index")]
+        public IActionResult Index()
         {
-            return View();
+            var websiteinfo = _context.WebsiteInfos.FirstOrDefault();
+            return View(websiteinfo);
         }
-		
-		public IActionResult GioiThieu()
+
+        // Action xử lý cập nhật thông tin website khi form gửi tới
+        [HttpPost]
+        [Route("Admin/Home/Index")]
+        public IActionResult Index(WebsiteInfo model)
+        {
+            if (ModelState.IsValid)
+            {
+                var websiteInfo = _context.WebsiteInfos.FirstOrDefault();
+                if (websiteInfo == null)
+                {
+                    TempData["Error"] = "Website information not found.";
+                    return RedirectToAction("Index");
+                }
+                // Cập nhật thông tin website
+                websiteInfo.Description = model.Description;
+                websiteInfo.PhoneNumber = model.PhoneNumber;
+                websiteInfo.Address = model.Address;
+                websiteInfo.Email = model.Email;
+                websiteInfo.FacebookUrl = model.FacebookUrl;
+                websiteInfo.YouTubeUrl = model.YouTubeUrl;
+                websiteInfo.TwitterUrl = model.TwitterUrl;
+                websiteInfo.InstagramUrl = model.InstagramUrl;
+                websiteInfo.LogoUrl = model.LogoUrl;
+
+                _context.SaveChanges();
+                TempData["Message"] = "Cập nhật thành công thông tin website!";
+            }
+            else
+            {
+                TempData["Error"] = "Có lỗi xảy ra! Vui lòng thử lại.";
+            }
+            var websiteinfo = _context.WebsiteInfos.FirstOrDefault();
+            return View(websiteinfo);
+            
+        }
+
+        public IActionResult GioiThieu()
 		{
 			return View();
 		}
