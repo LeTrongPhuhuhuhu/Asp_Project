@@ -150,45 +150,52 @@
         </div>
     </div>
 </section>
-
-
 <section class="py-5">
     <div class="container text-center">
         <div class="text-center">
             <h2 class="mb-2">Sản Phẩm Nổi Bật</h2>
         </div>
-        <div class="text-end">
-            <a href="/Home/SanPham" class="btn-more text-decoration-none">Xem thêm &raquo;</a>
-        </div>
-
         <!-- Carousel container -->
         <div id="featuredProductsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
             <div class="carousel-inner">
-                @for (int i = 0; i < Model.Count(); i += 4)
+                @if (Model != null)
                 {
-                    <div class="carousel-item @(i == 0 ? "active" : "")">
-                        <div class="row">
-                            @foreach (var product in Model.Skip(i).Take(4))
-                            {
-                                <div class="col-md-3">
-                                    <div class="product-item_sp">
-                                        <div class="favorite_sp">
-                                            <i class="heart-icon_sp">&hearts;</i>
-                                        </div>
-                                        <img src="@product.Image" alt="@product.ProductName" class="img-fluid">
-                                        <h3>@product.ProductName</h3>
-                                        <span>@string.Format("{0:N0} VND", product.Price)</span>
-                                        <div class="rating_sp">
-                                            <span>★★★★☆</span> 
+                    var chunkedProducts = Model.Select((p, index) => new { p, index })
+                    .GroupBy(x => x.index / 4)
+                    .Select(g => g.Select(x => x.p).ToList())
+                    .ToList();
+
+                    foreach (var group in chunkedProducts)
+                    {
+                        <div class="carousel-item @(group == chunkedProducts.First() ? "active" : "")">
+                            <div class="row">
+                                @foreach (var product in group)
+                                {
+                                    <div class="col-md-3">
+                                        <div class="product-item_ct" onclick="window.location.href='Product/ChiTietSanPham/@product.ProductId'">
+                                            <div class="favorite_ct">
+                                                <i class="heart-icon_ct">&hearts;</i>
+                                            </div>
+                                            <img src="~/img/@product.Image" alt="@product.ProductName" class="img-fluid">
+                                            <h3>@product.ProductName</h3>
+                                            <span>@string.Format(new System.Globalization.CultureInfo("vi-VN"), "{0:N0} VNĐ", product.Price)</span>
+                                            <div class="rating_ct">
+                                                <span>★★★★☆</span>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            }
+                                }
+                            </div>
                         </div>
+                    }
+                }
+                else
+                {
+                    <div class="carousel-item active">
+                        <p>Không có sản phẩm nổi bật.</p>
                     </div>
                 }
-            </div> 
-            @* mai sua lai phan hien thi rating  *@
+            </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#featuredProductsCarousel" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>

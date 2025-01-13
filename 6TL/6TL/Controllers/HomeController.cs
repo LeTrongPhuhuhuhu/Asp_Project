@@ -25,7 +25,7 @@ namespace _6TL.Controllers
             _configuration = configuration;
         }
 
-        [HttpPost]
+		[HttpPost]
 		[Route("Home/UpdateCartQuantity/{productId}")]
 		public IActionResult UpdateCartQuantity([FromRoute] int productId, [FromBody] int quantity)
 		{
@@ -39,6 +39,7 @@ namespace _6TL.Controllers
 				// Sử dụng customerId = 1 tạm thời
 				int customerId = 1;
 
+				// Tìm giỏ hàng của sản phẩm với productId và customerId
 				var cartItem = _context.Carts
 					.FirstOrDefault(c => c.ProductId == productId && c.CustomerId == customerId);
 
@@ -47,26 +48,35 @@ namespace _6TL.Controllers
 					return Json(new { success = false, message = "Không tìm thấy sản phẩm trong giỏ hàng." });
 				}
 
-				// Kiểm tra số lượng tồn kho
-				//var productStock = _context.ProductColors
-				//	.Where(pc => pc.ProductId == productId && pc.ColorId ==
-				//		_context.Colors.FirstOrDefault(c => c.ColorCode == cartItem.Color).ColorId)
-				//	.Select(pc => pc.Quantity)
-				//	.FirstOrDefault();
+				// Lấy thông tin sản phẩm (bao gồm Color và Quantity) từ bảng Products
+				var productDetails = _context.Products
+					.Where(p => p.ProductId == productId)
+					.Select(p => new
+					{
+						p.Quantity, // Số lượng tồn kho
+						p.Color // Màu sắc của sản phẩm
+					})
+					.FirstOrDefault();
 
-				//if (quantity > productStock)
-				//{
-				//	return Json(new { success = false, message = $"Chỉ còn {productStock} sản phẩm trong kho." });
-				//}
+				if (productDetails == null)
+				{
+					return Json(new { success = false, message = "Thông tin sản phẩm không hợp lệ." });
+				}
 
-				// Cập nhật số lượng và tổng tiền
+				// Kiểm tra số lượng tồn kho của sản phẩm
+				if (quantity > productDetails.Quantity)
+				{
+					return Json(new { success = false, message = $"Chỉ còn {productDetails.Quantity} sản phẩm trong kho." });
+				}
+
+				// Cập nhật số lượng và tổng tiền của sản phẩm trong giỏ hàng
 				cartItem.Quantity = quantity;
 				cartItem.TotalPrice = cartItem.Price * quantity;
 				cartItem.UpdatedAt = DateTime.Now;
 
 				_context.SaveChanges();
 
-				// Tính lại tổng cộng
+				// Tính lại tổng số tiền của giỏ hàng
 				var subtotal = _context.Carts
 					.Where(c => c.CustomerId == customerId)
 					.Sum(c => c.TotalPrice) ?? 0;
@@ -84,28 +94,39 @@ namespace _6TL.Controllers
 				return Json(new { success = false, message = "Đã xảy ra lỗi khi cập nhật giỏ hàng." });
 			}
 		}
-
-		// Trang thanh toán với thông tin sản phẩm
-
-		// Action hiển thị trang thanh toán
-
-
+		// Controller method for handling the checkout
 		public async Task<IActionResult> TrangThanhToan(
-	int? productId = null,
-	string productName = null,
-	string productImage = null,
-	decimal? productPrice = null,
-	string productColor = null,
-	int quantity = 1,
-	bool isBuyNow = false)
+			int? productId = null,
+			string productName = null,
+			string productImage = null,
+			decimal? productPrice = null,
+			string productColor = null,
+			int quantity = 1,
+			bool isBuyNow = false)
 		{
+			// Lấy CustomerId từ session
+			int? customerId = HttpContext.Session.GetInt32("CustomerId");
+
 			// Kiểm tra xem người dùng đã đăng nhập chưa
-			int customerId = 1; // Tạm thời là 1, sau này sẽ lấy từ session hoặc token người dùng đã đăng nhập
-			if (customerId == 0)  // Giả sử nếu không có customerId, người dùng chưa đăng nhập
+			if (customerId == null || customerId == 0)
 			{
-				return RedirectToAction("Login", "Account");  // Chuyển hướng đến trang đăng nhập
+				// Nếu chưa đăng nhập, lưu thông báo và chuyển hướng về trang chủ
+				TempData["ErrorMessage"] = "Vui lòng đăng nhập để tiếp tục thanh toán.";
+				return RedirectToAction("Index", "Home");  // Điều hướng về trang chủ
 			}
 
+			// Lưu customerId vào db (ví dụ lưu vào bảng Orders hoặc bất kỳ bảng nào liên quan)
+			var order = new Order
+			{
+				CustomerId = customerId.Value,  // Lưu CustomerId vào Order
+				OrderDate = DateTime.Now,
+				TotalAmount = 0 // Tổng tiền sẽ được tính sau
+			};
+
+			_context.Orders.Add(order);
+			await _context.SaveChangesAsync();  // Lưu vào DB để tạo đơn hàng
+
+			// Logic xử lý "Mua Ngay" hoặc giỏ hàng...
 			if (isBuyNow)
 			{
 				// Logic khi nhấn "Mua Ngay"
@@ -119,9 +140,9 @@ namespace _6TL.Controllers
 				return View("TrangThanhToan"); // Trả về giao diện Mua Ngay
 			}
 
-			// Logic cho nút Thanh Toán từ giỏ hàng
+			// Logic xử lý thanh toán từ giỏ hàng...
 			var cartItems = await _context.Carts
-				.Where(c => c.CustomerId == customerId)  // Lọc giỏ hàng của khách hàng đã đăng nhập
+				.Where(c => c.CustomerId == customerId.Value)  // Lọc giỏ hàng của khách hàng đã đăng nhập
 				.Include(c => c.Product)
 				.ToListAsync();
 
@@ -130,20 +151,100 @@ namespace _6TL.Controllers
 				return RedirectToAction("GioHang");
 			}
 
-			// Tính toán và trả về View cho Thanh Toán
 			decimal subtotal = cartItems.Sum(item => item.TotalPrice ?? (item.Price * item.Quantity));
-
 			decimal total = subtotal;
 
+			// Add the cart items to the view for rendering
 			ViewBag.CartItems = cartItems;
 			ViewBag.Subtotal = subtotal;
-			
 			ViewBag.Total = total;
 
 			return View("TrangThanhToan");
 		}
 
+		// API to handle COD checkout
+		[HttpPost]
+		[Route("api/checkout/cod")]
+		public IActionResult CheckoutCOD([FromBody] CartData cartData)
+		{
+			if (cartData == null || !cartData.items.Any())
+			{
+				return BadRequest("Giỏ hàng không có sản phẩm.");
+			}
 
+			// Tạo đơn hàng
+			var order = new Order
+			{
+				CustomerId = cartData.customerId,  // Lưu customerId vào đơn hàng
+				CustomerName = cartData.customerName,
+				PhoneNumber = cartData.customerPhone,
+				Address = cartData.customerAddress,
+				Email = cartData.customerEmail,
+				OrderDate = DateTime.Now,
+				OrderStatus = "Chờ xử lý",  // Trạng thái "Chờ xử lý"
+				TotalAmount = cartData.totalAmount,
+				PaymentMethod = "COD",  // Phương thức thanh toán COD
+				CreatedAt = DateTime.Now,
+				UpdatedAt = DateTime.Now
+			};
+
+			// Thêm đơn hàng vào cơ sở dữ liệu
+			_context.Orders.Add(order);
+			_context.SaveChanges(); // Lưu đơn hàng và lấy OrderId mới
+
+			// Lưu chi tiết đơn hàng
+			foreach (var item in cartData.items)
+			{
+				var orderDetail = new OrderDetail
+				{
+					OrderId = order.OrderId,  // Liên kết với đơn hàng vừa tạo
+					ProductId = item.productId,
+					ProductName = item.productName,
+					Quantity = item.quantity,
+					UnitPrice = item.price,
+					TotalPrice = item.totalPrice,
+					TotalAmount = item.totalPrice,
+					Color = item.color
+				};
+
+				// Thêm chi tiết đơn hàng vào cơ sở dữ liệu
+				_context.OrderDetails.Add(orderDetail);
+			}
+
+			// Lưu chi tiết đơn hàng vào cơ sở dữ liệu
+			_context.SaveChanges();
+
+			// Xóa giỏ hàng của khách hàng (nếu có)
+			var cartItems = _context.Carts.Where(c => c.CustomerId == cartData.customerId).ToList();
+			_context.Carts.RemoveRange(cartItems);
+			_context.SaveChanges();
+
+			return Ok(new { success = true, message = "Đặt hàng thành công!" });
+		}
+
+
+		// Dữ liệu nhận từ frontend
+		public class CartData
+		{
+			public string customerName { get; set; }
+			public string customerPhone { get; set; }
+			public string customerEmail { get; set; }
+			public string customerAddress { get; set; }
+			public decimal totalAmount { get; set; }
+			public List<CartItem> items { get; set; }
+			public int customerId { get; set; }
+		}
+
+		// Chi tiết từng sản phẩm trong giỏ hàng
+		public class CartItem
+		{
+			public int productId { get; set; }
+			public string productName { get; set; }
+			public decimal price { get; set; }
+			public int quantity { get; set; }
+			public decimal totalPrice { get; set; }
+			public string color { get; set; }
+		}
 
 		//public ActionResult TrangThanhToan(int productId, string productName, string productImage, decimal productPrice, string productColor, int quantity)
 		//{
@@ -160,16 +261,19 @@ namespace _6TL.Controllers
 
 		public IActionResult GioHang(int page = 1, int pageSize = 6)
 		{
-			// Giả sử bạn đã có logic để lấy CustomerId từ session hoặc thông tin đăng nhập
-			int customerId = 1; // Tạm thời là 1, sau này sẽ lấy từ session hoặc token người dùng đã đăng nhập
+			int? customerId = HttpContext.Session.GetInt32("CustomerId");
 
-			// Lấy tổng số sản phẩm trong giỏ hàng của khách hàng
+			if (customerId == null)
+			{
+				// Return view with a flag indicating user is not logged in
+				ViewBag.IsLoggedIn = false;
+				ViewBag.CurrentPage = 1;
+				ViewBag.TotalPages = 1;  // Ensure TotalPages is set to 1 if not logged in
+				return View();
+			}
+
 			var totalItems = _context.Carts.Count(c => c.CustomerId == customerId);
-
-			// Tính tổng số trang
 			var totalPages = (int)Math.Ceiling((double)totalItems / pageSize);
-
-			// Lấy danh sách sản phẩm phân trang của khách hàng
 			var cartItems = _context.Carts
 				.Where(c => c.CustomerId == customerId)
 				.Include(c => c.Product)
@@ -177,19 +281,27 @@ namespace _6TL.Controllers
 				.Take(pageSize)
 				.ToList();
 
-			// Truyền dữ liệu cần thiết sang View
+			ViewBag.IsLoggedIn = true;
 			ViewBag.CurrentPage = page;
-			ViewBag.TotalPages = totalPages;
+			ViewBag.TotalPages = totalPages;  // Ensure TotalPages is set
 
 			return View(cartItems);
 		}
+
+
 
 		[HttpDelete]
 		[Route("Home/remove/{id}")]
 		public IActionResult RemoveFromCart(int id)
 		{
-			// Giả sử bạn đã có logic để lấy CustomerId từ session hoặc thông tin đăng nhập
-			int customerId = 1; // Tạm thời là 1, sau này sẽ lấy từ session hoặc token người dùng đã đăng nhập
+			// Kiểm tra người dùng đã đăng nhập hay chưa
+			int? customerId = HttpContext.Session.GetInt32("CustomerId"); // Lấy từ session
+
+			if (customerId == null)
+			{
+				// Nếu chưa đăng nhập, trả về lỗi
+				return Json(new { success = false, message = "Vui lòng đăng nhập để thao tác." });
+			}
 
 			var cartItem = _context.Carts
 				.FirstOrDefault(item => item.ProductId == id && item.CustomerId == customerId);
@@ -212,13 +324,17 @@ namespace _6TL.Controllers
 			return Json(new { success = false, message = "Sản phẩm không tồn tại trong giỏ hàng." });
 		}
 
-
-
 		[HttpPost]
 		public IActionResult ClearCart()
 		{
-			// Giả sử bạn đã có logic để lấy CustomerId từ session hoặc thông tin đăng nhập
-			int customerId = 1; // Tạm thời là 1, sau này sẽ lấy từ session hoặc token người dùng đã đăng nhập
+			// Kiểm tra người dùng đã đăng nhập hay chưa
+			int? customerId = HttpContext.Session.GetInt32("CustomerId"); // Lấy từ session
+
+			if (customerId == null)
+			{
+				// Nếu chưa đăng nhập, trả về lỗi
+				return Json(new { success = false, message = "Vui lòng đăng nhập để thao tác." });
+			}
 
 			// Xóa tất cả các sản phẩm trong giỏ hàng của khách hàng
 			var cartItems = _context.Carts.Where(c => c.CustomerId == customerId).ToList();
@@ -229,15 +345,21 @@ namespace _6TL.Controllers
 				_context.SaveChanges();
 			}
 
-			// Chuyển hướng đến trang giỏ hàng
-			return RedirectToAction("GioHang"); // Giả sử view giỏ hàng của bạn tên là "Cart"
+			// Trả về kết quả thành công
+			return Json(new { success = true });
 		}
 
 		[HttpGet]
 		public IActionResult GetCartQuantity()
 		{
-			// Giả sử bạn đã có logic để lấy CustomerId từ session hoặc thông tin đăng nhập
-			int customerId = 1; // Tạm thời là 1, sau này sẽ lấy từ session hoặc token người dùng đã đăng nhập
+			// Kiểm tra người dùng đã đăng nhập hay chưa
+			int? customerId = HttpContext.Session.GetInt32("CustomerId"); // Lấy từ session
+
+			if (customerId == null)
+			{
+				// Nếu chưa đăng nhập, trả về 0
+				return Json(new { totalQuantity = 0 });
+			}
 
 			// Lấy tổng số lượng sản phẩm trong giỏ hàng của khách hàng
 			var totalQuantity = _context.Carts
@@ -246,6 +368,7 @@ namespace _6TL.Controllers
 
 			return Json(new { totalQuantity });
 		}
+
 
 
 
@@ -261,7 +384,7 @@ namespace _6TL.Controllers
 				return View(featuredProducts); // Truyền danh sách sản phẩm nổi bật vào View
 			}
 		}
-
+        
 		public IActionResult Privacy()
 		{
 			return View();
@@ -279,10 +402,13 @@ namespace _6TL.Controllers
 			return View();
 		}
 
-		public IActionResult ChiTietSanPham() { return View(); }
 
 
-		
+
+		public IActionResult ViewProfile()
+		{
+			return View();
+		}
         public ActionResult TinTuc(int? pageNumber)
         {
             // Kích thước trang (số lượng bài viết trên mỗi trang)
@@ -308,256 +434,273 @@ namespace _6TL.Controllers
             // Trả về view
             return View();
         }
-        public async Task<IActionResult> DangKy(Customer model)
-        {
+		[HttpPost("register")]
+		[Route("api/customer")]
+		public async Task<IActionResult> DangKy(Customer model)
+		{
+			// Kiểm tra nếu đã đăng nhập, không cho phép đăng ký
+			if (HttpContext.Session.GetString("CustomerId") != null)
+			{
+				return Json(new { success = false, message = "Bạn đã đăng nhập. Vui lòng đăng xuất trước khi đăng ký tài khoản mới." });
+			}
+
 			if (!ModelState.IsValid)
 			{
 				return View(model);
 			}
 
-            // kiểm tra email có tồn tại chưa
-            var existingUser = _context.Customers.FirstOrDefault(u => u.Email == model.Email);
-            if (existingUser != null) // nếu rồi thì hiển thị lỗi
-            {
-                ModelState.AddModelError("Email", "Email đã tồn tại. Vui lòng sử dụng email khác.");
-                return View(model);
-            }
-            //tạo một token
-            var tokenEmail = Guid.NewGuid().ToString();
-            //nếu chưa có email thì tạo người dùng mới
-            var user = new Customer
-            {
-                FullName = model.FullName,
-                PhoneNumber = model.PhoneNumber,
-                Email = model.Email,
-                Address = model.Address,
-                Password = BCrypt.Net.BCrypt.HashPassword(model.Password),
-                EmailConfirmationToken = tokenEmail,
-                IsEmailConfirmed = false, // gán xác nhận là false
-                RoleId = 2 // quyền mặc định
-            };
+			var existingUser = _context.Customers.FirstOrDefault(u => u.Email == model.Email);
+			if (existingUser != null)
+			{
+				ModelState.AddModelError("Email", "Email đã tồn tại. Vui lòng sử dụng email khác.");
+				return View(model);
+			}
 
-            try
-            {
-                _context.Customers.Add(user);
-                _context.SaveChanges();// lưu nhưng ch đăng nhập được
-                // gửi email xác nhận
-                var confirmationUrl = Url.Action("ConfirmEmail", "Home", new { token = tokenEmail }, Request.Scheme);
-                await SendConfirmationEmail(model.Email, confirmationUrl);
+			var tokenEmail = Guid.NewGuid().ToString();
+			var user = new Customer
+			{
+				FullName = model.FullName,
+				PhoneNumber = model.PhoneNumber,
+				Email = model.Email,
+				Address = model.Address,
+				Password = BCrypt.Net.BCrypt.HashPassword(model.Password),
+				EmailConfirmationToken = tokenEmail,
+				IsEmailConfirmed = false,
+				RoleId = 2,
+				Gender = model.Gender,
+				DateOfBirth = model.DateOfBirth
+			};
 
-                // trả về thông báo thành công vào View
-                var message = "Vui lòng kiểm tra email của bạn để xác nhận.";
-                return View("DangKy", model);  // truyền lại model nếu cần và thông báo
-            }
-            catch (Exception ex)
-            {
-                ModelState.AddModelError("", $"Đã xảy ra lỗi: {ex.Message}");
-                return View(model);
-            }
-        }
-        private async Task SendConfirmationEmail(string email, string confirmationUrl)
-        {
-            //cài đặt môi trường kết nối gmail
-            var smtpClient = new SmtpClient("smtp.gmail.com")
-            {
-                Port = 587,
-                Credentials = new NetworkCredential("0306211392@caothang.edu.vn", "yybh tvcc zypk vjxh"),
-                EnableSsl = true,
-            };
+			try
+			{
+				_context.Customers.Add(user);
+				await _context.SaveChangesAsync();
 
-            //cài đặt tin nhắn muốn gửi cho gmail người dùng nhập vào
-            var mailMessage = new MailMessage
-            {
-                From = new MailAddress("0306211392@caothang.edu.vn"),
-                Subject = "Xác nhận email",
-                Body = $"<h1>Xác nhận email của bạn</h1><p>Vui lòng nhấn vào liên kết sau để xác nhận:</p><a href='{confirmationUrl}'>Xác nhận email</a>",
-                IsBodyHtml = true,
-            };
-            mailMessage.To.Add(email);
+				var confirmationUrl = Url.Action("ConfirmEmail", "Home", new { token = tokenEmail }, Request.Scheme);
+				await SendConfirmationEmail(model.Email, confirmationUrl);
 
-            await smtpClient.SendMailAsync(mailMessage);
-        }
-
-        [HttpGet]
-        public async Task<IActionResult> ConfirmEmail(string token)
-        {
-            //kiểm tra token có hợp lệ hay không
-            //nếu người dùng nhấn xác nhận gmail thêm lần nữa
-            var customer = _context.Customers.FirstOrDefault(c => c.EmailConfirmationToken == token);
-            //token không giống nhau
-            if (customer == null)
-            {
-                return BadRequest("Token không hợp lệ.");
-            }
-
-            //cập nhật trạng thái xác nhận
-            customer.IsEmailConfirmed = true;
-            customer.EmailConfirmationToken = null;
-
-            _context.Customers.Update(customer);
-            await _context.SaveChangesAsync();
-
-            ViewBag.Message = "Email đã được xác nhận. Bạn có thể đăng nhập ngay bây giờ!";
-            return RedirectToAction("Index");
-        }
-        [HttpPost]
-        public IActionResult DangNhap([FromBody] LoginModel model)
-        {
-            if (!ModelState.IsValid)
-            {
-                return Json(new { success = false, message = "Thông tin không hợp lệ." });
-            }
-
-            var customer = _context.Customers.FirstOrDefault(c => c.Email == model.Email);
-            if (customer == null || !BCrypt.Net.BCrypt.Verify(model.Password, customer.Password) || customer.IsEmailConfirmed != true)
-            {
-                return Json(new { success = false, message = "Tài khoản chưa được xác nhận hoặc thông tin không chính xác." });
-            }
+				return View("DangKy", model);
+			}
+			catch (Exception ex)
+			{
+				ModelState.AddModelError("", $"Đã xảy ra lỗi: {ex.Message}");
+				return View(model);
+			}
+		}
 
 
-            // tạo token JWT
-            var token = GenerateJwtToken(customer);
 
-            // trả về thông tin khách hàng và token
-            return Json(new
-            {
-                success = true,
-                token = token,
-                customer = new
-                {
-                    customer.CustomerId,
-                    customer.FullName,
-                    customer.Email,
-                    customer.PhoneNumber,
-                    customer.Address,
-                    customer.RoleId
-                }
-            });
-        }
+		private async Task SendConfirmationEmail(string email, string confirmationUrl)
+		{
+			//cài đặt môi trường kết nối gmail
+			var smtpClient = new SmtpClient("smtp.gmail.com")
+			{
+				Port = 587,
+				Credentials = new NetworkCredential("0306211392@caothang.edu.vn", "yybh tvcc zypk vjxh"),
+				EnableSsl = true,
+			};
 
-        //hàm tạo token
-        private string GenerateJwtToken(Customer customer)
-        {
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));//tạo một key
-            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+			//cài đặt tin nhắn muốn gửi cho gmail người dùng nhập vào
+			var mailMessage = new MailMessage
+			{
+				From = new MailAddress("0306211392@caothang.edu.vn"),
+				Subject = "6TL FURNITURE CONFIRMATION",
+				Body = $"<h1>CẢM ƠN BẠN ĐÃ ĐĂNG KÝ VÀ CHÚC MỪNG BẠN ĐÃ TRỞ THÀNH THÀNH VIÊN NHỎ TRONG GIA ĐÌNH 6TL</h1><p>Vui lòng nhấn vào liên kết sau để xác nhận:</p><a href='{confirmationUrl}'>Xác nhận email</a>",
+				IsBodyHtml = true,
+			};
+			mailMessage.To.Add(email);
 
-            var claims = new[]
-            {
-                new Claim(ClaimTypes.Name, customer.FullName),
-                new Claim(ClaimTypes.Email, customer.Email),
-                new Claim("CustomerId", customer.CustomerId.ToString())
-            };
+			await smtpClient.SendMailAsync(mailMessage);
+		}
 
-            var token = new JwtSecurityToken(
-                issuer: _configuration["Jwt:Issuer"],
-                audience: _configuration["Jwt:Audience"],
-                claims: claims,
-                expires: DateTime.Now.AddHours(2),
-                signingCredentials: creds);
+		[HttpGet]
+		public async Task<IActionResult> ConfirmEmail(string token)
+		{
+			//kiểm tra token có hợp lệ hay không
+			//nếu người dùng nhấn xác nhận gmail thêm lần nữa
+			var customer = _context.Customers.FirstOrDefault(c => c.EmailConfirmationToken == token);
+			//token không giống nhau
+			if (customer == null)
+			{
+				return BadRequest("Token không hợp lệ.");
+			}
 
-            return new JwtSecurityTokenHandler().WriteToken(token);
-        }
+			//cập nhật trạng thái xác nhận
+			customer.IsEmailConfirmed = true;
+			customer.EmailConfirmationToken = null;
 
-        public async Task<IActionResult> QuenMatKhau(ForgotPassword model)
-        {
-            if (!ModelState.IsValid)
-            {
-                return View(model);
-            }
-            var customer = _context.Customers.FirstOrDefault(c => c.Email == model.Email);
-            if (customer == null)
-            {
-                ModelState.AddModelError("Email", "Email chưa được đăng kí.");
-                return View(model);
-            }
-            var tokenEmail = Guid.NewGuid().ToString();
-            customer.PasswordResetToken = tokenEmail;
+			_context.Customers.Update(customer);
+			await _context.SaveChangesAsync();
 
-            // Tính thời gian hết hạn cho token (10 phút, UTC+7)
-            var currentDate = DateTime.UtcNow.AddHours(7); // Chuyển sang múi giờ UTC+7
-            customer.PasswordResetExpires = currentDate.AddMinutes(10);
+			ViewBag.Message = "Email đã được xác nhận. Bạn có thể đăng nhập ngay bây giờ!";
+			return RedirectToAction("Index");
+		}
+		[HttpPost]
+		public IActionResult DangNhap([FromBody] LoginModel model)
+		{
+			if (!ModelState.IsValid)
+			{
+				return Json(new { success = false, message = "Thông tin không hợp lệ." });
+			}
 
-            try
-            {
-                // Lưu thay đổi vào cơ sở dữ liệu
-                _context.Customers.Update(customer);
-                await _context.SaveChangesAsync();
+			var customer = _context.Customers.FirstOrDefault(c => c.Email == model.Email);
+			if (customer == null || !BCrypt.Net.BCrypt.Verify(model.Password, customer.Password) || customer.IsEmailConfirmed != true)
+			{
+				return Json(new { success = false, message = "Tài khoản chưa được xác nhận hoặc thông tin không chính xác." });
+			}
 
-                var url = Url.Action("ThayDoiMatKhau", "Home", new { token = tokenEmail }, Request.Scheme);
-                await SendPasswordEmail(model.Email, url);
+			// Lưu thông tin khách hàng vào session
+			HttpContext.Session.SetInt32("CustomerId", customer.CustomerId);
+			HttpContext.Session.SetString("CustomerFullName", customer.FullName);
 
-                return RedirectToAction("Index");
-            }
-            catch (Exception ex)
-            {
-                ModelState.AddModelError("", $"Đã xảy ra lỗi: {ex.Message}");
-                return View(model);
-            }
-        }
-        private async Task SendPasswordEmail(string email, string url)
-        {
-            //cài đặt môi trường kết nối gmail
-            var smtpClient = new SmtpClient("smtp.gmail.com")
-            {
-                Port = 587,
-                Credentials = new NetworkCredential("0306211392@caothang.edu.vn", "yybh tvcc zypk vjxh"),
-                EnableSsl = true,
-            };
+			// tạo token JWT nếu vẫn cần thiết (dùng cho API khác chẳng hạn)
+			var token = GenerateJwtToken(customer);
 
-            //cài đặt tin nhắn muốn gửi cho gmail người dùng nhập vào
-            var mailMessage = new MailMessage
-            {
-                From = new MailAddress("0306211392@caothang.edu.vn"),
-                Subject = "Thay đổi mật khẩu",
-                Body = $"Chào, Vui lòng theo dõi liên kết này để đặt lại mật khẩu của bạn. Liên kết này có giá trị đến 10 phút kể từ bây giờ. </p><a href='{url}'>Liên kết ở đây</a>",
-                IsBodyHtml = true,
-            };
-            mailMessage.To.Add(email);
+			// trả về thông tin khách hàng và token
+			return Json(new
+			{
+				success = true,
+				token = token,
+				customer = new
+				{
+					customer.CustomerId,
+					customer.FullName,
+					customer.Email,
+					customer.PhoneNumber,
+					customer.Address,
+					customer.RoleId
+				}
+			});
+		}
 
-            await smtpClient.SendMailAsync(mailMessage);
-        }
-        public async Task<IActionResult> ThayDoiMatKhau(string token, ResetPassword model)
-        {
-            if (string.IsNullOrEmpty(token))
-            {
-                return RedirectToAction("Index", "Home"); // Nếu token rỗng, chuyển hướng về trang chủ
-            }
-            if (string.IsNullOrEmpty(token))
-            {
-                ModelState.AddModelError("", "Token không hợp lệ.");
-                return View(model);
-            }
-            if (!ModelState.IsValid)
-            {
-                return View(model);
-            }
-            // Lấy thời gian hiện tại theo UTC+7
-            DateTime currentDate = DateTime.UtcNow.AddHours(7);
 
-            var customer = _context.Customers.FirstOrDefault(c => c.PasswordResetToken == token && c.PasswordResetExpires > currentDate);
-            if (customer == null)
-            {
-                return Json(new { success = false, token = token, message = "Token đã hết hạn, Vui lòng thử lại sau." });
-            }
 
-            // Thiết lập lại mật khẩu và xoá thông tin đặt lại mật khẩu
-            customer.Password = BCrypt.Net.BCrypt.HashPassword(model.Password); // Sử dụng phương thức hash mật khẩu
-            customer.PasswordResetToken = null;
-            customer.PasswordResetExpires = null;
+		//hàm tạo token
+		private string GenerateJwtToken(Customer customer)
+		{
+			var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));//tạo một key
+			var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
-            // Lưu thay đổi vào cơ sở dữ liệu
-            _context.Customers.Update(customer);
-            await _context.SaveChangesAsync();
+			var claims = new[]
+			{
+				new Claim(ClaimTypes.Name, customer.FullName),
+				new Claim(ClaimTypes.Email, customer.Email),
+				new Claim("CustomerId", customer.CustomerId.ToString())
+			};
 
-            return RedirectToAction("Index");
-        }
+			var token = new JwtSecurityToken(
+				issuer: _configuration["Jwt:Issuer"],
+				audience: _configuration["Jwt:Audience"],
+				claims: claims,
+				expires: DateTime.Now.AddHours(2),
+				signingCredentials: creds);
 
-        public IActionResult DangXuat()
-        {
-            // trả về kết quả thành công
-            return Json(new { success = true });
-        }
-        public IActionResult ChinhSach()
+			return new JwtSecurityTokenHandler().WriteToken(token);
+		}
+
+		public async Task<IActionResult> QuenMatKhau(ForgotPassword model)
+		{
+			if (!ModelState.IsValid)
+			{
+				return View(model);
+			}
+			var customer = _context.Customers.FirstOrDefault(c => c.Email == model.Email);
+			if (customer == null)
+			{
+				ModelState.AddModelError("Email", "Email chưa được đăng kí.");
+				return View(model);
+			}
+			var tokenEmail = Guid.NewGuid().ToString();
+			customer.PasswordResetToken = tokenEmail;
+
+			// Tính thời gian hết hạn cho token (10 phút, UTC+7)
+			var currentDate = DateTime.UtcNow.AddHours(7); // Chuyển sang múi giờ UTC+7
+			customer.PasswordResetExpires = currentDate.AddMinutes(10);
+
+			try
+			{
+				// Lưu thay đổi vào cơ sở dữ liệu
+				_context.Customers.Update(customer);
+				await _context.SaveChangesAsync();
+
+				var url = Url.Action("ThayDoiMatKhau", "Home", new { token = tokenEmail }, Request.Scheme);
+				await SendPasswordEmail(model.Email, url);
+
+				return RedirectToAction("Index");
+			}
+			catch (Exception ex)
+			{
+				ModelState.AddModelError("", $"Đã xảy ra lỗi: {ex.Message}");
+				return View(model);
+			}
+		}
+		private async Task SendPasswordEmail(string email, string url)
+		{
+			//cài đặt môi trường kết nối gmail
+			var smtpClient = new SmtpClient("smtp.gmail.com")
+			{
+				Port = 587,
+				Credentials = new NetworkCredential("0306211392@caothang.edu.vn", "yybh tvcc zypk vjxh"),
+				EnableSsl = true,
+			};
+
+			//cài đặt tin nhắn muốn gửi cho gmail người dùng nhập vào
+			var mailMessage = new MailMessage
+			{
+				From = new MailAddress("0306211392@caothang.edu.vn"),
+				Subject = "Thay đổi mật khẩu",
+				Body = $"Chào, Vui lòng theo dõi liên kết này để đặt lại mật khẩu của bạn. Liên kết này có giá trị đến 10 phút kể từ bây giờ. </p><a href='{url}'>Liên kết ở đây</a>",
+				IsBodyHtml = true,
+			};
+			mailMessage.To.Add(email);
+
+			await smtpClient.SendMailAsync(mailMessage);
+		}
+		public async Task<IActionResult> ThayDoiMatKhau(string token, ResetPassword model)
+		{
+			if (string.IsNullOrEmpty(token))
+			{
+				return RedirectToAction("Index", "Home"); // Nếu token rỗng, chuyển hướng về trang chủ
+			}
+			if (string.IsNullOrEmpty(token))
+			{
+				ModelState.AddModelError("", "Token không hợp lệ.");
+				return View(model);
+			}
+			if (!ModelState.IsValid)
+			{
+				return View(model);
+			}
+			// Lấy thời gian hiện tại theo UTC+7
+			DateTime currentDate = DateTime.UtcNow.AddHours(7);
+
+			var customer = _context.Customers.FirstOrDefault(c => c.PasswordResetToken == token && c.PasswordResetExpires > currentDate);
+			if (customer == null)
+			{
+				return Json(new { success = false, token = token, message = "Token đã hết hạn, Vui lòng thử lại sau." });
+			}
+
+			// Thiết lập lại mật khẩu và xoá thông tin đặt lại mật khẩu
+			customer.Password = BCrypt.Net.BCrypt.HashPassword(model.Password); // Sử dụng phương thức hash mật khẩu
+			customer.PasswordResetToken = null;
+			customer.PasswordResetExpires = null;
+
+			// Lưu thay đổi vào cơ sở dữ liệu
+			_context.Customers.Update(customer);
+			await _context.SaveChangesAsync();
+
+			return RedirectToAction("Index");
+		}
+
+		public IActionResult DangXuat()
+		{
+			// Xóa toàn bộ dữ liệu trong Session
+			HttpContext.Session.Clear();
+
+			return Json(new { success = true, message = "Bạn đã đăng xuất thành công." });
+		}
+
+		public IActionResult ChinhSach()
 		{
 			return View();
 		}
