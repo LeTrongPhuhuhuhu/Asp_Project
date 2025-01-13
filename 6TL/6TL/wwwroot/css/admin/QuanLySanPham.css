@@ -19,6 +19,7 @@
     color: #333;
 }
 .popup {
+    display: none; 
     position: fixed;
     top: 20px; /* Cách mép trên trang 20px */
     left: 50%; /* Căn giữa theo chiều ngang */
@@ -227,4 +228,63 @@ h2 {
         opacity: 1;
         transform: translateY(0);
     }
+}
+/* Tạo kiểu cho ô input */
+.search-bar_sp input[type="text"] {
+    padding: 10px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    font-size: 14px;
+    transition: width 0.4s ease-in-out;
+}
+
+    /* Hiệu ứng khi focus vào ô input */
+    .search-bar_sp input[type="text"]:focus {
+        outline: none;
+        border-color: #0056b3;
+        width: 300px; /* Mở rộng input khi focus */
+    }
+
+/* Tạo kiểu cho nút tìm kiếm */
+.search-btn {
+    margin-right:60%;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+    /* Hiệu ứng hover khi di chuột vào nút tìm kiếm */
+    .search-btn:hover {
+        background-color: #0056b3;
+    }
+
+/* Tạo kiểu cho nút "Thêm mới" */
+.add-new-btn_sp {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+    /* Hiệu ứng hover khi di chuột vào nút "Thêm mới" */
+    .add-new-btn_sp:hover {
+        background-color: #218838;
+    }
+
+/* Đảm bảo các phần tử trong form hiển thị đẹp */
+.search-bar_sp {
+    display: flex;
+    align-items: center;
 }

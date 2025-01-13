@@ -1,7 +1,7 @@
 @model IEnumerable<Product>
 <!DOCTYPE html>
-<html lang="vi">
 
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,22 +9,17 @@
     <link rel="stylesheet" href="product-management.css">
     <link href="~/css/admin/quanlysanpham.css" rel="stylesheet" />
 </head>
-
 <body>
     <div class="product-management_sp">
         <h2>Quản lý sản phẩm 6TL De Decor</h2>
-        <div class="search-bar_sp">
-            <input type="text" placeholder="Tìm kiếm...">
-            <select>
-                <option value="all">Chọn danh mục</option>
-                @foreach (var categories in ViewBag.Categories)
-                {
-                    <option value="@categories.CategoryId">@categories.CategoryName</option>
-                }
-            </select>
+        <!-- Form tìm kiếm -->
+        <form method="get" class="search-bar_sp">
+            <input type="text" name="searchString" placeholder="Tìm kiếm sản phẩm..." value="@Context.Request.Query["searchString"]" />
+            <button type="submit" class="search-btn">Tìm kiếm</button>
 
             <a href="/Admin/Products/ThemSanPham"><button class="add-new-btn_sp">Thêm mới</button></a>
-        </div>
+        </form>
+
 
         <table class="product-table_sp">
             <thead>
@@ -35,7 +30,6 @@
                     <th>Giá bán</th>
                     <th>Loại</th>
                     <th>Màu sắc</th>
-                    <th>Số lượng</th>
                     <th>Chất liệu</th>
                     <th>Trạng thái</th>
                     <th>Chức năng</th>
@@ -46,20 +40,12 @@
                 {
                     <tr>
                         <td>@product.ProductId</td>
-                        <td><img src="@product.Image" alt="Hình ảnh SP" width="80"></td>
+                        <td><img src="@product.Image" alt="Hình ảnh SP"></td>
                         <td>@product.ProductName</td>
                         <td>@product.Price?.ToString("N0", new System.Globalization.CultureInfo("vi-VN")) VNĐ</td>
+
                         <td>@product.Category?.CategoryName</td>
-
-                        <!-- Hiển thị Màu sắc -->
-                        <td>
-                            <span>@product.Color</span> <!-- Màu sắc trực tiếp từ Product -->
-                        </td>
-
-                        <!-- Hiển thị Số lượng -->
-                        <td>
-                            <span>@product.Quantity</span> <!-- Số lượng trực tiếp từ Product -->
-                        </td>
+                        <td>@product.Color</td>
 
                         <td>@product.Material</td>
 
@@ -82,6 +68,7 @@
                         </td>
                     </tr>
                 }
+
             </tbody>
         </table>
 
@@ -92,7 +79,7 @@
     </div>
 
     <!-- Success Popup -->
-    <div id="successPopup" class="popup" style="display: none;">
+    <div id="successPopup" class="popup">
         <p>Sản phẩm đã được xóa thành công!</p>
     </div>
 
@@ -137,5 +124,7 @@
         }
 
     </script>
+
+    
 </body>
 </html>

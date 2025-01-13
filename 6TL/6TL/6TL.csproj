@@ -46,7 +46,7 @@
     <None Include="Views\Product2\SanPhamYeuThich.cshtml" />
     <None Include="Views\Home\TinTuc.cshtml" />
     <None Include="Views\Home\TrangThanhToan.cshtml" />
-    <None Include="Views\Home\ViewProfile.cshtml" />
+    <None Include="Views\Profile\ViewProfile.cshtml" />
     <None Include="Views\Product\ChiTietSanPham.cshtml" />
     <None Include="Views\Shared\Error.cshtml" />
     <None Include="Views\Shared\_Layout.cshtml" />
