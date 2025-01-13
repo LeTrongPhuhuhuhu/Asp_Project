@@ -107,12 +107,8 @@
 
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <script>
                document.addEventListener('DOMContentLoaded', function () {
-
-          
-
             // Hàm format tiền Việt Nam
             const formatCurrency = (number) => {
                 return new Intl.NumberFormat('vi-VN').format(number) + ' ₫';
@@ -289,10 +285,6 @@
                     }
                 });
             }
-                 function openLoginModal() {
-            const loginModal = new bootstrap.Modal(document.getElementById('loginModal'));
-            loginModal.show();
-        }
         });
     </script>
 </body>
