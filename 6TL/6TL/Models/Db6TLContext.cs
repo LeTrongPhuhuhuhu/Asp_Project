@@ -343,12 +343,11 @@ public partial class Db6TLContext : DbContext
 
         modelBuilder.Entity<WebsiteInfo>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("WebsiteInfo");
+            entity.HasKey(e => e.WebsiteInfoId).HasName("PK__WebsiteI__E2A249A586A78639");
+
+            entity.ToTable("WebsiteInfo");
 
             entity.Property(e => e.Address).HasMaxLength(200);
-            entity.Property(e => e.Description).HasColumnType("text");
             entity.Property(e => e.Email)
                 .HasMaxLength(255)
                 .IsUnicode(false);

@@ -72,6 +72,9 @@ app.MapControllerRoute(
     name: "admin-products",
     pattern: "Admin/Products/{action=QuanLySanPham}/{id?}");
 
+app.MapControllerRoute(
+    name: "admin",
+    pattern: "Admin/{controller=Home}/{action=Index}/{id?}");
 
 app.MapControllerRoute(
 	name: "product",
