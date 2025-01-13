@@ -51,19 +51,19 @@
         <button type="button" id="authButton" class="auth-button hidden" data-bs-toggle="modal" data-bs-target="#loginModal">
             Đăng Nhập
         </button>
-        <!-- Dropdown menu cho tài khoản -->
+        <!-- Dropdown menu cho tài khoản, Ẩn khi chưa đăng nhập và hiển thị khi đăng nhập -->
         <div id="accountDropdown" class="dropdown hidden">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="fa fa-user"></i> Tài khoản
+                <i class="fa fa-user"></i> <span id="usernameDisplay">Tài khoản</span>
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <li><a class="dropdown-item" href="/Home/ViewProfile">Hồ sơ</a></li>
-                <li id="adminOption" style="display:none;">
-                    <a class="dropdown-item" href="/Admin/Home/Index">Quản trị viên</a>
-                </li>
+                <li><a class="dropdown-item" href="/Order/History">Lịch sử đơn hàng</a></li>
+                <li><a class="dropdown-item" href="/Product/Favorites">Sản phẩm yêu thích</a></li>
                 <li><a class="dropdown-item" href="#" id="logoutButton">Đăng xuất</a></li>
             </ul>
         </div>
+
     </header>
     <!-- Modal -->
     <div class="modal fade" id="loginModal" aria-labelledby="loginModalLabel" aria-hidden="true">
@@ -225,24 +225,23 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-                document.addEventListener("DOMContentLoaded", function () {
+        document.addEventListener("DOMContentLoaded", function () {
+            // Lấy số lượng giỏ hàng từ API
+            fetch('/Home/GetCartQuantity')
+                .then(response => response.json())
+                .then(data => {
+                    const cartQuantity = document.getElementById('cart-quantity_la');
+                    if (data.totalQuantity > 0) {
+                        cartQuantity.textContent = data.totalQuantity; // Hiển thị số lượng sản phẩm
+                        cartQuantity.style.display = 'inline'; // Hiển thị phần tử nếu có sản phẩm
+                    } else {
+                        cartQuantity.textContent = '0'; // Hiển thị "0" nếu không có sản phẩm
+                        cartQuantity.style.display = 'inline'; // Vẫn hiển thị phần tử
+                    }
+                })
+                .catch(error => console.error('Error fetching cart quantity:', error));
 
-                            fetch('/Home/GetCartQuantity')
-        .then(response => response.json())
-        .then(data => {
-            const cartQuantity = document.getElementById('cart-quantity_la');
-            if (data.totalQuantity > 0) {
-                cartQuantity.textContent = data.totalQuantity; // Hiển thị số lượng sản phẩm
-                cartQuantity.style.display = 'inline'; // Hiển thị phần tử nếu có sản phẩm
-            } else {
-                cartQuantity.textContent = '0'; // Hiển thị "0" nếu không có sản phẩm
-                cartQuantity.style.display = 'inline'; // Vẫn hiển thị phần tử
-            }
-        })
-        .catch(error => console.error('Error fetching cart quantity:', error));
-
-
-
+            // Xử lý sự kiện cho icon chat và khung chat
             const chatIcon = document.getElementById("chat-icon");
             const chatBox = document.getElementById("chat-box");
             const closeChat = document.getElementById("close-chat");
@@ -257,13 +256,13 @@
                 chatBox.classList.add("hidden");
             });
         });
+
+        // Xử lý sự kiện form đăng nhập
         document.getElementById('loginForm').addEventListener('submit', async function (e) {
             e.preventDefault(); // Ngăn chặn form gửi yêu cầu mặc định
-            console.log('Script loaded');
 
             const email = document.getElementById('email').value.trim();
             const password = document.getElementById('password').value.trim();
-            console.log(JSON.stringify({ email, password }));
             try {
                 const response = await fetch('/Home/DangNhap', {
                     method: 'POST',
@@ -273,7 +272,7 @@
 
                 const result = await response.json();
                 if (result.success) {
-                    // Lưu token và thông tin khách hàng vào Local Storage
+                    // Lưu thông tin người dùng vào Local Storage
                     localStorage.setItem('user', JSON.stringify({
                         token: result.token,
                         customer: result.customer
@@ -289,11 +288,13 @@
                 alert('Đăng nhập thất bại, vui lòng thử lại.');
             }
         });
+
         document.addEventListener('DOMContentLoaded', () => {
             const userData = localStorage.getItem('user');
             const authButton = document.getElementById('authButton');
             const accountDropdown = document.getElementById('accountDropdown');
             const adminOption = document.getElementById('adminOption');
+            const logoutButton = document.getElementById('logoutButton');
 
             if (userData) {
                 // Nếu có user trong localStorage
@@ -307,6 +308,7 @@
                 if (user.customer.roleId == 1) {
                     adminOption.style.display = 'block'; // Hiển thị tùy chọn Quản trị viên nếu roleId = 1
                 }
+
                 // Xử lý sự kiện đăng xuất
                 logoutButton.addEventListener('click', async () => {
                     try {
@@ -335,7 +337,6 @@
                         alert('Đăng xuất thất bại, vui lòng thử lại.');
                     }
                 });
-
             } else {
                 // Hiển thị nút Đăng nhập và ẩn tài khoản
                 authButton.classList.remove('hidden');
@@ -347,8 +348,8 @@
                 };
             }
         });
-
     </script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
+

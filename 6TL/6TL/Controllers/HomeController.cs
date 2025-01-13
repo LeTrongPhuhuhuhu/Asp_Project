@@ -94,6 +94,75 @@ namespace _6TL.Controllers
 				return Json(new { success = false, message = "Đã xảy ra lỗi khi cập nhật giỏ hàng." });
 			}
 		}
+		// Controller method for handling the checkout
+		public async Task<IActionResult> TrangThanhToan(
+			int? productId = null,
+			string productName = null,
+			string productImage = null,
+			decimal? productPrice = null,
+			string productColor = null,
+			int quantity = 1,
+			bool isBuyNow = false)
+		{
+			// Lấy CustomerId từ session
+			int? customerId = HttpContext.Session.GetInt32("CustomerId");
+
+			// Kiểm tra xem người dùng đã đăng nhập chưa
+			if (customerId == null || customerId == 0)
+			{
+				// Nếu chưa đăng nhập, lưu thông báo và chuyển hướng về trang chủ
+				TempData["ErrorMessage"] = "Vui lòng đăng nhập để tiếp tục thanh toán.";
+				return RedirectToAction("Index", "Home");  // Điều hướng về trang chủ
+			}
+
+			// Lưu customerId vào db (ví dụ lưu vào bảng Orders hoặc bất kỳ bảng nào liên quan)
+			var order = new Order
+			{
+				CustomerId = customerId.Value,  // Lưu CustomerId vào Order
+				OrderDate = DateTime.Now,
+				TotalAmount = 0 // Tổng tiền sẽ được tính sau
+			};
+
+			_context.Orders.Add(order);
+			await _context.SaveChangesAsync();  // Lưu vào DB để tạo đơn hàng
+
+			// Logic xử lý "Mua Ngay" hoặc giỏ hàng...
+			if (isBuyNow)
+			{
+				// Logic khi nhấn "Mua Ngay"
+				ViewBag.ProductId = productId ?? 0;
+				ViewBag.ProductName = productName ?? "Unknown Product";
+				ViewBag.ProductImage = productImage ?? "default.jpg";
+				ViewBag.ProductPrice = (productPrice.HasValue ? productPrice.Value.ToString("N0") : "0") + " VNĐ";
+				ViewBag.ProductColor = productColor ?? "No Color";
+				ViewBag.Quantity = "x" + quantity;
+
+				return View("TrangThanhToan"); // Trả về giao diện Mua Ngay
+			}
+
+			// Logic xử lý thanh toán từ giỏ hàng...
+			var cartItems = await _context.Carts
+				.Where(c => c.CustomerId == customerId.Value)  // Lọc giỏ hàng của khách hàng đã đăng nhập
+				.Include(c => c.Product)
+				.ToListAsync();
+
+			if (!cartItems.Any())
+			{
+				return RedirectToAction("GioHang");
+			}
+
+			decimal subtotal = cartItems.Sum(item => item.TotalPrice ?? (item.Price * item.Quantity));
+			decimal total = subtotal;
+
+			// Add the cart items to the view for rendering
+			ViewBag.CartItems = cartItems;
+			ViewBag.Subtotal = subtotal;
+			ViewBag.Total = total;
+
+			return View("TrangThanhToan");
+		}
+
+		// API to handle COD checkout
 		[HttpPost]
 		[Route("api/checkout/cod")]
 		public IActionResult CheckoutCOD([FromBody] CartData cartData)
@@ -106,6 +175,7 @@ namespace _6TL.Controllers
 			// Tạo đơn hàng
 			var order = new Order
 			{
+				CustomerId = cartData.customerId,  // Lưu customerId vào đơn hàng
 				CustomerName = cartData.customerName,
 				PhoneNumber = cartData.customerPhone,
 				Address = cartData.customerAddress,
@@ -151,90 +221,30 @@ namespace _6TL.Controllers
 
 			return Ok(new { success = true, message = "Đặt hàng thành công!" });
 		}
-	
-
-	// Dữ liệu nhận từ frontend
-	public class CartData
-	{
-		public string customerName { get; set; }
-		public string customerPhone { get; set; }
-		public string customerEmail { get; set; }
-		public string customerAddress { get; set; }
-		public decimal totalAmount { get; set; }
-		public List<CartItem> items { get; set; }
-		public int customerId { get; set; }
-	}
-
-	// Chi tiết từng sản phẩm trong giỏ hàng
-	public class CartItem
-	{
-		public int productId { get; set; }
-		public string productName { get; set; }
-		public decimal price { get; set; }
-		public int quantity { get; set; }
-		public decimal totalPrice { get; set; }
-		public string color { get; set; }
-    }
-
-		// Trang thanh toán với thông tin sản phẩm
-
-		// Action hiển thị trang thanh toán
 
 
-		public async Task<IActionResult> TrangThanhToan(
-	int? productId = null,
-	string productName = null,
-	string productImage = null,
-	decimal? productPrice = null,
-	string productColor = null,
-	int quantity = 1,
-	bool isBuyNow = false)
+		// Dữ liệu nhận từ frontend
+		public class CartData
 		{
-			// Kiểm tra xem người dùng đã đăng nhập chưa
-			int customerId = 1; // Tạm thời là 1, sau này sẽ lấy từ session hoặc token người dùng đã đăng nhập
-			if (customerId == 0)  // Giả sử nếu không có customerId, người dùng chưa đăng nhập
-			{
-				return RedirectToAction("Login", "Account");  // Chuyển hướng đến trang đăng nhập
-			}
-
-			if (isBuyNow)
-			{
-				// Logic khi nhấn "Mua Ngay"
-				ViewBag.ProductId = productId ?? 0;
-				ViewBag.ProductName = productName ?? "Unknown Product";
-				ViewBag.ProductImage = productImage ?? "default.jpg";
-				ViewBag.ProductPrice = (productPrice.HasValue ? productPrice.Value.ToString("N0") : "0") + " VNĐ";
-				ViewBag.ProductColor = productColor ?? "No Color";
-				ViewBag.Quantity = "x" + quantity;
-
-				return View("TrangThanhToan"); // Trả về giao diện Mua Ngay
-			}
-
-			// Logic cho nút Thanh Toán từ giỏ hàng
-			var cartItems = await _context.Carts
-				.Where(c => c.CustomerId == customerId)  // Lọc giỏ hàng của khách hàng đã đăng nhập
-				.Include(c => c.Product)
-				.ToListAsync();
-
-			if (!cartItems.Any())
-			{
-				return RedirectToAction("GioHang");
-			}
-
-			// Tính toán và trả về View cho Thanh Toán
-			decimal subtotal = cartItems.Sum(item => item.TotalPrice ?? (item.Price * item.Quantity));
-
-			decimal total = subtotal;
-
-			ViewBag.CartItems = cartItems;
-			ViewBag.Subtotal = subtotal;
-			
-			ViewBag.Total = total;
-
-			return View("TrangThanhToan");
+			public string customerName { get; set; }
+			public string customerPhone { get; set; }
+			public string customerEmail { get; set; }
+			public string customerAddress { get; set; }
+			public decimal totalAmount { get; set; }
+			public List<CartItem> items { get; set; }
+			public int customerId { get; set; }
 		}
 
-
+		// Chi tiết từng sản phẩm trong giỏ hàng
+		public class CartItem
+		{
+			public int productId { get; set; }
+			public string productName { get; set; }
+			public decimal price { get; set; }
+			public int quantity { get; set; }
+			public decimal totalPrice { get; set; }
+			public string color { get; set; }
+		}
 
 		//public ActionResult TrangThanhToan(int productId, string productName, string productImage, decimal productPrice, string productColor, int quantity)
 		//{
@@ -251,16 +261,19 @@ namespace _6TL.Controllers
 
 		public IActionResult GioHang(int page = 1, int pageSize = 6)
 		{
-			// Giả sử bạn đã có logic để lấy CustomerId từ session hoặc thông tin đăng nhập
-			int customerId = 1; // Tạm thời là 1, sau này sẽ lấy từ session hoặc token người dùng đã đăng nhập
+			int? customerId = HttpContext.Session.GetInt32("CustomerId");
 
-			// Lấy tổng số sản phẩm trong giỏ hàng của khách hàng
+			if (customerId == null)
+			{
+				// Return view with a flag indicating user is not logged in
+				ViewBag.IsLoggedIn = false;
+				ViewBag.CurrentPage = 1;
+				ViewBag.TotalPages = 1;  // Ensure TotalPages is set to 1 if not logged in
+				return View();
+			}
+
 			var totalItems = _context.Carts.Count(c => c.CustomerId == customerId);
-
-			// Tính tổng số trang
 			var totalPages = (int)Math.Ceiling((double)totalItems / pageSize);
-
-			// Lấy danh sách sản phẩm phân trang của khách hàng
 			var cartItems = _context.Carts
 				.Where(c => c.CustomerId == customerId)
 				.Include(c => c.Product)
@@ -268,19 +281,27 @@ namespace _6TL.Controllers
 				.Take(pageSize)
 				.ToList();
 
-			// Truyền dữ liệu cần thiết sang View
+			ViewBag.IsLoggedIn = true;
 			ViewBag.CurrentPage = page;
-			ViewBag.TotalPages = totalPages;
+			ViewBag.TotalPages = totalPages;  // Ensure TotalPages is set
 
 			return View(cartItems);
 		}
+
+
 
 		[HttpDelete]
 		[Route("Home/remove/{id}")]
 		public IActionResult RemoveFromCart(int id)
 		{
-			// Giả sử bạn đã có logic để lấy CustomerId từ session hoặc thông tin đăng nhập
-			int customerId = 1; // Tạm thời là 1, sau này sẽ lấy từ session hoặc token người dùng đã đăng nhập
+			// Kiểm tra người dùng đã đăng nhập hay chưa
+			int? customerId = HttpContext.Session.GetInt32("CustomerId"); // Lấy từ session
+
+			if (customerId == null)
+			{
+				// Nếu chưa đăng nhập, trả về lỗi
+				return Json(new { success = false, message = "Vui lòng đăng nhập để thao tác." });
+			}
 
 			var cartItem = _context.Carts
 				.FirstOrDefault(item => item.ProductId == id && item.CustomerId == customerId);
@@ -303,13 +324,17 @@ namespace _6TL.Controllers
 			return Json(new { success = false, message = "Sản phẩm không tồn tại trong giỏ hàng." });
 		}
 
-
-
 		[HttpPost]
 		public IActionResult ClearCart()
 		{
-			// Giả sử bạn đã có logic để lấy CustomerId từ session hoặc thông tin đăng nhập
-			int customerId = 1; // Tạm thời là 1, sau này sẽ lấy từ session hoặc token người dùng đã đăng nhập
+			// Kiểm tra người dùng đã đăng nhập hay chưa
+			int? customerId = HttpContext.Session.GetInt32("CustomerId"); // Lấy từ session
+
+			if (customerId == null)
+			{
+				// Nếu chưa đăng nhập, trả về lỗi
+				return Json(new { success = false, message = "Vui lòng đăng nhập để thao tác." });
+			}
 
 			// Xóa tất cả các sản phẩm trong giỏ hàng của khách hàng
 			var cartItems = _context.Carts.Where(c => c.CustomerId == customerId).ToList();
@@ -320,15 +345,21 @@ namespace _6TL.Controllers
 				_context.SaveChanges();
 			}
 
-			// Chuyển hướng đến trang giỏ hàng
-			return RedirectToAction("GioHang"); // Giả sử view giỏ hàng của bạn tên là "Cart"
+			// Trả về kết quả thành công
+			return Json(new { success = true });
 		}
 
 		[HttpGet]
 		public IActionResult GetCartQuantity()
 		{
-			// Giả sử bạn đã có logic để lấy CustomerId từ session hoặc thông tin đăng nhập
-			int customerId = 1; // Tạm thời là 1, sau này sẽ lấy từ session hoặc token người dùng đã đăng nhập
+			// Kiểm tra người dùng đã đăng nhập hay chưa
+			int? customerId = HttpContext.Session.GetInt32("CustomerId"); // Lấy từ session
+
+			if (customerId == null)
+			{
+				// Nếu chưa đăng nhập, trả về 0
+				return Json(new { totalQuantity = 0 });
+			}
 
 			// Lấy tổng số lượng sản phẩm trong giỏ hàng của khách hàng
 			var totalQuantity = _context.Carts
@@ -337,6 +368,7 @@ namespace _6TL.Controllers
 
 			return Json(new { totalQuantity });
 		}
+
 
 
 
@@ -406,30 +438,25 @@ namespace _6TL.Controllers
 		[Route("api/customer")]
 		public async Task<IActionResult> DangKy(Customer model)
 		{
+			// Kiểm tra nếu đã đăng nhập, không cho phép đăng ký
+			if (HttpContext.Session.GetString("CustomerId") != null)
+			{
+				return Json(new { success = false, message = "Bạn đã đăng nhập. Vui lòng đăng xuất trước khi đăng ký tài khoản mới." });
+			}
+
 			if (!ModelState.IsValid)
 			{
 				return View(model);
 			}
 
-			// kiểm tra email có tồn tại chưa
 			var existingUser = _context.Customers.FirstOrDefault(u => u.Email == model.Email);
-			if (existingUser != null) // nếu rồi thì hiển thị lỗi
+			if (existingUser != null)
 			{
 				ModelState.AddModelError("Email", "Email đã tồn tại. Vui lòng sử dụng email khác.");
 				return View(model);
 			}
 
-			// kiểm tra password có bị null hoặc trống không
-			if (string.IsNullOrEmpty(model.Password))
-			{
-				ModelState.AddModelError("Password", "Password không được để trống.");
-				return View(model);
-			}
-
-			// tạo một token
 			var tokenEmail = Guid.NewGuid().ToString();
-
-			// nếu chưa có email thì tạo người dùng mới
 			var user = new Customer
 			{
 				FullName = model.FullName,
@@ -438,24 +465,21 @@ namespace _6TL.Controllers
 				Address = model.Address,
 				Password = BCrypt.Net.BCrypt.HashPassword(model.Password),
 				EmailConfirmationToken = tokenEmail,
-				IsEmailConfirmed = false, // gán xác nhận là false
-				RoleId = 2, // quyền mặc định
-				Gender = model.Gender, // New field
-				DateOfBirth = model.DateOfBirth // New field
+				IsEmailConfirmed = false,
+				RoleId = 2,
+				Gender = model.Gender,
+				DateOfBirth = model.DateOfBirth
 			};
 
 			try
 			{
 				_context.Customers.Add(user);
-				_context.SaveChanges(); // lưu nhưng ch đăng nhập được
+				await _context.SaveChangesAsync();
 
-				// gửi email xác nhận
 				var confirmationUrl = Url.Action("ConfirmEmail", "Home", new { token = tokenEmail }, Request.Scheme);
 				await SendConfirmationEmail(model.Email, confirmationUrl);
 
-				// trả về thông báo thành công vào View
-				var message = "Vui lòng kiểm tra email của bạn để xác nhận.";
-				return View("DangKy", model);  // truyền lại model nếu cần và thông báo
+				return View("DangKy", model);
 			}
 			catch (Exception ex)
 			{
@@ -463,6 +487,7 @@ namespace _6TL.Controllers
 				return View(model);
 			}
 		}
+
 
 
 		private async Task SendConfirmationEmail(string email, string confirmationUrl)
@@ -524,8 +549,11 @@ namespace _6TL.Controllers
 				return Json(new { success = false, message = "Tài khoản chưa được xác nhận hoặc thông tin không chính xác." });
 			}
 
+			// Lưu thông tin khách hàng vào session
+			HttpContext.Session.SetInt32("CustomerId", customer.CustomerId);
+			HttpContext.Session.SetString("CustomerFullName", customer.FullName);
 
-			// tạo token JWT
+			// tạo token JWT nếu vẫn cần thiết (dùng cho API khác chẳng hạn)
 			var token = GenerateJwtToken(customer);
 
 			// trả về thông tin khách hàng và token
@@ -544,6 +572,8 @@ namespace _6TL.Controllers
 				}
 			});
 		}
+
+
 
 		//hàm tạo token
 		private string GenerateJwtToken(Customer customer)
@@ -664,9 +694,12 @@ namespace _6TL.Controllers
 
 		public IActionResult DangXuat()
 		{
-			// trả về kết quả thành công
-			return Json(new { success = true });
+			// Xóa toàn bộ dữ liệu trong Session
+			HttpContext.Session.Clear();
+
+			return Json(new { success = true, message = "Bạn đã đăng xuất thành công." });
 		}
+
 		public IActionResult ChinhSach()
 		{
 			return View();

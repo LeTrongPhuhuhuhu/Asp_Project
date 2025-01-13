@@ -34,7 +34,7 @@ public partial class Customer
 
     public DateTime? PasswordResetExpires { get; set; }
 
-    public DateOnly? DateOfBirth { get; set; }
+    public DateTime? DateOfBirth { get; set; }
 
     public string? Gender { get; set; }
 

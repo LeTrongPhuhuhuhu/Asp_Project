@@ -634,3 +634,40 @@ footer {
 .hidden {
     display: none;
 }
+/* Dropdown button khi người dùng đăng nhập */
+#accountDropdown .dropdown-toggle {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    background-color: transparent;
+    border: none;
+    color: #333;
+    font-weight: 600;
+}
+
+    #accountDropdown .dropdown-toggle i {
+        margin-right: 8px;
+    }
+
+/* Hover effect cho các item trong dropdown */
+#accountDropdown .dropdown-item:hover {
+    background-color: #f8f9fa;
+    color: #007bff;
+}
+
+/* Thêm style cho dropdown menu */
+#accountDropdown .dropdown-menu {
+    min-width: 160px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Cải thiện nút đăng xuất */
+#logoutButton {
+    color: #dc3545;
+    font-weight: 500;
+}
+
+/* Ẩn các phần tử khi chưa đăng nhập */
+.hidden {
+    display: none;
+}

@@ -277,7 +277,6 @@
         </div>
     </div>
 </section>
-
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 <script>
@@ -335,35 +334,30 @@
             });
         }
 
-        // Xử lý thêm vào giỏ hàng
-        $('.add-to-cart-button').on('click', function(event) {
-            event.preventDefault();
+        // Ngăn reload trang khi submit form và xử lý thêm sản phẩm vào giỏ hàng bằng AJAX
+        $(document).on('submit', '#add-to-cart-form', function (e) {
+            e.preventDefault(); // Ngăn form submit làm reload trang
 
-            const cartData = {
-                productId: $('#product-id').val(),
-                productName: $('#product-name').val(),
-                productImage: $('#product-image').val(),
-                price: parseFloat($('#price').val()),
-                quantity: parseInt($('#quantity').val()),
-                productColor: $('#productColor-cart').val()
-            };
+            // Lấy dữ liệu từ form
+            const formData = $(this).serialize(); // Serialize tất cả các input trong form
 
+            // Gửi yêu cầu AJAX đến API
             $.ajax({
-                url: '/Home/AddToCart',
-                type: 'POST',
-                headers: {
-                    'X-Requested-With': 'XMLHttpRequest'
-                },
-                data: cartData,
-                success: function(response) {
+                url: '/Product/AddToCart', // URL của API
+                type: 'POST', // Phương thức gửi yêu cầu
+                data: formData, // Dữ liệu từ form
+                success: function (response) {
                     if (response.success) {
+                        // Hiển thị thông báo thành công
                         toastr.success(response.message);
                     } else {
+                        // Hiển thị thông báo lỗi
                         toastr.error(response.message);
                     }
                 },
-                error: function() {
-                    toastr.error("Đã có lỗi xảy ra khi thêm sản phẩm vào giỏ hàng.");
+                error: function () {
+                    // Hiển thị thông báo lỗi chung nếu xảy ra lỗi trong API
+                    toastr.error('Đã có lỗi xảy ra khi thêm sản phẩm vào giỏ hàng.');
                 }
             });
         });

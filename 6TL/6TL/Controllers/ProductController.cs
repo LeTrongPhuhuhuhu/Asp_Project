@@ -50,23 +50,22 @@ namespace _6TL.Controllers
     return View(product);
 }
 
-
 		[HttpPost]
 		public IActionResult AddToCart(int productId, string productName, string productImage, decimal price, int quantity, string productColor)
 		{
 			try
 			{
-				if (string.IsNullOrEmpty(productColor))
+				// Kiểm tra xem người dùng đã đăng nhập chưa bằng session
+				var customerId = HttpContext.Session.GetInt32("CustomerId");
+				if (customerId == null)
 				{
-					return Json(new { success = false, message = "Vui lòng chọn màu sắc!" });
+					// Nếu chưa đăng nhập, trả về lỗi yêu cầu đăng nhập
+					return Json(new { success = false, message = "Bạn cần đăng nhập để thêm sản phẩm vào giỏ hàng." });
 				}
 
-				// Sử dụng customerId = 1 tạm thời
-				int customerId = 1;
-
-				// Kiểm tra sản phẩm đã có trong giỏ hàng của customerId = 1 hay chưa
+				// Kiểm tra sản phẩm đã có trong giỏ hàng của customerId chưa
 				var existingCart = _context.Carts
-					.FirstOrDefault(c => c.ProductId == productId && c.Color == productColor && c.CustomerId == customerId);
+					.FirstOrDefault(c => c.ProductId == productId && c.Color == productColor && c.CustomerId == customerId.Value);
 
 				if (existingCart != null)
 				{
@@ -87,7 +86,7 @@ namespace _6TL.Controllers
 						Quantity = quantity,
 						Color = productColor,
 						TotalPrice = price * quantity,
-						CustomerId = customerId, // customerId = 1
+						CustomerId = customerId.Value,
 						CreatedAt = DateTime.Now
 					};
 
@@ -97,15 +96,17 @@ namespace _6TL.Controllers
 				// Lưu các thay đổi vào cơ sở dữ liệu
 				_context.SaveChanges();
 
-				// Thông báo thành công đơn giản
+				// Thông báo thành công
 				return Json(new { success = true, message = "Sản phẩm đã được thêm vào giỏ hàng!" });
 			}
 			catch (Exception ex)
 			{
 				// Log lỗi nếu cần
-				return Json(new { success = false, message = "Đã có lỗi xảy ra khi thêm sản phẩm vào giỏ hàng." });
+				return Json(new { success = false, message = "Đã có lỗi xảy ra khi thêm sản phẩm vào giỏ hàng.", error = ex.Message });
 			}
 		}
+
+
 
 
 
