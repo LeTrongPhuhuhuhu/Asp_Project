@@ -340,12 +340,23 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+<<<<<<< Updated upstream
               "Title": "Microsoft.PackageDependencyResolution.targets",
               "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\8.0.403\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets",
               "ToolTip": "C:\\Program Files\\dotnet\\sdk\\8.0.403\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets",
               "ViewState": "AgIAAN8AAAAAAAAAAAAnwAkBAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
               "WhenOpened": "2025-01-10T18:59:57.213Z",
+=======
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\\u0110\u1ED3 \u00C1n Web\\Asp_Project\\6TL\\6TL\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "6TL\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\\u0110\u1ED3 \u00C1n Web\\Asp_Project\\6TL\\6TL\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "6TL\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAOkAAAAAAAAAAAAcwAoBAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T16:24:30.702Z",
+>>>>>>> Stashed changes
               "EditorCaption": ""
             },
             {

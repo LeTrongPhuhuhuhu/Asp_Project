@@ -3,6 +3,7 @@
   "WorkspaceRootPath": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\",
   "Documents": [
     {
+<<<<<<< Updated upstream
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\dotnet\\sdk\\8.0.403\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
@@ -10,10 +11,56 @@
       "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+=======
+      "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\\u1ED5 d\\tk web aspnet core\\\u0111\u1ED3 \u00E1n asp\\asp_project\\6tl\\6tl\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\\u1ED5 d\\tk web aspnet core\\\u0111\u1ED3 \u00E1n asp\\asp_project\\6tl\\6tl\\models\\db6tlcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\models\\db6tlcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\\u1ED5 d\\tk web aspnet core\\\u0111\u1ED3 \u00E1n asp\\asp_project\\6tl\\6tl\\views\\home\\tintuc.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\views\\home\\tintuc.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\\u1ED5 d\\tk web aspnet core\\\u0111\u1ED3 \u00E1n asp\\asp_project\\6tl\\6tl\\controllers\\product2controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\controllers\\product2controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\\u1ED5 d\\tk web aspnet core\\\u0111\u1ED3 \u00E1n asp\\asp_project\\6tl\\6tl\\views\\home\\chitiettintuc.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\views\\home\\chitiettintuc.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\\u1ED5 d\\tk web aspnet core\\\u0111\u1ED3 \u00E1n asp\\asp_project\\6tl\\6tl\\wwwroot\\css\\pages\\chitiettintuc.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\wwwroot\\css\\pages\\chitiettintuc.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\\u1ED5 d\\tk web aspnet core\\\u0111\u1ED3 \u00E1n asp\\asp_project\\6tl\\6tl\\wwwroot\\css\\pages\\tintuc.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\wwwroot\\css\\pages\\tintuc.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\\u1ED5 d\\tk web aspnet core\\\u0111\u1ED3 \u00E1n asp\\asp_project\\6tl\\6tl\\models\\contact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\models\\contact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\\u1ED5 d\\tk web aspnet core\\\u0111\u1ED3 \u00E1n asp\\asp_project\\6tl\\6tl\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\\u1ED5 d\\tk web aspnet core\\\u0111\u1ED3 \u00E1n asp\\asp_project\\6tl\\6tl\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\dotnet\\sdk\\8.0.403\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+>>>>>>> Stashed changes
       "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\\u1ED5 d\\tk web aspnet core\\\u0111\u1ED3 \u00E1n asp\\asp_project\\6tl\\6tl\\models\\forgotpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\models\\forgotpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+<<<<<<< Updated upstream
       "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\\u1ED5 d\\tk web aspnet core\\\u0111\u1ED3 \u00E1n asp\\asp_project\\6tl\\6tl\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -26,6 +73,8 @@
       "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\models\\db6tlcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+=======
+>>>>>>> Stashed changes
       "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\\u1ED5 d\\tk web aspnet core\\\u0111\u1ED3 \u00E1n asp\\asp_project\\6tl\\6tl\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -70,10 +119,13 @@
       "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\wwwroot\\css\\pages\\lichsumuahang.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
+<<<<<<< Updated upstream
       "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\\u1ED5 d\\tk web aspnet core\\\u0111\u1ED3 \u00E1n asp\\asp_project\\6tl\\6tl\\views\\home\\viewprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\views\\home\\viewprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+=======
+>>>>>>> Stashed changes
       "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\\u1ED5 d\\tk web aspnet core\\\u0111\u1ED3 \u00E1n asp\\asp_project\\6tl\\6tl\\wwwroot\\css\\pages\\viewprofile.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\wwwroot\\css\\pages\\viewprofile.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
@@ -90,10 +142,13 @@
       "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\views\\home\\giohang.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+<<<<<<< Updated upstream
       "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\\u1ED5 d\\tk web aspnet core\\\u0111\u1ED3 \u00E1n asp\\asp_project\\6tl\\6tl\\views\\home\\tintuc.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\views\\home\\tintuc.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+=======
+>>>>>>> Stashed changes
       "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\\u1ED5 d\\tk web aspnet core\\\u0111\u1ED3 \u00E1n asp\\asp_project\\6tl\\6tl\\areas\\admin\\views\\home\\quanlydonhang.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\areas\\admin\\views\\home\\quanlydonhang.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -182,10 +237,13 @@
       "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\wwwroot\\css\\admin.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
+<<<<<<< Updated upstream
       "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\\u1ED5 d\\tk web aspnet core\\\u0111\u1ED3 \u00E1n asp\\asp_project\\6tl\\6tl\\wwwroot\\css\\pages\\tintuc.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\wwwroot\\css\\pages\\tintuc.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
+=======
+>>>>>>> Stashed changes
       "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\\u1ED5 d\\tk web aspnet core\\\u0111\u1ED3 \u00E1n asp\\asp_project\\6tl\\6tl\\wwwroot\\css\\admin\\dashboard.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\wwwroot\\css\\admin\\dashboard.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
@@ -214,6 +272,7 @@
       "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\views\\home\\chitietsanpham.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+<<<<<<< Updated upstream
       "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\\u1ED5 d\\tk web aspnet core\\\u0111\u1ED3 \u00E1n asp\\asp_project\\6tl\\6tl\\wwwroot\\css\\pages\\chitiettintuc.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\wwwroot\\css\\pages\\chitiettintuc.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
@@ -222,6 +281,8 @@
       "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\views\\home\\chitiettintuc.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+=======
+>>>>>>> Stashed changes
       "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\\u1ED5 d\\tk web aspnet core\\\u0111\u1ED3 \u00E1n asp\\asp_project\\6tl\\6tl\\wwwroot\\css\\pages\\chinhsach.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\wwwroot\\css\\pages\\chinhsach.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
@@ -298,6 +359,24 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Asp_Project\\Asp_Project\\6TL\\6TL\\Views\\Home\\SanPham.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+<<<<<<< Updated upstream
+=======
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\\u1ED5 d\\tk web aspnet core\\\u0111\u1ED3 \u00E1n asp\\asp_project\\6tl\\6tl\\areas\\admin\\views\\home\\quanlyblog.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\areas\\admin\\views\\home\\quanlyblog.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\\u1ED5 d\\tk web aspnet core\\\u0111\u1ED3 \u00E1n asp\\asp_project\\6tl\\6tl\\wwwroot\\css\\admin\\themblog.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\wwwroot\\css\\admin\\themblog.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|d:\\\u1ED5 d\\tk web aspnet core\\\u0111\u1ED3 \u00E1n asp\\asp_project\\6tl\\6tl\\wwwroot\\css\\admin\\quanlyblog.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{C673BDF0-A47C-4F87-894E-73BA5AAE2BF2}|6TL\\6TL.csproj|solutionrelative:6tl\\wwwroot\\css\\admin\\quanlyblog.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\\u0110\u1ED3 \u00C1n Web\\Asp_Project\\6TL\\6TL\\Views\\Home\\ViewProfile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+>>>>>>> Stashed changes
     }
   ],
   "DocumentGroupContainers": [
@@ -307,7 +386,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+<<<<<<< Updated upstream
           "SelectedChildIndex": 7,
+=======
+          "SelectedChildIndex": 12,
+>>>>>>> Stashed changes
           "Children": [
             {
               "$type": "Bookmark",
@@ -320,6 +403,8 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+<<<<<<< Updated upstream
+=======
             },
             {
               "$type": "Bookmark",
@@ -338,19 +423,161 @@
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+>>>>>>> Stashed changes
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+<<<<<<< Updated upstream
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:522429826:0:{83107a3e-496a-485e-b455-16ddb978e55e}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+=======
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Contact.cs",
+              "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Models\\Contact.cs",
+              "RelativeDocumentMoniker": "6TL\\Models\\Contact.cs",
+              "ToolTip": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Models\\Contact.cs",
+              "RelativeToolTip": "6TL\\Models\\Contact.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-11T03:33:18.016Z"
+>>>>>>> Stashed changes
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
+<<<<<<< Updated upstream
               "Title": "Microsoft.PackageDependencyResolution.targets",
               "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\8.0.403\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets",
               "ToolTip": "C:\\Program Files\\dotnet\\sdk\\8.0.403\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets",
               "ViewState": "AgIAAN8AAAAAAAAAAAAnwAkBAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
               "WhenOpened": "2025-01-10T18:59:57.213Z",
+=======
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "6TL\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "6TL\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAOwAAAAAAAAAAAAcwAoBAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T16:24:30.702Z",
+>>>>>>> Stashed changes
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 2,
+=======
+              "DocumentIndex": 3,
+              "Title": "Product2Controller.cs",
+              "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Controllers\\Product2Controller.cs",
+              "RelativeDocumentMoniker": "6TL\\Controllers\\Product2Controller.cs",
+              "ToolTip": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Controllers\\Product2Controller.cs",
+              "RelativeToolTip": "6TL\\Controllers\\Product2Controller.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-11T03:39:50.602Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Db6TLContext.cs",
+              "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Models\\Db6TLContext.cs",
+              "RelativeDocumentMoniker": "6TL\\Models\\Db6TLContext.cs",
+              "ToolTip": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Models\\Db6TLContext.cs",
+              "RelativeToolTip": "6TL\\Models\\Db6TLContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T18:36:22.894Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\appsettings.json",
+              "RelativeDocumentMoniker": "6TL\\appsettings.json",
+              "ToolTip": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\appsettings.json",
+              "RelativeToolTip": "6TL\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAACDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-01-10T16:25:54.967Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TinTuc.cshtml",
+              "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Views\\Home\\TinTuc.cshtml",
+              "RelativeDocumentMoniker": "6TL\\Views\\Home\\TinTuc.cshtml",
+              "ToolTip": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Views\\Home\\TinTuc.cshtml",
+              "RelativeToolTip": "6TL\\Views\\Home\\TinTuc.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAADkAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-10T16:24:30.738Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ChiTietTinTuc.css",
+              "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\ChiTietTinTuc.css",
+              "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\pages\\ChiTietTinTuc.css",
+              "ToolTip": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\ChiTietTinTuc.css",
+              "RelativeToolTip": "6TL\\wwwroot\\css\\pages\\ChiTietTinTuc.css",
+              "ViewState": "AgIAAJkAAAAAAAAAAAAmwMsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-01-10T16:24:31.094Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TinTuc.css",
+              "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\TinTuc.css",
+              "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\pages\\TinTuc.css",
+              "ToolTip": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\TinTuc.css",
+              "RelativeToolTip": "6TL\\wwwroot\\css\\pages\\TinTuc.css",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAmwIwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-01-10T16:24:30.928Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Microsoft.PackageDependencyResolution.targets",
+              "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\8.0.403\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets",
+              "ToolTip": "C:\\Program Files\\dotnet\\sdk\\8.0.403\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2025-01-10T18:59:57.213Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ChiTietTinTuc.cshtml",
+              "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Views\\Home\\ChiTietTinTuc.cshtml",
+              "RelativeDocumentMoniker": "6TL\\Views\\Home\\ChiTietTinTuc.cshtml",
+              "ToolTip": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Views\\Home\\ChiTietTinTuc.cshtml",
+              "RelativeToolTip": "6TL\\Views\\Home\\ChiTietTinTuc.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-10T16:24:31.19Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+>>>>>>> Stashed changes
               "Title": "ForgotPassword.cs",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Models\\ForgotPassword.cs",
               "RelativeDocumentMoniker": "6TL\\Models\\ForgotPassword.cs",
@@ -362,6 +589,7 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 5,
               "Title": "Db6TLContext.cs",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Models\\Db6TLContext.cs",
@@ -369,6 +597,15 @@
               "ToolTip": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Models\\Db6TLContext.cs",
               "RelativeToolTip": "6TL\\Models\\Db6TLContext.cs",
               "ViewState": "AgIAACwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+=======
+              "DocumentIndex": 12,
+              "Title": "Customer.cs",
+              "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Models\\Customer.cs",
+              "RelativeDocumentMoniker": "6TL\\Models\\Customer.cs",
+              "ToolTip": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Models\\Customer.cs",
+              "RelativeToolTip": "6TL\\Models\\Customer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAnAAAAAAAAAA==",
+>>>>>>> Stashed changes
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-10T18:36:22.894Z"
             },
@@ -518,7 +755,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 20,
+=======
+              "DocumentIndex": 25,
+>>>>>>> Stashed changes
               "Title": "DanhMucSanPham.cshtml",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Views\\Home\\DanhMucSanPham.cshtml",
               "RelativeDocumentMoniker": "6TL\\Views\\Home\\DanhMucSanPham.cshtml",
@@ -554,7 +795,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 18,
+=======
+              "DocumentIndex": 23,
+>>>>>>> Stashed changes
               "Title": "ViewProfile.css",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\ViewProfile.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\pages\\ViewProfile.css",
@@ -566,19 +811,32 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 17,
               "Title": "ViewProfile.cshtml",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Views\\Home\\ViewProfile.cshtml",
               "RelativeDocumentMoniker": "6TL\\Views\\Home\\ViewProfile.cshtml",
               "ToolTip": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Views\\Home\\ViewProfile.cshtml",
               "RelativeToolTip": "6TL\\Views\\Home\\ViewProfile.cshtml",
+=======
+              "DocumentIndex": 77,
+              "Title": "ViewProfile.cshtml",
+              "DocumentMoniker": "D:\\\u0110\u1ED3 \u00C1n Web\\Asp_Project\\6TL\\6TL\\Views\\Home\\ViewProfile.cshtml",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\\u0110\u1ED3 \u00C1n Web\\Asp_Project\\6TL\\6TL\\Views\\Home\\ViewProfile.cshtml",
+              "ToolTip": "D:\\\u0110\u1ED3 \u00C1n Web\\Asp_Project\\6TL\\6TL\\Views\\Home\\ViewProfile.cshtml",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\\u0110\u1ED3 \u00C1n Web\\Asp_Project\\6TL\\6TL\\Views\\Home\\ViewProfile.cshtml",
+>>>>>>> Stashed changes
               "ViewState": "AgIAAAUAAAAAAAAAAAAAwAwAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-01-10T16:24:30.715Z"
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 19,
+=======
+              "DocumentIndex": 24,
+>>>>>>> Stashed changes
               "Title": "_Pagination.cshtml",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Views\\Shared\\_Pagination.cshtml",
               "RelativeDocumentMoniker": "6TL\\Views\\Shared\\_Pagination.cshtml",
@@ -590,7 +848,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 21,
+=======
+              "DocumentIndex": 26,
+>>>>>>> Stashed changes
               "Title": "GioHang.cshtml",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Views\\Home\\GioHang.cshtml",
               "RelativeDocumentMoniker": "6TL\\Views\\Home\\GioHang.cshtml",
@@ -602,6 +864,7 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 22,
               "Title": "TinTuc.cshtml",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Views\\Home\\TinTuc.cshtml",
@@ -615,6 +878,9 @@
             {
               "$type": "Document",
               "DocumentIndex": 74,
+=======
+              "DocumentIndex": 72,
+>>>>>>> Stashed changes
               "Title": "SanPhamYeuThich.cshtml",
               "DocumentMoniker": "E:\\Asp_Project\\Asp_Project\\6TL\\6TL\\Views\\Home\\SanPhamYeuThich.cshtml",
               "ToolTip": "E:\\Asp_Project\\Asp_Project\\6TL\\6TL\\Views\\Home\\SanPhamYeuThich.cshtml",
@@ -623,7 +889,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 75,
+=======
+              "DocumentIndex": 73,
+>>>>>>> Stashed changes
               "Title": "SanPham.cshtml",
               "DocumentMoniker": "E:\\Asp_Project\\Asp_Project\\6TL\\6TL\\Views\\Home\\SanPham.cshtml",
               "ToolTip": "E:\\Asp_Project\\Asp_Project\\6TL\\6TL\\Views\\Home\\SanPham.cshtml",
@@ -632,7 +902,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 23,
+=======
+              "DocumentIndex": 27,
+>>>>>>> Stashed changes
               "Title": "QuanLyDonHang.cshtml",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Views\\Home\\QuanLyDonHang.cshtml",
               "RelativeDocumentMoniker": "6TL\\Areas\\Admin\\Views\\Home\\QuanLyDonHang.cshtml",
@@ -644,7 +918,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 30,
+=======
+              "DocumentIndex": 34,
+>>>>>>> Stashed changes
               "Title": "popup.css",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\popup.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\admin\\popup.css",
@@ -656,7 +934,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 27,
+=======
+              "DocumentIndex": 31,
+>>>>>>> Stashed changes
               "Title": "QuanLyDonHang.css",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\QuanLyDonHang.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\admin\\QuanLyDonHang.css",
@@ -668,7 +950,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 25,
+=======
+              "DocumentIndex": 29,
+>>>>>>> Stashed changes
               "Title": "QuanLyAdmin.cshtml",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Views\\Home\\QuanLyAdmin.cshtml",
               "RelativeDocumentMoniker": "6TL\\Areas\\Admin\\Views\\Home\\QuanLyAdmin.cshtml",
@@ -680,7 +966,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 24,
+=======
+              "DocumentIndex": 28,
+>>>>>>> Stashed changes
               "Title": "_successPopup.cshtml",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Views\\Shared\\_successPopup.cshtml",
               "RelativeDocumentMoniker": "6TL\\Areas\\Admin\\Views\\Shared\\_successPopup.cshtml",
@@ -692,7 +982,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 26,
+=======
+              "DocumentIndex": 30,
+>>>>>>> Stashed changes
               "Title": "QuanLyDanhMuc.cshtml",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Views\\Home\\QuanLyDanhMuc.cshtml",
               "RelativeDocumentMoniker": "6TL\\Areas\\Admin\\Views\\Home\\QuanLyDanhMuc.cshtml",
@@ -704,7 +998,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 28,
+=======
+              "DocumentIndex": 32,
+>>>>>>> Stashed changes
               "Title": "QuanLyLienHe.css",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\QuanLyLienHe.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\admin\\QuanLyLienHe.css",
@@ -716,7 +1014,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 29,
+=======
+              "DocumentIndex": 33,
+>>>>>>> Stashed changes
               "Title": "QuanLyLienHe.cshtml",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Views\\Home\\QuanLyLienHe.cshtml",
               "RelativeDocumentMoniker": "6TL\\Areas\\Admin\\Views\\Home\\QuanLyLienHe.cshtml",
@@ -728,7 +1030,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 31,
+=======
+              "DocumentIndex": 35,
+>>>>>>> Stashed changes
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "6TL\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
@@ -740,7 +1046,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 33,
+=======
+              "DocumentIndex": 37,
+>>>>>>> Stashed changes
               "Title": "SuaSanPham.cshtml",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Views\\Home\\SuaSanPham.cshtml",
               "RelativeDocumentMoniker": "6TL\\Areas\\Admin\\Views\\Home\\SuaSanPham.cshtml",
@@ -752,7 +1062,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 32,
+=======
+              "DocumentIndex": 36,
+>>>>>>> Stashed changes
               "Title": "QuanLyUser.cshtml",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Views\\Home\\QuanLyUser.cshtml",
               "RelativeDocumentMoniker": "6TL\\Areas\\Admin\\Views\\Home\\QuanLyUser.cshtml",
@@ -764,7 +1078,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 34,
+=======
+              "DocumentIndex": 38,
+>>>>>>> Stashed changes
               "Title": "QuanLySanPham.cshtml",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Views\\Home\\QuanLySanPham.cshtml",
               "RelativeDocumentMoniker": "6TL\\Areas\\Admin\\Views\\Home\\QuanLySanPham.cshtml",
@@ -776,7 +1094,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 35,
+=======
+              "DocumentIndex": 39,
+>>>>>>> Stashed changes
               "Title": "popup.css",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\popup.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\admin\\popup.css",
@@ -788,7 +1110,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 38,
+=======
+              "DocumentIndex": 42,
+>>>>>>> Stashed changes
               "Title": "QuanLyDanhMuc.css",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\QuanLyDanhMuc.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\admin\\QuanLyDanhMuc.css",
@@ -800,7 +1126,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 36,
+=======
+              "DocumentIndex": 40,
+>>>>>>> Stashed changes
               "Title": "QuanLyAdmin.css",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\QuanLyAdmin.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\admin\\QuanLyAdmin.css",
@@ -812,7 +1142,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 37,
+=======
+              "DocumentIndex": 41,
+>>>>>>> Stashed changes
               "Title": "QuanLySanPham.css",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\QuanLySanPham.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\admin\\QuanLySanPham.css",
@@ -824,7 +1158,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 39,
+=======
+              "DocumentIndex": 43,
+>>>>>>> Stashed changes
               "Title": "QuanLyDanhGia.css",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\QuanLyDanhGia.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\admin\\QuanLyDanhGia.css",
@@ -836,7 +1174,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 40,
+=======
+              "DocumentIndex": 44,
+>>>>>>> Stashed changes
               "Title": "QuanLyDanhGia.cshtml",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Views\\Home\\QuanLyDanhGia.cshtml",
               "RelativeDocumentMoniker": "6TL\\Areas\\Admin\\Views\\Home\\QuanLyDanhGia.cshtml",
@@ -848,7 +1190,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 42,
+=======
+              "DocumentIndex": 46,
+>>>>>>> Stashed changes
               "Title": "SuaSanPham.css",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\SuaSanPham.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\admin\\SuaSanPham.css",
@@ -860,7 +1206,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 41,
+=======
+              "DocumentIndex": 45,
+>>>>>>> Stashed changes
               "Title": "SanPham.css",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\SanPham.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\pages\\SanPham.css",
@@ -872,7 +1222,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 43,
+=======
+              "DocumentIndex": 47,
+>>>>>>> Stashed changes
               "Title": "ThemSanPham.css",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\ThemSanPham.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\admin\\ThemSanPham.css",
@@ -884,6 +1238,7 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 45,
               "Title": "TinTuc.css",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\TinTuc.css",
@@ -897,6 +1252,9 @@
             {
               "$type": "Document",
               "DocumentIndex": 44,
+=======
+              "DocumentIndex": 48,
+>>>>>>> Stashed changes
               "Title": "admin.css",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\admin.css",
@@ -908,7 +1266,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 47,
+=======
+              "DocumentIndex": 50,
+>>>>>>> Stashed changes
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "6TL\\Areas\\Admin\\Views\\Home\\Index.cshtml",
@@ -920,7 +1282,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 46,
+=======
+              "DocumentIndex": 49,
+>>>>>>> Stashed changes
               "Title": "Dashboard.css",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\Dashboard.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\admin\\Dashboard.css",
@@ -932,7 +1298,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 48,
+=======
+              "DocumentIndex": 51,
+>>>>>>> Stashed changes
               "Title": "QuanLyChiTietDonHang.css",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\QuanLyChiTietDonHang.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\admin\\QuanLyChiTietDonHang.css",
@@ -944,7 +1314,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 49,
+=======
+              "DocumentIndex": 52,
+>>>>>>> Stashed changes
               "Title": "QuanLyChiTietDonHang.cshtml",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Views\\Home\\QuanLyChiTietDonHang.cshtml",
               "RelativeDocumentMoniker": "6TL\\Areas\\Admin\\Views\\Home\\QuanLyChiTietDonHang.cshtml",
@@ -956,7 +1330,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 50,
+=======
+              "DocumentIndex": 53,
+>>>>>>> Stashed changes
               "Title": "ThemSanPham.cshtml",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Views\\Home\\ThemSanPham.cshtml",
               "RelativeDocumentMoniker": "6TL\\Areas\\Admin\\Views\\Home\\ThemSanPham.cshtml",
@@ -968,7 +1346,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 51,
+=======
+              "DocumentIndex": 54,
+>>>>>>> Stashed changes
               "Title": "DanhMucSanPham.css",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\DanhMucSanPham.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\pages\\DanhMucSanPham.css",
@@ -980,7 +1362,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 52,
+=======
+              "DocumentIndex": 55,
+>>>>>>> Stashed changes
               "Title": "ChiTietSanPham.cshtml",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Views\\Home\\ChiTietSanPham.cshtml",
               "RelativeDocumentMoniker": "6TL\\Views\\Home\\ChiTietSanPham.cshtml",
@@ -992,6 +1378,7 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 53,
               "Title": "ChiTietTinTuc.css",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\ChiTietTinTuc.css",
@@ -1005,6 +1392,9 @@
             {
               "$type": "Document",
               "DocumentIndex": 58,
+=======
+              "DocumentIndex": 59,
+>>>>>>> Stashed changes
               "Title": "DangNhap.css",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\DangNhap.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\pages\\DangNhap.css",
@@ -1016,6 +1406,7 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 54,
               "Title": "ChiTietTinTuc.cshtml",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Views\\Home\\ChiTietTinTuc.cshtml",
@@ -1029,6 +1420,9 @@
             {
               "$type": "Document",
               "DocumentIndex": 56,
+=======
+              "DocumentIndex": 57,
+>>>>>>> Stashed changes
               "Title": "ChiTietTinTuc.css",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\ChiTietTinTuc.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\pages\\ChiTietTinTuc.css",
@@ -1040,7 +1434,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 55,
+=======
+              "DocumentIndex": 56,
+>>>>>>> Stashed changes
               "Title": "ChinhSach.css",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\ChinhSach.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\pages\\ChinhSach.css",
@@ -1052,7 +1450,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 57,
+=======
+              "DocumentIndex": 58,
+>>>>>>> Stashed changes
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "6TL\\Views\\Home\\Index.cshtml",
@@ -1064,7 +1466,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 59,
+=======
+              "DocumentIndex": 60,
+>>>>>>> Stashed changes
               "Title": "TrangChu.css",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\TrangChu.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\pages\\TrangChu.css",
@@ -1076,7 +1482,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 60,
+=======
+              "DocumentIndex": 61,
+>>>>>>> Stashed changes
               "Title": "ChinhSach.cshtml",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Views\\Home\\ChinhSach.cshtml",
               "RelativeDocumentMoniker": "6TL\\Views\\Home\\ChinhSach.cshtml",
@@ -1088,7 +1498,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 61,
+=======
+              "DocumentIndex": 62,
+>>>>>>> Stashed changes
               "Title": "ChiTietSanPham.css",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\ChiTietSanPham.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\pages\\ChiTietSanPham.css",
@@ -1100,7 +1514,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 62,
+=======
+              "DocumentIndex": 63,
+>>>>>>> Stashed changes
               "Title": "_ViewImports.cshtml",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Views\\_ViewImports.cshtml",
               "RelativeDocumentMoniker": "6TL\\Areas\\Admin\\Views\\_ViewImports.cshtml",
@@ -1112,18 +1530,31 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 71,
               "Title": "QuanLyBlog.cshtml",
               "DocumentMoniker": "D:\\\u0110\u1ED3 \u00C1n Web\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Views\\Home\\QuanLyBlog.cshtml",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\\u0110\u1ED3 \u00C1n Web\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Views\\Home\\QuanLyBlog.cshtml",
               "ToolTip": "D:\\\u0110\u1ED3 \u00C1n Web\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Views\\Home\\QuanLyBlog.cshtml",
               "RelativeToolTip": "..\\..\\..\\..\\..\\\u0110\u1ED3 \u00C1n Web\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Views\\Home\\QuanLyBlog.cshtml",
+=======
+              "DocumentIndex": 74,
+              "Title": "QuanLyBlog.cshtml",
+              "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Views\\Home\\QuanLyBlog.cshtml",
+              "RelativeDocumentMoniker": "6TL\\Areas\\Admin\\Views\\Home\\QuanLyBlog.cshtml",
+              "ToolTip": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Views\\Home\\QuanLyBlog.cshtml",
+              "RelativeToolTip": "6TL\\Areas\\Admin\\Views\\Home\\QuanLyBlog.cshtml",
+>>>>>>> Stashed changes
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-12-09T03:38:51.92Z"
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 63,
+=======
+              "DocumentIndex": 64,
+>>>>>>> Stashed changes
               "Title": "Microsoft.NET.Sdk.StaticWebAssets.targets",
               "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\8.0.403\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets",
               "ToolTip": "C:\\Program Files\\dotnet\\sdk\\8.0.403\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets",
@@ -1133,18 +1564,31 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 72,
               "Title": "ThemBlog.css",
               "DocumentMoniker": "D:\\\u0110\u1ED3 \u00C1n Web\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\ThemBlog.css",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\\u0110\u1ED3 \u00C1n Web\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\ThemBlog.css",
               "ToolTip": "D:\\\u0110\u1ED3 \u00C1n Web\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\ThemBlog.css",
               "RelativeToolTip": "..\\..\\..\\..\\..\\\u0110\u1ED3 \u00C1n Web\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\ThemBlog.css",
+=======
+              "DocumentIndex": 75,
+              "Title": "ThemBlog.css",
+              "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\ThemBlog.css",
+              "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\admin\\ThemBlog.css",
+              "ToolTip": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\ThemBlog.css",
+              "RelativeToolTip": "6TL\\wwwroot\\css\\admin\\ThemBlog.css",
+>>>>>>> Stashed changes
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2024-12-04T09:28:49.179Z"
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 64,
+=======
+              "DocumentIndex": 65,
+>>>>>>> Stashed changes
               "Title": "DangKy.css",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\DangKy.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\pages\\DangKy.css",
@@ -1156,18 +1600,31 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 73,
               "Title": "QuanLyBlog.css",
               "DocumentMoniker": "D:\\\u0110\u1ED3 \u00C1n Web\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\QuanLyBlog.css",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\\u0110\u1ED3 \u00C1n Web\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\QuanLyBlog.css",
               "ToolTip": "D:\\\u0110\u1ED3 \u00C1n Web\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\QuanLyBlog.css",
               "RelativeToolTip": "..\\..\\..\\..\\..\\\u0110\u1ED3 \u00C1n Web\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\QuanLyBlog.css",
+=======
+              "DocumentIndex": 76,
+              "Title": "QuanLyBlog.css",
+              "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\QuanLyBlog.css",
+              "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\admin\\QuanLyBlog.css",
+              "ToolTip": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\admin\\QuanLyBlog.css",
+              "RelativeToolTip": "6TL\\wwwroot\\css\\admin\\QuanLyBlog.css",
+>>>>>>> Stashed changes
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2024-12-04T09:29:13.489Z"
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 65,
+=======
+              "DocumentIndex": 66,
+>>>>>>> Stashed changes
               "Title": "GioiThieu.css",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\GioiThieu.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\pages\\GioiThieu.css",
@@ -1179,7 +1636,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 66,
+=======
+              "DocumentIndex": 67,
+>>>>>>> Stashed changes
               "Title": "SanPhamYeuThich.css",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\SanPhamYeuThich.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\pages\\SanPhamYeuThich.css",
@@ -1191,7 +1652,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 67,
+=======
+              "DocumentIndex": 68,
+>>>>>>> Stashed changes
               "Title": "TrangThanhToan.css",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\TrangThanhToan.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\pages\\TrangThanhToan.css",
@@ -1203,7 +1668,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 68,
+=======
+              "DocumentIndex": 69,
+>>>>>>> Stashed changes
               "Title": "TrangThanhToan.cshtml",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Views\\Home\\TrangThanhToan.cshtml",
               "RelativeDocumentMoniker": "6TL\\Views\\Home\\TrangThanhToan.cshtml",
@@ -1215,7 +1684,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 69,
+=======
+              "DocumentIndex": 70,
+>>>>>>> Stashed changes
               "Title": "_ViewStart.cshtml",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\Areas\\Admin\\Views\\_ViewStart.cshtml",
               "RelativeDocumentMoniker": "6TL\\Areas\\Admin\\Views\\_ViewStart.cshtml",
@@ -1227,7 +1700,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 70,
+=======
+              "DocumentIndex": 71,
+>>>>>>> Stashed changes
               "Title": "SanPham.css",
               "DocumentMoniker": "D:\\\u1ED5 D\\TK WEB ASPNET CORE\\\u0110\u1ED3 \u00E1n ASP\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\SanPham.css",
               "RelativeDocumentMoniker": "6TL\\wwwroot\\css\\pages\\SanPham.css",
