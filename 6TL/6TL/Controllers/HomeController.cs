@@ -8,6 +8,7 @@ using System.Net.Mail;
 using System.Net;
 using System.Security.Claims;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace _6TL.Controllers
 {
@@ -31,42 +32,31 @@ namespace _6TL.Controllers
 		{
 			try
 			{
+				// Kiểm tra số lượng phải lớn hơn 0
 				if (quantity <= 0)
 				{
 					return Json(new { success = false, message = "Số lượng phải lớn hơn 0." });
 				}
 
-				// Sử dụng customerId = 1 tạm thời
-				int customerId = 1;
-
-				// Tìm giỏ hàng của sản phẩm với productId và customerId
+				// Tìm sản phẩm trong giỏ hàng theo productId
 				var cartItem = _context.Carts
-					.FirstOrDefault(c => c.ProductId == productId && c.CustomerId == customerId);
+					.FirstOrDefault(c => c.ProductId == productId);
 
 				if (cartItem == null)
 				{
 					return Json(new { success = false, message = "Không tìm thấy sản phẩm trong giỏ hàng." });
 				}
 
-				// Lấy thông tin sản phẩm (bao gồm Color và Quantity) từ bảng Products
-				var productDetails = _context.Products
+				// Kiểm tra số lượng tồn kho từ bảng Product
+				var productStock = _context.Products
 					.Where(p => p.ProductId == productId)
-					.Select(p => new
-					{
-						p.Quantity, // Số lượng tồn kho
-						p.Color // Màu sắc của sản phẩm
-					})
+					.Select(p => p.Quantity)
 					.FirstOrDefault();
 
-				if (productDetails == null)
+				// Kiểm tra nếu số lượng yêu cầu lớn hơn số lượng tồn kho
+				if (quantity > productStock)
 				{
-					return Json(new { success = false, message = "Thông tin sản phẩm không hợp lệ." });
-				}
-
-				// Kiểm tra số lượng tồn kho của sản phẩm
-				if (quantity > productDetails.Quantity)
-				{
-					return Json(new { success = false, message = $"Chỉ còn {productDetails.Quantity} sản phẩm trong kho." });
+					return Json(new { success = false, message = $"Chỉ còn {productStock} sản phẩm trong kho." });
 				}
 
 				// Cập nhật số lượng và tổng tiền của sản phẩm trong giỏ hàng
@@ -76,10 +66,8 @@ namespace _6TL.Controllers
 
 				_context.SaveChanges();
 
-				// Tính lại tổng số tiền của giỏ hàng
-				var subtotal = _context.Carts
-					.Where(c => c.CustomerId == customerId)
-					.Sum(c => c.TotalPrice) ?? 0;
+				// Tính lại tổng tiền của giỏ hàng
+				var subtotal = _context.Carts.Sum(c => c.TotalPrice) ?? 0;
 
 				return Json(new
 				{
@@ -94,6 +82,7 @@ namespace _6TL.Controllers
 				return Json(new { success = false, message = "Đã xảy ra lỗi khi cập nhật giỏ hàng." });
 			}
 		}
+
 		// Controller method for handling the checkout
 		public async Task<IActionResult> TrangThanhToan(
 			int? productId = null,
@@ -115,16 +104,6 @@ namespace _6TL.Controllers
 				return RedirectToAction("Index", "Home");  // Điều hướng về trang chủ
 			}
 
-			// Lưu customerId vào db (ví dụ lưu vào bảng Orders hoặc bất kỳ bảng nào liên quan)
-			var order = new Order
-			{
-				CustomerId = customerId.Value,  // Lưu CustomerId vào Order
-				OrderDate = DateTime.Now,
-				TotalAmount = 0 // Tổng tiền sẽ được tính sau
-			};
-
-			_context.Orders.Add(order);
-			await _context.SaveChangesAsync();  // Lưu vào DB để tạo đơn hàng
 
 			// Logic xử lý "Mua Ngay" hoặc giỏ hàng...
 			if (isBuyNow)
@@ -162,64 +141,97 @@ namespace _6TL.Controllers
 			return View("TrangThanhToan");
 		}
 
-		// API to handle COD checkout
 		[HttpPost]
 		[Route("api/checkout/cod")]
 		public IActionResult CheckoutCOD([FromBody] CartData cartData)
 		{
-			if (cartData == null || !cartData.items.Any())
+			// Kiểm tra nếu khách hàng chưa đăng nhập
+			int? customerId = HttpContext.Session.GetInt32("CustomerId");
+			if (customerId == null || customerId == 0)
 			{
-				return BadRequest("Giỏ hàng không có sản phẩm.");
+				return Json(new { success = false, message = "Vui lòng đăng nhập để tiếp tục thanh toán." });
 			}
+
+			// Kiểm tra thông tin giao hàng từ cartData
+			if (string.IsNullOrEmpty(cartData.customerName))
+			{
+				return Json(new { success = false, message = "Tên khách hàng không được để trống." });
+			}
+
+			if (string.IsNullOrEmpty(cartData.customerPhone) || !Regex.IsMatch(cartData.customerPhone, @"^\d{10}$"))
+			{
+				return Json(new { success = false, message = "Số điện thoại không hợp lệ. Vui lòng nhập đúng số điện thoại." });
+			}
+
+			if (string.IsNullOrEmpty(cartData.customerEmail) || !Regex.IsMatch(cartData.customerEmail, @"^[^@]+@[^@]+\.[^@]+$"))
+			{
+				return Json(new { success = false, message = "Email không hợp lệ. Vui lòng nhập đúng email." });
+			}
+
+			if (string.IsNullOrEmpty(cartData.customerAddress))
+			{
+				return Json(new { success = false, message = "Địa chỉ giao hàng không được để trống." });
+			}
+
+			// Kiểm tra giỏ hàng của khách hàng
+			var cartItems = _context.Carts.Where(c => c.CustomerId == customerId.Value).ToList();
+			if (!cartItems.Any())
+			{
+				return Json(new { success = false, message = "Giỏ hàng không có sản phẩm." });
+			}
+
+			// Tính tổng số tiền từ giỏ hàng
+			decimal totalAmount = cartItems.Sum(item => item.TotalPrice ?? (item.Price * item.Quantity));
 
 			// Tạo đơn hàng
 			var order = new Order
 			{
-				CustomerId = cartData.customerId,  // Lưu customerId vào đơn hàng
+				CustomerId = customerId.Value,
 				CustomerName = cartData.customerName,
 				PhoneNumber = cartData.customerPhone,
 				Address = cartData.customerAddress,
 				Email = cartData.customerEmail,
 				OrderDate = DateTime.Now,
-				OrderStatus = "Chờ xử lý",  // Trạng thái "Chờ xử lý"
-				TotalAmount = cartData.totalAmount,
-				PaymentMethod = "COD",  // Phương thức thanh toán COD
+				OrderStatus = "Chờ xử lý",
+				TotalAmount = totalAmount,
+				PaymentMethod = "COD",
 				CreatedAt = DateTime.Now,
 				UpdatedAt = DateTime.Now
 			};
 
 			// Thêm đơn hàng vào cơ sở dữ liệu
 			_context.Orders.Add(order);
-			_context.SaveChanges(); // Lưu đơn hàng và lấy OrderId mới
+			_context.SaveChanges();
 
 			// Lưu chi tiết đơn hàng
-			foreach (var item in cartData.items)
+			foreach (var item in cartItems)
 			{
 				var orderDetail = new OrderDetail
 				{
-					OrderId = order.OrderId,  // Liên kết với đơn hàng vừa tạo
-					ProductId = item.productId,
-					ProductName = item.productName,
-					Quantity = item.quantity,
-					UnitPrice = item.price,
-					TotalPrice = item.totalPrice,
-					TotalAmount = item.totalPrice,
-					Color = item.color
+					OrderId = order.OrderId,
+					ProductId = item.ProductId,
+					ProductName = item.ProductName,
+					Quantity = item.Quantity,
+					UnitPrice = item.Price,
+					TotalPrice = item.TotalPrice,
+					TotalAmount = item.TotalPrice,
+					Color = item.Color
 				};
-
-				// Thêm chi tiết đơn hàng vào cơ sở dữ liệu
 				_context.OrderDetails.Add(orderDetail);
 			}
-
-			// Lưu chi tiết đơn hàng vào cơ sở dữ liệu
 			_context.SaveChanges();
 
-			// Xóa giỏ hàng của khách hàng (nếu có)
-			var cartItems = _context.Carts.Where(c => c.CustomerId == cartData.customerId).ToList();
+			// Xóa giỏ hàng của khách hàng
 			_context.Carts.RemoveRange(cartItems);
 			_context.SaveChanges();
 
-			return Ok(new { success = true, message = "Đặt hàng thành công!" });
+			return Json(new { success = true, message = "Đặt hàng thành công!" });
+		}
+
+		[Route("TrangChucMung")]
+		public IActionResult TrangChucMung()
+		{
+			return View();
 		}
 
 
@@ -345,8 +357,11 @@ namespace _6TL.Controllers
 				_context.SaveChanges();
 			}
 
-			// Trả về kết quả thành công
-			return Json(new { success = true });
+			
+
+				// Chuyển hướng đến trang giỏ hàng
+				return RedirectToAction("GioHang"); // Giả sử view giỏ hàng của bạn tên là "Cart"
+			
 		}
 
 		[HttpGet]

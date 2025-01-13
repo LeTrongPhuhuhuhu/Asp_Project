@@ -192,12 +192,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUaW5UdWMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Asp_Project/Asp_Project/6TL/6TL/Views/Home/TrangThanhToan.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUcmFuZ1RoYW5oVG9hbi5jc2h0bWw=
+[E:/Asp_Project/Asp_Project/6TL/6TL/Views/Home/TrangChucMung.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUcmFuZ0NodWNNdW5nLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Asp_Project/Asp_Project/6TL/6TL/Views/Home/ViewProfile.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxWaWV3UHJvZmlsZS5jc2h0bWw=
+[E:/Asp_Project/Asp_Project/6TL/6TL/Views/Home/TrangThanhToan.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUcmFuZ1RoYW5oVG9hbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/Asp_Project/Asp_Project/6TL/6TL/Views/Product2/SanPham.cshtml]
@@ -210,6 +210,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [E:/Asp_Project/Asp_Project/6TL/6TL/Views/Product/ChiTietSanPham.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxDaGlUaWV0U2FuUGhhbS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Asp_Project/Asp_Project/6TL/6TL/Views/Profile/ViewProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxWaWV3UHJvZmlsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/Asp_Project/Asp_Project/6TL/6TL/Views/Shared/Error.cshtml]
