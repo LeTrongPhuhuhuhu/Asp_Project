@@ -36,7 +36,7 @@ body {
     width: 95%; /* Giảm chiều rộng tổng thể một chút để có không gian bên ngoài */
     margin: 0 auto;
 }
-
+/*check*/
 .cart-table {
     width: 100%; /* Đảm bảo bảng giỏ hàng chiếm toàn bộ không gian của phần này */
     border-collapse: collapse;
