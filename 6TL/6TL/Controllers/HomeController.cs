@@ -227,7 +227,7 @@ namespace _6TL.Controllers
 
 			return Json(new { success = true, message = "Đặt hàng thành công!" });
 		}
-
+		//Cứu chén
 		[Route("TrangChucMung")]
 		public IActionResult TrangChucMung()
 		{
