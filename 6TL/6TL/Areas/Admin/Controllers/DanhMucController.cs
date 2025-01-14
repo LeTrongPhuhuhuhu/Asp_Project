@@ -31,21 +31,18 @@ namespace _6TL.Areas.Admin.Controllers
 
             return View(categories);
         }
-
-        // Thêm danh mục mới
+        //Thêm danh mục mới
         [HttpPost]
-        public IActionResult AddCategory(string categoryName, int? parentCategory, string slug)
+        public IActionResult AddCategory(string categoryName, int? parentCategory)
         {
             if (string.IsNullOrEmpty(categoryName))
             {
                 ModelState.AddModelError("CategoryName", "Tên danh mục không được để trống.");
-                return View();
+                return RedirectToAction("QuanLyDanhMuc");
             }
 
-            if (string.IsNullOrEmpty(slug))
-            {
-                slug = GenerateSlug(categoryName);
-            }
+            // Tạo slug tự động từ categoryName
+            string slug = GenerateSlug(categoryName);
 
             var newCategory = new Category
             {
@@ -58,6 +55,7 @@ namespace _6TL.Areas.Admin.Controllers
             _context.SaveChanges();
             return RedirectToAction("QuanLyDanhMuc");
         }
+
 
         // Xóa danh mục
         public IActionResult DeleteCategory(int id)
@@ -100,7 +98,13 @@ namespace _6TL.Areas.Admin.Controllers
                 return NotFound();
             }
 
+            if (string.IsNullOrEmpty(categoryName))
+            {
+                return Json(new { success = false, message = "Tên danh mục không được để trống." });
+            }
+
             category.CategoryName = categoryName;
+            category.Slug = GenerateSlug(categoryName); // Tạo lại slug tự động
             category.ParentCategoryId = parentCategory;
 
             _context.Categories.Update(category);
@@ -109,10 +113,36 @@ namespace _6TL.Areas.Admin.Controllers
             return Json(new { success = true, message = "Danh mục đã được cập nhật thành công!" });
         }
 
+
         // Hàm tạo Slug từ CategoryName
         private string GenerateSlug(string categoryName)
         {
-            return categoryName.ToLower().Replace(" ", "-").Replace(",", "").Replace(".", "");
+            return categoryName.ToLower()
+                               .Trim()
+                               .Replace(" ", "-")   // Thay khoảng trắng bằng dấu gạch ngang
+                               .Replace(",", "")    // Loại bỏ dấu phẩy
+                               .Replace(".", "")    // Loại bỏ dấu chấm
+                               .Replace("đ", "d")   // Thay chữ 'đ' bằng 'd'
+                               .Replace("á", "a")
+                               .Replace("à", "a")
+                               .Replace("ạ", "a")
+                               .Replace("ả", "a")
+                               .Replace("ã", "a")
+                               .Replace("â", "a")
+                               .Replace("ấ", "a")
+                               .Replace("ậ", "a")
+                               .Replace("ầ", "a")
+                               .Replace("ẩ", "a")
+                               .Replace("ẫ", "a")
+                               .Replace("ă", "a")
+                               .Replace("ắ", "a")
+                               .Replace("ặ", "a")
+                               .Replace("ằ", "a")
+                               .Replace("ẳ", "a")
+                               .Replace("ẵ", "a")
+                               // Thêm các ký tự cần chuyển đổi khác nếu cần
+                               .Normalize();        // Chuẩn hóa chuỗi
         }
+
     }
 }

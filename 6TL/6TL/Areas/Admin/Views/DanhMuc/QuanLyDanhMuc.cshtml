@@ -24,21 +24,29 @@
         <!-- Thêm danh mục -->
         <section class="add-category-dm">
             <h2>Thêm Danh mục Mới</h2>
-            <form action="@Url.Action("AddCategory", "DanhMuc")" method="POST">
-                <input type="text" name="categoryName" placeholder="Tên danh mục" required>
-                <input type="text" name="slug" placeholder="Slug (tùy chọn)" />
-                <select name="parentCategory">
-                    <option value="">-- Chọn danh mục cha (nếu có) --</option>
-                    @if (ViewBag.ParentCategories != null)
-                    {
-                        @foreach (var parentCategory in ViewBag.ParentCategories)
+            <form method="post" action="/Admin/DanhMuc/AddCategory">
+                <div>
+                    <label for="categoryName">Tên danh mục:</label>
+                    <input type="text" id="categoryName" name="categoryName" required />
+                </div>
+                <div>
+                    <label for="slug">Slug:</label>
+                    <input type="text" id="slug" name="slug" readonly />
+                </div>
+                <div>
+                    <label for="parentCategory">Danh mục cha:</label>
+                    <select id="parentCategory" name="parentCategory">
+                        <option value="">Không có</option>
+                        <!-- Duyệt danh sách danh mục cha từ ViewBag -->
+                        @foreach (var parent in ViewBag.ParentCategories)
                         {
-                            <option value="@parentCategory.CategoryId">@parentCategory.CategoryName</option>
+                            <option value="@parent.CategoryId">@parent.CategoryName</option>
                         }
-                    }
-                </select>
-                <button type="submit">Thêm Danh mục</button>
+                    </select>
+                </div>
+                <button type="submit">Thêm danh mục</button>
             </form>
+
         </section>
 
         <!-- Danh sách danh mục -->
@@ -107,7 +115,27 @@
         function closeEditPopup() {
             document.getElementById('editPopup').classList.remove('show');
         }
+        document.getElementById('categoryName').addEventListener('input', function () {
+            const categoryName = this.value;
 
+            // Hàm tạo slug tự động
+            const slug = categoryName
+                .toLowerCase()
+                .trim()
+                .replace(/đ/g, 'd')              // Thay đ -> d
+                .replace(/[áàạảãâấầậẩẫăắằặẳẵ]/g, 'a') // Thay các ký tự 'a'
+                .replace(/[éèẹẻẽêếềệểễ]/g, 'e')  // Thay các ký tự 'e'
+                .replace(/[óòọỏõôốồộổỗơớờợởỡ]/g, 'o') // Thay các ký tự 'o'
+                .replace(/[íìịỉĩ]/g, 'i')        // Thay các ký tự 'i'
+                .replace(/[úùụủũưứừựửữ]/g, 'u')  // Thay các ký tự 'u'
+                .replace(/[ýỳỵỷỹ]/g, 'y')        // Thay các ký tự 'y'
+                .replace(/[^a-z0-9\s-]/g, '')    // Xóa các ký tự đặc biệt
+                .replace(/\s+/g, '-')            // Thay khoảng trắng -> dấu gạch ngang
+                .replace(/-+/g, '-');            // Xóa dấu gạch ngang thừa
+
+            // Gán slug vào ô input slug
+            document.getElementById('slug').value = slug;
+        });
         document.getElementById('editCategoryForm').addEventListener('submit', function (event) {
             event.preventDefault();
             const categoryId = document.getElementById('categoryId').value;
