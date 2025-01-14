@@ -21,10 +21,10 @@
             {
                 <li>
                     <div class="product-item">
-                        <img src="@product.Image" alt="@product.ProductName" />
+                        <img src="~/img/@product.Image" alt="@product.ProductName" />
                         <div>
                             <h3>@product.ProductName</h3>
-                            <p>@product.Price?.ToString("C")</p>
+                            <p>@(product.Price.HasValue ? product.Price.Value.ToString("C") : "Liên hệ")</p>
                             <div class="rating">
                                 @for (int i = 1; i <= 5; i++)
                                 {
@@ -79,7 +79,6 @@
 <div class="chart-section">
     <canvas id="ratingChart"></canvas>
 </div>
-
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
     // Hàm lọc sản phẩm
@@ -88,8 +87,8 @@
         const items = Array.from(productList.children);
 
         items.sort((a, b) => {
-            const priceA = parseInt(a.querySelector('p').textContent.replace(/[^0-9]/g, ''));
-            const priceB = parseInt(b.querySelector('p').textContent.replace(/[^0-9]/g, ''));
+            const priceA = parseInt(a.querySelector('p').textContent.replace(/[^0-9]/g, '') || "0");
+            const priceB = parseInt(b.querySelector('p').textContent.replace(/[^0-9]/g, '') || "0");
             return order === 'asc' ? priceA - priceB : priceB - priceA;
         });
 
@@ -98,33 +97,46 @@
     }
 
     // Hàm lọc đánh giá
-    function filterReviews(rating) {
-        fetch(`/Review/FilterReviews?rating=${rating}`)
+    // Hàm lọc sản phẩm theo đánh giá
+    function sortProducts(order) {
+        fetch(`/Admin/Review/SortProducts?order=${order}`, {
+            method: 'GET'
+        })
             .then(response => response.text())
             .then(data => {
-                document.getElementById('reviewList').innerHTML = data;
+                document.getElementById('productList').innerHTML = data;
             });
     }
 
-    // Vẽ biểu đồ
-    const ctx = document.getElementById('ratingChart').getContext('2d');
-    new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: ['5 Sao', '4 Sao', '3 Sao', '2 Sao', '1 Sao'],
-            datasets: [{
-                label: 'Số lượng đánh giá',
-                data: [10, 7, 5, 3, 1],
-                backgroundColor: ['#4caf50', '#8bc34a', '#ffc107', '#ff9800', '#f44336'],
-            }]
-        },
-        options: {
-            responsive: true,
-            plugins: { legend: { display: false } },
-            scales: {
-                x: { title: { display: true, text: 'Mức đánh giá' } },
-                y: { beginAtZero: true, title: { display: true, text: 'Số lượng' } }
+    // Tạo biểu đồ
+    async function drawChart() {
+        const response = await fetch('/Admin/Review/GetChartData');
+        const chartData = await response.json();
+
+        const ctx = document.getElementById('ratingChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['1 Sao', '2 Sao', '3 Sao', '4 Sao', '5 Sao'],
+                datasets: [{
+                    label: 'Số lượng đánh giá',
+                    data: chartData,
+                    backgroundColor: ['#f44336', '#ff9800', '#ffc107', '#8bc34a', '#4caf50'],
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { display: false }
+                },
+                scales: {
+                    x: { title: { display: true, text: 'Mức đánh giá' } },
+                    y: { beginAtZero: true, title: { display: true, text: 'Số lượng' } }
+                }
             }
-        }
-    });
+        });
+    }
+
+    // Khởi tạo biểu đồ khi load trang
+    drawChart();
 </script>
