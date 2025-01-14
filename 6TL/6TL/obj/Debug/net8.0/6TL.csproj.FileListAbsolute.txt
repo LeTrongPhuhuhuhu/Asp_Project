@@ -1328,3 +1328,14 @@ D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\FunScript.TypeScript.Binding.lib
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\FunScript.TypeScript.Binding.nodemailer.dll
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Newtonsoft.Json.dll
+E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\BCrypt.Net-Next.dll
+E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\FunScript.TypeScript.Binding.lib.dll
+E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\FunScript.TypeScript.Binding.nodemailer.dll
+E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\Newtonsoft.Json.dll
+E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Extensions.Configuration.dll
+E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\SendGrid.dll
+E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\StarkbankEcdsa.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Extensions.Configuration.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\SendGrid.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\StarkbankEcdsa.dll

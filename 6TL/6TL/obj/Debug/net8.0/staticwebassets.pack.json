@@ -289,6 +289,10 @@
       "PackagePath": "staticwebassets\\img\\Top5.png"
     },
     {
+      "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\accent_chair.jpg",
+      "PackagePath": "staticwebassets\\img\\accent_chair.jpg"
+    },
+    {
       "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\add_shopping_cart_16dp_FFFFFF_FILL0_wght400_GRAD0_opsz20.png",
       "PackagePath": "staticwebassets\\img\\add_shopping_cart_16dp_FFFFFF_FILL0_wght400_GRAD0_opsz20.png"
     },
@@ -333,8 +337,16 @@
       "PackagePath": "staticwebassets\\img\\baohanh.jpg"
     },
     {
+      "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\bar_stool.jpg",
+      "PackagePath": "staticwebassets\\img\\bar_stool.jpg"
+    },
+    {
       "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\batdongsan2025.jpg",
       "PackagePath": "staticwebassets\\img\\batdongsan2025.jpg"
+    },
+    {
+      "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\bed_frame.jpg",
+      "PackagePath": "staticwebassets\\img\\bed_frame.jpg"
     },
     {
       "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\blog1.jpg",
@@ -353,20 +365,36 @@
       "PackagePath": "staticwebassets\\img\\blog4.jpg"
     },
     {
+      "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\bookshelf.jpg",
+      "PackagePath": "staticwebassets\\img\\bookshelf.jpg"
+    },
+    {
       "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\botri.jpg",
       "PackagePath": "staticwebassets\\img\\botri.jpg"
+    },
+    {
+      "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\bunk_bed.jpg",
+      "PackagePath": "staticwebassets\\img\\bunk_bed.jpg"
     },
     {
       "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\chonsofa.jpg",
       "PackagePath": "staticwebassets\\img\\chonsofa.jpg"
     },
     {
+      "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\coffee_table.jpg",
+      "PackagePath": "staticwebassets\\img\\coffee_table.jpg"
+    },
+    {
       "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\connghe2025.jpg",
       "PackagePath": "staticwebassets\\img\\connghe2025.jpg"
     },
     {
-      "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\dining-table.jpg",
-      "PackagePath": "staticwebassets\\img\\dining-table.jpg"
+      "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\dining_chair.jpg",
+      "PackagePath": "staticwebassets\\img\\dining_chair.jpg"
+    },
+    {
+      "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\dining_table.jpg",
+      "PackagePath": "staticwebassets\\img\\dining_table.jpg"
     },
     {
       "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\dmsp.jpg",
@@ -393,6 +421,10 @@
       "PackagePath": "staticwebassets\\img\\giuongngu.jpg"
     },
     {
+      "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\hallway_bench.jpg",
+      "PackagePath": "staticwebassets\\img\\hallway_bench.jpg"
+    },
+    {
       "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\inverted_logo.png",
       "PackagePath": "staticwebassets\\img\\inverted_logo.png"
     },
@@ -405,8 +437,20 @@
       "PackagePath": "staticwebassets\\img\\khuyenmai2025.png"
     },
     {
+      "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\kitchen_island.jpg",
+      "PackagePath": "staticwebassets\\img\\kitchen_island.jpg"
+    },
+    {
       "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\logo_with_dark_background.png",
       "PackagePath": "staticwebassets\\img\\logo_with_dark_background.png"
+    },
+    {
+      "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\lounge_chair.jpg",
+      "PackagePath": "staticwebassets\\img\\lounge_chair.jpg"
+    },
+    {
+      "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\nightstand.jpg",
+      "PackagePath": "staticwebassets\\img\\nightstand.jpg"
     },
     {
       "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\noithat1tc.jpg",
@@ -433,8 +477,24 @@
       "PackagePath": "staticwebassets\\img\\noithat6tc.jpg"
     },
     {
+      "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\office_chair.jpg",
+      "PackagePath": "staticwebassets\\img\\office_chair.jpg"
+    },
+    {
+      "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\office_desk.jpg",
+      "PackagePath": "staticwebassets\\img\\office_desk.jpg"
+    },
+    {
+      "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\patio_set.jpg",
+      "PackagePath": "staticwebassets\\img\\patio_set.jpg"
+    },
+    {
       "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\placeholder.jpg",
       "PackagePath": "staticwebassets\\img\\placeholder.jpg"
+    },
+    {
+      "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\recliner_chair.jpg",
+      "PackagePath": "staticwebassets\\img\\recliner_chair.jpg"
     },
     {
       "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\salebanner.jpg",
@@ -451,6 +511,10 @@
     {
       "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\sofa1.jpg",
       "PackagePath": "staticwebassets\\img\\sofa1.jpg"
+    },
+    {
+      "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\storage_cabinet.jpg",
+      "PackagePath": "staticwebassets\\img\\storage_cabinet.jpg"
     },
     {
       "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\succes.json",
@@ -497,8 +561,16 @@
       "PackagePath": "staticwebassets\\img\\tuyendung.jpg"
     },
     {
+      "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\tv_stand.jpg",
+      "PackagePath": "staticwebassets\\img\\tv_stand.jpg"
+    },
+    {
       "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\uudai.jpg",
       "PackagePath": "staticwebassets\\img\\uudai.jpg"
+    },
+    {
+      "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\wardrobe.jpg",
+      "PackagePath": "staticwebassets\\img\\wardrobe.jpg"
     },
     {
       "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\js\\site.js",

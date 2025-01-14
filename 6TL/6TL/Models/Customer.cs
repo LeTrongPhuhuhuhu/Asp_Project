@@ -1,21 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace _6TL.Models;
 
 public partial class Customer
 {
     public int CustomerId { get; set; }
-
-    public string? FullName { get; set; }
-
-    public string? Email { get; set; }
-
-    public string? Address { get; set; }
-
-    public string? PhoneNumber { get; set; }
-
-    public string? Password { get; set; }
+	[Required(ErrorMessage = "Chưa điền Họ và Tên !")]
+	public string? FullName { get; set; }
+	[Required(ErrorMessage = "Chưa điền Email !")]
+	public string? Email { get; set; }
+	[Required(ErrorMessage = "Chưa điền địa chỉ !")]
+	public string? Address { get; set; }
+	[Required(ErrorMessage = "Chưa điền số điện thoại !")]
+	[RegularExpression(@"^\d+$", ErrorMessage = "Số điện thoại là các chữ số !")]
+	public string? PhoneNumber { get; set; }
+	[Required(ErrorMessage = "Chưa điền mật khẩu !")]
+	[RegularExpression(@"^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)[A-Za-z\d]{6,}$",ErrorMessage = "Mật khẩu phải có ít nhất 6 ký tự, bao gồm chữ cái, chữ số và ít nhất một chữ in hoa")]
+	public string? Password { get; set; }
 
     public int? RoleId { get; set; }
 
@@ -31,9 +34,9 @@ public partial class Customer
 
     public DateTime? PasswordResetExpires { get; set; }
 
-    public string? Gender { get; set; }
-
     public DateTime? DateOfBirth { get; set; }
+
+    public string? Gender { get; set; }
 
     public virtual Role? Role { get; set; }
 

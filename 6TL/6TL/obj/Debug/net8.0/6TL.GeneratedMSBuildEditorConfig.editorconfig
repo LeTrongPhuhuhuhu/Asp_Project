@@ -122,6 +122,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/DoAnAsp/Asp_Project/6TL/6TL/Views/Contact/LienHe.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxMaWVuSGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/DoAnAsp/Asp_Project/6TL/6TL/Views/Home/Blog.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxCbG9nLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -184,6 +188,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/DoAnAsp/Asp_Project/6TL/6TL/Views/Home/TinTuc.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUaW5UdWMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnAsp/Asp_Project/6TL/6TL/Views/Home/TrangChucMung.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUcmFuZ0NodWNNdW5nLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/DoAnAsp/Asp_Project/6TL/6TL/Views/Home/TrangThanhToan.cshtml]
