@@ -110,30 +110,16 @@
         </div>
     </div>
 </div>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-        // Khi bấm nút thanh toán
+    // Khi bấm nút thanh toán
     $(document).on('click', '.checkout-button_ttt', function (e) {
         e.preventDefault();
 
-        // Kiểm tra nếu có lựa chọn phương thức thanh toán
-        if (!$('input[name="payment_method"]:checked').length) {
-            toastr.error('Vui lòng chọn phương thức thanh toán');
-            return;
-        }
+        // Lấy phương thức thanh toán đã chọn
+        const paymentMethod = $('input[name="payment_method"]:checked').val();
 
-        // Kiểm tra nếu không chọn phương thức thanh toán COD
-        if ($('#cod').is(':checked')) {
-            handleCODPayment();
-        } else {
-            toastr.warning('Chức năng thanh toán này chưa được triển khai.');
-        }
-    });
-
-    // Hàm xử lý thanh toán COD
-    function handleCODPayment() {
         // Thu thập dữ liệu từ form
         const cartData = {
             customerName: $('#first-name_ttt').val() + " " + $('#last-name_ttt').val(),
@@ -141,7 +127,8 @@
             customerEmail: $('#email_ttt').val(),
             customerAddress: $('#address_ttt').val(),
             totalAmount: parseFloat($('.total_ttt span').text().replace(' VNĐ', '').replace(',', '')),
-            items: []
+            items: [],
+            paymentMethod: paymentMethod // Thêm giá trị paymentMethod vào cartData
         };
 
         // Lấy chi tiết sản phẩm từ giỏ hàng
@@ -156,25 +143,20 @@
             });
         });
 
-        // Gửi yêu cầu POST đến API thanh toán COD
+        // Gửi yêu cầu POST đến API thanh toán
         $.ajax({
             url: '/api/checkout/cod',
             method: 'POST',
             contentType: 'application/json',
             data: JSON.stringify(cartData),
             success: function (response) {
-                if (response.success) {
-                    toastr.success(response.message);
-                    window.location.href = '/TrangChucMung';
-                } else {
-                    toastr.error(response.message);
-                }
+                toastr.success(response.message);
             },
             error: function (xhr) {
                 toastr.error('Đặt hàng thất bại, vui lòng thử lại!');
             }
         });
-    }
+    });
 
     // Hàm hủy thanh toán
     function cancelPayment() {
@@ -182,3 +164,4 @@
         document.querySelector('#checkout-form').reset();
     }
 </script>
+

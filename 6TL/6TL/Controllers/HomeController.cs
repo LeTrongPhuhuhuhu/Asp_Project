@@ -173,6 +173,12 @@ namespace _6TL.Controllers
 				return Json(new { success = false, message = "Địa chỉ giao hàng không được để trống." });
 			}
 
+			// Kiểm tra phương thức thanh toán
+			if (string.IsNullOrEmpty(cartData.paymentMethod))
+			{
+				return Json(new { success = false, message = "Vui lòng chọn phương thức thanh toán." });
+			}
+
 			// Kiểm tra giỏ hàng của khách hàng
 			var cartItems = _context.Carts.Where(c => c.CustomerId == customerId.Value).ToList();
 			if (!cartItems.Any())
@@ -194,39 +200,48 @@ namespace _6TL.Controllers
 				OrderDate = DateTime.Now,
 				OrderStatus = "Chờ xử lý",
 				TotalAmount = totalAmount,
-				PaymentMethod = "COD",
+				PaymentMethod = cartData.paymentMethod, // Lưu phương thức thanh toán từ cartData
 				CreatedAt = DateTime.Now,
 				UpdatedAt = DateTime.Now
 			};
 
-			// Thêm đơn hàng vào cơ sở dữ liệu
-			_context.Orders.Add(order);
-			_context.SaveChanges();
-
-			// Lưu chi tiết đơn hàng
-			foreach (var item in cartItems)
+			try
 			{
-				var orderDetail = new OrderDetail
+				// Thêm đơn hàng vào cơ sở dữ liệu
+				_context.Orders.Add(order);
+				_context.SaveChanges();
+
+				// Lưu chi tiết đơn hàng
+				foreach (var item in cartItems)
 				{
-					OrderId = order.OrderId,
-					ProductId = item.ProductId,
-					ProductName = item.ProductName,
-					Quantity = item.Quantity,
-					UnitPrice = item.Price,
-					TotalPrice = item.TotalPrice,
-					TotalAmount = item.TotalPrice,
-					Color = item.Color
-				};
-				_context.OrderDetails.Add(orderDetail);
+					var orderDetail = new OrderDetail
+					{
+						OrderId = order.OrderId,
+						ProductId = item.ProductId,
+						ProductName = item.ProductName,
+						Quantity = item.Quantity,
+						UnitPrice = item.Price,
+						TotalPrice = item.TotalPrice,
+						TotalAmount = item.TotalPrice,
+						Color = item.Color
+					};
+					_context.OrderDetails.Add(orderDetail);
+				}
+				_context.SaveChanges();
+
+				// Xóa giỏ hàng của khách hàng
+				_context.Carts.RemoveRange(cartItems);
+				_context.SaveChanges();
+
+				return Json(new { success = true, message = "Đặt hàng thành công!" });
 			}
-			_context.SaveChanges();
-
-			// Xóa giỏ hàng của khách hàng
-			_context.Carts.RemoveRange(cartItems);
-			_context.SaveChanges();
-
-			return Json(new { success = true, message = "Đặt hàng thành công!" });
+			catch (Exception ex)
+			{
+				// Xử lý khi có lỗi xảy ra
+				return Json(new { success = false, message = "Đặt hàng thất bại: " + ex.Message });
+			}
 		}
+
 		//Cứu chén
 		[Route("TrangChucMung")]
 		public IActionResult TrangChucMung()
@@ -244,8 +259,9 @@ namespace _6TL.Controllers
 			public string customerAddress { get; set; }
 			public decimal totalAmount { get; set; }
 			public List<CartItem> items { get; set; }
-			public int customerId { get; set; }
+			public string paymentMethod { get; set; } // Thêm thuộc tính này
 		}
+
 
 		// Chi tiết từng sản phẩm trong giỏ hàng
 		public class CartItem
