@@ -26,7 +26,6 @@ namespace _6TL.Controllers
             }
 
             return View(customer); // Truyền thông tin khách hàng đến view
-
         }
     }
 }

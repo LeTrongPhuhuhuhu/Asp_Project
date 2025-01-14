@@ -15,10 +15,6 @@ namespace _6TL.Controllers
             _context = context;
         }
 
-        public ActionResult SanPhamYeuThich()
-        {
-            return View();
-        }
         [HttpGet]
         public IActionResult SanPham(List<string> categories, List<string> materials, decimal? minPrice, decimal? maxPrice)
         {

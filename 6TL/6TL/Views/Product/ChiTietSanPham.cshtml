@@ -25,35 +25,6 @@
             height: 33px; /* Phóng to */
             border: 2px solid black; /* Viền nổi bật */
         }
-
-
-    .toast {
-        background-color: #1A1A2E !important; /* Xanh đen */
-        color: #FFFFFF !important; /* Chữ trắng */
-        border-radius: 8px; /* Bo góc */
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Hiệu ứng đổ bóng */
-    }
-
-    .toast-success {
-        background-color: #1A1A2E !important;
-        color: #00FF7F !important; /* Màu xanh nhạt cho thông báo thành công */
-    }
-
-    .toast-error {
-        background-color: #1A1A2E !important;
-        color: #FF4C4C !important; /* Màu đỏ cho thông báo lỗi */
-    }
-
-    .toast-warning {
-        background-color: #1A1A2E !important;
-        color: #FFD700 !important; /* Màu vàng cho thông báo cảnh báo */
-    }
-
-    .toast-info {
-        background-color: #1A1A2E !important;
-        color: #00CED1 !important; /* Màu xanh dương nhạt cho thông báo thông tin */
-    }
-
 </style>
 
 <div class="banner_ct">
@@ -88,9 +59,10 @@
                         foreach (var color in colorsWithQuantity)
                         {
                             <div class="color-option_ct"
-                                 
+                                 data-color-id="@color.ColorId"
+                                 data-color-code="@color.ColorCode"
                                  data-quantity="@color.Quantity"
-                                 style="background-color: @color.Color;"
+                                 style="background-color: @color.ColorCode;"
                                  onclick="updateStock(this)">
                             </div>
                         }
@@ -166,9 +138,7 @@
                     <input type="hidden" name="productName" value="@Model.ProductName ">
                     <input type="hidden" name="productImage" value="@Model.Image">
                     <input type="hidden" name="price" value="@Model.Price">
-                    <!-- Cập nhật mã màu của sản phẩm vào trường hidden -->
                     <input type="hidden" id="productColor-cart" name="productColor" value="">
-
                     <input type="hidden" name="quantity" value="1">
                     <button type="submit" class="add-to-cart_ct">Thêm Giỏ Hàng</button>
                 </form>
@@ -224,6 +194,10 @@
         <div class="text-center">
             <h2 class="mb-2">Sản Phẩm Liên Quan</h2>
         </div>
+        <div class="text-end">
+            <a href="/Home/SanPham" class="btn-more_ct text-decoration-none">Xem thêm &raquo;</a>
+        </div>
+
         <!-- Carousel container -->
         <div id="relatedProductsCarousel_ct" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
             <div class="carousel-inner">
@@ -242,7 +216,7 @@
                                 @foreach (var product in group)
                                 {
                                     <div class="col-md-3">
-                                        <div class="product-item_ct" onclick="window.location.href='/Product/ChiTietSanPham/@product.ProductId'">
+                                        <div class="product-item_ct">
                                             <div class="favorite_ct">
                                                 <i class="heart-icon_ct">&hearts;</i>
                                             </div>
@@ -275,91 +249,117 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
+
     </div>
 </section>
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     document.addEventListener("DOMContentLoaded", () => {
-        // Cập nhật trạng thái kho hàng
-        function updateStock(selectedColor) {
-            const stockQuantity = selectedColor.getAttribute("data-quantity");
+        // JavaScript function to update stock information
+        function updateStock(element) {
+            const quantity = element.getAttribute("data-quantity");
             const status = document.getElementById("stock-status");
             const stockCount = document.getElementById("stock-count");
 
-            if (stockQuantity > 0) {
+            // Cập nhật trạng thái và số lượng
+            if (quantity > 0) {
                 status.innerText = "Còn hàng";
                 status.style.color = "green";
-                stockCount.innerText = `Số lượng còn: ${stockQuantity}`;
+                stockCount.innerText = `Số lượng còn: ${quantity}`;
             } else {
                 status.innerText = "Hết hàng";
                 status.style.color = "red";
                 stockCount.innerText = "";
             }
-
-            // Cập nhật màu đã chọn
-            const productColor = selectedColor.style.backgroundColor;
-            document.getElementById("productColor-buy").value = productColor;
-            document.getElementById("productColor-cart").value = productColor;
         }
 
-        // Khởi tạo màu mặc định
-        const colorOptions = document.querySelectorAll('.color-option_ct');
-        if (colorOptions[0]) {
-            colorOptions[0].classList.add('selected');
-            updateStock(colorOptions[0]);
+        // Tự động chọn màu đầu tiên (nếu có)
+        const firstColorOption = document.querySelector(".color-option_ct");
+        let stockQuantity = firstColorOption ? firstColorOption.getAttribute("data-quantity") : 0;
+        if (firstColorOption) {
+            firstColorOption.classList.add("selected");
+            updateStock(firstColorOption);
+            selectedColor = firstColorOption.getAttribute("data-color-code");
         }
 
-        // Xử lý thay đổi số lượng
-        const quantityInput = document.getElementById('quantity-input');
-        const quantityInputHidden = document.getElementById('quantity-input-hidden');
-        if (quantityInput && quantityInputHidden) {
-            quantityInput.addEventListener('input', function() {
-                quantityInputHidden.value = this.value;
-                toastr.info(`Số lượng thay đổi: ${this.value}`);
+        // AJAX
+        $(document).ready(function () {
+            let selectedColor = firstColorOption ? firstColorOption.getAttribute("data-color-code") : "";
+            let selectedQuantity = 1;
+
+            // Hàm xử lý chọn màu
+            $(".color-option_ct").on("click", function () {
+                $(".color-option_ct").removeClass("selected");
+                $(this).addClass("selected");
+                selectedColor = $(this).data("color-code");
+                stockQuantity = $(this).data("quantity");
+                updateStock(this);
             });
-        }
 
-        // Xử lý yêu thích sản phẩm
-        const favoriteIcon = document.getElementById('favorite-icon');
-        if (favoriteIcon) {
-            favoriteIcon.addEventListener('click', function() {
-                const heartIcon = this.querySelector('.heart-icon_ct');
-                if (heartIcon) {
-                    heartIcon.classList.toggle('filled');
-                    heartIcon.classList.contains('filled')
-                        ? toastr.success('Đã thêm vào yêu thích')
-                        : toastr.warning('Đã xóa khỏi yêu thích');
+            // Hàm xử lý thay đổi số lượng
+            $("#quantity-input").on("input", function () {
+                selectedQuantity = $(this).val();
+            });
+
+            // Xử lý form "Thêm vào giỏ hàng" với AJAX
+            $("#add-to-cart-form").on("submit", function (e) {
+                e.preventDefault();
+
+                if (!selectedColor) {
+                    toastr.error("Vui lòng chọn màu trước khi thêm vào giỏ hàng!");
+                    return;
                 }
-            });
-        }
 
-        // Ngăn reload trang khi submit form và xử lý thêm sản phẩm vào giỏ hàng bằng AJAX
-        $(document).on('submit', '#add-to-cart-form', function (e) {
-            e.preventDefault(); // Ngăn form submit làm reload trang
+                if (selectedQuantity <= 0 || selectedQuantity > stockQuantity) {
+                    toastr.error("Số lượng không hợp lệ hoặc vượt quá số lượng có trong kho!");
+                    return;
+                }
 
-            // Lấy dữ liệu từ form
-            const formData = $(this).serialize(); // Serialize tất cả các input trong form
+                $(this).find("input[name='productColor']").val(selectedColor);
+                $(this).find("input[name='quantity']").val(selectedQuantity);
 
-            // Gửi yêu cầu AJAX đến API
-            $.ajax({
-                url: '/Product/AddToCart', // URL của API
-                type: 'POST', // Phương thức gửi yêu cầu
-                data: formData, // Dữ liệu từ form
-                success: function (response) {
-                    if (response.success) {
-                        // Hiển thị thông báo thành công
-                        toastr.success(response.message);
-                    } else {
-                        // Hiển thị thông báo lỗi
-                        toastr.error(response.message);
+                $.ajax({
+                    url: '/Product/AddToCart',
+                    type: 'POST',
+                    data: $(this).serialize(),
+                    success: function (response) {
+                        if (response.success) {
+                            toastr.success(response.message);
+                        } else {
+                            toastr.error(response.message);
+                        }
+                    },
+                    error: function () {
+                        toastr.error("Đã có lỗi xảy ra khi thêm sản phẩm vào giỏ hàng.");
                     }
-                },
-                error: function () {
-                    // Hiển thị thông báo lỗi chung nếu xảy ra lỗi trong API
-                    toastr.error('Đã có lỗi xảy ra khi thêm sản phẩm vào giỏ hàng.');
+                });
+            });
+
+            // Xử lý form "Mua ngay"
+            $(".buy-now_ct").on("click", function (e) {
+                e.preventDefault();
+                const form = $(this).closest("form");
+
+                if (!selectedColor) {
+                    toastr.error("Vui lòng chọn màu trước khi mua!");
+                    return;
                 }
+
+                if (selectedQuantity <= 0 || selectedQuantity > stockQuantity) {
+                    toastr.error("Số lượng không hợp lệ hoặc vượt quá số lượng có trong kho!");
+                    return;
+                }
+
+                form.find("input[name='productColor']").val(selectedColor);
+                form.find("input[name='quantity']").val(selectedQuantity);
+
+                const urlParams = new URLSearchParams(form.serialize());
+                window.location.href = `/Home/TrangThanhToan?${urlParams.toString()}`;
             });
         });
     });
 </script>
+

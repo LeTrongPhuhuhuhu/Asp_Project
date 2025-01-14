@@ -14,6 +14,9 @@
     <form asp-action="DangKy" method="post" class="register-form">
         <!-- Hiển thị thông báo lỗi -->
         @if (!ViewData.ModelState.IsValid && ViewContext.HttpContext.Request.Method == "POST")
+
+
+
         {
             <div class="alert alert-danger">
                 Vui lòng kiểm tra lại thông tin và điền đầy đủ các trường bắt buộc!
@@ -24,6 +27,7 @@
                 <label for="name">Họ và Tên <span class="required">*</span></label>
                 <input type="text" id="name" name="FullName" value="@Model.FullName" placeholder="Nhập họ và tên">
                 @if (ViewContext.HttpContext.Request.Method == "POST")
+
                 {
                     @Html.ValidationMessageFor(model => model.FullName, "", new { style = "color: red; font-size: 0.9em; margin-top: 5px;" })
                 }
@@ -34,6 +38,7 @@
                 <label for="phone">Điện Thoại <span class="required">*</span></label>
                 <input type="text" id="phone" name="PhoneNumber" value="@Model.PhoneNumber" placeholder="Nhập số điện thoại">
                 @if (ViewContext.HttpContext.Request.Method == "POST")
+
                 {
                     @Html.ValidationMessageFor(model => model.PhoneNumber, "", new { style = "color: red; font-size: 0.9em; margin-top: 5px;" })
                 }
@@ -42,6 +47,7 @@
                 <label for="email">Email <span class="required">*</span></label>
                 <input type="email" id="email" name="Email" value="@Model.Email" placeholder="Nhập email">
                 @if (ViewContext.HttpContext.Request.Method == "POST")
+
                 {
                     @Html.ValidationMessageFor(model => model.Email, "", new { style = "color: red; font-size: 0.9em; margin-top: 5px;" })
                 }
@@ -51,33 +57,13 @@
             <div class="form-group">
                 <label for="address">Địa Chỉ <span class="required">*</span></label>
                 <input type="text" id="address" name="Address" value="@Model.Address" placeholder="Nhập địa chỉ">
+
                 @if (ViewContext.HttpContext.Request.Method == "POST")
+
                 {
                     @Html.ValidationMessageFor(model => model.Address, "", new { style = "color: red; font-size: 0.9em; margin-top: 5px;" })
                 }
-            </div>
-        </div>
-        <div class="form-row">
-            <div class="form-group">
-                <label for="dob">Ngày Sinh <span class="required">*</span></label>
-                <input type="date" id="dob" name="DateOfBirth" value="@Model.DateOfBirth" placeholder="Nhập ngày sinh">
-                @if (ViewContext.HttpContext.Request.Method == "POST")
-                {
-                    @Html.ValidationMessageFor(model => model.DateOfBirth, "", new { style = "color: red; font-size: 0.9em; margin-top: 5px;" })
-                }
-            </div>
-            <div class="form-group">
-                <label for="gender">Giới Tính <span class="required">*</span></label>
-                <select id="gender" name="Gender">
-                    <option value="">Chọn giới tính</option>
-                    <option value="Nam">Nam</option>
-                    <option value="Nữ">Nữ</option>
-                    <option value="Khác">Khác</option>
-                </select>
-                @if (ViewContext.HttpContext.Request.Method == "POST")
-                {
-                    @Html.ValidationMessageFor(model => model.Gender, "", new { style = "color: red; font-size: 0.9em; margin-top: 5px;" })
-                }
+
             </div>
         </div>
         <div class="form-row">
@@ -85,9 +71,11 @@
                 <label for="password">Mật Khẩu <span class="required">*</span></label>
                 <input type="password" id="password" name="Password" value="@Model.Password" placeholder="Nhập mật khẩu">
                 @if (ViewContext.HttpContext.Request.Method == "POST")
+
                 {
                     @Html.ValidationMessageFor(model => model.Password, "", new { style = "color: red; font-size: 0.9em; margin-top: 5px;" })
                 }
+                @* Thêm nút Hiện Mật Khẩu *@
                 <div>
                     <input type="checkbox" id="showPassword" /> <label for="showPassword">Hiện Mật Khẩu</label>
                 </div>
@@ -97,12 +85,15 @@
     </form>
 </section>
 <script>
+    // Đảm bảo mã JavaScript chỉ chạy sau khi trang đã tải xong
     document.addEventListener("DOMContentLoaded", function () {
         var showPasswordCheckbox = document.getElementById("showPassword");
         var passwordField = document.getElementById("password");
 
+        // Đảm bảo mật khẩu ban đầu được ẩn
         passwordField.type = "password";
 
+        // Xử lý sự kiện khi checkbox thay đổi
         showPasswordCheckbox.addEventListener("change", function () {
             if (showPasswordCheckbox.checked) {
                 passwordField.type = "text";  // Hiển thị mật khẩu
