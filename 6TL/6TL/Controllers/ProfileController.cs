@@ -13,19 +13,20 @@ namespace _6TL.Controllers
         [HttpGet]
         public IActionResult ViewProfile()
         {
-            var customerId = HttpContext.Session.GetInt32("CustomerId");
-            if (customerId == null)
-            {
-                return RedirectToAction("DangNhap"); // Chuyển hướng nếu chưa đăng nhập
-            }
+			var customerId = HttpContext.Session.GetInt32("CustomerId");
+			if (customerId == null)
+			{
+				return RedirectToAction("DangNhap"); // Chuyển hướng nếu chưa đăng nhập
+			}
 
-            var customer = _context.Customers.FirstOrDefault(c => c.CustomerId == customerId);
-            if (customer == null)
-            {
-                return RedirectToAction("DangNhap"); // Chuyển hướng nếu không tìm thấy khách hàng
-            }
+			var customer = _context.Customers.FirstOrDefault(c => c.CustomerId == customerId);
+			if (customer == null)
+			{
+				return RedirectToAction("DangNhap"); // Chuyển hướng nếu không tìm thấy khách hàng
+			}
 
-            return View(customer); // Truyền thông tin khách hàng đến view
-        }
-    }
+			return View(customer); // Truyền thông tin khách hàng đến view
+
+		}
+	}
 }
