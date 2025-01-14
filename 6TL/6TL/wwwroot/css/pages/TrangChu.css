@@ -281,50 +281,67 @@ section {
         color: white; /* Chữ trắng khi hover */
     }
 
-.product-item_ct {
-    border: 1px solid #ddd;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 5px;
-    transition: transform 0.3s, box-shadow 0.3s;
+.product-item_sp {
+    border: 1px solid #f9f9f9;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center; /* Căn giữa nội dung trong thẻ */
 }
 
-    .product-item_ct:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    .product-item_sp:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     }
 
-.favorite_ct {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-    color: red;
-}
-
-.product-item_ct img {
-    width: 100%;
-    height: auto;
-}
-
-.product-item_ct h3 {
-    font-size: 18px;
-    margin: 10px 0;
-}
-
-.product-item_ct span {
-    font-size: 16px;
-    color: #666;
-}
-
-.rating_ct {
-    margin-top: 10px;
-}
-
-    .rating_ct span {
-        color: #ffa500; /* màu vàng cam cho rating */
+    .product-item_sp img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 5px;
     }
 
+    .product-item_sp .favorite_sp {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 50%;
+        padding: 5px;
+        cursor: pointer;
+    }
+
+        .product-item_sp .favorite_sp .heart-icon_sp {
+            color: #d9534f;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .product-item_sp .favorite_sp:hover .heart-icon_sp {
+            color: #ff0000;
+        }
+
+    .product-item_sp h3 {
+        font-size: 16px;
+        margin-top: 15px;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .product-item_sp span {
+        font-size: 14px;
+        color: #555;
+    }
+
+    .product-item_sp .rating_sp span {
+        color: #ffcc00; /* Màu vàng cho sao */
+        font-size: 14px;
+        margin-top: 5px;
+        display: inline-block;
+    }
 /* Căn nút "Xem thêm" */
 .text-end .btn-more {
     font-size: 14px;

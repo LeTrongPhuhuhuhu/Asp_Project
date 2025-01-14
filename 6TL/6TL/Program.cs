@@ -13,38 +13,33 @@ builder.Services.AddDbContext<Db6TLContext>(options =>
 	options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddCors(options =>
 {
-	options.AddDefaultPolicy(builder =>
-	{
-		builder.AllowAnyOrigin()
-				.AllowAnyHeader()
-				.AllowAnyMethod();
-	});
+    options.AddDefaultPolicy(builder =>
+    {
+        builder.AllowAnyOrigin()
+                .AllowAnyHeader()
+                .AllowAnyMethod();
+    });
 });
 
 builder.Services.AddAuthentication(options =>
 {
-	options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-	options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
 })
 .AddJwtBearer(options =>
 {
-	options.TokenValidationParameters = new TokenValidationParameters
-	{
-		ValidateIssuer = true,
-		ValidateAudience = true,
-		ValidateLifetime = true,
-		ValidateIssuerSigningKey = true,
-		ValidIssuer = builder.Configuration["Jwt:Issuer"],
-		ValidAudience = builder.Configuration["Jwt:Audience"],
-		IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
-	};
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidateLifetime = true,
+        ValidateIssuerSigningKey = true,
+        ValidIssuer = builder.Configuration["Jwt:Issuer"],
+        ValidAudience = builder.Configuration["Jwt:Audience"],
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
+    };
 });
-builder.Services.AddSession(options =>
-{
-	options.IdleTimeout = TimeSpan.FromMinutes(30); // Thời gian hết hạn Session
-	options.Cookie.HttpOnly = true;
-	options.Cookie.IsEssential = true;
-});
+
 var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -53,7 +48,6 @@ if (!app.Environment.IsDevelopment())
 	// The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
 	app.UseHsts();
 }
-app.UseSession();
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
@@ -75,8 +69,8 @@ app.MapControllerRoute(
 	pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
 );
 app.MapControllerRoute(
-	name: "admin-products",
-	pattern: "Admin/Products/{action=QuanLySanPham}/{id?}");
+    name: "admin-products",
+    pattern: "Admin/Products/{action=QuanLySanPham}/{id?}");
 
 app.MapControllerRoute(
     name: "admin",

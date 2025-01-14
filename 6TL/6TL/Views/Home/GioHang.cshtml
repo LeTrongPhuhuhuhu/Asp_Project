@@ -8,7 +8,6 @@
     <title>Giỏ hàng</title>
     <link rel="stylesheet" href="~/css/pages/giohang.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet" />
 </head>
 <body>
     <main>
@@ -17,17 +16,8 @@
             <div class="step active">1. Giỏ hàng</div>
             <div class="step">2. Thanh toán</div>
         </div>
-        @if (ViewBag.IsLoggedIn == false)
-        {
-            <!-- Giỏ hàng trống nếu chưa đăng nhập -->
-            <div class="empty-cart">
-                <img src="https://cdn-icons-png.flaticon.com/128/13637/13637462.png" alt="Giỏ hàng trống">
-                <h2>Giỏ hàng của bạn hiện đang trống!</h2>
-                <p>Hãy đăng nhập để xem giỏ hàng của bạn.</p>
-                <button onclick="openLoginModal()">Đăng nhập</button>
-            </div>
-        }
-        else if (Model == null || !Model.Any())
+
+        @if (Model == null || !Model.Any())
         {
             <!-- Giỏ hàng trống -->
             <div class="empty-cart">
@@ -98,14 +88,11 @@
             </div>
         }
 
-        @if (ViewBag.CurrentPage == null)
-        {
-            ViewBag.CurrentPage = 1;  // Default to 1 if CurrentPage is null
-        }
 
         @Html.Partial("~/Views/Shared/_CartPagination.cshtml")
 
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <script>
                document.addEventListener('DOMContentLoaded', function () {

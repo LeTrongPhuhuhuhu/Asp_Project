@@ -1,0 +1,57 @@
+﻿@{
+    ViewData["Title"] = "ViewProfile";
+}
+<title>Thông Tin Cá Nhân</title>
+
+<div class="profileContainer">
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="linkItem">
+            <a asp-controller="Home" asp-action="LichSuMuaHang">Lịch Sử Đơn Hàng</a>
+        </div>
+        <div class="linkItem">
+            <a asp-controller="Home" asp-action="SanPhamYeuThich">Danh Sách Yêu Thích</a>
+        </div>
+    </div>
+
+    <!-- Nội dung chính -->
+    <div class="mainContent">
+        <h2>Thông Tin Cá Nhân</h2>
+
+        <div class="formContainer">
+            <div class="formGroup">
+                <label for="fullName">Họ tên:</label>
+                <input type="text" id="fullName" placeholder="Nhập họ tên">
+            </div>
+            <div class="formGroup">
+                <label for="phoneNumber">Số điện thoại:</label>
+                <input type="text" id="phoneNumber" placeholder="Nhập số điện thoại">
+            </div>
+            <div class="formGroup">
+                <label for="address">Địa Chỉ:</label>
+                <input type="text" id="address" placeholder="Nhập địa chỉ">
+            </div>
+            <div class="formGroup">
+                <label for="emailAddress">Email:</label>
+                <input type="email" id="emailAddress" placeholder="Nhập email">
+            </div>
+            <div class="formGroup">
+                <label>Giới Tính:</label>
+                <div class="genderOptions">
+                    <label><input type="radio" name="gender" value="Nam"> Nam</label>
+                    <label><input type="radio" name="gender" value="Nữ"> Nữ</label>
+                    <label><input type="radio" name="gender" value="Khác"> Khác</label>
+                </div>
+            </div>
+            <div class="formGroup">
+                <label for="dateOfBirth">Ngày Sinh:</label>
+                <input type="date" id="dateOfBirth">
+            </div>
+            <div class="buttonContainer">
+                <button>Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<link href="~/css/pages/viewprofile.css" rel="stylesheet" />

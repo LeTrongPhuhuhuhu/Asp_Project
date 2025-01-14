@@ -20,7 +20,7 @@ namespace _6TL.Controllers
 		// Hiển thị form liên hệ
 		public IActionResult LienHe()
 		{
-			return View();
+			return View("~/Views/Home/LienHe.cshtml");
 		}
 
 		// Xử lý khi người dùng gửi form
