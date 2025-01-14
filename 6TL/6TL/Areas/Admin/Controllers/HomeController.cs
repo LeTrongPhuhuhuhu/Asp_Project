@@ -17,7 +17,15 @@ namespace _6TL.Areas.Admin.Controllers
         [Route("Admin/Home/Index")]
         public IActionResult Index()
         {
+            var totalProduct = _context.Products.Count();
+            var totalOrder = _context.Orders.Count();
+            var totalRevenue = _context.Orders.Sum(od => od.TotalAmount);
             var websiteinfo = _context.WebsiteInfos.FirstOrDefault();
+
+            ViewBag.TotalProducts = totalProduct;
+            ViewBag.TotalOrders = totalOrder;
+            ViewBag.TotalRevenue = totalRevenue;
+
             return View(websiteinfo);
         }
 
@@ -52,7 +60,16 @@ namespace _6TL.Areas.Admin.Controllers
             {
                 TempData["Error"] = "Có lỗi xảy ra! Vui lòng thử lại.";
             }
+            var totalProduct = _context.Products.Count();
+            var totalOrder = _context.Orders.Count();
+            var totalRevenue = _context.Orders.Sum(od => od.TotalAmount);
             var websiteinfo = _context.WebsiteInfos.FirstOrDefault();
+
+            // Cập nhật lại các thống kê vào ViewBag
+            ViewBag.TotalProducts = totalProduct;
+            ViewBag.TotalOrders = totalOrder;
+            ViewBag.TotalRevenue = totalRevenue;
+
             return View(websiteinfo);
             
         }
