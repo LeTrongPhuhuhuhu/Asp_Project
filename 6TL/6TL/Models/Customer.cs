@@ -28,8 +28,6 @@ public partial class Customer
     public string Password { get; set; }
     public bool? IsEmailConfirmed { get; set; } = false; // Trạng thái xác nhận email
     public string? EmailConfirmationToken { get; set; } // Token để xác nhận email
-    public string? PasswordResetToken { get; set; } // Token để xác nhận đổi password
-    public DateTime? PasswordResetExpires { get; set; } // Biến lưu trữ thời gian hết hạn token
 
     public int RoleId { get; set; }
 
