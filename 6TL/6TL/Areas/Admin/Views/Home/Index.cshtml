@@ -26,16 +26,24 @@
         <div class="col-md-6">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Quản lý danh mục</h5>
-                    <p class="card-text">Thông tin về danh mục sản phẩm.</p>
+                    <h5 class="card-title">Thống kê sản phẩm </h5>
+                    <li><strong> Tổng số lượng sản phẩm: </strong> @ViewBag.TotalProducts</li>
                 </div>
             </div>
         </div>
         <div class="col-md-6">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Quản lý đơn hàng</h5>
-                    <p class="card-text">Thông tin đơn hàng.</p>
+                    <h5 class="card-title">Thống kê đơn hàng</h5>
+                    <li><strong>Tổng số lượng đơn hàng: </strong> @ViewBag.TotalOrders</li>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Thống kê doanh thu</h5>
+                    <li><strong>Tổng doanh thu: </strong> @ViewBag.TotalRevenue.ToString("C")</li>
                 </div>
             </div>
         </div>
