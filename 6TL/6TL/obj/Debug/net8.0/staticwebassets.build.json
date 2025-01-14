@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "z4izsWpxmshgcZIV4Am6F87zmYUeBiXDll4hjB6T1sQ=",
+  "Hash": "BnC00vizY89sQHKds71ZC+vszvNlPFcZKgPi72INABE=",
   "Source": "6TL",
   "BasePath": "_content/6TL",
   "Mode": "Default",
@@ -585,6 +585,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\pages\\LienHe.css"
+    },
+    {
+      "Identity": "D:\\Đồ Án Web\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\Pagination.css",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Đồ Án Web\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+      "BasePath": "_content/6TL",
+      "RelativePath": "css/pages/Pagination.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\pages\\Pagination.css"
     },
     {
       "Identity": "D:\\Đồ Án Web\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\SanPham.css",
@@ -1252,6 +1271,25 @@
       "OriginalItemSpec": "wwwroot\\img\\botri.jpg"
     },
     {
+      "Identity": "D:\\Đồ Án Web\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\bst.jpg",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Đồ Án Web\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+      "BasePath": "_content/6TL",
+      "RelativePath": "img/bst.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\bst.jpg"
+    },
+    {
       "Identity": "D:\\Đồ Án Web\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\chonsofa.jpg",
       "SourceId": "6TL",
       "SourceType": "Discovered",
@@ -1271,12 +1309,12 @@
       "OriginalItemSpec": "wwwroot\\img\\chonsofa.jpg"
     },
     {
-      "Identity": "D:\\Đồ Án Web\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\connghe2025.jpg",
+      "Identity": "D:\\Đồ Án Web\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\congnghe2025.jpg",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Đồ Án Web\\Asp_Project\\6TL\\6TL\\wwwroot\\",
       "BasePath": "_content/6TL",
-      "RelativePath": "img/connghe2025.jpg",
+      "RelativePath": "img/congnghe2025.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1287,7 +1325,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\connghe2025.jpg"
+      "OriginalItemSpec": "wwwroot\\img\\congnghe2025.jpg"
     },
     {
       "Identity": "D:\\Đồ Án Web\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\dining-table.jpg",
@@ -1326,6 +1364,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\dmsp.jpg"
+    },
+    {
+      "Identity": "D:\\Đồ Án Web\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\ghean.jpg",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Đồ Án Web\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+      "BasePath": "_content/6TL",
+      "RelativePath": "img/ghean.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\ghean.jpg"
     },
     {
       "Identity": "D:\\Đồ Án Web\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\ghebar.jpg",
@@ -1461,12 +1518,12 @@
       "OriginalItemSpec": "wwwroot\\img\\khaitruong.jpg"
     },
     {
-      "Identity": "D:\\Đồ Án Web\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\khuyenmai2025.png",
+      "Identity": "D:\\Đồ Án Web\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\khuyenmai2025.jpg",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Đồ Án Web\\Asp_Project\\6TL\\6TL\\wwwroot\\",
       "BasePath": "_content/6TL",
-      "RelativePath": "img/khuyenmai2025.png",
+      "RelativePath": "img/khuyenmai2025.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1477,7 +1534,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\khuyenmai2025.png"
+      "OriginalItemSpec": "wwwroot\\img\\khuyenmai2025.jpg"
     },
     {
       "Identity": "D:\\Đồ Án Web\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\logo_with_dark_background.png",
@@ -1765,6 +1822,25 @@
       "OriginalItemSpec": "wwwroot\\img\\successdelete.webm"
     },
     {
+      "Identity": "D:\\Đồ Án Web\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\thietke.jpg",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Đồ Án Web\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+      "BasePath": "_content/6TL",
+      "RelativePath": "img/thietke.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\thietke.jpg"
+    },
+    {
       "Identity": "D:\\Đồ Án Web\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\tintuc.jpg",
       "SourceId": "6TL",
       "SourceType": "Discovered",
@@ -1879,12 +1955,12 @@
       "OriginalItemSpec": "wwwroot\\img\\tintuc4.jpg"
     },
     {
-      "Identity": "D:\\Đồ Án Web\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\Top5.png",
+      "Identity": "D:\\Đồ Án Web\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\Top5.jpg",
       "SourceId": "6TL",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Đồ Án Web\\Asp_Project\\6TL\\6TL\\wwwroot\\",
       "BasePath": "_content/6TL",
-      "RelativePath": "img/Top5.png",
+      "RelativePath": "img/Top5.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1895,7 +1971,26 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\Top5.png"
+      "OriginalItemSpec": "wwwroot\\img\\Top5.jpg"
+    },
+    {
+      "Identity": "D:\\Đồ Án Web\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\trienlam.jpg",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Đồ Án Web\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+      "BasePath": "_content/6TL",
+      "RelativePath": "img/trienlam.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\trienlam.jpg"
     },
     {
       "Identity": "D:\\Đồ Án Web\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\tutv.jpg",

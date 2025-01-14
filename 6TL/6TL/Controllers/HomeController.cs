@@ -286,29 +286,32 @@ namespace _6TL.Controllers
 		{
 			return View();
 		}
-        public ActionResult TinTuc(int? pageNumber)
+        public IActionResult TinTuc(string? keyword, int pageNumber = 1, int pageSize = 6)
         {
-            // Kích thước trang (số lượng bài viết trên mỗi trang)
-            int pageSize = 6;
+            // Tìm kiếm tin tức theo từ khóa
+            var query = _context.Blogs.AsQueryable();
 
-            // Số trang hiện tại, nếu không có thì mặc định là 1
-            int page = pageNumber ?? 1;
+            if (!string.IsNullOrEmpty(keyword))
+            {
+                query = query.Where(b => b.TieuDe.Contains(keyword) || b.NoiDung.Contains(keyword));
+                ViewBag.Keyword = keyword; // Gửi từ khóa về View để hiển thị lại
+            }
 
-            // Lấy tất cả các bài viết tin tức từ database
-            var allNews = _context.Blogs.ToList();
+            // Phân trang
+            int totalRecords = query.Count();
+            int totalPages = (int)Math.Ceiling((double)totalRecords / pageSize);
 
-            // Tính toán các bài viết cần hiển thị cho trang hiện tại
-            var pageNews = allNews.Skip((page - 1) * pageSize).Take(pageSize).ToList();
+            var blogs = query
+                .OrderByDescending(b => b.CreatedAt) // Sắp xếp mới nhất
+                .Skip((pageNumber - 1) * pageSize)
+                .Take(pageSize)
+                .ToList();
 
-            // Truyền dữ liệu vào ViewBag
-            ViewBag.News = pageNews;
-            ViewBag.CurrentPage = page;
-            ViewBag.TotalPages = (int)Math.Ceiling(allNews.Count / (double)pageSize);
+            // Gửi dữ liệu về View
+            ViewBag.News = blogs;
+            ViewBag.CurrentPage = pageNumber;
+            ViewBag.TotalPages = totalPages;
 
-         /*   // Truyền dữ liệu vào ViewBag
-            ViewBag.News = allNews;*/
-
-            // Trả về view
             return View();
         }
         public async Task<IActionResult> DangKy(Customer model)
@@ -364,14 +367,14 @@ namespace _6TL.Controllers
             var smtpClient = new SmtpClient("smtp.gmail.com")
             {
                 Port = 587,
-                Credentials = new NetworkCredential("0306211392@caothang.edu.vn", "yybh tvcc zypk vjxh"),
+                Credentials = new NetworkCredential("hoangan0365800154@gmail.com", "xdad fwoe zwhk mzdg"),
                 EnableSsl = true,
             };
 
             //cài đặt tin nhắn muốn gửi cho gmail người dùng nhập vào
             var mailMessage = new MailMessage
             {
-                From = new MailAddress("0306211392@caothang.edu.vn"),
+                From = new MailAddress("hoangan0365800154@gmail.com"),
                 Subject = "Xác nhận email",
                 Body = $"<h1>Xác nhận email của bạn</h1><p>Vui lòng nhấn vào liên kết sau để xác nhận:</p><a href='{confirmationUrl}'>Xác nhận email</a>",
                 IsBodyHtml = true,
