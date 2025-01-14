@@ -8,11 +8,11 @@ namespace _6TL.Controllers
 	public class HomeController : Controller
 	{
 		private readonly ILogger<HomeController> _logger;
-		private readonly Db6TLContext _context;
+		private readonly Db6tlContext _context;
 
 	
 
-		public HomeController(ILogger<HomeController> logger, Db6TLContext context)
+		public HomeController(ILogger<HomeController> logger, Db6tlContext context)
 		{
 			_logger = logger;
 			_context = context;

@@ -8,9 +8,9 @@ namespace _6TL.Areas.Admin.Controllers
     [Area("Admin")]
     public class DanhMucController : Controller
     {
-        private readonly Db6TLContext _context;
+        private readonly Db6tlContext _context;
 
-        public DanhMucController(Db6TLContext context)
+        public DanhMucController(Db6tlContext context)
         {
             _context = context;
         }
@@ -111,6 +111,23 @@ namespace _6TL.Areas.Admin.Controllers
             _context.SaveChanges();
 
             return Json(new { success = true, message = "Danh mục đã được cập nhật thành công!" });
+        }
+        [HttpPost]
+        public IActionResult ToggleCategoryStatus(int id)
+        {
+            var category = _context.Categories.Find(id);
+            if (category == null)
+            {
+                return NotFound();
+            }
+
+            // Đảo trạng thái của danh mục
+            category.Status = !category.Status;
+
+            _context.Categories.Update(category);
+            _context.SaveChanges();
+
+            return Json(new { success = true, message = "Trạng thái danh mục đã được cập nhật!" });
         }
 
 

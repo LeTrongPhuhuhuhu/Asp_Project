@@ -5,9 +5,9 @@ namespace _6TL.Controllers
 {
     public class Product2Controller : Controller
     {
-        private readonly Db6TLContext _context;
+        private readonly Db6tlContext _context;
 
-        public Product2Controller(Db6TLContext context)
+        public Product2Controller(Db6tlContext context)
         {
             _context = context;
         }

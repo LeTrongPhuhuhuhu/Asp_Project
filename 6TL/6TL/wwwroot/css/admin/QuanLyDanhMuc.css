@@ -126,6 +126,10 @@ header h1 {
     font-weight: bold;
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
 }
+.hidden-category {
+    opacity: 0.5;
+    pointer-events: none; /* Ngừng phản hồi sự kiện như click khi ẩn */
+}
 
 .edit-btn-dm {
     background-color: #ff9800;

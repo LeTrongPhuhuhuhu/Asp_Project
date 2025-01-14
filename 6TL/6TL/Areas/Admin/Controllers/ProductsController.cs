@@ -9,9 +9,9 @@ namespace _6TL.Areas.Admin.Controllers
     {
 
 
-        private Db6TLContext _context;
+        private Db6tlContext _context;
 
-        public ProductsController(Db6TLContext context) {
+        public ProductsController(Db6tlContext context) {
             _context = context;
         }
 

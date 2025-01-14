@@ -11,7 +11,7 @@ using _6TL.Models;
 
 namespace _6TL.Migrations
 {
-    [DbContext(typeof(Db6TLContext))]
+    [DbContext(typeof(Db6tlContext))]
     [Migration("20241230154237_UpdateRating")]
     partial class UpdateRating
     {
