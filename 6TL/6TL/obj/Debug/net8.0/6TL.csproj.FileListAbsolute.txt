@@ -1336,3 +1336,6 @@ E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\Newtonsoft.Json.dll
 E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Extensions.Configuration.dll
 E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\SendGrid.dll
 E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\StarkbankEcdsa.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Extensions.Configuration.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\SendGrid.dll
+D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\StarkbankEcdsa.dll
