@@ -86,7 +86,6 @@ header h1 {
         padding: 12px 20px;
         background-color: #28a745;
         color: white;
-
         border: none;
         border-radius: 30px;
         cursor: pointer;
@@ -126,9 +125,10 @@ header h1 {
     font-weight: bold;
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
 }
+
 .hidden-category {
     opacity: 0.5;
-    pointer-events: none; /* Ngừng phản hồi sự kiện như click khi ẩn */
+    pointer-events: none; /* Ngừng phản hồi sự kiện khi ẩn */
 }
 
 .edit-btn-dm {
@@ -152,6 +152,34 @@ header h1 {
         box-shadow: 0 4px 10px rgba(244, 67, 54, 0.3);
         transform: translateY(-2px);
     }
+
+/* Nút Ẩn/Hiện */
+.toggle-btn-dm {
+    background-color: #ffc107; /* Màu vàng */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px; /* Bo tròn */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+    .toggle-btn-dm:hover {
+        background-color: #e0a800; /* Màu vàng đậm hơn khi hover */
+        box-shadow: 0 4px 10px rgba(255, 193, 7, 0.3);
+        transform: translateY(-2px); /* Hiệu ứng nâng nút lên khi hover */
+    }
+
+    .toggle-btn-dm:focus {
+        outline: none;
+        box-shadow: 0 0 5px rgba(255, 193, 7, 0.6);
+    }
+
+.toggle-status-text {
+    font-weight: bold;
+    transition: opacity 0.3s ease;
+}
+
 /* Đảm bảo popup phủ toàn màn hình và căn giữa */
 .popup-overlay {
     display: none; /* Ẩn popup mặc định */
@@ -204,13 +232,12 @@ header h1 {
 .popup-content button {
     padding: 10px 20px;
     border: none;
-    border-radius:30px;
+    border-radius: 30px;
     font-size: 15px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-    /* Nút lưu */
     .popup-content button.btn-save {
         background-color: #28a745; /* Màu xanh lá */
         color: #fff;
@@ -221,7 +248,6 @@ header h1 {
             transform: scale(1.05); /* Phóng to nhẹ */
         }
 
-    /* Nút hủy */
     .popup-content button.btn-cancel {
         background-color: #dc3545; /* Màu đỏ */
         color: #fff;
@@ -256,4 +282,3 @@ h4 {
     margin-bottom: 20px;
     font-size: 20px;
 }
-

@@ -72,17 +72,10 @@
                                 <button class="edit-btn-dm" onclick="openEditPopup('@category.CategoryId', '@category.CategoryName', '@category.ParentCategoryId')">Sửa</button>
                                 <button class="delete-btn-dm" onclick="deleteCategory('@category.CategoryId')">Xóa</button>
                                 <button class="toggle-btn-dm" onclick="toggleCategoryStatus('@category.CategoryId')">
-                                    @if (category.Status)
-                                    {
-                                        <span>Ẩn</span>
-                                    }
-                                    else
-                                    {
-                                        <span>Hiện</span>
-                                    }
+                                    <span id="status-@category.CategoryId">Ẩn</span>
                                 </button>
-
                             </td>
+
                         </tr>
                     }
                 </tbody>
@@ -124,42 +117,26 @@
             document.getElementById('editParentCategory').value = parentCategoryId;
             document.getElementById('editPopup').classList.add('show');
         }
+
         function toggleCategoryStatus(categoryId) {
-            fetch(`/Admin/DanhMuc/ToggleCategoryStatus`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'X-CSRF-TOKEN': '@Html.AntiForgeryToken()'
-                },
-                body: JSON.stringify({ id: categoryId })
-            })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.success) {
-                        let categoryRow = document.getElementById(`category-row-${categoryId}`);
-                        let statusButton = categoryRow.querySelector('.toggle-btn-dm span');
-                        let currentStatus = categoryRow.getAttribute('data-status') === 'True';
+            const categoryRow = document.querySelector(`#category-row-${categoryId}`);
+            const statusText = document.getElementById(`status-${categoryId}`);
 
-                        // Thay đổi trạng thái hiển thị
-                        if (currentStatus) {
-                            // Nếu đang hiển thị, làm mờ (ẩn đi mà không mất)
-                            categoryRow.classList.add('hidden-category');
-                            statusButton.innerText = 'Hiện';
-                            categoryRow.setAttribute('data-status', 'False');
-                        } else {
-                            // Nếu đang ẩn, phục hồi trạng thái bình thường
-                            categoryRow.classList.remove('hidden-category');
-                            statusButton.innerText = 'Ẩn';
-                            categoryRow.setAttribute('data-status', 'True');
-                        }
-
-                        alert(data.message); // Hiển thị thông báo
-                    } else {
-                        alert('Có lỗi khi thay đổi trạng thái danh mục.');
-                    }
-                })
-                .catch(error => console.error('Lỗi khi thay đổi trạng thái danh mục:', error));
+            // Kiểm tra trạng thái hiện tại của danh mục
+            if (categoryRow.classList.contains('hidden-category')) {
+                // Nếu danh mục đang ẩn, hiển thị lại và cập nhật trạng thái
+                categoryRow.classList.remove('hidden-category');
+                statusText.textContent = "Hiện"; // Cập nhật trạng thái "Hiện"
+            } else {
+                // Nếu danh mục đang hiển thị, ẩn đi và cập nhật trạng thái
+                categoryRow.classList.add('hidden-category');
+                statusText.textContent = "Ẩn"; // Cập nhật trạng thái "Ẩn"
+            }
         }
+
+
+
+
 
 
 
