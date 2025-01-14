@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using _6TL.Models; // Đảm bảo thêm namespace của model
+using _6TL.Models; // Namespace của model
 using System.Linq;
 
 namespace _6TL.Areas.Admin.Controllers
@@ -19,14 +19,22 @@ namespace _6TL.Areas.Admin.Controllers
         public IActionResult QuanLyDanhMuc(string searchQuery)
         {
             var categories = _context.Categories
+                                     .Include(c => c.ParentCategory)
                                      .Where(c => string.IsNullOrEmpty(searchQuery) || c.CategoryName.Contains(searchQuery))
                                      .ToList();
+
+            ViewBag.ParentCategories = _context.Categories
+                                               .Where(c => c.ParentCategoryId == null)
+                                               .ToList();
+
+            ViewBag.SearchQuery = searchQuery;
+
             return View(categories);
         }
 
         // Thêm danh mục mới
         [HttpPost]
-        public IActionResult AddCategory(string categoryName, int? parentCategory)
+        public IActionResult AddCategory(string categoryName, int? parentCategory, string slug)
         {
             if (string.IsNullOrEmpty(categoryName))
             {
@@ -34,10 +42,15 @@ namespace _6TL.Areas.Admin.Controllers
                 return View();
             }
 
+            if (string.IsNullOrEmpty(slug))
+            {
+                slug = GenerateSlug(categoryName);
+            }
+
             var newCategory = new Category
             {
                 CategoryName = categoryName,
-                Slug = GenerateSlug(categoryName), // Tạo slug từ categoryName
+                Slug = slug,
                 ParentCategoryId = parentCategory
             };
 
@@ -49,12 +62,20 @@ namespace _6TL.Areas.Admin.Controllers
         // Xóa danh mục
         public IActionResult DeleteCategory(int id)
         {
+            var childCategories = _context.Categories.Where(c => c.ParentCategoryId == id).ToList();
+
+            foreach (var child in childCategories)
+            {
+                DeleteCategory(child.CategoryId);
+            }
+
             var category = _context.Categories.Find(id);
             if (category != null)
             {
                 _context.Categories.Remove(category);
                 _context.SaveChanges();
             }
+
             return RedirectToAction("QuanLyDanhMuc");
         }
 
@@ -71,15 +92,21 @@ namespace _6TL.Areas.Admin.Controllers
 
         // Cập nhật danh mục
         [HttpPost]
-        public IActionResult UpdateCategory(Category category)
+        public IActionResult UpdateCategory(int id, string categoryName, int? parentCategory)
         {
-            if (ModelState.IsValid)
+            var category = _context.Categories.Find(id);
+            if (category == null)
             {
-                _context.Categories.Update(category);
-                _context.SaveChanges();
-                return RedirectToAction("QuanLyDanhMuc");
+                return NotFound();
             }
-            return View(category);
+
+            category.CategoryName = categoryName;
+            category.ParentCategoryId = parentCategory;
+
+            _context.Categories.Update(category);
+            _context.SaveChanges();
+
+            return Json(new { success = true, message = "Danh mục đã được cập nhật thành công!" });
         }
 
         // Hàm tạo Slug từ CategoryName

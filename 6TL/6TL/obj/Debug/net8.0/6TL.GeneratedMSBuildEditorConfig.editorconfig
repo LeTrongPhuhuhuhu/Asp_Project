@@ -26,6 +26,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\Asp Project\Asp_Project\6TL\6TL
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/Asp Project/Asp_Project/6TL/6TL/Areas/Admin/Views/DanhMuc/AddCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRGFuaE11Y1xBZGRDYXRlZ29yeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Asp Project/Asp_Project/6TL/6TL/Areas/Admin/Views/DanhMuc/QuanLyDanhMuc.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRGFuaE11Y1xRdWFuTHlEYW5oTXVjLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
