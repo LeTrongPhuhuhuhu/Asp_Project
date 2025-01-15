@@ -110,75 +110,138 @@
         </div>
     </div>
 </div>
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-        // Khi bấm nút thanh toán
-    $(document).on('click', '.checkout-button_ttt', function (e) {
-        e.preventDefault();
-
-        // Kiểm tra nếu có lựa chọn phương thức thanh toán
-        if (!$('input[name="payment_method"]:checked').length) {
-            toastr.error('Vui lòng chọn phương thức thanh toán');
-            return;
-        }
-
-        // Kiểm tra nếu không chọn phương thức thanh toán COD
-        if ($('#cod').is(':checked')) {
-            handleCODPayment();
-        } else {
-            toastr.warning('Chức năng thanh toán này chưa được triển khai.');
-        }
-    });
-
-    // Hàm xử lý thanh toán COD
-    function handleCODPayment() {
-        // Thu thập dữ liệu từ form
-        const cartData = {
-            customerName: $('#first-name_ttt').val() + " " + $('#last-name_ttt').val(),
-            customerPhone: $('#phone_ttt').val(),
-            customerEmail: $('#email_ttt').val(),
-            customerAddress: $('#address_ttt').val(),
-            totalAmount: parseFloat($('.total_ttt span').text().replace(' VNĐ', '').replace(',', '')),
-            items: []
+    <script>
+        // Cấu hình toastr
+        toastr.options = {
+            "closeButton": true,
+            "debug": false,
+            "newestOnTop": false,
+            "progressBar": true,
+            "positionClass": "toast-top-right",
+            "preventDuplicates": false,
+            "onclick": null,
+            "showDuration": "300",
+            "hideDuration": "1000",
+            "timeOut": "5000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
         };
 
-        // Lấy chi tiết sản phẩm từ giỏ hàng
-        $('.cart-item_ttt').each(function () {
-            cartData.items.push({
-                productId: $(this).data('product-id'),
-                productName: $(this).find('.product-name_ttt').text(),
-                price: parseFloat($(this).find('.product-price_ttt').text().replace('₫', '').replace(',', '')),
-                quantity: parseInt($(this).find('.product-quantity_ttt').text().replace('x', '').trim()),
-                totalPrice: parseFloat($(this).find('.product-price_ttt').text().replace('₫', '').replace(',', '')),
-                color: $(this).find('.color-display_ttt').css('background-color')
+        $(document).ready(function() {
+            $('.checkout-button_ttt').click(function(e) {
+                e.preventDefault();
+
+                // Kiểm tra form
+                var firstName = $('#first-name_ttt').val();
+                var lastName = $('#last-name_ttt').val();
+                var phone = $('#phone_ttt').val();
+                var email = $('#email_ttt').val();
+                var address = $('#address_ttt').val();
+                var paymentMethod = $('input[name="payment_method"]:checked').val();
+
+                // Validate form
+                if (!firstName || !lastName) {
+                    toastr.error('Vui lòng nhập đầy đủ họ tên');
+                    return;
+                }
+                if (!phone) {
+                    toastr.error('Vui lòng nhập số điện thoại');
+                    return;
+                }
+                if (!email) {
+                    toastr.error('Vui lòng nhập email');
+                    return;
+                }
+                if (!address) {
+                    toastr.error('Vui lòng nhập địa chỉ');
+                    return;
+                }
+                if (!paymentMethod) {
+                    toastr.error('Vui lòng chọn phương thức thanh toán');
+                    return;
+                }
+
+                const cartData = {
+                    customerName: firstName + " " + lastName,
+                    customerPhone: phone,
+                    customerEmail: email,
+                    customerAddress: address,
+                    totalAmount: parseFloat($('.total_ttt span').text().replace(' VNĐ', '').replace(/,/g, '')),
+                    items: [],
+                    paymentMethod: paymentMethod
+                };
+
+                $('.cart-item_ttt').each(function() {
+                    cartData.items.push({
+                        productId: $(this).data('product-id'),
+                        productName: $(this).find('.product-name_ttt').text(),
+                        price: parseFloat($(this).find('.product-price_ttt').text().replace('₫', '').replace(/,/g, '')),
+                        quantity: parseInt($(this).find('.product-quantity_ttt').text().replace('x', '').trim()),
+                        totalPrice: parseFloat($(this).find('.product-price_ttt').text().replace('₫', '').replace(/,/g, '')),
+                        color: $(this).find('.color-display_ttt').css('background-color')
+                    });
+                });
+
+                // Hiển thị loading
+                toastr.info('Đang xử lý đơn hàng...');
+
+                // Kiểm tra phương thức thanh toán
+                if (paymentMethod === 'cod') {
+                    $.ajax({
+                        url: '/api/checkout/cod',
+                        type: 'POST',
+                        contentType: 'application/json',
+                        data: JSON.stringify(cartData),
+                        success: function(response) {
+                            if (response.success) {
+                                toastr.success(response.message);
+                                setTimeout(function() {
+                                    window.location.href = '/TrangChucMung';
+                                }, 2000);
+                            } else {
+                                toastr.error(response.message);
+                            }
+                        },
+                        error: function(xhr, status, error) {
+                            toastr.error('Đã xảy ra lỗi: ' + error);
+                        }
+                    });
+                } else if (paymentMethod === 'momo') {
+                    $.ajax({
+                        url: '/api/checkout/momo',
+                        type: 'POST',
+                        contentType: 'application/json',
+                        data: JSON.stringify(cartData),
+                        success: function(response) {
+                            if (response.success) {
+                                window.location.href = response.payUrl;
+                            } else {
+                                toastr.error(response.message);
+                            }
+                        },
+                        error: function(xhr, status, error) {
+                            toastr.error('Đã xảy ra lỗi: ' + error);
+                        }
+                    });
+                }
+            });
+
+            // Xử lý hủy thanh toán
+            $('.cancel-payment-button_ttt').click(function() {
+                toastr.warning('Đã hủy thanh toán');
+                setTimeout(function() {
+                    window.location.href = '/GioHang';
+                }, 1500);
             });
         });
+    </script>
+}
 
-        // Gửi yêu cầu POST đến API thanh toán COD
-        $.ajax({
-            url: '/api/checkout/cod',
-            method: 'POST',
-            contentType: 'application/json',
-            data: JSON.stringify(cartData),
-            success: function (response) {
-                if (response.success) {
-                    toastr.success(response.message);
-                    window.location.href = '/TrangChucMung';
-                } else {
-                    toastr.error(response.message);
-                }
-            },
-            error: function (xhr) {
-                toastr.error('Đặt hàng thất bại, vui lòng thử lại!');
-            }
-        });
-    }
-
-    // Hàm hủy thanh toán
-    function cancelPayment() {
-        alert("Thanh toán đã bị hủy!");
-        document.querySelector('#checkout-form').reset();
-    }
-</script>
