@@ -96,6 +96,8 @@ wwwroot\img\connghe2025.jpg
 wwwroot\img\dining_chair.jpg
 wwwroot\img\dining_table.jpg
 wwwroot\img\dmsp.jpg
+wwwroot\img\donescuccess.gif
+wwwroot\img\donesuccess_improved.gif
 wwwroot\img\ghebar.jpg
 wwwroot\img\ghechill.jpg
 wwwroot\img\giamgia.jpg

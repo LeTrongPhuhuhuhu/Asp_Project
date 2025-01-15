@@ -401,6 +401,14 @@
       "PackagePath": "staticwebassets\\img\\dmsp.jpg"
     },
     {
+      "Id": "E:\\Asp_Project\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\donescuccess.gif",
+      "PackagePath": "staticwebassets\\img\\donescuccess.gif"
+    },
+    {
+      "Id": "E:\\Asp_Project\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\donesuccess_improved.gif",
+      "PackagePath": "staticwebassets\\img\\donesuccess_improved.gif"
+    },
+    {
       "Id": "E:\\Asp_Project\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\ghebar.jpg",
       "PackagePath": "staticwebassets\\img\\ghebar.jpg"
     },

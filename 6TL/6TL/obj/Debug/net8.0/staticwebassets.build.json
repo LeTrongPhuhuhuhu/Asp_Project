@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "5TUZrKTMTtZZlpJ8TWQsDQ5pxcadXiAjKrAB+NaQhAI=",
+  "Hash": "hKoSfiRSo7ig8k/+vB9vqMqFFCQcieht+lGAEh4Pe5k=",
   "Source": "6TL",
   "BasePath": "_content/6TL",
   "Mode": "Default",
@@ -2115,6 +2115,48 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\dmsp.jpg"
+    },
+    {
+      "Identity": "E:\\Asp_Project\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\donescuccess.gif",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Asp_Project\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+      "BasePath": "_content/6TL",
+      "RelativePath": "img/donescuccess#[.{fingerprint}]?.gif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "wzyjfto55p",
+      "Integrity": "FAVz7AZW3O+zQoTiqbdHQHPszYoHkyNI0ACTEp5JQOI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\donescuccess.gif"
+    },
+    {
+      "Identity": "E:\\Asp_Project\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\donesuccess_improved.gif",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Asp_Project\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+      "BasePath": "_content/6TL",
+      "RelativePath": "img/donesuccess_improved#[.{fingerprint}]?.gif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "u41g42t0qf",
+      "Integrity": "QvrtLseXr3avNaLlSaMreazwB+w+k8/pNFrcANF7En8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\donesuccess_improved.gif"
     },
     {
       "Identity": "E:\\Asp_Project\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\ghebar.jpg",
@@ -12457,6 +12499,170 @@
         {
           "Name": "integrity",
           "Value": "sha256-X4LStnYrNBKJ7Vk08Ko+oPdqUbnM/DYMc7WYxZOD7Ic="
+        }
+      ]
+    },
+    {
+      "Route": "img/donescuccess.gif",
+      "AssetFile": "E:\\Asp_Project\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\donescuccess.gif",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "52735"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/gif"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"FAVz7AZW3O+zQoTiqbdHQHPszYoHkyNI0ACTEp5JQOI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 15 Jan 2025 03:50:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-FAVz7AZW3O+zQoTiqbdHQHPszYoHkyNI0ACTEp5JQOI="
+        }
+      ]
+    },
+    {
+      "Route": "img/donescuccess.wzyjfto55p.gif",
+      "AssetFile": "E:\\Asp_Project\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\donescuccess.gif",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "52735"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/gif"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"FAVz7AZW3O+zQoTiqbdHQHPszYoHkyNI0ACTEp5JQOI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 15 Jan 2025 03:50:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wzyjfto55p"
+        },
+        {
+          "Name": "label",
+          "Value": "img/donescuccess.gif"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-FAVz7AZW3O+zQoTiqbdHQHPszYoHkyNI0ACTEp5JQOI="
+        }
+      ]
+    },
+    {
+      "Route": "img/donesuccess_improved.gif",
+      "AssetFile": "E:\\Asp_Project\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\donesuccess_improved.gif",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "243231"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/gif"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QvrtLseXr3avNaLlSaMreazwB+w+k8/pNFrcANF7En8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 15 Jan 2025 03:53:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-QvrtLseXr3avNaLlSaMreazwB+w+k8/pNFrcANF7En8="
+        }
+      ]
+    },
+    {
+      "Route": "img/donesuccess_improved.u41g42t0qf.gif",
+      "AssetFile": "E:\\Asp_Project\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\donesuccess_improved.gif",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "243231"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/gif"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QvrtLseXr3avNaLlSaMreazwB+w+k8/pNFrcANF7En8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 15 Jan 2025 03:53:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "u41g42t0qf"
+        },
+        {
+          "Name": "label",
+          "Value": "img/donesuccess_improved.gif"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-QvrtLseXr3avNaLlSaMreazwB+w+k8/pNFrcANF7En8="
         }
       ]
     },

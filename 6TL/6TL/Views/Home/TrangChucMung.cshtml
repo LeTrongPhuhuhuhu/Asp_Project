@@ -2,7 +2,92 @@
     ViewData["Title"] = "Đặt Hàng Thành Công";
 }
 
-<div class="container">
-    <h2>Chúc Mừng Bạn Đã Đặt Hàng Thành Công!</h2>
- 
+<style>
+    .success-container {
+        text-align: center;
+        padding: 40px 20px;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .success-icon {
+        color: #4CAF50;
+        font-size: 100px;
+        
+    }
+
+    .success-title {
+        color: #2E7D32;
+        margin-bottom: 20px;
+        font-size: 28px;
+    }
+
+    .success-message {
+        color: #555;
+        margin-bottom: 30px;
+        font-size: 16px;
+    }
+
+    .action-buttons {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    .action-button {
+        padding: 12px 24px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border-radius:30px;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+    .continue-shopping {
+        background-color: #4CAF50;
+        color: white;
+    }
+
+        .continue-shopping:hover {
+            background-color: #45a049;
+            color: white;
+        }
+
+    .view-order {
+        background-color: #2196F3;
+        color: white;
+    }
+
+        .view-order:hover {
+            background-color: #1976D2;
+            color: white;
+        }
+</style>
+
+<div class="success-container">
+    <div class="success-icon">
+        <i class="fas fa-check-circle"></i>
+    </div>
+    <h2 class="success-title">Đặt Hàng Thành Công</h2>
+    <p class="success-message">
+        Cảm ơn bạn đã mua sắm tại cửa hàng của chúng tôi.
+        Chúng tôi sẽ xử lý đơn hàng của bạn trong thời gian sớm nhất.
+    </p>
+    <div class="action-buttons">
+        <a href="/Product2/SanPham" class="action-button continue-shopping">
+            <i class="fas fa-shopping-cart"></i> Tiếp Tục Mua Sắm
+        </a>
+        <a href="/DonHang" class="action-button view-order">
+            <i class="fas fa-list-alt"></i> Xem Đơn Hàng
+        </a>
+    </div>
 </div>
+
+@section Scripts {
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+}
