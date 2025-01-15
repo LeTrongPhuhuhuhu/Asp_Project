@@ -251,15 +251,15 @@ namespace _6TL.Controllers
 
 		public IActionResult Index()
 		{
-			using (var context = new Db6TLContext())
-			{
-				// Lọc sản phẩm nổi bật với `Rating >= 4`
-				var featuredProducts = context.Products
-					.Where(p => p.Rating >= 4) // Tiêu chí lọc: Rating >= 4
-					.ToList();
+            using (var context = new Db6TLContext())
+            {
+                // Lọc sản phẩm nổi bật với `Rating >= 4`
+                var featuredProducts = context.Products
+                    .Where(p => p.Rating >= 4) // Tiêu chí lọc: Rating >= 4
+                    .ToList();
 
-				return View(featuredProducts); // Truyền danh sách sản phẩm nổi bật vào View
-			}
+                return View(featuredProducts); // Truyền danh sách sản phẩm nổi bật vào View
+            }
 		}
 
 		public IActionResult Privacy()
