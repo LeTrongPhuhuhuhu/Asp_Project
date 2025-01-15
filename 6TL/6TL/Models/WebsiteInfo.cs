@@ -22,4 +22,6 @@ public partial class WebsiteInfo
     public string? InstagramUrl { get; set; }
 
     public string? LogoUrl { get; set; }
+
+    public int WebsiteInfoId { get; set; }
 }
