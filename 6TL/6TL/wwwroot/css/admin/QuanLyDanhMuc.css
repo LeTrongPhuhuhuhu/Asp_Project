@@ -127,9 +127,13 @@ header h1 {
 }
 
 .hidden-category {
-    opacity: 0.5;
-    pointer-events: none; /* Ngừng phản hồi sự kiện khi ẩn */
+    opacity: 0.5; /* Làm mờ cả hàng */
 }
+
+    .hidden-category .toggle-status-btn {
+        opacity: 1; /* Giữ nút "Hiện" sáng */
+        pointer-events: auto; /* Cho phép thao tác trên nút */
+    }
 
 .edit-btn-dm {
     background-color: #ff9800;

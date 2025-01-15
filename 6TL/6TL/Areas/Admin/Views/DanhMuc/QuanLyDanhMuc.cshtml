@@ -50,6 +50,7 @@
         </section>
 
         <!-- Danh sách danh mục -->
+        <!-- Danh sách danh mục -->
         <section class="category-list-dm">
             <h2>Danh sách Danh mục</h2>
             <table>
@@ -58,31 +59,30 @@
                         <th>#</th>
                         <th>Tên Danh mục</th>
                         <th>Danh mục Cha</th>
+                        <th>Slug</th> <!-- New column for Slug -->
+                        <th>Trạng thái</th> <!-- New column for Status -->
                         <th>Hành động</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach (var category in Model)
                     {
-                        <tr id="category-row-@category.CategoryId" class="category-row" data-status="@category.Status">
+                        <tr id="category-row-@category.CategoryId" class="category-row">
                             <td>@category.CategoryId</td>
                             <td>@category.CategoryName</td>
                             <td>@(category.ParentCategory != null ? category.ParentCategory.CategoryName : "--")</td>
+                            <td>@category.Slug</td> <!-- Display the Slug -->
+                            <td>@(category.Status ? "Hiện" : "Ẩn")</td> <!-- Display Status -->
                             <td>
-                                <button class="edit-btn-dm" onclick="openEditPopup('@category.CategoryId', '@category.CategoryName', '@category.ParentCategoryId')">Sửa</button>
+                                <button class="edit-btn-dm" onclick="openEditPopup('@category.CategoryId', '@category.CategoryName', '@category.ParentCategoryId', '@category.Status')">Sửa</button>
                                 <button class="delete-btn-dm" onclick="deleteCategory('@category.CategoryId')">Xóa</button>
-                                <button class="toggle-btn-dm" onclick="toggleCategoryStatus('@category.CategoryId')">
-                                    <span id="status-@category.CategoryId">Ẩn</span>
-                                </button>
                             </td>
-
                         </tr>
                     }
                 </tbody>
-
-
             </table>
         </section>
+
     </div>
 
     <!-- Popup Sửa danh mục -->
@@ -94,13 +94,15 @@
                 <input type="text" id="editCategoryName" placeholder="Tên danh mục" required>
                 <select id="editParentCategory">
                     <option value="">-- Chọn danh mục cha (nếu có) --</option>
-                    @if (ViewBag.ParentCategories != null)
+                    @foreach (var parentCategory in ViewBag.ParentCategories)
                     {
-                        @foreach (var parentCategory in ViewBag.ParentCategories)
-                        {
-                            <option value="@parentCategory.CategoryId">@parentCategory.CategoryName</option>
-                        }
+                        <option value="@parentCategory.CategoryId">@parentCategory.CategoryName</option>
                     }
+                </select>
+                <label for="editStatus">Trạng thái:</label>
+                <select id="editStatus" name="status">
+                    <option value="true">Hiện</option>
+                    <option value="false">Ẩn</option>
                 </select>
                 <div class="popup-footer">
                     <button type="submit" class="btn-save">Cập nhật</button>
@@ -109,14 +111,17 @@
             </form>
         </div>
     </div>
+    </div>
 
     <script>
-        function openEditPopup(categoryId, categoryName, parentCategoryId) {
+        function openEditPopup(categoryId, categoryName, parentCategoryId, status) {
             document.getElementById('categoryId').value = categoryId;
             document.getElementById('editCategoryName').value = categoryName;
             document.getElementById('editParentCategory').value = parentCategoryId;
+            document.getElementById('editStatus').value = status ? "true" : "false"; // Set status in dropdown
             document.getElementById('editPopup').classList.add('show');
         }
+
 
         function toggleCategoryStatus(categoryId) {
             const categoryRow = document.querySelector(`#category-row-${categoryId}`);

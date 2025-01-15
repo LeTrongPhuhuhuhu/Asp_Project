@@ -90,7 +90,7 @@ namespace _6TL.Areas.Admin.Controllers
 
         // Cập nhật danh mục
         [HttpPost]
-        public IActionResult UpdateCategory(int id, string categoryName, int? parentCategory)
+        public IActionResult UpdateCategory(int id, string categoryName, int? parentCategory, bool status)
         {
             var category = _context.Categories.Find(id);
             if (category == null)
@@ -106,12 +106,14 @@ namespace _6TL.Areas.Admin.Controllers
             category.CategoryName = categoryName;
             category.Slug = GenerateSlug(categoryName); // Tạo lại slug tự động
             category.ParentCategoryId = parentCategory;
+            category.Status = status; // Update status
 
             _context.Categories.Update(category);
             _context.SaveChanges();
 
             return Json(new { success = true, message = "Danh mục đã được cập nhật thành công!" });
         }
+
         [HttpPost]
         public IActionResult ToggleCategoryStatus(int id)
         {
