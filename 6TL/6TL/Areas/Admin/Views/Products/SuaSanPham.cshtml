@@ -1,98 +1,99 @@
-﻿<head>
+﻿@model _6TL.Models.Product
+<head>
     <link href="~/css/admin/suasanpham.css" rel="stylesheet" />
 </head>
+
 <div class="container_ssp">
     <h2>
-        <a href="/Admin/Home/QuanLySanPham" class="back-to-product-management">Quản lý sản phẩm 6TL De Decor</a> &gt;
-        <a href="/Admin/Home/ThemSanPham" class="add-product-link">Cập nhật sản phẩm</a>
+        <a href="/Admin/Home/QuanLySanPham" class="back-to-product-management">Quản lý sản phẩm</a> &gt;
+        <a href="/Admin/Home/SuaSanPham" class="edit-product-link">Sửa sản phẩm</a>
     </h2>
 
-    <form class="add-product-form_ssp">
+    <form class="edit-product-form_ssp" method="post" enctype="multipart/form-data">
+        @Html.AntiForgeryToken()
+        <input type="hidden" name="ProductId" value="@Model.ProductId" />
+
+        <!-- Tên sản phẩm -->
         <div class="form-row_ssp">
-            <input type="text" placeholder="Mã SP..." id="ma-sp_ssp">
-            <input type="text" placeholder="Tên sản phẩm" id="ten-sp_ssp">
-            <input type="text" placeholder="Giá bán" id="gia-ban_ssp">
-            <input type="text" placeholder="Số lượng" id="so-luong_ssp">
-        </div>
-        <div class="form-row_ssp">
-            <select id="danh-muc_ssp">
-                <option>Danh mục</option>
-                <option>Danh mục 1</option>
-                <option>Danh mục 2</option>
-            </select>
-            <select id="trang-thai_ssp">
-                <option>Chọn trạng thái</option>
-                <option>Còn hàng</option>
-                <option>Hết hàng</option>
-            </select>
-            <input type="text" placeholder="Nhà cung cấp" id="nha-cung-cap_ssp">
-            <input type="text" placeholder="Giá vốn" id="gia-von_ssp">
-        </div>
-        <div class="form-row_ssp">
-            <select id="chon-mau_ssp" onchange="updateColorPreview()">
-                <option value="" disabled selected>Chọn màu</option>
-                <option value="red" style="background-color: red; color: white;">Đỏ</option>
-                <option value="blue" style="background-color: blue; color: white;">Xanh Dương</option>
-                <option value="green" style="background-color: green; color: white;">Xanh Lá</option>
-            </select>
-            <input type="color" id="them-mau_ssp" title="Chọn màu mới">
-            <button type="button" class="add-color-btn_ssp" onclick="addColor()">+</button>
-            <input type="text" placeholder="Chất liệu" id="chat-lieu_ssp">
-        </div>
-        <div class="form-row_ssp">
-            <label for="description_ssp">Mô tả</label>
-            <textarea id="description_ssp" rows="5" placeholder="Này sử dụng ckeditor"></textarea>
-        </div>
-        <div class="upload-area_ssp">
-            <label class="upload-label_ssp">
-                <input type="file" id="file-upload_ssp" class="upload-input_ssp" accept="image/*" onchange="previewImage(event)">
-                <div class="upload-content_ssp">
-                    <img src="upload-icon.png" alt="Upload Icon" class="upload-icon_ssp" />
-                    <p>Kéo thả hoặc chọn hình ảnh</p>
-                </div>
-                <img id="preview-image_ssp" class="preview-image_ssp" style="display: none;" alt="Image Preview">
-            </label>
+            <label for="product-name">Tên sản phẩm</label>
+            <input type="text" id="ProductName" name="ProductName" value="@Model.ProductName" required />
         </div>
 
+        <!-- Giá bán -->
+        <div class="form-row_ssp">
+            <label for="price">Giá bán</label>
+            <input type="text" id="Price" name="Price" value="@Model.Price" required />
+        </div>
+        <!-- Giá vốn  -->
+        <div class="form-row_ssp">
+            <label for="price">Giá vốn</label>
+            <input type="text" id="CapitalAmount" name="CapitalAmount" value="@Model.CapitalAmount" required />
+        </div>
+        <!-- Màu sắc -->
+        <div class="form-row_ssp">
+            <label for="color">Màu sắc </label>
+            <input type="text" id="Color" name="Color" value="@Model.Color" required />
+        </div>
+        <!-- Số lượng -->
+        <div class="form-row_ssp">
+            <label for="quantity">Số lượng </label>
+            <input type="number" id="Quantity" name="Quantity" value="@Model.Quantity" required />
+        </div>
+        <!-- Danh mục -->
+        <div class="form-row_ssp">
+            <label for="category">Danh mục</label>
+            <input type="text" id="category" name="CategoryName" value="@Model.Category?.CategoryName" readonly />
+            <input type="hidden" name="CategoryId" value="@Model.CategoryId" />
+        </div>
+
+        <!-- Nhà cung cấp -->
+        <div class="form-row_ssp">
+            <label for="supplier">Nhà cung cấp</label>
+            <input type="text" id="supplier" name="SupplierName" value="@Model.Supplier?.SupplierName" readonly />
+        </div>
+
+        <!-- Chất liệu -->
+        <div class="form-row_ssp">
+            <label for="material">Chất liệu</label>
+            <input type="text" id="Material" name="Material" value="@Model.Material" required />
+        </div>
+
+        <!-- Mô tả sản phẩm -->
+        <div class="form-row_ssp">
+            <label for="description">Mô tả</label>
+            <textarea id="ProductDescription" name="ProductDescription" rows="5" required>@Model.ProductDescription</textarea>
+        </div>
+
+        <!-- Khu vực hình ảnh -->
+        <div class="form-row_ssp">
+            <label for="image">Hình ảnh hiện tại</label>
+            <div class="current-image">
+                <img src="@Model.Image" name="Image" alt="Current Product Image" />
+            </div>
+            <label for="image-upload">Cập nhật hình ảnh</label>
+            <input type="file" id="image-upload" name="ImageFile" accept="image/*" />
+        </div>
+
+        <!-- Nút hành động -->
         <div class="button-group_ssp">
-            <button class="update-btn_tsp">Cập nhật</button>
-            <button type="button" class="cancel-btn_ssp">Hủy</button>
+            <button type="submit" class="save-btn_ssp">Lưu thay đổi</button>
+            <a href="/Admin/Home/QuanLySanPham" class="cancel-btn_ssp">Hủy</a>
         </div>
+        @if (TempData["SuccessMessage"] != null)
+        {
+            <div class="popup success-popup">
+                <span class="popup-text">@TempData["SuccessMessage"]</span>
+            </div>
+        }
 
+        @if (TempData["ErrorMessage"] != null)
+        {
+            <div class="popup error-popup">
+                <span class="popup-text">@TempData["ErrorMessage"]</span>
+            </div>
+        }
     </form>
+    <script>
+        
+    </script>
 </div>
-
-<script>
-    function previewImage(event) {
-        const file = event.target.files[0];
-        const preview = document.getElementById('preview-image_ssp');
-
-        if (file) {
-            const reader = new FileReader();
-            reader.onload = function (e) {
-                preview.src = e.target.result;
-                preview.style.display = 'block';
-            };
-            reader.readAsDataURL(file);
-        } else {
-            preview.style.display = 'none';
-        }
-    }
-
-    function addColor() {
-        const selectElement = document.getElementById('chon-mau_ssp');
-        const inputElement = document.getElementById('them-mau_ssp');
-        const newColor = inputElement.value.trim();
-        if (newColor !== '') {
-            const newOption = document.createElement('option');
-            newOption.value = newColor;
-            newOption.textContent = newColor;
-            newOption.style.backgroundColor = newColor;
-            selectElement.appendChild(newOption);
-            selectElement.value = newColor;
-            inputElement.value = '';
-        } else {
-            alert('Vui lòng nhập màu hợp lệ.');
-        }
-    }
-</script>

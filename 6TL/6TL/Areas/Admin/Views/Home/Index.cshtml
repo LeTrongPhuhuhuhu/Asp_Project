@@ -1,230 +1,117 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Dashboard</title>
-	<link href="~/css/admin/dashboard.css" rel="stylesheet" />
-</head>
-<body>
-    <div class="dashboard-body_db">
-        <!-- Statistics Summary Section -->
-        <div class="stats-summary_db">
-            <div class="stat-box_db">
-                <h3>Tổng Doanh Thu</h3>
-                <p class="stat-value_db">$1,234,567</p>
-                <button class="detail-btn_db">Xem chi tiết</button>
-            </div>
-            <div class="stat-box_db">
-                <h3>Tổng Đơn Hàng</h3>
-                <p class="stat-value_db">12,345</p>
-                <button class="detail-btn_db">Xem chi tiết</button>
-            </div>
-            <div class="stat-box_db">
-                <h3>Tổng Lợi Nhuận</h3>
-                <p class="stat-value_db">$567,890</p>
-                <button class="detail-btn_db">Xem chi tiết</button>
-            </div>
-            <div class="stat-box_db">
-                <h3>Liên Hệ Hỗ Trợ</h3>
-                <p class="stat-value_db">678</p>
-                <button class="detail-btn_db">Xem chi tiết</button>
-            </div>
-        </div>
+﻿@model _6TL.Models.WebsiteInfo
 
-        <div class="chart-container_db">
-            <!-- Left Section: Revenue Chart and Line Chart stacked -->
-            <div class="left-chart_db">
-                <div class="chart-item_db">
-                    <canvas id="revenue-chart_db"></canvas>
-                </div>
-                <div class="chart-item_db">
-                    <canvas id="line-chart_db"></canvas>
-                </div>
-            </div>
-            <!-- Right Section: Pie Chart -->
-            <div class="right-chart_db">
-                <canvas id="pie-chart_db"></canvas>
-            </div>
-        </div>
+@{
+    ViewData["Title"] = "Dashboard Admin";
+}
 
-        <!-- Best-Selling Products Section -->
-        <div class="best-sellers-section_db">
-            <h3>Top 10 Sản Phẩm Bán Chạy</h3>
-            <div class="best-sellers-list_db">
-                <!-- Best-Seller Item -->
-                <div class="best-seller-item_db">
-                    <span class="rank_db medal-gold_db">🥇</span>
-                    <div class="product-info_db">
-                        <span class="product-name_db">Tên Sản Phẩm 1</span>
-                        <span class="sales-count_db">500 sales</span>
-                    </div>
-                    <button class="view-btn_db">Xem</button>
-                </div>
-                <div class="best-seller-item_db">
-                    <span class="rank_db medal-silver_db">🥈</span>
-                    <div class="product-info_db">
-                        <span class="product-name_db">Tên Sản Phẩm 2</span>
-                        <span class="sales-count_db">450 sales</span>
-                    </div>
-                    <button class="view-btn_db">Xem</button>
-                </div>
-                <div class="best-seller-item_db">
-                    <span class="rank_db medal-bronze_db">🥉</span>
-                    <div class="product-info_db">
-                        <span class="product-name_db">Tên Sản Phẩm 3</span>
-                        <span class="sales-count_db">400 sales</span>
-                    </div>
-                    <button class="view-btn_db">Xem</button>
-                </div>
-                <!-- Other Top Products (no medals) -->
-                <div class="best-seller-item_db">
-                    <div class="product-info_db">
-                        <span class="product-name_db">Tên Sản Phẩm 4</span>
-                        <span class="sales-count_db">380 sales</span>
-                    </div>
-                    <button class="view-btn_db">Xem</button>
-                </div>
-                <div class="best-seller-item_db">
-                    <div class="product-info_db">
-                        <span class="product-name_db">Tên Sản Phẩm 5</span>
-                        <span class="sales-count_db">360 sales</span>
-                    </div>
-                    <button class="view-btn_db">Xem</button>
-                </div>
-                <div class="best-seller-item_db">
-                    <div class="product-info_db">
-                        <span class="product-name_db">Tên Sản Phẩm 6</span>
-                        <span class="sales-count_db">350 sales</span>
-                    </div>
-                    <button class="view-btn_db">Xem</button>
-                </div>
-                <div class="best-seller-item_db">
-                    <div class="product-info_db">
-                        <span class="product-name_db">Tên Sản Phẩm 7</span>
-                        <span class="sales-count_db">330 sales</span>
-                    </div>
-                    <button class="view-btn_db">Xem</button>
-                </div>
-                <div class="best-seller-item_db">
-                    <div class="product-info_db">
-                        <span class="product-name_db">Tên Sản Phẩm 8</span>
-                        <span class="sales-count_db">320 sales</span>
-                    </div>
-                    <button class="view-btn_db">Xem</button>
-                </div>
-                <div class="best-seller-item_db">
-                    <div class="product-info_db">
-                        <span class="product-name_db">Tên Sản Phẩm 9</span>
-                        <span class="sales-count_db">300 sales</span>
-                    </div>
-                    <button class="view-btn_db">Xem</button>
-                </div>
-                <div class="best-seller-item_db">
-                    <div class="product-info_db">
-                        <span class="product-name_db">Tên Sản Phẩm 10</span>
-                        <span class="sales-count_db">280 sales</span>
-                    </div>
-                    <button class="view-btn_db">Xem</button>
+<h1 class="mb-4">@ViewData["Title"]</h1>
+
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["Message"]
+    </div>
+}
+
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["Error"]
+    </div>
+}
+
+<!-- Các phần khác của Dashboard -->
+<div class="container mb-5">
+    <div class="row g-4">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Thống kê sản phẩm </h5>
+                    <li><strong> Tổng số lượng sản phẩm: </strong> @ViewBag.TotalProducts</li>
                 </div>
             </div>
         </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Thống kê đơn hàng</h5>
+                    <li><strong>Tổng số lượng đơn hàng: </strong> @ViewBag.TotalOrders</li>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Thống kê doanh thu</h5>
+                    <li><strong>Tổng doanh thu: </strong> @ViewBag.TotalRevenue.ToString("C")</li>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-        <script>
-                // Open and Close Modal Functionality
-                function showReviews(productId) {
-                    const modal = document.getElementById('reviews-modal_db');
-                    const productName = document.getElementById('product-name-modal_db');
-                    const reviewsContainer = document.getElementById('reviews-container_db');
+<hr />
 
-                    // Set the product name dynamically (based on the productId or data)
-                    productName.innerText = "Đánh giá của " + productId;
+<!-- Phần chỉnh sửa thông tin website -->
+<div class="container mt-5">
+    <h3>Thông tin website</h3>
+    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#editWebsiteForm" aria-expanded="false" aria-controls="editWebsiteForm">
+        Chỉnh sửa thông tin website
+    </button>
 
-                    // Example: Load reviews dynamically (this could be an API call or static data)
-                    reviewsContainer.innerHTML = `
-                        <p>Review 1: Excellent product!</p>
-                        <p>Review 2: Good quality.</p>
-                        <p>Review 3: Could be better.</p>
-                    `;
+    <div class="collapse mt-3" id="editWebsiteForm">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Chỉnh sửa thông tin</h5>
+                <form method="post" asp-area="Admin" asp-controller="Home" asp-action="Index">
+                    <div class="mb-3">
+                        <label for="Description" class="form-label">Mô tả:</label>
+                        <textarea id="Description" name="Description" class="form-control" rows="3">@Model?.Description</textarea>
+                    </div>
 
-                    modal.style.display = 'flex'; // Show modal
-                }
+                    <div class="mb-3">
+                        <label for="PhoneNumber" class="form-label">Số điện thoại:</label>
+                        <input id="PhoneNumber" name="PhoneNumber" class="form-control" value="@Model?.PhoneNumber" />
+                    </div>
 
-                function closeModal() {
-                    const modal = document.getElementById('reviews-modal_db');
-                    modal.style.display = 'none'; // Close modal
-                }
+                    <div class="mb-3">
+                        <label for="Address" class="form-label">Địa chỉ:</label>
+                        <input id="Address" name="Address" class="form-control" value="@Model?.Address" />
+                    </div>
 
-                // Chart.js Data Setup
-                const ctx1 = document.getElementById('revenue-chart_db').getContext('2d');
-                const revenueChart = new Chart(ctx1, {
-                    type: 'bar',
-                    data: {
-                        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-                        datasets: [{
-                            label: 'Doanh Thu',
-                            data: [1200, 1900, 3000, 5000, 2000, 2500, 3500],
-                            backgroundColor: '#6c63ff',
-                            borderColor: '#4a4a9a',
-                            borderWidth: 1
-                        }]
-                    },
-                    options: {
-                        responsive: true,
-                        scales: {
-                            x: {
-                                title: { text: 'Month', display: true }
-                            },
-                            y: {
-                                title: { text: 'Revenue ($)', display: true }
-                            }
-                        }
-                    }
-                });
+                    <div class="mb-3">
+                        <label for="Email" class="form-label">Email:</label>
+                        <input id="Email" name="Email" class="form-control" value="@Model?.Email" />
+                    </div>
 
-                const ctx2 = document.getElementById('line-chart_db').getContext('2d');
-                const lineChart = new Chart(ctx2, {
-                    type: 'line',
-                    data: {
-                        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                    <div class="mb-3">
+                        <label for="FacebookUrl" class="form-label">Facebook:</label>
+                        <input id="FacebookUrl" name="FacebookUrl" class="form-control" value="@Model?.FacebookUrl" />
+                    </div>
 
-       
-                datasets: [{
-                    label: 'Lợi Nhuận',
-                    data: [400, 600, 800, 1200, 700, 800, 900],
-                    borderColor: '#ff5733',
-                    borderWidth: 2,
-                    fill: false
-                }]
-            },
-            options: {
-                responsive: true,
-                scales: {
-                    x: {
-                        title: { text: 'Month', display: true }
-                    },
-                    y: {
-                        title: { text: 'Profit ($)', display: true }
-                    }
-                }
-            }
-        });
+                    <div class="mb-3">
+                        <label for="YouTubeUrl" class="form-label">YouTube:</label>
+                        <input id="YouTubeUrl" name="YouTubeUrl" class="form-control" value="@Model?.YouTubeUrl" />
+                    </div>
 
-        const ctx3 = document.getElementById('pie-chart_db').getContext('2d');
-        const pieChart = new Chart(ctx3, {
-            type: 'pie',
-            data: {
-                labels: ['Product 1', 'Product 2', 'Product 3'],
-                datasets: [{
-                    label: 'Product Distribution',
-                    data: [45, 30, 25],
-                    backgroundColor: ['#ff6347', '#4caf50', '#3f51b5']
-                }]
-            }
-        });
-    </script>
+                    <div class="mb-3">
+                        <label for="TwitterUrl" class="form-label">Twitter:</label>
+                        <input id="TwitterUrl" name="TwitterUrl" class="form-control" value="@Model?.TwitterUrl" />
+                    </div>
 
-</body>
-</html>
+                    <div class="mb-3">
+                        <label for="InstagramUrl" class="form-label">Instagram:</label>
+                        <input id="InstagramUrl" name="InstagramUrl" class="form-control" value="@Model?.InstagramUrl" />
+                    </div>
 
+                    <div class="mb-3">
+                        <label for="LogoUrl" class="form-label">Logo URL:</label>
+                        <input id="LogoUrl" name="LogoUrl" class="form-control" value="@Model?.LogoUrl" />
+                    </div>
+
+                    <button type="submit" class="btn btn-success">Lưu thay đổi</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

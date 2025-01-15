@@ -1,5 +1,4 @@
-﻿using System;
-using _6TL.Models;
+﻿using _6TL.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -7,82 +6,74 @@ namespace _6TL.Areas.Admin.Controllers
 {
     [Area("Admin")]
     public class HomeController : Controller
-	{
+    {
         private readonly Db6TLContext _context;
-
-        public HomeController(Db6TLContext context)
-        {
+        public HomeController(Db6TLContext context) {
             _context = context;
         }
 
+        // Action Index - Hiển thị thông tin website
+        [HttpGet]
+        [Route("Admin/Home/Index")]
         public IActionResult Index()
-		{
-			return View();
-		}
-        public IActionResult ThemBlog()
         {
-            return View();
-        }
-        public IActionResult QuanLyBlog()
-        {
-            var blogs = _context.Blogs.ToList();
-            return View(blogs);
-        }
-        [HttpPost]
-        [Route("add")]
-        public IActionResult Add(Blog blog, IFormFile imageFile)
-        {
-            if (imageFile != null)
-            {
-                string filePath = Path.Combine("wwwroot/img", imageFile.FileName);
-                using (var stream = new FileStream(filePath, FileMode.Create))
-                {
-                    imageFile.CopyTo(stream);
-                }
-                blog.HinhAnh = "/img/" + imageFile.FileName;
-            }
+            var totalProduct = _context.Products.Count();
+            var totalOrder = _context.Orders.Count();
+            var totalRevenue = _context.Orders.Sum(od => od.TotalAmount);
+            var websiteinfo = _context.WebsiteInfos.FirstOrDefault();
 
-            _context.Blogs.Add(blog);
-            _context.SaveChanges();
-            return RedirectToAction("QuanLyBlog");
-        }
-        [HttpPost]
-        [Route("edit")]
-        public IActionResult Edit(Blog blog, IFormFile imageFile)
-        {
-            var existingBlog = _context.Blogs.Find(blog.BlogId);
-            if (existingBlog != null)
-            {
-                existingBlog.TieuDe = blog.TieuDe;
-                existingBlog.NoiDung = blog.NoiDung;
+            ViewBag.TotalProducts = totalProduct;
+            ViewBag.TotalOrders = totalOrder;
+            ViewBag.TotalRevenue = totalRevenue;
 
-                if (imageFile != null)
+            return View(websiteinfo);
+        }
+
+        // Action xử lý cập nhật thông tin website khi form gửi tới
+        [HttpPost]
+        [Route("Admin/Home/Index")]
+        public IActionResult Index(WebsiteInfo model)
+        {
+            if (ModelState.IsValid)
+            {
+                var websiteInfo = _context.WebsiteInfos.FirstOrDefault();
+                if (websiteInfo == null)
                 {
-                    string filePath = Path.Combine("wwwroot/img", imageFile.FileName);
-                    using (var stream = new FileStream(filePath, FileMode.Create))
-                    {
-                        imageFile.CopyTo(stream);
-                    }
-                    existingBlog.HinhAnh = "/img/" + imageFile.FileName;
+                    TempData["Error"] = "Website information not found.";
+                    return RedirectToAction("Index");
                 }
+                // Cập nhật thông tin website
+                websiteInfo.Description = model.Description;
+                websiteInfo.PhoneNumber = model.PhoneNumber;
+                websiteInfo.Address = model.Address;
+                websiteInfo.Email = model.Email;
+                websiteInfo.FacebookUrl = model.FacebookUrl;
+                websiteInfo.YouTubeUrl = model.YouTubeUrl;
+                websiteInfo.TwitterUrl = model.TwitterUrl;
+                websiteInfo.InstagramUrl = model.InstagramUrl;
+                websiteInfo.LogoUrl = model.LogoUrl;
 
                 _context.SaveChanges();
+                TempData["Message"] = "Cập nhật thành công thông tin website!";
             }
-
-            return RedirectToAction("QuanLyBlog");
-        }
-        [HttpPost]
-        [Route("delete/{id}")]
-        public IActionResult Delete(int id)
-        {
-            var blog = _context.Blogs.Find(id);
-            if (blog != null)
+            else
             {
-                _context.Blogs.Remove(blog);
-                _context.SaveChanges();
+                TempData["Error"] = "Có lỗi xảy ra! Vui lòng thử lại.";
             }
-            return RedirectToAction("QuanLYBlog");
+            var totalProduct = _context.Products.Count();
+            var totalOrder = _context.Orders.Count();
+            var totalRevenue = _context.Orders.Sum(od => od.TotalAmount);
+            var websiteinfo = _context.WebsiteInfos.FirstOrDefault();
+
+            // Cập nhật lại các thống kê vào ViewBag
+            ViewBag.TotalProducts = totalProduct;
+            ViewBag.TotalOrders = totalOrder;
+            ViewBag.TotalRevenue = totalRevenue;
+
+            return View(websiteinfo);
+            
         }
+
         public IActionResult GioiThieu()
 		{
 			return View();
