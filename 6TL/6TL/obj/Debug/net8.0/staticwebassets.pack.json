@@ -245,6 +245,10 @@
       "PackagePath": "staticwebassets\\images\\products\\d44fd28d-ff5a-4582-96a1-91219c778df2_tailung.jpg"
     },
     {
+      "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\images\\products\\d7350ba2-1c3d-47ba-a6f7-56c524b7496d_1.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\d7350ba2-1c3d-47ba-a6f7-56c524b7496d_1.jpg"
+    },
+    {
       "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\images\\products\\dae3d613-bb72-4035-926b-39c98ff13a3f_2.jpg",
       "PackagePath": "staticwebassets\\images\\products\\dae3d613-bb72-4035-926b-39c98ff13a3f_2.jpg"
     },
@@ -403,6 +407,14 @@
     {
       "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\dmsp.jpg",
       "PackagePath": "staticwebassets\\img\\dmsp.jpg"
+    },
+    {
+      "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\donescuccess.gif",
+      "PackagePath": "staticwebassets\\img\\donescuccess.gif"
+    },
+    {
+      "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\donesuccess_improved.gif",
+      "PackagePath": "staticwebassets\\img\\donesuccess_improved.gif"
     },
     {
       "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\ghebar.jpg",

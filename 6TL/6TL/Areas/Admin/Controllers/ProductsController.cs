@@ -38,11 +38,25 @@ namespace _6TL.Areas.Admin.Controllers
 			return View(products);
 		}
 
+       // Tìm kiếm sản phẩm theo từ khóa
+        [HttpGet]
+        [Route("Admin/Products/QuanLySanPham")]
+        public IActionResult TimKiemSanPham(string searchString)
+        {
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                var products = _context.Products
+                    .Where(p => p.ProductName.Contains(searchString) || p.ProductDescription.Contains(searchString) || p.Category.CategoryName.Contains(searchString))
+                    .ToList();
+                return View("QuanLySanPham", products);
+            }
+
+            var allProducts = _context.Products.ToList();
+            return View("QuanLySanPham", allProducts);
+        }
 
 
-
-
-		[HttpGet]
+        [HttpGet]
 		public IActionResult ThemSanPham()
 		{
 			// Lấy danh sách nhà cung cấp và danh mục từ cơ sở dữ liệu và gán cho ViewBag

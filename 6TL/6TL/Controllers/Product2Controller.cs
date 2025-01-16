@@ -20,7 +20,7 @@ namespace _6TL.Controllers
             return View();
         }
         [HttpGet]
-        public IActionResult SanPham(List<string> categories, List<string> materials, decimal? minPrice, decimal? maxPrice)
+        public IActionResult SanPham(string? search, List<string>? categories, decimal? minPrice, decimal? maxPrice)
         {
             var products = _context.Products.AsQueryable();
 
@@ -30,13 +30,13 @@ namespace _6TL.Controllers
                 products = products.Where(p => categories.Contains(p.Category.CategoryName));
             }
 
-            // Apply material filter
-            if (materials != null && materials.Any())
+            // Apply search filter for product name or description
+            if (!string.IsNullOrEmpty(search))
             {
-                products = products.Where(p => materials.Contains(p.Material));
+                products = products.Where(p => p.ProductName.Contains(search) || p.ProductDescription.Contains(search));
             }
 
-            // Apply price range filter
+            // Apply price filter
             if (minPrice.HasValue)
             {
                 products = products.Where(p => p.Price >= minPrice.Value);
@@ -47,14 +47,10 @@ namespace _6TL.Controllers
                 products = products.Where(p => p.Price <= maxPrice.Value);
             }
 
-            // Passing categories and materials to the view to display the checkboxes
             ViewBag.Categories = _context.Categories.ToList();
-            ViewBag.Materials = _context.Products
-                .Select(p => p.Material)
-                .Distinct()
-                .ToList();
 
             return View(products.ToList());
         }
+
     }
 }
