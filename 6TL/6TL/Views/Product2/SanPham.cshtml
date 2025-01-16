@@ -20,47 +20,45 @@
     <main>
         <section class="container_sp">
             <!-- Sidebar -->
+            <!-- Tìm kiếm sản phẩm -->
+          
             <div class="sidebar_sp">
-                <h3>Danh mục</h3>
-                <ul>
-                    @foreach (var category in ViewBag.Categories as List<Category>)
-                    {
-                        <li>
-                            <label>
-                                <input type="checkbox" name="category" value="@category.CategoryName">
-                                @category.CategoryName
-                            </label>
-                        </li>
-                    }
-                </ul>
-
-                <h3>Chất liệu</h3>
-                <ul>
-                    @foreach (var material in ViewBag.Materials)
-                    {
-                        <li>
-                            <label>
-                                <input type="checkbox" name="material" value="@material">
-                                @material
-                            </label>
-                        </li>
-                    }
-                </ul>
-
-                <h3>Giá</h3>
-                <div class="price-filter_sp">
-                    <label for="price-range_sp">Khoảng giá:</label>
-                    <input type="range" id="price-range_sp" min="0" max="10000000" step="100000" value="5000000">
-                    <div class="price-values_sp">
-                        <span id="min-price_sp">0 VND</span>
-                        <span id="current-price_sp">5,000,000 VND</span>
-                        <span id="max-price_sp">10,000,000 VND</span>
+                <!-- Form chứa các ô lọc -->
+                <form method="get" action="@Url.Action("SanPham", "Product2")">
+                    <div class="search-bar_sp">
+                        <!-- Ô nhập tìm kiếm sản phẩm -->
+                        <input type="text" id="search-input" name="search" placeholder="Tìm kiếm sản phẩm..." value="@Context.Request.Query["search"]">
                     </div>
-                </div>
 
-                <!-- Nút Lọc Sản Phẩm -->
-                <button id="filter-button" class="btn-filter">Lọc sản phẩm</button>
+                    <h3>Danh mục</h3>
+                    <ul>
+                        @foreach (var category in ViewBag.Categories as List<Category>)
+                        {
+                            <li>
+                                <label>
+                                    <input type="checkbox" name="categories" value="@category.CategoryName" @(Context.Request.Query["categories"].ToString().Split(',').Contains(category.CategoryName) ? "checked" : "")>
+                                    @category.CategoryName
+                                </label>
+                            </li>
+                        }
+                    </ul>
+
+                    <h3>Giá</h3>
+                    <div class="price-filter_sp">
+                        <label for="price-range_sp">Khoảng giá:</label>
+                        <input type="range" id="price-range_sp" name="minPrice" min="0" max="10000000" step="100000" value="0">
+                        <div class="price-values_sp">
+                            <span id="min-price_sp">0 VND</span>
+                            <span id="current-price_sp">@Context.Request.Query["minPrice"] VND</span>
+                            <span id="max-price_sp">10,000,000 VND</span>
+                        </div>
+                    </div>
+
+                    <!-- Nút Lọc Sản Phẩm -->
+                    <button type="submit" class="btn-filter">Lọc sản phẩm</button>
+                </form>
             </div>
+
 
             <!-- Content -->
             <div class="content_sp">
@@ -118,42 +116,52 @@
             const currentPriceLabel = document.getElementById('current-price_sp');
             const maxPriceLabel = document.getElementById('max-price_sp');
 
-            // Lắng nghe sự kiện thay đổi giá trị thanh trượt
+            const searchInput = document.getElementById('search-input');
+            const searchButton = document.getElementById('search-button');
+
             priceRange.addEventListener('input', () => {
                 const priceValue = priceRange.value;
                 currentPriceLabel.textContent = FormatCurrency(priceValue) + " VND";
             });
 
-            // Đảm bảo cập nhật giá trị hiển thị ngay khi trang được tải
             const priceValue = priceRange.value;
             currentPriceLabel.textContent = FormatCurrency(priceValue) + " VND";
 
-            // Định dạng giá trị thành VND
             function FormatCurrency(value) {
                 const number = parseInt(value, 10);
-                return number.toLocaleString(); // Định dạng thành tiền tệ VND
+                return number.toLocaleString();
             }
 
-            // Lọc sản phẩm khi nhấn nút
             const filterButton = document.getElementById('filter-button');
 
+            searchButton.addEventListener('click', () => {
+                const searchValue = searchInput.value;
+
+                const url = new URL(window.location.href);
+                url.searchParams.set('search', searchValue); // Lọc theo tên hoặc mô tả sản phẩm
+
+                window.location.href = url.toString();
+            });
+
             filterButton.addEventListener('click', () => {
-                // Lấy danh sách các category và material đã chọn
                 const selectedCategories = Array.from(document.querySelectorAll('input[name="category"]:checked')).map(input => input.value);
-                const selectedMaterials = Array.from(document.querySelectorAll('input[name="material"]:checked')).map(input => input.value);
                 const priceRangeValue = priceRange.value;
 
-                // Xây dựng URL với các tham số query cho lọc
                 const url = new URL(window.location.href);
-                url.searchParams.set('categories', selectedCategories.join(','));
-                url.searchParams.set('materials', selectedMaterials.join(','));
-                url.searchParams.set('minPrice', 0); // Giá trị minPrice = 0
-                url.searchParams.set('maxPrice', priceRangeValue); // Lấy giá trị từ thanh trượt cho maxPrice
 
-                // Điều hướng đến URL mới để lọc
+                // Nếu không có category được chọn thì không thêm tham số categories vào URL
+                if (selectedCategories.length > 0) {
+                    url.searchParams.set('categories', selectedCategories.join(','));
+                }
+
+                url.searchParams.set('minPrice', 0); // Hoặc lấy từ input
+                url.searchParams.set('minPrice', priceRangeValue); // Lấy giá trị thanh trượt
+
                 window.location.href = url.toString();
             });
         });
+
+
     </script>
 
 

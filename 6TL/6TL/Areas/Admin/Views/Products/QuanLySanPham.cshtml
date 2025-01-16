@@ -15,11 +15,11 @@
         <!-- Form tìm kiếm -->
         <form method="get" class="search-bar_sp">
             <input type="text" name="searchString" placeholder="Tìm kiếm sản phẩm..." value="@Context.Request.Query["searchString"]" />
-            <button type="submit" class="search-btn">Tìm kiếm</button>
-
-            <a href="/Admin/Products/ThemSanPham"><button class="add-new-btn_sp">Thêm mới</button></a>
+            <button type="submit" class="search-btn">Tìm kiếm</button>       
         </form>
-
+        <a href="/Admin/Products/ThemSanPham" class="add-new-btn_sp">
+            Thêm mới
+        </a>
 
         <table class="product-table_sp">
             <thead>
@@ -28,8 +28,9 @@
                     <th>Hình ảnh</th>
                     <th>Tên SP</th>
                     <th>Giá bán</th>
-                    <th>Loại</th>
+                    <th>Danh mục</th>
                     <th>Màu sắc</th>
+                    <th>Số lượng</th>
                     <th>Chất liệu</th>
                     <th>Trạng thái</th>
                     <th>Chức năng</th>
@@ -43,12 +44,10 @@
                         <td><img src="@product.Image" alt="Hình ảnh SP"></td>
                         <td>@product.ProductName</td>
                         <td>@product.Price?.ToString("N0", new System.Globalization.CultureInfo("vi-VN")) VNĐ</td>
-
-                        <td>@product.Category?.CategoryName</td>
+                        <td>@(product.Category != null ? product.Category.CategoryName : "Chưa có danh mục")</td>
                         <td>@product.Color</td>
-
+                        <td>@product.Quantity</td>
                         <td>@product.Material</td>
-
                         <td>
                             @if (product.Quantity > 0)
                             {

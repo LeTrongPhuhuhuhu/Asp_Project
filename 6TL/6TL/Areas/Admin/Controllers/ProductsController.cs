@@ -34,94 +34,109 @@ namespace _6TL.Areas.Admin.Controllers
 			var products = _context.Products
 				.Include(p => p.Category) // Chỉ include bảng Category
 				.ToList();
-
-			return View(products);
+            ViewBag.Categories = _context.Categories.ToList();
+            return View(products);
 		}
 
+       // Tìm kiếm sản phẩm theo từ khóa
+        [HttpGet]
+        [Route("Admin/Products/QuanLySanPham")]
+        public IActionResult TimKiemSanPham(string searchString)
+        {
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                var products = _context.Products
+                    .Where(p => p.ProductName.Contains(searchString) || p.ProductDescription.Contains(searchString) || p.Category.CategoryName.Contains(searchString))
+                    .ToList();
+                return View("QuanLySanPham", products);
+            }
+
+            var allProducts = _context.Products.ToList();
+            ViewBag.Categories = _context.Categories.ToList();
+            return View("QuanLySanPham", allProducts);
+        }
+
+
+        [HttpGet]
+        public IActionResult ThemSanPham()
+        {
+            // Lấy danh sách nhà cung cấp và danh mục từ cơ sở dữ liệu và gán cho ViewBag
+            ViewBag.Suppliers = _context.Suppliers.ToList();
+            ViewBag.Categories = _context.Categories.ToList();
+            return View();
+        }
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult ThemSanPham(Product product, IFormFile? imageFile)
+        {
+            try
+            {
+                // Tạo slug tự động từ tên sản phẩm
+                product.Slug = GenerateSlug(product.ProductName);
+
+                // Xử lý file ảnh
+                if (imageFile != null && imageFile.Length > 0)
+                {
+                    string directoryPath = Path.Combine("wwwroot", "images", "products");
+                    if (!Directory.Exists(directoryPath))
+                    {
+                        Directory.CreateDirectory(directoryPath); // Tạo thư mục nếu chưa tồn tại
+                    }
+
+                    string fileName = Guid.NewGuid().ToString() + "_" + imageFile.FileName;
+                    string filePath = Path.Combine(directoryPath, fileName);
+
+                    using (var fileStream = new FileStream(filePath, FileMode.Create))
+                    {
+                        imageFile.CopyTo(fileStream);
+                    }
+
+                    product.Image = Path.Combine("images", "products", fileName); // Save image path to product
+                }
+
+                // Kiểm tra sản phẩm cùng màu đã tồn tại hay chưa
+                var existingProduct = _context.Products
+                    .FirstOrDefault(p => p.ProductName == product.ProductName && p.Color == product.Color);
+
+                if (existingProduct != null)
+                {
+                    // Nếu sản phẩm đã tồn tại, chỉ cập nhật số lượng
+                    existingProduct.Quantity += product.Quantity;
+                    existingProduct.UpdatedAt = DateTime.Now;
+                }
+                else
+                {
+                    // Nếu sản phẩm chưa tồn tại, thêm mới sản phẩm
+                    product.CreatedAt = DateTime.Now;
+                    _context.Products.Add(product);
+                }
+
+                // Lưu thay đổi vào cơ sở dữ liệu
+                _context.SaveChanges();
+
+                TempData["SuccessMessage"] = "Thêm sản phẩm thành công!";
+                return RedirectToAction("QuanLySanPham", "Products", new { area = "Admin" });
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+                if (ex.InnerException != null)
+                {
+                    Console.WriteLine($"Inner exception: {ex.InnerException.Message}");
+                }
+
+                TempData["ErrorMessage"] = "Có lỗi xảy ra, vui lòng thử lại.";
+                return View(product);
+            }
+        }
 
 
 
 
-		[HttpGet]
-		public IActionResult ThemSanPham()
-		{
-			// Lấy danh sách nhà cung cấp và danh mục từ cơ sở dữ liệu và gán cho ViewBag
-			ViewBag.Suppliers = _context.Suppliers.ToList();
-			ViewBag.Categories = _context.Categories.ToList();
-			return View();
-		}
-
-
-		[HttpPost]
-		[ValidateAntiForgeryToken]
-		public IActionResult ThemSanPham(Product product, IFormFile? imageFile)
-		{
-			try
-			{
-				// Tạo slug tự động từ tên sản phẩm
-				product.Slug = GenerateSlug(product.ProductName);
-
-				// Xử lý file ảnh
-				if (imageFile != null && imageFile.Length > 0)
-				{
-					string directoryPath = Path.Combine("wwwroot", "images", "products");
-					if (!Directory.Exists(directoryPath))
-					{
-						Directory.CreateDirectory(directoryPath); // Tạo thư mục nếu chưa tồn tại
-					}
-
-					string fileName = Guid.NewGuid().ToString() + "_" + imageFile.FileName;
-					string filePath = Path.Combine(directoryPath, fileName);
-
-					using (var fileStream = new FileStream(filePath, FileMode.Create))
-					{
-						imageFile.CopyTo(fileStream);
-					}
-
-					product.Image = Path.Combine("images", "products", fileName); // Save image path to product
-				}
-
-				// Kiểm tra sản phẩm cùng màu đã tồn tại hay chưa
-				var existingProduct = _context.Products
-					.FirstOrDefault(p => p.ProductName == product.ProductName && p.Color == product.Color);
-
-				if (existingProduct != null)
-				{
-					// Nếu sản phẩm đã tồn tại, chỉ cập nhật số lượng
-					existingProduct.Quantity += product.Quantity;
-					existingProduct.UpdatedAt = DateTime.Now;
-				}
-				else
-				{
-					// Nếu sản phẩm chưa tồn tại, thêm mới sản phẩm
-					product.CreatedAt = DateTime.Now;
-					_context.Products.Add(product);
-				}
-
-				// Lưu thay đổi vào cơ sở dữ liệu
-				_context.SaveChanges();
-
-				TempData["SuccessMessage"] = "Thêm sản phẩm thành công!";
-				return RedirectToAction("QuanLySanPham", "Products", new { area = "Admin" });
-			}
-			catch (Exception ex)
-			{
-				Console.WriteLine($"Error: {ex.Message}");
-				if (ex.InnerException != null)
-				{
-					Console.WriteLine($"Inner exception: {ex.InnerException.Message}");
-				}
-
-				TempData["ErrorMessage"] = "Có lỗi xảy ra, vui lòng thử lại.";
-				return View(product);
-			}
-		}
-
-
-
-
-		// Hàm tiện ích: Tạo slug từ tên sản phẩm
-		private string GenerateSlug(string productName)
+        // Hàm tiện ích: Tạo slug từ tên sản phẩm
+        private string GenerateSlug(string productName)
         {
             if (string.IsNullOrWhiteSpace(productName))
                 return string.Empty;

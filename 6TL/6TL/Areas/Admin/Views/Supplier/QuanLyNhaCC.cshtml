@@ -1,0 +1,42 @@
+﻿@model IEnumerable<_6TL.Models.Supplier>
+
+@{
+    ViewData["Title"] = "Quản lý nhà cung cấp";
+}
+
+<h1>Quản lý nhà cung cấp</h1>
+
+<a asp-action="ThemNhaCC" class="btn btn-primary">Thêm nhà cung cấp</a>
+
+<table class="table table-bordered mt-3">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Tên nhà cung cấp</th>
+            <th>Email</th>
+            <th>Số điện thoại</th>
+            <th>Địa chỉ</th>
+            <th>Ngày tạo</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var supplier in Model)
+        {
+            <tr>
+                <td>@supplier.SupplierId</td>
+                <td>@supplier.SupplierName</td>
+                <td>@supplier.Email</td>
+                <td>@supplier.PhoneNumber</td>
+                <td>@supplier.Address</td>
+                <td>@supplier.CreatedAt?.ToString("dd/MM/yyyy")</td>
+                <td>
+                    <!-- Nút sửa -->
+                    <a href="@Url.Action("SuaNhaCC", "Supplier", new { id = supplier.SupplierId, area = "Admin" })" class="edit-btn_sp">Sửa</a>
+
+                    <!-- Nút xóa -->
+                    <a href="@Url.Action("XoaNhaCC", "Supplier", new { id = supplier.SupplierId, area = "Admin" })" class="delete-btn_sp" onclick="return confirm('Bạn có chắc chắn muốn xóa không?');">Xóa</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
