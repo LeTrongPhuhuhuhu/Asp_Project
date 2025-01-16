@@ -87,7 +87,7 @@ h2 {
 
     .product-table_sp th,
     .product-table_sp td {
-        padding: 12px 15px;
+        padding: 12px 10px;
         text-align: left;
     }
 
@@ -250,15 +250,16 @@ h2 {
 
 /* Tạo kiểu cho nút "Thêm mới" */
 .add-new-btn_sp {
-    display:inline-block;
     background-color: #28a745;
     color: white;
-    padding: 10px 20px;
+    padding: 15px 20px;
     border: none;
     border-radius: 25px;
     cursor: pointer;
     font-size: 14px;
+    text-decoration: none;
     margin-left:90%;
+    
     transition: background-color 0.3s ease;
 }
 
