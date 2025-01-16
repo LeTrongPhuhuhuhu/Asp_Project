@@ -31,7 +31,21 @@ namespace _6TL.Areas.Admin.Controllers
 
             return View(categories);
         }
-        //Thêm danh mục mới
+        // Hàm kiểm tra vòng lặp danh mục cha - con
+        private bool HasCircularReference(int? parentId, int categoryId)
+        {
+            while (parentId != null)
+            {
+                if (parentId == categoryId)
+                {
+                    return true; // Vòng lặp phát hiện
+                }
+
+                var parentCategory = _context.Categories.Find(parentId);
+                parentId = parentCategory?.ParentCategoryId;
+            }
+            return false;
+        }
         [HttpPost]
         public IActionResult AddCategory(string categoryName, int? parentCategory)
         {
@@ -41,14 +55,42 @@ namespace _6TL.Areas.Admin.Controllers
                 return RedirectToAction("QuanLyDanhMuc");
             }
 
+            if (categoryName.Length > 255)
+            {
+                ModelState.AddModelError("CategoryName", "Tên danh mục không được dài quá 255 ký tự.");
+                return RedirectToAction("QuanLyDanhMuc");
+            }
+
+            // Kiểm tra trùng lặp tên danh mục
+            if (_context.Categories.Any(c => c.CategoryName == categoryName))
+            {
+                ModelState.AddModelError("CategoryName", "Tên danh mục đã tồn tại.");
+                return RedirectToAction("QuanLyDanhMuc");
+            }
+
+            // Kiểm tra danh mục cha hợp lệ
+            if (parentCategory != null && !_context.Categories.Any(c => c.CategoryId == parentCategory))
+            {
+                ModelState.AddModelError("ParentCategory", "Danh mục cha không hợp lệ.");
+                return RedirectToAction("QuanLyDanhMuc");
+            }
+
             // Tạo slug tự động từ categoryName
             string slug = GenerateSlug(categoryName);
+
+            // Kiểm tra trùng lặp Slug
+            if (_context.Categories.Any(c => c.Slug == slug))
+            {
+                ModelState.AddModelError("Slug", "Slug đã tồn tại.");
+                return RedirectToAction("QuanLyDanhMuc");
+            }
 
             var newCategory = new Category
             {
                 CategoryName = categoryName,
                 Slug = slug,
-                ParentCategoryId = parentCategory
+                ParentCategoryId = parentCategory,
+                Status = true // Mặc định là hiện
             };
 
             _context.Categories.Add(newCategory);
@@ -56,15 +98,34 @@ namespace _6TL.Areas.Admin.Controllers
             return RedirectToAction("QuanLyDanhMuc");
         }
 
-
         // Xóa danh mục
-        public IActionResult DeleteCategory(int id)
+        [HttpPost]
+        public IActionResult ConfirmDeleteCategory(int id)
+        {
+            var category = _context.Categories.Include(c => c.Products).FirstOrDefault(c => c.CategoryId == id);
+            if (category == null)
+            {
+                return Json(new { success = false, message = "Danh mục không tồn tại." });
+            }
+
+            var relatedProductsCount = category.Products?.Count ?? 0;
+
+            return Json(new
+            {
+                success = true,
+                message = "Nếu xóa danh mục này sẽ ảnh hưởng đến các sản phẩm liên quan.",
+                relatedProductsCount
+            });
+        }
+
+        [HttpPost]
+        public IActionResult DeleteCategoryConfirmed(int id)
         {
             var childCategories = _context.Categories.Where(c => c.ParentCategoryId == id).ToList();
 
             foreach (var child in childCategories)
             {
-                DeleteCategory(child.CategoryId);
+                DeleteCategoryConfirmed(child.CategoryId);
             }
 
             var category = _context.Categories.Find(id);
@@ -74,7 +135,7 @@ namespace _6TL.Areas.Admin.Controllers
                 _context.SaveChanges();
             }
 
-            return RedirectToAction("QuanLyDanhMuc");
+            return Json(new { success = true, message = "Danh mục đã được xóa thành công!" });
         }
 
         // Hiển thị popup sửa danh mục
@@ -90,12 +151,13 @@ namespace _6TL.Areas.Admin.Controllers
 
         // Cập nhật danh mục
         [HttpPost]
-        public IActionResult UpdateCategory(int id, string categoryName, int? parentCategory, bool status)
+        [Route("/Admin/DanhMuc/UpdateCategory")]
+        public IActionResult UpdateCategory(int categoryId, string categoryName, int? parentCategory, bool status)
         {
-            var category = _context.Categories.Find(id);
+            var category = _context.Categories.Find(categoryId);
             if (category == null)
             {
-                return NotFound();
+                return Json(new { success = false, message = "Không tìm thấy danh mục cần cập nhật." });
             }
 
             if (string.IsNullOrEmpty(categoryName))
@@ -103,15 +165,52 @@ namespace _6TL.Areas.Admin.Controllers
                 return Json(new { success = false, message = "Tên danh mục không được để trống." });
             }
 
-            category.CategoryName = categoryName;
-            category.Slug = GenerateSlug(categoryName); // Tạo lại slug tự động
-            category.ParentCategoryId = parentCategory;
-            category.Status = status; // Update status
+            if (categoryName.Length > 255)
+            {
+                return Json(new { success = false, message = "Tên danh mục không được dài quá 255 ký tự." });
+            }
 
-            _context.Categories.Update(category);
-            _context.SaveChanges();
+            // Kiểm tra trùng lặp tên danh mục
+            if (_context.Categories.Any(c => c.CategoryName == categoryName && c.CategoryId != categoryId))
+            {
+                return Json(new { success = false, message = "Tên danh mục đã tồn tại." });
+            }
 
-            return Json(new { success = true, message = "Danh mục đã được cập nhật thành công!" });
+            // Kiểm tra danh mục cha hợp lệ
+            if (parentCategory != null && !_context.Categories.Any(c => c.CategoryId == parentCategory))
+            {
+                return Json(new { success = false, message = "Danh mục cha không hợp lệ." });
+            }
+
+            // Kiểm tra vòng lặp danh mục cha - con
+            if (HasCircularReference(parentCategory, categoryId))
+            {
+                return Json(new { success = false, message = "Không thể đặt danh mục cha tạo vòng lặp." });
+            }
+
+            // Tạo slug và kiểm tra trùng lặp
+            string slug = GenerateSlug(categoryName);
+            if (_context.Categories.Any(c => c.Slug == slug && c.CategoryId != categoryId))
+            {
+                return Json(new { success = false, message = "Slug đã tồn tại." });
+            }
+
+            try
+            {
+                category.CategoryName = categoryName;
+                category.Slug = slug; // Tạo slug từ categoryName
+                category.ParentCategoryId = parentCategory;
+                category.Status = status;
+
+                _context.Categories.Update(category);
+                _context.SaveChanges();
+
+                return Json(new { success = true, message = "Danh mục đã được cập nhật thành công!" });
+            }
+            catch (Exception ex)
+            {
+                return Json(new { success = false, message = "Đã xảy ra lỗi trong quá trình cập nhật danh mục.", error = ex.Message });
+            }
         }
 
         [HttpPost]
@@ -131,7 +230,6 @@ namespace _6TL.Areas.Admin.Controllers
 
             return Json(new { success = true, message = "Trạng thái danh mục đã được cập nhật!" });
         }
-
 
         // Hàm tạo Slug từ CategoryName
         private string GenerateSlug(string categoryName)
@@ -162,6 +260,5 @@ namespace _6TL.Areas.Admin.Controllers
                                // Thêm các ký tự cần chuyển đổi khác nếu cần
                                .Normalize();        // Chuẩn hóa chuỗi
         }
-
     }
 }

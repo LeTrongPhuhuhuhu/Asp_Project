@@ -72,21 +72,24 @@ namespace _6TL.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public IActionResult UpdateOrderStatus(int orderId, string status)
+        public IActionResult UpdateOrderStatus([FromBody] OrderUpdateDto updateData)
         {
-            // Kiểm tra dữ liệu nhận được
-            Console.WriteLine($"Order ID: {orderId}, Status: {status}");
-
-            var order = _context.Orders.FirstOrDefault(o => o.OrderId == orderId);
+            var order = _context.Orders.FirstOrDefault(o => o.OrderId == updateData.OrderId);
             if (order == null)
             {
                 return Json(new { success = false, message = "Không tìm thấy đơn hàng." });
             }
 
-            order.OrderStatus = status;
+            order.OrderStatus = updateData.Status;
             _context.SaveChanges();
 
             return Json(new { success = true, message = "Trạng thái đơn hàng đã được cập nhật." });
+        }
+
+        public class OrderUpdateDto
+        {
+            public int OrderId { get; set; }
+            public string Status { get; set; }
         }
 
 
