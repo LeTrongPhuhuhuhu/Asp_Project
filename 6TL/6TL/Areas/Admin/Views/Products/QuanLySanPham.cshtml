@@ -15,11 +15,9 @@
         <!-- Form tìm kiếm -->
         <form method="get" class="search-bar_sp">
             <input type="text" name="searchString" placeholder="Tìm kiếm sản phẩm..." value="@Context.Request.Query["searchString"]" />
-            <button type="submit" class="search-btn">Tìm kiếm</button>
-
-            <a href="/Admin/Products/ThemSanPham"><button class="add-new-btn_sp">Thêm mới</button></a>
+            <button type="submit" class="search-btn">Tìm kiếm</button>       
         </form>
-
+        <a ><button href="/Admin/Products/ThemSanPham" class="add-new-btn_sp">Thêm mới</button></a>
         <table class="product-table_sp">
             <thead>
                 <tr>

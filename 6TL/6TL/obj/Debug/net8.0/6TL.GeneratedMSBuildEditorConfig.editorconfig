@@ -114,6 +114,22 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9zdWNjZXNzUG9wdXAuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/DoAnAsp/Asp_Project/6TL/6TL/Areas/Admin/Views/Supplier/QuanLyNhaCC.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3VwcGxpZXJcUXVhbkx5TmhhQ0MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnAsp/Asp_Project/6TL/6TL/Areas/Admin/Views/Supplier/SuaNhaCC.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3VwcGxpZXJcU3VhTmhhQ0MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnAsp/Asp_Project/6TL/6TL/Areas/Admin/Views/Supplier/ThemNhaCC.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3VwcGxpZXJcVGhlbU5oYUNDLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnAsp/Asp_Project/6TL/6TL/Areas/Admin/Views/Supplier/XoaNhaCC.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3VwcGxpZXJcWG9hTmhhQ0MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/DoAnAsp/Asp_Project/6TL/6TL/Areas/Admin/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

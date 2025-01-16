@@ -113,6 +113,10 @@
       "PackagePath": "staticwebassets\\css\\pages\\LienHe.css"
     },
     {
+      "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\Pagination.css",
+      "PackagePath": "staticwebassets\\css\\pages\\Pagination.css"
+    },
+    {
       "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\css\\pages\\SanPham.css",
       "PackagePath": "staticwebassets\\css\\pages\\SanPham.css"
     },
@@ -289,8 +293,8 @@
       "PackagePath": "staticwebassets\\img\\Black and White Professional Minimalistic Real Estate Logo.png"
     },
     {
-      "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\Top5.png",
-      "PackagePath": "staticwebassets\\img\\Top5.png"
+      "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\Top5.jpg",
+      "PackagePath": "staticwebassets\\img\\Top5.jpg"
     },
     {
       "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\accent_chair.jpg",
@@ -377,6 +381,10 @@
       "PackagePath": "staticwebassets\\img\\botri.jpg"
     },
     {
+      "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\bst.jpg",
+      "PackagePath": "staticwebassets\\img\\bst.jpg"
+    },
+    {
       "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\bunk_bed.jpg",
       "PackagePath": "staticwebassets\\img\\bunk_bed.jpg"
     },
@@ -389,8 +397,8 @@
       "PackagePath": "staticwebassets\\img\\coffee_table.jpg"
     },
     {
-      "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\connghe2025.jpg",
-      "PackagePath": "staticwebassets\\img\\connghe2025.jpg"
+      "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\congnghe2025.jpg",
+      "PackagePath": "staticwebassets\\img\\congnghe2025.jpg"
     },
     {
       "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\dining-table.jpg",
@@ -415,6 +423,10 @@
     {
       "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\donesuccess_improved.gif",
       "PackagePath": "staticwebassets\\img\\donesuccess_improved.gif"
+    },
+    {
+      "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\ghean.jpg",
+      "PackagePath": "staticwebassets\\img\\ghean.jpg"
     },
     {
       "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\ghebar.jpg",
@@ -449,8 +461,8 @@
       "PackagePath": "staticwebassets\\img\\khaitruong.jpg"
     },
     {
-      "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\khuyenmai2025.png",
-      "PackagePath": "staticwebassets\\img\\khuyenmai2025.png"
+      "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\khuyenmai2025.jpg",
+      "PackagePath": "staticwebassets\\img\\khuyenmai2025.jpg"
     },
     {
       "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\kitchen_island.jpg",
@@ -545,6 +557,10 @@
       "PackagePath": "staticwebassets\\img\\successdelete.webm"
     },
     {
+      "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\thietke.jpg",
+      "PackagePath": "staticwebassets\\img\\thietke.jpg"
+    },
+    {
       "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\tintuc.jpg",
       "PackagePath": "staticwebassets\\img\\tintuc.jpg"
     },
@@ -567,6 +583,10 @@
     {
       "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\tintuc4.jpg",
       "PackagePath": "staticwebassets\\img\\tintuc4.jpg"
+    },
+    {
+      "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\trienlam.jpg",
+      "PackagePath": "staticwebassets\\img\\trienlam.jpg"
     },
     {
       "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\img\\tutv.jpg",

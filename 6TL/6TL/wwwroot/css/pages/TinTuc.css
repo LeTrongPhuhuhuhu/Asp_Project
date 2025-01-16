@@ -138,3 +138,41 @@
         transform: scale(1.05);
         color: white;
     }
+
+/* Phần tìm kiếm */
+.search-bar_tt {
+    display: flex;
+    justify-content: flex-start; /* Căn trái */
+    align-items: center;
+    margin: 20px auto;
+    max-width: 600px; /* Chiều rộng tối đa */
+    padding: 0 15px; /* Khoảng cách padding */
+    margin-left: 20px;
+}
+
+.search-input_tt {
+    flex: 1;
+    padding: 10px 20px; /* Khoảng cách trong */
+    font-size: 16px; /* Cỡ chữ */
+    color: #333; /* Màu chữ */
+    border: 1px solid #ddd; /* Viền màu xám nhạt */
+    border-radius: 25px; /* Bo góc tròn */
+    outline: none; /* Loại bỏ viền khi focus */
+    background-color: #fff; /* Nền trắng */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+    transition: box-shadow 0.3s ease, border-color 0.3s ease; /* Hiệu ứng mượt */
+}
+
+    .search-input_tt::placeholder {
+        color: #aaa; /* Màu placeholder */
+        font-style: italic; /* Placeholder nghiêng */
+    }
+
+    .search-input_tt:focus {
+        border-color: #007bff; /* Đổi màu viền khi focus */
+        box-shadow: 0px 4px 8px rgba(0, 123, 255, 0.3); /* Hiệu ứng đổ bóng khi focus */
+    }
+
+.search-button_tt {
+    display: none; /* Ẩn nút bấm nếu không cần thiết */
+}
