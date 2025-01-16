@@ -23,10 +23,6 @@ namespace _6TL.Areas.Admin.Controllers
 		{
 			return View();
 		}
-        public IActionResult QuanLyDonHang()
-        {
-            return View();
-        }
         public IActionResult QuanLyChiTietDonHang()
         {
             return View();

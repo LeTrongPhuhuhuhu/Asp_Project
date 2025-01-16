@@ -66,10 +66,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxRdWFuTHlEYW5oR2lhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Asp Project/Asp_Project/6TL/6TL/Areas/Admin/Views/Home/QuanLyDonHang.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxRdWFuTHlEb25IYW5nLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/Asp Project/Asp_Project/6TL/6TL/Areas/Admin/Views/Home/QuanLyLienHe.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxRdWFuTHlMaWVuSGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -92,6 +88,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Asp Project/Asp_Project/6TL/6TL/Areas/Admin/Views/Home/ThemSanPham.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxUaGVtU2FuUGhhbS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Asp Project/Asp_Project/6TL/6TL/Areas/Admin/Views/OrderManagement/QuanLyDonHang.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcT3JkZXJNYW5hZ2VtZW50XFF1YW5MeURvbkhhbmcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Asp Project/Asp_Project/6TL/6TL/Areas/Admin/Views/Products/QuanLySanPham.cshtml]

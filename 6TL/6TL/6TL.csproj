@@ -20,7 +20,6 @@
     <None Include="Areas\Admin\Views\Home\QuanLyChiTietSanPham.cshtml" />
     <None Include="Areas\Admin\Views\Home\QuanLyDanhGia.cshtml" />
     <None Include="Areas\Admin\Views\DanhMuc\QuanLyDanhMuc.cshtml" />
-    <None Include="Areas\Admin\Views\Home\QuanLyDonHang.cshtml" />
     <None Include="Areas\Admin\Views\Home\QuanLyLienHe.cshtml" />
     <None Include="Areas\Admin\Views\Home\QuanLySanPham.cshtml" />
     <None Include="Areas\Admin\Views\Home\QuanLyUser.cshtml" />

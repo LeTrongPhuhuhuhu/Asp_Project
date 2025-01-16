@@ -1,0 +1,219 @@
+﻿@model IEnumerable<Order>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Management</title>
+    <link href="/css/admin/QuanLyDonHang.css" rel="stylesheet" />
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Quản Lý Đơn Hàng</h1>
+
+        <!-- Form Lọc Dữ Liệu -->
+        <form method="get" action="/OrderManagement">
+            <div class="filter-container">
+                <div class="filter-item">
+                    <label for="filter-status">Trạng thái:</label>
+                    <select id="filter-status" name="status">
+                        <option value="">Tất cả</option>
+                        <option value="success">Đã giao</option>
+                        <option value="failed">Đã hủy</option>
+                    </select>
+                </div>
+                <div class="filter-item">
+                    <label for="filter-date">Ngày tạo:</label>
+                    <input type="date" id="filter-date" name="date" />
+                </div>
+                <div class="filter-item">
+                    <label for="search-order">Mã đơn hàng:</label>
+                    <input type="text" id="search-order" name="orderId" placeholder="Nhập mã đơn hàng..." />
+                </div>
+                <button type="button" id="apply-filter-qldh">Lọc</button>
+            </div>
+        </form>
+
+        <!-- Bảng Danh Sách Đơn Hàng -->
+        <table class="order-table">
+            <thead>
+                <tr>
+                    <th>Mã đơn hàng</th>
+                    <th>Khách hàng</th>
+                    <th>Ngày tạo</th>
+                    <th>Tên sản phẩm</th>
+                    <th>Giá</th>
+                    <th>Số lượng</th>
+                    <th>Thanh toán</th>
+                    <th>Tổng tiền</th>
+                    <th>Trạng thái</th>
+                    <th>Thao tác</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var order in Model)
+                {
+                    <tr class="main-row">
+                        <td>@order.OrderId</td>
+                        <td>@order.CustomerName</td>
+                        <td>@order.OrderDate?.ToString("dd/MM/yyyy")</td>
+                        <td>
+                            @foreach (var detail in order.OrderDetails)
+                            {
+                                <span>@detail.ProductName</span>
+                                <br />
+                            }
+                        </td>
+                        <td>
+                            @foreach (var detail in order.OrderDetails)
+                            {
+                                <span>@detail.TotalAmount VND</span>
+                                <br />
+                            }
+                        </td>
+                        <td>
+                            @foreach (var detail in order.OrderDetails)
+                            {
+                                <span>@detail.Quantity</span>
+                                <br />
+                            }
+                        </td>
+                        <td>@order.TotalAmount VND</td>
+                        <td>
+                            <span class="status @(order.OrderStatus == "success" ? "success-qldh" : "failed-qldh")">
+                                @order.OrderStatus
+                            </span>
+                        </td>
+                        <td>
+                            <div class="button-container">
+                                <button class="btn-view toggle-detail" onclick="viewDetails(@order.OrderId)">Xem</button>
+                                <button class="btn-update" onclick="openUpdateStatusPopup(@order.OrderId)">Cập nhật</button>
+                                <button class="btn-delete" onclick="openDeletePopup(@order.OrderId)">Xóa</button>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Popup Chỉnh sửa trạng thái -->
+    <div class="popup" id="updateStatusPopup">
+        <div class="popup-content">
+            <h3>Chỉnh sửa trạng thái đơn hàng</h3>
+            <select id="updateStatusSelect">
+                <option value="success">Đã giao</option>
+                <option value="failed">Đã hủy</option>
+            </select>
+            <button onclick="updateOrderStatus()">Cập nhật</button>
+            <button onclick="closePopup()">Đóng</button>
+        </div>
+    </div>
+
+    <!-- Popup xác nhận xóa -->
+    <div class="popup" id="deletePopup">
+        <div class="popup-content">
+            <h3>Bạn có chắc muốn xóa đơn hàng này?</h3>
+            <button onclick="confirmDeleteOrder()">Xóa</button>
+            <button onclick="closePopup()">Đóng</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('apply-filter-qldh').addEventListener('click', function () {
+            const statusFilter = document.getElementById('filter-status').value.toLowerCase();
+            const dateFilter = document.getElementById('filter-date').value;
+            const orderFilter = document.getElementById('search-order').value.toLowerCase();
+
+            const rows = document.querySelectorAll('.order-table tbody tr.main-row');
+
+            rows.forEach(row => {
+                const statusText = row.querySelector('td:nth-child(9)').textContent.trim().toLowerCase();
+                const dateText = row.querySelector('td:nth-child(3)').textContent.trim();
+                const orderIdText = row.querySelector('td:nth-child(1)').textContent.trim().toLowerCase();
+
+                // Chuyển ngày từ bảng thành định dạng 'yyyy-mm-dd'
+                const dateParts = dateText.split('/');
+                const formattedDate = `${dateParts[2]}-${dateParts[1].padStart(2, '0')}-${dateParts[0].padStart(2, '0')}`;
+
+                // Kiểm tra từng điều kiện
+                const matchesStatus = !statusFilter || statusText.includes(statusFilter);
+                const matchesDate = !dateFilter || formattedDate === dateFilter;
+                const matchesOrder = !orderFilter || orderIdText.includes(orderFilter);
+
+                // Hiển thị hoặc ẩn hàng
+                if (matchesStatus && matchesDate && matchesOrder) {
+                    row.style.display = ''; // Hiển thị
+                } else {
+                    row.style.display = 'none'; // Ẩn
+                }
+            });
+        });
+
+        function viewDetails(orderId) {
+            window.location.href = `/admin/Home/quanlychitietDonhang?orderId=${orderId}`;
+        }
+
+        function openUpdateStatusPopup(orderId) {
+            document.getElementById('updateStatusPopup').style.display = 'flex';
+            document.getElementById('updateStatusPopup').dataset.orderId = orderId;
+        }
+
+        function updateOrderStatus() {
+            const orderId = document.getElementById('updateStatusPopup').dataset.orderId;
+            const status = document.getElementById('updateStatusSelect').value;
+
+            fetch(`/OrderManagement/UpdateOrderStatus`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ orderId, status })
+            })
+                .then(response => response.json())
+                .then(data => {
+                    alert(data.message);
+                    window.location.reload(); // Tải lại trang để cập nhật trạng thái
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Có lỗi xảy ra khi cập nhật trạng thái.');
+                });
+        }
+
+        function openDeletePopup(orderId) {
+            document.getElementById('deletePopup').style.display = 'flex';
+            document.getElementById('deletePopup').dataset.orderId = orderId;
+        }
+
+        function confirmDeleteOrder() {
+            const orderId = document.getElementById('deletePopup').dataset.orderId;
+
+            fetch(`/Admin/OrderManagement/DeleteOrder?orderId=${orderId}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+                .then(response => response.json())
+                .then(data => {
+                    alert(data.message);
+                    if (data.success) {
+                        window.location.reload();
+                    }
+                })
+                .catch(error => {
+                    alert('Có lỗi xảy ra khi xóa đơn hàng.');
+                });
+        }
+
+        function closePopup() {
+            document.querySelectorAll('.popup').forEach(popup => {
+                popup.style.display = 'none';
+            });
+        }
+    </script>
+</body>
+</html>
