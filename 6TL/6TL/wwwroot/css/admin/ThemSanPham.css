@@ -269,3 +269,116 @@ h2 {
         opacity: 0;
     }
 }
+/* CSS cho Popup */
+.popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Màu nền mờ */
+    display: none; /* Ẩn popup mặc định */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Đảm bảo popup nằm trên các phần tử khác */
+}
+
+.popup-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    max-width: 90%; /* Điều chỉnh kích thước popup */
+}
+
+
+    .popup-content h3 {
+        margin-bottom: 20px;
+    }
+
+    .popup-content input {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .popup-content button {
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+        .popup-content button:hover {
+            background-color: #45a049;
+        }
+
+    .popup-content .close-btn {
+        background-color: #f44336;
+    }
+/* Nút "Thêm nhà cung cấp" */
+button#add-supplier-btn {
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Màu xanh lá nổi bật */
+    color: #fff; /* Màu chữ trắng */
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+    /* Hiệu ứng hover */
+    button#add-supplier-btn:hover {
+        background-color: #45a049; /* Màu xanh đậm hơn khi hover */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hiệu ứng đổ bóng */
+    }
+
+    /* Hiệu ứng khi bấm */
+    button#add-supplier-btn:active {
+        transform: scale(0.95); /* Hiệu ứng thu nhỏ khi nhấn */
+        background-color: #3e8e41; /* Màu xanh đậm hơn nữa */
+    }
+
+/* Nút trong popup */
+.popup-content button {
+    padding: 8px 16px;
+    margin-top: 10px;
+    background-color: #2196F3; /* Màu xanh lam nhấn mạnh */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    /* Hiệu ứng hover cho nút trong popup */
+    .popup-content button:hover {
+        background-color: #1976D2; /* Màu xanh đậm hơn khi hover */
+    }
+
+    /* Nút "Đóng" */
+    .popup-content button.close-btn {
+        background-color: #f44336; /* Màu đỏ */
+    }
+
+        .popup-content button.close-btn:hover {
+            background-color: #d32f2f; /* Màu đỏ đậm hơn */
+        }
+.add-category-button_tsp {
+    background-color: #4CAF50; /* Màu nền xanh */
+    color: white; /* Màu chữ trắng */
+    padding: 10px 20px; /* Khoảng cách giữa chữ và viền */
+    border: none; /* Xóa bỏ viền */
+    border-radius: 5px; /* Góc bo tròn */
+    font-size: 16px; /* Kích thước chữ */
+    cursor: pointer; /* Thêm hiệu ứng con trỏ khi di chuột vào */
+    transition: background-color 0.3s ease; /* Hiệu ứng chuyển màu nền khi hover */
+    margin-top: 15px; /* Khoảng cách trên của nút */
+    font-weight: bold;
+}

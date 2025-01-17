@@ -1,56 +1,43 @@
 ﻿using _6TL.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace _6TL.Areas.Admin.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/[controller]")]
     public class SupplierApiController : ControllerBase
     {
         private readonly Db6TLContext _context;
+
         public SupplierApiController(Db6TLContext context)
         {
             _context = context;
         }
 
         [HttpPost]
-        public IActionResult ThemNhaCC([FromBody] Supplier supplier)
+        public async Task<IActionResult> AddSupplier([FromBody] Supplier supplier)
         {
-            if (supplier == null)
+            if (supplier == null || string.IsNullOrWhiteSpace(supplier.SupplierName))
             {
-                return new JsonResult(new { success = false, message = "Dữ liệu không hợp lệ!" });
+                return BadRequest(new { success = false, message = "Tên nhà cung cấp không được để trống." });
             }
 
             try
             {
-                // Kiểm tra nếu nhà cung cấp đã tồn tại
-                var existingSupplier = _context.Suppliers
-                    .FirstOrDefault(s => s.SupplierName.Equals(supplier.SupplierName, StringComparison.OrdinalIgnoreCase));
-
-                if (existingSupplier != null)
-                {
-                    return new JsonResult(new { success = false, message = "Nhà cung cấp đã tồn tại!" });
-                }
-
-                // Thêm mới nhà cung cấp
-                supplier.CreatedAt = DateTime.UtcNow;
+                // Thêm nhà cung cấp mới vào cơ sở dữ liệu
                 _context.Suppliers.Add(supplier);
-                _context.SaveChanges();
+                await _context.SaveChangesAsync();
 
-                return new JsonResult(new
-                {
-                    success = true,
-                    message = "Thêm nhà cung cấp thành công!",
-                    data = supplier
-                });
+                return Ok(new { success = true, message = "Nhà cung cấp đã được thêm thành công." });
             }
             catch (Exception ex)
             {
-                // Log lỗi nếu cần
-                // _logger.LogError(ex, "Lỗi khi thêm nhà cung cấp");
-                return new JsonResult(new { success = false, message = "Có lỗi xảy ra, vui lòng thử lại sau!" });
+                return StatusCode(500, new { success = false, message = "Có lỗi xảy ra, vui lòng thử lại." });
             }
         }
+      
     }
+
 }
