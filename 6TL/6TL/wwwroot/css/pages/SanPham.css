@@ -294,3 +294,18 @@ h2_sp {
         .pagination_sp button:hover {
             background-color: #ddd;
         }
+
+.no-products-message {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #B79858; /* Màu vàng nhẹ */
+    margin-top: 20px;
+    padding: 15px;
+    border: 2px solid #B79858; /* Viền bao quanh thông báo */
+    border-radius: 5px;
+    background-color: #f9f9f9; /* Nền màu sáng */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hiệu ứng bóng */
+    max-width: 500px;
+    
+}

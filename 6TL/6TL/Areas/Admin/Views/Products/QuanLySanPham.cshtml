@@ -1,6 +1,5 @@
 @model IEnumerable<Product>
 <!DOCTYPE html>
-
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
@@ -14,13 +13,20 @@
         <h2>Quản lý sản phẩm 6TL De Decor</h2>
         <!-- Form tìm kiếm -->
         <form method="get" class="search-bar_sp">
-            <input type="text" name="searchString" placeholder="Tìm kiếm sản phẩm..." value="@Context.Request.Query["searchString"]" />
-            <button type="submit" class="search-btn">Tìm kiếm</button>       
+            <input type="text" name="searchString" placeholder="Tìm kiếm sản phẩm..." value="@ViewBag.SearchString" />
+            <button type="submit" class="search-btn">Tìm kiếm</button>
         </form>
+
         <a href="/Admin/Products/ThemSanPham" class="add-new-btn_sp">
             Thêm mới
         </a>
-
+        <!-- Hiển thị thông báo nếu không tìm thấy sản phẩm -->
+        @if (TempData["Message"] != null)
+        {
+            <div class="alert alert-warning">
+                @TempData["Message"]
+            </div>
+        }
         <table class="product-table_sp">
             <thead>
                 <tr>
@@ -70,11 +76,7 @@
 
             </tbody>
         </table>
-
-        <div class="pagination_sp">
-            <button class="page-btn_sp">1</button>
-            <button class="page-btn_sp">2</button>
-        </div>
+        @await Html.PartialAsync("_Pagination")
     </div>
 
     <!-- Success Popup -->
@@ -83,6 +85,7 @@
     </div>
 
     <script>
+
         function deleteProduct(productId) {
             // Xác nhận việc xóa sản phẩm
             if (confirm("Bạn có chắc chắn muốn xóa sản phẩm này?")) {
@@ -102,7 +105,8 @@
                             });
                             openPopup();  // Hiển thị popup thành công
                         } else {
-                            alert("Có lỗi xảy ra khi xóa sản phẩm.");
+                            // Hiển thị thông báo lỗi từ response.message (temp data message)
+                            alert("Không thể xóa sản phẩm này vì nó đang liên kết với đơn hàng đang xử lý");
                         }
                     },
                     error: function () {
@@ -122,8 +126,7 @@
             document.getElementById('successPopup').style.display = 'none';
         }
 
-    </script>
 
-    
+    </script>
 </body>
 </html>

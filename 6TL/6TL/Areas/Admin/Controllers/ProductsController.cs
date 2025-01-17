@@ -9,6 +9,8 @@ using System.Diagnostics.Metrics;
 using System.Runtime.ConstrainedExecution;
 using System;
 using Microsoft.CodeAnalysis;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
+using System.Web;
 
 namespace _6TL.Areas.Admin.Controllers
 {
@@ -41,20 +43,42 @@ namespace _6TL.Areas.Admin.Controllers
        // Tìm kiếm sản phẩm theo từ khóa
         [HttpGet]
         [Route("Admin/Products/QuanLySanPham")]
-        public IActionResult TimKiemSanPham(string searchString)
+        public IActionResult TimKiemSanPham(int page = 1, int pageSize = 10, string searchString = "")
         {
+            var query = _context.Products.AsQueryable();
+
+            // Kiểm tra xem từ khóa có hợp lệ hay không
             if (!string.IsNullOrEmpty(searchString))
             {
-                var products = _context.Products
-                    .Where(p => p.ProductName.Contains(searchString) || p.ProductDescription.Contains(searchString) || p.Category.CategoryName.Contains(searchString))
-                    .ToList();
-                return View("QuanLySanPham", products);
+                // Kiểm tra nếu từ khóa chỉ chứa dấu cách hoặc các ký tự đặc biệt
+                if (string.IsNullOrWhiteSpace(searchString) || !searchString.All(c => char.IsLetterOrDigit(c) || char.IsWhiteSpace(c)))
+                {
+                    TempData["Message"] = "Vui lòng nhập từ khóa hợp lệ để tìm kiếm."; // Thông báo nếu từ khóa không hợp lệ
+                    return View("QuanLySanPham", new List<Product>()); // Trả về view với danh sách sản phẩm rỗng
+                }
+
+                query = query.Where(p => p.ProductName.Contains(searchString));
+                ViewBag.SearchString = searchString;
             }
 
-            var allProducts = _context.Products.ToList();
+            // Lấy danh sách sản phẩm theo trang
+            var totalProducts = query.Count();
+            var products = query.Skip((page - 1) * pageSize).Take(pageSize).ToList();
+
+            // Nếu không tìm thấy sản phẩm, hiển thị thông báo
+            if (totalProducts == 0)
+            {
+                TempData["Message"] = "Không tìm thấy sản phẩm.";
+            }
+
+            // Phân trang
+            ViewBag.CurrentPage = page;
+            ViewBag.TotalPages = (int)Math.Ceiling((double)totalProducts / pageSize);
+            ViewBag.BaseUrl = Url.Action("QuanLySanPham", "Products");
             ViewBag.Categories = _context.Categories.ToList();
-            return View("QuanLySanPham", allProducts);
+            return View("QuanLySanPham", products);
         }
+
 
 
         [HttpGet]
@@ -117,6 +141,7 @@ namespace _6TL.Areas.Admin.Controllers
                 _context.SaveChanges();
 
                 TempData["SuccessMessage"] = "Thêm sản phẩm thành công!";
+                ViewBag.Categories = _context.Categories.ToList();
                 return RedirectToAction("QuanLySanPham", "Products", new { area = "Admin" });
             }
             catch (Exception ex)
@@ -289,9 +314,9 @@ namespace _6TL.Areas.Admin.Controllers
 				// Lưu thay đổi vào cơ sở dữ liệu
 				_context.Products.Update(existingProduct);
 				_context.SaveChanges();
-
 				TempData["SuccessMessage"] = "Cập nhật sản phẩm thành công!";
-				return RedirectToAction("QuanLySanPham");
+                ViewBag.Categories = _context.Categories.ToList();
+                return RedirectToAction("QuanLySanPham");
 			}
 			catch (Exception ex)
 			{
@@ -303,37 +328,42 @@ namespace _6TL.Areas.Admin.Controllers
 
 		[Route("Admin/Products/QuanLySanPham/{productId}")]
 		[HttpPost]
-		public IActionResult XoaSanPham(int productId)
-		{
-			try
-			{
-				// Lấy sản phẩm theo ProductId
-				var product = _context.Products.FirstOrDefault(p => p.ProductId == productId);
+        public IActionResult XoaSanPham(int productId)
+        {
+            
+                // Kiểm tra sản phẩm có tồn tại không
+                var product = _context.Products.FirstOrDefault(p => p.ProductId == productId);
+                if (product == null)
+                {
+                    return Json(new { success = false, message = "Sản phẩm không tồn tại!" });
+                }
 
-				if (product != null)
-				{
-					// Xóa sản phẩm
-					_context.Products.Remove(product);
+                // Kiểm tra xem sản phẩm có liên kết với đơn hàng đang xử lý không
+                bool hasOrders = _context.OrderDetails
+                    .Any(od => od.ProductId == productId && _context.Orders
+                        .Any(o => o.OrderId == od.OrderId && o.OrderStatus == "Đang xử lý"));
 
-					// Lưu thay đổi vào cơ sở dữ liệu
-					_context.SaveChanges();
+                if (hasOrders)
+                {
+                    // Nếu sản phẩm có liên kết với đơn hàng đang xử lý
+                    TempData["Message"] = "Không thể xóa sản phẩm này vì nó đang liên kết với đơn hàng đang xử lý.";
+                    return RedirectToAction("QuanLySanPham");
+                }
 
-					return Json(new { success = true, message = "Xóa sản phẩm thành công!" });
-				}
+                // Xóa sản phẩm nếu không có đơn hàng liên quan
+                _context.Products.Remove(product);
+                _context.SaveChanges();
+            ViewBag.Categories = _context.Categories.ToList();
+            // Trả về phản hồi thành công
+            return Json(new { success = true, message = "Xóa sản phẩm thành công!" });
+            }
 
-				return Json(new { success = false, message = "Sản phẩm không tồn tại!" });
-			}
-			catch (Exception ex)
-			{
-				// Xử lý lỗi và trả về phản hồi JSON
-				Console.WriteLine($"Error: {ex.Message}");
-				return Json(new { success = false, message = "Đã xảy ra lỗi khi xóa sản phẩm. Vui lòng thử lại!" });
-			}
-		}
-
-
-
+        }
 
 
-	}
+
+
+
+
+    
 }
