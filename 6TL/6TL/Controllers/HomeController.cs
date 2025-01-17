@@ -440,32 +440,35 @@ namespace _6TL.Controllers
 		{
 			return View();
 		}
-        public ActionResult TinTuc(int? pageNumber)
+        public IActionResult TinTuc(string? keyword, int pageNumber = 1, int pageSize = 6)
         {
-            // Kích thước trang (số lượng bài viết trên mỗi trang)
-            int pageSize = 6;
+            // Tìm kiếm tin tức theo từ khóa
+            var query = _context.Blogs.AsQueryable();
 
-            // Số trang hiện tại, nếu không có thì mặc định là 1
-            int page = pageNumber ?? 1;
+            if (!string.IsNullOrEmpty(keyword))
+            {
+                query = query.Where(b => b.TieuDe.Contains(keyword) || b.NoiDung.Contains(keyword));
+                ViewBag.Keyword = keyword; // Lưu từ khóa để hiển thị và chuyển trang
+            }
 
-            // Lấy tất cả các bài viết tin tức từ database
-            var allNews = _context.Blogs.ToList();
+            // Phân trang
+            int totalRecords = query.Count();
+            int totalPages = (int)Math.Ceiling((double)totalRecords / pageSize);
 
-            // Tính toán các bài viết cần hiển thị cho trang hiện tại
-            var pageNews = allNews.Skip((page - 1) * pageSize).Take(pageSize).ToList();
+            var blogs = query
+                .OrderByDescending(b => b.CreatedAt) // Sắp xếp mới nhất
+                .Skip((pageNumber - 1) * pageSize)
+                .Take(pageSize)
+                .ToList();
 
-            // Truyền dữ liệu vào ViewBag
-            ViewBag.News = pageNews;
-            ViewBag.CurrentPage = page;
-            ViewBag.TotalPages = (int)Math.Ceiling(allNews.Count / (double)pageSize);
+            // Gửi dữ liệu về View
+            ViewBag.News = blogs;
+            ViewBag.CurrentPage = pageNumber;
+            ViewBag.TotalPages = totalPages;
 
-         /*   // Truyền dữ liệu vào ViewBag
-            ViewBag.News = allNews;*/
-
-            // Trả về view
             return View();
         }
-		[HttpPost("register")]
+        [HttpPost("register")]
 		[Route("api/customer")]
 		public async Task<IActionResult> DangKy(Customer model)
 		{

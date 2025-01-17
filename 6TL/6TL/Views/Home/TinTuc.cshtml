@@ -61,16 +61,26 @@
 
         <div class="pagination">
             <!-- Trang trước (Disabled nếu đang ở trang đầu) -->
-            <a href="@Url.Action("TinTuc", new { pageNumber = ViewBag.CurrentPage - 1 })" class="prev @(ViewBag.CurrentPage == 1 ? "disabled" : "")">« Previous</a>
+            <a href="@Url.Action("TinTuc", new { keyword = ViewBag.Keyword, pageNumber = ViewBag.CurrentPage - 1 })"
+               class="prev @(ViewBag.CurrentPage == 1 ? "disabled" : "")">
+                « Previous
+            </a>
 
             <!-- Các số trang -->
             @for (int i = 1; i <= ViewBag.TotalPages; i++)
             {
-                <a href="@Url.Action("TinTuc", new { pageNumber = i })" class="page-number @(i == ViewBag.CurrentPage ? "active" : "")">@i</a>
+                <a href="@Url.Action("TinTuc", new { keyword = ViewBag.Keyword, pageNumber = i })"
+                   class="page-number @(i == ViewBag.CurrentPage ? "active" : "")">
+                    @i
+                </a>
             }
 
             <!-- Trang sau (Disabled nếu đang ở trang cuối) -->
-            <a href="@Url.Action("TinTuc", new { pageNumber = ViewBag.CurrentPage + 1 })" class="next @(ViewBag.CurrentPage == ViewBag.TotalPages ? "disabled" : "")">Next »</a>
+            <a href="@Url.Action("TinTuc", new { keyword = ViewBag.Keyword, pageNumber = ViewBag.CurrentPage + 1 })"
+               class="next @(ViewBag.CurrentPage == ViewBag.TotalPages ? "disabled" : "")">
+                Next »
+            </a>
         </div>
+
     </section>
 </body>
