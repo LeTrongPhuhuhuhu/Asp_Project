@@ -42,6 +42,44 @@ namespace _6TL.Areas.Admin.Controllers
                     TempData["Error"] = "Website information not found.";
                     return RedirectToAction("Index");
                 }
+                if (string.IsNullOrEmpty(model.Description))
+                {
+                    ModelState.AddModelError("Description", "Vui lòng nhập mô tả!");
+                }
+
+                if (string.IsNullOrEmpty(model.PhoneNumber) || !long.TryParse(model.PhoneNumber, out _))
+                {
+                    ModelState.AddModelError("PhoneNumber", "Số điện thoại phải là chữ số nguyên!");
+                }
+
+                if (string.IsNullOrEmpty(model.Email) || !model.Email.EndsWith("@gmail.com"))
+                {
+                    ModelState.AddModelError("Email", "Email phải có định dạng @gmail.com!");
+                }
+
+                if (string.IsNullOrEmpty(model.LogoUrl))
+                {
+                    ModelState.AddModelError("LogoUrl", "Vui lòng cung cấp logo!");
+                }
+
+                if (!ModelState.IsValid)
+                {
+                    TempData["Error"] = "Dữ liệu không hợp lệ. Vui lòng kiểm tra lại thông tin.";
+
+                    var productCount = _context.Products.Count(); 
+                    var orderCount = _context.Orders.Count();
+                    var revenue = _context.Orders.Sum(od => od.TotalAmount);
+                    var websiteinfos = _context.WebsiteInfos.FirstOrDefault();
+
+                    // Cập nhật lại các thống kê vào ViewBag
+                    ViewBag.TotalProducts = productCount; 
+                    ViewBag.TotalOrders = orderCount;
+                    ViewBag.TotalRevenue = revenue;
+
+                    return View(websiteinfos);
+                }
+
+
                 // Cập nhật thông tin website
                 websiteInfo.Description = model.Description;
                 websiteInfo.PhoneNumber = model.PhoneNumber;

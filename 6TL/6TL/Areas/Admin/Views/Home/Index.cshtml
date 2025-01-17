@@ -64,14 +64,16 @@
             <div class="card-body">
                 <h5 class="card-title">Chỉnh sửa thông tin</h5>
                 <form method="post" asp-area="Admin" asp-controller="Home" asp-action="Index">
-                    <div class="mb-3">
-                        <label for="Description" class="form-label">Mô tả:</label>
-                        <textarea id="Description" name="Description" class="form-control" rows="3">@Model?.Description</textarea>
+                    <div class="form-group">
+                        <label for="Description">Mô tả</label>
+                        <input type="text" class="form-control @(ViewData.ModelState["Description"]?.Errors.Any() == true ? "is-invalid" : "")" id="Description" name="Description" value="@Model.Description">
+                        @Html.ValidationMessage("Description", "", new { @class = "text-danger" })
                     </div>
 
-                    <div class="mb-3">
-                        <label for="PhoneNumber" class="form-label">Số điện thoại:</label>
-                        <input id="PhoneNumber" name="PhoneNumber" class="form-control" value="@Model?.PhoneNumber" />
+                    <div class="form-group">
+                        <label for="PhoneNumber">Số điện thoại</label>
+                        <input type="text" class="form-control @(ViewData.ModelState["PhoneNumber"]?.Errors.Any() == true ? "is-invalid" : "")" id="PhoneNumber" name="PhoneNumber" value="@Model.PhoneNumber">
+                        @Html.ValidationMessage("PhoneNumber", "", new { @class = "text-danger" })
                     </div>
 
                     <div class="mb-3">
@@ -79,10 +81,12 @@
                         <input id="Address" name="Address" class="form-control" value="@Model?.Address" />
                     </div>
 
-                    <div class="mb-3">
-                        <label for="Email" class="form-label">Email:</label>
-                        <input id="Email" name="Email" class="form-control" value="@Model?.Email" />
+                    <div class="form-group">
+                        <label for="Email">Email</label>
+                        <input type="email" class="form-control @(ViewData.ModelState["Email"]?.Errors.Any() == true ? "is-invalid" : "")" id="Email" name="Email" value="@Model.Email">
+                        @Html.ValidationMessage("Email", "", new { @class = "text-danger" })
                     </div>
+
 
                     <div class="mb-3">
                         <label for="FacebookUrl" class="form-label">Facebook:</label>
@@ -104,9 +108,11 @@
                         <input id="InstagramUrl" name="InstagramUrl" class="form-control" value="@Model?.InstagramUrl" />
                     </div>
 
-                    <div class="mb-3">
-                        <label for="LogoUrl" class="form-label">Logo URL:</label>
-                        <input id="LogoUrl" name="LogoUrl" class="form-control" value="@Model?.LogoUrl" />
+
+                    <div class="form-group">
+                        <label for="LogoUrl">Logo</label>
+                        <input type="file" class="form-control @(ViewData.ModelState["LogoUrl"]?.Errors.Any() == true ? "is-invalid" : "")" id="LogoUrl" name="LogoUrl">
+                        @Html.ValidationMessage("LogoUrl", "", new { @class = "text-danger" })
                     </div>
 
                     <button type="submit" class="btn btn-success">Lưu thay đổi</button>
