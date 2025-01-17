@@ -201,3 +201,42 @@ Responsive Design
 			color: #999999; /* Màu phân cách xám nhạt */
 			margin: 0 5px; /* Khoảng cách giữa các phần */
 		}
+/* Container cho nút */
+.back-to-news_ct {
+	text-align: left; /* Căn bên trái */
+	margin-bottom: 20px; /* Khoảng cách bên dưới */
+}
+
+/* Nút gradient */
+.btn-gradient {
+	display: inline-flex;
+	align-items: center;
+	padding: 12px 24px;
+	font-size: 16px;
+	font-weight: bold;
+	color: white;
+	text-decoration: none;
+	background: linear-gradient(90deg, #6a11cb, #2575fc); /* Hiệu ứng gradient */
+	border-radius: 50px; /* Bo góc */
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Đổ bóng */
+	transition: all 0.3s ease-in-out;
+}
+
+	/* Biểu tượng trong nút */
+	.btn-gradient i {
+		margin-right: 10px;
+		font-size: 18px;
+	}
+
+	/* Hiệu ứng hover */
+	.btn-gradient:hover {
+		background: linear-gradient(90deg, #2575fc, #6a11cb); /* Đổi hướng gradient */
+		box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Tăng đổ bóng */
+		transform: translateY(-2px); /* Nhấc nút lên */
+	}
+
+	/* Hiệu ứng nhấn */
+	.btn-gradient:active {
+		transform: translateY(0); /* Giảm hiệu ứng khi nhấn */
+		box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+	}

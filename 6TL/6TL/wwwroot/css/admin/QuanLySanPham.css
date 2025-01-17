@@ -51,7 +51,6 @@ h2 {
 /* ========== Thanh Tìm Kiếm ========== */
 .search-bar_sp {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
     gap: 10px;
@@ -72,22 +71,6 @@ h2 {
             transform: translateY(-2px);
         }
 
-/* ========== Nút Thêm Mới ========== */
-.add-new-btn_sp {
-    background-color: #6c63ff;
-    color: white; /* Thay đổi màu chữ */
-    border: none;
-    padding: 12px 25px;
-    cursor: pointer;
-    border-radius: 20px; /* Bo tròn nút */
-    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
-}
-
-    .add-new-btn_sp:hover {
-        background-color: #5c53d6;
-        box-shadow: 0 4px 15px rgba(108, 99, 255, 0.3);
-        transform: translateY(-3px);
-    }
 
 /* ========== Bảng Sản Phẩm ========== */
 .product-table_sp {
@@ -104,7 +87,7 @@ h2 {
 
     .product-table_sp th,
     .product-table_sp td {
-        padding: 12px 15px;
+        padding: 12px 10px;
         text-align: left;
     }
 
@@ -269,12 +252,14 @@ h2 {
 .add-new-btn_sp {
     background-color: #28a745;
     color: white;
-    padding: 10px 20px;
+    padding: 15px 20px;
     border: none;
     border-radius: 25px;
     cursor: pointer;
     font-size: 14px;
-    margin-left: 10px;
+    text-decoration: none;
+    margin-left:90%;
+    
     transition: background-color 0.3s ease;
 }
 
@@ -285,6 +270,7 @@ h2 {
 
 /* Đảm bảo các phần tử trong form hiển thị đẹp */
 .search-bar_sp {
-    display: flex;
+
+    display: block;
     align-items: center;
 }

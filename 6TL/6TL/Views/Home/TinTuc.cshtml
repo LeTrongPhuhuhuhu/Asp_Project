@@ -19,25 +19,43 @@
             <li><a href="#">Sự Kiện</a></li>
         </ul>
     </nav>
+    <section class="search-bar_tt">
+        <form method="get" action="@Url.Action("TinTuc", "Home")">
+            <input type="text"
+                   name="keyword"
+                   placeholder="Tìm kiếm tin tức..."
+                   value="@ViewBag.Keyword"
+                   class="search-input_tt" />
+            <button type="submit" class="search-button_tt">Tìm kiếm</button>
+        </form>
+    </section>
+
 
     <section class="container_tt">
-        <!-- Nội dung tin tức -->
         <div class="news-grid_tt">
-            @foreach (var blog in ViewBag.News as List<_6TL.Models.Blog>)
+            @if (ViewBag.News == null || !(ViewBag.News as List<_6TL.Models.Blog>).Any())
             {
-                <div class="news-item_tt">
-                    @if (!string.IsNullOrEmpty(blog.HinhAnh))
-                    {
-                        <img src="~/img/@blog.HinhAnh" alt="@blog.TieuDe">
-                    }
-                    <div class="news-content_tt">
-                        <h3>@blog.TieuDe</h3>
-                        <p>@blog.NoiDung.Substring(0, Math.Min(100, blog.NoiDung.Length))...</p>
-                        <a href="@Url.Action("chitiettintuc", "home", new { id = blog.BlogId })" class="read-more_tt">Đọc Thêm <span>→</span></a>
+                <p>Không tìm thấy kết quả nào phù hợp với từ khóa "<strong>@ViewBag.Keyword</strong>".</p>
+            }
+            else
+            {
+                @foreach (var blog in ViewBag.News as List<_6TL.Models.Blog>)
+                {
+                    <div class="news-item_tt">
+                        @if (!string.IsNullOrEmpty(blog.HinhAnh))
+                        {
+                            <img src="~/img/@blog.HinhAnh" alt="@blog.TieuDe">
+                        }
+                        <div class="news-content_tt">
+                            <h3>@blog.TieuDe</h3>
+                            <p>@blog.NoiDung.Substring(0, Math.Min(100, blog.NoiDung.Length))...</p>
+                            <a href="@Url.Action("chitiettintuc", "home", new { id = blog.BlogId })" class="read-more_tt">Đọc Thêm <span>→</span></a>
+                        </div>
                     </div>
-                </div>
+                }
             }
         </div>
+
 
         <!-- Phân Trang  -->
 

@@ -1,13 +1,17 @@
-﻿<link href="~/css/pages/lichsumuahang.css" rel="stylesheet" />
+﻿@model IEnumerable<_6TL.Models.Order>
+
+<link href="~/css/pages/lichsumuahang.css" rel="stylesheet" />
 
 <h2>Lịch sử mua hàng</h2>
 
-<!-- Thanh tìm kiếm -->
-<div class="search-container">
-    <input type="text" id="searchOrder" placeholder="Tìm kiếm theo mã đơn hàng hoặc trạng thái..." />
+<div class="filter-container">
+    <button class="btn filter-btn" onclick="filterOrders('All')">Tất cả</button>
+    <button class="btn filter-btn" onclick="filterOrders('Pending')">Đang xử lý</button>
+    <button class="btn filter-btn" onclick="filterOrders('Delivery')">Đang giao hàng</button>
+    <button class="btn filter-btn" onclick="filterOrders('Completed')">Đã giao hàng</button>
+    <button class="btn filter-btn" onclick="filterOrders('Cancelled')">Đã hủy</button>
 </div>
 
-<!-- Bảng lịch sử mua hàng -->
 <table class="order-history">
     <thead>
         <tr>
@@ -17,103 +21,138 @@
             <th>Thanh toán</th>
             <th>Địa chỉ</th>
             <th>Ngày đặt hàng</th>
-            <th>Ngày giao hàng</th>
+            <th>Tổng giá trị</th>
             <th>Hành động</th>
         </tr>
     </thead>
-    <tbody>
-        <!-- Đơn hàng 001 -->
-        <tr>
-            <td>001</td>
-            <td><span class="status completed">Đã giao</span></td>
-            <td>Giao tận nhà</td>
-            <td>Thanh toán khi nhận hàng</td>
-            <td>123 Đường ABC, Hà Nội</td>
-            <td>01/12/2024</td>
-            <td>05/12/2024</td>
-            <td class="actions">
-                <button class="view-btn" onclick="showOrderDetail('001')"><i class="fas fa-eye"></i></button>
-                <button class="review-btn" onclick="rateOrder('001')">Đánh giá</button>
-            </td>
-        </tr>
-        <!-- Đơn hàng 002 -->
-        <tr>
-            <td>002</td>
-            <td><span class="status processing">Đang xử lý</span></td>
-            <td>Giao tận nhà</td>
-            <td>Thẻ tín dụng</td>
-            <td>456 Đường XYZ, Hồ Chí Minh</td>
-            <td>02/12/2024</td>
-            <td>07/12/2024</td>
-            <td class="actions">
-                <button class="view-btn" onclick="showOrderDetail('002')"><i class="fas fa-eye"></i></button>
-                <button class="review-btn" onclick="rateOrder('002')">Đánh giá</button>
-            </td>
-        </tr>
+    <tbody id="orderTableBody">
+        @foreach (var order in Model)
+
+        {
+            <tr data-status="@order.OrderStatus" data-id="@order.OrderId">
+                <td>#@order.OrderId</td>
+                <td>
+                    @(order.OrderStatus switch
+
+                    {
+                        "Completed" => "Đã giao hàng",
+                        "Cancelled" => "Đã hủy",
+                        "Delivery" => "Đang giao hàng",
+                        _ => "Đang xử lý"
+
+                    })
+                </td>
+                <td>Giao tận nhà</td>
+                <td>@(order.PaymentMethod == "COD" ? "Thanh toán tiền mặt" : "Thanh toán MoMo")</td>
+                <td>@order.Address</td>
+                <td>@order.OrderDate?.ToString("dd/MM/yyyy")</td>
+                <td>@order.TotalAmount?.ToString("N0") VND</td>
+                <td class="actions">
+                    <button class="view-btn" onclick="showOrderDetail(@order.OrderId)">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                    @Html.Raw(order.OrderStatus switch
+
+                        {
+
+                            "Completed" => "<button class='btn btn-warning'>Đánh giá</button>",
+
+                            "Cancelled" => $"<button class='btn btn-secondary' onclick='reorder({@order.OrderId})'>Mua lại</button>",
+
+                            "Pending" => $"<button class='btn btn-danger' onclick='cancelOrder({@order.OrderId})'>Hủy</button>",
+
+                            _ => ""
+
+                        })
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
 
-<!-- Modal xem chi tiết -->
 <div id="orderModal" class="modal">
     <div class="modal-content">
         <span class="close" onclick="closeModal()">&times;</span>
         <h2>Chi tiết đơn hàng</h2>
         <div id="orderDetailContent" class="order-details">
-            <!-- Chi tiết đơn hàng sẽ được hiển thị ở đây -->
+            <!-- Nội dung sẽ được load bằng AJAX -->
         </div>
     </div>
 </div>
 
 <script>
-    // Mở Modal xem chi tiết đơn hàng
     function showOrderDetail(orderId) {
-        const orderDetails = {
-            "001": {
-                items: [
-                    { name: "Sofa", quantity: 1, price: "300,000 VND" },
-                    { name: "Bàn", quantity: 2, price: "200,000 VND" }
-                ],
-                address: "123 Đường ABC, Hà Nội",
-                orderDate: "01/12/2024",
-                deliveryDate: "05/12/2024",
-                total: "500,000 VND"
-            },
-            "002": {
-                items: [
-                    { name: "Giường", quantity: 1, price: "800,000 VND" },
-                    { name: "Tủ", quantity: 1, price: "400,000 VND" }
-                ],
-                address: "456 Đường XYZ, Hồ Chí Minh",
-                orderDate: "02/12/2024",
-                deliveryDate: "07/12/2024",
-                total: "1,200,000 VND"
-            }
-        };
+        fetch(`/Home/GetOrderDetail?orderId=${orderId}`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    const details = data.details.map(item => `
+                            <li>${item.productName} - Số lượng: ${item.quantity} - Giá: ${item.price} VND - Tổng: ${item.total} VND</li>
+                        `).join("");
 
-        const order = orderDetails[orderId];
-        let itemDetails = order.items
-            .map(
-                (item) =>
-                    `<li>${item.name} - Số lượng: ${item.quantity} - Giá: ${item.price}</li>`
-            )
-            .join("");
+                    const content = `
+                            <p><strong>Mã đơn hàng:</strong> ${data.orderId}</p>
+                            <p><strong>Địa chỉ giao hàng:</strong> ${data.address}</p>
+                            <p><strong>Ngày đặt hàng:</strong> ${data.orderDate}</p>
+                            <p><strong>Ngày giao hàng:</strong> ${data.deliveryDate}</p>
+                            <p><strong>Chi tiết sản phẩm:</strong></p>
+                            <ul>${details}</ul>
+                            <p><strong>Tổng giá trị:</strong> ${data.total} VND</p>
+                        `;
 
-        const content = `
-            <p><strong>Mã đơn hàng:</strong> ${orderId}</p>
-            <p><strong>Địa chỉ giao hàng:</strong> ${order.address}</p>
-            <p><strong>Ngày đặt hàng:</strong> ${order.orderDate}</p>
-            <p><strong>Ngày giao hàng:</strong> ${order.deliveryDate}</p>
-            <p><strong>Chi tiết sản phẩm:</strong></p>
-            <ul>${itemDetails}</ul>
-            <p><strong>Tổng giá trị:</strong> ${order.total}</p>
-        `;
-
-        document.getElementById("orderDetailContent").innerHTML = content;
-        document.getElementById("orderModal").style.display = "block";
+                    document.getElementById("orderDetailContent").innerHTML = content;
+                    document.getElementById("orderModal").style.display = "block";
+                } else {
+                    alert(data.message);
+                }
+            })
+            .catch(error => console.error("Error fetching order details:", error));
     }
 
-    // Đóng Modal
     function closeModal() {
         document.getElementById("orderModal").style.display = "none";
+    }
+
+    function filterOrders(status) {
+        const rows = document.querySelectorAll("#orderTableBody tr");
+        rows.forEach(row => {
+            row.style.display = (status === "All" || row.dataset.status === status) ? "" : "none";
+        });
+    }
+
+    function reorder(orderId) {
+        if (confirm("Bạn có chắc muốn mua lại đơn hàng này?")) {
+            console.log(`Reordering order: ${orderId}`);
+            alert("Đơn hàng đã được thêm lại vào giỏ hàng.");
+        }
+    }
+
+    function cancelOrder(orderId) {
+        if (confirm("Bạn có chắc muốn hủy đơn hàng này?")) {
+            fetch(`/Home/CancelOrder?orderId=${orderId}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        alert("Đơn hàng đã được hủy.");
+                        const row = document.querySelector(`tr[data-id='${orderId}']`);
+                        if (row) {
+                            row.dataset.status = "Cancelled";
+                            row.querySelector("td:nth-child(2)").textContent = "Đã hủy";
+                            row.querySelector(".actions").innerHTML = `
+                                    <button class="view-btn" onclick="showOrderDetail(${orderId})">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                    <button class='btn btn-secondary' onclick='reorder(${orderId})'>Mua lại</button>
+                                `;
+                        }
+                    } else {
+                        alert(data.message || "Không thể hủy đơn hàng. Vui lòng thử lại.");
+                    }
+                })
+                .catch(error => {
+                    console.error("Error cancelling order:", error);
+                    alert("Đã xảy ra lỗi khi hủy đơn hàng.");
+                });
+        }
     }
 </script>

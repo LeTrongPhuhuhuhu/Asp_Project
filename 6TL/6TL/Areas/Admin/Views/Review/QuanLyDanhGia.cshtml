@@ -1,0 +1,317 @@
+﻿@model _6TL.ViewModels.ReviewManagementViewModel
+<link href="~/css/admin/quanlydanhgia.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+<section class="review-management">
+    <!-- Product List Section -->
+    <div class="product-list">
+        <h2>Sản phẩm</h2>
+        
+        <!-- Sort and Filter Buttons -->
+        <div class="sort-filter">
+            <button class="filter-btn" onclick="sortProductsByRating('desc')">
+                <i class="fas fa-arrow-up"></i> Cao nhất
+            </button>
+            <button class="filter-btn" onclick="sortProductsByRating('asc')">
+                <i class="fas fa-arrow-down"></i> Thấp nhất
+            </button>
+        </div>
+
+        <!-- Product List -->
+        <ul id="productList">
+            @foreach (var product in Model.Products)
+            {
+                <li>
+                    <div class="product-item">
+                        <img src="~/img/@product.Image" alt="@product.ProductName" />
+                        <h3>@product.ProductName</h3>
+                        <p>@(product.Price.HasValue ? product.Price.Value.ToString("C") : "Liên hệ")</p>
+                        <div class="rating">
+                            @for (int i = 1; i <= 5; i++)
+                            {
+                                <span class="fa @((i <= product.Rating) ? "fa-star" : "fa-star-o")"></span>
+                            }
+                        </div>
+                        <p>Đánh giá trung bình: @product.Rating</p>
+                        <p>Đã bán: @product.Quantity</p>
+                    </div>
+                </li>
+            }
+        </ul>
+
+        <!-- Pagination Section -->
+        <div class="pagination" id="pagination">
+            @for (int i = 1; i <= ViewBag.TotalPages; i++)
+            {
+                <button onclick="loadPage(@i)" @(i == ViewBag.CurrentPage ? "class='active'" : "")>@i</button>
+            }
+        </div>
+    </div>
+
+    <!-- Review Section -->
+    <div class="review-section">
+        <h2>Đánh giá</h2>
+
+        <!-- Rating Filter Buttons -->
+        <div class="rating-filter">
+            <button onclick="filterReviews(5)">5 Sao</button>
+            <button onclick="filterReviews(4)">4 Sao</button>
+            <button onclick="filterReviews(3)">3 Sao</button>
+            <button onclick="filterReviews(2)">2 Sao</button>
+            <button onclick="filterReviews(1)">1 Sao</button>
+        </div>
+
+        <!-- Review List -->
+        <div class="reviews" id="reviewList">
+            @foreach (var review in Model.Reviews)
+            {
+                <div class="review-item" data-review-id="@review.ReviewId">
+                    <div class="review-header">
+                        <img src="https://via.placeholder.com/40" alt="User Avatar" />
+                        <div>
+                            <strong>@review.CustomerId</strong>
+                            <p>@review.CreatedAt.ToString("yyyy-MM-dd")</p>
+                            <span class="user-rating">
+                                @for (int i = 1; i <= 5; i++)
+                                {
+                                    <span class="fa @((i <= review.Rating) ? "fa-star" : "fa-star-o")"></span>
+                                }
+                            </span>
+                        </div>
+                    </div>
+                    <p>@review.ReviewText</p>
+                    <div class="reply">
+                        <a href="#" class="delete-review" onclick="deleteReview(@review.ReviewId)">Xóa</a>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+<!-- Chart Section -->
+<div class="chart-section">
+    <canvas id="ratingChart"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // Function to filter reviews by rating
+    function filterReviews(starRating) {
+        const reviewList = document.getElementById("reviewList");
+        const reviews = Array.from(reviewList.children);
+
+        reviews.forEach(review => {
+            const stars = review.querySelectorAll('.user-rating .fa-star');
+            const rating = stars.length;
+
+            if (rating === starRating) {
+                review.style.display = 'block';
+            } else {
+                review.style.display = 'none';
+            }
+        });
+    }
+
+    // Function to sort products by rating
+  function sortProductsByRating(order) {
+    fetch(`/Admin/Review/SortProductsByRating?order=${order}&page=1`)
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('productList').innerHTML = data.products.map(product => `
+                <li>
+                    <div class="product-item">
+                        <img src="/img/${product.image}" alt="${product.productName}" />
+                        <h3>${product.productName}</h3>
+                        <p>${product.price ? product.price.toFixed(2) : 'Contact'}</p>
+                        <div class="rating">
+                            ${Array.from({ length: 5 }, (_, i) => `<span class="fa ${i < product.rating ? 'fa-star' : 'fa-star-o'}"></span>`).join('')}
+                        </div>
+                        <p>Average rating: ${product.rating}</p>
+                        <p>Sold: ${product.quantity}</p>
+                    </div>
+                    </div>
+                </li>
+            `).join('');
+            updatePagination(order, 1, data.totalPages); // Update pagination
+        })
+        .catch(error => console.error('Error:', error));
+}
+
+// Pagination update function
+function updatePagination(order, currentPage, totalPages) {
+    const paginationContainer = document.getElementById("pagination");
+    paginationContainer.innerHTML = ""; // Clear existing pagination buttons
+
+    for (let i = 1; i <= totalPages; i++) {
+        const button = document.createElement("button");
+        button.textContent = i;
+        button.className = i === currentPage ? "active" : "";
+        button.onclick = () => loadProducts(order, i);
+        paginationContainer.appendChild(button);
+    }
+}
+
+// Load products with pagination
+async function loadProducts(order, page) {
+    try {
+        const response = await fetch(`/Admin/Review/GetPagedProducts?order=${order}&page=${page}`);
+        
+        // Check if the response is okay
+        if (!response.ok) {
+            throw new Error('Failed to load products');
+        }
+
+        const data = await response.json();
+
+        // Check if data contains the expected structure
+        if (!data.products || !Array.isArray(data.products)) {
+            throw new Error('Invalid data format');
+        }
+
+        // Update product list
+        document.getElementById("productList").innerHTML = ''; // Clear current list
+        data.products.forEach(product => {
+            const productItem = document.createElement('li');
+            productItem.innerHTML = `
+                <div class="product-item">
+                    <img src="/img/${product.image}" alt="${product.productName}" />
+                    <h3>${product.productName}</h3>
+                    <p>${product.price ? product.price.toFixed(2) : 'Contact'}</p>
+                    <div class="rating">
+                        ${Array.from({ length: 5 }, (_, i) => `<span class="fa ${i < product.rating ? 'fa-star' : 'fa-star-o'}"></span>`).join('')}
+                    </div>
+                    <p>Average rating: ${product.rating}</p>
+                    <p>Sold: ${product.quantity}</p>
+                </div>
+            `;
+            document.getElementById("productList").appendChild(productItem);
+        });
+
+        // Update pagination
+        updatePagination(order, page, data.totalPages);
+
+    } catch (error) {
+        console.error('Error while loading products:', error);
+    }
+}
+
+// Pagination update function
+function updatePagination(order, currentPage, totalPages) {
+    const paginationContainer = document.getElementById("pagination");
+    paginationContainer.innerHTML = ""; // Clear existing pagination buttons
+
+    for (let i = 1; i <= totalPages; i++) {
+        const button = document.createElement("button");
+        button.textContent = i;
+        button.className = i === currentPage ? "active" : "";
+        button.onclick = () => loadProducts(order, i); // Update to call loadProducts with the correct page
+        paginationContainer.appendChild(button);
+    }
+}
+
+// Initial load of products
+loadProducts("desc", 1);
+
+    // Function to delete review
+function deleteReview(reviewId) {
+    if (confirm("Bạn có chắc chắn muốn xóa bình luận này?")) {
+        fetch(`/Admin/Review/DeleteReview`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ reviewId: reviewId })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                // Nếu thành công, xóa phần tử bình luận trên giao diện
+                const reviewItem = document.querySelector(`.review-item[data-review-id="${reviewId}"]`);
+                if (reviewItem) {
+                    reviewItem.remove();
+                }
+                alert(data.message); // Thông báo thành công
+            } else {
+                alert(data.message); // Thông báo lỗi nếu có
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error); // Lỗi khi gọi API
+            alert("Có lỗi xảy ra khi xóa bình luận.");
+        });
+    }
+}
+function reloadReviews(productId) {
+    fetch(`/Admin/Review/GetReviews?productId=${productId}`)
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                const reviewList = document.getElementById("reviewList");
+                reviewList.innerHTML = ''; // Xóa danh sách bình luận hiện tại
+                data.reviews.forEach(review => {
+                    reviewList.innerHTML += `
+                        <div class="review-item" data-review-id="${review.reviewId}">
+                            <div class="review-header">
+                                <img src="https://via.placeholder.com/40" alt="User Avatar" />
+                                <div>
+                                    <strong>${review.customerId}</strong>
+                                    <p>${new Date(review.createdAt).toLocaleDateString()}</p>
+                                    <span class="user-rating">
+                                        ${[...Array(5).keys()].map(i => `
+                                            <span class="fa ${i < review.rating ? 'fa-star' : 'fa-star-o'}"></span>
+                                        `).join('')}
+                                    </span>
+                                </div>
+                            </div>
+                            <p>${review.reviewText}</p>
+                            <div class="reply">
+                                <a href="#" class="delete-review" onclick="deleteReview(${review.reviewId})">Xóa</a>
+                            </div>
+                        </div>
+                    `;
+                });
+            }
+        })
+        .catch(error => {
+            console.error('Error loading reviews:', error);
+        });
+}
+
+    // Create chart
+    async function drawChart() {
+        try {
+            const response = await fetch('/Admin/Review/GetChartData');
+            if (!response.ok) {
+                throw new Error('Failed to fetch chart data.');
+            }
+            const chartData = await response.json();
+
+            const ctx = document.getElementById('ratingChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['5 Sao', '4 Sao', '3 Sao', '2 Sao', '1 Sao'],
+                    datasets: [{
+                        label: 'Số lượng đánh giá',
+                        data: chartData,
+                        backgroundColor: ['#f44336', '#ff9800', '#ffc107', '#8bc34a', '#4caf50'],
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: { display: false }
+                    },
+                    scales: {
+                        x: { title: { display: true, text: 'Mức đánh giá' } },
+                        y: { beginAtZero: true, title: { display: true, text: 'Số lượng' } }
+                    }
+                }
+            });
+        } catch (error) {
+            console.error('Error while drawing chart:', error);
+        }
+    }
+
+    // Initialize chart on page load
+    drawChart();
+</script>

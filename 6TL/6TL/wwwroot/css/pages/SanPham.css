@@ -15,6 +15,26 @@
     object-position: center;
     filter: brightness(70%); /* Làm tối nhẹ hình ảnh */
 }
+.btn-filter {
+    padding: 10px 20px; /* Khoảng cách bên trong nút */
+    background-color: #28a745; /* Màu nền của nút (xanh lá) */
+    color: white; /* Màu chữ */
+    font-size: 16px; /* Kích thước chữ */
+    border: none; /* Bỏ đường viền */
+    border-radius: 4px; /* Bo góc */
+    cursor: pointer; /* Hiệu ứng con trỏ khi di chuột qua */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Hiệu ứng chuyển màu và phóng to */
+}
+
+    .btn-filter:hover {
+        background-color: #218838; /* Màu nền khi hover (xanh lá đậm hơn) */
+        transform: scale(1.05); /* Phóng to nhẹ khi hover */
+    }
+
+    .btn-filter:active {
+        background-color: #1e7e34; /* Màu nền khi click (xanh lá rất đậm) */
+        transform: scale(0.98); /* Thu nhỏ nhẹ khi click */
+    }
 
 .banner-overlay_sp {
     position: absolute;
@@ -55,8 +75,48 @@
     box-shadow: 0 4px 0px rgba(0, 0, 0, 0.1);
  
 }
+    .sidebar_sp .search-bar_sp {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        gap: 10px;
+        border-radius: 8px; /* Bo góc */
+        border: 1px solid #ddd; /* Đường viền mỏng */
+        padding: 10px; /* Khoảng cách bên trong */
+        background-color: #f9f9f9; /* Màu nền sáng */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+    }
+
+        .sidebar_sp .search-bar_sp input {
+            flex-grow: 1; /* Làm cho input chiếm hết không gian còn lại */
+            padding: 8px 12px; /* Khoảng cách bên trong */
+            border: 1px solid #ccc; /* Đường viền */
+            border-radius: 4px; /* Bo góc cho input */
+            font-size: 14px; /* Kích thước chữ */
+            outline: none; /* Bỏ outline mặc định */
+        }
+
+            .sidebar_sp .search-bar_sp input:focus {
+                border-color: #007bff; /* Màu viền khi focus */
+                box-shadow: 0 0 3px rgba(0, 123, 255, 0.5); /* Hiệu ứng đổ bóng khi focus */
+            }
+
+        .sidebar_sp .search-bar_sp .btn-search {
+            padding: 8px 15px;
+            background-color: #007bff; /* Màu nền nút */
+            color: white; /* Màu chữ */
+            border: none; /* Bỏ đường viền */
+            border-radius: 4px; /* Bo góc */
+            cursor: pointer; /* Hiệu ứng con trỏ khi di chuột qua */
+            font-size: 14px; /* Kích thước chữ */
+        }
+
+            .sidebar_sp .search-bar_sp .btn-search:hover {
+                background-color: #0056b3; /* Màu nền khi hover */
+            }
 
     .sidebar_sp h3 {
+        text-align:left;
         font-size: 18px;
         font-weight: bold;
         color: #333;
@@ -234,3 +294,18 @@ h2_sp {
         .pagination_sp button:hover {
             background-color: #ddd;
         }
+
+.no-products-message {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #B79858; /* Màu vàng nhẹ */
+    margin-top: 20px;
+    padding: 15px;
+    border: 2px solid #B79858; /* Viền bao quanh thông báo */
+    border-radius: 5px;
+    background-color: #f9f9f9; /* Nền màu sáng */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hiệu ứng bóng */
+    max-width: 500px;
+    
+}

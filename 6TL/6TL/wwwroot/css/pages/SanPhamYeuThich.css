@@ -47,8 +47,8 @@ header {
 }
 
     .product-item-spyt:hover {
-        transform: translateY(-5px); /* Nhô lên khi hover */
-        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        transform: translateY(-5px);
+        Nhô lên khi hover box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
     }
 
     /* Ảnh sản phẩm */
@@ -144,10 +144,10 @@ header {
 
     .cart-btn:hover {
         background-color: #e74c3c; /* Màu nền khi hover */
-        width: 50px; /* Chiều rộng nút */
-        height: 50px; /* Chiều cao nút */
-        padding: 0; /* Loại bỏ padding */
-        display: flex; /* Dùng flex để căn giữa */
+        /*width: 50px;*/ /* Chiều rộng nút */
+        /*height: 50px;*/ /* Chiều cao nút */
+        /*padding: 0;*/ /* Loại bỏ padding */
+        /*display: flex;*/ /* Dùng flex để căn giữa */
     }
 
     .cart-btn:active {

@@ -1339,3 +1339,14 @@ E:\Asp_Project\Asp_Project\6TL\6TL\bin\Debug\net8.0\StarkbankEcdsa.dll
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Extensions.Configuration.dll
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\SendGrid.dll
 D:\DoAnAsp\Asp_Project\6TL\6TL\bin\Debug\net8.0\StarkbankEcdsa.dll
+D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Extensions.Configuration.dll
+D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\bin\Debug\net8.0\SendGrid.dll
+D:\ổ D\TK WEB ASPNET CORE\Đồ án ASP\Asp_Project\6TL\6TL\bin\Debug\net8.0\StarkbankEcdsa.dll
+D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\BCrypt.Net-Next.dll
+D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\FunScript.TypeScript.Binding.lib.dll
+D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\FunScript.TypeScript.Binding.nodemailer.dll
+D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\Microsoft.Extensions.Configuration.dll
+D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\SendGrid.dll
+D:\ASP\ASP_DoAn_Backup\Asp_Project\6TL\6TL\bin\Debug\net8.0\StarkbankEcdsa.dll

@@ -1,4 +1,10 @@
-﻿<style>
+﻿@{
+    int currentPage = ViewBag.CurrentPage ?? 1;
+    int totalPages = ViewBag.TotalPages ?? 1;
+    string baseUrl = ViewBag.BaseUrl ?? "#";
+}
+
+<style>
     .pagination {
         display: flex;
         justify-content: center;
@@ -59,11 +65,26 @@
 </style>
 
 <div class="pagination">
-    <a href="#" class="prev">« Previous</a>
-    <a href="#" class="page-number active">1</a>
-    <a href="#" class="page-number">2</a>
-    <a href="#" class="page-number">3</a>
-    <a href="#" class="page-number">4</a>
-    <a href="#" class="page-number">5</a>
-    <a href="#" class="next">Next »</a>
+    @if (currentPage > 1)
+    {
+        <a href="@($"{baseUrl}?page={currentPage - 1}")" class="prev">« Previous</a>
+    }
+    else
+    {
+        <a href="#" class="prev disabled">« Previous</a>
+    }
+
+    @for (int i = 1; i <= totalPages; i++)
+    {
+        <a href="@($"{baseUrl}?page={i}")" class="page-number @(i == currentPage ? "active" : "")">@i</a>
+    }
+
+    @if (currentPage < totalPages)
+    {
+        <a href="@($"{baseUrl}?page={currentPage + 1}")" class="next">Next »</a>
+    }
+    else
+    {
+        <a href="#" class="next disabled">Next »</a>
+    }
 </div>

@@ -1,0 +1,10 @@
+﻿@model Supplier
+
+<h2>Xóa Nhà Cung Cấp</h2>
+
+<p>Bạn có chắc chắn muốn xóa nhà cung cấp: <strong>@Model.SupplierName</strong>?</p>
+
+<form method="post">
+    <button type="submit" class="btn btn-danger">Xóa</button>
+    <a asp-area="Admin" asp-action="XoaNhaCC" asp-controller="Supplier" class="btn btn-secondary">Hủy</a>
+</form>

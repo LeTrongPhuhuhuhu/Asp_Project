@@ -1,0 +1,24 @@
+﻿@model Supplier
+
+<h2>Sửa Nhà Cung Cấp</h2>
+
+<form method="post">
+    <input type="hidden" name="SupplierId" value="@Model.SupplierId" />
+    <div class="form-group">
+        <label for="Name">Tên nhà cung cấp</label>
+        <input type="text" class="form-control" id="SupplierName" name="SupplierName" value="@Model.SupplierName" required />
+    </div>
+    <div class="form-group">
+        <label for="Email">Email</label>
+        <input type="text" class="form-control" id="Email" name="Email" value="@Model.Email" required />
+    </div>
+    <div class="form-group">
+        <label for="Address">Địa chỉ</label>
+        <input type="text" class="form-control" id="Address" name="Address" value="@Model.Address" required />
+    </div>
+    <div class="form-group">
+        <label for="Phone">Điện thoại</label>
+        <input type="number" class="form-control" id="PhoneNumber" name="PhoneNumber" value="@Model.PhoneNumber" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Cập nhật</button>
+</form>
