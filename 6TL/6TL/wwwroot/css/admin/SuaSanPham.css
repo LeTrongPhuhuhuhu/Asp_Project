@@ -326,3 +326,41 @@ h2 {
 		opacity: 0;
 	}
 }
+.form-row_ssp {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.preview-image {
+	max-width: 200px;
+	max-height: 200px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	object-fit: cover;
+}
+
+.old-image, .new-image {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 5px;
+}
+.row {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin-top: 20px;
+}
+
+.col-md-6 {
+	width: 48%;
+}
+
+.img-fluid {
+	max-width: 100%;
+	height: auto;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	padding: 5px;
+}
