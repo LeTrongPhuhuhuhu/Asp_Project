@@ -64,49 +64,57 @@
             <div class="content_sp">
                 <h2>Nội Thất / Bàn</h2>
                 <div class="product-list_sp">
-                    @if (Model.Any())
+                    <!-- Kiểm tra thông báo lỗi -->
+                    @if (TempData["Message"] != null)
                     {
-                        @foreach (var product in Model)
-                        {
-                            <div class="product-item_sp">
-                                <a href="/Product/ChiTietSanPham/@product.ProductId">
-                                    <div class="favorite_sp">
-                                        <i class="heart-icon_sp">&hearts;</i>
-                                    </div>
-                                    <img src="~/img/@product.Image" alt="@product.ProductName" />
-                                    <h3>@product.ProductName</h3>
-                                    <span>@product.Price?.ToString("N0") VND</span>
-                                    <div class="rating_sp">
-                                        @for (int i = 1; i <= 5; i++)
-                                        {
-                                            if (product.Rating >= i)
-                                            {
-                                                <span>★</span>  <!-- Sao đầy -->
-                                            }
-                                            else if (product.Rating >= i - 0.5)
-                                            {
-                                                <span>☆</span>  <!-- Sao rỗng -->
-                                            }
-                                            else
-                                            {
-                                                <span>☆</span> <!-- Sao rỗng -->
-                                            }
-                                        }
-                                    </div>
-                                </a>
-                            </div>
-                        }
-
+                        <div class="alert alert-danger">
+                            @TempData["Message"]
+                        </div>
                     }
                     else
                     {
-                        <p>Không có sản phẩm nào phù hợp với tiêu chí lọc.</p>
+                        <!-- Kiểm tra có sản phẩm không -->
+                        @if (Model.Any())
+                        {
+                            @foreach (var product in Model)
+                            {
+                                <div class="product-item_sp">
+                                    <a href="/Product/ChiTietSanPham/@product.ProductId">
+                                        <div class="favorite_sp">
+                                            <i class="heart-icon_sp">&hearts;</i>
+                                        </div>
+                                        <img src="~/img/@product.Image" alt="@product.ProductName" />
+                                        <h3>@product.ProductName</h3>
+                                        <span>@product.Price?.ToString("N0") VND</span>
+                                        <div class="rating_sp">
+                                            @for (int i = 1; i <= 5; i++)
+                                            {
+                                                if (product.Rating >= i)
+                                                {
+                                                    <span>★</span>  <!-- Sao đầy -->
+                                                }
+                                                else if (product.Rating >= i - 0.5)
+                                                {
+                                                    <span>☆</span>  <!-- Sao rỗng -->
+                                                }
+                                                else
+                                                {
+                                                    <span>☆</span> <!-- Sao rỗng -->
+                                                }
+                                            }
+                                        </div>
+                                    </a>
+                                </div>
+                            }
+                        }
+                        else
+                        {
+                            <p class="no-products-message">Không có sản phẩm nào phù hợp với tiêu chí lọc.</p>
+                        }
                     }
                 </div>
-
-                <!-- Pagination -->
-                @Html.Partial("~/Views/Shared/_Pagination.cshtml")
             </div>
+
         </section>
     </main>
     <script>
