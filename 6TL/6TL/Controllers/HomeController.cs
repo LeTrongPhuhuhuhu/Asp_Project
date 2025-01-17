@@ -420,11 +420,84 @@ namespace _6TL.Controllers
 		{
 			return View();
 		}
-		public IActionResult LichSuMuaHang()
-		{
-			return View();
-		}
-		public IActionResult GioiThieu()
+        public IActionResult LichSuMuaHang()
+        {
+            // Lấy danh sách đơn hàng và thông tin cơ bản
+            var orders = _context.Orders
+                .Include(o => o.OrderDetails) // Nạp chi tiết đơn hàng
+                .ThenInclude(od => od.Product) // Nạp thông tin sản phẩm
+                .OrderByDescending(o => o.OrderDate) // Sắp xếp theo ngày đặt hàng mới nhất
+                .ToList();
+
+            return View(orders);
+        }
+        // Lấy chi tiết một đơn hàng theo mã đơn hàng
+        [HttpGet]
+        public IActionResult GetOrderDetail(int orderId)
+        {
+            var order = _context.Orders
+                .Include(o => o.OrderDetails)
+                .ThenInclude(od => od.Product)
+                .FirstOrDefault(o => o.OrderId == orderId);
+
+            if (order == null)
+            {
+                return Json(new { success = false, message = "Đơn hàng không tồn tại!" });
+            }
+
+            var orderDetails = order.OrderDetails.Select(od => new
+            {
+                od.ProductName,
+                od.Quantity,
+                Price = od.UnitPrice.ToString("N0"),
+                Total = (od.Quantity * od.UnitPrice).ToString("N0")
+            });
+
+            var result = new
+            {
+                success = true,
+                orderId = order.OrderId,
+                address = order.Address,
+                orderDate = order.OrderDate?.ToString("dd/MM/yyyy"),
+                deliveryDate = order.UpdatedAt?.ToString("dd/MM/yyyy"),
+                total = order.TotalAmount?.ToString("N0"),
+                details = orderDetails
+            };
+
+            return Json(result);
+        }
+        [HttpGet]
+        public IActionResult CancelOrder(int orderId)
+        {
+            try
+            {
+                // Find the order by ID (adjust this logic to match your data access method)
+                var order = _context.Orders.FirstOrDefault(o => o.OrderId == orderId);
+                if (order == null)
+                {
+                    return Json(new { success = false, message = "Đơn hàng không tồn tại." });
+                }
+
+                // Check if the order can be cancelled (e.g., it is not already completed or cancelled)
+                if (order.OrderStatus == "Completed" || order.OrderStatus == "Cancelled")
+                {
+                    return Json(new { success = false, message = "Không thể hủy đơn hàng đã hoàn thành hoặc đã hủy." });
+                }
+
+                // Update the order status
+                order.OrderStatus = "Cancelled";
+                _context.SaveChanges(); // Save changes to the database
+
+                return Json(new { success = true });
+            }
+            catch (Exception ex)
+            {
+                // Log the error (adjust this based on your logging mechanism)
+                Console.WriteLine(ex.Message);
+                return Json(new { success = false, message = "Đã xảy ra lỗi khi hủy đơn hàng." });
+            }
+        }
+        public IActionResult GioiThieu()
 		{
 			return View();
 		}
