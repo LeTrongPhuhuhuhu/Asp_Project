@@ -20,6 +20,22 @@ namespace _6TL.Controllers
             return View();
         }
         [HttpGet]
+        public ActionResult LaySanPhamYeuThich(int customerId)
+        {
+            var wishlist = _context.Wishlists
+                .Where(w => w.CustomerId == customerId)
+                .Select(w => new Wishlist
+                {
+                    ProductId = w.ProductId ?? 0,
+                    ProductName = w.ProductName,
+                    Price = w.Price ?? 0,
+                    ProductImage = w.ProductImage,
+                    Rating = w.Rating
+                }).ToList();
+
+            return Json(wishlist);
+        }
+        [HttpGet]
         public IActionResult SanPham(string? search, List<string>? categories, decimal? minPrice, decimal? maxPrice, int page = 1, int pageSize = 9)
         {
             var products = _context.Products.AsQueryable();
