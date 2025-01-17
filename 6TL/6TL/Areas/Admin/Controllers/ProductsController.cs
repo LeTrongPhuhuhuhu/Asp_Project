@@ -242,7 +242,7 @@ namespace _6TL.Areas.Admin.Controllers
             // Tạo danh sách cho các dropdown từ cơ sở dữ liệu
             ViewBag.Categories = new SelectList(_context.Categories, "CategoryId", "CategoryName", product.CategoryId);
             ViewBag.Suppliers = new SelectList(_context.Suppliers, "SupplierId", "SupplierName", product.SupplierId);
-
+            ViewBag.OldImage = product.Image; // Truyền ảnh cũ qua ViewBag
             // Trả về view với sản phẩm đã được lấy từ cơ sở dữ liệu
             return View(product);
         }
@@ -251,76 +251,127 @@ namespace _6TL.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult SuaSanPham(Product product, IFormFile? imageFile)
         {
-            
-            try 
+            // Lấy sản phẩm hiện tại từ cơ sở dữ liệu
+            var existingProduct = _context.Products.FirstOrDefault(p => p.ProductId == product.ProductId);
+            if (existingProduct == null)
             {
+                return NotFound(); // Nếu sản phẩm không tồn tại
+            }
 
-                // Lấy sản phẩm hiện tại từ cơ sở dữ liệu
-                var existingProduct = _context.Products.FirstOrDefault(p => p.ProductId == product.ProductId);
-                if (existingProduct == null)
+            // Kiểm tra dữ liệu
+            if (product.Price <= 0 || !decimal.TryParse(product.Price.ToString(), out _))
+            {
+                ModelState.AddModelError("Price", "Giá bán phải là số dương và có thể là số thập phân.");
+                ViewBag.Categories = new SelectList(_context.Categories, "CategoryId", "CategoryName", product.CategoryId);
+                ViewBag.Suppliers = new SelectList(_context.Suppliers, "SupplierId", "SupplierName", product.SupplierId);
+
+                return View(product); // Trả về View với thông báo lỗi
+            }
+
+            if (product.CapitalAmount <= 0 || !decimal.TryParse(product.CapitalAmount.ToString(), out _))
+            {
+                ModelState.AddModelError("CapitalAmount", "Giá vốn phải là số dương và có thể là số thập phân.");
+                ViewBag.Categories = new SelectList(_context.Categories, "CategoryId", "CategoryName", product.CategoryId);
+                ViewBag.Suppliers = new SelectList(_context.Suppliers, "SupplierId", "SupplierName", product.SupplierId);
+
+                return View(product); // Trả về View với thông báo lỗi
+            }
+
+            if (product.Quantity <= 0)
+            {
+                ModelState.AddModelError("Quantity", "Số lượng phải là số dương.");
+                ViewBag.Categories = new SelectList(_context.Categories, "CategoryId", "CategoryName", product.CategoryId);
+                ViewBag.Suppliers = new SelectList(_context.Suppliers, "SupplierId", "SupplierName", product.SupplierId);
+
+                return View(product); // Trả về View với thông báo lỗi
+            }
+
+            if (product.CapitalAmount >= product.Price)
+            {
+                ModelState.AddModelError("CapitalAmount", "Giá vốn phải nhỏ hơn giá bán.");
+                ViewBag.Categories = new SelectList(_context.Categories, "CategoryId", "CategoryName", product.CategoryId);
+                ViewBag.Suppliers = new SelectList(_context.Suppliers, "SupplierId", "SupplierName", product.SupplierId);
+
+                return View(product); // Trả về View với thông báo lỗi
+            }
+
+            if (imageFile != null)
+            {
+                // Kiểm tra định dạng và kích thước file
+                var allowedExtensions = new[] { ".jpg", ".jpeg", ".png" };
+                var fileExtension = Path.GetExtension(imageFile.FileName).ToLower();
+
+                if (!allowedExtensions.Contains(fileExtension))
                 {
-                    return NotFound(); // Nếu sản phẩm không tồn tại
+                    ModelState.AddModelError("ImageFile", "Hình ảnh phải có định dạng JPG, PNG.");
+                    ViewBag.Categories = new SelectList(_context.Categories, "CategoryId", "CategoryName", product.CategoryId);
+                    ViewBag.Suppliers = new SelectList(_context.Suppliers, "SupplierId", "SupplierName", product.SupplierId);
+
+                    return View(product); // Trả về View với thông báo lỗi
                 }
 
-                // Cập nhật thông tin cơ bản
-                existingProduct.ProductName = product.ProductName;
-                existingProduct.Price = product.Price;
-                existingProduct.Material = product.Material;
-                existingProduct.ProductDescription = product.ProductDescription;
-                existingProduct.CategoryId = product.CategoryId;
-                existingProduct.SupplierId = product.SupplierId;
-                existingProduct.Color = product.Color; // Cập nhật màu sắc từ cột Color
-                existingProduct.Quantity = product.Quantity; // Cập nhật số lượng từ cột Quantity
-                existingProduct.Slug = GenerateSlugEdit(product.ProductName);
-                // Xử lý hình ảnh nếu có upload mới
-                if (imageFile != null && imageFile.Length > 0)
+                if (imageFile.Length > 5 * 1024 * 1024) // Giới hạn 5MB
                 {
-                    string directoryPath = Path.Combine("wwwroot", "images", "products");
-                    if (!Directory.Exists(directoryPath))
-                    {
-                        Directory.CreateDirectory(directoryPath);
-                    }
+                    ModelState.AddModelError("ImageFile", "Hình ảnh không được vượt quá 5MB.");
+                    ViewBag.Categories = new SelectList(_context.Categories, "CategoryId", "CategoryName", product.CategoryId);
+                    ViewBag.Suppliers = new SelectList(_context.Suppliers, "SupplierId", "SupplierName", product.SupplierId);
 
+                    return View(product); // Trả về View với thông báo lỗi
+
+                }
+            }
+            // Cập nhật thông tin sản phẩm
+            existingProduct.ProductName = product.ProductName;
+            existingProduct.Price = product.Price;
+            existingProduct.Material = product.Material;
+            existingProduct.ProductDescription = product.ProductDescription;
+            existingProduct.CategoryId = product.CategoryId;
+            existingProduct.SupplierId = product.SupplierId;
+            existingProduct.Color = product.Color;
+            existingProduct.Quantity = product.Quantity;
+            existingProduct.Slug = GenerateSlugEdit(product.ProductName);
+
+            if (imageFile != null && imageFile.Length > 0)
+            {
+                string directoryPath = Path.Combine("wwwroot", "images", "products");
+                if (!Directory.Exists(directoryPath))
+                {
+                    Directory.CreateDirectory(directoryPath);
+                }
                     string fileName = Guid.NewGuid().ToString() + "_" + imageFile.FileName;
-                    string filePath = Path.Combine(directoryPath, fileName);
+                string filePath = Path.Combine(directoryPath, fileName);
 
-                    // Lưu file ảnh
-                    using (var fileStream = new FileStream(filePath, FileMode.Create))
-                    {
-                        imageFile.CopyTo(fileStream);
-                    }
-
-                    // Xóa ảnh cũ nếu có
-                    if (!string.IsNullOrEmpty(existingProduct.Image))
-                    {
-                        string oldImagePath = Path.Combine("wwwroot", existingProduct.Image);
-                        if (System.IO.File.Exists(oldImagePath))
-                        {
-                            System.IO.File.Delete(oldImagePath);
-                        }
-                    }
-
-                    // Gán đường dẫn ảnh mới
-                    existingProduct.Image = Path.Combine("images", "products", fileName);
+                // Lưu file ảnh mới
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+                    imageFile.CopyTo(fileStream);
                 }
 
-                // Cập nhật thời gian chỉnh sửa
-                existingProduct.UpdatedAt = DateTime.Now;
+                // Xóa ảnh cũ nếu tồn tại
+                if (!string.IsNullOrEmpty(existingProduct.Image))
+                {
+                    string oldImagePath = Path.Combine("wwwroot", existingProduct.Image);
+                    if (System.IO.File.Exists(oldImagePath))
+                    {
+                        System.IO.File.Delete(oldImagePath);
+                    }
+                }
 
-                // Lưu thay đổi vào cơ sở dữ liệu
-                _context.Products.Update(existingProduct);
-                _context.SaveChanges();
+                // Gán đường dẫn ảnh mới
+                existingProduct.Image = Path.Combine("images", "products", fileName);
+            }
 
-                TempData["SuccessMessage"] = "Cập nhật sản phẩm thành công!";
-                return RedirectToAction("QuanLySanPham");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error: {ex.Message}");
-                TempData["ErrorMessage"] = "Có lỗi xảy ra trong quá trình cập nhật sản phẩm. Vui lòng thử lại sau.";
-                return View(product); // Trả về view với dữ liệu hiện tại để hiển thị lỗi
-            }
+            // Cập nhật thời gian chỉnh sửa
+            existingProduct.UpdatedAt = DateTime.Now;
+
+            // Lưu thay đổi vào cơ sở dữ liệu
+            _context.Products.Update(existingProduct);
+            _context.SaveChanges();
+
+            TempData["SuccessMessage"] = "Cập nhật sản phẩm thành công!";
+            return RedirectToAction("QuanLySanPham");
         }
+
 
         private string GenerateSlugEdit(string productName)
         {

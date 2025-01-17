@@ -22,14 +22,26 @@
         <!-- Giá bán -->
         <div class="form-row_ssp">
             <label for="price">Giá bán</label>
-            <input type="text" id="Price" name="Price" value="@Model.Price" required />
+            <input type="text"
+                   id="Price"
+                   name="Price"
+                   value="@Model.Price"
+                   class="form-control @(ViewData.ModelState["Price"]?.Errors.Any() == true ? "is-invalid" : "")" />
+            @Html.ValidationMessageFor(model => model.Price, "", new { @class = "text-danger" })
         </div>
+
 
         <!-- Giá vốn -->
         <div class="form-row_ssp">
-            <label for="price">Giá vốn</label>
-            <input type="text" id="CapitalAmount" name="CapitalAmount" value="@Model.CapitalAmount" required />
+            <label for="CapitalAmount">Giá vốn</label>
+            <input type="text"
+                   id="CapitalAmount"
+                   name="CapitalAmount"
+                   value="@Model.CapitalAmount"
+                   class="form-control @(ViewData.ModelState["CapitalAmount"]?.Errors.Any() == true ? "is-invalid" : "")" />
+            @Html.ValidationMessageFor(model => model.CapitalAmount, "", new { @class = "text-danger" })
         </div>
+
 
         <!-- Màu sắc -->
         <div class="form-row_ssp">
@@ -39,20 +51,25 @@
 
         <!-- Số lượng -->
         <div class="form-row_ssp">
-            <label for="quantity">Số lượng</label>
-            <input type="number" id="Quantity" name="Quantity" value="@Model.Quantity" required />
+            <label for="Quantity">Số lượng</label>
+            <input type="text"
+                   id="Quantity"
+                   name="Quantity"
+                   value="@Model.Quantity"
+                   class="form-control @(ViewData.ModelState["Quantity"]?.Errors.Any() == true ? "is-invalid" : "")" />
+            @Html.ValidationMessageFor(model => model.Quantity, "", new { @class = "text-danger" })
         </div>
 
         <!-- Danh mục -->
         <div class="form-row_ssp">
             <label for="category">Danh mục</label>
-            @Html.DropDownListFor(model => model.CategoryId, (SelectList)ViewBag.Categories, "Chọn danh mục", new { @class = "form-control" })
+            @Html.DropDownListFor(model => model.CategoryId, (SelectList)ViewBag.Categories, new { @class = "form-control" })
         </div>
 
         <!-- Nhà cung cấp -->
         <div class="form-row_ssp">
             <label for="supplier">Nhà cung cấp</label>
-            @Html.DropDownListFor(model => model.SupplierId, (SelectList)ViewBag.Suppliers, "Chọn nhà cung cấp", new { @class = "form-control" })
+            @Html.DropDownListFor(model => model.SupplierId, (SelectList)ViewBag.Suppliers, new { @class = "form-control" })
         </div>
 
         <!-- Chất liệu -->
@@ -66,22 +83,42 @@
             <label for="description">Mô tả</label>
             <textarea id="ProductDescription" name="ProductDescription" rows="5" required>@Model.ProductDescription</textarea>
         </div>
-
-        <!-- Khu vực hình ảnh -->
         <div class="form-row_ssp">
-            <label for="image">Hình ảnh hiện tại</label>
-            <div class="current-image">
-                <img src="@Model.Image" name="Image" alt="Current Product Image" />
-            </div>
             <label for="image-upload">Cập nhật hình ảnh</label>
-            <input type="file" id="image-upload" name="ImageFile" accept="image/*" />
+
+            <div class="row">
+                <!-- Khu vực hiển thị ảnh cũ -->
+                <div class="col-md-6">
+                    <label>Hình ảnh hiện tại:</label>
+                    <img src="@Url.Content($"~/{ViewBag.OldImage}")" alt="Ảnh hiện tại" class="preview-image img-fluid">
+                </div>
+
+                <!-- Khu vực hiển thị ảnh mới -->
+                <div class="col-md-6">
+                    <label>Ảnh mới:</label>
+                    <img id="preview-image" class="preview-image img-fluid" style="display: none;" alt="Xem trước ảnh mới">
+                </div>
+            </div>
+
+            <!-- Khu vực tải lên ảnh mới -->
+            <input type="file"
+                   id="image-upload"
+                   name="ImageFile"
+                   accept="image/*"
+                   class="form-control @(ViewData.ModelState["ImageFile"]?.Errors.Any() == true ? "is-invalid" : "")"
+                   onchange="previewImage(event)">
+
+
+            @Html.ValidationMessage("ImageFile", "", new { @class = "text-danger" })
         </div>
+
 
         <!-- Nút hành động -->
         <div class="button-group_ssp">
             <button type="submit" class="save-btn_ssp">Lưu thay đổi</button>
             <a href="/Admin/Home/QuanLySanPham" class="cancel-btn_ssp">Hủy</a>
         </div>
+
 
         @if (TempData["SuccessMessage"] != null)
         {
@@ -97,4 +134,13 @@
             </div>
         }
     </form>
+    <script>
+        function previewImage(event) {
+            const preview = document.getElementById('preview-image');
+            preview.src = URL.createObjectURL(event.target.files[0]);
+            preview.style.display = 'block';
+        }
+
+    </script>
+
 </div>

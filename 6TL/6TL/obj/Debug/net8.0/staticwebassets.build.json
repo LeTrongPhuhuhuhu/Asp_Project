@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "MLXd9rfcbCx2JYUQitF+ms0sXVPTJ2W9oYBg3k4DPZg=",
+  "Hash": "xa8RLaprqRL0PmfRVwrsh9jB1PRLxRHt2LB1EtW0o78=",
   "Source": "6TL",
   "BasePath": "_content/6TL",
   "Mode": "Default",
@@ -1062,6 +1062,25 @@
       "OriginalItemSpec": "wwwroot\\images\\products\\6a09407f-e0f3-4c7f-abb3-40563117367f_1.jpg"
     },
     {
+      "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\images\\products\\6ca9c5a1-4ce1-4f7d-be69-638f4d5b1e08_bannhua.jpg",
+      "SourceId": "6TL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
+      "BasePath": "_content/6TL",
+      "RelativePath": "images/products/6ca9c5a1-4ce1-4f7d-be69-638f4d5b1e08_bannhua.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\products\\6ca9c5a1-4ce1-4f7d-be69-638f4d5b1e08_bannhua.jpg"
+    },
+    {
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\images\\products\\7123d314-9474-4e7c-b66d-0f53e439b2ab_1.jpg",
       "SourceId": "6TL",
       "SourceType": "Discovered",
@@ -1117,25 +1136,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\products\\86dc5153-279c-416c-b0b3-574e3d758b0e_1.jpg"
-    },
-    {
-      "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\images\\products\\97c10c59-b5d6-4e97-b146-14b9a0318ea1_bannhua.jpg",
-      "SourceId": "6TL",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\",
-      "BasePath": "_content/6TL",
-      "RelativePath": "images/products/97c10c59-b5d6-4e97-b146-14b9a0318ea1_bannhua.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\products\\97c10c59-b5d6-4e97-b146-14b9a0318ea1_bannhua.jpg"
     },
     {
       "Identity": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\images\\products\\9c0792c4-2182-4108-a49e-b7f944a1f29d_1.jpg",
