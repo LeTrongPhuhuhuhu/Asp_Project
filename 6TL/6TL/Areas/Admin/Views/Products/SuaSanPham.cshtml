@@ -24,32 +24,35 @@
             <label for="price">Giá bán</label>
             <input type="text" id="Price" name="Price" value="@Model.Price" required />
         </div>
-        <!-- Giá vốn  -->
+
+        <!-- Giá vốn -->
         <div class="form-row_ssp">
             <label for="price">Giá vốn</label>
             <input type="text" id="CapitalAmount" name="CapitalAmount" value="@Model.CapitalAmount" required />
         </div>
+
         <!-- Màu sắc -->
         <div class="form-row_ssp">
-            <label for="color">Màu sắc </label>
+            <label for="color">Màu sắc</label>
             <input type="text" id="Color" name="Color" value="@Model.Color" required />
         </div>
+
         <!-- Số lượng -->
         <div class="form-row_ssp">
-            <label for="quantity">Số lượng </label>
+            <label for="quantity">Số lượng</label>
             <input type="number" id="Quantity" name="Quantity" value="@Model.Quantity" required />
         </div>
+
         <!-- Danh mục -->
         <div class="form-row_ssp">
             <label for="category">Danh mục</label>
-            <input type="text" id="category" name="CategoryName" value="@Model.Category?.CategoryName" readonly />
-            <input type="hidden" name="CategoryId" value="@Model.CategoryId" />
+            @Html.DropDownListFor(model => model.CategoryId, (SelectList)ViewBag.Categories, "Chọn danh mục", new { @class = "form-control" })
         </div>
 
         <!-- Nhà cung cấp -->
         <div class="form-row_ssp">
             <label for="supplier">Nhà cung cấp</label>
-            <input type="text" id="supplier" name="SupplierName" value="@Model.Supplier?.SupplierName" readonly />
+            @Html.DropDownListFor(model => model.SupplierId, (SelectList)ViewBag.Suppliers, "Chọn nhà cung cấp", new { @class = "form-control" })
         </div>
 
         <!-- Chất liệu -->
@@ -79,6 +82,7 @@
             <button type="submit" class="save-btn_ssp">Lưu thay đổi</button>
             <a href="/Admin/Home/QuanLySanPham" class="cancel-btn_ssp">Hủy</a>
         </div>
+
         @if (TempData["SuccessMessage"] != null)
         {
             <div class="popup success-popup">
@@ -93,7 +97,4 @@
             </div>
         }
     </form>
-    <script>
-        
-    </script>
 </div>

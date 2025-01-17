@@ -222,111 +222,120 @@ namespace _6TL.Areas.Admin.Controllers
 
 
 
-		// GET action để hiển thị thông tin sản phẩm
-		[Route("Admin/Products/SuaSanPham/{ProductId}")]
-		[HttpGet]
-		public IActionResult SuaSanPham(int ProductId)
-		{
-			// Lấy sản phẩm từ cơ sở dữ liệu dựa trên ProductId
-			var product = _context.Products
-				.AsNoTracking()
-				.Include(p => p.Category)
-				.Include(p => p.Supplier)
-				.FirstOrDefault(p => p.ProductId == ProductId);
+        // GET action để hiển thị thông tin sản phẩm
+        [Route("Admin/Products/SuaSanPham/{ProductId}")]
+        [HttpGet]
+        public IActionResult SuaSanPham(int ProductId)
+        {
+            // Lấy sản phẩm từ cơ sở dữ liệu dựa trên ProductId
+            var product = _context.Products
+                .AsNoTracking()
+                .Include(p => p.Category)
+                .Include(p => p.Supplier)
+                .FirstOrDefault(p => p.ProductId == ProductId);
 
-			if (product == null)
-			{
-				return NotFound(); // Nếu không tìm thấy sản phẩm
-			}
+            if (product == null)
+            {
+                return NotFound(); // Nếu không tìm thấy sản phẩm
+            }
 
-			// Tạo danh sách cho các dropdown từ cơ sở dữ liệu
-			ViewBag.Categories = new SelectList(_context.Categories, "CategoryId", "CategoryName", product.CategoryId);
-			ViewBag.Suppliers = new SelectList(_context.Suppliers, "SupplierId", "SupplierName", product.SupplierId);
+            // Tạo danh sách cho các dropdown từ cơ sở dữ liệu
+            ViewBag.Categories = new SelectList(_context.Categories, "CategoryId", "CategoryName", product.CategoryId);
+            ViewBag.Suppliers = new SelectList(_context.Suppliers, "SupplierId", "SupplierName", product.SupplierId);
 
-			// Trả về view với sản phẩm đã được lấy từ cơ sở dữ liệu
-			return View(product);
-		}
+            // Trả về view với sản phẩm đã được lấy từ cơ sở dữ liệu
+            return View(product);
+        }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult SuaSanPham(Product product, IFormFile? imageFile)
+        {
+            
+            try 
+            {
 
-		[HttpPost]
-		[ValidateAntiForgeryToken]
-		public IActionResult SuaSanPham(int id, Product product, IFormFile? imageFile)
-		{
-			if (id != product.ProductId)
-			{
-				return BadRequest("ID mismatch");
-			}
+                // Lấy sản phẩm hiện tại từ cơ sở dữ liệu
+                var existingProduct = _context.Products.FirstOrDefault(p => p.ProductId == product.ProductId);
+                if (existingProduct == null)
+                {
+                    return NotFound(); // Nếu sản phẩm không tồn tại
+                }
 
-			try
-			{
-				// Lấy sản phẩm hiện tại từ cơ sở dữ liệu
-				var existingProduct = _context.Products.Find(product.ProductId);
-				if (existingProduct == null)
-				{
-					return NotFound(); // Nếu sản phẩm không tồn tại
-				}
+                // Cập nhật thông tin cơ bản
+                existingProduct.ProductName = product.ProductName;
+                existingProduct.Price = product.Price;
+                existingProduct.Material = product.Material;
+                existingProduct.ProductDescription = product.ProductDescription;
+                existingProduct.CategoryId = product.CategoryId;
+                existingProduct.SupplierId = product.SupplierId;
+                existingProduct.Color = product.Color; // Cập nhật màu sắc từ cột Color
+                existingProduct.Quantity = product.Quantity; // Cập nhật số lượng từ cột Quantity
+                existingProduct.Slug = GenerateSlugEdit(product.ProductName);
+                // Xử lý hình ảnh nếu có upload mới
+                if (imageFile != null && imageFile.Length > 0)
+                {
+                    string directoryPath = Path.Combine("wwwroot", "images", "products");
+                    if (!Directory.Exists(directoryPath))
+                    {
+                        Directory.CreateDirectory(directoryPath);
+                    }
 
-				// Cập nhật thông tin cơ bản
-				existingProduct.ProductName = product.ProductName;
-				existingProduct.Price = product.Price;
-				existingProduct.Material = product.Material;
-				existingProduct.ProductDescription = product.ProductDescription;
-				existingProduct.CategoryId = product.CategoryId;
-				existingProduct.SupplierId = product.SupplierId;
-				existingProduct.Color = product.Color; // Cập nhật màu sắc từ cột Color
-				existingProduct.Quantity = product.Quantity; // Cập nhật số lượng từ cột Quantity
+                    string fileName = Guid.NewGuid().ToString() + "_" + imageFile.FileName;
+                    string filePath = Path.Combine(directoryPath, fileName);
 
-				// Xử lý hình ảnh nếu có upload mới
-				if (imageFile != null && imageFile.Length > 0)
-				{
-					string directoryPath = Path.Combine("wwwroot", "images", "products");
-					if (!Directory.Exists(directoryPath))
-					{
-						Directory.CreateDirectory(directoryPath);
-					}
+                    // Lưu file ảnh
+                    using (var fileStream = new FileStream(filePath, FileMode.Create))
+                    {
+                        imageFile.CopyTo(fileStream);
+                    }
 
-					string fileName = Guid.NewGuid().ToString() + "_" + imageFile.FileName;
-					string filePath = Path.Combine(directoryPath, fileName);
+                    // Xóa ảnh cũ nếu có
+                    if (!string.IsNullOrEmpty(existingProduct.Image))
+                    {
+                        string oldImagePath = Path.Combine("wwwroot", existingProduct.Image);
+                        if (System.IO.File.Exists(oldImagePath))
+                        {
+                            System.IO.File.Delete(oldImagePath);
+                        }
+                    }
 
-					// Lưu file ảnh
-					using (var fileStream = new FileStream(filePath, FileMode.Create))
-					{
-						imageFile.CopyTo(fileStream);
-					}
+                    // Gán đường dẫn ảnh mới
+                    existingProduct.Image = Path.Combine("images", "products", fileName);
+                }
 
-					// Xóa ảnh cũ nếu có
-					if (!string.IsNullOrEmpty(existingProduct.Image))
-					{
-						string oldImagePath = Path.Combine("wwwroot", existingProduct.Image);
-						if (System.IO.File.Exists(oldImagePath))
-						{
-							System.IO.File.Delete(oldImagePath);
-						}
-					}
+                // Cập nhật thời gian chỉnh sửa
+                existingProduct.UpdatedAt = DateTime.Now;
 
-					// Gán đường dẫn ảnh mới
-					existingProduct.Image = Path.Combine("images", "products", fileName);
-				}
+                // Lưu thay đổi vào cơ sở dữ liệu
+                _context.Products.Update(existingProduct);
+                _context.SaveChanges();
 
-				// Cập nhật thời gian chỉnh sửa
-				existingProduct.UpdatedAt = DateTime.Now;
-
-				// Lưu thay đổi vào cơ sở dữ liệu
-				_context.Products.Update(existingProduct);
-				_context.SaveChanges();
-				TempData["SuccessMessage"] = "Cập nhật sản phẩm thành công!";
-                ViewBag.Categories = _context.Categories.ToList();
+                TempData["SuccessMessage"] = "Cập nhật sản phẩm thành công!";
                 return RedirectToAction("QuanLySanPham");
-			}
-			catch (Exception ex)
-			{
-				Console.WriteLine($"Error: {ex.Message}");
-				TempData["ErrorMessage"] = "Có lỗi xảy ra trong quá trình cập nhật sản phẩm. Vui lòng thử lại sau.";
-				return View(product); // Trả về view với dữ liệu hiện tại để hiển thị lỗi
-			}
-		}
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+                TempData["ErrorMessage"] = "Có lỗi xảy ra trong quá trình cập nhật sản phẩm. Vui lòng thử lại sau.";
+                return View(product); // Trả về view với dữ liệu hiện tại để hiển thị lỗi
+            }
+        }
 
-		[Route("Admin/Products/QuanLySanPham/{productId}")]
+        private string GenerateSlugEdit(string productName)
+        {
+            // Thực hiện chuyển tên sản phẩm thành Slug: bỏ dấu, chuyển thành chữ thường, thay khoảng trắng bằng dấu gạch ngang
+            return string.Concat(productName.ToLower()
+                .Where(c => !char.IsWhiteSpace(c)) // Bỏ dấu cách
+                .Select(c => char.IsLetterOrDigit(c) ? c : '-')) // Thay các ký tự không phải chữ cái hoặc số thành dấu gạch ngang
+                .Trim('-'); // Loại bỏ dấu gạch ngang thừa ở đầu và cuối
+        }
+
+
+
+
+
+        [Route("Admin/Products/QuanLySanPham/{productId}")]
 		[HttpPost]
         public IActionResult XoaSanPham(int productId)
         {
