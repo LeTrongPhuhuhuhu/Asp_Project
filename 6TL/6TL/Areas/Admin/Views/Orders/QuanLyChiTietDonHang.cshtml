@@ -1,0 +1,142 @@
+﻿@model _6TL.Models.Order
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/css/admin/QuanLyChiTietDonHang.css" rel="stylesheet" />
+    <title>Chi Tiết Đơn Hàng</title>
+    <style>
+        .button-group-qlctdh {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .button-update-qlctdh, .button-complete-qlctdh {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .button-update-qlctdh {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .button-complete-qlctdh {
+            background-color: #2196F3;
+            color: white;
+        }
+
+            .button-update-qlctdh:hover, .button-complete-qlctdh:hover {
+                opacity: 0.8;
+            }
+    </style>
+</head>
+<body>
+    <div class="container-qlctdh">
+        <div class="header-qlctdh">
+            <h1>Chi Tiết Đơn Hàng</h1>
+        </div>
+        <!-- Thông tin người nhận -->
+        <div class="section-qlctdh">
+            <div class="section-title-qlctdh">Thông Tin Người Nhận</div>
+            <ul class="info-list-qlctdh">
+                <li><strong>Tên khách hàng:</strong> @Model.CustomerName</li>
+                <li><strong>Địa chỉ:</strong> @Model.Address</li>
+                <li><strong>Số điện thoại:</strong> @Model.PhoneNumber</li>
+                <li><strong>Email:</strong> @Model.Email</li>
+            </ul>
+        </div>
+        <!-- Chi tiết sản phẩm -->
+        <div class="section-qlctdh">
+            <div class="section-title-qlctdh">Chi Tiết Sản Phẩm</div>
+            <table class="table-qlctdh">
+                <thead>
+                    <tr>
+                        <th>Mã sản phẩm</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Số lượng</th>
+                        <th>Giá bán</th>
+                        <th>Thành tiền</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.OrderDetails)
+                    {
+                        <tr>
+                            <td>#@item.ProductId</td>
+                            <td>@item.ProductName</td>
+                            <td>@item.Quantity</td>
+                            <td>@item.UnitPrice.ToString("N0")</td>
+                            <td>@item.TotalPrice?.ToString("N0")</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <!-- Tổng quan đơn hàng -->
+        <div class="section-qlctdh">
+            <div class="section-title-qlctdh">Tổng Quan Đơn Hàng</div>
+            <ul class="info-list-qlctdh">
+                <li><strong>Mã đơn hàng:</strong> <span class="highlight-qlctdh">#ORD@Model.OrderId</span></li>
+                <li><strong>Ngày đặt hàng:</strong> @Model.OrderDate?.ToString("dd/MM/yyyy")</li>
+                <li><strong>Trạng thái:</strong> <span class="highlight-qlctdh">@Model.OrderStatus</span></li>
+            </ul>
+        </div>
+        <!-- Tổng tiền và các nút -->
+        <div class="summary-qlctdh">
+            <div><strong>Phí ship:</strong> 50.000 VND</div>
+            <div class="total-qlctdh"><strong>Tổng cộng:</strong> @Model.TotalAmount?.ToString("N0") VND</div>
+        </div>
+        <div class="button-group-qlctdh">
+            @if (Model.OrderStatus == "Chờ xử lý")
+            {
+                <button onclick="updateOrderStatus(@Model.OrderId, 'Đang xử lý')" class="button-update-qlctdh">
+                    Cập nhật Xử lý
+                </button>
+            }
+            else if (Model.OrderStatus == "Đang xử lý")
+            {
+                <button onclick="confirmComplete(@Model.OrderId)" class="button-complete-qlctdh">
+                    Hoàn tất
+                </button>
+            }
+            <a href="/Admin/Orders/QuanLyDonHang" class="button-back-qlctdh">Quay lại danh sách đơn hàng</a>
+        </div>
+    </div>
+
+    <script>
+        function updateOrderStatus(orderId, newStatus) {
+            fetch(`/Admin/Orders/UpdateOrderStatus?orderId=${orderId}&newStatus=${newStatus}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if(data.success) {
+                    alert('Cập nhật trạng thái thành công!');
+                    location.reload();
+                } else {
+                    alert('Có lỗi xảy ra khi cập nhật trạng thái!');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Có lỗi xảy ra khi cập nhật trạng thái!');
+            });
+        }
+
+        function confirmComplete(orderId) {
+            if(confirm('Bạn có chắc muốn hoàn tất đơn hàng này không?')) {
+                updateOrderStatus(orderId, 'Hoàn thành');
+            }
+        }
+    </script>
+</body>
+</html>

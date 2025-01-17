@@ -30,6 +30,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29udGFjdHNcUXVhbkx5TGllbkhlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/DoAnAsp/Asp_Project/6TL/6TL/Areas/Admin/Views/DanhMuc/QuanLyDanhMuc.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRGFuaE11Y1xRdWFuTHlEYW5oTXVjLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/DoAnAsp/Asp_Project/6TL/6TL/Areas/Admin/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -50,10 +54,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxRdWFuTHlCbG9nLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DoAnAsp/Asp_Project/6TL/6TL/Areas/Admin/Views/Home/QuanLyChiTietDonHang.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxRdWFuTHlDaGlUaWV0RG9uSGFuZy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/DoAnAsp/Asp_Project/6TL/6TL/Areas/Admin/Views/Home/QuanLyChiTietSanPham.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxRdWFuTHlDaGlUaWV0U2FuUGhhbS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -64,10 +64,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/DoAnAsp/Asp_Project/6TL/6TL/Areas/Admin/Views/Home/QuanLyDanhMuc.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxRdWFuTHlEYW5oTXVjLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/DoAnAsp/Asp_Project/6TL/6TL/Areas/Admin/Views/Home/QuanLyDonHang.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxRdWFuTHlEb25IYW5nLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/DoAnAsp/Asp_Project/6TL/6TL/Areas/Admin/Views/Home/QuanLyLienHe.cshtml]
@@ -94,6 +90,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxUaGVtU2FuUGhhbS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/DoAnAsp/Asp_Project/6TL/6TL/Areas/Admin/Views/Orders/QuanLyChiTietDonHang.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcT3JkZXJzXFF1YW5MeUNoaVRpZXREb25IYW5nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnAsp/Asp_Project/6TL/6TL/Areas/Admin/Views/Orders/QuanLyDonHang.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcT3JkZXJzXFF1YW5MeURvbkhhbmcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/DoAnAsp/Asp_Project/6TL/6TL/Areas/Admin/Views/Products/QuanLySanPham.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdHNcUXVhbkx5U2FuUGhhbS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -104,6 +108,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/DoAnAsp/Asp_Project/6TL/6TL/Areas/Admin/Views/Products/ThemSanPham.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdHNcVGhlbVNhblBoYW0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnAsp/Asp_Project/6TL/6TL/Areas/Admin/Views/Review/QuanLyDanhGia.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUmV2aWV3XFF1YW5MeURhbmhHaWEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/DoAnAsp/Asp_Project/6TL/6TL/Areas/Admin/Views/Shared/_Layout.cshtml]

@@ -1,128 +1,219 @@
-﻿<link href="~/css/admin/quanlydanhmuc.css" rel="stylesheet" />
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Danh mục</title>
+    <link href="~/css/admin/quanlydanhmuc.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container-dm">
+        <header>
+            <h1>Quản lý Danh mục Sản phẩm</h1>
+        </header>
 
-<!-- Quản lý danh mục -->
-<div class="container-dm">
-    <header>
-        <h1>Quản lý Danh mục Sản phẩm</h1>
-    </header>
+        <!-- Tìm kiếm danh mục -->
+        <section class="search-category-dm">
+            <h2>Tìm kiếm Danh mục</h2>
+            <form action="@Url.Action("QuanLyDanhMuc", "DanhMuc")" method="GET">
+                <input type="text" name="searchQuery" placeholder="Nhập tên danh mục cần tìm" value="@ViewBag.SearchQuery" required>
+                <button type="submit">Tìm kiếm</button>
+            </form>
+        </section>
 
-    <!-- Tìm kiếm danh mục -->
-    <section class="search-category-dm">
-        <h2>Tìm kiếm Danh mục</h2>
-        <form action="#" method="GET">
-            <input type="text" name="searchQuery" placeholder="Nhập tên danh mục cần tìm" required>
-            <button type="submit">Tìm kiếm</button>
-        </form>
-    </section>
+        <!-- Thêm danh mục -->
+        <section class="add-category-dm">
+            <h2>Thêm Danh mục Mới</h2>
+            <form method="post" action="/Admin/DanhMuc/AddCategory">
+                <div>
+                    <label for="categoryName">Tên danh mục:</label>
+                    <input type="text" id="categoryName" name="categoryName" required />
+                </div>
+                <div>
+                    <label for="slug">Slug:</label>
+                    <input type="text" id="slug" name="slug" readonly />
+                </div>
+                <div>
+                    <label for="parentCategory">Danh mục cha:</label>
+                    <select id="parentCategory" name="parentCategory">
+                        <option value="">Không có</option>
+                        <!-- Duyệt danh sách danh mục cha từ ViewBag -->
+                        @foreach (var parent in ViewBag.ParentCategories)
+                        {
+                            <option value="@parent.CategoryId">@parent.CategoryName</option>
+                        }
+                    </select>
+                </div>
+                <button type="submit">Thêm danh mục</button>
+            </form>
 
-    <!-- Thêm danh mục -->
-    <section class="add-category-dm">
-        <h2>Thêm Danh mục Mới</h2>
-        <form action="#" method="POST">
-            <input type="text" name="categoryName" placeholder="Tên danh mục" required>
-            <select name="parentCategory">
-                <option value="">-- Chọn danh mục cha (nếu có) --</option>
-                <option value="1">Bàn</option>
-                <option value="2">Ghế</option>
-            </select>
-            <button type="submit">Thêm Danh mục</button>
-        </form>
-    </section>
+        </section>
 
-    <!-- Danh sách các danh mục -->
-    <section class="category-list-dm">
-        <h2>Danh sách Danh mục</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Tên Danh mục</th>
-                    <th>Danh mục Cha</th>
-                    <th>Hành động</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Bàn</td>
-                    <td>--</td>
-                    <td>
-                        <button class="edit-btn-dm" onclick="openEditPopup('Bàn', '')">Sửa</button>
-                        <button class="delete-btn-dm" onclick="deleteCategory('Bàn')">Xóa</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Ghế</td>
-                    <td>--</td>
-                    <td>
-                        <button class="edit-btn-dm" onclick="openEditPopup('Ghế', '')">Sửa</button>
-                        <button class="delete-btn-dm" onclick="deleteCategory('Ghế')">Xóa</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Giường</td>
-                    <td>Bàn</td>
-                    <td>
-                        <button class="edit-btn-dm" onclick="openEditPopup('Giường', '1')">Sửa</button>
-                        <button class="delete-btn-dm" onclick="deleteCategory('Giường')">Xóa</button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
-</div>
+        <!-- Danh sách danh mục -->
+        <!-- Danh sách danh mục -->
+        <section class="category-list-dm">
+            <h2>Danh sách Danh mục</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Tên Danh mục</th>
+                        <th>Danh mục Cha</th>
+                        <th>Slug</th> <!-- New column for Slug -->
+                        <th>Trạng thái</th> <!-- New column for Status -->
+                        <th>Hành động</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var category in Model)
+                    {
+                        <tr id="category-row-@category.CategoryId" class="category-row">
+                            <td>@category.CategoryId</td>
+                            <td>@category.CategoryName</td>
+                            <td>@(category.ParentCategory != null ? category.ParentCategory.CategoryName : "--")</td>
+                            <td>@category.Slug</td> <!-- Display the Slug -->
+                            <td>@(category.Status ? "Hiện" : "Ẩn")</td> <!-- Display Status -->
+                            <td>
+                                <button class="edit-btn-dm" onclick="openEditPopup('@category.CategoryId', '@category.CategoryName', '@category.ParentCategoryId', '@category.Status')">Sửa</button>
+                                <button class="delete-btn-dm" onclick="showDeletePopup('@category.CategoryId', '@category.CategoryName')">Xóa</button>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
 
-<script>
-    // Xử lý xóa danh mục
-    function deleteCategory(categoryName) {
-        openConfirmPopup();
-        // Thêm logic xóa ở đây nếu cần thiết
-        console.log(`Danh mục "${categoryName}" đã bị xóa.`); // Chỉ để kiểm tra, bạn có thể xóa hoặc thay thế bằng logic thực sự
-    }
- </script>
+            </table>
+        </section>
 
- <script>
-    function openEditPopup(categoryName, parentCategoryId) {
-        document.getElementById('editCategoryName').value = categoryName;
-        document.getElementById('editParentCategory').value = parentCategoryId;
-        document.getElementById('editPopup').classList.add('show');
-    }
-
-    function closeEditPopup() {
-        document.getElementById('editPopup').classList.remove('show');
-    }
-
-    document.getElementById('editCategoryForm').addEventListener('submit', function (event) {
-        event.preventDefault();
-        const categoryName = document.getElementById('editCategoryName').value;
-        const parentCategoryId = document.getElementById('editParentCategory').value;
-        console.log(`Đã lưu danh mục: ${categoryName}, Mã danh mục cha: ${parentCategoryId}`);
-        closeEditPopup();
-    });
-
-</script>
-
-<!-- Popup Sửa danh mục -->
-
-<div id="editPopup" class="popup-overlay">
-    <div class="popup-content">
-        <h4>Sửa Danh mục</h4>
-        <form id="editCategoryForm">
-            <input type="text" id="editCategoryName" placeholder="Tên danh mục" required>
-            <select id="editParentCategory">
-                <option value="">-- Chọn danh mục cha (nếu có) --</option>
-                <option value="1">Bàn</option>
-                <option value="2">Ghế</option>
-            </select>
-            <!-- Footer chứa nút Lưu và Hủy -->
-            <div class="popup-footer">
-                <button type="submit" class="btn-save">Cập nhật</button>
-                <button type="button" class="btn-cancel" onclick="closeEditPopup()">Hủy</button>
-            </div>
-        </form>
     </div>
-</div>
 
+    <!-- Popup Sửa danh mục -->
+    <div id="editPopup" class="popup-overlay">
+        <div class="popup-content">
+            <h4>Sửa Danh mục</h4>
+            <form id="editCategoryForm">
+                <input type="hidden" id="categoryId" />
+                <input type="text" id="editCategoryName" placeholder="Tên danh mục" required />
+                <select id="editParentCategory">
+                    <option value="">-- Chọn danh mục cha (nếu có) --</option>
+                    @foreach (var parentCategory in ViewBag.ParentCategories)
+                    {
+                        <option value="@parentCategory.CategoryId">@parentCategory.CategoryName</option>
+                    }
+                </select>
+                <label for="editStatus">Trạng thái:</label>
+                <select id="editStatus" name="status">
+                    <option value="true">Hiện</option>
+                    <option value="false">Ẩn</option>
+                </select>
+                <div class="popup-footer">
+                    <button type="submit" class="btn-save">Cập nhật</button>
+                    <button type="button" class="btn-cancel" onclick="closeEditPopup()">Hủy</button>
+                </div>
+            </form>
 
+        </div>
+    </div>
+    </div>
+
+    <script>
+
+            function showDeletePopup(categoryId, categoryName) {
+                // Gửi yêu cầu xác nhận xóa
+                $.post('/Admin/DanhMuc/ConfirmDeleteCategory', { id: categoryId }, function (response) {
+                    if (response.success) {
+                        // Hiển thị popup cảnh báo
+                        if (confirm(`Cảnh báo: Nếu xóa danh mục "${categoryName}", sẽ ảnh hưởng đến các sản phẩm liên quan (${response.relatedProductsCount} sản phẩm). Bạn có chắc chắn muốn xóa không?`)) {
+                            // Gửi yêu cầu xóa danh mục nếu người dùng đồng ý
+                            $.post('/Admin/DanhMuc/DeleteCategoryConfirmed', { id: categoryId }, function (deleteResponse) {
+                                if (deleteResponse.success) {
+                                    alert(deleteResponse.message);
+                                    // Xóa hàng tương ứng khỏi bảng
+                                    $(`#category-row-${categoryId}`).remove();
+                                } else {
+                                    alert('Không thể xóa danh mục này.');
+                                }
+                            });
+                        }
+                    } else {
+                        alert(response.message);
+                    }
+                });
+            }
+
+        function openEditPopup(categoryId, categoryName, parentCategoryId, status) {
+            console.log('Opening popup with data:', {
+                categoryId, categoryName, parentCategoryId, status
+            });
+
+            document.getElementById('categoryId').value = categoryId;
+            document.getElementById('editCategoryName').value = categoryName;
+            document.getElementById('editParentCategory').value = parentCategoryId;
+            document.getElementById('editStatus').value = status ? "true" : "false";
+            document.getElementById('editPopup').classList.add('show');
+
+            console.log('Popup form values after set:', {
+                categoryId: document.getElementById('categoryId').value,
+                categoryName: document.getElementById('editCategoryName').value,
+                parentCategory: document.getElementById('editParentCategory').value,
+                status: document.getElementById('editStatus').value
+            });
+        }
+
+        document.getElementById('editCategoryForm').addEventListener('submit', async function (event) {
+            event.preventDefault();
+            console.log('Form submit triggered');
+
+            const categoryId = document.getElementById('categoryId').value;
+            const categoryName = document.getElementById('editCategoryName').value;
+            const parentCategory = document.getElementById('editParentCategory').value;
+            const status = document.getElementById('editStatus').value === "true";
+
+            console.log('Form data:', {
+                categoryId, categoryName, parentCategory, status
+            });
+
+            if (!categoryName.trim()) {
+                console.log('Validation failed: empty category name');
+                alert("Tên danh mục không được để trống.");
+                return;
+            }
+
+            try {
+                const formData = new FormData();
+                formData.append('categoryId', categoryId);
+                formData.append('categoryName', categoryName);
+                formData.append('parentCategory', parentCategory || '');
+                formData.append('status', status);
+
+                console.log('Sending request with FormData:', {
+                    categoryId: formData.get('categoryId'),
+                    categoryName: formData.get('categoryName'),
+                    parentCategory: formData.get('parentCategory'),
+                    status: formData.get('status')
+                });
+
+                const response = await fetch('/Admin/DanhMuc/UpdateCategory', {
+                    method: "POST",
+                    body: formData
+                });
+
+                console.log('Form submit response:', response);
+
+                const result = await response.json();
+                console.log('Form submit result:', result);
+
+                if (result.success) {
+                    alert(result.message);
+                    location.reload();
+                } else {
+                    alert(result.message);
+                }
+            } catch (error) {
+                console.error("Error details:", error);
+                alert("Có lỗi xảy ra khi cập nhật danh mục.");
+            }
+        });
+    </script>
+    
+</body>
+</html>
