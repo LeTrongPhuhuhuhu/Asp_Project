@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\6TL.csproj": {}
+    "D:\\ASP\\ASP_DoAn_Backup\\Asp_Project\\6TL\\6TL\\6TL.csproj": {}
   },
   "projects": {
-    "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\6TL.csproj": {
+    "D:\\ASP\\ASP_DoAn_Backup\\Asp_Project\\6TL\\6TL\\6TL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\6TL.csproj",
+        "projectUniqueName": "D:\\ASP\\ASP_DoAn_Backup\\Asp_Project\\6TL\\6TL\\6TL.csproj",
         "projectName": "6TL",
-        "projectPath": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\6TL.csproj",
-        "packagesPath": "C:\\Users\\Hoàng Phúc\\.nuget\\packages\\",
-        "outputPath": "D:\\ổ D\\TK WEB ASPNET CORE\\Đồ án ASP\\Asp_Project\\6TL\\6TL\\obj\\",
+        "projectPath": "D:\\ASP\\ASP_DoAn_Backup\\Asp_Project\\6TL\\6TL\\6TL.csproj",
+        "packagesPath": "C:\\Users\\viet5\\.nuget\\packages\\",
+        "outputPath": "D:\\ASP\\ASP_DoAn_Backup\\Asp_Project\\6TL\\6TL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Hoàng Phúc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\viet5\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -108,7 +108,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.405/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
