@@ -20,7 +20,13 @@
         <a href="/Admin/Products/ThemSanPham" class="add-new-btn_sp">
             Thêm mới
         </a>
-
+        <!-- Hiển thị thông báo nếu không tìm thấy sản phẩm -->
+        @if (TempData["Message"] != null)
+        {
+            <div class="alert alert-warning">
+                @TempData["Message"]
+            </div>
+        }
         <table class="product-table_sp">
             <thead>
                 <tr>
@@ -71,15 +77,6 @@
             </tbody>
         </table>
         @await Html.PartialAsync("_Pagination")
-       @*  <div class="pagination_sp">
-            @for (int i = 1; i <= ViewBag.TotalPages; i++)
-            {
-                <a href="/Admin/Products/QuanLySanPham?page=@i&searchString=@Uri.EscapeDataString(ViewBag.SearchString ?? "")"
-                   class="page-btn_sp @(i == ViewBag.CurrentPage ? "active" : "")">@i</a>
-            }
-        </div> *@
-
-
     </div>
 
     <!-- Success Popup -->

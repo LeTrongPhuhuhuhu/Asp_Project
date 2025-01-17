@@ -10,6 +10,7 @@ using System.Runtime.ConstrainedExecution;
 using System;
 using Microsoft.CodeAnalysis;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
+using System.Web;
 
 namespace _6TL.Areas.Admin.Controllers
 {
@@ -46,22 +47,34 @@ namespace _6TL.Areas.Admin.Controllers
         {
             var query = _context.Products.AsQueryable();
 
+            // Kiểm tra xem từ khóa có hợp lệ hay không
             if (!string.IsNullOrEmpty(searchString))
             {
+                // Kiểm tra nếu từ khóa chỉ chứa dấu cách hoặc các ký tự đặc biệt
+                if (string.IsNullOrWhiteSpace(searchString) || !searchString.All(c => char.IsLetterOrDigit(c) || char.IsWhiteSpace(c)))
+                {
+                    TempData["Message"] = "Vui lòng nhập từ khóa hợp lệ để tìm kiếm."; // Thông báo nếu từ khóa không hợp lệ
+                    return View("QuanLySanPham", new List<Product>()); // Trả về view với danh sách sản phẩm rỗng
+                }
+
                 query = query.Where(p => p.ProductName.Contains(searchString));
                 ViewBag.SearchString = searchString;
             }
 
+            // Lấy danh sách sản phẩm theo trang
             var totalProducts = query.Count();
-            var products = query
-                .OrderBy(p => p.ProductId)
-                .Skip((page - 1) * pageSize)
-                .Take(pageSize)
-                .ToList();
+            var products = query.Skip((page - 1) * pageSize).Take(pageSize).ToList();
 
+            // Nếu không tìm thấy sản phẩm, hiển thị thông báo
+            if (totalProducts == 0)
+            {
+                TempData["Message"] = "Không tìm thấy sản phẩm.";
+            }
+
+            // Phân trang
             ViewBag.CurrentPage = page;
             ViewBag.TotalPages = (int)Math.Ceiling((double)totalProducts / pageSize);
-            ViewBag.BaseUrl = Url.Action("QuanLySanPham", "Products");
+
             return View("QuanLySanPham", products);
         }
 
