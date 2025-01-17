@@ -13,20 +13,35 @@ namespace _6TL.Controllers
         [HttpGet]
         public IActionResult ViewProfile()
         {
-			var customerId = HttpContext.Session.GetInt32("CustomerId");
-			if (customerId == null)
-			{
-				return RedirectToAction("DangNhap"); // Chuyển hướng nếu chưa đăng nhập
-			}
+            try
+            {
+                // Lấy CustomerId từ Session
+                var customerId = HttpContext.Session.GetInt32("CustomerId");
+               
+                if (customerId == null)
+                {
+                    ViewBag.ErrorMessage = "Vui lòng đăng nhập để xem hồ sơ.";
+                    return View(); // Hiển thị thông báo trên trang hiện tại
+                }
 
-			var customer = _context.Customers.FirstOrDefault(c => c.CustomerId == customerId);
-			if (customer == null)
-			{
-				return RedirectToAction("DangNhap"); // Chuyển hướng nếu không tìm thấy khách hàng
-			}
+                // Lấy thông tin khách hàng từ cơ sở dữ liệu
+                var customer = _context.Customers.FirstOrDefault(c => c.CustomerId == customerId);
+                if (customer == null)
+                {
+                    ViewBag.ErrorMessage = "Không thể tải thông tin hồ sơ. Vui lòng thử lại sau.";
+                    return View(); // Hiển thị thông báo trên trang hiện tại
+                }
 
-			return View(customer); // Truyền thông tin khách hàng đến view
+                return View(customer); // Truyền thông tin khách hàng đến View
+            }
+            catch (Exception ex)
+            {
+                // Ghi log nếu cần
+                Console.WriteLine($"Lỗi: {ex.Message}");
+                ViewBag.ErrorMessage = "Đã xảy ra lỗi trong quá trình xử lý. Vui lòng thử lại sau.";
+                return View(); // Hiển thị thông báo trên trang hiện tại
+            }
+        }
 
-		}
-	}
+    }
 }

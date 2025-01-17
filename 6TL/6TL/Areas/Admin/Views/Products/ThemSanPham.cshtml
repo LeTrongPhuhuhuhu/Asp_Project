@@ -1,13 +1,26 @@
-﻿@model IEnumerable<_6TL.Models.Product>
+﻿@model _6TL.Models.Product
 <head>
     <link href="~/css/admin/themsanpham.css" rel="stylesheet" />
 </head>
+
 <div class="container_tsp">
     <h2>
         <a href="/Admin/Home/QuanLySanPham" class="back-to-product-management">Quản lý sản phẩm 6TL De Decor</a> &gt;
         <a href="/Admin/Home/ThemSanPham" class="add-product-link">Thêm sản phẩm</a>
     </h2>
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger">
+            @TempData["ErrorMessage"]
+        </div>
+    }
 
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["SuccessMessage"]
+        </div>
+    }
     <form class="add-product-form_tsp" method="post" enctype="multipart/form-data">
         <!-- Thông tin cơ bản của sản phẩm -->
         <div class="form-row_tsp">
@@ -27,6 +40,7 @@
                     <option value="@category.CategoryId">@category.CategoryName</option>
                 }
             </select>
+            <input type="text" name="Material" placeholder="Chất liệu" id="chat-lieu_tsp" required>
             <select id="nha-cung-cap_tsp" name="SupplierId" required>
                 <option value="" disabled selected>Chọn nhà cung cấp</option>
                 @foreach (var supplier in ViewBag.Suppliers)
@@ -34,10 +48,7 @@
                     <option value="@supplier.SupplierId">@supplier.SupplierName</option>
                 }
             </select>
-            <input type="text" name="Material" placeholder="Chất liệu" id="chat-lieu_tsp" required>
         </div>
-
-
 
         <!-- Mô tả sản phẩm -->
         <div class="form-row_tsp">
@@ -76,14 +87,105 @@
                 <span class="popup-text">@TempData["ErrorMessage"]</span>
             </div>
         }
-
-
     </form>
-</div>
 
+     <!-- Popup Thêm Nhà Cung Cấp -->
+    <div id="add-supplier-popup" class="popup-container">
+    <div class="popup-content">
+    <h3>Thêm Nhà Cung Cấp Mới</h3>
+    <input type="text" id="supplier-name" placeholder="Tên nhà cung cấp" required />
+    <input type="text" id="email" placeholder="Email" required />
+    <input type="text" id="phone-number" placeholder="Số điện thoại" required />
+    <input type="text" id="address" placeholder="Địa chỉ" required />
+
+    <!-- Nút Thêm Nhà Cung Cấp -->
+    <button type="button" onclick="addSupplier()">Thêm nhà cung cấp</button>
+    <button type="button" onclick="closePopup()">Đóng</button>
+    </div>
+    </div>
+
+    <!-- Nút Thêm Nhà Cung Cấp -->
+    <button id="add-supplier-btn" type="button" onclick="showAddSupplierPopup()">Thêm nhà cung cấp</button> 
+
+
+
+
+    
+
+    <!-- Popup Thêm Danh Mục -->
+    <div id="add-category-popup" class="popup-container">
+        <div class="popup-content">
+            <h3>Thêm Danh Mục Mới</h3>
+            <input type="text" id="CategoryName" placeholder="Tên danh mục" required />
+            <button type="button" onclick="addCategory()">Thêm danh mục</button>
+            <button type="button" onclick="closeAddCategoryPopup()">Đóng</button>
+        </div>
+    </div>
+    <button class="add-category-button_tsp" type="button" onclick="showAddCategoryPopup()">Thêm danh mục mới</button>
+</div>
 
 <!-- JavaScript -->
 <script>
+    // Hiển thị popup thêm nhà cung cấp
+    function showAddSupplierPopup() {
+        document.getElementById('add-supplier-popup').style.display = 'flex';
+    }
+
+    // Đóng popup
+    function closePopup() {
+        document.getElementById('add-supplier-popup').style.display = 'none';
+    }
+
+    // Thêm nhà cung cấp mới
+    function addSupplier() {
+        const supplierName = document.getElementById('supplier-name').value;
+        const email = document.getElementById('email').value;
+        const phoneNumber = document.getElementById('phone-number').value;
+        const address = document.getElementById('address').value;
+
+        // Kiểm tra thông tin nhập vào
+        if (!supplierName || !email || !phoneNumber || !address) {
+            alert('Vui lòng nhập đầy đủ thông tin!');
+            return;
+        }
+
+        // Gửi dữ liệu đến API
+        fetch('/api/SupplierApi', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                SupplierName: supplierName,
+                Email: email,
+                PhoneNumber: phoneNumber,
+                Address: address
+            })
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert(data.message);
+
+                    // Thêm nhà cung cấp mới vào dropdown
+                    const supplierSelect = document.getElementById('nha-cung-cap_tsp');
+                    const newOption = document.createElement('option');
+                    newOption.value = data.newSupplierId; // ID trả về từ API
+                    newOption.textContent = supplierName;
+                    supplierSelect.appendChild(newOption);
+                    supplierSelect.value = data.newSupplierId; // Chọn nhà cung cấp mới
+                    closePopup();
+                } else {
+                    alert(data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Có lỗi xảy ra, vui lòng thử lại sau.');
+            });
+    }
+
+
     // Định dạng giá với dấu chấm
     function formatPrice(input) {
         let value = input.value.replace(/\./g, '').replace(/\D/g, '');
@@ -106,16 +208,85 @@
             preview.style.display = 'none';
         }
     }
+
+    // Hiển thị popup thành công và lỗi
     document.addEventListener('DOMContentLoaded', function () {
-        var successPopup = document.querySelector('.success-popup');
-        var errorPopup = document.querySelector('.error-popup');
+        const successPopup = document.querySelector('.success-popup');
+        const errorPopup = document.querySelector('.error-popup');
 
         if (successPopup) {
             successPopup.classList.add('show');
+            setTimeout(() => successPopup.classList.remove('show'), 3000); // Ẩn sau 3 giây
         }
 
         if (errorPopup) {
             errorPopup.classList.add('show');
+            setTimeout(() => errorPopup.classList.remove('show'), 3000); // Ẩn sau 3 giây
+        }
+    });
+
+</script>
+<script>
+    // Hiển thị popup thêm danh mục
+    function showAddCategoryPopup() {
+        document.getElementById('add-category-popup').style.display = 'flex';
+    }
+
+    // Đóng popup danh mục
+    function closeAddCategoryPopup() {
+        document.getElementById('add-category-popup').style.display = 'none';
+    }
+
+    // Thêm danh mục mới
+    function addCategory() {
+        const categoryName = document.getElementById('CategoryName').value;
+
+        if (!categoryName) {
+            alert('Vui lòng nhập tên danh mục!');
+            return;
+        }
+
+        // Gửi dữ liệu đến API
+        fetch('/api/CategoryApi', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ CategoryName: categoryName })
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('Thêm danh mục thành công!');
+                    const categorySelect = document.getElementById('danh-muc_tsp');
+                    const newOption = document.createElement('option');
+                    newOption.value = data.newCategoryId; // ID trả về từ API
+                    newOption.textContent = categoryName;
+                    categorySelect.appendChild(newOption);
+                    categorySelect.value = data.newCategoryId; // Chọn danh mục mới
+                    closeAddCategoryPopup();
+                } else {
+                    console.error('Lỗi API: ', data.message);
+                    alert('Có lỗi xảy ra khi thêm danh mục!');
+                }
+            })
+            .catch(error => {
+                console.error('Error', error);
+                alert('Có lỗi xảy ra, vui lòng thử lại sau nhaaa');
+            });
+    }
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const successPopup = document.querySelector('.success-popup');
+        const errorPopup = document.querySelector('.error-popup');
+
+        if (successPopup) {
+            successPopup.classList.add('show');
+            setTimeout(() => successPopup.classList.remove('show'), 3000); // Ẩn sau 3 giây
+        }
+
+        if (errorPopup) {
+            errorPopup.classList.add('show');
+            setTimeout(() => errorPopup.classList.remove('show'), 3000); // Ẩn sau 3 giây
         }
     });
 

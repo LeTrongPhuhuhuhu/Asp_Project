@@ -9,7 +9,7 @@ public partial class Category
 
     public string? CategoryName { get; set; }
 
-    public string Slug { get; set; } = null!;
+    public string Slug { get; set; } = "";
 
     public string? Description { get; set; }
 
@@ -19,7 +19,7 @@ public partial class Category
 
     public int? ParentCategoryId { get; set; }
 
-    public bool Status { get; set; }
+    public bool? Status { get; set; }
 
     public virtual ICollection<Category> InverseParentCategory { get; set; } = new List<Category>();
 

@@ -17,45 +17,55 @@
     </div>
 
     <!-- Nội dung chính -->
-    <div class="mainContent">
-        <h2>Thông Tin Cá Nhân</h2>
+    @if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+    {
+        <div class="alert alert-danger" role="alert" style="margin-left: 30%; margin-bottom:50%; margin-top: 20px; font-weight: bold; text-align: center;">
+            @ViewBag.ErrorMessage
+        </div>
 
-        <div class="formContainer">
-            <div class="formGroup">
-                <label for="fullName">Họ tên:</label>
-                <input type="text" id="fullName" placeholder=" họ tên" value="@Model.FullName" readonly>
-            </div>
-            <div class="formGroup">
-                <label for="phoneNumber">Số điện thoại:</label>
-                <input type="text" id="phoneNumber" placeholder=" số điện thoại" value="@Model.PhoneNumber" readonly>
-            </div>
-            <div class="formGroup">
-                <label for="address">Địa Chỉ:</label>
-                <input type="text" id="address" placeholder="địa chỉ" value="@Model.Address" readonly>
-            </div>
-            <div class="formGroup">
-                <label for="emailAddress">Email:</label>
-                <input type="email" id="emailAddress" placeholder=" email" value="@Model.Email" readonly>
-            </div>
-            <div class="formGroup">
-                <label>Giới Tính:</label>
-                <div class="genderOptions">
-                    <label><input type="radio" name="gender" value="Nam" @(Model.Gender == "Nam" ? "checked" : "") disabled> Nam</label>
-                    <label><input type="radio" name="gender" value="Nữ" @(Model.Gender == "Nữ" ? "checked" : "") disabled> Nữ</label>
-                    <label><input type="radio" name="gender" value="Khác" @(Model.Gender == "Khác" ? "checked" : "") disabled> Khác</label>
+    }
+    else
+    {
+        <div class="mainContent">
+            <h2>Thông Tin Cá Nhân</h2>
+            <div class="formContainer">
+                <div class="formGroup">
+                    <label for="fullName">Họ tên:</label>
+                    <input type="text" id="fullName" placeholder=" họ tên" value="@Model.FullName" readonly>
+                </div>
+                <div class="formGroup">
+                    <label for="phoneNumber">Số điện thoại:</label>
+                    <input type="text" id="phoneNumber" placeholder=" số điện thoại" value="@Model.PhoneNumber" readonly>
+                </div>
+                <div class="formGroup">
+                    <label for="address">Địa Chỉ:</label>
+                    <input type="text" id="address" placeholder="địa chỉ" value="@Model.Address" readonly>
+                </div>
+                <div class="formGroup">
+                    <label for="emailAddress">Email:</label>
+                    <input type="email" id="emailAddress" placeholder=" email" value="@Model.Email" readonly>
+                </div>
+                <div class="formGroup">
+                    <label>Giới Tính:</label>
+                    <div class="genderOptions">
+                        <label><input type="radio" name="gender" value="Nam" @(Model.Gender == "Nam" ? "checked" : "") disabled> Nam</label>
+                        <label><input type="radio" name="gender" value="Nữ" @(Model.Gender == "Nữ" ? "checked" : "") disabled> Nữ</label>
+                        <label><input type="radio" name="gender" value="Khác" @(Model.Gender == "Khác" ? "checked" : "") disabled> Khác</label>
+                    </div>
+                </div>
+                <div class="formGroup">
+                    <label for="dateOfBirth">Ngày Sinh:</label>
+                    <input type="date" id="dateOfBirth"
+                           value="@(Model.DateOfBirth.HasValue ? Model.DateOfBirth.Value.ToString("yyyy-MM-dd") : "")"
+                           readonly>
+                </div>
+                <div class="buttonContainer">
+                    <button type="button">Chỉnh sửa</button> <!-- Thêm chức năng chỉnh sửa -->
                 </div>
             </div>
-            <div class="formGroup">
-                <label for="dateOfBirth">Ngày Sinh:</label>
-                <input type="date" id="dateOfBirth"
-                       value="@(Model.DateOfBirth.HasValue ? Model.DateOfBirth.Value.ToString("yyyy-MM-dd") : "")"
-                       readonly>
-                   </div>
-            <div class="buttonContainer">
-                <button type="button">Chỉnh sửa</button> <!-- Thêm chức năng chỉnh sửa -->
-            </div>
         </div>
-    </div>
+    }
+    
 </div>
 
 <link href="~/css/pages/viewprofile.css" rel="stylesheet" />

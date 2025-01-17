@@ -84,12 +84,14 @@ namespace _6TL.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult ThemSanPham()
         {
+            var newProduct = new Product(); // Một sản phẩm mới
             // Lấy danh sách nhà cung cấp và danh mục từ cơ sở dữ liệu và gán cho ViewBag
             ViewBag.Suppliers = _context.Suppliers.ToList();
             ViewBag.Categories = _context.Categories.ToList();
-            return View();
+           
+            return View(newProduct);
+            
         }
-
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -97,6 +99,69 @@ namespace _6TL.Areas.Admin.Controllers
         {
             try
             {
+                // Kiểm tra xem thông tin sản phẩm có đầy đủ không
+                if (string.IsNullOrEmpty(product.ProductName) || product.Price <= 0 || product.CapitalAmount <= 0 || string.IsNullOrEmpty(product.Material) || product.Quantity <= 0)
+                {
+                    TempData["ErrorMessage"] = "Vui lòng điền đầy đủ thông tin";
+                    ViewBag.Suppliers = _context.Suppliers.ToList();
+                    ViewBag.Categories = _context.Categories.ToList();
+                    return View(product);
+                }
+
+                // Kiểm tra giá bán và giá vốn hợp lệ
+                if (product.Price < 0 || product.CapitalAmount < 0 || product.Price < product.CapitalAmount)
+                {
+                    TempData["ErrorMessage"] = "Giá sản phẩm không hợp lệ. Vui lòng nhập giá bán hợp lệ.";
+                    ViewBag.Suppliers = _context.Suppliers.ToList();
+                    ViewBag.Categories = _context.Categories.ToList();
+                    return View(product);
+                }
+
+                // Kiểm tra chất liệu hợp lệ
+                if (string.IsNullOrEmpty(product.Material))
+                {
+                    TempData["ErrorMessage"] = "Chất liệu sản phẩm không hợp lệ. Vui lòng nhập chất liệu hợp lệ.";
+                    ViewBag.Suppliers = _context.Suppliers.ToList();
+                    ViewBag.Categories = _context.Categories.ToList();
+                    return View(product);
+                }
+
+                // Kiểm tra số lượng hợp lệ
+                if (product.Quantity < 0)
+                {
+                    TempData["ErrorMessage"] = "Số lượng sản phẩm không hợp lệ. Vui lòng nhập số lượng hợp lệ.";
+                    ViewBag.Suppliers = _context.Suppliers.ToList();
+                    ViewBag.Categories = _context.Categories.ToList();
+                    return View(product);
+                }
+
+                // Kiểm tra nếu sản phẩm đã tồn tại
+                var existingProduct = _context.Products.FirstOrDefault(p => p.ProductName == product.ProductName);
+                if (existingProduct != null)
+                {
+                    TempData["ErrorMessage"] = "Sản phẩm với tên này đã tồn tại, vui lòng chọn tên khác.";
+                    ViewBag.Suppliers = _context.Suppliers.ToList();
+                    ViewBag.Categories = _context.Categories.ToList();
+                    return View(product);
+                }
+
+                // Kiểm tra danh mục và nhà cung cấp
+                if (!_context.Categories.Any(c => c.CategoryId == product.CategoryId))
+                {
+                    TempData["ErrorMessage"] = "Danh mục không tồn tại. Vui lòng chọn danh mục khác.";
+                    ViewBag.Suppliers = _context.Suppliers.ToList();
+                    ViewBag.Categories = _context.Categories.ToList();
+                    return View(product);
+                }
+
+                if (!_context.Suppliers.Any(s => s.SupplierId == product.SupplierId))
+                {
+                    TempData["ErrorMessage"] = "Nhà cung cấp không tồn tại. Vui lòng chọn nhà cung cấp khác.";
+                    ViewBag.Suppliers = _context.Suppliers.ToList();
+                    ViewBag.Categories = _context.Categories.ToList();
+                    return View(product);
+                }
+
                 // Tạo slug tự động từ tên sản phẩm
                 product.Slug = GenerateSlug(product.ProductName);
 
@@ -117,31 +182,14 @@ namespace _6TL.Areas.Admin.Controllers
                         imageFile.CopyTo(fileStream);
                     }
 
-                    product.Image = Path.Combine("images", "products", fileName); // Save image path to product
+                    product.Image = Path.Combine("images", "products", fileName); // Lưu đường dẫn ảnh vào sản phẩm
                 }
 
-                // Kiểm tra sản phẩm cùng màu đã tồn tại hay chưa
-                var existingProduct = _context.Products
-                    .FirstOrDefault(p => p.ProductName == product.ProductName && p.Color == product.Color);
-
-                if (existingProduct != null)
-                {
-                    // Nếu sản phẩm đã tồn tại, chỉ cập nhật số lượng
-                    existingProduct.Quantity += product.Quantity;
-                    existingProduct.UpdatedAt = DateTime.Now;
-                }
-                else
-                {
-                    // Nếu sản phẩm chưa tồn tại, thêm mới sản phẩm
-                    product.CreatedAt = DateTime.Now;
-                    _context.Products.Add(product);
-                }
-
-                // Lưu thay đổi vào cơ sở dữ liệu
+                // Thêm sản phẩm vào cơ sở dữ liệu
+                _context.Products.Add(product);
                 _context.SaveChanges();
 
                 TempData["SuccessMessage"] = "Thêm sản phẩm thành công!";
-                ViewBag.Categories = _context.Categories.ToList();
                 return RedirectToAction("QuanLySanPham", "Products", new { area = "Admin" });
             }
             catch (Exception ex)
@@ -153,9 +201,16 @@ namespace _6TL.Areas.Admin.Controllers
                 }
 
                 TempData["ErrorMessage"] = "Có lỗi xảy ra, vui lòng thử lại.";
+
+                // Làm mới dữ liệu ViewBag trước khi trả về view
+                ViewBag.Suppliers = _context.Suppliers.ToList();
+                ViewBag.Categories = _context.Categories.ToList();
+
                 return View(product);
             }
         }
+
+
 
 
 
