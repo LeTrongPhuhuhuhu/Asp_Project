@@ -217,10 +217,6 @@
       "PackagePath": "staticwebassets\\images\\products\\6a09407f-e0f3-4c7f-abb3-40563117367f_1.jpg"
     },
     {
-      "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\images\\products\\6ca9c5a1-4ce1-4f7d-be69-638f4d5b1e08_bannhua.jpg",
-      "PackagePath": "staticwebassets\\images\\products\\6ca9c5a1-4ce1-4f7d-be69-638f4d5b1e08_bannhua.jpg"
-    },
-    {
       "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\images\\products\\7123d314-9474-4e7c-b66d-0f53e439b2ab_1.jpg",
       "PackagePath": "staticwebassets\\images\\products\\7123d314-9474-4e7c-b66d-0f53e439b2ab_1.jpg"
     },
@@ -231,6 +227,10 @@
     {
       "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\images\\products\\86dc5153-279c-416c-b0b3-574e3d758b0e_1.jpg",
       "PackagePath": "staticwebassets\\images\\products\\86dc5153-279c-416c-b0b3-574e3d758b0e_1.jpg"
+    },
+    {
+      "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\images\\products\\8d1defe0-d287-4212-ae66-3f9cd78a53bb_ty.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\8d1defe0-d287-4212-ae66-3f9cd78a53bb_ty.jpg"
     },
     {
       "Id": "D:\\DoAnAsp\\Asp_Project\\6TL\\6TL\\wwwroot\\images\\products\\9c0792c4-2182-4108-a49e-b7f944a1f29d_1.jpg",
