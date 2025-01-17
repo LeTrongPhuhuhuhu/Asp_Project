@@ -85,6 +85,7 @@
     </div>
 
     <script>
+
         function deleteProduct(productId) {
             // Xác nhận việc xóa sản phẩm
             if (confirm("Bạn có chắc chắn muốn xóa sản phẩm này?")) {
@@ -104,7 +105,8 @@
                             });
                             openPopup();  // Hiển thị popup thành công
                         } else {
-                            alert("Có lỗi xảy ra khi xóa sản phẩm.");
+                            // Hiển thị thông báo lỗi từ response.message (temp data message)
+                            alert("Không thể xóa sản phẩm này vì nó đang liên kết với đơn hàng đang xử lý");
                         }
                     },
                     error: function () {
@@ -124,8 +126,7 @@
             document.getElementById('successPopup').style.display = 'none';
         }
 
-    </script>
 
-    
+    </script>
 </body>
 </html>
