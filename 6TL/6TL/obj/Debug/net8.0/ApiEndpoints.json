@@ -1,1 +1,18 @@
-[]
+[
+  {
+    "ContainingType": "_6TL.Areas.Admin.Controllers.SupplierApiController",
+    "Method": "ThemNhaCC",
+    "RelativePath": "api/SupplierApi",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "supplier",
+        "Type": "_6TL.Models.Supplier",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

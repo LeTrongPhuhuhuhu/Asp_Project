@@ -7,7 +7,7 @@ namespace _6TL.Models;
 public partial class Db6TLContext : DbContext
 {
     public Db6TLContext()
-    { 
+    {
     }
 
     public Db6TLContext(DbContextOptions<Db6TLContext> options)
