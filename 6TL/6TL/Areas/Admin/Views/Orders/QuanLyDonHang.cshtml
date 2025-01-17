@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/css/admin/QuanLyDonHang.css" rel="stylesheet" />
+    <title>Quản lý đơn hàng</title>
+</head>
+<body>
+    <div class="order-management">
+        <h1>Quản lý đơn hàng</h1>
+        <div class="filter-container">
+            <div class="filter-item">
+                <label for="filter-status">Trạng thái:</label>
+                <select id="filter-status">
+                    <option value="">Tất cả</option>
+                    <option value="success">Đã giao</option>
+                    <option value="failed">Đã hủy</option>
+                </select>
+            </div>
+            <div class="filter-item">
+                <label for="filter-date">Ngày tạo:</label>
+                <input type="date" id="filter-date" />
+            </div>
+            <div class="filter-item">
+                <label for="search-order">Mã đơn hàng:</label>
+                <input type="text" id="search-order" placeholder="Nhập mã đơn hàng..." />
+            </div>
+            <button id="apply-filter-qldh">Lọc</button>
+        </div>
+
+        <table class="order-table">
+            <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Customer Name</th>
+                    <th>Phone Number</th>
+                    <th>Order Date</th>
+                    <th>Order Status</th>
+                    <th>Payment Method</th>
+                    <th>Total Amount</th>
+                    <th>Thao tác</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var order in Model)
+                {
+                    <tr>
+                        <td>@order.OrderId</td>
+                        <td>@order.CustomerName</td>
+                        <td>@order.PhoneNumber</td>
+                        <td>@order.OrderDate</td>
+                        <td>@order.OrderStatus</td>
+                        <td>@order.PaymentMethod</td>
+                        <td>@order.TotalAmount</td>
+                        <td>
+                            <div class="button-container">
+                                <button class="btn-view toggle-detail" onclick="event.preventDefault(); viewDetails(@order.OrderId)">Xem</button>
+                                <button class="btn-cancel" onclick="event.preventDefault(); cancelOrder(@order.OrderId)">Hủy</button>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('apply-filter-qldh').addEventListener('click', function () {
+                const statusFilter = document.getElementById('filter-status').value.toLowerCase();
+                const dateFilter = document.getElementById('filter-date').value;
+                const orderFilter = document.getElementById('search-order').value.toLowerCase();
+
+                const rows = document.querySelectorAll('.order-table tbody tr');
+
+                rows.forEach(row => {
+                    const statusText = row.querySelector('td:nth-child(5)').textContent.trim().toLowerCase();
+                    const dateText = row.querySelector('td:nth-child(4)').textContent.trim();
+                    const orderIdText = row.querySelector('td:nth-child(1)').textContent.trim().toLowerCase();
+
+                    const dateParts = dateText.split('/');
+                    const formattedDate = `${dateParts[2]}-${dateParts[1].padStart(2, '0')}-${dateParts[0].padStart(2, '0')}`;
+
+                    const matchesStatus = !statusFilter || statusText.includes(statusFilter);
+                    const matchesDate = !dateFilter || formattedDate === dateFilter;
+                    const matchesOrder = !orderFilter || orderIdText.includes(orderFilter);
+
+                    if (matchesStatus && matchesDate && matchesOrder) {
+                        row.style.display = '';
+                    } else {
+                        row.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        function viewDetails(orderId) {
+            console.log("ViewDetails called with orderId:", orderId);
+            window.location.href = `/Admin/Orders/QuanLyChiTietDonHang?orderId=${orderId}`;
+        }
+
+        function cancelOrder(orderId) {
+            console.log("CancelOrder called with orderId:", orderId);
+            alert(`Đơn hàng ${orderId} đã bị hủy.`);
+        }
+    </script>
+</body>
+</html>
