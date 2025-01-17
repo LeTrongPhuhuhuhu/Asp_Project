@@ -9,6 +9,7 @@ using System.Diagnostics.Metrics;
 using System.Runtime.ConstrainedExecution;
 using System;
 using Microsoft.CodeAnalysis;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace _6TL.Areas.Admin.Controllers
 {
@@ -41,20 +42,29 @@ namespace _6TL.Areas.Admin.Controllers
        // Tìm kiếm sản phẩm theo từ khóa
         [HttpGet]
         [Route("Admin/Products/QuanLySanPham")]
-        public IActionResult TimKiemSanPham(string searchString)
+        public IActionResult TimKiemSanPham(int page = 1, int pageSize = 10, string searchString = "")
         {
+            var query = _context.Products.AsQueryable();
+
             if (!string.IsNullOrEmpty(searchString))
             {
-                var products = _context.Products
-                    .Where(p => p.ProductName.Contains(searchString) || p.ProductDescription.Contains(searchString) || p.Category.CategoryName.Contains(searchString))
-                    .ToList();
-                return View("QuanLySanPham", products);
+                query = query.Where(p => p.ProductName.Contains(searchString));
+                ViewBag.SearchString = searchString;
             }
 
-            var allProducts = _context.Products.ToList();
-            ViewBag.Categories = _context.Categories.ToList();
-            return View("QuanLySanPham", allProducts);
+            var totalProducts = query.Count();
+            var products = query
+                .OrderBy(p => p.ProductId)
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .ToList();
+
+            ViewBag.CurrentPage = page;
+            ViewBag.TotalPages = (int)Math.Ceiling((double)totalProducts / pageSize);
+            ViewBag.BaseUrl = Url.Action("QuanLySanPham", "Products");
+            return View("QuanLySanPham", products);
         }
+
 
 
         [HttpGet]

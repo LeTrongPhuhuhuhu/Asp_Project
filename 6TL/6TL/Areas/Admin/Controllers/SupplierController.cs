@@ -35,8 +35,9 @@ namespace _6TL.Areas.Admin.Controllers
                 _context.SaveChanges(); // Lưu thay đổi vào DB
                 return View(); // Chuyển hướng về danh sách (hoặc trang khác)
             }
-            return View(); 
+            return View();
         }
+
         [HttpGet]
         public IActionResult SuaNhaCC(int id)
         {
