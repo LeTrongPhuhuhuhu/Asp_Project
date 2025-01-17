@@ -16,11 +16,10 @@
     <None Include="Areas\Admin\Views\Home\LienHe.cshtml" />
     <None Include="Areas\Admin\Views\Home\QuanLyAdmin.cshtml" />
     <None Include="Areas\Admin\Views\Home\QuanLyBlog.cshtml" />
-    <None Include="Areas\Admin\Views\Home\QuanLyChiTietDonHang.cshtml" />
+    <None Include="Areas\Admin\Views\Orders\QuanLyChiTietDonHang.cshtml" />
     <None Include="Areas\Admin\Views\Home\QuanLyChiTietSanPham.cshtml" />
     <None Include="Areas\Admin\Views\Home\QuanLyDanhGia.cshtml" />
     <None Include="Areas\Admin\Views\Home\QuanLyDanhMuc.cshtml" />
-    <None Include="Areas\Admin\Views\Home\QuanLyDonHang.cshtml" />
     <None Include="Areas\Admin\Views\Home\QuanLyLienHe.cshtml" />
     <None Include="Areas\Admin\Views\Home\QuanLySanPham.cshtml" />
     <None Include="Areas\Admin\Views\Home\QuanLyUser.cshtml" />
