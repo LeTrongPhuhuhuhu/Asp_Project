@@ -6,8 +6,8 @@
 
 <div class="filter-container">
     <button class="btn filter-btn" onclick="filterOrders('All')">Tất cả</button>
-    <button class="btn filter-btn" onclick="filterOrders('Pending')">Đang xử lý</button>
-    <button class="btn filter-btn" onclick="filterOrders('Delivery')">Đang giao hàng</button>
+    <button class="btn filter-btn" onclick="filterOrders('Pending')">Chờ xử lý</button>
+    <button class="btn filter-btn" onclick="filterOrders('Processing')">Đang xử lí</button>
     <button class="btn filter-btn" onclick="filterOrders('Completed')">Đã giao hàng</button>
     <button class="btn filter-btn" onclick="filterOrders('Cancelled')">Đã hủy</button>
 </div>
@@ -37,8 +37,8 @@
                     {
                         "Completed" => "Đã giao hàng",
                         "Cancelled" => "Đã hủy",
-                        "Delivery" => "Đang giao hàng",
-                        _ => "Đang xử lý"
+                        "Processing" => "Đang xử lí",
+                        _ => "Chờ xử lí"
 
                     })
                 </td>

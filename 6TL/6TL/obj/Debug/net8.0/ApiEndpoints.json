@@ -1,7 +1,23 @@
 [
   {
+    "ContainingType": "_6TL.Areas.Admin.Controllers.CategoryApiController",
+    "Method": "AddCategory",
+    "RelativePath": "api/CategoryApi",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "category",
+        "Type": "_6TL.Models.Category",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "_6TL.Areas.Admin.Controllers.SupplierApiController",
-    "Method": "ThemNhaCC",
+    "Method": "AddSupplier",
     "RelativePath": "api/SupplierApi",
     "HttpMethod": "POST",
     "IsController": true,
